@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>使用Fast DDS Discovery Server作为发现协议 [社区贡献] [待校准@6879] &mdash; ROS 2 documentation  文档</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.ros.org/en/Tutorials/Discovery-Server/Discovery-Server.html" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/clipboard.min.js"></script>
+        <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="实现自定义内存分配器 [待校准@6445]" href="../Allocator-Template-Tutorial.html" />
+    <link rel="prev" title="ROS 2话题统计教程 (c ++) [待校准@8311]" href="../Topics/Topic-Statistics-Tutorial.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> ROS 2 documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../Installation.html">安装 [待校准&#64;5690]</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Installation/Ubuntu-Development-Setup.html">在Ubuntu Linux上构建ROS 2 [待校准&#64;5886]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Installation/Ubuntu-Install-Binary.html">在Ubuntu Linux上安装ROS 2 [待校准&#64;5937]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Installation/Ubuntu-Install-Debians.html">通过Debian包安装ROS 2 [待校准&#64;5959]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Installation/macOS-Development-Setup.html">在macOS上构建ROS 2 [待校准&#64;6117]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Installation/macOS-Install-Binary.html">在macOS上安装ROS 2 [待校准&#64;6148]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Installation/Windows-Development-Setup.html">在Windows上构建ROS 2 [待校准&#64;5973]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Installation/Windows-Install-Binary.html">在Windows上安装ROS 2 [待校准&#64;6050]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Installation/Fedora-Development-Setup.html">在Fedora Linux上构建ROS 2 [待校准&#64;5836]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Installation/Latest-Development-Setup.html">安装最新的ROS 2开发版本 [待校准&#64;5840]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Installation/Maintaining-a-Source-Checkout.html">主源文件检出ROS 2Foxy [待校准&#64;5850]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Installation/Testing.html">用于测试的替代安装源 [待校准&#64;5873]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Installation/DDS-Implementations.html">安装DDS实现 [待校准&#64;5717]</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Installation/DDS-Implementations/Install-Connext-Security-Plugins.html">安装Connext安全插件 [待校准&#64;5768]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Installation/DDS-Implementations/Install-Connext-University-Eval.html">安装大学或RTI Connext DDS的评估版本 [待校准&#64;5782]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Installation/DDS-Implementations/Working-with-Eclipse-CycloneDDS.html">使用EclipseCycloneDDS [待校准&#64;5796]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Installation/DDS-Implementations/Working-with-GurumNetworks-GurumDDS.html">与GurumNetworks GurumDDS合作 [待校准&#64;5812]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Installation/DDS-Implementations/Working-with-eProsima-Fast-DDS.html">与eProsimaFast DDS合作 [待校准&#64;5829]</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../Docs-Guide.html">文档指南</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../Tutorials.html">教程 [待校准&#64;6242]</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../Configuring-ROS2-Environment.html">配置ROS 2环境 [待校准&#64;6646]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Turtlesim/Introducing-Turtlesim.html">介绍turtlesim和rqt [待校准&#64;8428]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Understanding-ROS2-Nodes.html">了解ROS 2节点 [待校准&#64;8733]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Topics/Understanding-ROS2-Topics.html">理解ROS 2话题 [待校准&#64;8368]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Services/Understanding-ROS2-Services.html">了解ROS 2服务 [待校准&#64;7742]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Parameters/Understanding-ROS2-Parameters.html">理解ROS 2参数 [待校准&#64;7371]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Understanding-ROS2-Actions.html">理解ROS 2动作 [待校准&#64;8684]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Rqt-Console/Using-Rqt-Console.html">使用rqt_控制台 [待校准&#64;7712]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Launch/CLI-Intro.html">介绍ROS 2launch [待校准&#64;7101]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Ros2bag/Recording-And-Playing-Back-Data.html">记录和回放数据 [待校准&#64;7639]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Workspace/Creating-A-Workspace.html">创建工作空间 [待校准&#64;8836]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Creating-Your-First-ROS2-Package.html">创建您的第一个ROS 2包 [待校准&#64;6677]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Writing-A-Simple-Cpp-Publisher-And-Subscriber.html">编写简单的发布者和订阅者 (c ++) [待校准&#64;8905]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Writing-A-Simple-Py-Publisher-And-Subscriber.html">编写简单的发布者和订阅者 (Python) [待校准&#64;8992]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Writing-A-Simple-Cpp-Service-And-Client.html">编写简单的服务和客户端 (c ++) [待校准&#64;8953]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Writing-A-Simple-Py-Service-And-Client.html">编写简单的服务和客户端 (Python) [待校准&#64;9028]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Custom-ROS2-Interfaces.html">创建自定义ROS 2 msg 和 srv 文件 [待校准&#64;6739]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Single-Package-Define-And-Use-Interface.html">在ROS 2接口上扩展 [待校准&#64;7844]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Using-Parameters-In-A-Class-CPP.html">在类 (c ++) 中使用参数 [待校准&#64;8769]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Using-Parameters-In-A-Class-Python.html">在类中使用参数 (Python) [待校准&#64;8809]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Getting-Started-With-Ros2doctor.html">开始使用ros2doctor [待校准&#64;7010]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Pluginlib.html">创建和使用插件 (c ++) [待校准&#64;7411]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Actions/Creating-an-Action.html">创建动作 [待校准&#64;6271]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Actions/Writing-a-Cpp-Action-Server-Client.html">编写动作服务器和客户端 (c ++) [待校准&#64;6313]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Actions/Writing-a-Py-Action-Server-Client.html">编写动作服务器和客户端 (Python) [待校准&#64;6385]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Composition.html">在单个进程中组成多个节点 [待校准&#64;6594]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Colcon-Tutorial.html">使用colcon构建包 [待校准&#64;6535]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Launch/Launch-Main.html">Launch教程 [待校准&#64;7160]</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Launch/Creating-Launch-Files.html">创建launch文件 [待校准&#64;7122]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Launch/Launch-system.html">[需手动修复的语法]Launch/监控多节点[需手动修复的语法]Launch [待校准&#64;7174]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Launch/Using-Substitutions.html">在launch文件中使用替换 [待校准&#64;7297]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Launch/Using-Event-Handlers.html">在launch文件中使用事件处理程序 [待校准&#64;7201]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Launch/Using-ROS2-Launch-For-Large-Projects.html">在大型项目中使用ROS 2launch [待校准&#64;7234]</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Tf2/Tf2-Main.html">tf2教程 [待校准&#64;8078]</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Tf2/Introduction-To-Tf2.html">tf2简介 [待校准&#64;7994]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tf2/Writing-A-Tf2-Static-Broadcaster-Py.html">编写tf2静态广播器 (Python) [待校准&#64;8299]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tf2/Writing-A-Tf2-Static-Broadcaster-Cpp.html">编写tf2静态广播器 (c ++) [待校准&#64;8257]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tf2/Writing-A-Tf2-Broadcaster-Py.html">编写tf2广播器 (Python) [待校准&#64;8220]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tf2/Writing-A-Tf2-Broadcaster-Cpp.html">编写tf2广播器 (c ++) [待校准&#64;8181]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tf2/Writing-A-Tf2-Listener-Py.html">编写tf2监听程序 (Python) [待校准&#64;8251]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tf2/Writing-A-Tf2-Listener-Cpp.html">编写tf2监听程序 (c ++) [待校准&#64;8233]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tf2/Adding-A-Frame-Py.html">添加帧 (Python) [待校准&#64;7950]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tf2/Adding-A-Frame-Cpp.html">添加帧 (c ++) [待校准&#64;7914]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tf2/Learning-About-Tf2-And-Time-Py.html">学习tf2和时间 (Python) [待校准&#64;8040]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tf2/Learning-About-Tf2-And-Time-Cpp.html">学习tf2和时间 (c ++) [待校准&#64;8023]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tf2/Time-Travel-With-Tf2-Py.html">时间穿梭tf2 (Python) [待校准&#64;8130]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tf2/Time-Travel-With-Tf2-Cpp.html">时间穿梭带tf2 (C++) [待校准&#64;8105]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tf2/Debugging-Tf2-Problems.html">调试tf2问题 [待校准&#64;7956]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tf2/Quaternion-Fundamentals.html">四元数基金amentals [待校准&#64;8054]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.html">使用stamped数据类型与tf2_ros: MessageFilter [待校准&#64;8138]</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../URDF/URDF-Main.html">URDF教程 [待校准&#64;8607]</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../URDF/Building-a-Visual-Robot-Model-with-URDF-from-Scratch.html">从头开始用URDF构建视觉机器人模型 [待校准&#64;8556]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../URDF/Building-a-Movable-Robot-Model-with-URDF.html">用URDF建立可移动机器人模型 [待校准&#64;8534]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../URDF/Adding-Physical-and-Collision-Properties-to-a-URDF-Model.html">向URDF模型添加物理和碰撞属性 [待校准&#64;8487]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../URDF/Using-Xacro-to-Clean-Up-a-URDF-File.html">使用Xacro清理URDF文件 [待校准&#64;8635]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../URDF/Using-URDF-with-Robot-State-Publisher.html">将URDF与robot_state_发布者结合使用 [待校准&#64;8609]</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Topics/Topic-Statistics-Tutorial.html">ROS 2话题统计教程 (c ++) [待校准&#64;8311]</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">使用Fast DDS Discovery Server作为发现协议 [社区贡献] [待校准&#64;6879]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Allocator-Template-Tutorial.html">实现自定义内存分配器 [待校准&#64;6445]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Simulators/Webots/Setting-up-a-Robot-Simulation-Webots.html">设置机器人仿真 (Webots) [待校准&#64;7782]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Deploying-ROS-2-on-IBM-Cloud.html">IBM Cloud Kubernetes上的ROS2 [社区-贡献] [待校准&#64;6792]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Eclipse-Oxygen-with-ROS-2-and-rviz2.html">带有ROS 2和rviz2的Eclipse Oxygen [社区贡献] [待校准&#64;6947]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Building-Realtime-rt_preempt-kernel-for-ROS-2.html">为ROS 2构建实时Linux [社区-贡献] [待校准&#64;6514]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Ros2bag/Recording-A-Bag-From-Your-Own-Node.html">从您自己的节点记录一个包 [待校准&#64;7554]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Building-ROS2-Package-with-eclipse-2021-06.html">使用eclipse 2021-06构建ROS 2包 [待校准&#64;6486]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Quality-of-Service.html">使用服务质量设置处理有损网络 [待校准&#64;7462]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Managed-Nodes.html">具有托管生命周期的节点管理 [待校准&#64;7369]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Intra-Process-Communication.html">高效的流程内通讯 [待校准&#64;7051]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Rosbag-with-ROS1-Bridge.html">使用ROS 1bridge用rosbag记录和回放话题数据 [待校准&#64;7685]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Real-Time-Programming.html">ROS 2中的实时编程 [待校准&#64;7491]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dummy-robot-demo.html">尝试dummy robot例程 [待校准&#64;9056]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Logging-and-logger-configuration.html">日志和日志记录器配置例程 [待校准&#64;7322]</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../How-To-Guides.html">操作指南 [待校准&#64;204]</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Installation-Troubleshooting.html">安装故障诊断工具 [待校准&#64;535]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Developing-a-ROS-2-Package.html">开发ROS 2包 [待校准&#64;514]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Ament-CMake-Documentation.html">[需手动修复的语法]ament _ cmake用户文档 [待校准&#64;208]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Ament-CMake-Python-Documentation.html">[需手动修复的语法]ament _ cmake_python用户文档 [待校准&#64;360]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Launch-files-migration-guide.html">迁移launch文件ROS 1ROS 2 [待校准&#64;638]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Launch-file-different-formats.html">对ROS 2Launch文件使用Python、XML和YAML [待校准&#64;611]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Launching-composable-nodes.html">使用ROS 2launch到launch可组合节点 [待校准&#64;733]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Parameters-YAML-files-migration-guide.html">将YAML参数文件从ROS 1迁移到ROS 2 [待校准&#64;850]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Node-arguments.html">通过命令行将ROS参数传递给节点 [待校准&#64;746]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Sync-Vs-Async.html">同步与异步服务客户端 [待校准&#64;972]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/DDS-tuning.html">DDS调谐信息 [待校准&#64;470]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Overriding-QoS-Policies-For-Recording-And-Playback.html">rosbag2: 重载QoS策略 [待校准&#64;772]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Working-with-multiple-RMW-implementations.html">使用多个ROS 2中间件实现 [待校准&#64;1068]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Cross-compilation.html">交叉编译 [待校准&#64;383]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Releasing-a-ROS-2-package-with-bloom.html">发布带有bloom的ROS 2包 [待校准&#64;937]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Using-Python-Packages.html">将Python包与ROS 2结合使用 [待校准&#64;1011]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/RQt-Port-Plugin-Windows.html">将RQt插件移植到Windows [待校准&#64;862]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Run-2-nodes-in-single-or-separate-docker-containers.html">在Docker中运行ROS 2节点 [社区-贡献] [待校准&#64;959]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Package-maintainer-guide.html">ROS 2包维护者指南 [待校准&#64;785]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Building-a-Custom-Debian-Package.html">构建自定义Debian包 [待校准&#64;371]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Topics-Services-Actions.html">话题vs服务vsAction [待校准&#64;997]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Using-Variants.html">使用变体 [待校准&#64;1031]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Using-ros2-param.html">使用 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span></code> 命令行工具 [待校准&#64;1046]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/RQt-Source-Install.html">从源文件构建RQt [待校准&#64;883]</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../How-To-Guides/RQt-Source-Install-MacOS.html">在macOS上从源文件构建RQt [待校准&#64;908]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../How-To-Guides/RQt-Source-Install-Windows10.html">在Windows 10上从源文件构建RQt [待校准&#64;916]</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../Concepts.html">概念 [待校准&#64;4938]</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-Domain-ID.html">ROS_DOMAIN_ID [待校准&#64;5194]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-Different-Middleware-Vendors.html">关于不同的ROS 2 DDS/RTPS供应商 [待校准&#64;5153]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-Logging.html">关于日志和日志记录器配置 [待校准&#64;5325]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-Quality-of-Service-Settings.html">关于服务质量设置 [待校准&#64;5369]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-ROS-2-Client-Libraries.html">关于ROS 2客户端库 [待校准&#64;5459]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-ROS-Interfaces.html">关于ROS 2接口 [待校准&#64;5526]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-ROS-2-Parameters.html">关于ROS 2中的参数 [待校准&#64;5490]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-Executors.html">执行器 [待校准&#64;5227]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-Topic-Statistics.html">关于话题统计 [待校准&#64;5671]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-Command-Line-Tools.html">使用命令行工具进行自检 [待校准&#64;5091]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-RQt.html">RQt的概述和使用 [待校准&#64;5625]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-Composition.html">关于组件 [待校准&#64;5119]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-Catment.html">[需手动修复的语法]ament和catkin的混合研究 [待校准&#64;5019]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-Cross-Compilation.html">关于交叉编译 [待校准&#64;5141]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-Tf2.html">关于tf2 [待校准&#64;5653]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-Build-System.html">关于构建系统 [待校准&#64;4969]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-Internal-Interfaces.html">关于内部ROS 2接口 [待校准&#64;5265]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-Middleware-Implementations.html">关于ROS 2中间件实现 [待校准&#64;5347]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-Client-Interfaces.html">ROS 2客户端接口 (客户端库) [待校准&#64;5079]</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../Contributing.html">贡献 [待校准&#64;9128]</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Contributing/Developer-Guide.html">ROS 2开发人员指南 [待校准&#64;9430]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Contributing/Code-Style-Language-Versions.html">代码样式和语言版本 [待校准&#64;9212]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Contributing/Quality-Guide.html">质量指南: 确保代码质量 [待校准&#64;10012]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Contributing/Migration-Guide.html">从ROS 1迁移指南 [待校准&#64;9780]</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Contributing/Migration-Guide-Python.html">来自ROS 1的Python迁移指南 [待校准&#64;10003]</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Contributing/Build-Farms.html">ROS Build Farms [待校准&#64;9167]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Contributing/Windows-Tips-and-Tricks.html">Windows提示和技巧 [待校准&#64;10105]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Contributing/Contributing-To-ROS-2-Documentation.html">为ROS 2文档做出贡献 [待校准&#64;9366]</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../Contact.html">联系人 [待校准&#64;6167]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ROSCon-Content.html">ROSCon内容 [待校准&#64;105]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Releases.html">发行版 [待校准&#64;1233]</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Releases/Alpha-Overview.html">ROS 2 α 发行版本 (2015年8月-2016年10月) [待校准&#64;1306]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Releases/Beta1-Overview.html">贝塔1 (代号'Asphalt'; 2016年12月) [待校准&#64;1386]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Releases/Beta2-Overview.html">贝塔2 (代号'r2b2'; 2017年7月) [待校准&#64;1420]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Releases/Beta3-Overview.html">贝塔3 (代号'r2b3'; 2017年9月) [待校准&#64;1451]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Releases/Release-Ardent-Apalone.html">ROS 2Ardent阿帕隆 (代号'ardent'; 2017年12月) [待校准&#64;4089]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Releases/Release-Bouncy-Bolson.html">ROS 2 Bouncy Bolson (代号'bouncy'; 2018年6月) [待校准&#64;4130]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Releases/Release-Crystal-Clemmys.html">ROS 2Crystal Clemmys (代号'crystal'; 2018年12月) [待校准&#64;4158]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Releases/Release-Dashing-Diademata.html">ROS 2DashingDiademata (代号'dashing'; 2019年5月31日) [待校准&#64;4237]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Releases/Release-Eloquent-Elusor.html">ROS 2EloquentElusor (代号'eloquent'; 2019年11月22日) [待校准&#64;4427]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Releases/Release-Foxy-Fitzroy.html">ROS 2FoxyFitzroy (代号'foxy'; 2020年6月5日) [待校准&#64;4503]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Releases/Release-Galactic-Geochelone.html">ROS 2GalacticGeochelone (代号'galactic'; 2021年5月) [待校准&#64;4649]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Releases/Galactic-Geochelone-Complete-Changelog.html">ROS 2GalacticGeochelone完整变更日志 [待校准&#64;1470]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Releases/Release-Humble-Hawksbill.html">ROS 2Humble Hawksbill (代号'humble'; 2022年5月) [待校准&#64;4845]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Releases/Release-Rolling-Ridley.html">ROS 2Rolling Ridley (代号'rolling'; 2020年6月) [待校准&#64;4929]</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../Features.html">功能状态 [待校准&#64;9074]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Roadmap.html">路线图 [待校准&#64;45]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Feature-Ideas.html">特色创意 [待校准&#64;1123]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Governance.html">项目管理 [待校准&#64;10131]</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Governance/ROS2-TSC-Charter.html">ROS 2技术指导委员会章程 [待校准&#64;10280]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Governance/ROS2-TSC-Intake-process.html">ROS 2 TSC申请人摄入流程 [待校准&#64;10368]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Governance/How-To-Start-A-Community-Working-Group.html">如何成立社区工作组 [待校准&#64;10253]</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../Marketing.html">营销材料 [待校准&#64;6193]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Related-Projects.html">相关项目 [待校准&#64;6209]</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Related-Projects/Intel-ROS2-Projects.html">[需手动修复的语法]IntelROS 2项目 [待校准&#64;6210]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Related-Projects/Nvidia-ROS2-Projects.html">[需手动修复的语法]NVIDIAROS 2项目 [待校准&#64;6228]</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../Glossary.html">术语表 [待校准&#64;1217]</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">ROS 2 documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../Tutorials.html">教程 [待校准&#64;6242]</a> &raquo;</li>
+      <li>使用Fast DDS Discovery Server作为发现协议 [社区贡献] [待校准&#64;6879]</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/ros2/ros2_documentation/blob/foxy/source/Tutorials/Discovery-Server/Discovery-Server.rst" class="fa fa-github"> 在 GitHub 上修改</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+
+
+  <div class="section" id="using-fast-dds-discovery-server-as-discovery-protocol-community-contributed">
+<h1>使用Fast DDS Discovery Server作为发现协议 [社区贡献] <a class="reference external" href="http://localhost:3000/#/home?msgid=6879">[待校准&#64;6879]</a><a class="headerlink" href="#using-fast-dds-discovery-server-as-discovery-protocol-community-contributed" title="永久链接至标题"></a></h1>
+<p>Goal目标: 本教程将展示如何使用Fast DDS Discovery Serverdiscovery发现协议来使用launchROS 2节点。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6880">[待校准&#64;6880]</a></p>
+<p>Tutorial教程级别: Intermediate中级 <a class="reference external" href="http://localhost:3000/#/home?msgid=6273">[待校准&#64;6273]</a></p>
+<p>Time时间: 20 20分钟 <a class="reference external" href="http://localhost:3000/#/home?msgid=6741">[待校准&#64;6741]</a></p>
+<div class="contents local topic" id="table-of-contents">
+<p class="topic-title">目录 <a class="reference external" href="http://localhost:3000/#/home?msgid=6446">[待校准&#64;6446]</a></p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#background" id="id1">背景 [待校准&#64;6276]</a></p></li>
+<li><p><a class="reference internal" href="#fast-dds-discovery-server-v2" id="id2">Fast DDS Discovery Serverv2 [待校准&#64;6888]</a></p></li>
+<li><p><a class="reference internal" href="#prerequisites" id="id3">先决条件 [待校准&#64;6278]</a></p></li>
+<li><p><a class="reference internal" href="#run-this-tutorial" id="id4">运行本教程 [待校准&#64;6893]</a></p>
+<ul>
+<li><p><a class="reference internal" href="#setup-discovery-server" id="id5">设置发现服务器 [待校准&#64;6897]</a></p></li>
+<li><p><a class="reference internal" href="#launch-listener-node" id="id6">Launch监听节点 [待校准&#64;6900]</a></p></li>
+<li><p><a class="reference internal" href="#launch-talker-node" id="id7">Launch健谈者节点 [待校准&#64;6905]</a></p></li>
+<li><p><a class="reference internal" href="#demonstrate-discovery-server-execution" id="id8">演示发现服务器执行情况 [待校准&#64;6908]</a></p></li>
+<li><p><a class="reference internal" href="#visualization-tool-rqt-graph" id="id9">可视化工具 <code class="docutils literal notranslate"><span class="pre">rqt_graph</span></code>  [待校准&#64;6913]</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#advance-use-cases" id="id10">高级用例 [待校准&#64;6915]</a></p>
+<ul>
+<li><p><a class="reference internal" href="#server-redundancy" id="id11">服务器冗余 [待校准&#64;6917]</a></p></li>
+<li><p><a class="reference internal" href="#backup-server" id="id12">备份服务器 [待校准&#64;6922]</a></p></li>
+<li><p><a class="reference internal" href="#discovery-partitions" id="id13">发现分区 [待校准&#64;6926]</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#compare-fast-dds-discovery-server-with-simple-discovery-protocol" id="id14">将Fast DDS Discovery Server与简单发现协议进行比较 [待校准&#64;6934]</a></p></li>
+</ul>
+</div>
+<div class="section" id="background">
+<h2>背景 <a class="reference external" href="http://localhost:3000/#/home?msgid=6276">[待校准&#64;6276]</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
+<p>从ROS 2EloquentElusor开始，Fast DDS Discovery Server协议是一个提供集中动态发现机制的特性，而不是默认情况下DDS中使用的分布式机制。本教程解释了如何使用Fast DDS Discovery Server功能作为发现通讯来运行一些ROS 2示例。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6881">[待校准&#64;6881]</a></p>
+<p>为了获取有关可用发现配置的更多信息，请查看 “以下文档 &lt;<a class="reference external" href="https://">https://</a> fast-dds.docs.eprosima.com/en/v2.1.0/fastdds/discovery y.html&gt; <a class="reference external" href="https://fast-dds.docs.eprosima.com/en/v2.1.0/fastdds/discovery/discovery_server.html#discovery-server">_ or read the `Fast DDS Discovery Server specific documentation</a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6882">[待校准&#64;6882]</a></p>
+<p>[需手动修复的语法] <a class="reference external" href="https://fast-dds.docs.eprosima.com/en/v2.1.0/fastdds/discovery/simple.html">Simple Discovery Protocol</a> 是 <a class="reference external" href="https://www.omg.org/omg-dds-portal/">DDS standard</a> 中定义的标准方案。然而，在某些情况下，它已经知道缺点。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6883">[待校准&#64;6883]</a></p>
+<ul class="simple">
+<li><p>它不能有效扩展，因为随着新节点的增加，交换数据包的数量显著增加。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6884">[待校准&#64;6884]</a></p></li>
+<li><p>它需要多播功能，在某些情况下可能无法可靠地工作，例如WiFi。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6885">[待校准&#64;6885]</a></p></li>
+</ul>
+<p>[需手动修复的语法]Fast DDS Discovery Server提供了一种客户端-服务器架构，允许节点使用中间服务器相互连接。每个节点充当 * 发现客户端 <a href="#id1"><span class="problematic" id="id2">*</span></a>，与一个或多个 * 发现服务器 * 共享其信息，并从中接收发现信息。这减少了与发现相关的网络流量，并且不需要多播功能。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6886">[待校准&#64;6886]</a></p>
+<img alt="../../_images/ds_explanation.svg" class="align-center" src="../../_images/ds_explanation.svg" /><p>这些发现服务器可以是独立的、重复的或相互连接的，以便在网络上创建冗余并避免单点故障。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6887">[待校准&#64;6887]</a></p>
+</div>
+<div class="section" id="fast-dds-discovery-server-v2">
+<h2>Fast DDS Discovery Serverv2 <a class="reference external" href="http://localhost:3000/#/home?msgid=6888">[待校准&#64;6888]</a><a class="headerlink" href="#fast-dds-discovery-server-v2" title="永久链接至标题"></a></h2>
+<p>最新的ROS 2FoxyFitzroy版本 (2020年12月) 包括了新版本，Fast DDS Discovery Server版本2。此版本包含新的筛选器功能，可进一步减少发送的发现消息的数量。这个版本使用不同节点的话题来决定两个节点是否希望通信，或者它们是否可以保持不匹配 (即没有发现对方)。下图显示了发现消息的减少: <a class="reference external" href="http://localhost:3000/#/home?msgid=6889">[待校准&#64;6889]</a></p>
+<img alt="../../_images/ds1vs2.svg" class="align-center" src="../../_images/ds1vs2.svg" /><p>这个建筑减少发送服务器与客户端之间剧作家调用y。在下图中，显示了 <a class="reference external" href="https://github.com/osrf/rmf_demos#Clinic-World">RMF Clinic demonstration</a> 在发现阶段的网络流量减少: <a class="reference external" href="http://localhost:3000/#/home?msgid=6890">[待校准&#64;6890]</a></p>
+<img alt="../../_images/discovery_server_v2_performance.svg" class="align-center" src="../../_images/discovery_server_v2_performance.svg" /><p>为了使用此功能，可以使用 <a class="reference external" href="https://fast-dds.docs.eprosima.com/en/v2.1.0/fastdds/discovery/discovery_server.html#discovery-server">XML configuration for Participants</a> 配置发现服务器。也可以使用 <code class="docutils literal notranslate"><span class="pre">fastdds</span></code>  <a class="reference external" href="https://fast-dds.docs.eprosima.com/en/v2.1.0/fastddscli/cli/cli.html#discovery">tool</a> 和 <a class="reference external" href="https://fast-dds.docs.eprosima.com/en/v2.1.0/fastdds/env_vars/env_vars.html">environment variable</a> 来配置发现服务器，这是本教程中使用的方法。有关发现服务器配置的更详细说明，请访问 <a class="reference external" href="https://fast-dds.docs.eprosima.com/en/v2.1.0/fastdds/discovery/discovery_server.html#discovery-server">the Fast DDS Discovery Server documentation</a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6891">[待校准&#64;6891]</a></p>
+</div>
+<div class="section" id="prerequisites">
+<h2>先决条件 <a class="reference external" href="http://localhost:3000/#/home?msgid=6278">[待校准&#64;6278]</a><a class="headerlink" href="#prerequisites" title="永久链接至标题"></a></h2>
+<p>本教程假设您有一个ROS 2Foxy (或更高版本)  <a class="reference internal" href="../../Installation.html"><span class="doc">installation</span></a> 。如果您的安装使用的ROS 2版本低于Foxy，则不能使用 <code class="docutils literal notranslate"><span class="pre">fastdds</span></code> 工具。因此，为了使用发现服务器，您可以更新仓库以使用不同的Fast DDS版本，或者使用 <a class="reference external" href="https://fast-dds.docs.eprosima.com/en/v2.1.0/fastdds/discovery/discovery_server.html#discovery-server">Fast DDS XML QoS configuration</a> 配置发现服务器。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6892">[待校准&#64;6892]</a></p>
+</div>
+<div class="section" id="run-this-tutorial">
+<h2>运行本教程 <a class="reference external" href="http://localhost:3000/#/home?msgid=6893">[待校准&#64;6893]</a><a class="headerlink" href="#run-this-tutorial" title="永久链接至标题"></a></h2>
+<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">talker-listener</span></code> ROS 2例程创建一个每秒发布一次  &quot;hello world&quot; 消息的 <code class="docutils literal notranslate"><span class="pre">talker</span></code> 节点和一个监听这些消息的 <code class="docutils literal notranslate"><span class="pre">listener</span></code> 节点。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6894">[待校准&#64;6894]</a></p>
+<p>通过 <a class="reference internal" href="../Configuring-ROS2-Environment.html"><span class="doc">sourcing ROS 2</span></a> you will get access to the CLI tool <code class="docutils literal notranslate"><span class="pre">fastdds</span></code>. This tool gives access to the <code class="xref any docutils literal notranslate"><span class="pre">discovery</span> <span class="pre">tool</span></code>  __, 可以用于发现服务器launch。此服务器将管理连接到它的节点的发现过程。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6895">[待校准&#64;6895]</a></p>
+<div class="admonition important">
+<p class="admonition-title">重要</p>
+<p>不要忘记在每个新的航站楼都开张 <a class="reference internal" href="../Configuring-ROS2-Environment.html"><span class="doc">source ROS 2</span></a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6896">[待校准&#64;6896]</a></p>
+</div>
+<div class="section" id="setup-discovery-server">
+<h3>设置发现服务器 <a class="reference external" href="http://localhost:3000/#/home?msgid=6897">[待校准&#64;6897]</a><a class="headerlink" href="#setup-discovery-server" title="永久链接至标题"></a></h3>
+<p>开始launch成为发现服务器账号0，端口11811 (默认端口) 并侦听所有可用接口。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6898">[待校准&#64;6898]</a></p>
+<p>打开新终端并运行: <a class="reference external" href="http://localhost:3000/#/home?msgid=6899">[待校准&#64;6899]</a></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">fastdds discovery --server-id 0</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="launch-listener-node">
+<h3>Launch监听节点 <a class="reference external" href="http://localhost:3000/#/home?msgid=6900">[待校准&#64;6900]</a><a class="headerlink" href="#launch-listener-node" title="永久链接至标题"></a></h3>
+<p>执行侦听器例程，以收听 <code class="docutils literal notranslate"><span class="pre">/chatter</span></code> 话题。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6901">[待校准&#64;6901]</a></p>
+<p>在新终端中，将环境变量 <code class="docutils literal notranslate"><span class="pre">ROS_DISCOVERY_SERVER</span></code> 设置为发现服务器的位置。(不要忘记在每个新终端中源文件ROS 2) <a class="reference external" href="http://localhost:3000/#/home?msgid=6902">[待校准&#64;6902]</a></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">export ROS_DISCOVERY_SERVER=127.0.0.1:11811</span>
+</pre></div>
+</div>
+<p>[需手动修复的语法]Launch监听节点。使用参数 “-- remap __ node:= listener_discovery y_server” 更改本教程的节点名称。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6903">[待校准&#64;6903]</a></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run demo_nodes_cpp listener --ros-args --remap __node:=listener_discovery_server</span>
+</pre></div>
+</div>
+<p>这将创建一个ROS 2节点，该节点将自动调用y为发现服务器创建客户端，并连接到之前创建的服务器以执行发现，而不是使用多播。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6904">[待校准&#64;6904]</a></p>
+</div>
+<div class="section" id="launch-talker-node">
+<h3>Launch健谈者节点 <a class="reference external" href="http://localhost:3000/#/home?msgid=6905">[待校准&#64;6905]</a><a class="headerlink" href="#launch-talker-node" title="永久链接至标题"></a></h3>
+<p>打开一个新终端，并像以前一样设置 <code class="docutils literal notranslate"><span class="pre">ROS_DISCOVERY_SERVER</span></code> 环境变量，以便节点启动发现客户端。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6906">[待校准&#64;6906]</a></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">export ROS_DISCOVERY_SERVER=127.0.0.1:11811</span>
+<span class="go">ros2 run demo_nodes_cpp talker --ros-args --remap __node:=talker_discovery_server</span>
+</pre></div>
+</div>
+<p>你现在应该看到说话者发布  &quot;hello world&quot; 消息，以及接收这些消息的听众。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6907">[待校准&#64;6907]</a></p>
+</div>
+<div class="section" id="demonstrate-discovery-server-execution">
+<h3>演示发现服务器执行情况 <a class="reference external" href="http://localhost:3000/#/home?msgid=6908">[待校准&#64;6908]</a><a class="headerlink" href="#demonstrate-discovery-server-execution" title="永久链接至标题"></a></h3>
+<p>到目前为止，没有证据表明这个例子和标准的说话者-听众例子运行不同。要清楚地对此进行例程，请运行另一个未连接到发现服务器的节点。在新终端中运行一个新的监听程序 (默认情况下监听 <code class="docutils literal notranslate"><span class="pre">/chatter</span></code> 话题)，并检查它是否没有连接到已经运行的说话者。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6909">[待校准&#64;6909]</a></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run demo_nodes_cpp listener --ros-args --remap __node:=simple_listener</span>
+</pre></div>
+</div>
+<p>新侦听器节点不应接收  &quot;hello world&quot; 消息。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6910">[待校准&#64;6910]</a></p>
+<p>为了最终验证一切是否正常运行，可以使用简单发现协议 (默认的DDS分布式发现机制) 创建一个新的talker进行发现。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6911">[待校准&#64;6911]</a></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run demo_nodes_cpp talker --ros-args --remap __node:=simple_talker</span>
+</pre></div>
+</div>
+<p>现在，您应该看到 <code class="docutils literal notranslate"><span class="pre">simple_listener</span></code> 节点接收来自 <code class="docutils literal notranslate"><span class="pre">simple_talker</span></code> 的  &quot;hello world&quot; 消息，而不是来自 <code class="docutils literal notranslate"><span class="pre">talker_discovery_server</span></code> 的其他消息。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6912">[待校准&#64;6912]</a></p>
+</div>
+<div class="section" id="visualization-tool-rqt-graph">
+<h3>可视化工具 <code class="docutils literal notranslate"><span class="pre">rqt_graph</span></code>  <a class="reference external" href="http://localhost:3000/#/home?msgid=6913">[待校准&#64;6913]</a><a class="headerlink" href="#visualization-tool-rqt-graph" title="永久链接至标题"></a></h3>
+<p>可以使用 <code class="docutils literal notranslate"><span class="pre">rqt_graph</span></code> 工具来验证该示例的节点和结构。请记住，为了将 <code class="docutils literal notranslate"><span class="pre">rqt_graph</span></code> 与发现服务器协议一起使用 (即，查看 <code class="docutils literal notranslate"><span class="pre">listener_discovery_server</span></code> 和 <code class="docutils literal notranslate"><span class="pre">talker_discovery_server</span></code> 节点)，必须在launch之前设置 <code class="docutils literal notranslate"><span class="pre">ROS_DISCOVERY_SERVER</span></code> 环境变量。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6914">[待校准&#64;6914]</a></p>
+</div>
+</div>
+<div class="section" id="advance-use-cases">
+<h2>高级用例 <a class="reference external" href="http://localhost:3000/#/home?msgid=6915">[待校准&#64;6915]</a><a class="headerlink" href="#advance-use-cases" title="永久链接至标题"></a></h2>
+<p>以下各节显示了发现服务器的不同功能，这些功能允许您通过网络构建强大的发现服务器。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6916">[待校准&#64;6916]</a></p>
+<div class="section" id="server-redundancy">
+<h3>服务器冗余 <a class="reference external" href="http://localhost:3000/#/home?msgid=6917">[待校准&#64;6917]</a><a class="headerlink" href="#server-redundancy" title="永久链接至标题"></a></h3>
+<p>通过使用 <code class="docutils literal notranslate"><span class="pre">fastdds</span></code> 工具，可以创建多个发现服务器。发现客户端 (ROS节点) 可以根据需要连接到任意数量的服务器。这允许有一个冗余网络，即使某些服务器或节点意外关闭，该网络也可以工作。下图显示了提供服务器冗余的简单体系结构。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6918">[待校准&#64;6918]</a></p>
+<img alt="../../_images/ds_redundancy_example.svg" class="align-center" src="../../_images/ds_redundancy_example.svg" /><p>在多个终端中，运行以下代码以与冗余服务器建立通讯。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6919">[待校准&#64;6919]</a></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">fastdds discovery --server-id 0 --ip-address 127.0.0.1 --port 11811</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">fastdds discovery --server-id 1 --ip-address 127.0.0.1 --port 11888</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">--server-id</span> <span class="pre">N</span></code> means server with id N. When referencing the servers with <code class="docutils literal notranslate"><span class="pre">ROS_DISCOVERY_SERVER</span></code>, server <code class="docutils literal notranslate"><span class="pre">0</span></code> must be in first place and server <code class="docutils literal notranslate"><span class="pre">1</span></code> in位居第二。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6920">[待校准&#64;6920]</a></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">export ROS_DISCOVERY_SERVER=&quot;127.0.0.1:11811;127.0.0.1:11888&quot;</span>
+<span class="go">ros2 run demo_nodes_cpp talker --ros-args --remap __node:=talker</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">export ROS_DISCOVERY_SERVER=&quot;127.0.0.1:11811;127.0.0.1:11888&quot;</span>
+<span class="go">ros2 run demo_nodes_cpp listener --ros-args --remap __node:=listener</span>
+</pre></div>
+</div>
+<p>现在，如果这些服务器中的一个发生故障，仍然会有可用的发现功能，并且节点仍然会发现彼此。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6921">[待校准&#64;6921]</a></p>
+</div>
+<div class="section" id="backup-server">
+<h3>备份服务器 <a class="reference external" href="http://localhost:3000/#/home?msgid=6922">[待校准&#64;6922]</a><a class="headerlink" href="#backup-server" title="永久链接至标题"></a></h3>
+<p>[需手动修复的语法]Fast DDS Discovery Server允许创建具有备份功能的服务器。这允许服务器在关机的情况下恢复其保存的最后状态。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6923">[待校准&#64;6923]</a></p>
+<img alt="../../_images/ds_backup_example.svg" class="align-center" src="../../_images/ds_backup_example.svg" /><p>不同终端运行以下代码建立通讯带备份服务器。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6924">[待校准&#64;6924]</a></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">fastdds discovery --server-id 0 --ip-address 127.0.0.1 --port 11811 --backup</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">export ROS_DISCOVERY_SERVER=&quot;127.0.0.1:11811&quot;</span>
+<span class="go">ros2 run demo_nodes_cpp talker --ros-args --remap __node:=talker</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">export ROS_DISCOVERY_SERVER=&quot;127.0.0.1:11811&quot;</span>
+<span class="go">ros2 run demo_nodes_cpp listener --ros-args --remap __node:=listener</span>
+</pre></div>
+</div>
+<p>几个备份文件发现服务器的工作目录 (目录是launched)。两个 <code class="docutils literal notranslate"><span class="pre">SQLite</span></code> 文件和两个 <code class="docutils literal notranslate"><span class="pre">json</span></code> 文件包含启动新服务器并在发生故障时恢复故障服务器状态所需的信息，避免了发现过程再次发生的需要，并且不会丢失信息。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6925">[待校准&#64;6925]</a></p>
+</div>
+<div class="section" id="discovery-partitions">
+<h3>发现分区 <a class="reference external" href="http://localhost:3000/#/home?msgid=6926">[待校准&#64;6926]</a><a class="headerlink" href="#discovery-partitions" title="永久链接至标题"></a></h3>
+<p>可以拆分与发现服务器的通信，以便在发现信息中创建虚拟分区。这意味着只有当两个端点之间存在共享发现服务器或发现服务器网络时，它们才会相互了解。我们将使用两个独立的服务器执行一个示例。下图显示了该架构。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6927">[待校准&#64;6927]</a></p>
+<img alt="../../_images/ds_partition_example.svg" class="align-center" src="../../_images/ds_partition_example.svg" /><p>通过这种模式， <code class="docutils literal notranslate"><span class="pre">Listener</span> <span class="pre">1</span></code> 将与 <code class="docutils literal notranslate"><span class="pre">Talker</span> <span class="pre">1</span></code> 和 <code class="docutils literal notranslate"><span class="pre">Talker</span> <span class="pre">2</span></code> 相连，因为它们共享 <code class="docutils literal notranslate"><span class="pre">Server</span> <span class="pre">1</span></code> 。 <code class="docutils literal notranslate"><span class="pre">Listener</span> <span class="pre">2</span></code> 将与 <code class="docutils literal notranslate"><span class="pre">Talker</span> <span class="pre">1</span></code> 联系，因为他们共享 <code class="docutils literal notranslate"><span class="pre">Server</span> <span class="pre">2</span></code> 。但是 <code class="docutils literal notranslate"><span class="pre">Listener</span> <span class="pre">2</span></code> 不会听到来自 <code class="docutils literal notranslate"><span class="pre">Talker</span> <span class="pre">2</span></code> 的消息，因为它们不共享任何发现服务器或发现服务器，包括通过冗余发现服务器之间的连接间接共享。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6928">[待校准&#64;6928]</a></p>
+<p>运行第一个侦听本地主机的服务器，默认端口为11811。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6929">[待校准&#64;6929]</a></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">fastdds discovery --server-id 0 --ip-address 127.0.0.1 --port 11811</span>
+</pre></div>
+</div>
+<p>在另一个终端中，使用另一个端口 (在本例中为端口11888) 运行第二个服务器侦听本地主机。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6930">[待校准&#64;6930]</a></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">fastdds discovery --server-id 1 --ip-address 127.0.0.1 --port 11888</span>
+</pre></div>
+</div>
+<p>现在，在不同的终端中运行每个节点。使用 <code class="docutils literal notranslate"><span class="pre">ROS_DISCOVERY_SERVER</span></code> 环境变量来决定它们连接到哪个服务器。注意 <a class="reference external" href="https://fast-dds.docs.eprosima.com/en/v2.1.0/fastdds/env_vars/env_vars.html">ids must match</a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6931">[待校准&#64;6931]</a></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">export ROS_DISCOVERY_SERVER=&quot;127.0.0.1:11811;127.0.0.1:11888&quot;</span>
+<span class="go">ros2 run demo_nodes_cpp talker --ros-args --remap __node:=talker_1</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">export ROS_DISCOVERY_SERVER=&quot;127.0.0.1:11811;127.0.0.1:11888&quot;</span>
+<span class="go">ros2 run demo_nodes_cpp listener --ros-args --remap __node:=listener_1</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">export ROS_DISCOVERY_SERVER=&quot;127.0.0.1:11811&quot;</span>
+<span class="go">ros2 run demo_nodes_cpp talker --ros-args --remap __node:=talker_2</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">export ROS_DISCOVERY_SERVER=&quot;;127.0.0.1:11888&quot;</span>
+<span class="go">ros2 run demo_nodes_cpp listener --ros-args --remap __node:=listener_2</span>
+</pre></div>
+</div>
+<p>我们应该看到 <code class="docutils literal notranslate"><span class="pre">Listener</span> <span class="pre">1</span></code> 是如何从两个谈话者节点接收信息的，而 <code class="docutils literal notranslate"><span class="pre">Listener</span> <span class="pre">2</span></code> 是在一个不同于 <code class="docutils literal notranslate"><span class="pre">Talker</span> <span class="pre">2</span></code> 的分区，因此不接收来自它的信息。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6932">[待校准&#64;6932]</a></p>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>一旦两个端点 (ROS节点) 发现了彼此，它们就不需要它们之间的发现服务器网络来监听彼此的消息。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6933">[待校准&#64;6933]</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="compare-fast-dds-discovery-server-with-simple-discovery-protocol">
+<h2>将Fast DDS Discovery Server与简单发现协议进行比较 <a class="reference external" href="http://localhost:3000/#/home?msgid=6934">[待校准&#64;6934]</a><a class="headerlink" href="#compare-fast-dds-discovery-server-with-simple-discovery-protocol" title="永久链接至标题"></a></h2>
+<p>为了比较使用简单发现协议 (用于分布式发现的默认DDS机制) 或发现服务器的执行节点，提供了两个脚本，用于执行talker和许多侦听器并分析此期间的网络流量。对于这个实验， <code class="docutils literal notranslate"><span class="pre">tshark</span></code> 需要安装在你的系统上。配置文件是强制性的，以避免使用进程内模式。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6935">[待校准&#64;6935]</a></p>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>这些脚本需要发现服务器关闭功能，该功能仅适用于比ROS 2Foxy提供的版本更新的版本。为了使用此功能，请使用Fast DDSv2.1.0或更高版本编译ROS 2。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6936">[待校准&#64;6936]</a></p>
+</div>
+<p>这些脚本的特征是用于高级目的的参考，它们的研究留给了用户。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6937">[待校准&#64;6937]</a></p>
+<ul class="simple">
+<li><p>: 下载: “bash网络流量生成器 &lt;脚本/生成 _ 发现 _ 包.bash&gt;” <a class="reference external" href="http://localhost:3000/#/home?msgid=6938">[待校准&#64;6938]</a></p></li>
+<li><p>: 下载: “python 3图生成器 &lt;脚本/发现 _ 数据包.Py&gt;” <a class="reference external" href="http://localhost:3000/#/home?msgid=6939">[待校准&#64;6939]</a></p></li>
+<li><p>: 下载: “xml配置 &lt;脚本/no_intrprocess_configuration.Xml&gt;” <a class="reference external" href="http://localhost:3000/#/home?msgid=6940">[待校准&#64;6940]</a></p></li>
+</ul>
+<p>运行bash脚本路径 <code class="docutils literal notranslate"><span class="pre">setup.bash</span></code> 文件源文件ROS 2作为参数。这将生成用于简单发现的流量跟踪。使用第二个参数 <code class="docutils literal notranslate"><span class="pre">SERVER</span></code> 执行相同的脚本。它将生成使用发现服务器的跟踪。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6941">[待校准&#64;6941]</a></p>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>根据您的 <code class="docutils literal notranslate"><span class="pre">tcpdump</span></code> 配置，此脚本可能需要 <code class="docutils literal notranslate"><span class="pre">sudo</span></code> 特权才能读取网络设备上的流量。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6942">[待校准&#64;6942]</a></p>
+</div>
+<p>两次执行完成后，运行Python脚本以生成类似于以下图形的图形。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6943">[待校准&#64;6943]</a></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">export</span> <span class="nv">FASTRTPS_DEFAULT_PROFILES_FILE</span><span class="o">=</span><span class="s2">&quot;no_intraprocess_configuration.xml&quot;</span>
+<span class="gp">$</span> sudo bash generate_discovery_packages.bash ~/ros2_foxy/install/local_setup.bash
+<span class="gp">$</span> sudo bash generate_discovery_packages.bash ~/ros2_foxy/install/local_setup.bash SERVER
+<span class="gp">$</span> python3 discovery_packets.py
+</pre></div>
+</div>
+<img alt="../../_images/discovery_packets.svg" class="align-center" src="../../_images/discovery_packets.svg" /><p>该图是实验特定运行的结果。读者可以执行脚本并生成自己的结果进行比较。可以很容易地看出，使用发现服务时会减少网络流量。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6944">[待校准&#64;6944]</a></p>
+<p>流量的减少是避免每个节点宣布自己并等待网络上每个其他节点的响应的结果。这在大型架构中创建了大量流量。这种方法的减少随着节点数量的增加而增加，使得这种体系结构比简单的发现协议方法更具可扩展性。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6945">[待校准&#64;6945]</a></p>
+<p>新的Fast DDS Discovery Serverv2自 * Fast DDS * v2.0.2起可用，取代了旧的发现服务器。在此新版本中，那些不共享话题的节点将自动调用y彼此不发现，从而保存连接它们及其端点所需的全部发现数据。上面的实验没有显示这种情况，但即使如此，由于ROS 2节点的隐藏基础设施话题，流量的大幅减少也可以得到重视。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6946">[待校准&#64;6946]</a></p>
+</div>
+</div>
+
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../Topics/Topic-Statistics-Tutorial.html" class="btn btn-neutral float-left" title="ROS 2话题统计教程 (c ++) [待校准@8311]" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="../Allocator-Template-Tutorial.html" class="btn btn-neutral float-right" title="实现自定义内存分配器 [待校准@6445]" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2022, Open Robotics.</p>
+  </div>
+
+  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-17821189-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-17821189-2', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

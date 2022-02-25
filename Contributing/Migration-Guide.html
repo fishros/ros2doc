@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>从ROS 1迁移指南 [待校准@9780] &mdash; ROS 2 documentation  文档</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.ros.org/en/Contributing/Migration-Guide.html" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="来自ROS 1的Python迁移指南 [待校准@10003]" href="Migration-Guide-Python.html" />
+    <link rel="prev" title="质量指南: 确保代码质量 [待校准@10012]" href="Quality-Guide.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> ROS 2 documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Installation.html">安装 [待校准&#64;5690]</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Ubuntu-Development-Setup.html">在Ubuntu Linux上构建ROS 2 [待校准&#64;5886]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Ubuntu-Install-Binary.html">在Ubuntu Linux上安装ROS 2 [待校准&#64;5937]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Ubuntu-Install-Debians.html">通过Debian包安装ROS 2 [待校准&#64;5959]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/macOS-Development-Setup.html">在macOS上构建ROS 2 [待校准&#64;6117]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/macOS-Install-Binary.html">在macOS上安装ROS 2 [待校准&#64;6148]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Windows-Development-Setup.html">在Windows上构建ROS 2 [待校准&#64;5973]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Windows-Install-Binary.html">在Windows上安装ROS 2 [待校准&#64;6050]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Fedora-Development-Setup.html">在Fedora Linux上构建ROS 2 [待校准&#64;5836]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Latest-Development-Setup.html">安装最新的ROS 2开发版本 [待校准&#64;5840]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Maintaining-a-Source-Checkout.html">主源文件检出ROS 2Foxy [待校准&#64;5850]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Testing.html">用于测试的替代安装源 [待校准&#64;5873]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/DDS-Implementations.html">安装DDS实现 [待校准&#64;5717]</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Install-Connext-Security-Plugins.html">安装Connext安全插件 [待校准&#64;5768]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Install-Connext-University-Eval.html">安装大学或RTI Connext DDS的评估版本 [待校准&#64;5782]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Working-with-Eclipse-CycloneDDS.html">使用EclipseCycloneDDS [待校准&#64;5796]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Working-with-GurumNetworks-GurumDDS.html">与GurumNetworks GurumDDS合作 [待校准&#64;5812]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Working-with-eProsima-Fast-DDS.html">与eProsimaFast DDS合作 [待校准&#64;5829]</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Docs-Guide.html">文档指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorials.html">教程 [待校准&#64;6242]</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Configuring-ROS2-Environment.html">配置ROS 2环境 [待校准&#64;6646]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Turtlesim/Introducing-Turtlesim.html">介绍turtlesim和rqt [待校准&#64;8428]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Understanding-ROS2-Nodes.html">了解ROS 2节点 [待校准&#64;8733]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Topics/Understanding-ROS2-Topics.html">理解ROS 2话题 [待校准&#64;8368]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Services/Understanding-ROS2-Services.html">了解ROS 2服务 [待校准&#64;7742]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Parameters/Understanding-ROS2-Parameters.html">理解ROS 2参数 [待校准&#64;7371]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Understanding-ROS2-Actions.html">理解ROS 2动作 [待校准&#64;8684]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Rqt-Console/Using-Rqt-Console.html">使用rqt_控制台 [待校准&#64;7712]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Launch/CLI-Intro.html">介绍ROS 2launch [待校准&#64;7101]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Ros2bag/Recording-And-Playing-Back-Data.html">记录和回放数据 [待校准&#64;7639]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Workspace/Creating-A-Workspace.html">创建工作空间 [待校准&#64;8836]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Creating-Your-First-ROS2-Package.html">创建您的第一个ROS 2包 [待校准&#64;6677]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Writing-A-Simple-Cpp-Publisher-And-Subscriber.html">编写简单的发布者和订阅者 (c ++) [待校准&#64;8905]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Writing-A-Simple-Py-Publisher-And-Subscriber.html">编写简单的发布者和订阅者 (Python) [待校准&#64;8992]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Writing-A-Simple-Cpp-Service-And-Client.html">编写简单的服务和客户端 (c ++) [待校准&#64;8953]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Writing-A-Simple-Py-Service-And-Client.html">编写简单的服务和客户端 (Python) [待校准&#64;9028]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Custom-ROS2-Interfaces.html">创建自定义ROS 2 msg 和 srv 文件 [待校准&#64;6739]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Single-Package-Define-And-Use-Interface.html">在ROS 2接口上扩展 [待校准&#64;7844]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Using-Parameters-In-A-Class-CPP.html">在类 (c ++) 中使用参数 [待校准&#64;8769]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Using-Parameters-In-A-Class-Python.html">在类中使用参数 (Python) [待校准&#64;8809]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Getting-Started-With-Ros2doctor.html">开始使用ros2doctor [待校准&#64;7010]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Pluginlib.html">创建和使用插件 (c ++) [待校准&#64;7411]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Actions/Creating-an-Action.html">创建动作 [待校准&#64;6271]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Actions/Writing-a-Cpp-Action-Server-Client.html">编写动作服务器和客户端 (c ++) [待校准&#64;6313]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Actions/Writing-a-Py-Action-Server-Client.html">编写动作服务器和客户端 (Python) [待校准&#64;6385]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Composition.html">在单个进程中组成多个节点 [待校准&#64;6594]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Colcon-Tutorial.html">使用colcon构建包 [待校准&#64;6535]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Launch/Launch-Main.html">Launch教程 [待校准&#64;7160]</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Launch/Creating-Launch-Files.html">创建launch文件 [待校准&#64;7122]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Launch/Launch-system.html">[需手动修复的语法]Launch/监控多节点[需手动修复的语法]Launch [待校准&#64;7174]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Launch/Using-Substitutions.html">在launch文件中使用替换 [待校准&#64;7297]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Launch/Using-Event-Handlers.html">在launch文件中使用事件处理程序 [待校准&#64;7201]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Launch/Using-ROS2-Launch-For-Large-Projects.html">在大型项目中使用ROS 2launch [待校准&#64;7234]</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Tf2/Tf2-Main.html">tf2教程 [待校准&#64;8078]</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Introduction-To-Tf2.html">tf2简介 [待校准&#64;7994]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Writing-A-Tf2-Static-Broadcaster-Py.html">编写tf2静态广播器 (Python) [待校准&#64;8299]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Writing-A-Tf2-Static-Broadcaster-Cpp.html">编写tf2静态广播器 (c ++) [待校准&#64;8257]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Writing-A-Tf2-Broadcaster-Py.html">编写tf2广播器 (Python) [待校准&#64;8220]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Writing-A-Tf2-Broadcaster-Cpp.html">编写tf2广播器 (c ++) [待校准&#64;8181]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Writing-A-Tf2-Listener-Py.html">编写tf2监听程序 (Python) [待校准&#64;8251]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Writing-A-Tf2-Listener-Cpp.html">编写tf2监听程序 (c ++) [待校准&#64;8233]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Adding-A-Frame-Py.html">添加帧 (Python) [待校准&#64;7950]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Adding-A-Frame-Cpp.html">添加帧 (c ++) [待校准&#64;7914]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Learning-About-Tf2-And-Time-Py.html">学习tf2和时间 (Python) [待校准&#64;8040]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Learning-About-Tf2-And-Time-Cpp.html">学习tf2和时间 (c ++) [待校准&#64;8023]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Time-Travel-With-Tf2-Py.html">时间穿梭tf2 (Python) [待校准&#64;8130]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Time-Travel-With-Tf2-Cpp.html">时间穿梭带tf2 (C++) [待校准&#64;8105]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Debugging-Tf2-Problems.html">调试tf2问题 [待校准&#64;7956]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Quaternion-Fundamentals.html">四元数基金amentals [待校准&#64;8054]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.html">使用stamped数据类型与tf2_ros: MessageFilter [待校准&#64;8138]</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/URDF/URDF-Main.html">URDF教程 [待校准&#64;8607]</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/URDF/Building-a-Visual-Robot-Model-with-URDF-from-Scratch.html">从头开始用URDF构建视觉机器人模型 [待校准&#64;8556]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/URDF/Building-a-Movable-Robot-Model-with-URDF.html">用URDF建立可移动机器人模型 [待校准&#64;8534]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/URDF/Adding-Physical-and-Collision-Properties-to-a-URDF-Model.html">向URDF模型添加物理和碰撞属性 [待校准&#64;8487]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/URDF/Using-Xacro-to-Clean-Up-a-URDF-File.html">使用Xacro清理URDF文件 [待校准&#64;8635]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/URDF/Using-URDF-with-Robot-State-Publisher.html">将URDF与robot_state_发布者结合使用 [待校准&#64;8609]</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Topics/Topic-Statistics-Tutorial.html">ROS 2话题统计教程 (c ++) [待校准&#64;8311]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Discovery-Server/Discovery-Server.html">使用Fast DDS Discovery Server作为发现协议 [社区贡献] [待校准&#64;6879]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Allocator-Template-Tutorial.html">实现自定义内存分配器 [待校准&#64;6445]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Simulators/Webots/Setting-up-a-Robot-Simulation-Webots.html">设置机器人仿真 (Webots) [待校准&#64;7782]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Deploying-ROS-2-on-IBM-Cloud.html">IBM Cloud Kubernetes上的ROS2 [社区-贡献] [待校准&#64;6792]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Eclipse-Oxygen-with-ROS-2-and-rviz2.html">带有ROS 2和rviz2的Eclipse Oxygen [社区贡献] [待校准&#64;6947]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Building-Realtime-rt_preempt-kernel-for-ROS-2.html">为ROS 2构建实时Linux [社区-贡献] [待校准&#64;6514]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Ros2bag/Recording-A-Bag-From-Your-Own-Node.html">从您自己的节点记录一个包 [待校准&#64;7554]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Building-ROS2-Package-with-eclipse-2021-06.html">使用eclipse 2021-06构建ROS 2包 [待校准&#64;6486]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Quality-of-Service.html">使用服务质量设置处理有损网络 [待校准&#64;7462]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Managed-Nodes.html">具有托管生命周期的节点管理 [待校准&#64;7369]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Intra-Process-Communication.html">高效的流程内通讯 [待校准&#64;7051]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Rosbag-with-ROS1-Bridge.html">使用ROS 1bridge用rosbag记录和回放话题数据 [待校准&#64;7685]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Real-Time-Programming.html">ROS 2中的实时编程 [待校准&#64;7491]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/dummy-robot-demo.html">尝试dummy robot例程 [待校准&#64;9056]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Logging-and-logger-configuration.html">日志和日志记录器配置例程 [待校准&#64;7322]</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../How-To-Guides.html">操作指南 [待校准&#64;204]</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Installation-Troubleshooting.html">安装故障诊断工具 [待校准&#64;535]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Developing-a-ROS-2-Package.html">开发ROS 2包 [待校准&#64;514]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Ament-CMake-Documentation.html">[需手动修复的语法]ament _ cmake用户文档 [待校准&#64;208]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Ament-CMake-Python-Documentation.html">[需手动修复的语法]ament _ cmake_python用户文档 [待校准&#64;360]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Launch-files-migration-guide.html">迁移launch文件ROS 1ROS 2 [待校准&#64;638]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Launch-file-different-formats.html">对ROS 2Launch文件使用Python、XML和YAML [待校准&#64;611]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Launching-composable-nodes.html">使用ROS 2launch到launch可组合节点 [待校准&#64;733]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Parameters-YAML-files-migration-guide.html">将YAML参数文件从ROS 1迁移到ROS 2 [待校准&#64;850]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Node-arguments.html">通过命令行将ROS参数传递给节点 [待校准&#64;746]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Sync-Vs-Async.html">同步与异步服务客户端 [待校准&#64;972]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/DDS-tuning.html">DDS调谐信息 [待校准&#64;470]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Overriding-QoS-Policies-For-Recording-And-Playback.html">rosbag2: 重载QoS策略 [待校准&#64;772]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Working-with-multiple-RMW-implementations.html">使用多个ROS 2中间件实现 [待校准&#64;1068]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Cross-compilation.html">交叉编译 [待校准&#64;383]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Releasing-a-ROS-2-package-with-bloom.html">发布带有bloom的ROS 2包 [待校准&#64;937]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Using-Python-Packages.html">将Python包与ROS 2结合使用 [待校准&#64;1011]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/RQt-Port-Plugin-Windows.html">将RQt插件移植到Windows [待校准&#64;862]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Run-2-nodes-in-single-or-separate-docker-containers.html">在Docker中运行ROS 2节点 [社区-贡献] [待校准&#64;959]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Package-maintainer-guide.html">ROS 2包维护者指南 [待校准&#64;785]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Building-a-Custom-Debian-Package.html">构建自定义Debian包 [待校准&#64;371]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Topics-Services-Actions.html">话题vs服务vsAction [待校准&#64;997]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Using-Variants.html">使用变体 [待校准&#64;1031]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Using-ros2-param.html">使用 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span></code> 命令行工具 [待校准&#64;1046]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/RQt-Source-Install.html">从源文件构建RQt [待校准&#64;883]</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../How-To-Guides/RQt-Source-Install-MacOS.html">在macOS上从源文件构建RQt [待校准&#64;908]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../How-To-Guides/RQt-Source-Install-Windows10.html">在Windows 10上从源文件构建RQt [待校准&#64;916]</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Concepts.html">概念 [待校准&#64;4938]</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Domain-ID.html">ROS_DOMAIN_ID [待校准&#64;5194]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Different-Middleware-Vendors.html">关于不同的ROS 2 DDS/RTPS供应商 [待校准&#64;5153]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Logging.html">关于日志和日志记录器配置 [待校准&#64;5325]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Quality-of-Service-Settings.html">关于服务质量设置 [待校准&#64;5369]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-ROS-2-Client-Libraries.html">关于ROS 2客户端库 [待校准&#64;5459]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-ROS-Interfaces.html">关于ROS 2接口 [待校准&#64;5526]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-ROS-2-Parameters.html">关于ROS 2中的参数 [待校准&#64;5490]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Executors.html">执行器 [待校准&#64;5227]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Topic-Statistics.html">关于话题统计 [待校准&#64;5671]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Command-Line-Tools.html">使用命令行工具进行自检 [待校准&#64;5091]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-RQt.html">RQt的概述和使用 [待校准&#64;5625]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Composition.html">关于组件 [待校准&#64;5119]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Catment.html">[需手动修复的语法]ament和catkin的混合研究 [待校准&#64;5019]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Cross-Compilation.html">关于交叉编译 [待校准&#64;5141]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Tf2.html">关于tf2 [待校准&#64;5653]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Build-System.html">关于构建系统 [待校准&#64;4969]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Internal-Interfaces.html">关于内部ROS 2接口 [待校准&#64;5265]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Middleware-Implementations.html">关于ROS 2中间件实现 [待校准&#64;5347]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Client-Interfaces.html">ROS 2客户端接口 (客户端库) [待校准&#64;5079]</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../Contributing.html">贡献 [待校准&#64;9128]</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Developer-Guide.html">ROS 2开发人员指南 [待校准&#64;9430]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Code-Style-Language-Versions.html">代码样式和语言版本 [待校准&#64;9212]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Quality-Guide.html">质量指南: 确保代码质量 [待校准&#64;10012]</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">从ROS 1迁移指南 [待校准&#64;9780]</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Migration-Guide-Python.html">来自ROS 1的Python迁移指南 [待校准&#64;10003]</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Build-Farms.html">ROS Build Farms [待校准&#64;9167]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Windows-Tips-and-Tricks.html">Windows提示和技巧 [待校准&#64;10105]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Contributing-To-ROS-2-Documentation.html">为ROS 2文档做出贡献 [待校准&#64;9366]</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Contact.html">联系人 [待校准&#64;6167]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ROSCon-Content.html">ROSCon内容 [待校准&#64;105]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Releases.html">发行版 [待校准&#64;1233]</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Alpha-Overview.html">ROS 2 α 发行版本 (2015年8月-2016年10月) [待校准&#64;1306]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Beta1-Overview.html">贝塔1 (代号'Asphalt'; 2016年12月) [待校准&#64;1386]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Beta2-Overview.html">贝塔2 (代号'r2b2'; 2017年7月) [待校准&#64;1420]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Beta3-Overview.html">贝塔3 (代号'r2b3'; 2017年9月) [待校准&#64;1451]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Ardent-Apalone.html">ROS 2Ardent阿帕隆 (代号'ardent'; 2017年12月) [待校准&#64;4089]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Bouncy-Bolson.html">ROS 2 Bouncy Bolson (代号'bouncy'; 2018年6月) [待校准&#64;4130]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Crystal-Clemmys.html">ROS 2Crystal Clemmys (代号'crystal'; 2018年12月) [待校准&#64;4158]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Dashing-Diademata.html">ROS 2DashingDiademata (代号'dashing'; 2019年5月31日) [待校准&#64;4237]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Eloquent-Elusor.html">ROS 2EloquentElusor (代号'eloquent'; 2019年11月22日) [待校准&#64;4427]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Foxy-Fitzroy.html">ROS 2FoxyFitzroy (代号'foxy'; 2020年6月5日) [待校准&#64;4503]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Galactic-Geochelone.html">ROS 2GalacticGeochelone (代号'galactic'; 2021年5月) [待校准&#64;4649]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Galactic-Geochelone-Complete-Changelog.html">ROS 2GalacticGeochelone完整变更日志 [待校准&#64;1470]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Humble-Hawksbill.html">ROS 2Humble Hawksbill (代号'humble'; 2022年5月) [待校准&#64;4845]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Rolling-Ridley.html">ROS 2Rolling Ridley (代号'rolling'; 2020年6月) [待校准&#64;4929]</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Features.html">功能状态 [待校准&#64;9074]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Roadmap.html">路线图 [待校准&#64;45]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Feature-Ideas.html">特色创意 [待校准&#64;1123]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Governance.html">项目管理 [待校准&#64;10131]</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Governance/ROS2-TSC-Charter.html">ROS 2技术指导委员会章程 [待校准&#64;10280]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Governance/ROS2-TSC-Intake-process.html">ROS 2 TSC申请人摄入流程 [待校准&#64;10368]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Governance/How-To-Start-A-Community-Working-Group.html">如何成立社区工作组 [待校准&#64;10253]</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Marketing.html">营销材料 [待校准&#64;6193]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Related-Projects.html">相关项目 [待校准&#64;6209]</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Related-Projects/Intel-ROS2-Projects.html">[需手动修复的语法]IntelROS 2项目 [待校准&#64;6210]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Related-Projects/Nvidia-ROS2-Projects.html">[需手动修复的语法]NVIDIAROS 2项目 [待校准&#64;6228]</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Glossary.html">术语表 [待校准&#64;1217]</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ROS 2 documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../Contributing.html">贡献 [待校准&#64;9128]</a> &raquo;</li>
+      <li>从ROS 1迁移指南 [待校准&#64;9780]</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/ros2/ros2_documentation/blob/foxy/source/Contributing/Migration-Guide.rst" class="fa fa-github"> 在 GitHub 上修改</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+
+
+  <div class="section" id="migration-guide-from-ros-1">
+<h1>从ROS 1迁移指南 <a class="reference external" href="http://localhost:3000/#/home?msgid=9780">[待校准&#64;9780]</a><a class="headerlink" href="#migration-guide-from-ros-1" title="永久链接至标题"></a></h1>
+<div class="contents local topic" id="table-of-contents">
+<p class="topic-title">目录 <a class="reference external" href="http://localhost:3000/#/home?msgid=9129">[待校准&#64;9129]</a></p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#prerequisites" id="id1">先决条件 [待校准&#64;9785]</a></p></li>
+<li><p><a class="reference internal" href="#migration-steps" id="id2">迁移步骤 [待校准&#64;9787]</a></p>
+<ul>
+<li><p><a class="reference internal" href="#package-manifests" id="id3">包装清单 [待校准&#64;9788]</a></p></li>
+<li><p><a class="reference internal" href="#metapackages" id="id4">元包 [待校准&#64;9791]</a></p></li>
+<li><p><a class="reference internal" href="#message-service-and-action-definitions" id="id5">消息、服务和动作定义 [待校准&#64;9793]</a></p></li>
+<li><p><a class="reference internal" href="#build-system" id="id6">构建系统 [待校准&#64;9805]</a></p></li>
+<li><p><a class="reference internal" href="#update-source-code" id="id7">更新源文件 [待校准&#64;9852]</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#parameters" id="id8">参数 [待校准&#64;9894]</a></p></li>
+<li><p><a class="reference internal" href="#launch-files" id="id9">Launch档案 [待校准&#64;9899]</a></p></li>
+<li><p><a class="reference internal" href="#example-converting-an-existing-ros-1-package-to-use-ros-2" id="id10">示例: 将现有的ROS 1包转换为使用ROS 2 [待校准&#64;9901]</a></p>
+<ul>
+<li><p><a class="reference internal" href="#the-ros-1-code" id="id11">ROS 1代码 [待校准&#64;9903]</a></p></li>
+<li><p><a class="reference internal" href="#migrating-to-ros-2" id="id12">迁移到ROS 2 [待校准&#64;9914]</a></p></li>
+<li><p><a class="reference internal" href="#update-scripts" id="id13">更新脚本 [待校准&#64;9962]</a></p></li>
+<li><p><a class="reference internal" href="#more-examples-and-tools" id="id14">更多示例和工具 [待校准&#64;9992]</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#licensing" id="id15">许可 [待校准&#64;9995]</a></p>
+<ul>
+<li><p><a class="reference internal" href="#changing-the-license" id="id16">更改许可证 [待校准&#64;10001]</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<p>有两种不同的包迁移: <a class="reference external" href="http://localhost:3000/#/home?msgid=9781">[待校准&#64;9781]</a></p>
+<ul class="simple">
+<li><p>将现有包的源文件代码从ROS 1迁移到ROS 2，目的是使源文件代码的很大一部分保持不变或至少保持相似。这方面的一个例子可以是 <a class="reference external" href="https://github.com/ros/pluginlib">pluginlib</a> ，其中源文件代码保存在同一仓库的不同分支中，并且通常在必要时可以在这些分支之间移植补丁。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9782">[待校准&#64;9782]</a></p></li>
+<li><p>为ROS 2实现ROS 1包的相同或相似功能，但假设源文件将有很大的不同。这方面的一个例子可能是ROS 2中的 <a class="reference external" href="https://github.com/ros/ros_comm/tree/melodic-devel/clients/roscpp">roscpp</a> in ROS 1 and <a class="reference external" href="https://github.com/ros2/rclcpp/tree/master/rclcpp">rclcpp</a> ，它是独立的仓库，不共享任何代码。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9783">[待校准&#64;9783]</a></p></li>
+</ul>
+<p>本文重点介绍前一种情况，并介绍将ROS 1包迁移到ROS 2的高级步骤。它的目标不是一步一步的迁移指令，也不被认为是最终的  &quot;solution&quot; 。未来的版本将旨在使迁移更加顺畅，减少工作量，从而为ROS 1和ROS 2维护来自同一分支的单个包。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9784">[待校准&#64;9784]</a></p>
+<div class="section" id="prerequisites">
+<h2>先决条件 <a class="reference external" href="http://localhost:3000/#/home?msgid=9785">[待校准&#64;9785]</a><a class="headerlink" href="#prerequisites" title="永久链接至标题"></a></h2>
+<p>在能够将ROS 1包迁移到ROS 2之前，其所有依赖项必须在ROS 2中可用。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9786">[待校准&#64;9786]</a></p>
+</div>
+<div class="section" id="migration-steps">
+<h2>迁移步骤 <a class="reference external" href="http://localhost:3000/#/home?msgid=9787">[待校准&#64;9787]</a><a class="headerlink" href="#migration-steps" title="永久链接至标题"></a></h2>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#package-manifests" id="id17">包装清单 [待校准&#64;9788]</a></p></li>
+<li><p><a class="reference internal" href="#metapackages" id="id18">元包 [待校准&#64;9791]</a></p></li>
+<li><p><a class="reference internal" href="#message-service-and-action-definitions" id="id19">消息、服务和动作定义 [待校准&#64;9793]</a></p></li>
+<li><p><a class="reference internal" href="#build-system" id="id20">构建系统 [待校准&#64;9805]</a></p></li>
+<li><p><a class="reference internal" href="#update-source-code" id="id21">更新源文件 [待校准&#64;9852]</a></p></li>
+</ul>
+</div>
+<div class="section" id="package-manifests">
+<h3>包装清单 <a class="reference external" href="http://localhost:3000/#/home?msgid=9788">[待校准&#64;9788]</a><a class="headerlink" href="#package-manifests" title="永久链接至标题"></a></h3>
+<p>ROS 2不支持包规格的格式1，只支持更新的格式版本 (2和更高版本)。因此，如果 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 文件使用格式1，它必须至少更新为格式2。因为ROS 1支持所有格式，所以在ROS 1包中执行转换是安全的。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9789">[待校准&#64;9789]</a></p>
+<p>某些包在ROS 2中可能具有不同的名称，因此可能需要相应地更新依赖项。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9790">[待校准&#64;9790]</a></p>
+</div>
+<div class="section" id="metapackages">
+<h3>元包 <a class="reference external" href="http://localhost:3000/#/home?msgid=9791">[待校准&#64;9791]</a><a class="headerlink" href="#metapackages" title="永久链接至标题"></a></h3>
+<p>ROS 2没有元包的特殊包类型。元包仍然可以作为仅包含运行时依赖项的常规包存在。从ROS 1迁移元包时，只需删除包清单中的 <code class="docutils literal notranslate"><span class="pre">&lt;metapackage</span> <span class="pre">/&gt;</span></code> 标签。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9792">[待校准&#64;9792]</a></p>
+</div>
+<div class="section" id="message-service-and-action-definitions">
+<h3>消息、服务和动作定义 <a class="reference external" href="http://localhost:3000/#/home?msgid=9793">[待校准&#64;9793]</a><a class="headerlink" href="#message-service-and-action-definitions" title="永久链接至标题"></a></h3>
+<p>消息文件必须以 <code class="docutils literal notranslate"><span class="pre">.msg</span></code> 结尾，并且必须位于子文件夹 <code class="docutils literal notranslate"><span class="pre">msg</span></code> 。服务文件必须以 <code class="docutils literal notranslate"><span class="pre">.srv</span></code> 结尾，并且必须位于 <code class="docutils literal notranslate"><span class="pre">srv</span></code> 子文件夹中。Action文件必须结束 <code class="docutils literal notranslate"><span class="pre">.action</span></code> 必须位于子文件夹 <code class="docutils literal notranslate"><span class="pre">action</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9794">[待校准&#64;9794]</a></p>
+<p>这些文件可能需要更新以符合 <a class="reference external" href="https://design.ros2.org/articles/interface_definition.html">ROS Interface definition</a> 。一些原始类型已被删除，ROS 1中内置类型的 <code class="docutils literal notranslate"><span class="pre">duration</span></code> 和 <code class="docutils literal notranslate"><span class="pre">time</span></code> 类型已被普通消息定义替换，必须从 <a class="reference external" href="https://github.com/ros2/rcl_interfaces/tree/master/builtin_interfaces">builtin_interfaces</a> 包中使用。此外，一些命名约定比ROS 1更严格。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9795">[待校准&#64;9795]</a></p>
+<p>在你的 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 里: <a class="reference external" href="http://localhost:3000/#/home?msgid=9796">[待校准&#64;9796]</a></p>
+<ul class="simple">
+<li><p>加入 <code class="docutils literal notranslate"><span class="pre">&lt;buildtool_depend&gt;rosidl_default_generators&lt;/buildtool_depend&gt;</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9797">[待校准&#64;9797]</a></p></li>
+<li><p>加入 <code class="docutils literal notranslate"><span class="pre">&lt;exec_depend&gt;rosidl_default_runtime&lt;/exec_depend&gt;</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9798">[待校准&#64;9798]</a></p></li>
+<li><p>对于每个依赖消息包，添加 <code class="docutils literal notranslate"><span class="pre">&lt;depend&gt;message_package&lt;/depend&gt;</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9799">[待校准&#64;9799]</a></p></li>
+</ul>
+<p>在你的 <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> 里: <a class="reference external" href="http://localhost:3000/#/home?msgid=9800">[待校准&#64;9800]</a></p>
+<ul class="simple">
+<li><p>从启用c14 14开始 <a class="reference external" href="http://localhost:3000/#/home?msgid=9801">[待校准&#64;9801]</a></p></li>
+</ul>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CXX_STANDARD</span> <span class="s">14</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>添加 <code class="docutils literal notranslate"><span class="pre">find_package(rosidl_default_generators</span> <span class="pre">REQUIRED)</span></code>  <a class="reference external" href="http://localhost:3000/#/home?msgid=9802">[待校准&#64;9802]</a></p></li>
+<li><p>对于每个依赖消息包，添加 <code class="docutils literal notranslate"><span class="pre">find_package(message_package</span> <span class="pre">REQUIRED)</span></code> ，并用 <code class="docutils literal notranslate"><span class="pre">rosidl_generate_interfaces</span></code> 替换调用 <code class="docutils literal notranslate"><span class="pre">generate_messages</span></code> 的CMake函数。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9803">[待校准&#64;9803]</a></p></li>
+</ul>
+<p>这将取代所有可以删除的消息和服务文件的 <code class="docutils literal notranslate"><span class="pre">add_message_files</span></code> 和 <code class="docutils literal notranslate"><span class="pre">add_service_files</span></code> 列表。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9804">[待校准&#64;9804]</a></p>
+</div>
+<div class="section" id="build-system">
+<h3>构建系统 <a class="reference external" href="http://localhost:3000/#/home?msgid=9805">[待校准&#64;9805]</a><a class="headerlink" href="#build-system" title="永久链接至标题"></a></h3>
+<p>ROS 2中的构建系统被调用 <a class="reference external" href="https://design.ros2.org/articles/ament.html">ament</a> ，构建工具是 <a class="reference internal" href="../Tutorials/Colcon-Tutorial.html"><span class="doc">colcon</span></a>. ，Ament建立在CMake上:  <code class="docutils literal notranslate"><span class="pre">ament_cmake</span></code> 提供CMake功能，使编写 <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> 文件更容易。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9806">[待校准&#64;9806]</a></p>
+<div class="section" id="build-tool">
+<h4>构建工具 <a class="reference external" href="http://localhost:3000/#/home?msgid=9807">[待校准&#64;9807]</a><a class="headerlink" href="#build-tool" title="永久链接至标题"></a></h4>
+<p>而不是使用 <code class="docutils literal notranslate"><span class="pre">catkin_make</span></code> ， <code class="docutils literal notranslate"><span class="pre">catkin_make_isolated</span></code> 或 <code class="docutils literal notranslate"><span class="pre">catkin</span> <span class="pre">build</span></code> ROS 2使用命令行工具 <a class="reference external" href="https://design.ros2.org/articles/build_tool.html">colcon</a> 建立和安装一组包。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9808">[待校准&#64;9808]</a></p>
+</div>
+<div class="section" id="pure-python-package">
+<h4>纯Python包 <a class="reference external" href="http://localhost:3000/#/home?msgid=9809">[待校准&#64;9809]</a><a class="headerlink" href="#pure-python-package" title="永久链接至标题"></a></h4>
+<p>如果ROS 1包仅使用CMake调用 <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> 文件，并且不包含除Python代码之外的任何内容 (例如g.也没有消息、服务等。) 它应该在ROS 2中转换为纯Python包: <a class="reference external" href="http://localhost:3000/#/home?msgid=9810">[待校准&#64;9810]</a></p>
+<ul>
+<li><p>更新或添加 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 文件中的构建类型: <a class="reference external" href="http://localhost:3000/#/home?msgid=9811">[待校准&#64;9811]</a></p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;export&gt;</span>
+  <span class="nt">&lt;build_type&gt;</span>ament_python<span class="nt">&lt;/build_type&gt;</span>
+<span class="nt">&lt;/export&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><p>删除 <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> 文件 <a class="reference external" href="http://localhost:3000/#/home?msgid=9812">[待校准&#64;9812]</a></p></li>
+<li><p>将 <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> 文件更新为标准Python安装脚本 <a class="reference external" href="http://localhost:3000/#/home?msgid=9813">[待校准&#64;9813]</a></p></li>
+</ul>
+<p>ROS 2仅支持Python 3。虽然每个包可以选择也支持Python 2，但如果它使用其他ROS 2包提供的任何API，则必须使用Python 3调用可执行文件。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9814">[待校准&#64;9814]</a></p>
+</div>
+<div class="section" id="update-the-cmakelists-txt-to-use-ament-cmake">
+<h4>更新 * CMakeLists.txt * 以使用 * ament _ cmake * <a class="reference external" href="http://localhost:3000/#/home?msgid=9815">[待校准&#64;9815]</a><a class="headerlink" href="#update-the-cmakelists-txt-to-use-ament-cmake" title="永久链接至标题"></a></h4>
+<p>应用以下更改以使用 <code class="docutils literal notranslate"><span class="pre">ament_cmake</span></code> 代替 <code class="docutils literal notranslate"><span class="pre">catkin</span></code> : <a class="reference external" href="http://localhost:3000/#/home?msgid=9816">[待校准&#64;9816]</a></p>
+<ul>
+<li><p>在 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 文件导出部分设置构建类型: <a class="reference external" href="http://localhost:3000/#/home?msgid=9817">[待校准&#64;9817]</a></p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;export&gt;</span>
+  <span class="nt">&lt;build_type&gt;</span>ament_cmake<span class="nt">&lt;/build_type&gt;</span>
+<span class="nt">&lt;/export&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><p>将 <code class="docutils literal notranslate"><span class="pre">find_package</span></code> 的调用改为 <code class="docutils literal notranslate"><span class="pre">catkin</span></code> ，将 <code class="docutils literal notranslate"><span class="pre">COMPONENTS</span></code> 的调用改为: <a class="reference external" href="http://localhost:3000/#/home?msgid=9818">[待校准&#64;9818]</a></p>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">find_package</span><span class="p">(</span><span class="s">ament_cmake</span> <span class="s">REQUIRED</span><span class="p">)</span>
+<span class="nb">find_package</span><span class="p">(</span><span class="s">component1</span> <span class="s">REQUIRED</span><span class="p">)</span>
+<span class="c"># ...</span>
+<span class="nb">find_package</span><span class="p">(</span><span class="s">componentN</span> <span class="s">REQUIRED</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p>使用以下命令移动和更新 <code class="docutils literal notranslate"><span class="pre">catkin_package</span></code> 调用: <a class="reference external" href="http://localhost:3000/#/home?msgid=9819">[待校准&#64;9819]</a></p>
+<ul class="simple">
+<li><p>而是在所有目标都注册后调用 <code class="docutils literal notranslate"><span class="pre">ament_package</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9820">[待校准&#64;9820]</a></p></li>
+<li><p>[需手动修复的语法] <a class="reference external" href="https://github.com/ament/ament_cmake/blob/master/ament_cmake_core/cmake/core/ament_package.cmake">ament_package</a> 唯一有效的论据是 <code class="docutils literal notranslate"><span class="pre">CONFIG_EXTRAS</span></code> 。所有其他参数都包含在单独的函数中，这些函数都需要在 *  <code class="docutils literal notranslate"><span class="pre">ament_package</span></code> 之前调用: <a class="reference external" href="http://localhost:3000/#/home?msgid=9821">[待校准&#64;9821]</a></p>
+<ul>
+<li><p>而不是之前通过 <code class="docutils literal notranslate"><span class="pre">CATKIN_DEPENDS</span> <span class="pre">...</span></code> 调用 <code class="docutils literal notranslate"><span class="pre">ament_export_dependencies(...)</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9822">[待校准&#64;9822]</a></p></li>
+<li><p>而不是之前通过 <code class="docutils literal notranslate"><span class="pre">INCLUDE_DIRS</span> <span class="pre">...</span></code> 调用 <code class="docutils literal notranslate"><span class="pre">ament_export_include_directories(...)</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9823">[待校准&#64;9823]</a></p></li>
+<li><p>而不是之前通过 <code class="docutils literal notranslate"><span class="pre">LIBRARIES</span> <span class="pre">...</span></code> 调用 <code class="docutils literal notranslate"><span class="pre">ament_export_libraries(...)</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9824">[待校准&#64;9824]</a></p></li>
+</ul>
+</li>
+<li><p><strong>TODO document ament_export_targets (``ament_export_interfaces`` in Eloquent and older)?</strong></p></li>
+</ul>
+</li>
+<li><p>用 <a class="reference external" href="https://github.com/ros2/rosidl/blob/master/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake">rosidl_generate_interfaces</a> 代替 <code class="docutils literal notranslate"><span class="pre">add_message_files</span></code> 、 <code class="docutils literal notranslate"><span class="pre">add_service_files</span></code> 和 <code class="docutils literal notranslate"><span class="pre">generate_messages</span></code> 的调用。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9826">[待校准&#64;9826]</a></p>
+<ul>
+<li><p>第一个论点是 <code class="docutils literal notranslate"><span class="pre">target_name</span></code> 。如果您是're building just one library it' ${PROJECT_NAME}'' <a class="reference external" href="http://localhost:3000/#/home?msgid=9827">[待校准&#64;9827]</a></p></li>
+<li><p>后跟相对于包根目录的消息文件名列表。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9828">[待校准&#64;9828]</a></p>
+<ul class="simple">
+<li><p>如果您将多次使用文件名列表，建议编写一个消息文件列表，并将该列表传递给函数以使其清晰。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9829">[待校准&#64;9829]</a></p></li>
+</ul>
+</li>
+<li><p>最终的多值关键字参数fpr <code class="docutils literal notranslate"><span class="pre">generate_messages</span></code> 是 <code class="docutils literal notranslate"><span class="pre">DEPENDENCIES</span></code> ，它需要从属消息包的列表。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9830">[待校准&#64;9830]</a></p>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">rosidl_generate_interfaces</span><span class="p">(</span><span class="o">${</span><span class="nv">PROJECT_NAME</span><span class="o">}</span>
+  <span class="o">${</span><span class="nv">msg_files</span><span class="o">}</span>
+  <span class="s">DEPENDENCIES</span> <span class="s">std_msgs</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p>删除出现的 * devel空间 <a href="#id1"><span class="problematic" id="id2">*</span></a>。像 <code class="docutils literal notranslate"><span class="pre">CATKIN_DEVEL_PREFIX</span></code> 这样的相关CMake变量已经不存在了。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9831">[待校准&#64;9831]</a></p>
+<ul class="simple">
+<li><p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">CATKIN_DEPENDS</span></code> 和 <code class="docutils literal notranslate"><span class="pre">DEPENDS</span></code> 的参数被传递给新的函数 <a class="reference external" href="https://github.com/ament/ament_cmake/blob/master/ament_cmake_export_dependencies/cmake/ament_export_dependencies.cmake">ament_export_dependencies</a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9832">[待校准&#64;9832]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CATKIN_GLOBAL_BIN_DESTINATION</span></code>: <code class="docutils literal notranslate"><span class="pre">bin</span></code> <a class="reference external" href="http://localhost:3000/#/home?msgid=9833">[待校准&#64;9833]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CATKIN_GLOBAL_INCLUDE_DESTINATION</span></code>: <code class="docutils literal notranslate"><span class="pre">include</span></code> <a class="reference external" href="http://localhost:3000/#/home?msgid=9834">[待校准&#64;9834]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CATKIN_GLOBAL_LIB_DESTINATION</span></code>: <code class="docutils literal notranslate"><span class="pre">lib</span></code> <a class="reference external" href="http://localhost:3000/#/home?msgid=9835">[待校准&#64;9835]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CATKIN_GLOBAL_LIBEXEC_DESTINATION</span></code>: <code class="docutils literal notranslate"><span class="pre">lib</span></code> <a class="reference external" href="http://localhost:3000/#/home?msgid=9836">[待校准&#64;9836]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CATKIN_GLOBAL_SHARE_DESTINATION</span></code>: <code class="docutils literal notranslate"><span class="pre">share</span></code> <a class="reference external" href="http://localhost:3000/#/home?msgid=9837">[待校准&#64;9837]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CATKIN_PACKAGE_BIN_DESTINATION</span></code>: <code class="docutils literal notranslate"><span class="pre">lib/${PROJECT_NAME}</span></code> <a class="reference external" href="http://localhost:3000/#/home?msgid=9838">[待校准&#64;9838]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CATKIN_PACKAGE_INCLUDE_DESTINATION</span></code>: <code class="docutils literal notranslate"><span class="pre">include/${PROJECT_NAME}</span></code> <a class="reference external" href="http://localhost:3000/#/home?msgid=9839">[待校准&#64;9839]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CATKIN_PACKAGE_LIB_DESTINATION</span></code>: <code class="docutils literal notranslate"><span class="pre">lib</span></code> <a class="reference external" href="http://localhost:3000/#/home?msgid=9840">[待校准&#64;9840]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CATKIN_PACKAGE_SHARE_DESTINATION</span></code>: <code class="docutils literal notranslate"><span class="pre">share/${PROJECT_NAME}</span></code> <a class="reference external" href="http://localhost:3000/#/home?msgid=9841">[待校准&#64;9841]</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="unit-tests">
+<h4>单元测试 <a class="reference external" href="http://localhost:3000/#/home?msgid=9842">[待校准&#64;9842]</a><a class="headerlink" href="#unit-tests" title="永久链接至标题"></a></h4>
+<p>如果您正在使用gtest: <a class="reference external" href="http://localhost:3000/#/home?msgid=9843">[待校准&#64;9843]</a></p>
+<p>用 <code class="docutils literal notranslate"><span class="pre">BUILD_TESTING</span></code> 代替 <code class="docutils literal notranslate"><span class="pre">CATKIN_ENABLE_TESTING</span></code> 。用 <code class="docutils literal notranslate"><span class="pre">ament_add_gtest</span></code> 代替 <code class="docutils literal notranslate"><span class="pre">catkin_add_gtest</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9844">[待校准&#64;9844]</a></p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">-   if (CATKIN_ENABLE_TESTING)</span>
+<span class="gd">-     find_package(GTest REQUIRED)  # or rostest</span>
+<span class="gd">-     include_directories(${GTEST_INCLUDE_DIRS})</span>
+<span class="gd">-     catkin_add_gtest(${PROJECT_NAME}-some-test src/test/some_test.cpp)</span>
+<span class="gd">-     target_link_libraries(${PROJECT_NAME}-some-test</span>
+<span class="gd">-       ${PROJECT_NAME}_some_dependency</span>
+<span class="gd">-       ${catkin_LIBRARIES}</span>
+<span class="gd">-       ${GTEST_LIBRARIES})</span>
+<span class="gd">-   endif()</span>
+<span class="gi">+   if (BUILD_TESTING)</span>
+<span class="gi">+     find_package(ament_cmake_gtest REQUIRED)</span>
+<span class="gi">+     ament_add_gtest(${PROJECT_NAME}-some-test src/test/test_something.cpp)</span>
+<span class="gi">+     ament_target_dependencies(${PROJECT_NAME)-some-test</span>
+<span class="gi">+       &quot;rclcpp&quot;</span>
+<span class="gi">+       &quot;std_msgs&quot;)</span>
+<span class="gi">+     target_link_libraries(${PROJECT_NAME}-some-test</span>
+<span class="gi">+       ${PROJECT_NAME}_some_dependency)</span>
+<span class="gi">+   endif()</span>
+</pre></div>
+</div>
+<p>在你的 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 中加入 <code class="docutils literal notranslate"><span class="pre">&lt;test_depend&gt;ament_cmake_gtest&lt;/test_depend&gt;</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9845">[待校准&#64;9845]</a></p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">-   &lt;test_depend&gt;rostest&lt;/test_depend&gt;</span>
+<span class="gi">+   &lt;test_depend&gt;ament_cmake_gtest&lt;/test_depend&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="linters">
+<h4>林特 <a class="reference external" href="http://localhost:3000/#/home?msgid=9308">[待校准&#64;9308]</a><a class="headerlink" href="#linters" title="永久链接至标题"></a></h4>
+<p>在ROS 2中，我们正在努力使用linters维护干净的代码。不同语言的风格在我们的 <a class="reference internal" href="Developer-Guide.html"><span class="doc">Developer Guide</span></a>. 中定义 <a class="reference external" href="http://localhost:3000/#/home?msgid=9846">[待校准&#64;9846]</a></p>
+<p>如果你从头开始一个项目，建议遵循风格指南，通过在 <code class="docutils literal notranslate"><span class="pre">if(BUILD_TESTING)</span></code> 下面添加这些线来打开自动linter单元测试 (直到阿尔法5，这是 <code class="docutils literal notranslate"><span class="pre">AMENT_ENABLE_TESTING</span></code> )。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9847">[待校准&#64;9847]</a></p>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">find_package</span><span class="p">(</span><span class="s">ament_lint_auto</span> <span class="s">REQUIRED</span><span class="p">)</span>
+<span class="nb">ament_lint_auto_find_test_dependencies</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>您还需要将以下依赖项添加到您的 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 中: <a class="reference external" href="http://localhost:3000/#/home?msgid=9848">[待校准&#64;9848]</a></p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;test_depend&gt;</span>ament_lint_auto<span class="nt">&lt;/test_depend&gt;</span>
+<span class="nt">&lt;test_depend&gt;</span>ament_lint_common<span class="nt">&lt;/test_depend&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="continue-to-use-catkin-in-cmake">
+<h4>继续在CMake中使用 <code class="docutils literal notranslate"><span class="pre">catkin</span></code>  <a class="reference external" href="http://localhost:3000/#/home?msgid=9849">[待校准&#64;9849]</a><a class="headerlink" href="#continue-to-use-catkin-in-cmake" title="永久链接至标题"></a></h4>
+<p>ROS 2使用ament作为构建系统，但为了向后兼容，ROS 2有一个调用ed <code class="docutils literal notranslate"><span class="pre">catkin</span></code> 的包，它提供了与ROS 1catkin几乎相同的API。为了使用这个向后兼容的应用编程接口， <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> 只能更新到在所有目标之后调用函数 <code class="docutils literal notranslate"><span class="pre">catkin_ament_package()</span></code>  <a href="#id1"><span class="problematic" id="id2">*</span></a>。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9850">[待校准&#64;9850]</a></p>
+<p>NOTE注意: 这尚未实施，目前只是一个想法。由于与依赖项相关的更改数量，尚未确定此兼容性API是否足够有用以证明努力的合理性。** <a class="reference external" href="http://localhost:3000/#/home?msgid=9851">[待校准&#64;9851]</a></p>
+</div>
+</div>
+<div class="section" id="update-source-code">
+<h3>更新源文件 <a class="reference external" href="http://localhost:3000/#/home?msgid=9852">[待校准&#64;9852]</a><a class="headerlink" href="#update-source-code" title="永久链接至标题"></a></h3>
+<div class="section" id="messages-services-and-actions">
+<h4>消息、服务和动作 <a class="reference external" href="http://localhost:3000/#/home?msgid=9853">[待校准&#64;9853]</a><a class="headerlink" href="#messages-services-and-actions" title="永久链接至标题"></a></h4>
+<p>ROS 2消息、服务和动作的命名空间在包名称后使用子命名空间 (分别为 <code class="docutils literal notranslate"><span class="pre">msg</span></code> 、 <code class="docutils literal notranslate"><span class="pre">srv</span></code> 或 <code class="docutils literal notranslate"><span class="pre">action</span></code> )。因此，一个包含看起来像:  <code class="docutils literal notranslate"><span class="pre">#include</span> <span class="pre">&lt;my_interfaces/msg/my_message.hpp&gt;</span></code> 。然后将ctype类型命名为: “my_interface::msg:: mymessage”。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9854">[待校准&#64;9854]</a></p>
+<p>共享指针类型在消息结构中作为typedefs提供: “我的接口::msg::MyMessage::SharedPtr `` as well as `` 我的接口::msg::MyMessage:: constsharedptr”。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9855">[待校准&#64;9855]</a></p>
+<p>有关更多详细信息，请参阅有关 <a class="reference external" href="https://design.ros2.org/articles/generated_interfaces_cpp.html">generated C++ interfaces</a> 的文章。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9856">[待校准&#64;9856]</a></p>
+<p>迁移要求包含更改方式: <a class="reference external" href="http://localhost:3000/#/home?msgid=9857">[待校准&#64;9857]</a></p>
+<ul class="simple">
+<li><p>在包名称和消息数据类型之间插入子文件夹 <code class="docutils literal notranslate"><span class="pre">msg</span></code>  <a class="reference external" href="http://localhost:3000/#/home?msgid=9858">[待校准&#64;9858]</a></p></li>
+<li><p>将包含的文件名从CamelCase更改为下划线分隔 <a class="reference external" href="http://localhost:3000/#/home?msgid=9859">[待校准&#64;9859]</a></p></li>
+<li><p>从 <code class="docutils literal notranslate"><span class="pre">*.h</span></code> 改为 <code class="docutils literal notranslate"><span class="pre">*.hpp</span></code>  <a class="reference external" href="http://localhost:3000/#/home?msgid=9860">[待校准&#64;9860]</a></p></li>
+</ul>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// ROS 1 style is in comments, ROS 2 follows, uncommented.</span>
+<span class="c1">// # include &lt;geometry_msgs/PointStamped.h&gt;</span>
+<span class="cp">#include</span> <span class="cpf">&lt;geometry_msgs/msg/point_stamped.hpp&gt;</span><span class="cp"></span>
+
+<span class="c1">// geometry_msgs::PointStamped point_stamped;</span>
+<span class="n">geometry_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">PointStamped</span> <span class="n">point_stamped</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>迁移需要代码才能将 <code class="docutils literal notranslate"><span class="pre">msg</span></code> 命名空间插入所有实例。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9861">[待校准&#64;9861]</a></p>
+</div>
+<div class="section" id="use-of-service-objects">
+<h4>服务对象的使用 <a class="reference external" href="http://localhost:3000/#/home?msgid=9862">[待校准&#64;9862]</a><a class="headerlink" href="#use-of-service-objects" title="永久链接至标题"></a></h4>
+<p>ROS 2中的服务调用没有boolean返回值。建议抛出异常，而不是在失败时返回false。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9863">[待校准&#64;9863]</a></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// ROS 1 style is in comments, ROS 2 follows, uncommented.</span>
+<span class="c1">// #include &quot;nav_msgs/GetMap.h&quot;</span>
+<span class="cp">#include</span> <span class="cpf">&quot;nav_msgs/srv/get_map.hpp&quot;</span><span class="cp"></span>
+
+<span class="c1">// bool service_callback(</span>
+<span class="c1">//   nav_msgs::GetMap::Request &amp; request,</span>
+<span class="c1">//   nav_msgs::GetMap::Response &amp; response)</span>
+<span class="kt">void</span> <span class="nf">service_callback</span><span class="p">(</span>
+  <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">nav_msgs</span><span class="o">::</span><span class="n">srv</span><span class="o">::</span><span class="n">GetMap</span><span class="o">::</span><span class="n">Request</span><span class="o">&gt;</span> <span class="n">request</span><span class="p">,</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">nav_msgs</span><span class="o">::</span><span class="n">srv</span><span class="o">::</span><span class="n">GetMap</span><span class="o">::</span><span class="n">Response</span><span class="o">&gt;</span> <span class="n">response</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="c1">// ...</span>
+  <span class="c1">// return true;  // or false for failure</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="usages-of-ros-time">
+<h4>ros的用法:: 时间 <a class="reference external" href="http://localhost:3000/#/home?msgid=9864">[待校准&#64;9864]</a><a class="headerlink" href="#usages-of-ros-time" title="永久链接至标题"></a></h4>
+<p>对于 “ros:: time” 的用法: <a class="reference external" href="http://localhost:3000/#/home?msgid=9865">[待校准&#64;9865]</a></p>
+<ul class="simple">
+<li><p>替换 “ros::Time `` with `` rclcpp::Time” 的所有实例 <a class="reference external" href="http://localhost:3000/#/home?msgid=9866">[待校准&#64;9866]</a></p></li>
+<li><p>如果您的消息或代码使用std_msgs::Time: <a class="reference external" href="http://localhost:3000/#/home?msgid=9867">[待校准&#64;9867]</a></p>
+<ul>
+<li><p>将std_msgs::Time的所有实例转换为builtin_interface::msg::Time <a class="reference external" href="http://localhost:3000/#/home?msgid=9868">[待校准&#64;9868]</a></p></li>
+<li><p>转换所有 “# 包含” std_msgs/time.h `` to ``  # 包含 “构建接口/msg/time.hpp” <a class="reference external" href="http://localhost:3000/#/home?msgid=9869">[待校准&#64;9869]</a></p></li>
+<li><p>使用std_msgs:: 时间字段 <code class="docutils literal notranslate"><span class="pre">nsec</span></code> 将所有实例转换为builtin_interface::msg:: 时间字段 <code class="docutils literal notranslate"><span class="pre">nanosec</span></code>  <a class="reference external" href="http://localhost:3000/#/home?msgid=9870">[待校准&#64;9870]</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="usages-of-ros-rate">
+<h4>ros的用法:: 费率 <a class="reference external" href="http://localhost:3000/#/home?msgid=9871">[待校准&#64;9871]</a><a class="headerlink" href="#usages-of-ros-rate" title="永久链接至标题"></a></h4>
+<p>有一个等效类型 “rclcpp::Rate `` object which is basically a drop in replacement for `` ros:: rate”。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9872">[待校准&#64;9872]</a></p>
+</div>
+<div class="section" id="ros-client-library">
+<h4>ROS客户端库 <a class="reference external" href="http://localhost:3000/#/home?msgid=9873">[待校准&#64;9873]</a><a class="headerlink" href="#ros-client-library" title="永久链接至标题"></a></h4>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Migration-Guide-Python.html">来自ROS 1的Python迁移指南 [待校准&#64;10003]</a></li>
+</ul>
+</div>
+<p>NOTE注意: 其他要写的Others <a class="reference external" href="http://localhost:3000/#/home?msgid=9874">[待校准&#64;9874]</a></p>
+</div>
+<div class="section" id="boost">
+<h4>提升 <a class="reference external" href="http://localhost:3000/#/home?msgid=9276">[待校准&#64;9276]</a><a class="headerlink" href="#boost" title="永久链接至标题"></a></h4>
+<p>以前由Boost提供的许多功能已经集成到cstandard标准库中。因此，我们希望利用新的核心功能，并在可能的情况下避免对boost的依赖。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9875">[待校准&#64;9875]</a></p>
+<div class="section" id="shared-pointers">
+<h5>共享指针 <a class="reference external" href="http://localhost:3000/#/home?msgid=9876">[待校准&#64;9876]</a><a class="headerlink" href="#shared-pointers" title="永久链接至标题"></a></h5>
+<p>要将共享指针从boost切换到标准creplace，请替换以下实例: <a class="reference external" href="http://localhost:3000/#/home?msgid=9877">[待校准&#64;9877]</a></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">#include</span> <span class="pre">&lt;boost/shared_ptr.hpp&gt;</span></code> with <code class="docutils literal notranslate"><span class="pre">#include</span> <span class="pre">&lt;memory&gt;</span></code> <a class="reference external" href="http://localhost:3000/#/home?msgid=9878">[待校准&#64;9878]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">boost::shared_ptr</span></code> with <code class="docutils literal notranslate"><span class="pre">std::shared_ptr</span></code> <a class="reference external" href="http://localhost:3000/#/home?msgid=9879">[待校准&#64;9879]</a></p></li>
+</ul>
+<p>也可能有一些变体，如 <code class="docutils literal notranslate"><span class="pre">weak_ptr</span></code> ，你也想转换。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9880">[待校准&#64;9880]</a></p>
+<p>此外，建议使用 <code class="docutils literal notranslate"><span class="pre">using</span></code> 代替 <code class="docutils literal notranslate"><span class="pre">typedef</span></code> 。 <code class="docutils literal notranslate"><span class="pre">using</span></code> 有能力在模板化逻辑中更好地工作。详情请参见 <a class="reference external" href="https://stackoverflow.com/questions/10747810/what-is-the-difference-between-typedef-and-using-in-c11">see here</a>  <a class="reference external" href="http://localhost:3000/#/home?msgid=9881">[待校准&#64;9881]</a></p>
+</div>
+<div class="section" id="thread-mutexes">
+<h5>线程/互斥体 <a class="reference external" href="http://localhost:3000/#/home?msgid=9882">[待校准&#64;9882]</a><a class="headerlink" href="#thread-mutexes" title="永久链接至标题"></a></h5>
+<p>ROS代码库中使用的boost的另一个常见部分是 “boost:: 线程” 中的互斥体。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9883">[待校准&#64;9883]</a></p>
+<ul class="simple">
+<li><p>替换 <code class="docutils literal notranslate"><span class="pre">boost::mutex::scoped_lock乙甲std::unique_lock&lt;std::mutex&gt;</span></code>  <a class="reference external" href="http://localhost:3000/#/home?msgid=9884">[待校准&#64;9884]</a></p></li>
+<li><p>替换 “增强:: 互斥 `` with `` 标准:: 互斥” <a class="reference external" href="http://localhost:3000/#/home?msgid=9885">[待校准&#64;9885]</a></p></li>
+<li><p>替换 <code class="docutils literal notranslate"><span class="pre">#include</span> <span class="pre">&lt;boost/thread/mutex.hpp&gt;乙甲#include</span> <span class="pre">&lt;mutex&gt;</span></code>  <a class="reference external" href="http://localhost:3000/#/home?msgid=9886">[待校准&#64;9886]</a></p></li>
+</ul>
+</div>
+<div class="section" id="unordered-map">
+<h5>无序地图 <a class="reference external" href="http://localhost:3000/#/home?msgid=9887">[待校准&#64;9887]</a><a class="headerlink" href="#unordered-map" title="永久链接至标题"></a></h5>
+<p>替换: <a class="reference external" href="http://localhost:3000/#/home?msgid=9888">[待校准&#64;9888]</a></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">#include</span> <span class="pre">&lt;boost/unordered_map.hpp&gt;</span></code> with <code class="docutils literal notranslate"><span class="pre">#include</span> <span class="pre">&lt;unordered_map&gt;</span></code> <a class="reference external" href="http://localhost:3000/#/home?msgid=9889">[待校准&#64;9889]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">boost::unordered_map</span></code> with <code class="docutils literal notranslate"><span class="pre">std::unordered_map</span></code> <a class="reference external" href="http://localhost:3000/#/home?msgid=9890">[待校准&#64;9890]</a></p></li>
+</ul>
+</div>
+<div class="section" id="function">
+<h5>功能 <a class="reference external" href="http://localhost:3000/#/home?msgid=9891">[待校准&#64;9891]</a><a class="headerlink" href="#function" title="永久链接至标题"></a></h5>
+<p>替换: <a class="reference external" href="http://localhost:3000/#/home?msgid=9888">[待校准&#64;9888]</a></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">#include</span> <span class="pre">&lt;boost/function.hpp&gt;</span></code>  with <code class="docutils literal notranslate"><span class="pre">#include</span> <span class="pre">&lt;functional&gt;</span></code> <a class="reference external" href="http://localhost:3000/#/home?msgid=9892">[待校准&#64;9892]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">boost::function</span></code> with <code class="docutils literal notranslate"><span class="pre">std::function</span></code> <a class="reference external" href="http://localhost:3000/#/home?msgid=9893">[待校准&#64;9893]</a></p></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="parameters">
+<h2>参数 <a class="reference external" href="http://localhost:3000/#/home?msgid=9894">[待校准&#64;9894]</a><a class="headerlink" href="#parameters" title="永久链接至标题"></a></h2>
+<p>在ROS 1中，参数与允许在运行时通过使用网络api检索参数的中央服务器相关联。在ROS 2中，参数与每个节点相关联，并且在运行时可通过ROS服务进行配置。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9895">[待校准&#64;9895]</a></p>
+<ul class="simple">
+<li><p>有关系统模型的更多详细信息，请参见 <a class="reference external" href="https://design.ros2.org/articles/ros_parameters.html">ROS 2 Parameter design document</a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9896">[待校准&#64;9896]</a></p></li>
+<li><p>有关CLI工具的工作方式及其与ROS 1工具的区别的更好理解，请参见 <a class="reference internal" href="../Tutorials/Parameters/Understanding-ROS2-Parameters.html"><span class="doc">ROS 2 CLI usage</span></a>  。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9897">[待校准&#64;9897]</a></p></li>
+<li><p>请参阅: doc:'//操作指南/Parameters-YAML-文件-迁移-指南'，以了解如何在ROS 2中解析YAML参数文件及其与ROS实现的差异。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9898">[待校准&#64;9898]</a></p></li>
+</ul>
+</div>
+<div class="section" id="launch-files">
+<h2>Launch档案 <a class="reference external" href="http://localhost:3000/#/home?msgid=9899">[待校准&#64;9899]</a><a class="headerlink" href="#launch-files" title="永久链接至标题"></a></h2>
+<p>虽然ROS 1中的launch文件始终使用 <a class="reference external" href="https://wiki.ros.org/roslaunch/XML">.xml</a> 文件指定，但ROS 2支持Python脚本以实现更大的灵活性 (见 <a class="reference external" href="https://github.com/ros2/launch/tree/master/launch">launch package</a> ) 以及XML和YAML文件。关于将launch文件从ROS 1迁移到ROS 2，请参见 <a class="reference internal" href="../How-To-Guides/Launch-files-migration-guide.html"><span class="doc">separate tutorial</span></a>  。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9900">[待校准&#64;9900]</a></p>
+</div>
+<div class="section" id="example-converting-an-existing-ros-1-package-to-use-ros-2">
+<h2>示例: 将现有的ROS 1包转换为使用ROS 2 <a class="reference external" href="http://localhost:3000/#/home?msgid=9901">[待校准&#64;9901]</a><a class="headerlink" href="#example-converting-an-existing-ros-1-package-to-use-ros-2" title="永久链接至标题"></a></h2>
+<p>假设我们有一个简单的ROS 1包调用ed <code class="docutils literal notranslate"><span class="pre">talker</span></code> ，它在一个节点中使用 <code class="docutils literal notranslate"><span class="pre">roscpp</span></code> ，调用ed <code class="docutils literal notranslate"><span class="pre">talker</span></code> 。此包位于catkin工作区，位于 “~/ros1_talker”。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9902">[待校准&#64;9902]</a></p>
+<div class="section" id="the-ros-1-code">
+<h3>ROS 1代码 <a class="reference external" href="http://localhost:3000/#/home?msgid=9903">[待校准&#64;9903]</a><a class="headerlink" href="#the-ros-1-code" title="永久链接至标题"></a></h3>
+<p>这是我们catkin工作区的目录布局: <a class="reference external" href="http://localhost:3000/#/home?msgid=9904">[待校准&#64;9904]</a></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> ~/ros1_talker
+$ find .
+.
+./src
+./src/talker
+./src/talker/package.xml
+./src/talker/CMakeLists.txt
+./src/talker/talker.cpp
+</pre></div>
+</div>
+<p>以下是这三个文件的内容: <a class="reference external" href="http://localhost:3000/#/home?msgid=9905">[待校准&#64;9905]</a></p>
+<p><code class="docutils literal notranslate"><span class="pre">src/talker/package.xml</span></code>: <a class="reference external" href="http://localhost:3000/#/home?msgid=9906">[待校准&#64;9906]</a></p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;package&gt;</span>
+  <span class="nt">&lt;name&gt;</span>talker<span class="nt">&lt;/name&gt;</span>
+  <span class="nt">&lt;version&gt;</span>0.0.0<span class="nt">&lt;/version&gt;</span>
+  <span class="nt">&lt;description&gt;</span>talker<span class="nt">&lt;/description&gt;</span>
+  <span class="nt">&lt;maintainer</span> <span class="na">email=</span><span class="s">&quot;gerkey@osrfoundation.org&quot;</span><span class="nt">&gt;</span>Brian Gerkey<span class="nt">&lt;/maintainer&gt;</span>
+  <span class="nt">&lt;license&gt;</span>Apache 2.0<span class="nt">&lt;/license&gt;</span>
+  <span class="nt">&lt;buildtool_depend&gt;</span>catkin<span class="nt">&lt;/buildtool_depend&gt;</span>
+  <span class="nt">&lt;build_depend&gt;</span>roscpp<span class="nt">&lt;/build_depend&gt;</span>
+  <span class="nt">&lt;build_depend&gt;</span>std_msgs<span class="nt">&lt;/build_depend&gt;</span>
+  <span class="nt">&lt;run_depend&gt;</span>roscpp<span class="nt">&lt;/run_depend&gt;</span>
+  <span class="nt">&lt;run_depend&gt;</span>std_msgs<span class="nt">&lt;/run_depend&gt;</span>
+<span class="nt">&lt;/package&gt;</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">src/talker/CMakeLists.txt</span></code>: <a class="reference external" href="http://localhost:3000/#/home?msgid=9907">[待校准&#64;9907]</a></p>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">cmake_minimum_required</span><span class="p">(</span><span class="s">VERSION</span> <span class="s">2.8.3</span><span class="p">)</span>
+<span class="nb">project</span><span class="p">(</span><span class="s">talker</span><span class="p">)</span>
+<span class="nb">find_package</span><span class="p">(</span><span class="s">catkin</span> <span class="s">REQUIRED</span> <span class="s">COMPONENTS</span> <span class="s">roscpp</span> <span class="s">std_msgs</span><span class="p">)</span>
+<span class="nb">catkin_package</span><span class="p">()</span>
+<span class="nb">include_directories</span><span class="p">(</span><span class="o">${</span><span class="nv">catkin_INCLUDE_DIRS</span><span class="o">}</span><span class="p">)</span>
+<span class="nb">add_executable</span><span class="p">(</span><span class="s">talker</span> <span class="s">talker.cpp</span><span class="p">)</span>
+<span class="nb">target_link_libraries</span><span class="p">(</span><span class="s">talker</span> <span class="o">${</span><span class="nv">catkin_LIBRARIES</span><span class="o">}</span><span class="p">)</span>
+<span class="nb">install</span><span class="p">(</span><span class="s">TARGETS</span> <span class="s">talker</span>
+  <span class="s">RUNTIME</span> <span class="s">DESTINATION</span> <span class="o">${</span><span class="nv">CATKIN_PACKAGE_BIN_DESTINATION</span><span class="o">}</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">src/talker/talker.cpp</span></code>: <a class="reference external" href="http://localhost:3000/#/home?msgid=9908">[待校准&#64;9908]</a></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;sstream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;ros/ros.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;std_msgs/String.h&quot;</span><span class="cp"></span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">ros</span><span class="o">::</span><span class="n">init</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span> <span class="n">argv</span><span class="p">,</span> <span class="s">&quot;talker&quot;</span><span class="p">);</span>
+  <span class="n">ros</span><span class="o">::</span><span class="n">NodeHandle</span> <span class="n">n</span><span class="p">;</span>
+  <span class="n">ros</span><span class="o">::</span><span class="n">Publisher</span> <span class="n">chatter_pub</span> <span class="o">=</span> <span class="n">n</span><span class="p">.</span><span class="n">advertise</span><span class="o">&lt;</span><span class="n">std_msgs</span><span class="o">::</span><span class="n">String</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;chatter&quot;</span><span class="p">,</span> <span class="mi">1000</span><span class="p">);</span>
+  <span class="n">ros</span><span class="o">::</span><span class="n">Rate</span> <span class="n">loop_rate</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+  <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="n">std_msgs</span><span class="o">::</span><span class="n">String</span> <span class="n">msg</span><span class="p">;</span>
+  <span class="k">while</span> <span class="p">(</span><span class="n">ros</span><span class="o">::</span><span class="n">ok</span><span class="p">())</span>
+  <span class="p">{</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">stringstream</span> <span class="n">ss</span><span class="p">;</span>
+    <span class="n">ss</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;hello world &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">count</span><span class="o">++</span><span class="p">;</span>
+    <span class="n">msg</span><span class="p">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">ss</span><span class="p">.</span><span class="n">str</span><span class="p">();</span>
+    <span class="n">ROS_INFO</span><span class="p">(</span><span class="s">&quot;%s&quot;</span><span class="p">,</span> <span class="n">msg</span><span class="p">.</span><span class="n">data</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span>
+    <span class="n">chatter_pub</span><span class="p">.</span><span class="n">publish</span><span class="p">(</span><span class="n">msg</span><span class="p">);</span>
+    <span class="n">ros</span><span class="o">::</span><span class="n">spinOnce</span><span class="p">();</span>
+    <span class="n">loop_rate</span><span class="p">.</span><span class="n">sleep</span><span class="p">();</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="section" id="building-the-ros-1-code">
+<h4>构建ROS 1代码 <a class="reference external" href="http://localhost:3000/#/home?msgid=9909">[待校准&#64;9909]</a><a class="headerlink" href="#building-the-ros-1-code" title="永久链接至标题"></a></h4>
+<p>我们源文件环境设置文件 (在这种情况下，对于使用bash的Jade)，然后我们使用 <code class="docutils literal notranslate"><span class="pre">catkin_make</span> <span class="pre">install</span></code> 构建包: <a class="reference external" href="http://localhost:3000/#/home?msgid=9910">[待校准&#64;9910]</a></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>. /opt/ros/jade/setup.bash
+<span class="nb">cd</span> ~/ros1_talker
+catkin_make install
+</pre></div>
+</div>
+</div>
+<div class="section" id="running-the-ros-1-node">
+<h4>运行ROS 1节点 <a class="reference external" href="http://localhost:3000/#/home?msgid=9911">[待校准&#64;9911]</a><a class="headerlink" href="#running-the-ros-1-node" title="永久链接至标题"></a></h4>
+<p>如果还没有运行，我们启动一个 <code class="docutils literal notranslate"><span class="pre">roscore</span></code> ，首先从我们的 <code class="docutils literal notranslate"><span class="pre">catkin</span></code> 安装树采购安装文件 ( <code class="docutils literal notranslate"><span class="pre">/opt/ros/jade/setup.bash</span></code> 的系统安装文件也可以在这里工作): <a class="reference external" href="http://localhost:3000/#/home?msgid=9912">[待校准&#64;9912]</a></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>. ~/ros1_talker/install/setup.bash
+roscore
+</pre></div>
+</div>
+<p>在另一个外壳，我们运行节点 <code class="docutils literal notranslate"><span class="pre">catkin</span></code> 安装空间 <code class="docutils literal notranslate"><span class="pre">rosrun</span></code> ，再次采购安装文件 (在这种情况下必须从我们工作区): <a class="reference external" href="http://localhost:3000/#/home?msgid=9913">[待校准&#64;9913]</a></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>. ~/ros1_talker/install/setup.bash
+rosrun talker talker
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="migrating-to-ros-2">
+<h3>迁移到ROS 2 <a class="reference external" href="http://localhost:3000/#/home?msgid=9914">[待校准&#64;9914]</a><a class="headerlink" href="#migrating-to-ros-2" title="永久链接至标题"></a></h3>
+<p>让我们从创建一个新的工作空间开始: <a class="reference external" href="http://localhost:3000/#/home?msgid=9915">[待校准&#64;9915]</a></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir ~/ros2_talker
+<span class="nb">cd</span> ~/ros2_talker
+</pre></div>
+</div>
+<p>我们将把源文件树从我们的ROS 1包复制到那个工作区，在那里我们可以修改它: <a class="reference external" href="http://localhost:3000/#/home?msgid=9916">[待校准&#64;9916]</a></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir src
+cp -a ~/ros1_talker/src/talker src
+</pre></div>
+</div>
+<p>现在，我们将修改节点中的ccode代码。调用ed <code class="docutils literal notranslate"><span class="pre">rclcpp</span></code> 的ROS 2 c library库提供了与 <code class="docutils literal notranslate"><span class="pre">roscpp</span></code> 提供的API不同的API。两个库之间的概念非常相似，这使得更改相当简单。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9917">[待校准&#64;9917]</a></p>
+<div class="section" id="included-headers">
+<h4>包含标题 <a class="reference external" href="http://localhost:3000/#/home?msgid=9918">[待校准&#64;9918]</a><a class="headerlink" href="#included-headers" title="永久链接至标题"></a></h4>
+<p>取代 <code class="docutils literal notranslate"><span class="pre">ros/ros.h</span></code> ，它使我们能够访问 <code class="docutils literal notranslate"><span class="pre">roscpp</span></code> 库API，我们需要包括 <code class="docutils literal notranslate"><span class="pre">rclcpp/rclcpp.hpp</span></code> ，它使我们能够访问 <code class="docutils literal notranslate"><span class="pre">rclcpp</span></code> 库API: <a class="reference external" href="http://localhost:3000/#/home?msgid=9919">[待校准&#64;9919]</a></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//#include &quot;ros/ros.h&quot;</span>
+<span class="cp">#include</span> <span class="cpf">&quot;rclcpp/rclcpp.hpp&quot;</span><span class="cp"></span>
+</pre></div>
+</div>
+<p>为了得到 <code class="docutils literal notranslate"><span class="pre">std_msgs/String</span></code> 信息定义，我们需要包括 <code class="docutils literal notranslate"><span class="pre">std_msgs/msg/string.hpp</span></code> ，而不是 <code class="docutils literal notranslate"><span class="pre">std_msgs/String.h</span></code> : <a class="reference external" href="http://localhost:3000/#/home?msgid=9920">[待校准&#64;9920]</a></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//#include &quot;std_msgs/String.h&quot;</span>
+<span class="cp">#include</span> <span class="cpf">&quot;std_msgs/msg/string.hpp&quot;</span><span class="cp"></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="changing-c-library-calls">
+<h4>更改clibrary库调用s <a class="reference external" href="http://localhost:3000/#/home?msgid=9921">[待校准&#64;9921]</a><a class="headerlink" href="#changing-c-library-calls" title="永久链接至标题"></a></h4>
+<p>我们进行初始化，而不是将节点的名称传递给库初始化调用，然后将节点名称传递给节点对象的创建 (我们可以使用 <code class="docutils literal notranslate"><span class="pre">auto</span></code> 关键字，因为现在我们需要一个c14 14编译器): <a class="reference external" href="http://localhost:3000/#/home?msgid=9922">[待校准&#64;9922]</a></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//  ros::init(argc, argv, &quot;talker&quot;);</span>
+<span class="c1">//  ros::NodeHandle n;</span>
+    <span class="n">rclcpp</span><span class="o">::</span><span class="n">init</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span> <span class="n">argv</span><span class="p">);</span>
+    <span class="k">auto</span> <span class="n">node</span> <span class="o">=</span> <span class="n">rclcpp</span><span class="o">::</span><span class="n">Node</span><span class="o">::</span><span class="n">make_shared</span><span class="p">(</span><span class="s">&quot;talker&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>发布者和速率对象的创建看起来非常相似，对命名空间和方法的名称进行了一些更改。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9923">[待校准&#64;9923]</a></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//  ros::Publisher chatter_pub = n.advertise&lt;std_msgs::String&gt;(&quot;chatter&quot;, 1000);</span>
+<span class="c1">//  ros::Rate loop_rate(10);</span>
+  <span class="k">auto</span> <span class="n">chatter_pub</span> <span class="o">=</span> <span class="n">node</span><span class="o">-&gt;</span><span class="n">create_publisher</span><span class="o">&lt;</span><span class="n">std_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">String</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;chatter&quot;</span><span class="p">,</span>
+    <span class="mi">1000</span><span class="p">);</span>
+  <span class="n">rclcpp</span><span class="o">::</span><span class="n">Rate</span> <span class="n">loop_rate</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>为了进一步控制如何处理消息传递，可以传递服务质量 ( <code class="docutils literal notranslate"><span class="pre">QoS</span></code> ) 配置文件。默认配置文件为 <code class="docutils literal notranslate"><span class="pre">rmw_qos_profile_default</span></code> 。更多详情，请参见 <a class="reference external" href="https://design.ros2.org/articles/qos.html">design document</a> 和 <a class="reference internal" href="../Concepts/About-Quality-of-Service-Settings.html"><span class="doc">concept overview</span></a>.  <a class="reference external" href="http://localhost:3000/#/home?msgid=9924">[待校准&#64;9924]</a></p>
+<p>传出消息的创建在命名空间中不同: <a class="reference external" href="http://localhost:3000/#/home?msgid=9925">[待校准&#64;9925]</a></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//  std_msgs::String msg;</span>
+  <span class="n">std_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">String</span> <span class="n">msg</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>代替 “ros::ok()”，我们调用 “rclcpp::ok()”: <a class="reference external" href="http://localhost:3000/#/home?msgid=9926">[待校准&#64;9926]</a></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//  while (ros::ok())</span>
+  <span class="k">while</span> <span class="p">(</span><span class="n">rclcpp</span><span class="o">::</span><span class="n">ok</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>在出版循环中，我们像以前一样访问 <code class="docutils literal notranslate"><span class="pre">data</span></code> 领域: <a class="reference external" href="http://localhost:3000/#/home?msgid=9927">[待校准&#64;9927]</a></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">msg</span><span class="p">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">ss</span><span class="p">.</span><span class="n">str</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>为了打印控制台消息，我们使用的不是 <code class="docutils literal notranslate"><span class="pre">ROS_INFO()</span></code> ，而是 <code class="docutils literal notranslate"><span class="pre">RCLCPP_INFO()</span></code> 及其各种表亲。关键的区别是 <code class="docutils literal notranslate"><span class="pre">RCLCPP_INFO()</span></code> 把一个日志记录器作为第一个参数。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9928">[待校准&#64;9928]</a></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//    ROS_INFO(&quot;%s&quot;, msg.data.c_str());</span>
+    <span class="n">RCLCPP_INFO</span><span class="p">(</span><span class="n">node</span><span class="o">-&gt;</span><span class="n">get_logger</span><span class="p">(),</span> <span class="s">&quot;%s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">msg</span><span class="p">.</span><span class="n">data</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span>
+</pre></div>
+</div>
+<p>发布消息与之前相同: <a class="reference external" href="http://localhost:3000/#/home?msgid=9929">[待校准&#64;9929]</a></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">chatter_pub</span><span class="o">-&gt;</span><span class="n">publish</span><span class="p">(</span><span class="n">msg</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>旋转 (即让通讯系统处理任何待处理的传入/传出消息) 的不同之处在于，调用现在将节点作为参数: <a class="reference external" href="http://localhost:3000/#/home?msgid=9930">[待校准&#64;9930]</a></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//    ros::spinOnce();</span>
+    <span class="n">rclcpp</span><span class="o">::</span><span class="n">spin_some</span><span class="p">(</span><span class="n">node</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>使用rate对象的睡眠保持不变。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9931">[待校准&#64;9931]</a></p>
+<p>把它们放在一起，新的 <code class="docutils literal notranslate"><span class="pre">talker.cpp</span></code> 看起来像这样: <a class="reference external" href="http://localhost:3000/#/home?msgid=9932">[待校准&#64;9932]</a></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;sstream&gt;</span><span class="cp"></span>
+<span class="c1">// #include &quot;ros/ros.h&quot;</span>
+<span class="cp">#include</span> <span class="cpf">&quot;rclcpp/rclcpp.hpp&quot;</span><span class="cp"></span>
+<span class="c1">// #include &quot;std_msgs/String.h&quot;</span>
+<span class="cp">#include</span> <span class="cpf">&quot;std_msgs/msg/string.hpp&quot;</span><span class="cp"></span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="c1">//  ros::init(argc, argv, &quot;talker&quot;);</span>
+<span class="c1">//  ros::NodeHandle n;</span>
+  <span class="n">rclcpp</span><span class="o">::</span><span class="n">init</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span> <span class="n">argv</span><span class="p">);</span>
+  <span class="k">auto</span> <span class="n">node</span> <span class="o">=</span> <span class="n">rclcpp</span><span class="o">::</span><span class="n">Node</span><span class="o">::</span><span class="n">make_shared</span><span class="p">(</span><span class="s">&quot;talker&quot;</span><span class="p">);</span>
+<span class="c1">//  ros::Publisher chatter_pub = n.advertise&lt;std_msgs::String&gt;(&quot;chatter&quot;, 1000);</span>
+<span class="c1">//  ros::Rate loop_rate(10);</span>
+  <span class="k">auto</span> <span class="n">chatter_pub</span> <span class="o">=</span> <span class="n">node</span><span class="o">-&gt;</span><span class="n">create_publisher</span><span class="o">&lt;</span><span class="n">std_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">String</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;chatter&quot;</span><span class="p">,</span> <span class="mi">1000</span><span class="p">);</span>
+  <span class="n">rclcpp</span><span class="o">::</span><span class="n">Rate</span> <span class="n">loop_rate</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+  <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="c1">//  std_msgs::String msg;</span>
+  <span class="n">std_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">String</span> <span class="n">msg</span><span class="p">;</span>
+<span class="c1">//  while (ros::ok())</span>
+  <span class="k">while</span> <span class="p">(</span><span class="n">rclcpp</span><span class="o">::</span><span class="n">ok</span><span class="p">())</span>
+  <span class="p">{</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">stringstream</span> <span class="n">ss</span><span class="p">;</span>
+    <span class="n">ss</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;hello world &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">count</span><span class="o">++</span><span class="p">;</span>
+    <span class="n">msg</span><span class="p">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">ss</span><span class="p">.</span><span class="n">str</span><span class="p">();</span>
+<span class="c1">//    ROS_INFO(&quot;%s&quot;, msg.data.c_str());</span>
+    <span class="n">RCLCPP_INFO</span><span class="p">(</span><span class="n">node</span><span class="o">-&gt;</span><span class="n">get_logger</span><span class="p">(),</span> <span class="s">&quot;%s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">msg</span><span class="p">.</span><span class="n">data</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span>
+    <span class="n">chatter_pub</span><span class="o">-&gt;</span><span class="n">publish</span><span class="p">(</span><span class="n">msg</span><span class="p">);</span>
+<span class="c1">//    ros::spinOnce();</span>
+    <span class="n">rclcpp</span><span class="o">::</span><span class="n">spin_some</span><span class="p">(</span><span class="n">node</span><span class="p">);</span>
+    <span class="n">loop_rate</span><span class="p">.</span><span class="n">sleep</span><span class="p">();</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="changing-the-package-xml">
+<h4>更换 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code>  <a class="reference external" href="http://localhost:3000/#/home?msgid=9933">[待校准&#64;9933]</a><a class="headerlink" href="#changing-the-package-xml" title="永久链接至标题"></a></h4>
+<p>ROS 2不支持包规格的格式1，只支持更新的格式版本 (2和更高版本)。我们首先在 <code class="docutils literal notranslate"><span class="pre">package</span></code> 标签中指定格式版本: <a class="reference external" href="http://localhost:3000/#/home?msgid=9934">[待校准&#64;9934]</a></p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!-- &lt;package&gt; --&gt;</span>
+<span class="nt">&lt;package</span> <span class="na">format=</span><span class="s">&quot;2&quot;</span><span class="nt">&gt;</span>
+</pre></div>
+</div>
+<p>ROS 2使用 <code class="docutils literal notranslate"><span class="pre">catkin</span></code> 的新版本，调用 <code class="docutils literal notranslate"><span class="pre">ament_cmake</span></code> ，我们在 <code class="docutils literal notranslate"><span class="pre">buildtool_depend</span></code> 标签中指定: <a class="reference external" href="http://localhost:3000/#/home?msgid=9935">[待校准&#64;9935]</a></p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!--  &lt;buildtool_depend&gt;catkin&lt;/buildtool_depend&gt; --&gt;</span>
+  <span class="nt">&lt;buildtool_depend&gt;</span>ament_cmake<span class="nt">&lt;/buildtool_depend&gt;</span>
+</pre></div>
+</div>
+<p>在我们的构建依赖项中，我们使用的不是 <code class="docutils literal notranslate"><span class="pre">roscpp</span></code> ，而是 <code class="docutils literal notranslate"><span class="pre">rclcpp</span></code> ，它提供了我们使用的c ++ API。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9936">[待校准&#64;9936]</a></p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!--  &lt;build_depend&gt;roscpp&lt;/build_depend&gt; --&gt;</span>
+  <span class="nt">&lt;build_depend&gt;</span>rclcpp<span class="nt">&lt;/build_depend&gt;</span>
+</pre></div>
+</div>
+<p>我们在运行依赖项中添加了相同的内容，并从 <code class="docutils literal notranslate"><span class="pre">run_depend</span></code> 标签更新到 <code class="docutils literal notranslate"><span class="pre">exec_depend</span></code> 标签 (包格式升级到版本2的一部分): <a class="reference external" href="http://localhost:3000/#/home?msgid=9937">[待校准&#64;9937]</a></p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!--  &lt;run_depend&gt;roscpp&lt;/run_depend&gt; --&gt;</span>
+  <span class="nt">&lt;exec_depend&gt;</span>rclcpp<span class="nt">&lt;/exec_depend&gt;</span>
+<span class="c">&lt;!--  &lt;run_depend&gt;std_msgs&lt;/run_depend&gt; --&gt;</span>
+  <span class="nt">&lt;exec_depend&gt;</span>std_msgs<span class="nt">&lt;/exec_depend&gt;</span>
+</pre></div>
+</div>
+<p>在ROS 1，我们使用 <code class="docutils literal notranslate"><span class="pre">&lt;depend&gt;</span></code> 简化指定依赖编译时和运行时。我们可以在ROS 2中做同样的事情: <a class="reference external" href="http://localhost:3000/#/home?msgid=9938">[待校准&#64;9938]</a></p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;depend&gt;</span>rclcpp<span class="nt">&lt;/depend&gt;</span>
+<span class="nt">&lt;depend&gt;</span>std_msgs<span class="nt">&lt;/depend&gt;</span>
+</pre></div>
+</div>
+<p>我们还需要告诉构建工具我们是什么样的包，以便它知道如何构建我们。因为我们使用的是 <code class="docutils literal notranslate"><span class="pre">ament</span></code> 和CMake，所以我们添加以下行来声明我们的构建类型为 <code class="docutils literal notranslate"><span class="pre">ament_cmake</span></code> : <a class="reference external" href="http://localhost:3000/#/home?msgid=9939">[待校准&#64;9939]</a></p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;export&gt;</span>
+  <span class="nt">&lt;build_type&gt;</span>ament_cmake<span class="nt">&lt;/build_type&gt;</span>
+<span class="nt">&lt;/export&gt;</span>
+</pre></div>
+</div>
+<p>综上所述，我们的 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 现在看起来像这样: <a class="reference external" href="http://localhost:3000/#/home?msgid=9940">[待校准&#64;9940]</a></p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!-- &lt;package&gt; --&gt;</span>
+<span class="nt">&lt;package</span> <span class="na">format=</span><span class="s">&quot;2&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;name&gt;</span>talker<span class="nt">&lt;/name&gt;</span>
+  <span class="nt">&lt;version&gt;</span>0.0.0<span class="nt">&lt;/version&gt;</span>
+  <span class="nt">&lt;description&gt;</span>talker<span class="nt">&lt;/description&gt;</span>
+  <span class="nt">&lt;maintainer</span> <span class="na">email=</span><span class="s">&quot;gerkey@osrfoundation.org&quot;</span><span class="nt">&gt;</span>Brian Gerkey<span class="nt">&lt;/maintainer&gt;</span>
+  <span class="nt">&lt;license&gt;</span>Apache License 2.0<span class="nt">&lt;/license&gt;</span>
+<span class="c">&lt;!--  &lt;buildtool_depend&gt;catkin&lt;/buildtool_depend&gt; --&gt;</span>
+  <span class="nt">&lt;buildtool_depend&gt;</span>ament_cmake<span class="nt">&lt;/buildtool_depend&gt;</span>
+<span class="c">&lt;!--  &lt;build_depend&gt;roscpp&lt;/build_depend&gt; --&gt;</span>
+<span class="c">&lt;!--  &lt;run_depend&gt;roscpp&lt;/run_depend&gt; --&gt;</span>
+<span class="c">&lt;!--  &lt;run_depend&gt;std_msgs&lt;/run_depend&gt; --&gt;</span>
+  <span class="nt">&lt;depend&gt;</span>rclcpp<span class="nt">&lt;/depend&gt;</span>
+  <span class="nt">&lt;depend&gt;</span>std_msgs<span class="nt">&lt;/depend&gt;</span>
+  <span class="nt">&lt;export&gt;</span>
+    <span class="nt">&lt;build_type&gt;</span>ament_cmake<span class="nt">&lt;/build_type&gt;</span>
+  <span class="nt">&lt;/export&gt;</span>
+<span class="nt">&lt;/package&gt;</span>
+</pre></div>
+</div>
+<p>Totodo: 仅使用 <code class="docutils literal notranslate"><span class="pre">&lt;depend&gt;</span></code> 标签显示此文件的更简单版本，该标签由软件包格式的版本2启用 (也在 <code class="docutils literal notranslate"><span class="pre">catkin</span></code> 中支持，因此，严格来说，与ROS 2正交)。** <a class="reference external" href="http://localhost:3000/#/home?msgid=9941">[待校准&#64;9941]</a></p>
+</div>
+<div class="section" id="changing-the-cmake-code">
+<h4>更改CMake代码 <a class="reference external" href="http://localhost:3000/#/home?msgid=9942">[待校准&#64;9942]</a><a class="headerlink" href="#changing-the-cmake-code" title="永久链接至标题"></a></h4>
+<p>ROS 2依赖于CMake的更高版本: <a class="reference external" href="http://localhost:3000/#/home?msgid=9943">[待校准&#64;9943]</a></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#cmake_minimum_required(VERSION 2.8.3)</span>
+cmake_minimum_required<span class="o">(</span>VERSION <span class="m">3</span>.5<span class="o">)</span>
+</pre></div>
+</div>
+<p>ROS 2依赖于c14 14标准。根据您使用的编译器，默认情况下可能不会启用对c14 14的支持。使用 <code class="docutils literal notranslate"><span class="pre">gcc</span></code> 5.3 (这是在Ubuntu Xenial上使用的)，我们需要显式启用它，我们通过在文件顶部附近添加这一行来实现: <a class="reference external" href="http://localhost:3000/#/home?msgid=9944">[待校准&#64;9944]</a></p>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CXX_STANDARD</span> <span class="s">14</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>在所有平台上工作的首选方式是: <a class="reference external" href="http://localhost:3000/#/home?msgid=9945">[待校准&#64;9945]</a></p>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">if</span><span class="p">(</span><span class="s">NOT</span> <span class="s">CMAKE_CXX_STANDARD</span><span class="p">)</span>
+  <span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CXX_STANDARD</span> <span class="s">14</span><span class="p">)</span>
+<span class="nb">endif</span><span class="p">()</span>
+<span class="nb">if</span><span class="p">(</span><span class="s">CMAKE_COMPILER_IS_GNUCXX</span> <span class="s">OR</span> <span class="s">CMAKE_CXX_COMPILER_ID</span> <span class="s">MATCHES</span> <span class="s2">&quot;Clang&quot;</span><span class="p">)</span>
+  <span class="nb">add_compile_options</span><span class="p">(</span><span class="s">-Wall</span> <span class="s">-Wextra</span> <span class="s">-Wpedantic</span><span class="p">)</span>
+<span class="nb">endif</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>使用 <code class="docutils literal notranslate"><span class="pre">catkin</span></code> ，我们指定包我们想建立反对通过他们 <code class="docutils literal notranslate"><span class="pre">COMPONENTS</span></code> 参数当最初找到 <code class="docutils literal notranslate"><span class="pre">catkin</span></code> 本身。对于 <code class="docutils literal notranslate"><span class="pre">ament_cmake</span></code> ，我们发现每个包装都是单独的，从 <code class="docutils literal notranslate"><span class="pre">ament_cmake</span></code> 开始: <a class="reference external" href="http://localhost:3000/#/home?msgid=9946">[待校准&#64;9946]</a></p>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="c">#find_package(catkin REQUIRED COMPONENTS roscpp std_msgs)</span>
+<span class="nb">find_package</span><span class="p">(</span><span class="s">ament_cmake</span> <span class="s">REQUIRED</span><span class="p">)</span>
+<span class="nb">find_package</span><span class="p">(</span><span class="s">rclcpp</span> <span class="s">REQUIRED</span><span class="p">)</span>
+<span class="nb">find_package</span><span class="p">(</span><span class="s">std_msgs</span> <span class="s">REQUIRED</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>可以像以前一样找到系统依赖项: <a class="reference external" href="http://localhost:3000/#/home?msgid=9947">[待校准&#64;9947]</a></p>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">find_package</span><span class="p">(</span><span class="s">Boost</span> <span class="s">REQUIRED</span> <span class="s">COMPONENTS</span> <span class="s">system</span> <span class="s">filesystem</span> <span class="s">thread</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>我们调用 <code class="docutils literal notranslate"><span class="pre">catkin_package()</span></code> ，为使用我们包的其他包自动生成CMake配置文件。鉴于该调用在指定要构建的目标之前发生，我们现在在 * 目标之后调用类似的 <code class="docutils literal notranslate"><span class="pre">ament_package()</span></code>  <a href="#id1"><span class="problematic" id="id2">*</span></a>: <a class="reference external" href="http://localhost:3000/#/home?msgid=9948">[待校准&#64;9948]</a></p>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="c"># catkin_package()</span>
+<span class="c"># At the bottom of the file:</span>
+<span class="nb">ament_package</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>唯一需要手动包含的目录是非ament包的本地目录和依赖项: <a class="reference external" href="http://localhost:3000/#/home?msgid=9949">[待校准&#64;9949]</a></p>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="c">#include_directories(${catkin_INCLUDE_DIRS})</span>
+<span class="nb">include_directories</span><span class="p">(</span><span class="s">include</span> <span class="o">${</span><span class="nv">Boost_INCLUDE_DIRS</span><span class="o">}</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>更好的选择是为每个目标单独指定包含目录，而不是为所有目标包含所有目录: <a class="reference external" href="http://localhost:3000/#/home?msgid=9950">[待校准&#64;9950]</a></p>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">target_include_directories</span><span class="p">(</span><span class="s">target</span> <span class="s">include</span> <span class="o">${</span><span class="nv">Boost_INCLUDE_DIRS</span><span class="o">}</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>类似于我们分别找到每个依赖包的方式，我们需要将每个包链接到构建目标。为了与ament包的依赖包链接，而不是使用 <code class="docutils literal notranslate"><span class="pre">target_link_libraries()</span></code> ， <code class="docutils literal notranslate"><span class="pre">ament_target_dependencies()</span></code> 是处理构建标志的一种更简洁、更彻底的方法。它自动调用y处理 <code class="docutils literal notranslate"><span class="pre">_INCLUDE_DIRS</span></code> 中定义的包含目录和 <code class="docutils literal notranslate"><span class="pre">_LIBRARIES</span></code> 中定义的链接库。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9951">[待校准&#64;9951]</a></p>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="c">#target_link_libraries(talker ${catkin_LIBRARIES})</span>
+<span class="nb">ament_target_dependencies</span><span class="p">(</span><span class="s">talker</span>
+  <span class="s">rclcpp</span>
+  <span class="s">std_msgs</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>要与不是ament包的包链接，例如系统依赖项，如 <code class="docutils literal notranslate"><span class="pre">Boost</span></code> ，或在同一 <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> 中构建的库，请使用 <code class="docutils literal notranslate"><span class="pre">target_link_libraries()</span></code> : <a class="reference external" href="http://localhost:3000/#/home?msgid=9952">[待校准&#64;9952]</a></p>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">target_link_libraries</span><span class="p">(</span><span class="s">target</span> <span class="o">${</span><span class="nv">Boost_LIBRARIES</span><span class="o">}</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>对于安装， <code class="docutils literal notranslate"><span class="pre">catkin</span></code> 定义变量，如 <code class="docutils literal notranslate"><span class="pre">CATKIN_PACKAGE_BIN_DESTINATION</span></code> 。对于 <code class="docutils literal notranslate"><span class="pre">ament_cmake</span></code> ，我们只给出一个相对于安装根的路径，就像可执行文件的 <code class="docutils literal notranslate"><span class="pre">bin</span></code> : <a class="reference external" href="http://localhost:3000/#/home?msgid=9953">[待校准&#64;9953]</a></p>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="c">#install(TARGETS talker</span>
+<span class="c">#  RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})</span>
+<span class="nb">install</span><span class="p">(</span><span class="s">TARGETS</span> <span class="s">talker</span>
+  <span class="s">DESTINATION</span> <span class="s">lib/</span><span class="o">${</span><span class="nv">PROJECT_NAME</span><span class="o">}</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>(可选) 我们可以为下游包安装和导出包含的目录: <a class="reference external" href="http://localhost:3000/#/home?msgid=9954">[待校准&#64;9954]</a></p>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">install</span><span class="p">(</span><span class="s">DIRECTORY</span> <span class="s">include/</span>
+  <span class="s">DESTINATION</span> <span class="s">include</span><span class="p">)</span>
+<span class="nb">ament_export_include_directories</span><span class="p">(</span><span class="s">include</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>或者，我们可以导出下游包的依赖项: <a class="reference external" href="http://localhost:3000/#/home?msgid=9955">[待校准&#64;9955]</a></p>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">ament_export_dependencies</span><span class="p">(</span><span class="s">std_msgs</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>把它们放在一起，新的 <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> 看起来像这样: <a class="reference external" href="http://localhost:3000/#/home?msgid=9956">[待校准&#64;9956]</a></p>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="c">#cmake_minimum_required(VERSION 2.8.3)</span>
+<span class="nb">cmake_minimum_required</span><span class="p">(</span><span class="s">VERSION</span> <span class="s">3.5</span><span class="p">)</span>
+<span class="nb">project</span><span class="p">(</span><span class="s">talker</span><span class="p">)</span>
+<span class="nb">if</span><span class="p">(</span><span class="s">NOT</span> <span class="s">CMAKE_CXX_STANDARD</span><span class="p">)</span>
+  <span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CXX_STANDARD</span> <span class="s">14</span><span class="p">)</span>
+<span class="nb">endif</span><span class="p">()</span>
+<span class="nb">if</span><span class="p">(</span><span class="s">CMAKE_COMPILER_IS_GNUCXX</span> <span class="s">OR</span> <span class="s">CMAKE_CXX_COMPILER_ID</span> <span class="s">MATCHES</span> <span class="s2">&quot;Clang&quot;</span><span class="p">)</span>
+  <span class="nb">add_compile_options</span><span class="p">(</span><span class="s">-Wall</span> <span class="s">-Wextra</span> <span class="s">-Wpedantic</span><span class="p">)</span>
+<span class="nb">endif</span><span class="p">()</span>
+<span class="c">#find_package(catkin REQUIRED COMPONENTS roscpp std_msgs)</span>
+<span class="nb">find_package</span><span class="p">(</span><span class="s">ament_cmake</span> <span class="s">REQUIRED</span><span class="p">)</span>
+<span class="nb">find_package</span><span class="p">(</span><span class="s">rclcpp</span> <span class="s">REQUIRED</span><span class="p">)</span>
+<span class="nb">find_package</span><span class="p">(</span><span class="s">std_msgs</span> <span class="s">REQUIRED</span><span class="p">)</span>
+<span class="c">#catkin_package()</span>
+<span class="c">#include_directories(${catkin_INCLUDE_DIRS})</span>
+<span class="nb">include_directories</span><span class="p">(</span><span class="s">include</span><span class="p">)</span>
+<span class="nb">add_executable</span><span class="p">(</span><span class="s">talker</span> <span class="s">talker.cpp</span><span class="p">)</span>
+<span class="c">#target_link_libraries(talker ${catkin_LIBRARIES})</span>
+<span class="nb">ament_target_dependencies</span><span class="p">(</span><span class="s">talker</span>
+  <span class="s">rclcpp</span>
+  <span class="s">std_msgs</span><span class="p">)</span>
+<span class="c">#install(TARGETS talker</span>
+<span class="c">#  RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})</span>
+<span class="nb">install</span><span class="p">(</span><span class="s">TARGETS</span> <span class="s">talker</span>
+  <span class="s">DESTINATION</span> <span class="s">lib/</span><span class="o">${</span><span class="nv">PROJECT_NAME</span><span class="o">}</span><span class="p">)</span>
+<span class="nb">install</span><span class="p">(</span><span class="s">DIRECTORY</span> <span class="s">include/</span>
+  <span class="s">DESTINATION</span> <span class="s">include</span><span class="p">)</span>
+<span class="nb">ament_export_include_directories</span><span class="p">(</span><span class="s">include</span><span class="p">)</span>
+<span class="nb">ament_export_dependencies</span><span class="p">(</span><span class="s">std_msgs</span><span class="p">)</span>
+<span class="nb">ament_package</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Totodo: 展示 <code class="docutils literal notranslate"><span class="pre">ament_auto</span></code> 会是什么样子。** <a class="reference external" href="http://localhost:3000/#/home?msgid=9957">[待校准&#64;9957]</a></p>
+</div>
+<div class="section" id="building-the-ros-2-code">
+<h4>构建ROS 2代码 <a class="reference external" href="http://localhost:3000/#/home?msgid=9958">[待校准&#64;9958]</a><a class="headerlink" href="#building-the-ros-2-code" title="永久链接至标题"></a></h4>
+<p>我们源文件环境安装文件 (在本例中是按照ROS 2安装教程生成的文件，该教程以 “~/ros2_ws” 构建，然后我们使用 <code class="docutils literal notranslate"><span class="pre">colcon</span> <span class="pre">build</span></code> 构建包: <a class="reference external" href="http://localhost:3000/#/home?msgid=9959">[待校准&#64;9959]</a></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>. ~/ros2_ws/install/setup.bash
+<span class="nb">cd</span> ~/ros2_talker
+colcon build
+</pre></div>
+</div>
+</div>
+<div class="section" id="running-the-ros-2-node">
+<h4>运行ROS 2节点 <a class="reference external" href="http://localhost:3000/#/home?msgid=9960">[待校准&#64;9960]</a><a class="headerlink" href="#running-the-ros-2-node" title="永久链接至标题"></a></h4>
+<p>因为我们将 <code class="docutils literal notranslate"><span class="pre">talker</span></code> 可执行文件安装到 <code class="docutils literal notranslate"><span class="pre">bin</span></code> 中，在从安装树采购安装文件后，我们可以直接通过名称调用它 (也，还没有相当于 <code class="docutils literal notranslate"><span class="pre">rosrun</span></code> 的ROS 2): <a class="reference external" href="http://localhost:3000/#/home?msgid=9961">[待校准&#64;9961]</a></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>. ~/ros2_ws/install/setup.bash
+talker
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="update-scripts">
+<h3>更新脚本 <a class="reference external" href="http://localhost:3000/#/home?msgid=9962">[待校准&#64;9962]</a><a class="headerlink" href="#update-scripts" title="永久链接至标题"></a></h3>
+<div class="section" id="ros-cli-arguments">
+<h4>ROS CLI参数 <a class="reference external" href="http://localhost:3000/#/home?msgid=9963">[待校准&#64;9963]</a><a class="headerlink" href="#ros-cli-arguments" title="永久链接至标题"></a></h4>
+<p>因为 <a class="reference internal" href="../Releases/Release-Eloquent-Elusor.html"><span class="doc">ROS Eloquent</span></a>, ROS参数应该以 <code class="docutils literal notranslate"><span class="pre">--ros-args</span></code> 和尾随的 <code class="docutils literal notranslate"><span class="pre">--</span></code> 为范围 (如果没有参数跟随它，尾随的doubledash可能会被省略)。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9964">[待校准&#64;9964]</a></p>
+<p>重新映射名称类似于ROS 1，采用 “from:= to” 的形式，不同之处在于它前面必须有一个 <code class="docutils literal notranslate"><span class="pre">--remap</span></code>  (或 <code class="docutils literal notranslate"><span class="pre">-r</span></code> ) 旗。例如: <a class="reference external" href="http://localhost:3000/#/home?msgid=9965">[待校准&#64;9965]</a></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 run some_package some_ros_executable --ros-args -r foo:<span class="o">=</span>bar
+</pre></div>
+</div>
+<p>我们对参数使用类似的语法，使用 <code class="docutils literal notranslate"><span class="pre">--param</span></code>  (或 <code class="docutils literal notranslate"><span class="pre">-p</span></code> ) 标志: <a class="reference external" href="http://localhost:3000/#/home?msgid=9966">[待校准&#64;9966]</a></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 run some_package some_ros_executable --ros-args -p my_param:<span class="o">=</span>value
+</pre></div>
+</div>
+<p>请注意，这不同于在ROS 1中使用前导下划线。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9967">[待校准&#64;9967]</a></p>
+<p>要更改节点名称，请使用 <code class="docutils literal notranslate"><span class="pre">__node</span></code>  (ROS 1当量为 <code class="docutils literal notranslate"><span class="pre">__name</span></code> ): <a class="reference external" href="http://localhost:3000/#/home?msgid=9968">[待校准&#64;9968]</a></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 run some_package some_ros_executable --ros-args -r __node:<span class="o">=</span>new_node_name
+</pre></div>
+</div>
+<p>注意 <code class="docutils literal notranslate"><span class="pre">-r</span></code> 旗的使用。更改命名空间 <code class="docutils literal notranslate"><span class="pre">__ns</span></code> 需要相同的重映射标志: <a class="reference external" href="http://localhost:3000/#/home?msgid=9969">[待校准&#64;9969]</a></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 run some_package some_ros_executable --ros-args -r __ns:<span class="o">=</span>/new/namespace
+</pre></div>
+</div>
+<p>在ROS 2中，以下ROS 1键没有等效项: <a class="reference external" href="http://localhost:3000/#/home?msgid=9970">[待校准&#64;9970]</a></p>
+<ul class="simple">
+<li><p>[需手动修复的语法]``__log`` (but <code class="docutils literal notranslate"><span class="pre">--log-config-file</span></code> can用于提供日志记录器配置文件) <a class="reference external" href="http://localhost:3000/#/home?msgid=9971">[待校准&#64;9971]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__ip</span></code> <a class="reference external" href="http://localhost:3000/#/home?msgid=9972">[待校准&#64;9972]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__hostname</span></code> <a class="reference external" href="http://localhost:3000/#/home?msgid=9973">[待校准&#64;9973]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__master</span></code> <a class="reference external" href="http://localhost:3000/#/home?msgid=9974">[待校准&#64;9974]</a></p></li>
+</ul>
+<p>有关更多信息，请参见 <a class="reference external" href="https://design.ros2.org/articles/ros_command_line_arguments.html">design document</a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9975">[待校准&#64;9975]</a></p>
+<div class="section" id="quick-reference">
+<h5>快速参考 <a class="reference external" href="http://localhost:3000/#/home?msgid=9976">[待校准&#64;9976]</a><a class="headerlink" href="#quick-reference" title="永久链接至标题"></a></h5>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 29%" />
+<col style="width: 32%" />
+<col style="width: 39%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>特征 <a class="reference external" href="http://localhost:3000/#/home?msgid=9977">[待校准&#64;9977]</a></p></th>
+<th class="head"><p>ROS 1 <a class="reference external" href="http://localhost:3000/#/home?msgid=9978">[待校准&#64;9978]</a></p></th>
+<th class="head"><p>ROS 2 <a class="reference external" href="http://localhost:3000/#/home?msgid=9979">[待校准&#64;9979]</a></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>重新映射 <a class="reference external" href="http://localhost:3000/#/home?msgid=9980">[待校准&#64;9980]</a></p></td>
+<td><p>foo:= bar <a class="reference external" href="http://localhost:3000/#/home?msgid=9981">[待校准&#64;9981]</a></p></td>
+<td><p>-r foo:= bar <a class="reference external" href="http://localhost:3000/#/home?msgid=9982">[待校准&#64;9982]</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>参数 <a class="reference external" href="http://localhost:3000/#/home?msgid=9983">[待校准&#64;9983]</a></p></td>
+<td><p>_ foo:= bar <a class="reference external" href="http://localhost:3000/#/home?msgid=9984">[待校准&#64;9984]</a></p></td>
+<td><p>-p foo:= bar <a class="reference external" href="http://localhost:3000/#/home?msgid=9985">[待校准&#64;9985]</a></p></td>
+</tr>
+<tr class="row-even"><td><p>节点名称 <a class="reference external" href="http://localhost:3000/#/home?msgid=9986">[待校准&#64;9986]</a></p></td>
+<td><p>__Name := foo <a class="reference external" href="http://localhost:3000/#/home?msgid=9987">[待校准&#64;9987]</a></p></td>
+<td><p>-r __node:= foo <a class="reference external" href="http://localhost:3000/#/home?msgid=9988">[待校准&#64;9988]</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>命名空间 <a class="reference external" href="http://localhost:3000/#/home?msgid=9989">[待校准&#64;9989]</a></p></td>
+<td><p>__Ns: = foo <a class="reference external" href="http://localhost:3000/#/home?msgid=9990">[待校准&#64;9990]</a></p></td>
+<td><p>-R__ns: = foo <a class="reference external" href="http://localhost:3000/#/home?msgid=9991">[待校准&#64;9991]</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="section" id="more-examples-and-tools">
+<h3>更多示例和工具 <a class="reference external" href="http://localhost:3000/#/home?msgid=9992">[待校准&#64;9992]</a><a class="headerlink" href="#more-examples-and-tools" title="永久链接至标题"></a></h3>
+<ul class="simple">
+<li><p>[需手动修复的语法]Launch文件migrator，转换ROS 1XMLlaunch文件ROS 2 Pythonlaunch文件: <a class="reference external" href="https://github.com">https://github.com</a>/aws机器人/ros2-launch文件migrator <a class="reference external" href="http://localhost:3000/#/home?msgid=9993">[待校准&#64;9993]</a></p></li>
+<li><p>Amazon在工具移植ROS 1机器人ROS 2 <a class="reference external" href="https://github.com/awslabs/">https://github.com/awslabs/</a> ros2-migration-tools/树/主/移植 _ 工具 <a class="reference external" href="http://localhost:3000/#/home?msgid=9994">[待校准&#64;9994]</a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="licensing">
+<h2>许可 <a class="reference external" href="http://localhost:3000/#/home?msgid=9995">[待校准&#64;9995]</a><a class="headerlink" href="#licensing" title="永久链接至标题"></a></h2>
+<p>在ROS 2中，我们推荐的许可证是 <a class="reference external" href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 License</a>. In ROS 1 our recommended license was the <a class="reference external" href="https://opensource.org/licenses/BSD-3-Clause">3-Clause BSD License</a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9996">[待校准&#64;9996]</a></p>
+<p>对于任何新项目，我们建议使用Apache 2.0许可证，无论是ROS 1还是ROS 2。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9997">[待校准&#64;9997]</a></p>
+<p>但是，当将代码从ROS 1迁移到ROS 2时，我们不能简单地更改许可证。对于任何先前存在的贡献，必须保留现有许可证。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9998">[待校准&#64;9998]</a></p>
+<p>为此，如果一个包正在迁移，我们建议保留现有的许可证，并在现有的OSI许可证下继续为该包做出贡献，我们希望该许可证是核心元素的BSD许可证。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9999">[待校准&#64;9999]</a></p>
+<p>这将使事情清晰易懂。 <a class="reference external" href="http://localhost:3000/#/home?msgid=10000">[待校准&#64;10000]</a></p>
+<div class="section" id="changing-the-license">
+<h3>更改许可证 <a class="reference external" href="http://localhost:3000/#/home?msgid=10001">[待校准&#64;10001]</a><a class="headerlink" href="#changing-the-license" title="永久链接至标题"></a></h3>
+<p>可以更改许可证，但是您需要联系所有贡献者并获得许可。对于大多数包来说，这可能是一项巨大的努力，不值得考虑。如果包有一小部分贡献者，那么这可能是可行的。 <a class="reference external" href="http://localhost:3000/#/home?msgid=10002">[待校准&#64;10002]</a></p>
+</div>
+</div>
+</div>
+
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Quality-Guide.html" class="btn btn-neutral float-left" title="质量指南: 确保代码质量 [待校准@10012]" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="Migration-Guide-Python.html" class="btn btn-neutral float-right" title="来自ROS 1的Python迁移指南 [待校准@10003]" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2022, Open Robotics.</p>
+  </div>
+
+  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-17821189-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-17821189-2', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>记录和回放数据 [待校准@7639] &mdash; ROS 2 documentation  文档</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.ros.org/en/Tutorials/Ros2bag/Recording-And-Playing-Back-Data.html" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/clipboard.min.js"></script>
+        <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="创建工作空间 [待校准@8836]" href="../Workspace/Creating-A-Workspace.html" />
+    <link rel="prev" title="介绍ROS 2launch [待校准@7101]" href="../Launch/CLI-Intro.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> ROS 2 documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../Installation.html">安装 [待校准&#64;5690]</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Installation/Ubuntu-Development-Setup.html">在Ubuntu Linux上构建ROS 2 [待校准&#64;5886]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Installation/Ubuntu-Install-Binary.html">在Ubuntu Linux上安装ROS 2 [待校准&#64;5937]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Installation/Ubuntu-Install-Debians.html">通过Debian包安装ROS 2 [待校准&#64;5959]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Installation/macOS-Development-Setup.html">在macOS上构建ROS 2 [待校准&#64;6117]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Installation/macOS-Install-Binary.html">在macOS上安装ROS 2 [待校准&#64;6148]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Installation/Windows-Development-Setup.html">在Windows上构建ROS 2 [待校准&#64;5973]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Installation/Windows-Install-Binary.html">在Windows上安装ROS 2 [待校准&#64;6050]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Installation/Fedora-Development-Setup.html">在Fedora Linux上构建ROS 2 [待校准&#64;5836]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Installation/Latest-Development-Setup.html">安装最新的ROS 2开发版本 [待校准&#64;5840]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Installation/Maintaining-a-Source-Checkout.html">主源文件检出ROS 2Foxy [待校准&#64;5850]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Installation/Testing.html">用于测试的替代安装源 [待校准&#64;5873]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Installation/DDS-Implementations.html">安装DDS实现 [待校准&#64;5717]</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Installation/DDS-Implementations/Install-Connext-Security-Plugins.html">安装Connext安全插件 [待校准&#64;5768]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Installation/DDS-Implementations/Install-Connext-University-Eval.html">安装大学或RTI Connext DDS的评估版本 [待校准&#64;5782]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Installation/DDS-Implementations/Working-with-Eclipse-CycloneDDS.html">使用EclipseCycloneDDS [待校准&#64;5796]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Installation/DDS-Implementations/Working-with-GurumNetworks-GurumDDS.html">与GurumNetworks GurumDDS合作 [待校准&#64;5812]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Installation/DDS-Implementations/Working-with-eProsima-Fast-DDS.html">与eProsimaFast DDS合作 [待校准&#64;5829]</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../Docs-Guide.html">文档指南</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../Tutorials.html">教程 [待校准&#64;6242]</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../Configuring-ROS2-Environment.html">配置ROS 2环境 [待校准&#64;6646]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Turtlesim/Introducing-Turtlesim.html">介绍turtlesim和rqt [待校准&#64;8428]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Understanding-ROS2-Nodes.html">了解ROS 2节点 [待校准&#64;8733]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Topics/Understanding-ROS2-Topics.html">理解ROS 2话题 [待校准&#64;8368]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Services/Understanding-ROS2-Services.html">了解ROS 2服务 [待校准&#64;7742]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Parameters/Understanding-ROS2-Parameters.html">理解ROS 2参数 [待校准&#64;7371]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Understanding-ROS2-Actions.html">理解ROS 2动作 [待校准&#64;8684]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Rqt-Console/Using-Rqt-Console.html">使用rqt_控制台 [待校准&#64;7712]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Launch/CLI-Intro.html">介绍ROS 2launch [待校准&#64;7101]</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">记录和回放数据 [待校准&#64;7639]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Workspace/Creating-A-Workspace.html">创建工作空间 [待校准&#64;8836]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Creating-Your-First-ROS2-Package.html">创建您的第一个ROS 2包 [待校准&#64;6677]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Writing-A-Simple-Cpp-Publisher-And-Subscriber.html">编写简单的发布者和订阅者 (c ++) [待校准&#64;8905]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Writing-A-Simple-Py-Publisher-And-Subscriber.html">编写简单的发布者和订阅者 (Python) [待校准&#64;8992]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Writing-A-Simple-Cpp-Service-And-Client.html">编写简单的服务和客户端 (c ++) [待校准&#64;8953]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Writing-A-Simple-Py-Service-And-Client.html">编写简单的服务和客户端 (Python) [待校准&#64;9028]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Custom-ROS2-Interfaces.html">创建自定义ROS 2 msg 和 srv 文件 [待校准&#64;6739]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Single-Package-Define-And-Use-Interface.html">在ROS 2接口上扩展 [待校准&#64;7844]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Using-Parameters-In-A-Class-CPP.html">在类 (c ++) 中使用参数 [待校准&#64;8769]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Using-Parameters-In-A-Class-Python.html">在类中使用参数 (Python) [待校准&#64;8809]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Getting-Started-With-Ros2doctor.html">开始使用ros2doctor [待校准&#64;7010]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Pluginlib.html">创建和使用插件 (c ++) [待校准&#64;7411]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Actions/Creating-an-Action.html">创建动作 [待校准&#64;6271]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Actions/Writing-a-Cpp-Action-Server-Client.html">编写动作服务器和客户端 (c ++) [待校准&#64;6313]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Actions/Writing-a-Py-Action-Server-Client.html">编写动作服务器和客户端 (Python) [待校准&#64;6385]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Composition.html">在单个进程中组成多个节点 [待校准&#64;6594]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Colcon-Tutorial.html">使用colcon构建包 [待校准&#64;6535]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Launch/Launch-Main.html">Launch教程 [待校准&#64;7160]</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Launch/Creating-Launch-Files.html">创建launch文件 [待校准&#64;7122]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Launch/Launch-system.html">[需手动修复的语法]Launch/监控多节点[需手动修复的语法]Launch [待校准&#64;7174]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Launch/Using-Substitutions.html">在launch文件中使用替换 [待校准&#64;7297]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Launch/Using-Event-Handlers.html">在launch文件中使用事件处理程序 [待校准&#64;7201]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Launch/Using-ROS2-Launch-For-Large-Projects.html">在大型项目中使用ROS 2launch [待校准&#64;7234]</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Tf2/Tf2-Main.html">tf2教程 [待校准&#64;8078]</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Tf2/Introduction-To-Tf2.html">tf2简介 [待校准&#64;7994]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tf2/Writing-A-Tf2-Static-Broadcaster-Py.html">编写tf2静态广播器 (Python) [待校准&#64;8299]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tf2/Writing-A-Tf2-Static-Broadcaster-Cpp.html">编写tf2静态广播器 (c ++) [待校准&#64;8257]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tf2/Writing-A-Tf2-Broadcaster-Py.html">编写tf2广播器 (Python) [待校准&#64;8220]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tf2/Writing-A-Tf2-Broadcaster-Cpp.html">编写tf2广播器 (c ++) [待校准&#64;8181]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tf2/Writing-A-Tf2-Listener-Py.html">编写tf2监听程序 (Python) [待校准&#64;8251]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tf2/Writing-A-Tf2-Listener-Cpp.html">编写tf2监听程序 (c ++) [待校准&#64;8233]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tf2/Adding-A-Frame-Py.html">添加帧 (Python) [待校准&#64;7950]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tf2/Adding-A-Frame-Cpp.html">添加帧 (c ++) [待校准&#64;7914]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tf2/Learning-About-Tf2-And-Time-Py.html">学习tf2和时间 (Python) [待校准&#64;8040]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tf2/Learning-About-Tf2-And-Time-Cpp.html">学习tf2和时间 (c ++) [待校准&#64;8023]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tf2/Time-Travel-With-Tf2-Py.html">时间穿梭tf2 (Python) [待校准&#64;8130]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tf2/Time-Travel-With-Tf2-Cpp.html">时间穿梭带tf2 (C++) [待校准&#64;8105]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tf2/Debugging-Tf2-Problems.html">调试tf2问题 [待校准&#64;7956]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tf2/Quaternion-Fundamentals.html">四元数基金amentals [待校准&#64;8054]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.html">使用stamped数据类型与tf2_ros: MessageFilter [待校准&#64;8138]</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../URDF/URDF-Main.html">URDF教程 [待校准&#64;8607]</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../URDF/Building-a-Visual-Robot-Model-with-URDF-from-Scratch.html">从头开始用URDF构建视觉机器人模型 [待校准&#64;8556]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../URDF/Building-a-Movable-Robot-Model-with-URDF.html">用URDF建立可移动机器人模型 [待校准&#64;8534]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../URDF/Adding-Physical-and-Collision-Properties-to-a-URDF-Model.html">向URDF模型添加物理和碰撞属性 [待校准&#64;8487]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../URDF/Using-Xacro-to-Clean-Up-a-URDF-File.html">使用Xacro清理URDF文件 [待校准&#64;8635]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../URDF/Using-URDF-with-Robot-State-Publisher.html">将URDF与robot_state_发布者结合使用 [待校准&#64;8609]</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Topics/Topic-Statistics-Tutorial.html">ROS 2话题统计教程 (c ++) [待校准&#64;8311]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Discovery-Server/Discovery-Server.html">使用Fast DDS Discovery Server作为发现协议 [社区贡献] [待校准&#64;6879]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Allocator-Template-Tutorial.html">实现自定义内存分配器 [待校准&#64;6445]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Simulators/Webots/Setting-up-a-Robot-Simulation-Webots.html">设置机器人仿真 (Webots) [待校准&#64;7782]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Deploying-ROS-2-on-IBM-Cloud.html">IBM Cloud Kubernetes上的ROS2 [社区-贡献] [待校准&#64;6792]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Eclipse-Oxygen-with-ROS-2-and-rviz2.html">带有ROS 2和rviz2的Eclipse Oxygen [社区贡献] [待校准&#64;6947]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Building-Realtime-rt_preempt-kernel-for-ROS-2.html">为ROS 2构建实时Linux [社区-贡献] [待校准&#64;6514]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Recording-A-Bag-From-Your-Own-Node.html">从您自己的节点记录一个包 [待校准&#64;7554]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Building-ROS2-Package-with-eclipse-2021-06.html">使用eclipse 2021-06构建ROS 2包 [待校准&#64;6486]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Quality-of-Service.html">使用服务质量设置处理有损网络 [待校准&#64;7462]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Managed-Nodes.html">具有托管生命周期的节点管理 [待校准&#64;7369]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Intra-Process-Communication.html">高效的流程内通讯 [待校准&#64;7051]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Rosbag-with-ROS1-Bridge.html">使用ROS 1bridge用rosbag记录和回放话题数据 [待校准&#64;7685]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Real-Time-Programming.html">ROS 2中的实时编程 [待校准&#64;7491]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dummy-robot-demo.html">尝试dummy robot例程 [待校准&#64;9056]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Logging-and-logger-configuration.html">日志和日志记录器配置例程 [待校准&#64;7322]</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../How-To-Guides.html">操作指南 [待校准&#64;204]</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Installation-Troubleshooting.html">安装故障诊断工具 [待校准&#64;535]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Developing-a-ROS-2-Package.html">开发ROS 2包 [待校准&#64;514]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Ament-CMake-Documentation.html">[需手动修复的语法]ament _ cmake用户文档 [待校准&#64;208]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Ament-CMake-Python-Documentation.html">[需手动修复的语法]ament _ cmake_python用户文档 [待校准&#64;360]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Launch-files-migration-guide.html">迁移launch文件ROS 1ROS 2 [待校准&#64;638]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Launch-file-different-formats.html">对ROS 2Launch文件使用Python、XML和YAML [待校准&#64;611]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Launching-composable-nodes.html">使用ROS 2launch到launch可组合节点 [待校准&#64;733]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Parameters-YAML-files-migration-guide.html">将YAML参数文件从ROS 1迁移到ROS 2 [待校准&#64;850]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Node-arguments.html">通过命令行将ROS参数传递给节点 [待校准&#64;746]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Sync-Vs-Async.html">同步与异步服务客户端 [待校准&#64;972]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/DDS-tuning.html">DDS调谐信息 [待校准&#64;470]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Overriding-QoS-Policies-For-Recording-And-Playback.html">rosbag2: 重载QoS策略 [待校准&#64;772]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Working-with-multiple-RMW-implementations.html">使用多个ROS 2中间件实现 [待校准&#64;1068]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Cross-compilation.html">交叉编译 [待校准&#64;383]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Releasing-a-ROS-2-package-with-bloom.html">发布带有bloom的ROS 2包 [待校准&#64;937]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Using-Python-Packages.html">将Python包与ROS 2结合使用 [待校准&#64;1011]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/RQt-Port-Plugin-Windows.html">将RQt插件移植到Windows [待校准&#64;862]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Run-2-nodes-in-single-or-separate-docker-containers.html">在Docker中运行ROS 2节点 [社区-贡献] [待校准&#64;959]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Package-maintainer-guide.html">ROS 2包维护者指南 [待校准&#64;785]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Building-a-Custom-Debian-Package.html">构建自定义Debian包 [待校准&#64;371]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Topics-Services-Actions.html">话题vs服务vsAction [待校准&#64;997]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Using-Variants.html">使用变体 [待校准&#64;1031]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Using-ros2-param.html">使用 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span></code> 命令行工具 [待校准&#64;1046]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/RQt-Source-Install.html">从源文件构建RQt [待校准&#64;883]</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../How-To-Guides/RQt-Source-Install-MacOS.html">在macOS上从源文件构建RQt [待校准&#64;908]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../How-To-Guides/RQt-Source-Install-Windows10.html">在Windows 10上从源文件构建RQt [待校准&#64;916]</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../Concepts.html">概念 [待校准&#64;4938]</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-Domain-ID.html">ROS_DOMAIN_ID [待校准&#64;5194]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-Different-Middleware-Vendors.html">关于不同的ROS 2 DDS/RTPS供应商 [待校准&#64;5153]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-Logging.html">关于日志和日志记录器配置 [待校准&#64;5325]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-Quality-of-Service-Settings.html">关于服务质量设置 [待校准&#64;5369]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-ROS-2-Client-Libraries.html">关于ROS 2客户端库 [待校准&#64;5459]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-ROS-Interfaces.html">关于ROS 2接口 [待校准&#64;5526]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-ROS-2-Parameters.html">关于ROS 2中的参数 [待校准&#64;5490]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-Executors.html">执行器 [待校准&#64;5227]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-Topic-Statistics.html">关于话题统计 [待校准&#64;5671]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-Command-Line-Tools.html">使用命令行工具进行自检 [待校准&#64;5091]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-RQt.html">RQt的概述和使用 [待校准&#64;5625]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-Composition.html">关于组件 [待校准&#64;5119]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-Catment.html">[需手动修复的语法]ament和catkin的混合研究 [待校准&#64;5019]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-Cross-Compilation.html">关于交叉编译 [待校准&#64;5141]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-Tf2.html">关于tf2 [待校准&#64;5653]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-Build-System.html">关于构建系统 [待校准&#64;4969]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-Internal-Interfaces.html">关于内部ROS 2接口 [待校准&#64;5265]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-Middleware-Implementations.html">关于ROS 2中间件实现 [待校准&#64;5347]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-Client-Interfaces.html">ROS 2客户端接口 (客户端库) [待校准&#64;5079]</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../Contributing.html">贡献 [待校准&#64;9128]</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Contributing/Developer-Guide.html">ROS 2开发人员指南 [待校准&#64;9430]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Contributing/Code-Style-Language-Versions.html">代码样式和语言版本 [待校准&#64;9212]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Contributing/Quality-Guide.html">质量指南: 确保代码质量 [待校准&#64;10012]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Contributing/Migration-Guide.html">从ROS 1迁移指南 [待校准&#64;9780]</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Contributing/Migration-Guide-Python.html">来自ROS 1的Python迁移指南 [待校准&#64;10003]</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Contributing/Build-Farms.html">ROS Build Farms [待校准&#64;9167]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Contributing/Windows-Tips-and-Tricks.html">Windows提示和技巧 [待校准&#64;10105]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Contributing/Contributing-To-ROS-2-Documentation.html">为ROS 2文档做出贡献 [待校准&#64;9366]</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../Contact.html">联系人 [待校准&#64;6167]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ROSCon-Content.html">ROSCon内容 [待校准&#64;105]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Releases.html">发行版 [待校准&#64;1233]</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Releases/Alpha-Overview.html">ROS 2 α 发行版本 (2015年8月-2016年10月) [待校准&#64;1306]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Releases/Beta1-Overview.html">贝塔1 (代号'Asphalt'; 2016年12月) [待校准&#64;1386]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Releases/Beta2-Overview.html">贝塔2 (代号'r2b2'; 2017年7月) [待校准&#64;1420]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Releases/Beta3-Overview.html">贝塔3 (代号'r2b3'; 2017年9月) [待校准&#64;1451]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Releases/Release-Ardent-Apalone.html">ROS 2Ardent阿帕隆 (代号'ardent'; 2017年12月) [待校准&#64;4089]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Releases/Release-Bouncy-Bolson.html">ROS 2 Bouncy Bolson (代号'bouncy'; 2018年6月) [待校准&#64;4130]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Releases/Release-Crystal-Clemmys.html">ROS 2Crystal Clemmys (代号'crystal'; 2018年12月) [待校准&#64;4158]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Releases/Release-Dashing-Diademata.html">ROS 2DashingDiademata (代号'dashing'; 2019年5月31日) [待校准&#64;4237]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Releases/Release-Eloquent-Elusor.html">ROS 2EloquentElusor (代号'eloquent'; 2019年11月22日) [待校准&#64;4427]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Releases/Release-Foxy-Fitzroy.html">ROS 2FoxyFitzroy (代号'foxy'; 2020年6月5日) [待校准&#64;4503]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Releases/Release-Galactic-Geochelone.html">ROS 2GalacticGeochelone (代号'galactic'; 2021年5月) [待校准&#64;4649]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Releases/Galactic-Geochelone-Complete-Changelog.html">ROS 2GalacticGeochelone完整变更日志 [待校准&#64;1470]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Releases/Release-Humble-Hawksbill.html">ROS 2Humble Hawksbill (代号'humble'; 2022年5月) [待校准&#64;4845]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Releases/Release-Rolling-Ridley.html">ROS 2Rolling Ridley (代号'rolling'; 2020年6月) [待校准&#64;4929]</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../Features.html">功能状态 [待校准&#64;9074]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Roadmap.html">路线图 [待校准&#64;45]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Feature-Ideas.html">特色创意 [待校准&#64;1123]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Governance.html">项目管理 [待校准&#64;10131]</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Governance/ROS2-TSC-Charter.html">ROS 2技术指导委员会章程 [待校准&#64;10280]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Governance/ROS2-TSC-Intake-process.html">ROS 2 TSC申请人摄入流程 [待校准&#64;10368]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Governance/How-To-Start-A-Community-Working-Group.html">如何成立社区工作组 [待校准&#64;10253]</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../Marketing.html">营销材料 [待校准&#64;6193]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Related-Projects.html">相关项目 [待校准&#64;6209]</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Related-Projects/Intel-ROS2-Projects.html">[需手动修复的语法]IntelROS 2项目 [待校准&#64;6210]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Related-Projects/Nvidia-ROS2-Projects.html">[需手动修复的语法]NVIDIAROS 2项目 [待校准&#64;6228]</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../Glossary.html">术语表 [待校准&#64;1217]</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">ROS 2 documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../Tutorials.html">教程 [待校准&#64;6242]</a> &raquo;</li>
+      <li>记录和回放数据 [待校准&#64;7639]</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/ros2/ros2_documentation/blob/foxy/source/Tutorials/Ros2bag/Recording-And-Playing-Back-Data.rst" class="fa fa-github"> 在 GitHub 上修改</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+
+
+  <div class="section" id="recording-and-playing-back-data">
+<span id="ros2bag"></span><h1>记录和回放数据 <a class="reference external" href="http://localhost:3000/#/home?msgid=7639">[待校准&#64;7639]</a><a class="headerlink" href="#recording-and-playing-back-data" title="永久链接至标题"></a></h1>
+<p>Goal目标: Record记录发布在某个话题上的数据，以便您可以随时重播和检查它。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7640">[待校准&#64;7640]</a></p>
+<p>Tutorial教程级别: Beginner初学者 <a class="reference external" href="http://localhost:3000/#/home?msgid=6648">[待校准&#64;6648]</a></p>
+<p>Time时间: 10 10分钟 <a class="reference external" href="http://localhost:3000/#/home?msgid=7012">[待校准&#64;7012]</a></p>
+<div class="contents local topic" id="contents">
+<p class="topic-title">内容 <a class="reference external" href="http://localhost:3000/#/home?msgid=6275">[待校准&#64;6275]</a></p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#background" id="id1">背景 [待校准&#64;6276]</a></p></li>
+<li><p><a class="reference internal" href="#prerequisites" id="id2">先决条件 [待校准&#64;6278]</a></p></li>
+<li><p><a class="reference internal" href="#tasks" id="id3">任务 [待校准&#64;6285]</a></p>
+<ul>
+<li><p><a class="reference internal" href="#setup" id="id4">1设置 [待校准&#64;7127]</a></p></li>
+<li><p><a class="reference internal" href="#choose-a-topic" id="id5">2选择一个话题 [待校准&#64;7648]</a></p></li>
+<li><p><a class="reference internal" href="#ros2-bag-record" id="id6">3 ros2包记录 [待校准&#64;7654]</a></p></li>
+<li><p><a class="reference internal" href="#ros2-bag-info" id="id7">4 ros2包信息 [待校准&#64;7669]</a></p></li>
+<li><p><a class="reference internal" href="#ros2-bag-play" id="id8">5 ros2包游戏 [待校准&#64;7673]</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#summary" id="id9">总结 [待校准&#64;6307]</a></p></li>
+<li><p><a class="reference internal" href="#next-steps" id="id10">下一步 [待校准&#64;6309]</a></p></li>
+<li><p><a class="reference internal" href="#related-content" id="id11">相关内容 [待校准&#64;6311]</a></p></li>
+</ul>
+</div>
+<div class="section" id="background">
+<h2>背景 <a class="reference external" href="http://localhost:3000/#/home?msgid=6276">[待校准&#64;6276]</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
+<p>[需手动修复的语法]``ros2 bag`` is是一个命令行工具，用于记录系统中发布的关于话题的数据。它累积传递给任意数量话题的数据，并将其保存在数据库中。然后，您可以重放数据以重现测试和实验的结果。记录话题也是分享你的作品并允许其他人重新创作的好方法。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7641">[待校准&#64;7641]</a></p>
+</div>
+<div class="section" id="prerequisites">
+<h2>先决条件 <a class="reference external" href="http://localhost:3000/#/home?msgid=6278">[待校准&#64;6278]</a><a class="headerlink" href="#prerequisites" title="永久链接至标题"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>对于需要更高性能版本的rosbag2的ROS 2Foxy用户，请参阅 <a class="reference external" href="https://github.com/ros2/rosbag2/tree/foxy-future">foxy-future branch of rosbag2</a> 。这是一个官方支持的分支，更接近Galactic版本，增加了性能改进和特性，但与Foxy版本不兼容。用户刚刚进入这个教程Foxy，你可以忽略这继续默认安装。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7642">[待校准&#64;7642]</a></p>
+</div>
+<p>您应该安装 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">bag</span></code> 作为常规ROS 2设置的一部分。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7643">[待校准&#64;7643]</a></p>
+<p>如果您是从Linux上的Debians安装的，并且您的系统无法识别该命令，请像这样安装它: <a class="reference external" href="http://localhost:3000/#/home?msgid=7644">[待校准&#64;7644]</a></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sudo apt-get install ros-foxy-ros2bag \</span>
+<span class="go">                     ros-foxy-rosbag2-converter-default-plugins \</span>
+<span class="go">                     ros-foxy-rosbag2-storage-default-plugins</span>
+</pre></div>
+</div>
+<p>本教程讨论了前面教程中涵盖的概念，如 <a class="reference internal" href="../Understanding-ROS2-Nodes.html"><span class="doc">nodes</span></a> 和 <a class="reference internal" href="../Topics/Understanding-ROS2-Topics.html"><span class="doc">topics</span></a>. It also uses the <a class="reference internal" href="../Turtlesim/Introducing-Turtlesim.html"><span class="doc">turtlesim package</span></a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7645">[待校准&#64;7645]</a></p>
+<p>和往常一样，不要忘记在 <a class="reference internal" href="../Configuring-ROS2-Environment.html"><span class="doc">every new terminal you open</span></a> 中源文件ROS 2。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7126">[待校准&#64;7126]</a></p>
+</div>
+<div class="section" id="tasks">
+<h2>任务 <a class="reference external" href="http://localhost:3000/#/home?msgid=6285">[待校准&#64;6285]</a><a class="headerlink" href="#tasks" title="永久链接至标题"></a></h2>
+<div class="section" id="setup">
+<h3>1设置 <a class="reference external" href="http://localhost:3000/#/home?msgid=7127">[待校准&#64;7127]</a><a class="headerlink" href="#setup" title="永久链接至标题"></a></h3>
+<p>您将在 <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> 系统中记录您的键盘输入，以便以后保存和重放，所以从启动 <code class="docutils literal notranslate"><span class="pre">/turtlesim</span></code> 和 <code class="docutils literal notranslate"><span class="pre">/teleop_turtle</span></code> 节点开始。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7646">[待校准&#64;7646]</a></p>
+<p>打开新终端并运行: <a class="reference external" href="http://localhost:3000/#/home?msgid=6899">[待校准&#64;6899]</a></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run turtlesim turtlesim_node</span>
+</pre></div>
+</div>
+<p>打开另一个终端并运行: <a class="reference external" href="http://localhost:3000/#/home?msgid=7376">[待校准&#64;7376]</a></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run turtlesim turtle_teleop_key</span>
+</pre></div>
+</div>
+<p>让我们也创建一个新目录来存储我们保存的录音，就像好的做法一样: <a class="reference external" href="http://localhost:3000/#/home?msgid=7647">[待校准&#64;7647]</a></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">mkdir bag_files</span>
+<span class="go">cd bag_files</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="choose-a-topic">
+<h3>2选择一个话题 <a class="reference external" href="http://localhost:3000/#/home?msgid=7648">[待校准&#64;7648]</a><a class="headerlink" href="#choose-a-topic" title="永久链接至标题"></a></h3>
+<p>[需手动修复的语法]``ros2 bag`` can只记录发表的话题的数据。要查看系统话题列表，请打开新终端并运行以下命令: <a class="reference external" href="http://localhost:3000/#/home?msgid=7649">[待校准&#64;7649]</a></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 topic list</span>
+</pre></div>
+</div>
+<p>它将返回: <a class="reference external" href="http://localhost:3000/#/home?msgid=7650">[待校准&#64;7650]</a></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">/parameter_events</span>
+<span class="go">/rosout</span>
+<span class="go">/turtle1/cmd_vel</span>
+<span class="go">/turtle1/color_sensor</span>
+<span class="go">/turtle1/pose</span>
+</pre></div>
+</div>
+<p>在话题教程中，你了解到 <code class="docutils literal notranslate"><span class="pre">/turtle_teleop</span></code> 节点在 <code class="docutils literal notranslate"><span class="pre">/turtle1/cmd_vel</span></code> 话题上发布命令，让海龟在turtlesim中移动。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7651">[待校准&#64;7651]</a></p>
+<p>要查看 <code class="docutils literal notranslate"><span class="pre">/turtle1/cmd_vel</span></code> 发布的数据，请运行以下命令: <a class="reference external" href="http://localhost:3000/#/home?msgid=7652">[待校准&#64;7652]</a></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 topic echo /turtle1/cmd_vel</span>
+</pre></div>
+</div>
+<p>起初什么都不会出现，因为teleop没有发布任何数据。返回运行teleop的终端并选择它，使其处于活动状态。使用箭头键移动海龟，你会看到运行 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">topic</span> <span class="pre">echo</span></code> 的终端上发布的数据。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7653">[待校准&#64;7653]</a></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">linear:</span>
+<span class="go">  x: 2.0</span>
+<span class="go">  y: 0.0</span>
+<span class="go">  z: 0.0</span>
+<span class="go">angular:</span>
+<span class="go">  x: 0.0</span>
+<span class="go">  y: 0.0</span>
+<span class="go">  z: 0.0</span>
+<span class="go">  ---</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="ros2-bag-record">
+<h3>3 ros2包记录 <a class="reference external" href="http://localhost:3000/#/home?msgid=7654">[待校准&#64;7654]</a><a class="headerlink" href="#ros2-bag-record" title="永久链接至标题"></a></h3>
+<p>要记录发布到话题的数据，请使用命令语法: <a class="reference external" href="http://localhost:3000/#/home?msgid=7655">[待校准&#64;7655]</a></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 bag record &lt;topic_name&gt;</span>
+</pre></div>
+</div>
+<p>在您选择的话题上运行此命令之前，请打开一个新终端并移动到您之前创建的 <code class="docutils literal notranslate"><span class="pre">bag_files</span></code> 目录中，因为rosbag文件将保存在您运行它的目录中。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7656">[待校准&#64;7656]</a></p>
+<p>运行命令: <a class="reference external" href="http://localhost:3000/#/home?msgid=7156">[待校准&#64;7156]</a></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 bag record /turtle1/cmd_vel</span>
+</pre></div>
+</div>
+<p>您将在终端中看到以下消息 (日期和时间将有所不同): <a class="reference external" href="http://localhost:3000/#/home?msgid=7657">[待校准&#64;7657]</a></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">[INFO] [rosbag2_storage]: Opened database &#39;rosbag2_2019_10_11-05_18_45&#39;.</span>
+<span class="go">[INFO] [rosbag2_transport]: Listening for topics...</span>
+<span class="go">[INFO] [rosbag2_transport]: Subscribed to topic &#39;/turtle1/cmd_vel&#39;</span>
+<span class="go">[INFO] [rosbag2_transport]: All requested topics are subscribed. Stopping discovery...</span>
+</pre></div>
+</div>
+<p>现在 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">bag</span></code> 正在记录公布的关于 <code class="docutils literal notranslate"><span class="pre">/turtle1/cmd_vel</span></code> 话题的数据。回到远程终端，再次移动海龟。这些动作并不重要，但是当你以后重放数据时，试着做一个可识别的模式来看看。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7658">[待校准&#64;7658]</a></p>
+<img alt="../../_images/record.png" src="../../_images/record.png" />
+<p>按 “ctrl + c” 停止录制。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7659">[待校准&#64;7659]</a></p>
+<p>数据将被累积在一个袋子文件中，名称为 <code class="docutils literal notranslate"><span class="pre">rosbag2_year_month_day-hour_minute_second</span></code>  <a class="reference external" href="http://localhost:3000/#/home?msgid=7660">[待校准&#64;7660]</a></p>
+<div class="section" id="record-multiple-topics">
+<h4>3.1记录多个话题 <a class="reference external" href="http://localhost:3000/#/home?msgid=7661">[待校准&#64;7661]</a><a class="headerlink" href="#record-multiple-topics" title="永久链接至标题"></a></h4>
+<p>您还可以记录多个话题，以及更改 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">bag</span></code> 保存到的文件的名称。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7662">[待校准&#64;7662]</a></p>
+<p>运行以下命令: <a class="reference external" href="http://localhost:3000/#/home?msgid=7663">[待校准&#64;7663]</a></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 bag record -o subset /turtle1/cmd_vel /turtle1/pose</span>
+</pre></div>
+</div>
+<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">-o</span></code> 选项允许您为您的包文件选择一个唯一的名称。以下string，在这种情况下是 <code class="docutils literal notranslate"><span class="pre">subset</span></code> ，是文件名。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7664">[待校准&#64;7664]</a></p>
+<p>要一次记录多个话题，只需列出用空格分隔的每个话题。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7665">[待校准&#64;7665]</a></p>
+<p>你将看到以下信息，确认两个话题都被记录了。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7666">[待校准&#64;7666]</a></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">[INFO] [rosbag2_storage]: Opened database &#39;subset&#39;.</span>
+<span class="go">[INFO] [rosbag2_transport]: Listening for topics...</span>
+<span class="go">[INFO] [rosbag2_transport]: Subscribed to topic &#39;/turtle1/cmd_vel&#39;</span>
+<span class="go">[INFO] [rosbag2_transport]: Subscribed to topic &#39;/turtle1/pose&#39;</span>
+<span class="go">[INFO] [rosbag2_transport]: All requested topics are subscribed. Stopping discovery...</span>
+</pre></div>
+</div>
+<p>你可以移动乌龟，完成后按 “ctrl + c”。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7667">[待校准&#64;7667]</a></p>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>还有一个选项，你可以添加到命令， <code class="docutils literal notranslate"><span class="pre">-a</span></code> ，它记录你系统上的所有话题。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7668">[待校准&#64;7668]</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="ros2-bag-info">
+<h3>4 ros2包信息 <a class="reference external" href="http://localhost:3000/#/home?msgid=7669">[待校准&#64;7669]</a><a class="headerlink" href="#ros2-bag-info" title="永久链接至标题"></a></h3>
+<p>您可以通过运行以下命令查看有关录制的详细信息: <a class="reference external" href="http://localhost:3000/#/home?msgid=7670">[待校准&#64;7670]</a></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 bag info &lt;bag_file_name&gt;</span>
+</pre></div>
+</div>
+<p>在 <code class="docutils literal notranslate"><span class="pre">subset</span></code> 袋文件上运行此命令将返回该文件的信息列表: <a class="reference external" href="http://localhost:3000/#/home?msgid=7671">[待校准&#64;7671]</a></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 bag info subset</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Files:             subset.db3</span>
+<span class="go">Bag size:          228.5 KiB</span>
+<span class="go">Storage id:        sqlite3</span>
+<span class="go">Duration:          48.47s</span>
+<span class="go">Start:             Oct 11 2019 06:09:09.12 (1570799349.12)</span>
+<span class="go">End                Oct 11 2019 06:09:57.60 (1570799397.60)</span>
+<span class="go">Messages:          3013</span>
+<span class="go">Topic information: Topic: /turtle1/cmd_vel | Type: geometry_msgs/msg/Twist | Count: 9 | Serialization Format: cdr</span>
+<span class="go">                 Topic: /turtle1/pose | Type: turtlesim/msg/Pose | Count: 3004 | Serialization Format: cdr</span>
+</pre></div>
+</div>
+<p>要查看单个消息，您必须打开数据库 (在本例中为sqlite3) 来检查它，这超出了ROS 2的范围。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7672">[待校准&#64;7672]</a></p>
+</div>
+<div class="section" id="ros2-bag-play">
+<h3>5 ros2包游戏 <a class="reference external" href="http://localhost:3000/#/home?msgid=7673">[待校准&#64;7673]</a><a class="headerlink" href="#ros2-bag-play" title="永久链接至标题"></a></h3>
+<p>在重播bag文件之前，在运行teleop的终端中输入 “ctrl + c”。然后确保你的turtlesim窗口是可见的，这样你就可以在动作中看到包文件。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7674">[待校准&#64;7674]</a></p>
+<p>输入命令: <a class="reference external" href="http://localhost:3000/#/home?msgid=7675">[待校准&#64;7675]</a></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 bag play subset</span>
+</pre></div>
+</div>
+<p>终端将返回消息: <a class="reference external" href="http://localhost:3000/#/home?msgid=7676">[待校准&#64;7676]</a></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">[INFO] [rosbag2_storage]: Opened database &#39;subset&#39;.</span>
+</pre></div>
+</div>
+<p>你的海龟将遵循你在录制时输入的相同路径 (虽然不完全是100%; 海龟对系统时间的微小变化很敏感)。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7677">[待校准&#64;7677]</a></p>
+<img alt="../../_images/playback.png" src="../../_images/playback.png" />
+<p>因为 <code class="docutils literal notranslate"><span class="pre">subset</span></code> 文件记录了 <code class="docutils literal notranslate"><span class="pre">/turtle1/pose</span></code> 话题，所以即使你不动，只要你让turtlesim运行， <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">bag</span> <span class="pre">play</span></code> 命令也不会退出。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7678">[待校准&#64;7678]</a></p>
+<p>这是因为只要 <code class="docutils literal notranslate"><span class="pre">/turtlesim</span></code> 节点有源，发布数据 <code class="docutils literal notranslate"><span class="pre">/turtle1/pose</span></code> 话题定期。你可能已经注意到在 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">bag</span> <span class="pre">info</span></code> 示例结果， <code class="docutils literal notranslate"><span class="pre">/turtle1/cmd_vel</span></code> 话题的 <code class="docutils literal notranslate"><span class="pre">Count</span></code> 信息9; 这是多少次我们按下箭头键录制。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7679">[待校准&#64;7679]</a></p>
+<p>请注意， <code class="docutils literal notranslate"><span class="pre">/turtle1/pose</span></code> 的 <code class="docutils literal notranslate"><span class="pre">Count</span></code> 值超过3000; 当我们记录时，关于这个话题的数据被发表了3000次。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7680">[待校准&#64;7680]</a></p>
+<p>要了解发布位置数据的频率，可以运行以下命令: <a class="reference external" href="http://localhost:3000/#/home?msgid=7681">[待校准&#64;7681]</a></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 topic hz /turtle1/pose</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="summary">
+<h2>总结 <a class="reference external" href="http://localhost:3000/#/home?msgid=6307">[待校准&#64;6307]</a><a class="headerlink" href="#summary" title="永久链接至标题"></a></h2>
+<p>您可以使用 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">bag</span></code> 命令记录ROS 2系统中话题传递的数据。无论你是和别人分享你的作品还是反思你自己的实验，它都是一个很好的了解工具。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7682">[待校准&#64;7682]</a></p>
+</div>
+<div class="section" id="next-steps">
+<h2>下一步 <a class="reference external" href="http://localhost:3000/#/home?msgid=6309">[待校准&#64;6309]</a><a class="headerlink" href="#next-steps" title="永久链接至标题"></a></h2>
+<p>你已经完成了  &quot;Beginner: CLI Tools&quot; 教程!下一步是处理  &quot;Beginner: Client Libraries&quot; 教程，从 <a class="reference internal" href="../Workspace/Creating-A-Workspace.html"><span class="doc">创建工作空间 [待校准&#64;8836]</span></a> 开始。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7683">[待校准&#64;7683]</a></p>
+</div>
+<div class="section" id="related-content">
+<h2>相关内容 <a class="reference external" href="http://localhost:3000/#/home?msgid=6311">[待校准&#64;6311]</a><a class="headerlink" href="#related-content" title="永久链接至标题"></a></h2>
+<p>关于 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">bag</span></code> 的更详尽的解释可以在自述文件中找到 <a class="reference external" href="https://github.com/ros2/rosbag2">here</a> 。有关QoS兼容性和 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">bag</span></code> 的更多信息，请参阅: doc:'/操作指南/重载QoS记录和播放策略'。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7684">[待校准&#64;7684]</a></p>
+</div>
+</div>
+
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../Launch/CLI-Intro.html" class="btn btn-neutral float-left" title="介绍ROS 2launch [待校准@7101]" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="../Workspace/Creating-A-Workspace.html" class="btn btn-neutral float-right" title="创建工作空间 [待校准@8836]" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2022, Open Robotics.</p>
+  </div>
+
+  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-17821189-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-17821189-2', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

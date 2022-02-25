@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>项目管理 [待校准@10131] &mdash; ROS 2 documentation  文档</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="_static/tabs.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.ros.org/en/Governance.html" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/clipboard.min.js"></script>
+        <script src="_static/copybutton.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="ROS 2技术指导委员会章程 [待校准@10280]" href="Governance/ROS2-TSC-Charter.html" />
+    <link rel="prev" title="特色创意 [待校准@1123]" href="Feature-Ideas.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> ROS 2 documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Installation.html">安装 [待校准&#64;5690]</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Installation/Ubuntu-Development-Setup.html">在Ubuntu Linux上构建ROS 2 [待校准&#64;5886]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Installation/Ubuntu-Install-Binary.html">在Ubuntu Linux上安装ROS 2 [待校准&#64;5937]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Installation/Ubuntu-Install-Debians.html">通过Debian包安装ROS 2 [待校准&#64;5959]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Installation/macOS-Development-Setup.html">在macOS上构建ROS 2 [待校准&#64;6117]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Installation/macOS-Install-Binary.html">在macOS上安装ROS 2 [待校准&#64;6148]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Installation/Windows-Development-Setup.html">在Windows上构建ROS 2 [待校准&#64;5973]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Installation/Windows-Install-Binary.html">在Windows上安装ROS 2 [待校准&#64;6050]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Installation/Fedora-Development-Setup.html">在Fedora Linux上构建ROS 2 [待校准&#64;5836]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Installation/Latest-Development-Setup.html">安装最新的ROS 2开发版本 [待校准&#64;5840]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Installation/Maintaining-a-Source-Checkout.html">主源文件检出ROS 2Foxy [待校准&#64;5850]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Installation/Testing.html">用于测试的替代安装源 [待校准&#64;5873]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Installation/DDS-Implementations.html">安装DDS实现 [待校准&#64;5717]</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Installation/DDS-Implementations/Install-Connext-Security-Plugins.html">安装Connext安全插件 [待校准&#64;5768]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Installation/DDS-Implementations/Install-Connext-University-Eval.html">安装大学或RTI Connext DDS的评估版本 [待校准&#64;5782]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Installation/DDS-Implementations/Working-with-Eclipse-CycloneDDS.html">使用EclipseCycloneDDS [待校准&#64;5796]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Installation/DDS-Implementations/Working-with-GurumNetworks-GurumDDS.html">与GurumNetworks GurumDDS合作 [待校准&#64;5812]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Installation/DDS-Implementations/Working-with-eProsima-Fast-DDS.html">与eProsimaFast DDS合作 [待校准&#64;5829]</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Docs-Guide.html">文档指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tutorials.html">教程 [待校准&#64;6242]</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Tutorials/Configuring-ROS2-Environment.html">配置ROS 2环境 [待校准&#64;6646]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tutorials/Turtlesim/Introducing-Turtlesim.html">介绍turtlesim和rqt [待校准&#64;8428]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tutorials/Understanding-ROS2-Nodes.html">了解ROS 2节点 [待校准&#64;8733]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tutorials/Topics/Understanding-ROS2-Topics.html">理解ROS 2话题 [待校准&#64;8368]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tutorials/Services/Understanding-ROS2-Services.html">了解ROS 2服务 [待校准&#64;7742]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tutorials/Parameters/Understanding-ROS2-Parameters.html">理解ROS 2参数 [待校准&#64;7371]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tutorials/Understanding-ROS2-Actions.html">理解ROS 2动作 [待校准&#64;8684]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tutorials/Rqt-Console/Using-Rqt-Console.html">使用rqt_控制台 [待校准&#64;7712]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tutorials/Launch/CLI-Intro.html">介绍ROS 2launch [待校准&#64;7101]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tutorials/Ros2bag/Recording-And-Playing-Back-Data.html">记录和回放数据 [待校准&#64;7639]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tutorials/Workspace/Creating-A-Workspace.html">创建工作空间 [待校准&#64;8836]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tutorials/Creating-Your-First-ROS2-Package.html">创建您的第一个ROS 2包 [待校准&#64;6677]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tutorials/Writing-A-Simple-Cpp-Publisher-And-Subscriber.html">编写简单的发布者和订阅者 (c ++) [待校准&#64;8905]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tutorials/Writing-A-Simple-Py-Publisher-And-Subscriber.html">编写简单的发布者和订阅者 (Python) [待校准&#64;8992]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tutorials/Writing-A-Simple-Cpp-Service-And-Client.html">编写简单的服务和客户端 (c ++) [待校准&#64;8953]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tutorials/Writing-A-Simple-Py-Service-And-Client.html">编写简单的服务和客户端 (Python) [待校准&#64;9028]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tutorials/Custom-ROS2-Interfaces.html">创建自定义ROS 2 msg 和 srv 文件 [待校准&#64;6739]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tutorials/Single-Package-Define-And-Use-Interface.html">在ROS 2接口上扩展 [待校准&#64;7844]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tutorials/Using-Parameters-In-A-Class-CPP.html">在类 (c ++) 中使用参数 [待校准&#64;8769]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tutorials/Using-Parameters-In-A-Class-Python.html">在类中使用参数 (Python) [待校准&#64;8809]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tutorials/Getting-Started-With-Ros2doctor.html">开始使用ros2doctor [待校准&#64;7010]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tutorials/Pluginlib.html">创建和使用插件 (c ++) [待校准&#64;7411]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tutorials/Actions/Creating-an-Action.html">创建动作 [待校准&#64;6271]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tutorials/Actions/Writing-a-Cpp-Action-Server-Client.html">编写动作服务器和客户端 (c ++) [待校准&#64;6313]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tutorials/Actions/Writing-a-Py-Action-Server-Client.html">编写动作服务器和客户端 (Python) [待校准&#64;6385]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tutorials/Composition.html">在单个进程中组成多个节点 [待校准&#64;6594]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tutorials/Colcon-Tutorial.html">使用colcon构建包 [待校准&#64;6535]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tutorials/Launch/Launch-Main.html">Launch教程 [待校准&#64;7160]</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Tutorials/Launch/Creating-Launch-Files.html">创建launch文件 [待校准&#64;7122]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tutorials/Launch/Launch-system.html">[需手动修复的语法]Launch/监控多节点[需手动修复的语法]Launch [待校准&#64;7174]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tutorials/Launch/Using-Substitutions.html">在launch文件中使用替换 [待校准&#64;7297]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tutorials/Launch/Using-Event-Handlers.html">在launch文件中使用事件处理程序 [待校准&#64;7201]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tutorials/Launch/Using-ROS2-Launch-For-Large-Projects.html">在大型项目中使用ROS 2launch [待校准&#64;7234]</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Tutorials/Tf2/Tf2-Main.html">tf2教程 [待校准&#64;8078]</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Tutorials/Tf2/Introduction-To-Tf2.html">tf2简介 [待校准&#64;7994]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tutorials/Tf2/Writing-A-Tf2-Static-Broadcaster-Py.html">编写tf2静态广播器 (Python) [待校准&#64;8299]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tutorials/Tf2/Writing-A-Tf2-Static-Broadcaster-Cpp.html">编写tf2静态广播器 (c ++) [待校准&#64;8257]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tutorials/Tf2/Writing-A-Tf2-Broadcaster-Py.html">编写tf2广播器 (Python) [待校准&#64;8220]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tutorials/Tf2/Writing-A-Tf2-Broadcaster-Cpp.html">编写tf2广播器 (c ++) [待校准&#64;8181]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tutorials/Tf2/Writing-A-Tf2-Listener-Py.html">编写tf2监听程序 (Python) [待校准&#64;8251]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tutorials/Tf2/Writing-A-Tf2-Listener-Cpp.html">编写tf2监听程序 (c ++) [待校准&#64;8233]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tutorials/Tf2/Adding-A-Frame-Py.html">添加帧 (Python) [待校准&#64;7950]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tutorials/Tf2/Adding-A-Frame-Cpp.html">添加帧 (c ++) [待校准&#64;7914]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tutorials/Tf2/Learning-About-Tf2-And-Time-Py.html">学习tf2和时间 (Python) [待校准&#64;8040]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tutorials/Tf2/Learning-About-Tf2-And-Time-Cpp.html">学习tf2和时间 (c ++) [待校准&#64;8023]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tutorials/Tf2/Time-Travel-With-Tf2-Py.html">时间穿梭tf2 (Python) [待校准&#64;8130]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tutorials/Tf2/Time-Travel-With-Tf2-Cpp.html">时间穿梭带tf2 (C++) [待校准&#64;8105]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tutorials/Tf2/Debugging-Tf2-Problems.html">调试tf2问题 [待校准&#64;7956]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tutorials/Tf2/Quaternion-Fundamentals.html">四元数基金amentals [待校准&#64;8054]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tutorials/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.html">使用stamped数据类型与tf2_ros: MessageFilter [待校准&#64;8138]</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Tutorials/URDF/URDF-Main.html">URDF教程 [待校准&#64;8607]</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Tutorials/URDF/Building-a-Visual-Robot-Model-with-URDF-from-Scratch.html">从头开始用URDF构建视觉机器人模型 [待校准&#64;8556]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tutorials/URDF/Building-a-Movable-Robot-Model-with-URDF.html">用URDF建立可移动机器人模型 [待校准&#64;8534]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tutorials/URDF/Adding-Physical-and-Collision-Properties-to-a-URDF-Model.html">向URDF模型添加物理和碰撞属性 [待校准&#64;8487]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tutorials/URDF/Using-Xacro-to-Clean-Up-a-URDF-File.html">使用Xacro清理URDF文件 [待校准&#64;8635]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tutorials/URDF/Using-URDF-with-Robot-State-Publisher.html">将URDF与robot_state_发布者结合使用 [待校准&#64;8609]</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Tutorials/Topics/Topic-Statistics-Tutorial.html">ROS 2话题统计教程 (c ++) [待校准&#64;8311]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tutorials/Discovery-Server/Discovery-Server.html">使用Fast DDS Discovery Server作为发现协议 [社区贡献] [待校准&#64;6879]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tutorials/Allocator-Template-Tutorial.html">实现自定义内存分配器 [待校准&#64;6445]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tutorials/Simulators/Webots/Setting-up-a-Robot-Simulation-Webots.html">设置机器人仿真 (Webots) [待校准&#64;7782]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tutorials/Deploying-ROS-2-on-IBM-Cloud.html">IBM Cloud Kubernetes上的ROS2 [社区-贡献] [待校准&#64;6792]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tutorials/Eclipse-Oxygen-with-ROS-2-and-rviz2.html">带有ROS 2和rviz2的Eclipse Oxygen [社区贡献] [待校准&#64;6947]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tutorials/Building-Realtime-rt_preempt-kernel-for-ROS-2.html">为ROS 2构建实时Linux [社区-贡献] [待校准&#64;6514]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tutorials/Ros2bag/Recording-A-Bag-From-Your-Own-Node.html">从您自己的节点记录一个包 [待校准&#64;7554]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tutorials/Building-ROS2-Package-with-eclipse-2021-06.html">使用eclipse 2021-06构建ROS 2包 [待校准&#64;6486]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tutorials/Quality-of-Service.html">使用服务质量设置处理有损网络 [待校准&#64;7462]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tutorials/Managed-Nodes.html">具有托管生命周期的节点管理 [待校准&#64;7369]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tutorials/Intra-Process-Communication.html">高效的流程内通讯 [待校准&#64;7051]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tutorials/Rosbag-with-ROS1-Bridge.html">使用ROS 1bridge用rosbag记录和回放话题数据 [待校准&#64;7685]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tutorials/Real-Time-Programming.html">ROS 2中的实时编程 [待校准&#64;7491]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tutorials/dummy-robot-demo.html">尝试dummy robot例程 [待校准&#64;9056]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tutorials/Logging-and-logger-configuration.html">日志和日志记录器配置例程 [待校准&#64;7322]</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="How-To-Guides.html">操作指南 [待校准&#64;204]</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="How-To-Guides/Installation-Troubleshooting.html">安装故障诊断工具 [待校准&#64;535]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="How-To-Guides/Developing-a-ROS-2-Package.html">开发ROS 2包 [待校准&#64;514]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="How-To-Guides/Ament-CMake-Documentation.html">[需手动修复的语法]ament _ cmake用户文档 [待校准&#64;208]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="How-To-Guides/Ament-CMake-Python-Documentation.html">[需手动修复的语法]ament _ cmake_python用户文档 [待校准&#64;360]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="How-To-Guides/Launch-files-migration-guide.html">迁移launch文件ROS 1ROS 2 [待校准&#64;638]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="How-To-Guides/Launch-file-different-formats.html">对ROS 2Launch文件使用Python、XML和YAML [待校准&#64;611]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="How-To-Guides/Launching-composable-nodes.html">使用ROS 2launch到launch可组合节点 [待校准&#64;733]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="How-To-Guides/Parameters-YAML-files-migration-guide.html">将YAML参数文件从ROS 1迁移到ROS 2 [待校准&#64;850]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="How-To-Guides/Node-arguments.html">通过命令行将ROS参数传递给节点 [待校准&#64;746]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="How-To-Guides/Sync-Vs-Async.html">同步与异步服务客户端 [待校准&#64;972]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="How-To-Guides/DDS-tuning.html">DDS调谐信息 [待校准&#64;470]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="How-To-Guides/Overriding-QoS-Policies-For-Recording-And-Playback.html">rosbag2: 重载QoS策略 [待校准&#64;772]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="How-To-Guides/Working-with-multiple-RMW-implementations.html">使用多个ROS 2中间件实现 [待校准&#64;1068]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="How-To-Guides/Cross-compilation.html">交叉编译 [待校准&#64;383]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="How-To-Guides/Releasing-a-ROS-2-package-with-bloom.html">发布带有bloom的ROS 2包 [待校准&#64;937]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="How-To-Guides/Using-Python-Packages.html">将Python包与ROS 2结合使用 [待校准&#64;1011]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="How-To-Guides/RQt-Port-Plugin-Windows.html">将RQt插件移植到Windows [待校准&#64;862]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="How-To-Guides/Run-2-nodes-in-single-or-separate-docker-containers.html">在Docker中运行ROS 2节点 [社区-贡献] [待校准&#64;959]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="How-To-Guides/Package-maintainer-guide.html">ROS 2包维护者指南 [待校准&#64;785]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="How-To-Guides/Building-a-Custom-Debian-Package.html">构建自定义Debian包 [待校准&#64;371]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="How-To-Guides/Topics-Services-Actions.html">话题vs服务vsAction [待校准&#64;997]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="How-To-Guides/Using-Variants.html">使用变体 [待校准&#64;1031]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="How-To-Guides/Using-ros2-param.html">使用 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span></code> 命令行工具 [待校准&#64;1046]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="How-To-Guides/RQt-Source-Install.html">从源文件构建RQt [待校准&#64;883]</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="How-To-Guides/RQt-Source-Install-MacOS.html">在macOS上从源文件构建RQt [待校准&#64;908]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="How-To-Guides/RQt-Source-Install-Windows10.html">在Windows 10上从源文件构建RQt [待校准&#64;916]</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Concepts.html">概念 [待校准&#64;4938]</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Concepts/About-Domain-ID.html">ROS_DOMAIN_ID [待校准&#64;5194]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Concepts/About-Different-Middleware-Vendors.html">关于不同的ROS 2 DDS/RTPS供应商 [待校准&#64;5153]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Concepts/About-Logging.html">关于日志和日志记录器配置 [待校准&#64;5325]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Concepts/About-Quality-of-Service-Settings.html">关于服务质量设置 [待校准&#64;5369]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Concepts/About-ROS-2-Client-Libraries.html">关于ROS 2客户端库 [待校准&#64;5459]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Concepts/About-ROS-Interfaces.html">关于ROS 2接口 [待校准&#64;5526]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Concepts/About-ROS-2-Parameters.html">关于ROS 2中的参数 [待校准&#64;5490]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Concepts/About-Executors.html">执行器 [待校准&#64;5227]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Concepts/About-Topic-Statistics.html">关于话题统计 [待校准&#64;5671]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Concepts/About-Command-Line-Tools.html">使用命令行工具进行自检 [待校准&#64;5091]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Concepts/About-RQt.html">RQt的概述和使用 [待校准&#64;5625]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Concepts/About-Composition.html">关于组件 [待校准&#64;5119]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Concepts/About-Catment.html">[需手动修复的语法]ament和catkin的混合研究 [待校准&#64;5019]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Concepts/About-Cross-Compilation.html">关于交叉编译 [待校准&#64;5141]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Concepts/About-Tf2.html">关于tf2 [待校准&#64;5653]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Concepts/About-Build-System.html">关于构建系统 [待校准&#64;4969]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Concepts/About-Internal-Interfaces.html">关于内部ROS 2接口 [待校准&#64;5265]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Concepts/About-Middleware-Implementations.html">关于ROS 2中间件实现 [待校准&#64;5347]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Concepts/About-Client-Interfaces.html">ROS 2客户端接口 (客户端库) [待校准&#64;5079]</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Contributing.html">贡献 [待校准&#64;9128]</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Contributing/Developer-Guide.html">ROS 2开发人员指南 [待校准&#64;9430]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Contributing/Code-Style-Language-Versions.html">代码样式和语言版本 [待校准&#64;9212]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Contributing/Quality-Guide.html">质量指南: 确保代码质量 [待校准&#64;10012]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Contributing/Migration-Guide.html">从ROS 1迁移指南 [待校准&#64;9780]</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Contributing/Migration-Guide-Python.html">来自ROS 1的Python迁移指南 [待校准&#64;10003]</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Contributing/Build-Farms.html">ROS Build Farms [待校准&#64;9167]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Contributing/Windows-Tips-and-Tricks.html">Windows提示和技巧 [待校准&#64;10105]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Contributing/Contributing-To-ROS-2-Documentation.html">为ROS 2文档做出贡献 [待校准&#64;9366]</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Contact.html">联系人 [待校准&#64;6167]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ROSCon-Content.html">ROSCon内容 [待校准&#64;105]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Releases.html">发行版 [待校准&#64;1233]</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Releases/Alpha-Overview.html">ROS 2 α 发行版本 (2015年8月-2016年10月) [待校准&#64;1306]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Releases/Beta1-Overview.html">贝塔1 (代号'Asphalt'; 2016年12月) [待校准&#64;1386]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Releases/Beta2-Overview.html">贝塔2 (代号'r2b2'; 2017年7月) [待校准&#64;1420]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Releases/Beta3-Overview.html">贝塔3 (代号'r2b3'; 2017年9月) [待校准&#64;1451]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Releases/Release-Ardent-Apalone.html">ROS 2Ardent阿帕隆 (代号'ardent'; 2017年12月) [待校准&#64;4089]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Releases/Release-Bouncy-Bolson.html">ROS 2 Bouncy Bolson (代号'bouncy'; 2018年6月) [待校准&#64;4130]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Releases/Release-Crystal-Clemmys.html">ROS 2Crystal Clemmys (代号'crystal'; 2018年12月) [待校准&#64;4158]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Releases/Release-Dashing-Diademata.html">ROS 2DashingDiademata (代号'dashing'; 2019年5月31日) [待校准&#64;4237]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Releases/Release-Eloquent-Elusor.html">ROS 2EloquentElusor (代号'eloquent'; 2019年11月22日) [待校准&#64;4427]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Releases/Release-Foxy-Fitzroy.html">ROS 2FoxyFitzroy (代号'foxy'; 2020年6月5日) [待校准&#64;4503]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Releases/Release-Galactic-Geochelone.html">ROS 2GalacticGeochelone (代号'galactic'; 2021年5月) [待校准&#64;4649]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Releases/Galactic-Geochelone-Complete-Changelog.html">ROS 2GalacticGeochelone完整变更日志 [待校准&#64;1470]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Releases/Release-Humble-Hawksbill.html">ROS 2Humble Hawksbill (代号'humble'; 2022年5月) [待校准&#64;4845]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Releases/Release-Rolling-Ridley.html">ROS 2Rolling Ridley (代号'rolling'; 2020年6月) [待校准&#64;4929]</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Features.html">功能状态 [待校准&#64;9074]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Roadmap.html">路线图 [待校准&#64;45]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Feature-Ideas.html">特色创意 [待校准&#64;1123]</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">项目管理 [待校准&#64;10131]</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Governance/ROS2-TSC-Charter.html">ROS 2技术指导委员会章程 [待校准&#64;10280]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Governance/ROS2-TSC-Intake-process.html">ROS 2 TSC申请人摄入流程 [待校准&#64;10368]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Governance/How-To-Start-A-Community-Working-Group.html">如何成立社区工作组 [待校准&#64;10253]</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Marketing.html">营销材料 [待校准&#64;6193]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Related-Projects.html">相关项目 [待校准&#64;6209]</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Related-Projects/Intel-ROS2-Projects.html">[需手动修复的语法]IntelROS 2项目 [待校准&#64;6210]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Related-Projects/Nvidia-ROS2-Projects.html">[需手动修复的语法]NVIDIAROS 2项目 [待校准&#64;6228]</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Glossary.html">术语表 [待校准&#64;1217]</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ROS 2 documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>项目管理 [待校准&#64;10131]</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/ros2/ros2_documentation/blob/foxy/source/Governance.rst" class="fa fa-github"> 在 GitHub 上修改</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+
+
+  <div class="section" id="project-governance">
+<span id="governance"></span><h1>项目管理 <a class="reference external" href="http://localhost:3000/#/home?msgid=10131">[待校准&#64;10131]</a><a class="headerlink" href="#project-governance" title="永久链接至标题"></a></h1>
+<div class="contents local topic" id="table-of-contents">
+<p class="topic-title">目录 <a class="reference external" href="http://localhost:3000/#/home?msgid=10132">[待校准&#64;10132]</a></p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#technical-steering-committee-tsc" id="id1">技术指导委员会 (TSC) [待校准&#64;10133]</a></p></li>
+<li><p><a class="reference internal" href="#working-groups-wgs" id="id2">工作组 (WGs) [待校准&#64;10160]</a></p></li>
+<li><p><a class="reference internal" href="#community-working-groups" id="id3">社区工作组 [待校准&#64;10238]</a></p></li>
+<li><p><a class="reference internal" href="#upcoming-ros-events" id="id4">即将举行的ROS活动 [待校准&#64;10250]</a></p></li>
+</ul>
+</div>
+<div class="section" id="technical-steering-committee-tsc">
+<h2>技术指导委员会 (TSC) <a class="reference external" href="http://localhost:3000/#/home?msgid=10133">[待校准&#64;10133]</a><a class="headerlink" href="#technical-steering-committee-tsc" title="永久链接至标题"></a></h2>
+<p>自ROS开始以来，该项目主要由一个组织监督和优先处理，第一个柳树车库和现在的开放机器人。这种方法已经足够有效了，世界各地广泛采用ROS就证明了这一点。 <a class="reference external" href="http://localhost:3000/#/home?msgid=10134">[待校准&#64;10134]</a></p>
+<p>但是对于ROS 2，我们希望扩大参与以加快ROS 2的交付，从以下领域开始: 确定路线图，开发核心工具和库，并建立工作组来关注重要话题。为此，我们成立了技术指导委员会 (TSC)。如 <a class="reference internal" href="Governance/ROS2-TSC-Charter.html"><span class="doc">charter</span></a> 所述，TSC由为ROS 2的开发版本做出贡献的组织的代表组成，它有责任为项目设定技术方向。 <a class="reference external" href="http://localhost:3000/#/home?msgid=10135">[待校准&#64;10135]</a></p>
+<p>与ROS 2 TSC相关的包装列在 <a class="reference external" href="https://www.ros.org/reps/rep-2005.html">REP 2005</a> 中。 <a class="reference external" href="http://localhost:3000/#/home?msgid=10136">[待校准&#64;10136]</a></p>
+<p>会议记录可以在 <a class="reference external" href="https://discourse.ros.org/tag/tsc">ROS Discourse</a> 上找到。 <a class="reference external" href="http://localhost:3000/#/home?msgid=10137">[待校准&#64;10137]</a></p>
+<p>ROS 2 TSC的现有成员是 (截至2022-02-01为23个): <a class="reference external" href="http://localhost:3000/#/home?msgid=10138">[待校准&#64;10138]</a></p>
+<!--
+The CSS and HTML below generate the list of TSC members.
+It is currently using raw HTML because there was no way that I could see to make the
+ReStructured Text "list-tables" directive make the logos a consistent size.
+-->
+<style>
+table.tscclass {
+  border: 1px solid #e1e4e5;
+  border-top-color: rgb(225, 228, 229);
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-right-color: rgb(225, 228, 229);
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-bottom-color: rgb(225, 228, 229);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-left-color: rgb(225, 228, 229);
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-image-outset: 0;
+  border-image-repeat: stretch;
+  border-image-slice: 100%;
+  border-image-source: none;
+  border-image-width: 1;
+  width: 100%;
+}
+td.tscclass {
+  border-top-color: rgb(225, 228, 229);
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-right-color: rgb(225, 228, 229);
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-bottom-color: rgb(225, 228, 229);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-left-color: rgb(225, 228, 229);
+  border-left-style: solid;
+  border-left-width: 1px;
+  padding-left: 15px;
+}
+tr.tscclass:nth-child(2n-1) {
+  background-color: #f3f6f6;
+}
+</style>
+<table class="tscclass">
+  <tbody>
+    <tr class="tscclass">
+      <td class="tscclass" align="center"><p><a class="reference internal" href="https://www.adlinktech.com"><img alt="ADLINK Technology logo" src="_images/adlink.png" style="height: 35px;" /></a></p></td>
+      <td class="tscclass" align="center"><p>ADLINK Technology: Angelo Corsaro</p></td>
+    </tr>
+    <tr class="tscclass">
+      <td class="tscclass" align="center"><p><a class="reference internal" href="https://www.amazon.com"><img alt="Amazon logo" src="_images/amazon.svg" style="height: 35px;" /></a></p></td>
+      <td class="tscclass" align="center"><p>Amazon: Aaron Blasdel</p></td>
+    </tr>
+    <tr class="tscclass">
+      <td class="tscclass" align="center"><p><a class="reference internal" href="https://www.apex.ai"><img alt="Apex.AI logo" src="_images/apex.png" style="height: 35px;" /></a></p></td>
+      <td class="tscclass" align="center"><p>Apex.AI: Lyle Johnson</p></td>
+    </tr>
+    <tr class="tscclass">
+      <td class="tscclass" align="center"><p><a class="reference internal" href="https://www.bosch.com"><img alt="Bosch logo" src="_images/bosch_75h.jpg" style="height: 35px;" /></a></p></td>
+      <td class="tscclass" align="center"><p>Bosch: Ralph Lange</p></td>
+    </tr>
+    <tr class="tscclass">
+      <td class="tscclass" align="center"><p><a class="reference internal" href="https://ubuntu.com"><img alt="Ubuntu logo" src="_images/ubuntu.svg" style="height: 35px;" /></a></p></td>
+      <td class="tscclass" align="center"><p>Canonical: Jeremie Deray</p></td>
+    </tr>
+    <tr class="tscclass">
+      <td class="tscclass" align="center"><p><a class="reference internal" href="https://eprosima.com"><img alt="eProsima logo" src="_images/eprosima.svg" style="height: 35px;" /></a></p></td>
+      <td class="tscclass" align="center"><p>eProsima: Jaime Martin Losa</p></td>
+    </tr>
+    <tr class="tscclass">
+      <td class="tscclass" align="center"><p><a class="reference internal" href="https://gvsc.army.mil"><img alt="GVSC logo" src="_images/gvsc.png" style="height: 50px;" /></a></p></td>
+      <td class="tscclass" align="center"><p>GVSC: Jerry Towler (SwRI)</p></td>
+    </tr>
+    <tr class="tscclass">
+      <td class="tscclass" align="center"><p><a class="reference internal" href="https://www.intel.com"><img alt="Intel logo" src="_images/intel.svg" style="height: 50px;" /></a></p></td>
+      <td class="tscclass" align="center"><p>Intel: Harold Yang</p></td>
+    </tr>
+    <tr class="tscclass">
+      <td class="tscclass" align="center"><p><a class="reference internal" href="https://www.irobot.com"><img alt="iRobot logo" src="_images/irobot.png" style="height: 35px;" /></a></p></td>
+      <td class="tscclass" align="center"><p>iRobot: Alberto Soragna</p></td>
+    </tr>
+    <tr class="tscclass">
+      <td class="tscclass" align="center"><p><a class="reference internal" href="https://www.microsoft.com"><img alt="Microsoft logo" src="_images/microsoft.svg" style="height: 35px;" /></a></p></td>
+      <td class="tscclass" align="center"><p>Microsoft: Lou Amadio</p></td>
+    </tr>
+    <tr class="tscclass">
+      <td class="tscclass" align="center"><p><a class="reference internal" href="https://www.openrobotics.org"><img alt="Open Robotics logo" src="_images/openrobotics-logo-stacked.png" style="height: 35px;" /></a></p></td>
+      <td class="tscclass" align="center"><p>Open Robotics: Chris Lalancette</p></td>
+    </tr>
+    <tr class="tscclass">
+      <td class="tscclass" align="center"><p><a class="reference internal" href="https://picknik.ai"><img alt="PickNik logo" src="_images/picknik.png" style="height: 35px;" /></a></p></td>
+      <td class="tscclass" align="center"><p>PickNik: Henning Kayser</p></td>
+    </tr>
+    <tr class="tscclass">
+      <td class="tscclass" align="center"><p><a class="reference internal" href="https://www.robotis.com"><img alt="ROBOTIS logo" src="_images/robotis.png" style="height: 35px;" /></a></p></td>
+      <td class="tscclass" align="center"><p>ROBOTIS: Will Son</p></td>
+    </tr>
+    <tr class="tscclass">
+      <td class="tscclass" align="center"><p><a class="reference internal" href="https://rosindustrial.org/about/description/"><img alt="ROS Industriallogo" src="_images/ros-industrial.png" style="height: 35px;" /></a></p></td>
+      <td class="tscclass" align="center"><p>ROS-Industrial: Matt Robinson</p></td>
+    </tr>
+    <tr class="tscclass">
+      <td class="tscclass" align="center"><p><a class="reference internal" href="https://www.samsung.com"><img alt="Samsung logo" src="_images/samsung.svg" style="height: 25px;" /></a></p></td>
+      <td class="tscclass" align="center"><p>Samsung: Steven Macenski</p></td>
+    </tr>
+    <tr class="tscclass">
+      <td class="tscclass" align="center"><p><a class="reference internal" href="https://www.sony.com"><img alt="Sony logo" src="_images/sony.png" style="height: 60px;" /></a></p></td>
+      <td class="tscclass" align="center"><p>Sony: Tomoya Fujita</p></td>
+    </tr>
+    <tr class="tscclass">
+      <td class="tscclass" align="center"><p><a class="reference internal" href="https://www.tri.global"><img alt="TRI logo" src="_images/tri_logo_landscape-web.svg" style="height: 50px;" /></a></p></td>
+      <td class="tscclass" align="center"><p>Toyota Research Institute: Ian McMahon</p></td>
+    </tr>
+    <tr class="tscclass">
+      <td class="tscclass" align="center"><p><a class="reference internal" href="https://www.windriver.com"><img alt="Wind River logo" src="_images/windriver.png" style="height: 60px;" /></a></p></td>
+      <td class="tscclass" align="center"><p>Wind River: Andrei Kholodnyi</p></td>
+    </tr>
+    <tr class="tscclass">
+      <td class="tscclass" align="center"><p><a class="reference internal" href="https://www.foxglove.dev"><img alt="Foxglove logo" src="_images/foxglove.png" style="height: 60px;" /></a></p></td>
+      <td class="tscclass" align="center"><p>Foxglove:  Adrian Macneil</p></td>
+    </tr>
+    <tr class="tscclass">
+      <td class="tscclass" align="center"><p><img alt="ROS 2 logo" src="_images/ros2_logo.png" style="height: 60px;" /></p></td>
+      <td class="tscclass" align="center"><p>Community Representative: <a href="https://github.com/omichel"> Oliver Michel </a> </p></td>
+    </tr>
+    <tr class="tscclass">
+      <td class="tscclass" align="center"><p><img alt="ROS 2 logo" src="_images/ros2_logo.png" style="height: 60px;" /></p></td>
+      <td class="tscclass" align="center"><p>Community Representative: <a href="https://github.com/pmusau17"> Patrick Musau </a></p></td>
+    </tr>
+    <tr class="tscclass">
+      <td class="tscclass" align="center"><p><img alt="ROS 2 logo" src="_images/ros2_logo.png" style="height: 60px;" /></p></td>
+      <td class="tscclass" align="center"><p>Community Representative:  <a href="https://www.linkedin.com/in/brett-aldrich-42915b97/">Brett Aldrich </a></p></td>
+    </tr>
+  </tbody>
+</table>
+<br/><p>如果您有兴趣加入ROS 2 TSC，请通过info&#64;openrobotics.org咨询。 <a class="reference external" href="http://localhost:3000/#/home?msgid=10159">[待校准&#64;10159]</a></p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Governance/ROS2-TSC-Charter.html">ROS 2技术指导委员会章程 [待校准&#64;10280]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Governance/ROS2-TSC-Intake-process.html">ROS 2 TSC申请人摄入流程 [待校准&#64;10368]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Governance/How-To-Start-A-Community-Working-Group.html">如何成立社区工作组 [待校准&#64;10253]</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="working-groups-wgs">
+<h2>工作组 (WGs) <a class="reference external" href="http://localhost:3000/#/home?msgid=10160">[待校准&#64;10160]</a><a class="headerlink" href="#working-groups-wgs" title="永久链接至标题"></a></h2>
+<p>如 <a class="reference internal" href="Governance/ROS2-TSC-Charter.html"><span class="doc">charter</span></a> 所述，TSC成立了工作组 (WGs)，以讨论特定话题并取得进展。 <a class="reference external" href="http://localhost:3000/#/home?msgid=10161">[待校准&#64;10161]</a></p>
+<p>目前的工作组是 (截至2021-01-12为12个): <a class="reference external" href="http://localhost:3000/#/home?msgid=10162">[待校准&#64;10162]</a></p>
+<div class="section" id="client-libraries">
+<h3>客户端库 <a class="reference external" href="http://localhost:3000/#/home?msgid=10163">[待校准&#64;10163]</a><a class="headerlink" href="#client-libraries" title="永久链接至标题"></a></h3>
+<ul class="simple">
+<li><p>铅: 杰弗里·比格斯，阿尔贝托·索拉格纳 <a class="reference external" href="http://localhost:3000/#/home?msgid=10164">[待校准&#64;10164]</a></p></li>
+<li><p>关于源文件: <a class="reference external" href="http://localhost:3000/#/home?msgid=10165">[待校准&#64;10165]</a></p></li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><p>会议邀请小组:  <a class="reference external" href="https://groups.google.com/forum/#!forum/ros-client-libraries-working-group-invites">ros-client-libraries-working-group-invites&#64;googlegroups.com</a>  <a class="reference external" href="http://localhost:3000/#/home?msgid=10166">[待校准&#64;10166]</a></p></li>
+<li><p><a class="reference external" href="https://docs.google.com/document/d/1UXWaEkT6ji0Z0uTtJJSni5Y6fiopM9qOOzv4ldeNaAM/edit">Meeting minutes and agendas</a></p></li>
+<li><p>工作组宪章: <a class="reference external" href="https://github.com/ros2-client-libraries-wg">https://github.com/ros2-client-libraries-wg</a>/社区 <a class="reference external" href="http://localhost:3000/#/home?msgid=10168">[待校准&#64;10168]</a></p></li>
+<li><p>话语标签:  <a class="reference external" href="https://discourse.ros.org/tags/wg-client-libraries">wg-client-libraries</a>  <a class="reference external" href="http://localhost:3000/#/home?msgid=10169">[待校准&#64;10169]</a></p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="control">
+<h3>控制 <a class="reference external" href="http://localhost:3000/#/home?msgid=10170">[待校准&#64;10170]</a><a class="headerlink" href="#control" title="永久链接至标题"></a></h3>
+<ul class="simple">
+<li><p>领导: Bence Magyar，Karsten Knese <a class="reference external" href="http://localhost:3000/#/home?msgid=10171">[待校准&#64;10171]</a></p></li>
+<li><p>关于源文件: <a class="reference external" href="http://localhost:3000/#/home?msgid=10165">[待校准&#64;10165]</a></p></li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><p>会议邀请 <a class="reference external" href="https://groups.google.com/forum/#!forum/ros-control-working-group-invites">ros-control-working-group-invites&#64;googlegroups.com</a> 小组 <a class="reference external" href="http://localhost:3000/#/home?msgid=10172">[待校准&#64;10172]</a></p></li>
+<li><p>话语标签:  <a class="reference external" href="https://discourse.ros.org/tags/wg-ros2-control">wg-ros2-control</a>  <a class="reference external" href="http://localhost:3000/#/home?msgid=10173">[待校准&#64;10173]</a></p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="edge-ai">
+<h3>边缘人工智能 <a class="reference external" href="http://localhost:3000/#/home?msgid=10174">[待校准&#64;10174]</a><a class="headerlink" href="#edge-ai" title="永久链接至标题"></a></h3>
+<ul class="simple">
+<li><p>铅: 待定 <a class="reference external" href="http://localhost:3000/#/home?msgid=10175">[待校准&#64;10175]</a></p></li>
+<li><p>关于源文件: <a class="reference external" href="http://localhost:3000/#/home?msgid=10165">[待校准&#64;10165]</a></p></li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><p>会议邀请 <a class="reference external" href="https://groups.google.com/forum/#!forum/ros-edge-ai-working-group-invites">ros-edge-ai-working-group-invites</a> 小组 <a class="reference external" href="http://localhost:3000/#/home?msgid=10176">[待校准&#64;10176]</a></p></li>
+<li><p>话语标签:  <a class="reference external" href="https://discourse.ros.org/tag/wg-edgeai">wg-edgeai</a>  <a class="reference external" href="http://localhost:3000/#/home?msgid=10177">[待校准&#64;10177]</a></p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="embedded-systems">
+<h3>嵌入式系统 <a class="reference external" href="http://localhost:3000/#/home?msgid=10178">[待校准&#64;10178]</a><a class="headerlink" href="#embedded-systems" title="永久链接至标题"></a></h3>
+<ul class="simple">
+<li><p>领导: 玛丽亚·梅兰、巴勃罗·加里多 <a class="reference external" href="http://localhost:3000/#/home?msgid=10179">[待校准&#64;10179]</a></p></li>
+<li><p>关于源文件: <a class="reference external" href="http://localhost:3000/#/home?msgid=10165">[待校准&#64;10165]</a></p></li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="https://discourse.ros.org/uploads/short-url/z1caIm7m5IVP4cPJUwg3Chq36wO.pdf">2019-07-29 meeting notes</a></p></li>
+<li><p><a class="reference external" href="https://discourse.ros.org/t/ros2-embedded-sig-meeting-2/7243/5">2019-01-15 meeting notes</a></p></li>
+<li><p>会议邀请 <a class="reference external" href="https://groups.google.com/forum/#!forum/ros-embedded-working-group-invites">ros-embedded-working-group-invites&#64;googlegroups.com</a> 小组 <a class="reference external" href="http://localhost:3000/#/home?msgid=10182">[待校准&#64;10182]</a></p></li>
+<li><p>话语标签:  <a class="reference external" href="https://discourse.ros.org/tags/wg-embedded">wg-embedded</a>  <a class="reference external" href="http://localhost:3000/#/home?msgid=10183">[待校准&#64;10183]</a></p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="middleware">
+<h3>中间件 <a class="reference external" href="http://localhost:3000/#/home?msgid=10184">[待校准&#64;10184]</a><a class="headerlink" href="#middleware" title="永久链接至标题"></a></h3>
+<ul class="simple">
+<li><p>领导: 威廉·伍德尔 <a class="reference external" href="http://localhost:3000/#/home?msgid=10185">[待校准&#64;10185]</a></p></li>
+<li><p>关于源文件: <a class="reference external" href="http://localhost:3000/#/home?msgid=10165">[待校准&#64;10165]</a></p></li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><p>会议邀请 <a class="reference external" href="https://groups.google.com/forum/#!forum/ros-middleware-working-group-invites">ros-middleware-working-group-invites&#64;googlegroups.com</a> 小组 <a class="reference external" href="http://localhost:3000/#/home?msgid=10186">[待校准&#64;10186]</a></p></li>
+<li><p>话语标签:  <a class="reference external" href="https://discourse.ros.org/tags/wg-middleware">wg-middleware</a>  <a class="reference external" href="http://localhost:3000/#/home?msgid=10187">[待校准&#64;10187]</a></p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="navigation">
+<h3>导航 <a class="reference external" href="http://localhost:3000/#/home?msgid=10188">[待校准&#64;10188]</a><a class="headerlink" href="#navigation" title="永久链接至标题"></a></h3>
+<ul class="simple">
+<li><p>领导: 史蒂夫·麦肯斯基 <a class="reference external" href="http://localhost:3000/#/home?msgid=10189">[待校准&#64;10189]</a></p></li>
+<li><p>关于源文件: <a class="reference external" href="http://localhost:3000/#/home?msgid=10165">[待校准&#64;10165]</a></p></li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="https://discourse.ros.org/t/ros2-navigation-wg-thursday-3-00-pm-pacific-gmt-7-00/7586/9">2019-03-17 meeting notes</a></p></li>
+<li><p>会议邀请 <a class="reference external" href="https://groups.google.com/forum/#!forum/ros-navigation-working-group-invites">ros-navigation-working-group-invites&#64;googlegroups.com</a> 小组 <a class="reference external" href="http://localhost:3000/#/home?msgid=10191">[待校准&#64;10191]</a></p></li>
+<li><p>话语标签:  <a class="reference external" href="https://discourse.ros.org/tags/wg-navigation">wg-navigation</a>  <a class="reference external" href="http://localhost:3000/#/home?msgid=10192">[待校准&#64;10192]</a></p></li>
+<li><p>话语频道:  <a class="reference external" href="https://discourse.ros.org/c/navigation/44">Navigation Stack</a>  <a class="reference external" href="http://localhost:3000/#/home?msgid=10193">[待校准&#64;10193]</a></p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="manipulation">
+<h3>操纵 <a class="reference external" href="http://localhost:3000/#/home?msgid=10194">[待校准&#64;10194]</a><a class="headerlink" href="#manipulation" title="永久链接至标题"></a></h3>
+<ul class="simple">
+<li><p>领导: 戴夫·科尔曼，马克·莫尔 <a class="reference external" href="http://localhost:3000/#/home?msgid=10195">[待校准&#64;10195]</a></p></li>
+<li><p>关于源文件: <a class="reference external" href="http://localhost:3000/#/home?msgid=10165">[待校准&#64;10165]</a></p></li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="https://discourse.ros.org/t/moveit-maintainer-meeting-all-invited-july-25th/9899">About our working group meetings</a></p></li>
+<li><p>会议邀请 <a class="reference external" href="https://groups.google.com/forum/#!forum/ros-manipulation-working-group-invites">ros-manipulation-working-group-invites&#64;googlegroups.com</a> 小组 <a class="reference external" href="http://localhost:3000/#/home?msgid=10197">[待校准&#64;10197]</a></p></li>
+<li><p>话语标签:  <a class="reference external" href="https://discourse.ros.org/tags/wg-moveit">wg-moveit</a>  <a class="reference external" href="http://localhost:3000/#/home?msgid=10198">[待校准&#64;10198]</a></p></li>
+<li><p>话语频道:  <a class="reference external" href="https://discourse.ros.org/c/moveit">MoveIt</a>  <a class="reference external" href="http://localhost:3000/#/home?msgid=10199">[待校准&#64;10199]</a></p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="real-time">
+<h3>实时 <a class="reference external" href="http://localhost:3000/#/home?msgid=10200">[待校准&#64;10200]</a><a class="headerlink" href="#real-time" title="永久链接至标题"></a></h3>
+<ul class="simple">
+<li><p>领导: 安德烈·霍洛德尼，卡洛斯·圣维森特 <a class="reference external" href="http://localhost:3000/#/home?msgid=10201">[待校准&#64;10201]</a></p></li>
+<li><p>关于源文件: <a class="reference external" href="http://localhost:3000/#/home?msgid=10165">[待校准&#64;10165]</a></p></li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="https://real-time-working-group.readthedocs.io/">Working group website</a></p></li>
+<li><p><a class="reference external" href="https://github.com/ros-realtime/community">Working Group Community</a></p></li>
+<li><p>会议邀请 <a class="reference external" href="https://groups.google.com/forum/#!forum/ros-real-time-working-group-invites">ros-real-time-working-group-invites&#64;googlegroups.com</a> 小组 <a class="reference external" href="http://localhost:3000/#/home?msgid=10204">[待校准&#64;10204]</a></p></li>
+<li><p>话语标签:  <a class="reference external" href="https://discourse.ros.org/tags/wg-real-time">wg-real-time</a>  <a class="reference external" href="http://localhost:3000/#/home?msgid=10205">[待校准&#64;10205]</a></p></li>
+<li><p>矩阵聊天 <a class="reference external" href="https://matrix.to/#/+ros-realtime:matrix.org">+ros-realtime:matrix.org</a>  <a class="reference external" href="http://localhost:3000/#/home?msgid=10206">[待校准&#64;10206]</a></p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="rust">
+<h3>铁锈 <a class="reference external" href="http://localhost:3000/#/home?msgid=10207">[待校准&#64;10207]</a><a class="headerlink" href="#rust" title="永久链接至标题"></a></h3>
+<ul class="simple">
+<li><p>领导: 杰弗里·比格斯、埃斯蒂夫·费尔南德斯、雅各布·哈罗德、鲁芬·怀特 <a class="reference external" href="http://localhost:3000/#/home?msgid=10208">[待校准&#64;10208]</a></p></li>
+<li><p>关于源文件: <a class="reference external" href="http://localhost:3000/#/home?msgid=10165">[待校准&#64;10165]</a></p></li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="https://github.com/ros2-rust/rust-wg">Working group Community</a></p></li>
+<li><p>会议邀请 <a class="reference external" href="https://groups.google.com/forum/#!forum/ros-rust-working-group-invites">ros-rust-working-group-invites&#64;googlegroups.com</a> 小组 <a class="reference external" href="http://localhost:3000/#/home?msgid=10210">[待校准&#64;10210]</a></p></li>
+<li><p>话语标签:  <a class="reference external" href="https://discourse.ros.org/tags/wg-rust">wg-rust</a>  <a class="reference external" href="http://localhost:3000/#/home?msgid=10211">[待校准&#64;10211]</a></p></li>
+<li><p>矩阵聊天 <a class="reference external" href="https://matrix.to/#/+rosorg-rust:matrix.org">+rosorg-rust:matrix.org</a>  <a class="reference external" href="http://localhost:3000/#/home?msgid=10212">[待校准&#64;10212]</a></p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="safety">
+<h3>安全 <a class="reference external" href="http://localhost:3000/#/home?msgid=10213">[待校准&#64;10213]</a><a class="headerlink" href="#safety" title="永久链接至标题"></a></h3>
+<ul class="simple">
+<li><p>铅: 杰弗里比格斯 <a class="reference external" href="http://localhost:3000/#/home?msgid=10214">[待校准&#64;10214]</a></p></li>
+<li><p>关于源文件: <a class="reference external" href="http://localhost:3000/#/home?msgid=10165">[待校准&#64;10165]</a></p></li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="http://ros-safety.github.io/safety_working_group/">Working group website</a></p></li>
+<li><p><a class="reference external" href="https://github.com/ros-safety/safety_working_group">Working group Community</a></p></li>
+<li><p>会议邀请 <a class="reference external" href="https://groups.google.com/forum/#!forum/ros-safety-working-group-invites">ros-safety-working-group-invites&#64;googlegroups.com</a> 小组 <a class="reference external" href="http://localhost:3000/#/home?msgid=10217">[待校准&#64;10217]</a></p></li>
+<li><p>话语标签:  <a class="reference external" href="https://discourse.ros.org/tags/wg-safety-critical">wg-safety-critical</a>  <a class="reference external" href="http://localhost:3000/#/home?msgid=10218">[待校准&#64;10218]</a></p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="security">
+<h3>安全 <a class="reference external" href="http://localhost:3000/#/home?msgid=10219">[待校准&#64;10219]</a><a class="headerlink" href="#security" title="永久链接至标题"></a></h3>
+<ul class="simple">
+<li><p>领导: 杰里米·德雷 <a class="reference external" href="http://localhost:3000/#/home?msgid=10220">[待校准&#64;10220]</a></p></li>
+<li><p>关于源文件: <a class="reference external" href="http://localhost:3000/#/home?msgid=10165">[待校准&#64;10165]</a></p></li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="https://github.com/ros-security/community">ROS 2 Security Working Group Community</a></p></li>
+<li><p>会议邀请 <a class="reference external" href="https://groups.google.com/forum/#!forum/ros-security-working-group-invites">ros-security-working-group-invites&#64;googlegroups.com</a> 小组 <a class="reference external" href="http://localhost:3000/#/home?msgid=10222">[待校准&#64;10222]</a></p></li>
+<li><p>话语标签:  <a class="reference external" href="https://discourse.ros.org/tags/wg-security">wg-security</a>  <a class="reference external" href="http://localhost:3000/#/home?msgid=10223">[待校准&#64;10223]</a></p></li>
+<li><p>矩阵聊天 <a class="reference external" href="https://matrix.to/#/+rosorg-security:matrix.org">+rosorg-security:matrix.org</a>  <a class="reference external" href="http://localhost:3000/#/home?msgid=10224">[待校准&#64;10224]</a></p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="tooling">
+<h3>工具 <a class="reference external" href="http://localhost:3000/#/home?msgid=10225">[待校准&#64;10225]</a><a class="headerlink" href="#tooling" title="永久链接至标题"></a></h3>
+<ul class="simple">
+<li><p>铅: 爱默生·克纳普 <a class="reference external" href="http://localhost:3000/#/home?msgid=10226">[待校准&#64;10226]</a></p></li>
+<li><p>关于源文件: <a class="reference external" href="http://localhost:3000/#/home?msgid=10165">[待校准&#64;10165]</a></p></li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="https://github.com/ros-tooling/community">Charter</a></p></li>
+<li><p><a class="reference external" href="https://docs.google.com/document/d/1UXWaEkT6ji0Z0uTtJJSni5Y6fiopM9qOOzv4ldeNaAM/edit">Meeting Notes</a></p></li>
+<li><p>会议邀请 <a class="reference external" href="https://groups.google.com/forum/#!forum/ros-tooling-working-group-invites">ros-tooling-working-group-invites&#64;googlegroups.com</a> 小组 <a class="reference external" href="http://localhost:3000/#/home?msgid=10229">[待校准&#64;10229]</a></p></li>
+<li><p>话语标签:  <a class="reference external" href="https://discourse.ros.org/tags/wg-tooling">wg-tooling</a>  <a class="reference external" href="http://localhost:3000/#/home?msgid=10230">[待校准&#64;10230]</a></p></li>
+<li><p>矩阵聊天 <a class="reference external" href="https://matrix.to/#/+ros-tooling:matrix.org">+ros-tooling:matrix.org</a>  <a class="reference external" href="http://localhost:3000/#/home?msgid=10231">[待校准&#64;10231]</a></p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="webtools">
+<h3>网络工具 <a class="reference external" href="http://localhost:3000/#/home?msgid=10232">[待校准&#64;10232]</a><a class="headerlink" href="#webtools" title="永久链接至标题"></a></h3>
+<ul class="simple">
+<li><p>铅: 爱默生·克纳普 <a class="reference external" href="http://localhost:3000/#/home?msgid=10226">[待校准&#64;10226]</a></p></li>
+<li><p>关于源文件: <a class="reference external" href="http://localhost:3000/#/home?msgid=10165">[待校准&#64;10165]</a></p></li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="https://github.com/RobotWebTools/community">Charter</a></p></li>
+<li><p><a class="reference external" href="https://docs.google.com/document/d/1esrRj2x80TSCEHOwuh-cT_bQvAqqvloQAQr8mPMzcTc/edit">Meeting Notes</a></p></li>
+<li><p><a class="reference external" href="https://www.youtube.com/playlist?list=PLpUh4ScdBhSMb98_C0q_zIT8GNMehYBd">Video Recordings</a></p></li>
+<li><p><a class="reference external" href="https://groups.google.com/g/ros-webtools-working-group">Google Group</a></p></li>
+<li><p>话语标签:  <a class="reference external" href="https://discourse.ros.org/tags/wg-webtools">wg-webtools</a>  <a class="reference external" href="http://localhost:3000/#/home?msgid=10237">[待校准&#64;10237]</a></p></li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="community-working-groups">
+<h2>社区工作组 <a class="reference external" href="http://localhost:3000/#/home?msgid=10238">[待校准&#64;10238]</a><a class="headerlink" href="#community-working-groups" title="永久链接至标题"></a></h2>
+<p>ROS 2 TSC有兴趣在其直接权限之外鼓励和促进工作组。为了提供额外的可见性，TSC在这里维护了一份社区驱动工作组的列表，并与社区合作为他们提供相同的基础设施。 <a class="reference external" href="http://localhost:3000/#/home?msgid=10239">[待校准&#64;10239]</a></p>
+<div class="section" id="hardware-acceleration">
+<h3>硬件加速 <a class="reference external" href="http://localhost:3000/#/home?msgid=10240">[待校准&#64;10240]</a><a class="headerlink" href="#hardware-acceleration" title="永久链接至标题"></a></h3>
+<ul class="simple">
+<li><p>领导: 维克托市长 <a class="reference external" href="http://localhost:3000/#/home?msgid=10241">[待校准&#64;10241]</a></p></li>
+<li><p>关于源文件: <a class="reference external" href="http://localhost:3000/#/home?msgid=10165">[待校准&#64;10165]</a></p></li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><p>会议邀请 <a class="reference external" href="https://groups.google.com/g/ros-2-hardware-acceleration-wg">ROS 2 Hardware Acceleration WG Google Group</a> 小组 <a class="reference external" href="http://localhost:3000/#/home?msgid=10242">[待校准&#64;10242]</a></p></li>
+<li><p>话语标签:  <a class="reference external" href="https://discourse.ros.org/tag/wg-acceleration">wg-acceleration</a>  <a class="reference external" href="http://localhost:3000/#/home?msgid=10243">[待校准&#64;10243]</a></p></li>
+<li><p>Github组织:  <a class="reference external" href="https://github.com/ros-acceleration">ros-acceleration</a>  <a class="reference external" href="http://localhost:3000/#/home?msgid=10244">[待校准&#64;10244]</a></p></li>
+</ul>
+</div></blockquote>
+<p>如果您想加入现有的ROS 2 WG，请直接联系相应的小组负责人。如果您想创建一个新的工作组，请通过info&#64;openrobotics.org查询。 <a class="reference external" href="http://localhost:3000/#/home?msgid=10245">[待校准&#64;10245]</a></p>
+<p>工作组政策 <a class="reference external" href="http://localhost:3000/#/home?msgid=10246">[待校准&#64;10246]</a></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>会议应张贴在谷歌日历上，并在演讲中宣布。 <a class="reference external" href="http://localhost:3000/#/home?msgid=10247">[待校准&#64;10247]</a></p></li>
+<li><p>会议应该有笔记，并使用适当的工作组标签发布到演讲中。 <a class="reference external" href="http://localhost:3000/#/home?msgid=10248">[待校准&#64;10248]</a></p></li>
+<li><p>要参加小组会议，请加入相关的谷歌小组，以获得邀请自动调用y。 <a class="reference external" href="http://localhost:3000/#/home?msgid=10249">[待校准&#64;10249]</a></p></li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="upcoming-ros-events">
+<h2>即将举行的ROS活动 <a class="reference external" href="http://localhost:3000/#/home?msgid=10250">[待校准&#64;10250]</a><a class="headerlink" href="#upcoming-ros-events" title="永久链接至标题"></a></h2>
+<p>即将召开的工作组会议可以在本 <a class="reference external" href="https://calendar.google.com/calendar/embed?src=agf3kajirket8khktupm9go748%40group.calendar.google.com&amp;ctz=America%2FLos_Angeles">Google Calendar</a> 中找到。它可以通过 <a class="reference external" href="https://calendar.google.com/calendar/ical/agf3kajirket8khktupm9go748%40group.calendar.google.com/public/basic.ics">iCal</a> 进入。 <a class="reference external" href="http://localhost:3000/#/home?msgid=10251">[待校准&#64;10251]</a></p>
+<iframe src="https://calendar.google.com/calendar/embed?src=agf3kajirket8khktupm9go748%40group.calendar.google.com" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe><p>如果您想发布个人活动或一系列活动，请联系info&#64;openrobotics.org <a class="reference external" href="http://localhost:3000/#/home?msgid=10252">[待校准&#64;10252]</a></p>
+</div>
+</div>
+
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Feature-Ideas.html" class="btn btn-neutral float-left" title="特色创意 [待校准@1123]" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="Governance/ROS2-TSC-Charter.html" class="btn btn-neutral float-right" title="ROS 2技术指导委员会章程 [待校准@10280]" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2022, Open Robotics.</p>
+  </div>
+
+  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-17821189-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-17821189-2', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>交叉编译 [待校准@383] &mdash; ROS 2 documentation  文档</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.ros.org/en/How-To-Guides/Cross-compilation.html" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="发布带有bloom的ROS 2包 [待校准@937]" href="Releasing-a-ROS-2-package-with-bloom.html" />
+    <link rel="prev" title="使用多个ROS 2中间件实现 [待校准@1068]" href="Working-with-multiple-RMW-implementations.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> ROS 2 documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Installation.html">安装 [待校准&#64;5690]</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Ubuntu-Development-Setup.html">在Ubuntu Linux上构建ROS 2 [待校准&#64;5886]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Ubuntu-Install-Binary.html">在Ubuntu Linux上安装ROS 2 [待校准&#64;5937]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Ubuntu-Install-Debians.html">通过Debian包安装ROS 2 [待校准&#64;5959]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/macOS-Development-Setup.html">在macOS上构建ROS 2 [待校准&#64;6117]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/macOS-Install-Binary.html">在macOS上安装ROS 2 [待校准&#64;6148]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Windows-Development-Setup.html">在Windows上构建ROS 2 [待校准&#64;5973]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Windows-Install-Binary.html">在Windows上安装ROS 2 [待校准&#64;6050]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Fedora-Development-Setup.html">在Fedora Linux上构建ROS 2 [待校准&#64;5836]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Latest-Development-Setup.html">安装最新的ROS 2开发版本 [待校准&#64;5840]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Maintaining-a-Source-Checkout.html">主源文件检出ROS 2Foxy [待校准&#64;5850]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Testing.html">用于测试的替代安装源 [待校准&#64;5873]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/DDS-Implementations.html">安装DDS实现 [待校准&#64;5717]</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Install-Connext-Security-Plugins.html">安装Connext安全插件 [待校准&#64;5768]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Install-Connext-University-Eval.html">安装大学或RTI Connext DDS的评估版本 [待校准&#64;5782]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Working-with-Eclipse-CycloneDDS.html">使用EclipseCycloneDDS [待校准&#64;5796]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Working-with-GurumNetworks-GurumDDS.html">与GurumNetworks GurumDDS合作 [待校准&#64;5812]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Working-with-eProsima-Fast-DDS.html">与eProsimaFast DDS合作 [待校准&#64;5829]</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Docs-Guide.html">文档指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorials.html">教程 [待校准&#64;6242]</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Configuring-ROS2-Environment.html">配置ROS 2环境 [待校准&#64;6646]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Turtlesim/Introducing-Turtlesim.html">介绍turtlesim和rqt [待校准&#64;8428]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Understanding-ROS2-Nodes.html">了解ROS 2节点 [待校准&#64;8733]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Topics/Understanding-ROS2-Topics.html">理解ROS 2话题 [待校准&#64;8368]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Services/Understanding-ROS2-Services.html">了解ROS 2服务 [待校准&#64;7742]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Parameters/Understanding-ROS2-Parameters.html">理解ROS 2参数 [待校准&#64;7371]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Understanding-ROS2-Actions.html">理解ROS 2动作 [待校准&#64;8684]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Rqt-Console/Using-Rqt-Console.html">使用rqt_控制台 [待校准&#64;7712]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Launch/CLI-Intro.html">介绍ROS 2launch [待校准&#64;7101]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Ros2bag/Recording-And-Playing-Back-Data.html">记录和回放数据 [待校准&#64;7639]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Workspace/Creating-A-Workspace.html">创建工作空间 [待校准&#64;8836]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Creating-Your-First-ROS2-Package.html">创建您的第一个ROS 2包 [待校准&#64;6677]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Writing-A-Simple-Cpp-Publisher-And-Subscriber.html">编写简单的发布者和订阅者 (c ++) [待校准&#64;8905]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Writing-A-Simple-Py-Publisher-And-Subscriber.html">编写简单的发布者和订阅者 (Python) [待校准&#64;8992]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Writing-A-Simple-Cpp-Service-And-Client.html">编写简单的服务和客户端 (c ++) [待校准&#64;8953]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Writing-A-Simple-Py-Service-And-Client.html">编写简单的服务和客户端 (Python) [待校准&#64;9028]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Custom-ROS2-Interfaces.html">创建自定义ROS 2 msg 和 srv 文件 [待校准&#64;6739]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Single-Package-Define-And-Use-Interface.html">在ROS 2接口上扩展 [待校准&#64;7844]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Using-Parameters-In-A-Class-CPP.html">在类 (c ++) 中使用参数 [待校准&#64;8769]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Using-Parameters-In-A-Class-Python.html">在类中使用参数 (Python) [待校准&#64;8809]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Getting-Started-With-Ros2doctor.html">开始使用ros2doctor [待校准&#64;7010]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Pluginlib.html">创建和使用插件 (c ++) [待校准&#64;7411]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Actions/Creating-an-Action.html">创建动作 [待校准&#64;6271]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Actions/Writing-a-Cpp-Action-Server-Client.html">编写动作服务器和客户端 (c ++) [待校准&#64;6313]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Actions/Writing-a-Py-Action-Server-Client.html">编写动作服务器和客户端 (Python) [待校准&#64;6385]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Composition.html">在单个进程中组成多个节点 [待校准&#64;6594]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Colcon-Tutorial.html">使用colcon构建包 [待校准&#64;6535]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Launch/Launch-Main.html">Launch教程 [待校准&#64;7160]</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Launch/Creating-Launch-Files.html">创建launch文件 [待校准&#64;7122]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Launch/Launch-system.html">[需手动修复的语法]Launch/监控多节点[需手动修复的语法]Launch [待校准&#64;7174]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Launch/Using-Substitutions.html">在launch文件中使用替换 [待校准&#64;7297]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Launch/Using-Event-Handlers.html">在launch文件中使用事件处理程序 [待校准&#64;7201]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Launch/Using-ROS2-Launch-For-Large-Projects.html">在大型项目中使用ROS 2launch [待校准&#64;7234]</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Tf2/Tf2-Main.html">tf2教程 [待校准&#64;8078]</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Introduction-To-Tf2.html">tf2简介 [待校准&#64;7994]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Writing-A-Tf2-Static-Broadcaster-Py.html">编写tf2静态广播器 (Python) [待校准&#64;8299]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Writing-A-Tf2-Static-Broadcaster-Cpp.html">编写tf2静态广播器 (c ++) [待校准&#64;8257]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Writing-A-Tf2-Broadcaster-Py.html">编写tf2广播器 (Python) [待校准&#64;8220]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Writing-A-Tf2-Broadcaster-Cpp.html">编写tf2广播器 (c ++) [待校准&#64;8181]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Writing-A-Tf2-Listener-Py.html">编写tf2监听程序 (Python) [待校准&#64;8251]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Writing-A-Tf2-Listener-Cpp.html">编写tf2监听程序 (c ++) [待校准&#64;8233]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Adding-A-Frame-Py.html">添加帧 (Python) [待校准&#64;7950]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Adding-A-Frame-Cpp.html">添加帧 (c ++) [待校准&#64;7914]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Learning-About-Tf2-And-Time-Py.html">学习tf2和时间 (Python) [待校准&#64;8040]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Learning-About-Tf2-And-Time-Cpp.html">学习tf2和时间 (c ++) [待校准&#64;8023]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Time-Travel-With-Tf2-Py.html">时间穿梭tf2 (Python) [待校准&#64;8130]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Time-Travel-With-Tf2-Cpp.html">时间穿梭带tf2 (C++) [待校准&#64;8105]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Debugging-Tf2-Problems.html">调试tf2问题 [待校准&#64;7956]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Quaternion-Fundamentals.html">四元数基金amentals [待校准&#64;8054]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.html">使用stamped数据类型与tf2_ros: MessageFilter [待校准&#64;8138]</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/URDF/URDF-Main.html">URDF教程 [待校准&#64;8607]</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/URDF/Building-a-Visual-Robot-Model-with-URDF-from-Scratch.html">从头开始用URDF构建视觉机器人模型 [待校准&#64;8556]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/URDF/Building-a-Movable-Robot-Model-with-URDF.html">用URDF建立可移动机器人模型 [待校准&#64;8534]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/URDF/Adding-Physical-and-Collision-Properties-to-a-URDF-Model.html">向URDF模型添加物理和碰撞属性 [待校准&#64;8487]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/URDF/Using-Xacro-to-Clean-Up-a-URDF-File.html">使用Xacro清理URDF文件 [待校准&#64;8635]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/URDF/Using-URDF-with-Robot-State-Publisher.html">将URDF与robot_state_发布者结合使用 [待校准&#64;8609]</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Topics/Topic-Statistics-Tutorial.html">ROS 2话题统计教程 (c ++) [待校准&#64;8311]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Discovery-Server/Discovery-Server.html">使用Fast DDS Discovery Server作为发现协议 [社区贡献] [待校准&#64;6879]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Allocator-Template-Tutorial.html">实现自定义内存分配器 [待校准&#64;6445]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Simulators/Webots/Setting-up-a-Robot-Simulation-Webots.html">设置机器人仿真 (Webots) [待校准&#64;7782]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Deploying-ROS-2-on-IBM-Cloud.html">IBM Cloud Kubernetes上的ROS2 [社区-贡献] [待校准&#64;6792]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Eclipse-Oxygen-with-ROS-2-and-rviz2.html">带有ROS 2和rviz2的Eclipse Oxygen [社区贡献] [待校准&#64;6947]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Building-Realtime-rt_preempt-kernel-for-ROS-2.html">为ROS 2构建实时Linux [社区-贡献] [待校准&#64;6514]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Ros2bag/Recording-A-Bag-From-Your-Own-Node.html">从您自己的节点记录一个包 [待校准&#64;7554]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Building-ROS2-Package-with-eclipse-2021-06.html">使用eclipse 2021-06构建ROS 2包 [待校准&#64;6486]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Quality-of-Service.html">使用服务质量设置处理有损网络 [待校准&#64;7462]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Managed-Nodes.html">具有托管生命周期的节点管理 [待校准&#64;7369]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Intra-Process-Communication.html">高效的流程内通讯 [待校准&#64;7051]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Rosbag-with-ROS1-Bridge.html">使用ROS 1bridge用rosbag记录和回放话题数据 [待校准&#64;7685]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Real-Time-Programming.html">ROS 2中的实时编程 [待校准&#64;7491]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/dummy-robot-demo.html">尝试dummy robot例程 [待校准&#64;9056]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Logging-and-logger-configuration.html">日志和日志记录器配置例程 [待校准&#64;7322]</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../How-To-Guides.html">操作指南 [待校准&#64;204]</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Installation-Troubleshooting.html">安装故障诊断工具 [待校准&#64;535]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Developing-a-ROS-2-Package.html">开发ROS 2包 [待校准&#64;514]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ament-CMake-Documentation.html">[需手动修复的语法]ament _ cmake用户文档 [待校准&#64;208]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ament-CMake-Python-Documentation.html">[需手动修复的语法]ament _ cmake_python用户文档 [待校准&#64;360]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Launch-files-migration-guide.html">迁移launch文件ROS 1ROS 2 [待校准&#64;638]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Launch-file-different-formats.html">对ROS 2Launch文件使用Python、XML和YAML [待校准&#64;611]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Launching-composable-nodes.html">使用ROS 2launch到launch可组合节点 [待校准&#64;733]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Parameters-YAML-files-migration-guide.html">将YAML参数文件从ROS 1迁移到ROS 2 [待校准&#64;850]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Node-arguments.html">通过命令行将ROS参数传递给节点 [待校准&#64;746]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Sync-Vs-Async.html">同步与异步服务客户端 [待校准&#64;972]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DDS-tuning.html">DDS调谐信息 [待校准&#64;470]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Overriding-QoS-Policies-For-Recording-And-Playback.html">rosbag2: 重载QoS策略 [待校准&#64;772]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Working-with-multiple-RMW-implementations.html">使用多个ROS 2中间件实现 [待校准&#64;1068]</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">交叉编译 [待校准&#64;383]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Releasing-a-ROS-2-package-with-bloom.html">发布带有bloom的ROS 2包 [待校准&#64;937]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Using-Python-Packages.html">将Python包与ROS 2结合使用 [待校准&#64;1011]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RQt-Port-Plugin-Windows.html">将RQt插件移植到Windows [待校准&#64;862]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Run-2-nodes-in-single-or-separate-docker-containers.html">在Docker中运行ROS 2节点 [社区-贡献] [待校准&#64;959]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Package-maintainer-guide.html">ROS 2包维护者指南 [待校准&#64;785]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Building-a-Custom-Debian-Package.html">构建自定义Debian包 [待校准&#64;371]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Topics-Services-Actions.html">话题vs服务vsAction [待校准&#64;997]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Using-Variants.html">使用变体 [待校准&#64;1031]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Using-ros2-param.html">使用 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span></code> 命令行工具 [待校准&#64;1046]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RQt-Source-Install.html">从源文件构建RQt [待校准&#64;883]</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="RQt-Source-Install-MacOS.html">在macOS上从源文件构建RQt [待校准&#64;908]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="RQt-Source-Install-Windows10.html">在Windows 10上从源文件构建RQt [待校准&#64;916]</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Concepts.html">概念 [待校准&#64;4938]</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Domain-ID.html">ROS_DOMAIN_ID [待校准&#64;5194]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Different-Middleware-Vendors.html">关于不同的ROS 2 DDS/RTPS供应商 [待校准&#64;5153]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Logging.html">关于日志和日志记录器配置 [待校准&#64;5325]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Quality-of-Service-Settings.html">关于服务质量设置 [待校准&#64;5369]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-ROS-2-Client-Libraries.html">关于ROS 2客户端库 [待校准&#64;5459]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-ROS-Interfaces.html">关于ROS 2接口 [待校准&#64;5526]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-ROS-2-Parameters.html">关于ROS 2中的参数 [待校准&#64;5490]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Executors.html">执行器 [待校准&#64;5227]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Topic-Statistics.html">关于话题统计 [待校准&#64;5671]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Command-Line-Tools.html">使用命令行工具进行自检 [待校准&#64;5091]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-RQt.html">RQt的概述和使用 [待校准&#64;5625]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Composition.html">关于组件 [待校准&#64;5119]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Catment.html">[需手动修复的语法]ament和catkin的混合研究 [待校准&#64;5019]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Cross-Compilation.html">关于交叉编译 [待校准&#64;5141]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Tf2.html">关于tf2 [待校准&#64;5653]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Build-System.html">关于构建系统 [待校准&#64;4969]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Internal-Interfaces.html">关于内部ROS 2接口 [待校准&#64;5265]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Middleware-Implementations.html">关于ROS 2中间件实现 [待校准&#64;5347]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Client-Interfaces.html">ROS 2客户端接口 (客户端库) [待校准&#64;5079]</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Contributing.html">贡献 [待校准&#64;9128]</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Contributing/Developer-Guide.html">ROS 2开发人员指南 [待校准&#64;9430]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Contributing/Code-Style-Language-Versions.html">代码样式和语言版本 [待校准&#64;9212]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Contributing/Quality-Guide.html">质量指南: 确保代码质量 [待校准&#64;10012]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Contributing/Migration-Guide.html">从ROS 1迁移指南 [待校准&#64;9780]</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Contributing/Migration-Guide-Python.html">来自ROS 1的Python迁移指南 [待校准&#64;10003]</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Contributing/Build-Farms.html">ROS Build Farms [待校准&#64;9167]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Contributing/Windows-Tips-and-Tricks.html">Windows提示和技巧 [待校准&#64;10105]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Contributing/Contributing-To-ROS-2-Documentation.html">为ROS 2文档做出贡献 [待校准&#64;9366]</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Contact.html">联系人 [待校准&#64;6167]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ROSCon-Content.html">ROSCon内容 [待校准&#64;105]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Releases.html">发行版 [待校准&#64;1233]</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Alpha-Overview.html">ROS 2 α 发行版本 (2015年8月-2016年10月) [待校准&#64;1306]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Beta1-Overview.html">贝塔1 (代号'Asphalt'; 2016年12月) [待校准&#64;1386]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Beta2-Overview.html">贝塔2 (代号'r2b2'; 2017年7月) [待校准&#64;1420]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Beta3-Overview.html">贝塔3 (代号'r2b3'; 2017年9月) [待校准&#64;1451]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Ardent-Apalone.html">ROS 2Ardent阿帕隆 (代号'ardent'; 2017年12月) [待校准&#64;4089]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Bouncy-Bolson.html">ROS 2 Bouncy Bolson (代号'bouncy'; 2018年6月) [待校准&#64;4130]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Crystal-Clemmys.html">ROS 2Crystal Clemmys (代号'crystal'; 2018年12月) [待校准&#64;4158]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Dashing-Diademata.html">ROS 2DashingDiademata (代号'dashing'; 2019年5月31日) [待校准&#64;4237]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Eloquent-Elusor.html">ROS 2EloquentElusor (代号'eloquent'; 2019年11月22日) [待校准&#64;4427]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Foxy-Fitzroy.html">ROS 2FoxyFitzroy (代号'foxy'; 2020年6月5日) [待校准&#64;4503]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Galactic-Geochelone.html">ROS 2GalacticGeochelone (代号'galactic'; 2021年5月) [待校准&#64;4649]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Galactic-Geochelone-Complete-Changelog.html">ROS 2GalacticGeochelone完整变更日志 [待校准&#64;1470]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Humble-Hawksbill.html">ROS 2Humble Hawksbill (代号'humble'; 2022年5月) [待校准&#64;4845]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Rolling-Ridley.html">ROS 2Rolling Ridley (代号'rolling'; 2020年6月) [待校准&#64;4929]</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Features.html">功能状态 [待校准&#64;9074]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Roadmap.html">路线图 [待校准&#64;45]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Feature-Ideas.html">特色创意 [待校准&#64;1123]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Governance.html">项目管理 [待校准&#64;10131]</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Governance/ROS2-TSC-Charter.html">ROS 2技术指导委员会章程 [待校准&#64;10280]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Governance/ROS2-TSC-Intake-process.html">ROS 2 TSC申请人摄入流程 [待校准&#64;10368]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Governance/How-To-Start-A-Community-Working-Group.html">如何成立社区工作组 [待校准&#64;10253]</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Marketing.html">营销材料 [待校准&#64;6193]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Related-Projects.html">相关项目 [待校准&#64;6209]</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Related-Projects/Intel-ROS2-Projects.html">[需手动修复的语法]IntelROS 2项目 [待校准&#64;6210]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Related-Projects/Nvidia-ROS2-Projects.html">[需手动修复的语法]NVIDIAROS 2项目 [待校准&#64;6228]</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Glossary.html">术语表 [待校准&#64;1217]</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ROS 2 documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../How-To-Guides.html">操作指南 [待校准&#64;204]</a> &raquo;</li>
+      <li>交叉编译 [待校准&#64;383]</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/ros2/ros2_documentation/blob/foxy/source/How-To-Guides/Cross-compilation.rst" class="fa fa-github"> 在 GitHub 上修改</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+
+
+  <div class="section" id="cross-compilation">
+<h1>交叉编译 <a class="reference external" href="http://localhost:3000/#/home?msgid=383">[待校准&#64;383]</a><a class="headerlink" href="#cross-compilation" title="永久链接至标题"></a></h1>
+<div class="contents local topic" id="table-of-contents">
+<p class="topic-title">目录 <a class="reference external" href="http://localhost:3000/#/home?msgid=210">[待校准&#64;210]</a></p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#cross-compile-tool" id="id1">交叉编译工具 [待校准&#64;386]</a></p></li>
+<li><p><a class="reference internal" href="#legacy-tool-instructions" id="id2">传统工具说明 [待校准&#64;388]</a></p>
+<ul>
+<li><p><a class="reference internal" href="#cmake-toolchain-file" id="id3">CMake工具链-文件 [待校准&#64;396]</a></p></li>
+<li><p><a class="reference internal" href="#target-file-system" id="id4">目标文件系统 [待校准&#64;413]</a></p></li>
+<li><p><a class="reference internal" href="#build-process" id="id5">构建流程 [待校准&#64;420]</a></p></li>
+<li><p><a class="reference internal" href="#cross-compiling-examples-for-arm" id="id6">Arm交叉编译示例 [待校准&#64;423]</a></p></li>
+<li><p><a class="reference internal" href="#automated-cross-compilation" id="id7">自动交叉编译 [待校准&#64;453]</a></p></li>
+<li><p><a class="reference internal" href="#cross-compiling-against-a-pre-built-ros-2" id="id8">针对预构建的ROS 2进行交叉编译 [待校准&#64;459]</a></p></li>
+<li><p><a class="reference internal" href="#run-on-the-target" id="id9">在目标上运行 [待校准&#64;466]</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<p>有关交叉编译的背景信息，请参见 <a class="reference internal" href="../Concepts/About-Cross-Compilation.html"><span class="doc">conceptual article</span></a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=384">[待校准&#64;384]</a></p>
+<p>本文档为您提供了如何交叉编译ROS 2软件堆栈的详细信息，并提供了基于Arm内核交叉编译到系统的示例。 <a class="reference external" href="http://localhost:3000/#/home?msgid=385">[待校准&#64;385]</a></p>
+<div class="section" id="cross-compile-tool">
+<h2>交叉编译工具 <a class="reference external" href="http://localhost:3000/#/home?msgid=386">[待校准&#64;386]</a><a class="headerlink" href="#cross-compile-tool" title="永久链接至标题"></a></h2>
+<p>使用该工具的说明在 <a class="reference external" href="https://github.com/ros-tooling/cross_compile">cross_compile package</a> 中。 <a class="reference external" href="http://localhost:3000/#/home?msgid=387">[待校准&#64;387]</a></p>
+</div>
+<div class="section" id="legacy-tool-instructions">
+<h2>传统工具说明 <a class="reference external" href="http://localhost:3000/#/home?msgid=388">[待校准&#64;388]</a><a class="headerlink" href="#legacy-tool-instructions" title="永久链接至标题"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>仅当您使用交叉编译工具的旧版本 ( <a class="reference external" href="https://github.com/ros-tooling/cross_compile/releases/tag/0.0.1">0.0.1</a> 版) 时，请按照以下步骤操作。对于所有其他目的，遵循 <a class="reference external" href="https://github.com/ros-tooling/cross_compile">cross_compile</a> 包装文件。 <a class="reference external" href="http://localhost:3000/#/home?msgid=389">[待校准&#64;389]</a></p>
+</div>
+<dl class="simple">
+<dt>尽管ROS 2是具有许多依赖项的丰富软件堆栈，但它主要使用两种不同类型的包: <a class="reference external" href="http://localhost:3000/#/home?msgid=390">[待校准&#64;390]</a></dt><dd><ul class="simple">
+<li><p>基于Python的软件，不需要交叉编译。 <a class="reference external" href="http://localhost:3000/#/home?msgid=391">[待校准&#64;391]</a></p></li>
+<li><p>基于CMake的软件，它提供了一种进行交叉编译的机制。 <a class="reference external" href="http://localhost:3000/#/home?msgid=392">[待校准&#64;392]</a></p></li>
+</ul>
+</dd>
+</dl>
+<p>此外，ROS 2软件堆栈是用 <a class="reference external" href="https://github.com/colcon/colcon-core">Colcon</a> 构建的， <a class="reference external" href="https://github.com/colcon/colcon-core">Colcon</a> 提供了一种机制，将参数转发到CMake实例，该实例用于作为ROS 2发行版一部分的每个包/库的单独构建。 <a class="reference external" href="http://localhost:3000/#/home?msgid=393">[待校准&#64;393]</a></p>
+<p>在本机构建ROS 2时，开发人员需要在编译作为ROS 2发行版一部分的包之前下载所有依赖项 (例如Python和其他库)。交叉编译时，需要使用相同的方法。开发人员必须首先拥有已安装所有依赖项的目标系统文件系统。 <a class="reference external" href="http://localhost:3000/#/home?msgid=394">[待校准&#64;394]</a></p>
+<p>本文档的下一节详细解释了使用 <a class="reference external" href="https://cmake.org/cmake/help/latest/manual/cmake-toolchains.7.html">cmake-toolchains</a> and the <a class="reference external" href="https://cmake.org/cmake/help/latest/variable/CMAKE_SYSROOT.html">CMAKE_SYSROOT</a> 特性交叉编译ROS 2。 <a class="reference external" href="http://localhost:3000/#/home?msgid=395">[待校准&#64;395]</a></p>
+<div class="section" id="cmake-toolchain-file">
+<h3>CMake工具链-文件 <a class="reference external" href="http://localhost:3000/#/home?msgid=396">[待校准&#64;396]</a><a class="headerlink" href="#cmake-toolchain-file" title="永久链接至标题"></a></h3>
+<p>CMake工具链文件是定义变量以配置CMake以进行交叉编译的文件。基本条目如下: <a class="reference external" href="http://localhost:3000/#/home?msgid=397">[待校准&#64;397]</a></p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">CMAKE_SYSTEM_NAME</span></code>: the target platform, e.g. <code class="docutils literal notranslate"><span class="pre">linux</span></code> <a class="reference external" href="http://localhost:3000/#/home?msgid=398">[待校准&#64;398]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CMAKE_SYSTEM_PROCESSOR</span></code>: the target architecture, e.g. <code class="docutils literal notranslate"><span class="pre">aarch64</span></code> or <code class="docutils literal notranslate"><span class="pre">arm</span></code> <a class="reference external" href="http://localhost:3000/#/home?msgid=399">[待校准&#64;399]</a></p></li>
+<li><p>[需手动修复的语法]``CMAKE_SYSROOT``:目标文件系统的路径 <a class="reference external" href="http://localhost:3000/#/home?msgid=400">[待校准&#64;400]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CMAKE_C_COMPILER</span></code>: the C cross-compiler, e.g. <code class="docutils literal notranslate"><span class="pre">aarch64-linux-gnu-gcc</span></code> <a class="reference external" href="http://localhost:3000/#/home?msgid=401">[待校准&#64;401]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CMAKE_CXX_COMPILER</span></code>: the C++ cross-compiler, e.g. <code class="docutils literal notranslate"><span class="pre">aarch64-linux-gnu-g++</span></code> <a class="reference external" href="http://localhost:3000/#/home?msgid=402">[待校准&#64;402]</a></p></li>
+<li><p>找到文件系统的``CMAKE_FIND_ROOT_PATH``: an alternative path used by the <code class="docutils literal notranslate"><span class="pre">find_*</span></code> command <a class="reference external" href="http://localhost:3000/#/home?msgid=403">[待校准&#64;403]</a></p></li>
+</ul>
+</div></blockquote>
+<p>交叉编译ROS 2时，需要设置以下选项: <a class="reference external" href="http://localhost:3000/#/home?msgid=404">[待校准&#64;404]</a></p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">CMAKE_FIND_ROOT_PATH</span></code>: the alternative path used by the <code class="docutils literal notranslate"><span class="pre">find_*</span></code> command, use it to specify the path to ROS 2 <code class="docutils literal notranslate"><span class="pre">/install</span></code> folder <a class="reference external" href="http://localhost:3000/#/home?msgid=405">[待校准&#64;405]</a></p></li>
+<li><p>[需手动修复的语法]``CMAKE_FIND_ROOT_PATH_MODE_*``: the search strategy for program,package,library, and include, usually: <code class="docutils literal notranslate"><span class="pre">NEVER</span></code> (look on the host-fs), <code class="docutils literal notranslate"><span class="pre">ONLY</span></code> (look on sysroot), and <code class="docutils literal notranslate"><span class="pre">BOTH</span></code>  (查看sysroot和host-fs) <a class="reference external" href="http://localhost:3000/#/home?msgid=406">[待校准&#64;406]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PYTHON_SOABI</span></code>: the index name of the python libraries generated by ROS 2, e.g. <code class="docutils literal notranslate"><span class="pre">cpython-36m-aarch64-linux-gnu</span></code> <a class="reference external" href="http://localhost:3000/#/home?msgid=407">[待校准&#64;407]</a></p></li>
+<li><p>[需手动修复的语法]``THREADS_PTHREAD_ARG &quot;0&quot; CACHE STRING &quot;Result from TRY_RUN&quot; FORCE``: Force the result of the <code class="docutils literal notranslate"><span class="pre">TRY_RUN</span></code> cmd到0 (成功)，因为二进制文件不能在主机系统上运行。 <a class="reference external" href="http://localhost:3000/#/home?msgid=408">[待校准&#64;408]</a></p></li>
+</ul>
+</div></blockquote>
+<p>工具链文件通过 <code class="docutils literal notranslate"><span class="pre">-DCMAKE_TOOLCHAIN_FILE=path/to/file</span></code> 参数提供给CMake。这也将 <code class="docutils literal notranslate"><span class="pre">CMAKE_CROSSCOMPILING</span></code> 变量设置为 <code class="docutils literal notranslate"><span class="pre">true</span></code> ，这可以被正在构建的软件使用。 <a class="reference external" href="http://localhost:3000/#/home?msgid=409">[待校准&#64;409]</a></p>
+<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">CMAKE_SYSROOT</span></code> 对ROS 2特别重要，因为包需要许多依赖项 (例如python、openssl、tcl、poco、本征3、。……)。将[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">CMAKE_SYSROOT</span></code> 设置为安装了所有依赖项的目标文件系统将允许CMake在交叉编译期间找到它们。 <a class="reference external" href="http://localhost:3000/#/home?msgid=410">[待校准&#64;410]</a></p>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>您可以在CMake <a class="reference external" href="https://cmake.org/cmake/help/latest/manual/cmake-toolchains.7.html">documentation</a> 页面找到更多信息。 <a class="reference external" href="http://localhost:3000/#/home?msgid=411">[待校准&#64;411]</a></p>
+</div>
+<p>下载ROS 2源文件时，仓库 <a class="reference external" href="https://github.com/ros-tooling/cross_compile">ros-tooling/cross_compile/cmake-toolchains</a> 有一个通用的工具链文件，可以单独下载。关于使用它的更多例子可以在 <a class="reference internal" href="#cross-compiling-examples-for-arm">Cross-compiling examples for Arm</a> 部分找到。 <a class="reference external" href="http://localhost:3000/#/home?msgid=412">[待校准&#64;412]</a></p>
+</div>
+<div class="section" id="target-file-system">
+<h3>目标文件系统 <a class="reference external" href="http://localhost:3000/#/home?msgid=413">[待校准&#64;413]</a><a class="headerlink" href="#target-file-system" title="永久链接至标题"></a></h3>
+<p>如前所述，ROS 2需要提供不同的库来交叉编译。 <a class="reference external" href="http://localhost:3000/#/home?msgid=414">[待校准&#64;414]</a></p>
+<dl class="simple">
+<dt>获取文件系统有多种方法: <a class="reference external" href="http://localhost:3000/#/home?msgid=415">[待校准&#64;415]</a></dt><dd><ul class="simple">
+<li><p>下载预构建的镜像 <a class="reference external" href="http://localhost:3000/#/home?msgid=416">[待校准&#64;416]</a></p></li>
+<li><p>在目标上安装依赖项并导出文件系统 (例如使用sshfs) <a class="reference external" href="http://localhost:3000/#/home?msgid=417">[待校准&#64;417]</a></p></li>
+<li><p>使用qemu + docker (或chroot) 在主机上生成文件系统。 <a class="reference external" href="http://localhost:3000/#/home?msgid=418">[待校准&#64;418]</a></p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>你可以找到如何使用Docker + qemu下 <a class="reference internal" href="#cross-compiling-examples-for-arm">Cross-compiling examples for Arm</a> 型材。 <a class="reference external" href="http://localhost:3000/#/home?msgid=419">[待校准&#64;419]</a></p>
+</div>
+</div>
+<div class="section" id="build-process">
+<h3>构建流程 <a class="reference external" href="http://localhost:3000/#/home?msgid=420">[待校准&#64;420]</a><a class="headerlink" href="#build-process" title="永久链接至标题"></a></h3>
+<p>构建过程类似于本机编译。唯一的区别是对 <code class="docutils literal notranslate"><span class="pre">Colcon</span></code> 的一个额外的参数来指定 <code class="docutils literal notranslate"><span class="pre">toolchain-file</span></code> : <a class="reference external" href="http://localhost:3000/#/home?msgid=421">[待校准&#64;421]</a></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>colcon build --merge-install <span class="se">\</span>
+    --cmake-force-configure <span class="se">\</span>
+    --cmake-args <span class="se">\</span>
+        -DCMAKE_TOOLCHAIN_FILE<span class="o">=</span><span class="s2">&quot;&lt;path_to_toolchain/toolchainfile.cmake&gt;&quot;</span>
+</pre></div>
+</div>
+<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">toolchain-file</span></code> 向CMake提供 <code class="docutils literal notranslate"><span class="pre">cross-compiler</span></code> 和 <code class="docutils literal notranslate"><span class="pre">target</span> <span class="pre">file-system</span></code> 的信息。在ROS 2的每个包中， <code class="docutils literal notranslate"><span class="pre">Colcon</span></code> 将使用给定的工具链文件调用CMake。 <a class="reference external" href="http://localhost:3000/#/home?msgid=422">[待校准&#64;422]</a></p>
+</div>
+<div class="section" id="cross-compiling-examples-for-arm">
+<h3>Arm交叉编译示例 <a class="reference external" href="http://localhost:3000/#/home?msgid=423">[待校准&#64;423]</a><a class="headerlink" href="#cross-compiling-examples-for-arm" title="永久链接至标题"></a></h3>
+<p>后 <a class="reference internal" href="../Installation/Ubuntu-Development-Setup.html"><span class="doc">downloading the ROS 2 source code</span></a> ，你可以添加交叉编译资产工作区通过 ''git克隆https://github.com/ros工装/cross_compile.git b 0.0.1 src/ros2/cross_compile ”。这些是关于如何交叉编译Arm内核的工作示例。 <a class="reference external" href="http://localhost:3000/#/home?msgid=424">[待校准&#64;424]</a></p>
+<dl class="simple">
+<dt>支持以下目标: <a class="reference external" href="http://localhost:3000/#/home?msgid=425">[待校准&#64;425]</a></dt><dd><ul class="simple">
+<li><p>Ubuntu-arm64: 可以用于任何ARMv8-A系统。 <a class="reference external" href="http://localhost:3000/#/home?msgid=426">[待校准&#64;426]</a></p></li>
+<li><p>Ubuntu-armhf: 可与任何基于现代ARMv7-A的系统一起使用。 <a class="reference external" href="http://localhost:3000/#/home?msgid=427">[待校准&#64;427]</a></p></li>
+</ul>
+</dd>
+<dt>这些是主要步骤: <a class="reference external" href="http://localhost:3000/#/home?msgid=428">[待校准&#64;428]</a></dt><dd><ul class="simple">
+<li><p>安装开发版本工具 <a class="reference external" href="http://localhost:3000/#/home?msgid=429">[待校准&#64;429]</a></p></li>
+<li><p>正在下载ROS 2源文件 <a class="reference external" href="http://localhost:3000/#/home?msgid=430">[待校准&#64;430]</a></p></li>
+<li><p>下载ROS 2交叉编译资产 <a class="reference external" href="http://localhost:3000/#/home?msgid=431">[待校准&#64;431]</a></p></li>
+<li><p>准备sysroot <a class="reference external" href="http://localhost:3000/#/home?msgid=432">[待校准&#64;432]</a></p></li>
+<li><p>交叉编译ROS 2软件堆栈 <a class="reference external" href="http://localhost:3000/#/home?msgid=433">[待校准&#64;433]</a></p></li>
+</ul>
+</dd>
+</dl>
+<p>接下来的部分将详细解释这些步骤中的每一个。要快速安装，请看一下 <a class="reference internal" href="#automated-cross-compilation">Automated Cross-compilation</a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=434">[待校准&#64;434]</a></p>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>这些步骤在Ubuntu 18.04 (仿生) 上进行了测试 <a class="reference external" href="http://localhost:3000/#/home?msgid=435">[待校准&#64;435]</a></p>
+</div>
+<div class="section" id="install-development-tools">
+<h4>1.安装开发版本工具 <a class="reference external" href="http://localhost:3000/#/home?msgid=436">[待校准&#64;436]</a><a class="headerlink" href="#install-development-tools" title="永久链接至标题"></a></h4>
+<p>此步骤类似于本机构建时。不同之处在于，一些库和工具不是必需的，因为它们将位于sysroot中。以下包需要 <a class="reference external" href="http://localhost:3000/#/home?msgid=437">[待校准&#64;437]</a></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt update <span class="o">&amp;&amp;</span> sudo apt install -y <span class="se">\</span>
+    cmake <span class="se">\</span>
+    git <span class="se">\</span>
+    wget <span class="se">\</span>
+    python3-pip <span class="se">\</span>
+    qemu-user-static <span class="se">\</span>
+    g++-aarch64-linux-gnu <span class="se">\</span>
+    g++-arm-linux-gnueabihf <span class="se">\</span>
+    pkg-config-aarch64-linux-gnu
+
+python3 -m pip install -U <span class="se">\</span>
+    vcstool <span class="se">\</span>
+    colcon-common-extensions
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>您可以通过pip安装vc凳和colcon-common-extension。这意味着您不需要添加额外的apt仓库。 <a class="reference external" href="http://localhost:3000/#/home?msgid=438">[待校准&#64;438]</a></p>
+</div>
+<p>Docker用于构建目标环境。按照官方 <a class="reference external" href="https://docs.docker.com/install/linux/docker-ce/ubuntu/">documentation</a> 进行安装。 <a class="reference external" href="http://localhost:3000/#/home?msgid=439">[待校准&#64;439]</a></p>
+</div>
+<div class="section" id="download-ros-2-source-code">
+<h4>2.下载ROS 2源文件代码 <a class="reference external" href="http://localhost:3000/#/home?msgid=440">[待校准&#64;440]</a><a class="headerlink" href="#download-ros-2-source-code" title="永久链接至标题"></a></h4>
+<p>然后创建工作区并下载ROS 2源文件: <a class="reference external" href="http://localhost:3000/#/home?msgid=441">[待校准&#64;441]</a></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir -p ~/cc_ws/ros2_ws/src
+<span class="nb">cd</span> ~/cc_ws/ros2_ws
+wget https://raw.githubusercontent.com/ros2/ros2/release-latest/ros2.repos
+vcs-import src &lt; ros2.repos
+git clone https://github.com/ros-tooling/cross_compile.git -b <span class="m">0</span>.0.1 src/ros2/cross_compile
+<span class="nb">cd</span> ..
+</pre></div>
+</div>
+</div>
+<div class="section" id="prepare-the-sysroot">
+<h4>3.准备sysroot <a class="reference external" href="http://localhost:3000/#/home?msgid=442">[待校准&#64;442]</a><a class="headerlink" href="#prepare-the-sysroot" title="永久链接至标题"></a></h4>
+<p>使用Docker和qemu构建具有所有ROS 2依赖项的arm Ubuntu映像: 将 <code class="docutils literal notranslate"><span class="pre">qemu-static</span></code> 二进制文件复制到工作区。它将用于使用docker在目标文件系统上安装ROS 2依赖项。 <a class="reference external" href="http://localhost:3000/#/home?msgid=443">[待校准&#64;443]</a></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir qemu-user-static
+cp /usr/bin/qemu-*-static qemu-user-static
+</pre></div>
+</div>
+<p>ROS 2的标准 <a class="reference internal" href="../Installation/Ubuntu-Development-Setup.html"><span class="doc">setup</span></a> 进程在arm docker中运行。多亏了 <code class="docutils literal notranslate"><span class="pre">qemu-static</span></code> ，这才有可能，它将模拟一个手臂机器。使用的基本映像是来自Docker Hub的Ubuntu仿生。 <a class="reference external" href="http://localhost:3000/#/home?msgid=444">[待校准&#64;444]</a></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker build -t arm_ros2:latest -f ros2_ws/src/ros2/cross_compile/sysroot/Dockerfile_ubuntu_arm .
+docker run --name arm_sysroot arm_ros2:latest
+</pre></div>
+</div>
+<p>将生成的容器导出到tarball并将其提取: <a class="reference external" href="http://localhost:3000/#/home?msgid=445">[待校准&#64;445]</a></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker container <span class="nb">export</span> -o sysroot_docker.tar arm_sysroot
+mkdir sysroot_docker
+tar -C sysroot_docker -xf sysroot_docker.tar lib usr opt etc
+docker rm arm_sysroot
+</pre></div>
+</div>
+<p>稍后可以将此容器用作虚拟目标，以运行创建的文件系统并运行例程代码。 <a class="reference external" href="http://localhost:3000/#/home?msgid=446">[待校准&#64;446]</a></p>
+</div>
+<div class="section" id="build">
+<h4>4.建造 <a class="reference external" href="http://localhost:3000/#/home?msgid=447">[待校准&#64;447]</a><a class="headerlink" href="#build" title="永久链接至标题"></a></h4>
+<p>设置通用工具链文件使用的变量 <a class="reference external" href="http://localhost:3000/#/home?msgid=448">[待校准&#64;448]</a></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">TARGET_ARCH</span><span class="o">=</span>aarch64
+<span class="nb">export</span> <span class="nv">TARGET_TRIPLE</span><span class="o">=</span>aarch64-linux-gnu
+<span class="nb">export</span> <span class="nv">CC</span><span class="o">=</span>/usr/bin/<span class="nv">$TARGET_TRIPLE</span>-gcc
+<span class="nb">export</span> <span class="nv">CXX</span><span class="o">=</span>/usr/bin/<span class="nv">$TARGET_TRIPLE</span>-g++
+<span class="nb">export</span> <span class="nv">CROSS_COMPILE</span><span class="o">=</span>/usr/bin/<span class="nv">$TARGET_TRIPLE</span>-
+<span class="nb">export</span> <span class="nv">SYSROOT</span><span class="o">=</span>~/cc_ws/sysroot_docker
+<span class="nb">export</span> <span class="nv">ROS2_INSTALL_PATH</span><span class="o">=</span>~/cc_ws/ros2_ws/install
+<span class="nb">export</span> <span class="nv">PYTHON_SOABI</span><span class="o">=</span>cpython-36m-<span class="nv">$TARGET_TRIPLE</span>
+</pre></div>
+</div>
+<p>以下包在交叉编译期间仍然会导致错误 (正在调查中)，必须暂时禁用。 <a class="reference external" href="http://localhost:3000/#/home?msgid=449">[待校准&#64;449]</a></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>touch <span class="se">\</span>
+    ros2_ws/src/ros2/rviz/COLCON_IGNORE <span class="se">\</span>
+    ros2_ws/src/ros-visualization/COLCON_IGNORE
+</pre></div>
+</div>
+<p>预建的 <code class="docutils literal notranslate"><span class="pre">Poco</span></code> 有一个已知的问题，它在主机系统上搜索 <code class="docutils literal notranslate"><span class="pre">libz</span></code> 和 <code class="docutils literal notranslate"><span class="pre">libpcre</span></code> ，而不是SYSROOT。作为目前的解决方法，请将两个库链接到主机的文件系统中。 <a class="reference external" href="http://localhost:3000/#/home?msgid=450">[待校准&#64;450]</a></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir -p /usr/lib/<span class="nv">$TARGET_TRIPLE</span>
+ln -s <span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>/sysroot_docker/lib/<span class="nv">$TARGET_TRIPLE</span>/libz.so.1 /usr/lib/<span class="nv">$TARGET_TRIPLE</span>/libz.so
+ln -s <span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>/sysroot_docker/lib/<span class="nv">$TARGET_TRIPLE</span>/libpcre.so.3 /usr/lib/<span class="nv">$TARGET_TRIPLE</span>/libpcre.so
+</pre></div>
+</div>
+<p>然后，使用colcon指定toolchain-file开始构建: <a class="reference external" href="http://localhost:3000/#/home?msgid=451">[待校准&#64;451]</a></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ros2_ws
+
+colcon build --merge-install <span class="se">\</span>
+    --cmake-force-configure <span class="se">\</span>
+    --cmake-args <span class="se">\</span>
+        -DCMAKE_VERBOSE_MAKEFILE:BOOL<span class="o">=</span>ON <span class="se">\</span>
+        -DCMAKE_TOOLCHAIN_FILE<span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span><span class="s2">/src/ros2/cross_compile/cmake-toolchains/generic_linux.cmake&quot;</span> <span class="se">\</span>
+        -DSECURITY<span class="o">=</span>ON
+</pre></div>
+</div>
+<p>成交!安装和构建目录将包含交叉编译的资产。 <a class="reference external" href="http://localhost:3000/#/home?msgid=452">[待校准&#64;452]</a></p>
+</div>
+</div>
+<div class="section" id="automated-cross-compilation">
+<h3>自动交叉编译 <a class="reference external" href="http://localhost:3000/#/home?msgid=453">[待校准&#64;453]</a><a class="headerlink" href="#automated-cross-compilation" title="永久链接至标题"></a></h3>
+<p>上述所有步骤也包含在Dockerfile中，可用于自动化/CI。 <a class="reference external" href="http://localhost:3000/#/home?msgid=454">[待校准&#64;454]</a></p>
+<p>首先，下载dockerfile并构建映像: <a class="reference external" href="http://localhost:3000/#/home?msgid=455">[待校准&#64;455]</a></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget https://raw.githubusercontent.com/ros-tooling/cross_compile/master/Dockerfile_cc_for_arm
+docker build -t ros2-crosscompiler:latest - &lt; Dockerfile_cc_for_arm
+</pre></div>
+</div>
+<p>现在使用以下命令运行映像 :( 这需要一段时间!) <a class="reference external" href="http://localhost:3000/#/home?msgid=456">[待校准&#64;456]</a></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run -it --name ros2_cc <span class="se">\</span>
+    -v /var/run/docker.sock:/var/run/docker.sock <span class="se">\</span>
+    ros2-crosscompiler:latest
+</pre></div>
+</div>
+<p>。。注意:-v /var/run/docker.sock允许我们在Docker中使用Docker。 <a class="reference external" href="http://localhost:3000/#/home?msgid=457">[待校准&#64;457]</a></p>
+<p>构建的结果将在 <code class="docutils literal notranslate"><span class="pre">ros2_ws</span></code> 目录中，该目录可以通过以下方式导出: <a class="reference external" href="http://localhost:3000/#/home?msgid=458">[待校准&#64;458]</a></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker cp ros2_cc:/root/cc_ws/ros2_ws .
+</pre></div>
+</div>
+</div>
+<div class="section" id="cross-compiling-against-a-pre-built-ros-2">
+<h3>针对预构建的ROS 2进行交叉编译 <a class="reference external" href="http://localhost:3000/#/home?msgid=459">[待校准&#64;459]</a><a class="headerlink" href="#cross-compiling-against-a-pre-built-ros-2" title="永久链接至标题"></a></h3>
+<p>可以跨编译包对预建ROS 2步骤类似以前 <a class="reference internal" href="#cross-compiling-examples-for-arm">Cross-compiling examples for Arm</a> 型材，以下修改: <a class="reference external" href="http://localhost:3000/#/home?msgid=460">[待校准&#64;460]</a></p>
+<p>无需下载ROS 2堆栈，只需使用包 (本例中为ros2示例) 和交叉编译资产填充工作区: <a class="reference external" href="http://localhost:3000/#/home?msgid=461">[待校准&#64;461]</a></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir -p ~/cc_ws/ros2_ws/src
+<span class="nb">cd</span> ~/cc_ws/ros2_ws/src
+git clone https://github.com/ros2/examples.git
+git clone https://github.com/ros-tooling/cross_compile.git -b <span class="m">0</span>.0.1
+<span class="nb">cd</span> ..
+</pre></div>
+</div>
+<p>生成和导出文件系统，如 <a class="reference internal" href="#prepare-the-sysroot">3. Prepare the sysroot</a> 中所述，但提供了 <code class="docutils literal notranslate"><span class="pre">Dockerfile_ubuntu_arm64_prebuilt</span></code> 。这些 <code class="docutils literal notranslate"><span class="pre">_prebuilt</span></code> Dockerfile将使用 <a class="reference internal" href="../Installation/Ubuntu-Install-Debians.html"><span class="doc">binary packages</span></a> 安装ROS 2，而不是从源文件构建。 <a class="reference external" href="http://localhost:3000/#/home?msgid=462">[待校准&#64;462]</a></p>
+<p>修改环境变量 <code class="docutils literal notranslate"><span class="pre">ROS2_INSTALL_PATH</span></code> 以指向安装目录: <a class="reference external" href="http://localhost:3000/#/home?msgid=463">[待校准&#64;463]</a></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">ROS2_INSTALL_PATH</span><span class="o">=</span>~/cc_ws/sysroot_docker/opt/ros/crystal
+</pre></div>
+</div>
+<p>在目标文件系统上获取 <code class="docutils literal notranslate"><span class="pre">setup.bash</span></code> 脚本: <a class="reference external" href="http://localhost:3000/#/home?msgid=464">[待校准&#64;464]</a></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> <span class="nv">$ROS2_INSTALL_PATH</span>/setup.bash
+</pre></div>
+</div>
+<p>然后，开始建立 <code class="docutils literal notranslate"><span class="pre">Colcon</span></code> 指定 <code class="docutils literal notranslate"><span class="pre">toolchain-file</span></code> : <a class="reference external" href="http://localhost:3000/#/home?msgid=465">[待校准&#64;465]</a></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>colcon build <span class="se">\</span>
+    --merge-install <span class="se">\</span>
+    --cmake-force-configure <span class="se">\</span>
+    --cmake-args <span class="se">\</span>
+        -DCMAKE_VERBOSE_MAKEFILE:BOOL<span class="o">=</span>ON <span class="se">\</span>
+        -DCMAKE_TOOLCHAIN_FILE<span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span><span class="s2">/src/cross_compile/cmake-toolchains/generic_linux.cmake&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="run-on-the-target">
+<h3>在目标上运行 <a class="reference external" href="http://localhost:3000/#/home?msgid=466">[待校准&#64;466]</a><a class="headerlink" href="#run-on-the-target" title="永久链接至标题"></a></h3>
+<p>在目标上复制文件系统或使用先前构建的docker映像: <a class="reference external" href="http://localhost:3000/#/home?msgid=467">[待校准&#64;467]</a></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run -it --rm -v <span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>/ros2_ws:/ros2_ws arm_ros2:latest
+</pre></div>
+</div>
+<p>资源环境: <a class="reference external" href="http://localhost:3000/#/home?msgid=468">[待校准&#64;468]</a></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> /ros2_ws/install/local_setup.bash
+</pre></div>
+</div>
+<p>运行一些C++ 或python示例: <a class="reference external" href="http://localhost:3000/#/home?msgid=469">[待校准&#64;469]</a></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 run demo_nodes_cpp listener <span class="p">&amp;</span>
+ros2 run demo_nodes_py talker
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Working-with-multiple-RMW-implementations.html" class="btn btn-neutral float-left" title="使用多个ROS 2中间件实现 [待校准@1068]" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="Releasing-a-ROS-2-package-with-bloom.html" class="btn btn-neutral float-right" title="发布带有bloom的ROS 2包 [待校准@937]" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2022, Open Robotics.</p>
+  </div>
+
+  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-17821189-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-17821189-2', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

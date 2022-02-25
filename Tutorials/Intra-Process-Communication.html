@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>高效的流程内通讯 [待校准@7051] &mdash; ROS 2 documentation  文档</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.ros.org/en/Tutorials/Intra-Process-Communication.html" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="使用ROS 1bridge用rosbag记录和回放话题数据 [待校准@7685]" href="Rosbag-with-ROS1-Bridge.html" />
+    <link rel="prev" title="具有托管生命周期的节点管理 [待校准@7369]" href="Managed-Nodes.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> ROS 2 documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Installation.html">安装 [待校准&#64;5690]</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Ubuntu-Development-Setup.html">在Ubuntu Linux上构建ROS 2 [待校准&#64;5886]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Ubuntu-Install-Binary.html">在Ubuntu Linux上安装ROS 2 [待校准&#64;5937]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Ubuntu-Install-Debians.html">通过Debian包安装ROS 2 [待校准&#64;5959]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/macOS-Development-Setup.html">在macOS上构建ROS 2 [待校准&#64;6117]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/macOS-Install-Binary.html">在macOS上安装ROS 2 [待校准&#64;6148]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Windows-Development-Setup.html">在Windows上构建ROS 2 [待校准&#64;5973]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Windows-Install-Binary.html">在Windows上安装ROS 2 [待校准&#64;6050]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Fedora-Development-Setup.html">在Fedora Linux上构建ROS 2 [待校准&#64;5836]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Latest-Development-Setup.html">安装最新的ROS 2开发版本 [待校准&#64;5840]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Maintaining-a-Source-Checkout.html">主源文件检出ROS 2Foxy [待校准&#64;5850]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Testing.html">用于测试的替代安装源 [待校准&#64;5873]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/DDS-Implementations.html">安装DDS实现 [待校准&#64;5717]</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Install-Connext-Security-Plugins.html">安装Connext安全插件 [待校准&#64;5768]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Install-Connext-University-Eval.html">安装大学或RTI Connext DDS的评估版本 [待校准&#64;5782]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Working-with-Eclipse-CycloneDDS.html">使用EclipseCycloneDDS [待校准&#64;5796]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Working-with-GurumNetworks-GurumDDS.html">与GurumNetworks GurumDDS合作 [待校准&#64;5812]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Working-with-eProsima-Fast-DDS.html">与eProsimaFast DDS合作 [待校准&#64;5829]</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Docs-Guide.html">文档指南</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../Tutorials.html">教程 [待校准&#64;6242]</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Configuring-ROS2-Environment.html">配置ROS 2环境 [待校准&#64;6646]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Turtlesim/Introducing-Turtlesim.html">介绍turtlesim和rqt [待校准&#64;8428]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Understanding-ROS2-Nodes.html">了解ROS 2节点 [待校准&#64;8733]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Topics/Understanding-ROS2-Topics.html">理解ROS 2话题 [待校准&#64;8368]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Services/Understanding-ROS2-Services.html">了解ROS 2服务 [待校准&#64;7742]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Parameters/Understanding-ROS2-Parameters.html">理解ROS 2参数 [待校准&#64;7371]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Understanding-ROS2-Actions.html">理解ROS 2动作 [待校准&#64;8684]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Rqt-Console/Using-Rqt-Console.html">使用rqt_控制台 [待校准&#64;7712]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Launch/CLI-Intro.html">介绍ROS 2launch [待校准&#64;7101]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ros2bag/Recording-And-Playing-Back-Data.html">记录和回放数据 [待校准&#64;7639]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Workspace/Creating-A-Workspace.html">创建工作空间 [待校准&#64;8836]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Creating-Your-First-ROS2-Package.html">创建您的第一个ROS 2包 [待校准&#64;6677]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Writing-A-Simple-Cpp-Publisher-And-Subscriber.html">编写简单的发布者和订阅者 (c ++) [待校准&#64;8905]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Writing-A-Simple-Py-Publisher-And-Subscriber.html">编写简单的发布者和订阅者 (Python) [待校准&#64;8992]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Writing-A-Simple-Cpp-Service-And-Client.html">编写简单的服务和客户端 (c ++) [待校准&#64;8953]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Writing-A-Simple-Py-Service-And-Client.html">编写简单的服务和客户端 (Python) [待校准&#64;9028]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Custom-ROS2-Interfaces.html">创建自定义ROS 2 msg 和 srv 文件 [待校准&#64;6739]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Single-Package-Define-And-Use-Interface.html">在ROS 2接口上扩展 [待校准&#64;7844]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Using-Parameters-In-A-Class-CPP.html">在类 (c ++) 中使用参数 [待校准&#64;8769]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Using-Parameters-In-A-Class-Python.html">在类中使用参数 (Python) [待校准&#64;8809]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Getting-Started-With-Ros2doctor.html">开始使用ros2doctor [待校准&#64;7010]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Pluginlib.html">创建和使用插件 (c ++) [待校准&#64;7411]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Actions/Creating-an-Action.html">创建动作 [待校准&#64;6271]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Actions/Writing-a-Cpp-Action-Server-Client.html">编写动作服务器和客户端 (c ++) [待校准&#64;6313]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Actions/Writing-a-Py-Action-Server-Client.html">编写动作服务器和客户端 (Python) [待校准&#64;6385]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Composition.html">在单个进程中组成多个节点 [待校准&#64;6594]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Colcon-Tutorial.html">使用colcon构建包 [待校准&#64;6535]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Launch/Launch-Main.html">Launch教程 [待校准&#64;7160]</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Launch/Creating-Launch-Files.html">创建launch文件 [待校准&#64;7122]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Launch/Launch-system.html">[需手动修复的语法]Launch/监控多节点[需手动修复的语法]Launch [待校准&#64;7174]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Launch/Using-Substitutions.html">在launch文件中使用替换 [待校准&#64;7297]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Launch/Using-Event-Handlers.html">在launch文件中使用事件处理程序 [待校准&#64;7201]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Launch/Using-ROS2-Launch-For-Large-Projects.html">在大型项目中使用ROS 2launch [待校准&#64;7234]</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Tf2/Tf2-Main.html">tf2教程 [待校准&#64;8078]</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Tf2/Introduction-To-Tf2.html">tf2简介 [待校准&#64;7994]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tf2/Writing-A-Tf2-Static-Broadcaster-Py.html">编写tf2静态广播器 (Python) [待校准&#64;8299]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tf2/Writing-A-Tf2-Static-Broadcaster-Cpp.html">编写tf2静态广播器 (c ++) [待校准&#64;8257]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tf2/Writing-A-Tf2-Broadcaster-Py.html">编写tf2广播器 (Python) [待校准&#64;8220]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tf2/Writing-A-Tf2-Broadcaster-Cpp.html">编写tf2广播器 (c ++) [待校准&#64;8181]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tf2/Writing-A-Tf2-Listener-Py.html">编写tf2监听程序 (Python) [待校准&#64;8251]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tf2/Writing-A-Tf2-Listener-Cpp.html">编写tf2监听程序 (c ++) [待校准&#64;8233]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tf2/Adding-A-Frame-Py.html">添加帧 (Python) [待校准&#64;7950]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tf2/Adding-A-Frame-Cpp.html">添加帧 (c ++) [待校准&#64;7914]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tf2/Learning-About-Tf2-And-Time-Py.html">学习tf2和时间 (Python) [待校准&#64;8040]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tf2/Learning-About-Tf2-And-Time-Cpp.html">学习tf2和时间 (c ++) [待校准&#64;8023]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tf2/Time-Travel-With-Tf2-Py.html">时间穿梭tf2 (Python) [待校准&#64;8130]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tf2/Time-Travel-With-Tf2-Cpp.html">时间穿梭带tf2 (C++) [待校准&#64;8105]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tf2/Debugging-Tf2-Problems.html">调试tf2问题 [待校准&#64;7956]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tf2/Quaternion-Fundamentals.html">四元数基金amentals [待校准&#64;8054]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.html">使用stamped数据类型与tf2_ros: MessageFilter [待校准&#64;8138]</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="URDF/URDF-Main.html">URDF教程 [待校准&#64;8607]</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="URDF/Building-a-Visual-Robot-Model-with-URDF-from-Scratch.html">从头开始用URDF构建视觉机器人模型 [待校准&#64;8556]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDF/Building-a-Movable-Robot-Model-with-URDF.html">用URDF建立可移动机器人模型 [待校准&#64;8534]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDF/Adding-Physical-and-Collision-Properties-to-a-URDF-Model.html">向URDF模型添加物理和碰撞属性 [待校准&#64;8487]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDF/Using-Xacro-to-Clean-Up-a-URDF-File.html">使用Xacro清理URDF文件 [待校准&#64;8635]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDF/Using-URDF-with-Robot-State-Publisher.html">将URDF与robot_state_发布者结合使用 [待校准&#64;8609]</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Topics/Topic-Statistics-Tutorial.html">ROS 2话题统计教程 (c ++) [待校准&#64;8311]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Discovery-Server/Discovery-Server.html">使用Fast DDS Discovery Server作为发现协议 [社区贡献] [待校准&#64;6879]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Allocator-Template-Tutorial.html">实现自定义内存分配器 [待校准&#64;6445]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Simulators/Webots/Setting-up-a-Robot-Simulation-Webots.html">设置机器人仿真 (Webots) [待校准&#64;7782]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Deploying-ROS-2-on-IBM-Cloud.html">IBM Cloud Kubernetes上的ROS2 [社区-贡献] [待校准&#64;6792]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Eclipse-Oxygen-with-ROS-2-and-rviz2.html">带有ROS 2和rviz2的Eclipse Oxygen [社区贡献] [待校准&#64;6947]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Building-Realtime-rt_preempt-kernel-for-ROS-2.html">为ROS 2构建实时Linux [社区-贡献] [待校准&#64;6514]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ros2bag/Recording-A-Bag-From-Your-Own-Node.html">从您自己的节点记录一个包 [待校准&#64;7554]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Building-ROS2-Package-with-eclipse-2021-06.html">使用eclipse 2021-06构建ROS 2包 [待校准&#64;6486]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Quality-of-Service.html">使用服务质量设置处理有损网络 [待校准&#64;7462]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Managed-Nodes.html">具有托管生命周期的节点管理 [待校准&#64;7369]</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">高效的流程内通讯 [待校准&#64;7051]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Rosbag-with-ROS1-Bridge.html">使用ROS 1bridge用rosbag记录和回放话题数据 [待校准&#64;7685]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Real-Time-Programming.html">ROS 2中的实时编程 [待校准&#64;7491]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dummy-robot-demo.html">尝试dummy robot例程 [待校准&#64;9056]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Logging-and-logger-configuration.html">日志和日志记录器配置例程 [待校准&#64;7322]</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../How-To-Guides.html">操作指南 [待校准&#64;204]</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Installation-Troubleshooting.html">安装故障诊断工具 [待校准&#64;535]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Developing-a-ROS-2-Package.html">开发ROS 2包 [待校准&#64;514]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Ament-CMake-Documentation.html">[需手动修复的语法]ament _ cmake用户文档 [待校准&#64;208]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Ament-CMake-Python-Documentation.html">[需手动修复的语法]ament _ cmake_python用户文档 [待校准&#64;360]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Launch-files-migration-guide.html">迁移launch文件ROS 1ROS 2 [待校准&#64;638]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Launch-file-different-formats.html">对ROS 2Launch文件使用Python、XML和YAML [待校准&#64;611]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Launching-composable-nodes.html">使用ROS 2launch到launch可组合节点 [待校准&#64;733]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Parameters-YAML-files-migration-guide.html">将YAML参数文件从ROS 1迁移到ROS 2 [待校准&#64;850]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Node-arguments.html">通过命令行将ROS参数传递给节点 [待校准&#64;746]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Sync-Vs-Async.html">同步与异步服务客户端 [待校准&#64;972]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/DDS-tuning.html">DDS调谐信息 [待校准&#64;470]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Overriding-QoS-Policies-For-Recording-And-Playback.html">rosbag2: 重载QoS策略 [待校准&#64;772]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Working-with-multiple-RMW-implementations.html">使用多个ROS 2中间件实现 [待校准&#64;1068]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Cross-compilation.html">交叉编译 [待校准&#64;383]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Releasing-a-ROS-2-package-with-bloom.html">发布带有bloom的ROS 2包 [待校准&#64;937]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Using-Python-Packages.html">将Python包与ROS 2结合使用 [待校准&#64;1011]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/RQt-Port-Plugin-Windows.html">将RQt插件移植到Windows [待校准&#64;862]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Run-2-nodes-in-single-or-separate-docker-containers.html">在Docker中运行ROS 2节点 [社区-贡献] [待校准&#64;959]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Package-maintainer-guide.html">ROS 2包维护者指南 [待校准&#64;785]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Building-a-Custom-Debian-Package.html">构建自定义Debian包 [待校准&#64;371]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Topics-Services-Actions.html">话题vs服务vsAction [待校准&#64;997]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Using-Variants.html">使用变体 [待校准&#64;1031]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Using-ros2-param.html">使用 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span></code> 命令行工具 [待校准&#64;1046]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/RQt-Source-Install.html">从源文件构建RQt [待校准&#64;883]</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../How-To-Guides/RQt-Source-Install-MacOS.html">在macOS上从源文件构建RQt [待校准&#64;908]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../How-To-Guides/RQt-Source-Install-Windows10.html">在Windows 10上从源文件构建RQt [待校准&#64;916]</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Concepts.html">概念 [待校准&#64;4938]</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Domain-ID.html">ROS_DOMAIN_ID [待校准&#64;5194]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Different-Middleware-Vendors.html">关于不同的ROS 2 DDS/RTPS供应商 [待校准&#64;5153]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Logging.html">关于日志和日志记录器配置 [待校准&#64;5325]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Quality-of-Service-Settings.html">关于服务质量设置 [待校准&#64;5369]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-ROS-2-Client-Libraries.html">关于ROS 2客户端库 [待校准&#64;5459]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-ROS-Interfaces.html">关于ROS 2接口 [待校准&#64;5526]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-ROS-2-Parameters.html">关于ROS 2中的参数 [待校准&#64;5490]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Executors.html">执行器 [待校准&#64;5227]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Topic-Statistics.html">关于话题统计 [待校准&#64;5671]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Command-Line-Tools.html">使用命令行工具进行自检 [待校准&#64;5091]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-RQt.html">RQt的概述和使用 [待校准&#64;5625]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Composition.html">关于组件 [待校准&#64;5119]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Catment.html">[需手动修复的语法]ament和catkin的混合研究 [待校准&#64;5019]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Cross-Compilation.html">关于交叉编译 [待校准&#64;5141]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Tf2.html">关于tf2 [待校准&#64;5653]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Build-System.html">关于构建系统 [待校准&#64;4969]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Internal-Interfaces.html">关于内部ROS 2接口 [待校准&#64;5265]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Middleware-Implementations.html">关于ROS 2中间件实现 [待校准&#64;5347]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Client-Interfaces.html">ROS 2客户端接口 (客户端库) [待校准&#64;5079]</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Contributing.html">贡献 [待校准&#64;9128]</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Contributing/Developer-Guide.html">ROS 2开发人员指南 [待校准&#64;9430]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Contributing/Code-Style-Language-Versions.html">代码样式和语言版本 [待校准&#64;9212]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Contributing/Quality-Guide.html">质量指南: 确保代码质量 [待校准&#64;10012]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Contributing/Migration-Guide.html">从ROS 1迁移指南 [待校准&#64;9780]</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Contributing/Migration-Guide-Python.html">来自ROS 1的Python迁移指南 [待校准&#64;10003]</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Contributing/Build-Farms.html">ROS Build Farms [待校准&#64;9167]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Contributing/Windows-Tips-and-Tricks.html">Windows提示和技巧 [待校准&#64;10105]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Contributing/Contributing-To-ROS-2-Documentation.html">为ROS 2文档做出贡献 [待校准&#64;9366]</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Contact.html">联系人 [待校准&#64;6167]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ROSCon-Content.html">ROSCon内容 [待校准&#64;105]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Releases.html">发行版 [待校准&#64;1233]</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Alpha-Overview.html">ROS 2 α 发行版本 (2015年8月-2016年10月) [待校准&#64;1306]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Beta1-Overview.html">贝塔1 (代号'Asphalt'; 2016年12月) [待校准&#64;1386]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Beta2-Overview.html">贝塔2 (代号'r2b2'; 2017年7月) [待校准&#64;1420]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Beta3-Overview.html">贝塔3 (代号'r2b3'; 2017年9月) [待校准&#64;1451]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Ardent-Apalone.html">ROS 2Ardent阿帕隆 (代号'ardent'; 2017年12月) [待校准&#64;4089]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Bouncy-Bolson.html">ROS 2 Bouncy Bolson (代号'bouncy'; 2018年6月) [待校准&#64;4130]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Crystal-Clemmys.html">ROS 2Crystal Clemmys (代号'crystal'; 2018年12月) [待校准&#64;4158]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Dashing-Diademata.html">ROS 2DashingDiademata (代号'dashing'; 2019年5月31日) [待校准&#64;4237]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Eloquent-Elusor.html">ROS 2EloquentElusor (代号'eloquent'; 2019年11月22日) [待校准&#64;4427]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Foxy-Fitzroy.html">ROS 2FoxyFitzroy (代号'foxy'; 2020年6月5日) [待校准&#64;4503]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Galactic-Geochelone.html">ROS 2GalacticGeochelone (代号'galactic'; 2021年5月) [待校准&#64;4649]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Galactic-Geochelone-Complete-Changelog.html">ROS 2GalacticGeochelone完整变更日志 [待校准&#64;1470]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Humble-Hawksbill.html">ROS 2Humble Hawksbill (代号'humble'; 2022年5月) [待校准&#64;4845]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Rolling-Ridley.html">ROS 2Rolling Ridley (代号'rolling'; 2020年6月) [待校准&#64;4929]</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Features.html">功能状态 [待校准&#64;9074]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Roadmap.html">路线图 [待校准&#64;45]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Feature-Ideas.html">特色创意 [待校准&#64;1123]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Governance.html">项目管理 [待校准&#64;10131]</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Governance/ROS2-TSC-Charter.html">ROS 2技术指导委员会章程 [待校准&#64;10280]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Governance/ROS2-TSC-Intake-process.html">ROS 2 TSC申请人摄入流程 [待校准&#64;10368]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Governance/How-To-Start-A-Community-Working-Group.html">如何成立社区工作组 [待校准&#64;10253]</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Marketing.html">营销材料 [待校准&#64;6193]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Related-Projects.html">相关项目 [待校准&#64;6209]</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Related-Projects/Intel-ROS2-Projects.html">[需手动修复的语法]IntelROS 2项目 [待校准&#64;6210]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Related-Projects/Nvidia-ROS2-Projects.html">[需手动修复的语法]NVIDIAROS 2项目 [待校准&#64;6228]</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Glossary.html">术语表 [待校准&#64;1217]</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ROS 2 documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../Tutorials.html">教程 [待校准&#64;6242]</a> &raquo;</li>
+      <li>高效的流程内通讯 [待校准&#64;7051]</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/ros2/ros2_documentation/blob/foxy/source/Tutorials/Intra-Process-Communication.rst" class="fa fa-github"> 在 GitHub 上修改</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+
+
+  <div class="section" id="efficient-intra-process-communication">
+<h1>高效的流程内通讯 <a class="reference external" href="http://localhost:3000/#/home?msgid=7051">[待校准&#64;7051]</a><a class="headerlink" href="#efficient-intra-process-communication" title="永久链接至标题"></a></h1>
+<div class="contents local topic" id="table-of-contents">
+<p class="topic-title">目录 <a class="reference external" href="http://localhost:3000/#/home?msgid=6446">[待校准&#64;6446]</a></p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#background" id="id1">背景 [待校准&#64;6276]</a></p></li>
+<li><p><a class="reference internal" href="#installing-the-demos" id="id2">安装例程 [待校准&#64;7054]</a></p></li>
+<li><p><a class="reference internal" href="#running-and-understanding-the-demos" id="id3">运行和理解例程 [待校准&#64;7057]</a></p></li>
+</ul>
+</div>
+<div class="section" id="background">
+<h2>背景 <a class="reference external" href="http://localhost:3000/#/home?msgid=6276">[待校准&#64;6276]</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
+<p>ROS应用程序类型调用y由单个  &quot;nodes&quot; 组成，它执行狭窄的任务，并与系统的其他部分分离。这促进故障隔离，更快开发版本、模块化和代码重用，但经常的性能。在ROS 1初步开发后，对节点有效组成的需求变得明显，并且开发了节点组。ROS 2旨在提高设计Nodelets解决一些基金ament问题需要重组节点。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7052">[待校准&#64;7052]</a></p>
+<p>在此例程中，我们将重点介绍如何通过分别定义节点，但在不更改节点代码或限制其功能的情况下将它们组合到不同的流程布局中来手动组成节点。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7053">[待校准&#64;7053]</a></p>
+</div>
+<div class="section" id="installing-the-demos">
+<h2>安装例程 <a class="reference external" href="http://localhost:3000/#/home?msgid=7054">[待校准&#64;7054]</a><a class="headerlink" href="#installing-the-demos" title="永久链接至标题"></a></h2>
+<p>有关安装ROS 2的详细信息，请参见 <a class="reference internal" href="../Installation.html"><span class="doc">installation instructions</span></a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7055">[待校准&#64;7055]</a></p>
+<p>如果您已经从包中安装了ROS 2，请确保您已经安装了 <code class="docutils literal notranslate"><span class="pre">ros-foxy-intra-process-demo</span></code> 。如果您从源文件下载了archive或构建的ROS 2，它将已经是安装的一部分。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7056">[待校准&#64;7056]</a></p>
+</div>
+<div class="section" id="running-and-understanding-the-demos">
+<h2>运行和理解例程 <a class="reference external" href="http://localhost:3000/#/home?msgid=7057">[待校准&#64;7057]</a><a class="headerlink" href="#running-and-understanding-the-demos" title="永久链接至标题"></a></h2>
+<p>有几个不同的例程: 有些玩具问题设计高亮特征内过程通讯s功能有些端到端例子使用OpenCV例程需要表明能力重组节点不同配置。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7058">[待校准&#64;7058]</a></p>
+<div class="section" id="the-two-node-pipeline-demo">
+<h3>双节点管道例程 <a class="reference external" href="http://localhost:3000/#/home?msgid=7059">[待校准&#64;7059]</a><a class="headerlink" href="#the-two-node-pipeline-demo" title="永久链接至标题"></a></h3>
+<p>此例程旨在显示进程内发布/订阅连接在发布和订阅 “std::unique_ptr” s时可能导致消息的零副本传输。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7060">[待校准&#64;7060]</a></p>
+<p>首先让我们看一下源文件: <a class="reference external" href="http://localhost:3000/#/home?msgid=7061">[待校准&#64;7061]</a></p>
+<p><a class="reference external" href="https://github.com/ros2">https://github.com/ros2</a>/例程/blob/狡猾/进程内 _ 例程/src/two_node_pipeline/two_node_pipeline.cpp <a class="reference external" href="http://localhost:3000/#/home?msgid=7062">[待校准&#64;7062]</a></p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;chrono&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;cinttypes&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;cstdio&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;memory&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;string&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;utility&gt;</span><span class="cp"></span>
+
+<span class="cp">#include</span> <span class="cpf">&quot;rclcpp/rclcpp.hpp&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;std_msgs/msg/int32.hpp&quot;</span><span class="cp"></span>
+
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="o">::</span><span class="n">chrono_literals</span><span class="p">;</span>
+
+<span class="c1">// Node that produces messages.</span>
+<span class="k">struct</span> <span class="nl">Producer</span> <span class="p">:</span> <span class="k">public</span> <span class="n">rclcpp</span><span class="o">::</span><span class="n">Node</span>
+<span class="p">{</span>
+  <span class="n">Producer</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="o">&amp;</span> <span class="n">name</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="o">&amp;</span> <span class="n">output</span><span class="p">)</span>
+  <span class="o">:</span> <span class="n">Node</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">rclcpp</span><span class="o">::</span><span class="n">NodeOptions</span><span class="p">().</span><span class="n">use_intra_process_comms</span><span class="p">(</span><span class="nb">true</span><span class="p">))</span>
+  <span class="p">{</span>
+    <span class="c1">// Create a publisher on the output topic.</span>
+    <span class="n">pub_</span> <span class="o">=</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">create_publisher</span><span class="o">&lt;</span><span class="n">std_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">Int32</span><span class="o">&gt;</span><span class="p">(</span><span class="n">output</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">weak_ptr</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">remove_pointer</span><span class="o">&lt;</span><span class="k">decltype</span><span class="p">(</span><span class="n">pub_</span><span class="p">.</span><span class="n">get</span><span class="p">())</span><span class="o">&gt;::</span><span class="n">type</span><span class="o">&gt;</span> <span class="n">captured_pub</span> <span class="o">=</span> <span class="n">pub_</span><span class="p">;</span>
+    <span class="c1">// Create a timer which publishes on the output topic at ~1Hz.</span>
+    <span class="k">auto</span> <span class="n">callback</span> <span class="o">=</span> <span class="p">[</span><span class="n">captured_pub</span><span class="p">]()</span> <span class="o">-&gt;</span> <span class="kt">void</span> <span class="p">{</span>
+        <span class="k">auto</span> <span class="n">pub_ptr</span> <span class="o">=</span> <span class="n">captured_pub</span><span class="p">.</span><span class="n">lock</span><span class="p">();</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">pub_ptr</span><span class="p">)</span> <span class="p">{</span>
+          <span class="k">return</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">static</span> <span class="kt">int32_t</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="n">std_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">Int32</span><span class="o">::</span><span class="n">UniquePtr</span> <span class="n">msg</span><span class="p">(</span><span class="k">new</span> <span class="n">std_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">Int32</span><span class="p">());</span>
+        <span class="n">msg</span><span class="o">-&gt;</span><span class="n">data</span> <span class="o">=</span> <span class="n">count</span><span class="o">++</span><span class="p">;</span>
+        <span class="n">printf</span><span class="p">(</span>
+          <span class="s">&quot;Published message with value: %d, and address: 0x%&quot;</span> <span class="n">PRIXPTR</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">msg</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">,</span>
+          <span class="k">reinterpret_cast</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="kt">uintptr_t</span><span class="o">&gt;</span><span class="p">(</span><span class="n">msg</span><span class="p">.</span><span class="n">get</span><span class="p">()));</span>
+        <span class="n">pub_ptr</span><span class="o">-&gt;</span><span class="n">publish</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">move</span><span class="p">(</span><span class="n">msg</span><span class="p">));</span>
+      <span class="p">};</span>
+    <span class="n">timer_</span> <span class="o">=</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">create_wall_timer</span><span class="p">(</span><span class="mi">1</span><span class="n">s</span><span class="p">,</span> <span class="n">callback</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="n">rclcpp</span><span class="o">::</span><span class="n">Publisher</span><span class="o">&lt;</span><span class="n">std_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">Int32</span><span class="o">&gt;::</span><span class="n">SharedPtr</span> <span class="n">pub_</span><span class="p">;</span>
+  <span class="n">rclcpp</span><span class="o">::</span><span class="n">TimerBase</span><span class="o">::</span><span class="n">SharedPtr</span> <span class="n">timer_</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="c1">// Node that consumes messages.</span>
+<span class="k">struct</span> <span class="nl">Consumer</span> <span class="p">:</span> <span class="k">public</span> <span class="n">rclcpp</span><span class="o">::</span><span class="n">Node</span>
+<span class="p">{</span>
+  <span class="n">Consumer</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="o">&amp;</span> <span class="n">name</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="o">&amp;</span> <span class="n">input</span><span class="p">)</span>
+  <span class="o">:</span> <span class="n">Node</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">rclcpp</span><span class="o">::</span><span class="n">NodeOptions</span><span class="p">().</span><span class="n">use_intra_process_comms</span><span class="p">(</span><span class="nb">true</span><span class="p">))</span>
+  <span class="p">{</span>
+    <span class="c1">// Create a subscription on the input topic which prints on receipt of new messages.</span>
+    <span class="n">sub_</span> <span class="o">=</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">create_subscription</span><span class="o">&lt;</span><span class="n">std_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">Int32</span><span class="o">&gt;</span><span class="p">(</span>
+      <span class="n">input</span><span class="p">,</span>
+      <span class="mi">10</span><span class="p">,</span>
+      <span class="p">[](</span><span class="n">std_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">Int32</span><span class="o">::</span><span class="n">UniquePtr</span> <span class="n">msg</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span>
+          <span class="s">&quot; Received message with value: %d, and address: 0x%&quot;</span> <span class="n">PRIXPTR</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">msg</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">,</span>
+          <span class="k">reinterpret_cast</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="kt">uintptr_t</span><span class="o">&gt;</span><span class="p">(</span><span class="n">msg</span><span class="p">.</span><span class="n">get</span><span class="p">()));</span>
+      <span class="p">});</span>
+  <span class="p">}</span>
+
+  <span class="n">rclcpp</span><span class="o">::</span><span class="n">Subscription</span><span class="o">&lt;</span><span class="n">std_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">Int32</span><span class="o">&gt;::</span><span class="n">SharedPtr</span> <span class="n">sub_</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span> <span class="n">argv</span><span class="p">[])</span>
+<span class="p">{</span>
+  <span class="n">setvbuf</span><span class="p">(</span><span class="n">stdout</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="n">_IONBF</span><span class="p">,</span> <span class="n">BUFSIZ</span><span class="p">);</span>
+  <span class="n">rclcpp</span><span class="o">::</span><span class="n">init</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span> <span class="n">argv</span><span class="p">);</span>
+  <span class="n">rclcpp</span><span class="o">::</span><span class="n">executors</span><span class="o">::</span><span class="n">SingleThreadedExecutor</span> <span class="n">executor</span><span class="p">;</span>
+
+  <span class="k">auto</span> <span class="n">producer</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">Producer</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;producer&quot;</span><span class="p">,</span> <span class="s">&quot;number&quot;</span><span class="p">);</span>
+  <span class="k">auto</span> <span class="n">consumer</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">Consumer</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;consumer&quot;</span><span class="p">,</span> <span class="s">&quot;number&quot;</span><span class="p">);</span>
+
+  <span class="n">executor</span><span class="p">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">producer</span><span class="p">);</span>
+  <span class="n">executor</span><span class="p">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">consumer</span><span class="p">);</span>
+  <span class="n">executor</span><span class="p">.</span><span class="n">spin</span><span class="p">();</span>
+
+  <span class="n">rclcpp</span><span class="o">::</span><span class="n">shutdown</span><span class="p">();</span>
+
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>通过查看 <code class="docutils literal notranslate"><span class="pre">main</span></code> 函数，您可以看到，我们有一个生产者和一个消费者节点，我们将它们添加到单线程执行程序中，然后调用spin。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7063">[待校准&#64;7063]</a></p>
+<p>如果您查看 <code class="docutils literal notranslate"><span class="pre">Producer</span></code> 结构中  &quot;producer&quot; 节点的实现，您可以看到，我们已经创建了一个发布  &quot;number&quot; 话题的出版商，以及一个周期调用y的计时器创建了一条新消息，打印出其在内存中的地址及其内容的值，然后将其发布。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7064">[待校准&#64;7064]</a></p>
+<p>[需手动修复的语法]  &quot;consumer&quot; 节点稍微简单一点，你可以在 <code class="docutils literal notranslate"><span class="pre">Consumer</span></code> 结构中看到它的实现，因为它只订阅  &quot;number&quot; 话题，并打印它收到的消息的地址和值。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7065">[待校准&#64;7065]</a></p>
+<p>预期是生产者将打印出地址和价值，而消费者将打印出匹配的地址和价值。这个例程表明进程内通讯确实有效，并且避免了不必要的拷贝，至少对于简单的图表是这样。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7066">[待校准&#64;7066]</a></p>
+<p>让我们通过执行 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">run</span> <span class="pre">intra_process_demo</span> <span class="pre">two_node_pipeline</span></code> 可执行文件来运行例程 (不要忘记先源文件安装文件): <a class="reference external" href="http://localhost:3000/#/home?msgid=7067">[待校准&#64;7067]</a></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ros2 run intra_process_demo two_node_pipeline
+Published message with value: <span class="m">0</span>, and address: 0x7fb02303faf0
+Published message with value: <span class="m">1</span>, and address: 0x7fb020cf0520
+ Received message with value: <span class="m">1</span>, and address: 0x7fb020cf0520
+Published message with value: <span class="m">2</span>, and address: 0x7fb020e12900
+ Received message with value: <span class="m">2</span>, and address: 0x7fb020e12900
+Published message with value: <span class="m">3</span>, and address: 0x7fb020cf0520
+ Received message with value: <span class="m">3</span>, and address: 0x7fb020cf0520
+Published message with value: <span class="m">4</span>, and address: 0x7fb020e12900
+ Received message with value: <span class="m">4</span>, and address: 0x7fb020e12900
+Published message with value: <span class="m">5</span>, and address: 0x7fb02303cea0
+ Received message with value: <span class="m">5</span>, and address: 0x7fb02303cea0
+<span class="o">[</span>...<span class="o">]</span>
+</pre></div>
+</div>
+<p>您会注意到的一件事是，消息以每秒约1的速度滴答作响。这是因为我们告诉计时器大约每秒触发一次。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7068">[待校准&#64;7068]</a></p>
+<p>此外，您可能已经注意到第一条消息 (值为 <code class="docutils literal notranslate"><span class="pre">0</span></code> ) 没有相应的 “接收消息...” 行。这是因为发布/订阅是  &quot;best effort&quot; ，我们没有启用任何类似  &quot;latching&quot; 的行为。这意味着，如果发布者在订阅建立之前发布消息，则订阅将不会收到该消息。此竞争条件可能导致前几条消息丢失。在这种情况下，由于它们每秒只出现一次，通常只有第一条消息丢失。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7069">[待校准&#64;7069]</a></p>
+<p>最后，您可以看到 “已发布消息...   &quot; and &quot; 收到消息...” 具有相同值的行也具有相同的地址。这表明正在接收的消息的地址与发布的地址相同，并且不是副本。这是因为我们发布并订阅了 “std::unique_ptr” s，它允许消息的所有权在系统中安全地移动。您也可以使用 “const &amp;  `` and `` std::shared_ptr” 发布和订阅，但在这种情况下不会发生零复制。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7070">[待校准&#64;7070]</a></p>
+</div>
+<div class="section" id="the-cyclic-pipeline-demo">
+<h3>循环管道例程 <a class="reference external" href="http://localhost:3000/#/home?msgid=7071">[待校准&#64;7071]</a><a class="headerlink" href="#the-cyclic-pipeline-demo" title="永久链接至标题"></a></h3>
+<p>此例程与前一个例程相似，但是该例程只使用一个消息实例，而不是生产者为每次迭代创建新消息。这是通过在图表中创建一个循环来实现的，并且通过在旋转执行程序之前外部发布其中一个节点来实现  &quot;kicking off&quot; 通讯: <a class="reference external" href="http://localhost:3000/#/home?msgid=7072">[待校准&#64;7072]</a></p>
+<p><a class="reference external" href="https://github.com/ros2">https://github.com/ros2</a>/例程/blob/狡猾/进程内 _ 例程/src/cyclic_pipeline/cyclic_pipeline.cpp <a class="reference external" href="http://localhost:3000/#/home?msgid=7073">[待校准&#64;7073]</a></p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;chrono&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;cinttypes&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;cstdio&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;memory&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;string&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;utility&gt;</span><span class="cp"></span>
+
+<span class="cp">#include</span> <span class="cpf">&quot;rclcpp/rclcpp.hpp&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;std_msgs/msg/int32.hpp&quot;</span><span class="cp"></span>
+
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="o">::</span><span class="n">chrono_literals</span><span class="p">;</span>
+
+<span class="c1">// This node receives an Int32, waits 1 second, then increments and sends it.</span>
+<span class="k">struct</span> <span class="nl">IncrementerPipe</span> <span class="p">:</span> <span class="k">public</span> <span class="n">rclcpp</span><span class="o">::</span><span class="n">Node</span>
+<span class="p">{</span>
+  <span class="n">IncrementerPipe</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="o">&amp;</span> <span class="n">name</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="o">&amp;</span> <span class="n">in</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="o">&amp;</span> <span class="n">out</span><span class="p">)</span>
+  <span class="o">:</span> <span class="n">Node</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">rclcpp</span><span class="o">::</span><span class="n">NodeOptions</span><span class="p">().</span><span class="n">use_intra_process_comms</span><span class="p">(</span><span class="nb">true</span><span class="p">))</span>
+  <span class="p">{</span>
+    <span class="c1">// Create a publisher on the output topic.</span>
+    <span class="n">pub</span> <span class="o">=</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">create_publisher</span><span class="o">&lt;</span><span class="n">std_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">Int32</span><span class="o">&gt;</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">weak_ptr</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">remove_pointer</span><span class="o">&lt;</span><span class="k">decltype</span><span class="p">(</span><span class="n">pub</span><span class="p">.</span><span class="n">get</span><span class="p">())</span><span class="o">&gt;::</span><span class="n">type</span><span class="o">&gt;</span> <span class="n">captured_pub</span> <span class="o">=</span> <span class="n">pub</span><span class="p">;</span>
+    <span class="c1">// Create a subscription on the input topic.</span>
+    <span class="n">sub</span> <span class="o">=</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">create_subscription</span><span class="o">&lt;</span><span class="n">std_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">Int32</span><span class="o">&gt;</span><span class="p">(</span>
+      <span class="n">in</span><span class="p">,</span>
+      <span class="mi">10</span><span class="p">,</span>
+      <span class="p">[</span><span class="n">captured_pub</span><span class="p">](</span><span class="n">std_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">Int32</span><span class="o">::</span><span class="n">UniquePtr</span> <span class="n">msg</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">auto</span> <span class="n">pub_ptr</span> <span class="o">=</span> <span class="n">captured_pub</span><span class="p">.</span><span class="n">lock</span><span class="p">();</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">pub_ptr</span><span class="p">)</span> <span class="p">{</span>
+          <span class="k">return</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="n">printf</span><span class="p">(</span>
+          <span class="s">&quot;Received message with value:         %d, and address: 0x%&quot;</span> <span class="n">PRIXPTR</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">msg</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">,</span>
+          <span class="k">reinterpret_cast</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="kt">uintptr_t</span><span class="o">&gt;</span><span class="p">(</span><span class="n">msg</span><span class="p">.</span><span class="n">get</span><span class="p">()));</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;  sleeping for 1 second...</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">rclcpp</span><span class="o">::</span><span class="n">sleep_for</span><span class="p">(</span><span class="mi">1</span><span class="n">s</span><span class="p">))</span> <span class="p">{</span>
+          <span class="k">return</span><span class="p">;</span>    <span class="c1">// Return if the sleep failed (e.g. on ctrl-c).</span>
+        <span class="p">}</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;  done.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+        <span class="n">msg</span><span class="o">-&gt;</span><span class="n">data</span><span class="o">++</span><span class="p">;</span>    <span class="c1">// Increment the message&#39;s data.</span>
+        <span class="n">printf</span><span class="p">(</span>
+          <span class="s">&quot;Incrementing and sending with value: %d, and address: 0x%&quot;</span> <span class="n">PRIXPTR</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">msg</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">,</span>
+          <span class="k">reinterpret_cast</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="kt">uintptr_t</span><span class="o">&gt;</span><span class="p">(</span><span class="n">msg</span><span class="p">.</span><span class="n">get</span><span class="p">()));</span>
+        <span class="n">pub_ptr</span><span class="o">-&gt;</span><span class="n">publish</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">move</span><span class="p">(</span><span class="n">msg</span><span class="p">));</span>    <span class="c1">// Send the message along to the output topic.</span>
+      <span class="p">});</span>
+  <span class="p">}</span>
+
+  <span class="n">rclcpp</span><span class="o">::</span><span class="n">Publisher</span><span class="o">&lt;</span><span class="n">std_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">Int32</span><span class="o">&gt;::</span><span class="n">SharedPtr</span> <span class="n">pub</span><span class="p">;</span>
+  <span class="n">rclcpp</span><span class="o">::</span><span class="n">Subscription</span><span class="o">&lt;</span><span class="n">std_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">Int32</span><span class="o">&gt;::</span><span class="n">SharedPtr</span> <span class="n">sub</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span> <span class="n">argv</span><span class="p">[])</span>
+<span class="p">{</span>
+  <span class="n">setvbuf</span><span class="p">(</span><span class="n">stdout</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="n">_IONBF</span><span class="p">,</span> <span class="n">BUFSIZ</span><span class="p">);</span>
+  <span class="n">rclcpp</span><span class="o">::</span><span class="n">init</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span> <span class="n">argv</span><span class="p">);</span>
+  <span class="n">rclcpp</span><span class="o">::</span><span class="n">executors</span><span class="o">::</span><span class="n">SingleThreadedExecutor</span> <span class="n">executor</span><span class="p">;</span>
+
+  <span class="c1">// Create a simple loop by connecting the in and out topics of two IncrementerPipe&#39;s.</span>
+  <span class="c1">// The expectation is that the address of the message being passed between them never changes.</span>
+  <span class="k">auto</span> <span class="n">pipe1</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">IncrementerPipe</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;pipe1&quot;</span><span class="p">,</span> <span class="s">&quot;topic1&quot;</span><span class="p">,</span> <span class="s">&quot;topic2&quot;</span><span class="p">);</span>
+  <span class="k">auto</span> <span class="n">pipe2</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">IncrementerPipe</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;pipe2&quot;</span><span class="p">,</span> <span class="s">&quot;topic2&quot;</span><span class="p">,</span> <span class="s">&quot;topic1&quot;</span><span class="p">);</span>
+  <span class="n">rclcpp</span><span class="o">::</span><span class="n">sleep_for</span><span class="p">(</span><span class="mi">1</span><span class="n">s</span><span class="p">);</span>  <span class="c1">// Wait for subscriptions to be established to avoid race conditions.</span>
+  <span class="c1">// Publish the first message (kicking off the cycle).</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">std_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">Int32</span><span class="o">&gt;</span> <span class="n">msg</span><span class="p">(</span><span class="k">new</span> <span class="n">std_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">Int32</span><span class="p">());</span>
+  <span class="n">msg</span><span class="o">-&gt;</span><span class="n">data</span> <span class="o">=</span> <span class="mi">42</span><span class="p">;</span>
+  <span class="n">printf</span><span class="p">(</span>
+    <span class="s">&quot;Published first message with value:  %d, and address: 0x%&quot;</span> <span class="n">PRIXPTR</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">msg</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">,</span>
+    <span class="k">reinterpret_cast</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="kt">uintptr_t</span><span class="o">&gt;</span><span class="p">(</span><span class="n">msg</span><span class="p">.</span><span class="n">get</span><span class="p">()));</span>
+  <span class="n">pipe1</span><span class="o">-&gt;</span><span class="n">pub</span><span class="o">-&gt;</span><span class="n">publish</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">move</span><span class="p">(</span><span class="n">msg</span><span class="p">));</span>
+
+  <span class="n">executor</span><span class="p">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">pipe1</span><span class="p">);</span>
+  <span class="n">executor</span><span class="p">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">pipe2</span><span class="p">);</span>
+  <span class="n">executor</span><span class="p">.</span><span class="n">spin</span><span class="p">();</span>
+
+  <span class="n">rclcpp</span><span class="o">::</span><span class="n">shutdown</span><span class="p">();</span>
+
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>与以前的例程不同，此例程仅使用一个节点，该节点使用不同的名称和配置实例化两次。图表最终是 <code class="docutils literal notranslate"><span class="pre">pipe1</span></code>  -&gt;  <code class="docutils literal notranslate"><span class="pre">pipe2</span></code>  -&gt;  <code class="docutils literal notranslate"><span class="pre">pipe1</span></code> ...循环。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7074">[待校准&#64;7074]</a></p>
+<p>“pipe1-&gt; 发布 (msg);” 行启动流程，但是从那时起，通过在自己的订阅调用中发布的每个调用在节点之间来回传递消息。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7075">[待校准&#64;7075]</a></p>
+<p>这里的期望是节点每秒来回传递消息一次，每次递增消息的值。因为消息作为 <code class="docutils literal notranslate"><span class="pre">unique_ptr</span></code> 被发布和订阅，所以在开始时创建的相同消息被持续使用。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7076">[待校准&#64;7076]</a></p>
+<p>为了测试这些期望，让我们运行它: <a class="reference external" href="http://localhost:3000/#/home?msgid=7077">[待校准&#64;7077]</a></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ros2 run intra_process_demo cyclic_pipeline
+Published first message with value:  <span class="m">42</span>, and address: 0x7fd2ce0a2bc0
+Received message with value:         <span class="m">42</span>, and address: 0x7fd2ce0a2bc0
+  sleeping <span class="k">for</span> <span class="m">1</span> second...
+  <span class="k">done</span>.
+Incrementing and sending with value: <span class="m">43</span>, and address: 0x7fd2ce0a2bc0
+Received message with value:         <span class="m">43</span>, and address: 0x7fd2ce0a2bc0
+  sleeping <span class="k">for</span> <span class="m">1</span> second...
+  <span class="k">done</span>.
+Incrementing and sending with value: <span class="m">44</span>, and address: 0x7fd2ce0a2bc0
+Received message with value:         <span class="m">44</span>, and address: 0x7fd2ce0a2bc0
+  sleeping <span class="k">for</span> <span class="m">1</span> second...
+  <span class="k">done</span>.
+Incrementing and sending with value: <span class="m">45</span>, and address: 0x7fd2ce0a2bc0
+Received message with value:         <span class="m">45</span>, and address: 0x7fd2ce0a2bc0
+  sleeping <span class="k">for</span> <span class="m">1</span> second...
+  <span class="k">done</span>.
+Incrementing and sending with value: <span class="m">46</span>, and address: 0x7fd2ce0a2bc0
+Received message with value:         <span class="m">46</span>, and address: 0x7fd2ce0a2bc0
+  sleeping <span class="k">for</span> <span class="m">1</span> second...
+  <span class="k">done</span>.
+Incrementing and sending with value: <span class="m">47</span>, and address: 0x7fd2ce0a2bc0
+Received message with value:         <span class="m">47</span>, and address: 0x7fd2ce0a2bc0
+  sleeping <span class="k">for</span> <span class="m">1</span> second...
+<span class="o">[</span>...<span class="o">]</span>
+</pre></div>
+</div>
+<p>从42开始，您应该会在每次迭代中看到不断增加的数字...因为42，并且在整个过程中，它重复使用相同的消息，因为指针地址所定义的例程不会改变，这避免了不必要的复制。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7078">[待校准&#64;7078]</a></p>
+</div>
+<div class="section" id="the-image-pipeline-demo">
+<h3>图像管道例程 <a class="reference external" href="http://localhost:3000/#/home?msgid=7079">[待校准&#64;7079]</a><a class="headerlink" href="#the-image-pipeline-demo" title="永久链接至标题"></a></h3>
+<p>在这个例程中，我们将使用OpenCV来捕获、注释，然后查看图像。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7080">[待校准&#64;7080]</a></p>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>如果您使用的是macOS，但这些示例不起作用，或者您收到了类似 <code class="docutils literal notranslate"><span class="pre">ddsi_conn_write</span> <span class="pre">failed</span> <span class="pre">-1</span></code> 的错误，那么您需要增加系统范围内的UDP数据包大小: <a class="reference external" href="http://localhost:3000/#/home?msgid=7081">[待校准&#64;7081]</a></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo sysctl -w net.inet.udp.recvspace<span class="o">=</span><span class="m">209715</span>
+$ sudo sysctl -w net.inet.udp.maxdgram<span class="o">=</span><span class="m">65500</span>
+</pre></div>
+</div>
+<p>重新启动后，这些更改将不会持续。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7082">[待校准&#64;7082]</a></p>
+</div>
+<div class="section" id="simple-pipeline">
+<h4>简单管道 <a class="reference external" href="http://localhost:3000/#/home?msgid=7083">[待校准&#64;7083]</a><a class="headerlink" href="#simple-pipeline" title="永久链接至标题"></a></h4>
+<p>首先，我们将有一个由三个节点组成的管道，排列如下:  <code class="docutils literal notranslate"><span class="pre">camera_node</span></code>  -&gt;  <code class="docutils literal notranslate"><span class="pre">watermark_node</span></code>  -&gt;  <code class="docutils literal notranslate"><span class="pre">image_view_node</span></code>  <a class="reference external" href="http://localhost:3000/#/home?msgid=7084">[待校准&#64;7084]</a></p>
+<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">camera_node</span></code> 从你电脑上的相机设备 <code class="docutils literal notranslate"><span class="pre">0</span></code> 读取，在图像上写一些信息并发布。 <code class="docutils literal notranslate"><span class="pre">watermark_node</span></code> 签署了[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">camera_node</span></code> 的输出，并在出版前增加了更多的文本。最后， <code class="docutils literal notranslate"><span class="pre">image_view_node</span></code> 订阅了 <code class="docutils literal notranslate"><span class="pre">watermark_node</span></code> 的输出，在图像上写了更多的文本，然后用 “cv::imshow” 将其可视化。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7085">[待校准&#64;7085]</a></p>
+<p>在每个节点中，正在发送或已经接收或两者的消息的地址被写入图像。水印和图像视图节点被设计为在不复制图像的情况下修改图像，因此只要节点处于相同的过程中，印在图像上的地址应该都是相同的如上所示，图表仍被组织在管道中。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7086">[待校准&#64;7086]</a></p>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>在某些系统上 (我们已经在Linux上看到过)，打印到屏幕上的地址可能不会改变。这是因为相同的唯一指针正在被重用。在这种情况下，管道仍在运行。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7087">[待校准&#64;7087]</a></p>
+</div>
+<p>让我们通过执行以下可执行文件来运行例程: <a class="reference external" href="http://localhost:3000/#/home?msgid=7088">[待校准&#64;7088]</a></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 run intra_process_demo image_pipeline_all_in_one
+</pre></div>
+</div>
+<p>你应该看到这样的东西: <a class="reference external" href="http://localhost:3000/#/home?msgid=7089">[待校准&#64;7089]</a></p>
+<a class="reference external image-reference" href="https://i.imgur.com/tqiIVgT.png"><img alt="" src="https://i.imgur.com/tqiIVgT.png" /></a>
+<p>您可以通过按空格键来暂停图像的渲染，也可以通过再次按空格键来恢复。你也可以按 <code class="docutils literal notranslate"><span class="pre">q</span></code> 或 <code class="docutils literal notranslate"><span class="pre">ESC</span></code> 退出。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7090">[待校准&#64;7090]</a></p>
+<p>如果暂停图像查看器，您应该能够比较写在图像上的地址，并看到它们是相同的。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7091">[待校准&#64;7091]</a></p>
+</div>
+<div class="section" id="pipeline-with-two-image-viewers">
+<h4>带有两个图像查看器的管道 <a class="reference external" href="http://localhost:3000/#/home?msgid=7092">[待校准&#64;7092]</a><a class="headerlink" href="#pipeline-with-two-image-viewers" title="永久链接至标题"></a></h4>
+<p>现在让我们看一个和上面一样的例子，除了它有两个图像视图节点。所有节点仍在同一进程中，但现在应显示两个图像视图窗口。(macOS用户注意: 您的图像视图窗口可能位于彼此之上)。让我们使用以下命令运行它: <a class="reference external" href="http://localhost:3000/#/home?msgid=7093">[待校准&#64;7093]</a></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 run intra_process_demo image_pipeline_with_two_image_view
+</pre></div>
+</div>
+<a class="reference external image-reference" href="https://i.imgur.com/iLIT02t.png"><img alt="" src="https://i.imgur.com/iLIT02t.png" /></a>
+<p>就像上一个示例一样，您可以使用空格键暂停渲染，然后再次按空格键继续。您可以停止更新以检查写入屏幕的指针。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7094">[待校准&#64;7094]</a></p>
+<p>如您在上面的示例图像中看到的，对于前两个条目，我们有一个具有所有指针相同的图像，然后是另一个具有与第一个图像相同的指针的图像，但是第二个图像上的最后一个指针是不同的。要理解为什么会发生这种情况，请考虑图的拓扑结构: <a class="reference external" href="http://localhost:3000/#/home?msgid=7095">[待校准&#64;7095]</a></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>camera_node -&gt; watermark_node -&gt; image_view_node
+                              -&gt; image_view_node2
+</pre></div>
+</div>
+<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">camera_node</span></code> 和 <code class="docutils literal notranslate"><span class="pre">watermark_node</span></code> 之间的链接可以使用相同的指针而不需要复制，因为只有一个进程内订阅应该传递消息。但是对于 <code class="docutils literal notranslate"><span class="pre">watermark_node</span></code> 和两个图像视图节点之间的联系，这种关系是一对多的，因此，如果图像视图节点使用 <code class="docutils literal notranslate"><span class="pre">unique_ptr</span></code> 调用，那么就不可能将相同指针的所有权传递给两者。然而，它可以被交付给他们中的一个。哪一个会得到原始指针是未定义的，而是最后一个要传递的指针。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7096">[待校准&#64;7096]</a></p>
+<p>请注意，图像视图节点未订阅 <code class="docutils literal notranslate"><span class="pre">unique_ptr</span></code> 调用back。相反，他们订阅了 <code class="docutils literal notranslate"><span class="pre">const</span> <span class="pre">shared_ptr</span></code> 。这意味着系统将相同的 <code class="docutils literal notranslate"><span class="pre">shared_ptr</span></code> 传递给两个调用。当处理第一个进程内订阅时，内部存储的 <code class="docutils literal notranslate"><span class="pre">unique_ptr</span></code> 被提升为 <code class="docutils literal notranslate"><span class="pre">shared_ptr</span></code> 。每个调用将获得同一消息的共享所有权。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7097">[待校准&#64;7097]</a></p>
+</div>
+<div class="section" id="pipeline-with-interprocess-viewer">
+<h4>带有进程间查看器的管道 <a class="reference external" href="http://localhost:3000/#/home?msgid=7098">[待校准&#64;7098]</a><a class="headerlink" href="#pipeline-with-interprocess-viewer" title="永久链接至标题"></a></h4>
+<p>正确的另一件重要事情是避免在进行进程间订阅时中断进程内零复制行为。为了测试这一点，我们可以运行第一个图像管道例程， <code class="docutils literal notranslate"><span class="pre">image_pipeline_all_in_one</span></code> ，然后运行独立 <code class="docutils literal notranslate"><span class="pre">image_view_node</span></code> 的实例 (不要忘记在终端中用 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">run</span> <span class="pre">intra_process_demo</span></code> 作为前缀)。这看起来像这样: <a class="reference external" href="http://localhost:3000/#/home?msgid=7099">[待校准&#64;7099]</a></p>
+<a class="reference external image-reference" href="https://i.imgur.com/MoWRH1u.png"><img alt="" src="https://i.imgur.com/MoWRH1u.png" /></a>
+<p>很难同时暂停两个图像，因此图像可能不会对齐，但需要注意的重要一点是， <code class="docutils literal notranslate"><span class="pre">image_pipeline_all_in_one</span></code> 图像视图为每个步骤显示相同的地址。这意味着即使订阅了外部视图，进程内的零副本也会保留。您还可以看到，进程间图像视图对于前两行文本和第三行文本中独立图像查看器的进程账号具有不同的进程账号。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7100">[待校准&#64;7100]</a></p>
+</div>
+</div>
+</div>
+</div>
+
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Managed-Nodes.html" class="btn btn-neutral float-left" title="具有托管生命周期的节点管理 [待校准@7369]" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="Rosbag-with-ROS1-Bridge.html" class="btn btn-neutral float-right" title="使用ROS 1bridge用rosbag记录和回放话题数据 [待校准@7685]" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2022, Open Robotics.</p>
+  </div>
+
+  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-17821189-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-17821189-2', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

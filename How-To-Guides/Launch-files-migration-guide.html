@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>迁移launch文件ROS 1ROS 2 [待校准@638] &mdash; ROS 2 documentation  文档</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.ros.org/en/How-To-Guides/Launch-files-migration-guide.html" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="对ROS 2Launch文件使用Python、XML和YAML [待校准@611]" href="Launch-file-different-formats.html" />
+    <link rel="prev" title="[需手动修复的语法]ament _ cmake_python用户文档 [待校准@360]" href="Ament-CMake-Python-Documentation.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> ROS 2 documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Installation.html">安装 [待校准&#64;5690]</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Ubuntu-Development-Setup.html">在Ubuntu Linux上构建ROS 2 [待校准&#64;5886]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Ubuntu-Install-Binary.html">在Ubuntu Linux上安装ROS 2 [待校准&#64;5937]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Ubuntu-Install-Debians.html">通过Debian包安装ROS 2 [待校准&#64;5959]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/macOS-Development-Setup.html">在macOS上构建ROS 2 [待校准&#64;6117]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/macOS-Install-Binary.html">在macOS上安装ROS 2 [待校准&#64;6148]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Windows-Development-Setup.html">在Windows上构建ROS 2 [待校准&#64;5973]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Windows-Install-Binary.html">在Windows上安装ROS 2 [待校准&#64;6050]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Fedora-Development-Setup.html">在Fedora Linux上构建ROS 2 [待校准&#64;5836]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Latest-Development-Setup.html">安装最新的ROS 2开发版本 [待校准&#64;5840]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Maintaining-a-Source-Checkout.html">主源文件检出ROS 2Foxy [待校准&#64;5850]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Testing.html">用于测试的替代安装源 [待校准&#64;5873]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/DDS-Implementations.html">安装DDS实现 [待校准&#64;5717]</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Install-Connext-Security-Plugins.html">安装Connext安全插件 [待校准&#64;5768]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Install-Connext-University-Eval.html">安装大学或RTI Connext DDS的评估版本 [待校准&#64;5782]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Working-with-Eclipse-CycloneDDS.html">使用EclipseCycloneDDS [待校准&#64;5796]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Working-with-GurumNetworks-GurumDDS.html">与GurumNetworks GurumDDS合作 [待校准&#64;5812]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Working-with-eProsima-Fast-DDS.html">与eProsimaFast DDS合作 [待校准&#64;5829]</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Docs-Guide.html">文档指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorials.html">教程 [待校准&#64;6242]</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Configuring-ROS2-Environment.html">配置ROS 2环境 [待校准&#64;6646]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Turtlesim/Introducing-Turtlesim.html">介绍turtlesim和rqt [待校准&#64;8428]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Understanding-ROS2-Nodes.html">了解ROS 2节点 [待校准&#64;8733]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Topics/Understanding-ROS2-Topics.html">理解ROS 2话题 [待校准&#64;8368]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Services/Understanding-ROS2-Services.html">了解ROS 2服务 [待校准&#64;7742]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Parameters/Understanding-ROS2-Parameters.html">理解ROS 2参数 [待校准&#64;7371]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Understanding-ROS2-Actions.html">理解ROS 2动作 [待校准&#64;8684]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Rqt-Console/Using-Rqt-Console.html">使用rqt_控制台 [待校准&#64;7712]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Launch/CLI-Intro.html">介绍ROS 2launch [待校准&#64;7101]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Ros2bag/Recording-And-Playing-Back-Data.html">记录和回放数据 [待校准&#64;7639]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Workspace/Creating-A-Workspace.html">创建工作空间 [待校准&#64;8836]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Creating-Your-First-ROS2-Package.html">创建您的第一个ROS 2包 [待校准&#64;6677]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Writing-A-Simple-Cpp-Publisher-And-Subscriber.html">编写简单的发布者和订阅者 (c ++) [待校准&#64;8905]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Writing-A-Simple-Py-Publisher-And-Subscriber.html">编写简单的发布者和订阅者 (Python) [待校准&#64;8992]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Writing-A-Simple-Cpp-Service-And-Client.html">编写简单的服务和客户端 (c ++) [待校准&#64;8953]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Writing-A-Simple-Py-Service-And-Client.html">编写简单的服务和客户端 (Python) [待校准&#64;9028]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Custom-ROS2-Interfaces.html">创建自定义ROS 2 msg 和 srv 文件 [待校准&#64;6739]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Single-Package-Define-And-Use-Interface.html">在ROS 2接口上扩展 [待校准&#64;7844]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Using-Parameters-In-A-Class-CPP.html">在类 (c ++) 中使用参数 [待校准&#64;8769]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Using-Parameters-In-A-Class-Python.html">在类中使用参数 (Python) [待校准&#64;8809]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Getting-Started-With-Ros2doctor.html">开始使用ros2doctor [待校准&#64;7010]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Pluginlib.html">创建和使用插件 (c ++) [待校准&#64;7411]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Actions/Creating-an-Action.html">创建动作 [待校准&#64;6271]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Actions/Writing-a-Cpp-Action-Server-Client.html">编写动作服务器和客户端 (c ++) [待校准&#64;6313]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Actions/Writing-a-Py-Action-Server-Client.html">编写动作服务器和客户端 (Python) [待校准&#64;6385]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Composition.html">在单个进程中组成多个节点 [待校准&#64;6594]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Colcon-Tutorial.html">使用colcon构建包 [待校准&#64;6535]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Launch/Launch-Main.html">Launch教程 [待校准&#64;7160]</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Launch/Creating-Launch-Files.html">创建launch文件 [待校准&#64;7122]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Launch/Launch-system.html">[需手动修复的语法]Launch/监控多节点[需手动修复的语法]Launch [待校准&#64;7174]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Launch/Using-Substitutions.html">在launch文件中使用替换 [待校准&#64;7297]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Launch/Using-Event-Handlers.html">在launch文件中使用事件处理程序 [待校准&#64;7201]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Launch/Using-ROS2-Launch-For-Large-Projects.html">在大型项目中使用ROS 2launch [待校准&#64;7234]</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Tf2/Tf2-Main.html">tf2教程 [待校准&#64;8078]</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Introduction-To-Tf2.html">tf2简介 [待校准&#64;7994]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Writing-A-Tf2-Static-Broadcaster-Py.html">编写tf2静态广播器 (Python) [待校准&#64;8299]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Writing-A-Tf2-Static-Broadcaster-Cpp.html">编写tf2静态广播器 (c ++) [待校准&#64;8257]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Writing-A-Tf2-Broadcaster-Py.html">编写tf2广播器 (Python) [待校准&#64;8220]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Writing-A-Tf2-Broadcaster-Cpp.html">编写tf2广播器 (c ++) [待校准&#64;8181]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Writing-A-Tf2-Listener-Py.html">编写tf2监听程序 (Python) [待校准&#64;8251]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Writing-A-Tf2-Listener-Cpp.html">编写tf2监听程序 (c ++) [待校准&#64;8233]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Adding-A-Frame-Py.html">添加帧 (Python) [待校准&#64;7950]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Adding-A-Frame-Cpp.html">添加帧 (c ++) [待校准&#64;7914]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Learning-About-Tf2-And-Time-Py.html">学习tf2和时间 (Python) [待校准&#64;8040]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Learning-About-Tf2-And-Time-Cpp.html">学习tf2和时间 (c ++) [待校准&#64;8023]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Time-Travel-With-Tf2-Py.html">时间穿梭tf2 (Python) [待校准&#64;8130]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Time-Travel-With-Tf2-Cpp.html">时间穿梭带tf2 (C++) [待校准&#64;8105]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Debugging-Tf2-Problems.html">调试tf2问题 [待校准&#64;7956]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Quaternion-Fundamentals.html">四元数基金amentals [待校准&#64;8054]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.html">使用stamped数据类型与tf2_ros: MessageFilter [待校准&#64;8138]</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/URDF/URDF-Main.html">URDF教程 [待校准&#64;8607]</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/URDF/Building-a-Visual-Robot-Model-with-URDF-from-Scratch.html">从头开始用URDF构建视觉机器人模型 [待校准&#64;8556]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/URDF/Building-a-Movable-Robot-Model-with-URDF.html">用URDF建立可移动机器人模型 [待校准&#64;8534]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/URDF/Adding-Physical-and-Collision-Properties-to-a-URDF-Model.html">向URDF模型添加物理和碰撞属性 [待校准&#64;8487]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/URDF/Using-Xacro-to-Clean-Up-a-URDF-File.html">使用Xacro清理URDF文件 [待校准&#64;8635]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/URDF/Using-URDF-with-Robot-State-Publisher.html">将URDF与robot_state_发布者结合使用 [待校准&#64;8609]</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Topics/Topic-Statistics-Tutorial.html">ROS 2话题统计教程 (c ++) [待校准&#64;8311]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Discovery-Server/Discovery-Server.html">使用Fast DDS Discovery Server作为发现协议 [社区贡献] [待校准&#64;6879]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Allocator-Template-Tutorial.html">实现自定义内存分配器 [待校准&#64;6445]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Simulators/Webots/Setting-up-a-Robot-Simulation-Webots.html">设置机器人仿真 (Webots) [待校准&#64;7782]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Deploying-ROS-2-on-IBM-Cloud.html">IBM Cloud Kubernetes上的ROS2 [社区-贡献] [待校准&#64;6792]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Eclipse-Oxygen-with-ROS-2-and-rviz2.html">带有ROS 2和rviz2的Eclipse Oxygen [社区贡献] [待校准&#64;6947]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Building-Realtime-rt_preempt-kernel-for-ROS-2.html">为ROS 2构建实时Linux [社区-贡献] [待校准&#64;6514]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Ros2bag/Recording-A-Bag-From-Your-Own-Node.html">从您自己的节点记录一个包 [待校准&#64;7554]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Building-ROS2-Package-with-eclipse-2021-06.html">使用eclipse 2021-06构建ROS 2包 [待校准&#64;6486]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Quality-of-Service.html">使用服务质量设置处理有损网络 [待校准&#64;7462]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Managed-Nodes.html">具有托管生命周期的节点管理 [待校准&#64;7369]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Intra-Process-Communication.html">高效的流程内通讯 [待校准&#64;7051]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Rosbag-with-ROS1-Bridge.html">使用ROS 1bridge用rosbag记录和回放话题数据 [待校准&#64;7685]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Real-Time-Programming.html">ROS 2中的实时编程 [待校准&#64;7491]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/dummy-robot-demo.html">尝试dummy robot例程 [待校准&#64;9056]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Logging-and-logger-configuration.html">日志和日志记录器配置例程 [待校准&#64;7322]</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../How-To-Guides.html">操作指南 [待校准&#64;204]</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Installation-Troubleshooting.html">安装故障诊断工具 [待校准&#64;535]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Developing-a-ROS-2-Package.html">开发ROS 2包 [待校准&#64;514]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ament-CMake-Documentation.html">[需手动修复的语法]ament _ cmake用户文档 [待校准&#64;208]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ament-CMake-Python-Documentation.html">[需手动修复的语法]ament _ cmake_python用户文档 [待校准&#64;360]</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">迁移launch文件ROS 1ROS 2 [待校准&#64;638]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Launch-file-different-formats.html">对ROS 2Launch文件使用Python、XML和YAML [待校准&#64;611]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Launching-composable-nodes.html">使用ROS 2launch到launch可组合节点 [待校准&#64;733]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Parameters-YAML-files-migration-guide.html">将YAML参数文件从ROS 1迁移到ROS 2 [待校准&#64;850]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Node-arguments.html">通过命令行将ROS参数传递给节点 [待校准&#64;746]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Sync-Vs-Async.html">同步与异步服务客户端 [待校准&#64;972]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DDS-tuning.html">DDS调谐信息 [待校准&#64;470]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Overriding-QoS-Policies-For-Recording-And-Playback.html">rosbag2: 重载QoS策略 [待校准&#64;772]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Working-with-multiple-RMW-implementations.html">使用多个ROS 2中间件实现 [待校准&#64;1068]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Cross-compilation.html">交叉编译 [待校准&#64;383]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Releasing-a-ROS-2-package-with-bloom.html">发布带有bloom的ROS 2包 [待校准&#64;937]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Using-Python-Packages.html">将Python包与ROS 2结合使用 [待校准&#64;1011]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RQt-Port-Plugin-Windows.html">将RQt插件移植到Windows [待校准&#64;862]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Run-2-nodes-in-single-or-separate-docker-containers.html">在Docker中运行ROS 2节点 [社区-贡献] [待校准&#64;959]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Package-maintainer-guide.html">ROS 2包维护者指南 [待校准&#64;785]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Building-a-Custom-Debian-Package.html">构建自定义Debian包 [待校准&#64;371]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Topics-Services-Actions.html">话题vs服务vsAction [待校准&#64;997]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Using-Variants.html">使用变体 [待校准&#64;1031]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Using-ros2-param.html">使用 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span></code> 命令行工具 [待校准&#64;1046]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RQt-Source-Install.html">从源文件构建RQt [待校准&#64;883]</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="RQt-Source-Install-MacOS.html">在macOS上从源文件构建RQt [待校准&#64;908]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="RQt-Source-Install-Windows10.html">在Windows 10上从源文件构建RQt [待校准&#64;916]</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Concepts.html">概念 [待校准&#64;4938]</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Domain-ID.html">ROS_DOMAIN_ID [待校准&#64;5194]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Different-Middleware-Vendors.html">关于不同的ROS 2 DDS/RTPS供应商 [待校准&#64;5153]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Logging.html">关于日志和日志记录器配置 [待校准&#64;5325]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Quality-of-Service-Settings.html">关于服务质量设置 [待校准&#64;5369]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-ROS-2-Client-Libraries.html">关于ROS 2客户端库 [待校准&#64;5459]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-ROS-Interfaces.html">关于ROS 2接口 [待校准&#64;5526]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-ROS-2-Parameters.html">关于ROS 2中的参数 [待校准&#64;5490]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Executors.html">执行器 [待校准&#64;5227]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Topic-Statistics.html">关于话题统计 [待校准&#64;5671]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Command-Line-Tools.html">使用命令行工具进行自检 [待校准&#64;5091]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-RQt.html">RQt的概述和使用 [待校准&#64;5625]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Composition.html">关于组件 [待校准&#64;5119]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Catment.html">[需手动修复的语法]ament和catkin的混合研究 [待校准&#64;5019]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Cross-Compilation.html">关于交叉编译 [待校准&#64;5141]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Tf2.html">关于tf2 [待校准&#64;5653]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Build-System.html">关于构建系统 [待校准&#64;4969]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Internal-Interfaces.html">关于内部ROS 2接口 [待校准&#64;5265]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Middleware-Implementations.html">关于ROS 2中间件实现 [待校准&#64;5347]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Client-Interfaces.html">ROS 2客户端接口 (客户端库) [待校准&#64;5079]</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Contributing.html">贡献 [待校准&#64;9128]</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Contributing/Developer-Guide.html">ROS 2开发人员指南 [待校准&#64;9430]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Contributing/Code-Style-Language-Versions.html">代码样式和语言版本 [待校准&#64;9212]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Contributing/Quality-Guide.html">质量指南: 确保代码质量 [待校准&#64;10012]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Contributing/Migration-Guide.html">从ROS 1迁移指南 [待校准&#64;9780]</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Contributing/Migration-Guide-Python.html">来自ROS 1的Python迁移指南 [待校准&#64;10003]</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Contributing/Build-Farms.html">ROS Build Farms [待校准&#64;9167]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Contributing/Windows-Tips-and-Tricks.html">Windows提示和技巧 [待校准&#64;10105]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Contributing/Contributing-To-ROS-2-Documentation.html">为ROS 2文档做出贡献 [待校准&#64;9366]</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Contact.html">联系人 [待校准&#64;6167]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ROSCon-Content.html">ROSCon内容 [待校准&#64;105]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Releases.html">发行版 [待校准&#64;1233]</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Alpha-Overview.html">ROS 2 α 发行版本 (2015年8月-2016年10月) [待校准&#64;1306]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Beta1-Overview.html">贝塔1 (代号'Asphalt'; 2016年12月) [待校准&#64;1386]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Beta2-Overview.html">贝塔2 (代号'r2b2'; 2017年7月) [待校准&#64;1420]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Beta3-Overview.html">贝塔3 (代号'r2b3'; 2017年9月) [待校准&#64;1451]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Ardent-Apalone.html">ROS 2Ardent阿帕隆 (代号'ardent'; 2017年12月) [待校准&#64;4089]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Bouncy-Bolson.html">ROS 2 Bouncy Bolson (代号'bouncy'; 2018年6月) [待校准&#64;4130]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Crystal-Clemmys.html">ROS 2Crystal Clemmys (代号'crystal'; 2018年12月) [待校准&#64;4158]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Dashing-Diademata.html">ROS 2DashingDiademata (代号'dashing'; 2019年5月31日) [待校准&#64;4237]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Eloquent-Elusor.html">ROS 2EloquentElusor (代号'eloquent'; 2019年11月22日) [待校准&#64;4427]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Foxy-Fitzroy.html">ROS 2FoxyFitzroy (代号'foxy'; 2020年6月5日) [待校准&#64;4503]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Galactic-Geochelone.html">ROS 2GalacticGeochelone (代号'galactic'; 2021年5月) [待校准&#64;4649]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Galactic-Geochelone-Complete-Changelog.html">ROS 2GalacticGeochelone完整变更日志 [待校准&#64;1470]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Humble-Hawksbill.html">ROS 2Humble Hawksbill (代号'humble'; 2022年5月) [待校准&#64;4845]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Rolling-Ridley.html">ROS 2Rolling Ridley (代号'rolling'; 2020年6月) [待校准&#64;4929]</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Features.html">功能状态 [待校准&#64;9074]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Roadmap.html">路线图 [待校准&#64;45]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Feature-Ideas.html">特色创意 [待校准&#64;1123]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Governance.html">项目管理 [待校准&#64;10131]</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Governance/ROS2-TSC-Charter.html">ROS 2技术指导委员会章程 [待校准&#64;10280]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Governance/ROS2-TSC-Intake-process.html">ROS 2 TSC申请人摄入流程 [待校准&#64;10368]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Governance/How-To-Start-A-Community-Working-Group.html">如何成立社区工作组 [待校准&#64;10253]</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Marketing.html">营销材料 [待校准&#64;6193]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Related-Projects.html">相关项目 [待校准&#64;6209]</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Related-Projects/Intel-ROS2-Projects.html">[需手动修复的语法]IntelROS 2项目 [待校准&#64;6210]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Related-Projects/Nvidia-ROS2-Projects.html">[需手动修复的语法]NVIDIAROS 2项目 [待校准&#64;6228]</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Glossary.html">术语表 [待校准&#64;1217]</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ROS 2 documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../How-To-Guides.html">操作指南 [待校准&#64;204]</a> &raquo;</li>
+      <li>迁移launch文件ROS 1ROS 2 [待校准&#64;638]</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/ros2/ros2_documentation/blob/foxy/source/How-To-Guides/Launch-files-migration-guide.rst" class="fa fa-github"> 在 GitHub 上修改</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+
+
+  <div class="section" id="migrating-launch-files-from-ros-1-to-ros-2">
+<span id="migratinglaunch"></span><h1>迁移launch文件ROS 1ROS 2 <a class="reference external" href="http://localhost:3000/#/home?msgid=638">[待校准&#64;638]</a><a class="headerlink" href="#migrating-launch-files-from-ros-1-to-ros-2" title="永久链接至标题"></a></h1>
+<div class="contents local topic" id="table-of-contents">
+<p class="topic-title">目录 <a class="reference external" href="http://localhost:3000/#/home?msgid=210">[待校准&#64;210]</a></p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#background" id="id9">背景 [待校准&#64;640]</a></p></li>
+<li><p><a class="reference internal" href="#migrating-tags-from-ros-1-to-ros-2" id="id10">将标签从ROS 1迁移到ROS 2 [待校准&#64;642]</a></p></li>
+<li><p><a class="reference internal" href="#new-tags-in-ros-2" id="id11">ROS 2中的新标签 [待校准&#64;709]</a></p></li>
+<li><p><a class="reference internal" href="#replacing-an-include-tag" id="id12">替换包含标签 [待校准&#64;718]</a></p></li>
+<li><p><a class="reference internal" href="#substitutions" id="id13">替换 [待校准&#64;722]</a></p></li>
+<li><p><a class="reference internal" href="#id8" id="id14">类型推理规则 [待校准&#64;658]</a></p></li>
+</ul>
+</div>
+<p>本指南介绍了如何编写XMLlaunch文件以便于从ROS 1迁移。 <a class="reference external" href="http://localhost:3000/#/home?msgid=639">[待校准&#64;639]</a></p>
+<div class="section" id="background">
+<h2>背景 <a class="reference external" href="http://localhost:3000/#/home?msgid=640">[待校准&#64;640]</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
+<p>对ROS 2launch系统及其Python API的描述可以在 <a class="reference internal" href="../Tutorials/Launch/Launch-system.html"><span class="doc">Launch System tutorial</span></a> 中找到。 <a class="reference external" href="http://localhost:3000/#/home?msgid=641">[待校准&#64;641]</a></p>
+</div>
+<div class="section" id="migrating-tags-from-ros-1-to-ros-2">
+<h2>将标签从ROS 1迁移到ROS 2 <a class="reference external" href="http://localhost:3000/#/home?msgid=642">[待校准&#64;642]</a><a class="headerlink" href="#migrating-tags-from-ros-1-to-ros-2" title="永久链接至标题"></a></h2>
+<div class="section" id="launch">
+<h3>launch <a class="reference external" href="http://localhost:3000/#/home?msgid=643">[待校准&#64;643]</a><a class="headerlink" href="#launch" title="永久链接至标题"></a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://wiki.ros.org/roslaunch/XML/launch">Available in ROS 1</a>.</p></li>
+<li><p>[需手动修复的语法]``launch`` is根元素任何ROS 2launchXML文件。 <a class="reference external" href="http://localhost:3000/#/home?msgid=645">[待校准&#64;645]</a></p></li>
+</ul>
+</div>
+<div class="section" id="node">
+<h3>节点 <a class="reference external" href="http://localhost:3000/#/home?msgid=646">[待校准&#64;646]</a><a class="headerlink" href="#node" title="永久链接至标题"></a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://wiki.ros.org/roslaunch/XML/node">Available in ROS 1</a>.</p></li>
+<li><p>[需手动修复的语法]Launch是一个新节点。 <a class="reference external" href="http://localhost:3000/#/home?msgid=648">[待校准&#64;648]</a></p></li>
+<li><dl class="simple">
+<dt>与ROS 1的区别: <a class="reference external" href="http://localhost:3000/#/home?msgid=649">[待校准&#64;649]</a></dt><dd><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> attribute is now <code class="docutils literal notranslate"><span class="pre">exec</span></code>. <a class="reference external" href="http://localhost:3000/#/home?msgid=650">[待校准&#64;650]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ns</span></code> attribute is now <code class="docutils literal notranslate"><span class="pre">namespace</span></code>. <a class="reference external" href="http://localhost:3000/#/home?msgid=651">[待校准&#64;651]</a></p></li>
+<li><p>以下属性不可用:  <code class="docutils literal notranslate"><span class="pre">machine</span></code> 、 <code class="docutils literal notranslate"><span class="pre">respawn_delay</span></code> 、 <code class="docutils literal notranslate"><span class="pre">clear_params</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=652">[待校准&#64;652]</a></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="section" id="example">
+<h4>示例 <a class="reference external" href="http://localhost:3000/#/home?msgid=653">[待校准&#64;653]</a><a class="headerlink" href="#example" title="永久链接至标题"></a></h4>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;launch&gt;</span>
+   <span class="nt">&lt;node</span> <span class="na">pkg=</span><span class="s">&quot;demo_nodes_cpp&quot;</span> <span class="na">exec=</span><span class="s">&quot;talker&quot;</span><span class="nt">/&gt;</span>
+   <span class="nt">&lt;node</span> <span class="na">pkg=</span><span class="s">&quot;demo_nodes_cpp&quot;</span> <span class="na">exec=</span><span class="s">&quot;listener&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/launch&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="param">
+<h3>参数 <a class="reference external" href="http://localhost:3000/#/home?msgid=654">[待校准&#64;654]</a><a class="headerlink" href="#param" title="永久链接至标题"></a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://wiki.ros.org/roslaunch/XML/param">Available in ROS 1</a>.</p></li>
+<li><p>用于将参数传递给节点。 <a class="reference external" href="http://localhost:3000/#/home?msgid=656">[待校准&#64;656]</a></p></li>
+<li><p>ROS 2中没有全局参数概念。因此，它只能嵌套在 <code class="docutils literal notranslate"><span class="pre">node</span></code> 标签中使用。ROS 2不支持某些属性:  <code class="docutils literal notranslate"><span class="pre">type</span></code> 、 <code class="docutils literal notranslate"><span class="pre">textfile</span></code> 、 <code class="docutils literal notranslate"><span class="pre">binfile</span></code> 、 <code class="docutils literal notranslate"><span class="pre">executable</span></code> 、 <code class="docutils literal notranslate"><span class="pre">command</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=657">[待校准&#64;657]</a></p></li>
+</ul>
+<div class="section" id="id1">
+<h4>示例 <a class="reference external" href="http://localhost:3000/#/home?msgid=653">[待校准&#64;653]</a><a class="headerlink" href="#id1" title="永久链接至标题"></a></h4>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;launch&gt;</span>
+   <span class="nt">&lt;node</span> <span class="na">pkg=</span><span class="s">&quot;demo_nodes_cpp&quot;</span> <span class="na">exec=</span><span class="s">&quot;parameter_event&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">&quot;foo&quot;</span> <span class="na">value=</span><span class="s">&quot;5&quot;</span><span class="nt">/&gt;</span>
+   <span class="nt">&lt;/node&gt;</span>
+<span class="nt">&lt;/launch&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="type-inference-rules">
+<h4>类型推理规则 <a class="reference external" href="http://localhost:3000/#/home?msgid=658">[待校准&#64;658]</a><a class="headerlink" href="#type-inference-rules" title="永久链接至标题"></a></h4>
+<p>以下是一些如何编写参数的示例: <a class="reference external" href="http://localhost:3000/#/home?msgid=659">[待校准&#64;659]</a></p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;node</span> <span class="na">pkg=</span><span class="s">&quot;my_package&quot;</span> <span class="na">exec=</span><span class="s">&quot;my_executable&quot;</span> <span class="na">name=</span><span class="s">&quot;my_node&quot;</span><span class="nt">&gt;</span>
+   <span class="c">&lt;!--A string parameter with value &quot;1&quot;--&gt;</span>
+   <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">&quot;a_string&quot;</span> <span class="na">value=</span><span class="s">&quot;&#39;1&#39;&quot;</span><span class="nt">/&gt;</span>
+   <span class="c">&lt;!--A integer parameter with value 1--&gt;</span>
+   <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">&quot;an_int&quot;</span> <span class="na">value=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
+   <span class="c">&lt;!--A float parameter with value 1.0--&gt;</span>
+   <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">&quot;a_float&quot;</span> <span class="na">value=</span><span class="s">&quot;1.0&quot;</span><span class="nt">/&gt;</span>
+   <span class="c">&lt;!--A string parameter with value &quot;asd&quot;--&gt;</span>
+   <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">&quot;another_string&quot;</span> <span class="na">value=</span><span class="s">&quot;asd&quot;</span><span class="nt">/&gt;</span>
+   <span class="c">&lt;!--Another string parameter, with value &quot;asd&quot;--&gt;</span>
+   <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">&quot;string_with_same_value_as_above&quot;</span> <span class="na">value=</span><span class="s">&quot;&#39;asd&#39;&quot;</span><span class="nt">/&gt;</span>
+   <span class="c">&lt;!--Another string parameter, with value &quot;&#39;asd&#39;&quot;--&gt;</span>
+   <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">&quot;quoted_string&quot;</span> <span class="na">value=</span><span class="s">&quot;\&#39;asd\&#39;&quot;</span><span class="nt">/&gt;</span>
+   <span class="c">&lt;!--A list of strings, with value [&quot;asd&quot;, &quot;bsd&quot;, &quot;csd&quot;]--&gt;</span>
+   <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">&quot;list_of_strings&quot;</span> <span class="na">value=</span><span class="s">&quot;asd, bsd, csd&quot;</span> <span class="na">value-sep=</span><span class="s">&quot;, &quot;</span><span class="nt">/&gt;</span>
+   <span class="c">&lt;!--A list of ints, with value [1, 2, 3]--&gt;</span>
+   <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">&quot;list_of_ints&quot;</span> <span class="na">value=</span><span class="s">&quot;1,2,3&quot;</span> <span class="na">value-sep=</span><span class="s">&quot;,&quot;</span><span class="nt">/&gt;</span>
+   <span class="c">&lt;!--Another list of strings, with value [&quot;1&quot;, &quot;2&quot;, &quot;3&quot;]--&gt;</span>
+   <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">&quot;another_list_of_strings&quot;</span> <span class="na">value=</span><span class="s">&quot;&#39;1&#39;;&#39;2&#39;;&#39;3&#39;&quot;</span> <span class="na">value-sep=</span><span class="s">&quot;;&quot;</span><span class="nt">/&gt;</span>
+   <span class="c">&lt;!--A list of strings using an strange separator, with value [&quot;1&quot;, &quot;2&quot;, &quot;3&quot;]--&gt;</span>
+   <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">&quot;strange_separator&quot;</span> <span class="na">value=</span><span class="s">&quot;&#39;1&#39;//&#39;2&#39;//&#39;3&#39;&quot;</span> <span class="na">value-sep=</span><span class="s">&quot;//&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/node&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="parameter-grouping">
+<h4>参数分组 <a class="reference external" href="http://localhost:3000/#/home?msgid=660">[待校准&#64;660]</a><a class="headerlink" href="#parameter-grouping" title="永久链接至标题"></a></h4>
+<p>在ROS 2中，允许嵌入 <code class="docutils literal notranslate"><span class="pre">param</span></code> 标签。例如: <a class="reference external" href="http://localhost:3000/#/home?msgid=661">[待校准&#64;661]</a></p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;node</span> <span class="na">pkg=</span><span class="s">&quot;my_package&quot;</span> <span class="na">exec=</span><span class="s">&quot;my_executable&quot;</span> <span class="na">name=</span><span class="s">&quot;my_node&quot;</span> <span class="na">ns=</span><span class="s">&quot;/an_absoulute_ns&quot;</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">&quot;group1&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">&quot;group2&quot;</span><span class="nt">&gt;</span>
+         <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">&quot;my_param&quot;</span> <span class="na">value=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;/param&gt;</span>
+      <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">&quot;another_param&quot;</span> <span class="na">value=</span><span class="s">&quot;2&quot;</span><span class="nt">/&gt;</span>
+   <span class="nt">&lt;/param&gt;</span>
+<span class="nt">&lt;/node&gt;</span>
+</pre></div>
+</div>
+<p>这将创建两个参数: <a class="reference external" href="http://localhost:3000/#/home?msgid=662">[待校准&#64;662]</a></p>
+<ul class="simple">
+<li><p>A <code class="docutils literal notranslate"><span class="pre">group1.group2.my_param</span></code> 价值 <code class="docutils literal notranslate"><span class="pre">1</span></code> 主办节点 <code class="docutils literal notranslate"><span class="pre">/an_absolute_ns/my_node</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=663">[待校准&#64;663]</a></p></li>
+<li><p>A <code class="docutils literal notranslate"><span class="pre">group1.another_param</span></code> 价值 <code class="docutils literal notranslate"><span class="pre">2</span></code> 主办节点 <code class="docutils literal notranslate"><span class="pre">/an_absolute_ns/my_node</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=664">[待校准&#64;664]</a></p></li>
+</ul>
+<p>也可以使用完整参数名称: <a class="reference external" href="http://localhost:3000/#/home?msgid=665">[待校准&#64;665]</a></p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;node</span> <span class="na">pkg=</span><span class="s">&quot;my_package&quot;</span> <span class="na">exec=</span><span class="s">&quot;my_executable&quot;</span> <span class="na">name=</span><span class="s">&quot;my_node&quot;</span> <span class="na">ns=</span><span class="s">&quot;/an_absoulute_ns&quot;</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">&quot;group1.group2.my_param&quot;</span> <span class="na">value=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
+   <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">&quot;group1.another_param&quot;</span> <span class="na">value=</span><span class="s">&quot;2&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/node&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="rosparam">
+<h3>rosparam <a class="reference external" href="http://localhost:3000/#/home?msgid=666">[待校准&#64;666]</a><a class="headerlink" href="#rosparam" title="永久链接至标题"></a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://wiki.ros.org/roslaunch/XML/rosparam">Available in ROS 1</a>.</p></li>
+<li><p>从yaml文件加载参数。 <a class="reference external" href="http://localhost:3000/#/home?msgid=668">[待校准&#64;668]</a></p></li>
+<li><p>已替换 <code class="docutils literal notranslate"><span class="pre">from</span></code> 属性 <code class="docutils literal notranslate"><span class="pre">param</span></code> 标签。 <a class="reference external" href="http://localhost:3000/#/home?msgid=669">[待校准&#64;669]</a></p></li>
+</ul>
+<div class="section" id="id2">
+<h4>示例 <a class="reference external" href="http://localhost:3000/#/home?msgid=653">[待校准&#64;653]</a><a class="headerlink" href="#id2" title="永久链接至标题"></a></h4>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;node</span> <span class="na">pkg=</span><span class="s">&quot;my_package&quot;</span> <span class="na">exec=</span><span class="s">&quot;my_executable&quot;</span> <span class="na">name=</span><span class="s">&quot;my_node&quot;</span> <span class="na">ns=</span><span class="s">&quot;/an_absoulute_ns&quot;</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;param</span> <span class="na">from=</span><span class="s">&quot;/path/to/file&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/node&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="remap">
+<h3>重新映射 <a class="reference external" href="http://localhost:3000/#/home?msgid=670">[待校准&#64;670]</a><a class="headerlink" href="#remap" title="永久链接至标题"></a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://wiki.ros.org/roslaunch/XML/remap">Available in ROS 1</a>.</p></li>
+<li><p>用于将重新映射规则传递给节点。 <a class="reference external" href="http://localhost:3000/#/home?msgid=672">[待校准&#64;672]</a></p></li>
+<li><p>它只能在 <code class="docutils literal notranslate"><span class="pre">node</span></code> 标签内使用。 <a class="reference external" href="http://localhost:3000/#/home?msgid=673">[待校准&#64;673]</a></p></li>
+</ul>
+<div class="section" id="id3">
+<h4>示例 <a class="reference external" href="http://localhost:3000/#/home?msgid=653">[待校准&#64;653]</a><a class="headerlink" href="#id3" title="永久链接至标题"></a></h4>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;launch&gt;</span>
+   <span class="nt">&lt;node</span> <span class="na">pkg=</span><span class="s">&quot;demo_nodes_cpp&quot;</span> <span class="na">exec=</span><span class="s">&quot;talker&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;remap</span> <span class="na">from=</span><span class="s">&quot;chatter&quot;</span> <span class="na">to=</span><span class="s">&quot;my_topic&quot;</span><span class="nt">/&gt;</span>
+   <span class="nt">&lt;/node&gt;</span>
+   <span class="nt">&lt;node</span> <span class="na">pkg=</span><span class="s">&quot;demo_nodes_cpp&quot;</span> <span class="na">exec=</span><span class="s">&quot;listener&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;remap</span> <span class="na">from=</span><span class="s">&quot;chatter&quot;</span> <span class="na">to=</span><span class="s">&quot;my_topic&quot;</span><span class="nt">/&gt;</span>
+   <span class="nt">&lt;/node&gt;</span>
+<span class="nt">&lt;/launch&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="include">
+<h3>包括 <a class="reference external" href="http://localhost:3000/#/home?msgid=674">[待校准&#64;674]</a><a class="headerlink" href="#include" title="永久链接至标题"></a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://wiki.ros.org/roslaunch/XML/include">Available in ROS 1</a>.</p></li>
+<li><p>允许包含另一个launch文件。 <a class="reference external" href="http://localhost:3000/#/home?msgid=676">[待校准&#64;676]</a></p></li>
+<li><dl class="simple">
+<dt>与ROS 1的区别: <a class="reference external" href="http://localhost:3000/#/home?msgid=649">[待校准&#64;649]</a></dt><dd><ul>
+<li><p>在ROS 1中可用，包含内容的范围。在ROS 2中，不是。Nest包括在 <code class="docutils literal notranslate"><span class="pre">group</span></code> 标签中，以确定它们的范围。 <a class="reference external" href="http://localhost:3000/#/home?msgid=677">[待校准&#64;677]</a></p></li>
+<li><p>[需手动修复的语法]``ns`` attribute is not supported. See example of <code class="docutils literal notranslate"><span class="pre">push-ros-namespace</span></code> tag的变通方法。 <a class="reference external" href="http://localhost:3000/#/home?msgid=678">[待校准&#64;678]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">arg</span></code> tags nested in an <code class="docutils literal notranslate"><span class="pre">include</span></code> tag don't support conditionals (<code class="docutils literal notranslate"><span class="pre">if</span></code> or <code class="docutils literal notranslate"><span class="pre">unless</span></code>). <a class="reference external" href="http://localhost:3000/#/home?msgid=679">[待校准&#64;679]</a></p></li>
+<li><p>不支持嵌套的 <code class="docutils literal notranslate"><span class="pre">env</span></code> 标签。可以用 <code class="docutils literal notranslate"><span class="pre">set_env</span></code> 和 <code class="docutils literal notranslate"><span class="pre">unset_env</span></code> 代替。 <a class="reference external" href="http://localhost:3000/#/home?msgid=680">[待校准&#64;680]</a></p></li>
+<li><p>不支持 <code class="docutils literal notranslate"><span class="pre">clear_params</span></code> 和 <code class="docutils literal notranslate"><span class="pre">pass_all_args</span></code> 的属性。 <a class="reference external" href="http://localhost:3000/#/home?msgid=681">[待校准&#64;681]</a></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="section" id="examples">
+<h4>示例 <a class="reference external" href="http://localhost:3000/#/home?msgid=682">[待校准&#64;682]</a><a class="headerlink" href="#examples" title="永久链接至标题"></a></h4>
+<p>见 <a class="reference internal" href="#replacing-an-include-tag">Replacing an include tag</a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=683">[待校准&#64;683]</a></p>
+</div>
+</div>
+<div class="section" id="arg">
+<h3>arg <a class="reference external" href="http://localhost:3000/#/home?msgid=684">[待校准&#64;684]</a><a class="headerlink" href="#arg" title="永久链接至标题"></a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://wiki.ros.org/roslaunch/XML/arg">Available in ROS 1</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">arg</span></code> is used for declaring a launch argument, or to pass an argument when using <code class="docutils literal notranslate"><span class="pre">include</span></code> tags. <a class="reference external" href="http://localhost:3000/#/home?msgid=686">[待校准&#64;686]</a></p></li>
+<li><dl class="simple">
+<dt>与ROS 1的区别: <a class="reference external" href="http://localhost:3000/#/home?msgid=649">[待校准&#64;649]</a></dt><dd><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> attribute is not allowed. Use <code class="docutils literal notranslate"><span class="pre">let</span></code> tag。 <a class="reference external" href="http://localhost:3000/#/home?msgid=687">[待校准&#64;687]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">doc</span></code> is now <code class="docutils literal notranslate"><span class="pre">description</span></code>. <a class="reference external" href="http://localhost:3000/#/home?msgid=688">[待校准&#64;688]</a></p></li>
+<li><p>当嵌套在 <code class="docutils literal notranslate"><span class="pre">include</span></code> 标签中时， <code class="docutils literal notranslate"><span class="pre">if</span></code> 和 <code class="docutils literal notranslate"><span class="pre">unless</span></code> 的属性是不允许的。 <a class="reference external" href="http://localhost:3000/#/home?msgid=689">[待校准&#64;689]</a></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="section" id="id4">
+<h4>示例 <a class="reference external" href="http://localhost:3000/#/home?msgid=653">[待校准&#64;653]</a><a class="headerlink" href="#id4" title="永久链接至标题"></a></h4>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;launch&gt;</span>
+   <span class="nt">&lt;arg</span> <span class="na">name=</span><span class="s">&quot;topic_name&quot;</span> <span class="na">default=</span><span class="s">&quot;chatter&quot;</span><span class="nt">/&gt;</span>
+   <span class="nt">&lt;node</span> <span class="na">pkg=</span><span class="s">&quot;demo_nodes_cpp&quot;</span> <span class="na">exec=</span><span class="s">&quot;talker&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;remap</span> <span class="na">from=</span><span class="s">&quot;chatter&quot;</span> <span class="na">to=</span><span class="s">&quot;$(var topic_name)&quot;</span><span class="nt">/&gt;</span>
+   <span class="nt">&lt;/node&gt;</span>
+   <span class="nt">&lt;node</span> <span class="na">pkg=</span><span class="s">&quot;demo_nodes_cpp&quot;</span> <span class="na">exec=</span><span class="s">&quot;listener&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;remap</span> <span class="na">from=</span><span class="s">&quot;chatter&quot;</span> <span class="na">to=</span><span class="s">&quot;$(var topic_name)&quot;</span><span class="nt">/&gt;</span>
+   <span class="nt">&lt;/node&gt;</span>
+<span class="nt">&lt;/launch&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="passing-an-argument-via-the-command-line">
+<h4>通过命令行传递参数 <a class="reference external" href="http://localhost:3000/#/home?msgid=690">[待校准&#64;690]</a><a class="headerlink" href="#passing-an-argument-via-the-command-line" title="永久链接至标题"></a></h4>
+<p>见 <a class="reference internal" href="../Tutorials/Launch/Launch-system.html"><span class="doc">ROS 2 launch tutorial</span></a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=691">[待校准&#64;691]</a></p>
+</div>
+</div>
+<div class="section" id="env">
+<h3>环境 <a class="reference external" href="http://localhost:3000/#/home?msgid=692">[待校准&#64;692]</a><a class="headerlink" href="#env" title="永久链接至标题"></a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://wiki.ros.org/roslaunch/XML/env">Available in ROS 1</a>.</p></li>
+<li><p>设置环境变量。 <a class="reference external" href="http://localhost:3000/#/home?msgid=694">[待校准&#64;694]</a></p></li>
+<li><dl class="simple">
+<dt>它已被 <code class="docutils literal notranslate"><span class="pre">env</span></code> 、 <code class="docutils literal notranslate"><span class="pre">set_env</span></code> 和 <code class="docutils literal notranslate"><span class="pre">unset_env</span></code> 取代: <a class="reference external" href="http://localhost:3000/#/home?msgid=695">[待校准&#64;695]</a></dt><dd><ul>
+<li><p>不支持``env`` can only be used nested in a <code class="docutils literal notranslate"><span class="pre">node</span></code> or <code class="docutils literal notranslate"><span class="pre">executable</span></code> tag. <code class="docutils literal notranslate"><span class="pre">if</span></code> and <code class="docutils literal notranslate"><span class="pre">unless</span></code> tags。 <a class="reference external" href="http://localhost:3000/#/home?msgid=696">[待校准&#64;696]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">set_env</span></code> can be nested within the root tag <code class="docutils literal notranslate"><span class="pre">launch</span></code> or in <code class="docutils literal notranslate"><span class="pre">group</span></code> tags. It accepts the same attributes as <code class="docutils literal notranslate"><span class="pre">env</span></code>, and also <code class="docutils literal notranslate"><span class="pre">if</span></code> and <code class="docutils literal notranslate"><span class="pre">unless</span></code> tags. <a class="reference external" href="http://localhost:3000/#/home?msgid=697">[待校准&#64;697]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">unset_env</span></code> unsets an environment variable. It accepts a <code class="docutils literal notranslate"><span class="pre">name</span></code> attribute和条件句。 <a class="reference external" href="http://localhost:3000/#/home?msgid=698">[待校准&#64;698]</a></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="section" id="id5">
+<h4>示例 <a class="reference external" href="http://localhost:3000/#/home?msgid=653">[待校准&#64;653]</a><a class="headerlink" href="#id5" title="永久链接至标题"></a></h4>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;launch&gt;</span>
+   <span class="nt">&lt;set_env</span> <span class="na">name=</span><span class="s">&quot;MY_ENV_VAR&quot;</span> <span class="na">value=</span><span class="s">&quot;MY_VALUE&quot;</span> <span class="na">if=</span><span class="s">&quot;CONDITION_A&quot;</span><span class="nt">/&gt;</span>
+   <span class="nt">&lt;set_env</span> <span class="na">name=</span><span class="s">&quot;ANOTHER_ENV_VAR&quot;</span> <span class="na">value=</span><span class="s">&quot;ANOTHER_VALUE&quot;</span> <span class="na">unless=</span><span class="s">&quot;CONDITION_B&quot;</span><span class="nt">/&gt;</span>
+   <span class="nt">&lt;set_env</span> <span class="na">name=</span><span class="s">&quot;SOME_ENV_VAR&quot;</span> <span class="na">value=</span><span class="s">&quot;SOME_VALUE&quot;</span><span class="nt">/&gt;</span>
+   <span class="nt">&lt;node</span> <span class="na">pkg=</span><span class="s">&quot;MY_PACKAGE&quot;</span> <span class="na">exec=</span><span class="s">&quot;MY_EXECUTABLE&quot;</span> <span class="na">name=</span><span class="s">&quot;MY_NODE&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;env</span> <span class="na">name=</span><span class="s">&quot;NODE_ENV_VAR&quot;</span> <span class="na">value=</span><span class="s">&quot;SOME_VALUE&quot;</span><span class="nt">/&gt;</span>
+   <span class="nt">&lt;/node&gt;</span>
+   <span class="nt">&lt;unset_env</span> <span class="na">name=</span><span class="s">&quot;MY_ENV_VAR&quot;</span> <span class="na">if=</span><span class="s">&quot;CONDITION_A&quot;</span><span class="nt">/&gt;</span>
+   <span class="nt">&lt;node</span> <span class="na">pkg=</span><span class="s">&quot;ANOTHER_PACKAGE&quot;</span> <span class="na">exec=</span><span class="s">&quot;ANOTHER_EXECUTABLE&quot;</span> <span class="na">name=</span><span class="s">&quot;ANOTHER_NODE&quot;</span><span class="nt">/&gt;</span>
+   <span class="nt">&lt;unset_env</span> <span class="na">name=</span><span class="s">&quot;ANOTHER_ENV_VAR&quot;</span> <span class="na">unless=</span><span class="s">&quot;CONDITION_B&quot;</span><span class="nt">/&gt;</span>
+   <span class="nt">&lt;unset_env</span> <span class="na">name=</span><span class="s">&quot;SOME_ENV_VAR&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/launch&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="group">
+<h3>组 <a class="reference external" href="http://localhost:3000/#/home?msgid=699">[待校准&#64;699]</a><a class="headerlink" href="#group" title="永久链接至标题"></a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://wiki.ros.org/roslaunch/XML/group">Available in ROS 1</a>.</p></li>
+<li><p>允许限制launch配置的范围。通常与 <code class="docutils literal notranslate"><span class="pre">let</span></code> 、 <code class="docutils literal notranslate"><span class="pre">include</span></code> 和 <code class="docutils literal notranslate"><span class="pre">push-ros-namespace</span></code> 标签一起使用。 <a class="reference external" href="http://localhost:3000/#/home?msgid=701">[待校准&#64;701]</a></p></li>
+<li><dl class="simple">
+<dt>与ROS 1的区别: <a class="reference external" href="http://localhost:3000/#/home?msgid=649">[待校准&#64;649]</a></dt><dd><ul>
+<li><p>没有 <code class="docutils literal notranslate"><span class="pre">ns</span></code> 属性。请参阅新的 <code class="docutils literal notranslate"><span class="pre">push-ros-namespace</span></code> 标签作为解决方法。 <a class="reference external" href="http://localhost:3000/#/home?msgid=702">[待校准&#64;702]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clear_params</span></code> attribute不可用。 <a class="reference external" href="http://localhost:3000/#/home?msgid=703">[待校准&#64;703]</a></p></li>
+<li><p>它不接受 <code class="docutils literal notranslate"><span class="pre">remap</span></code> 或 <code class="docutils literal notranslate"><span class="pre">param</span></code> 作为儿童的标签。 <a class="reference external" href="http://localhost:3000/#/home?msgid=704">[待校准&#64;704]</a></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="section" id="id6">
+<h4>示例 <a class="reference external" href="http://localhost:3000/#/home?msgid=653">[待校准&#64;653]</a><a class="headerlink" href="#id6" title="永久链接至标题"></a></h4>
+<p>[需手动修复的语法]``launch-prefix`` configuration affects both <code class="docutils literal notranslate"><span class="pre">executable</span></code> and <code class="docutils literal notranslate"><span class="pre">node</span></code> tags' actions. This example will use <code class="docutils literal notranslate"><span class="pre">time</span></code> as a prefix if <code class="docutils literal notranslate"><span class="pre">use_time_prefix_in_talker</span></code> argument is <code class="docutils literal notranslate"><span class="pre">1</span></code>,仅供健谈者使用。 <a class="reference external" href="http://localhost:3000/#/home?msgid=705">[待校准&#64;705]</a></p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;launch&gt;</span>
+   <span class="nt">&lt;arg</span> <span class="na">name=</span><span class="s">&quot;use_time_prefix_in_talker&quot;</span> <span class="na">default=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
+   <span class="nt">&lt;group&gt;</span>
+      <span class="nt">&lt;let</span> <span class="na">name=</span><span class="s">&quot;launch-prefix&quot;</span> <span class="na">value=</span><span class="s">&quot;time&quot;</span> <span class="na">if=</span><span class="s">&quot;$(var use_time_prefix_in_talker)&quot;</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;node</span> <span class="na">pkg=</span><span class="s">&quot;demo_nodes_cpp&quot;</span> <span class="na">exec=</span><span class="s">&quot;talker&quot;</span><span class="nt">/&gt;</span>
+   <span class="nt">&lt;/group&gt;</span>
+   <span class="nt">&lt;node</span> <span class="na">pkg=</span><span class="s">&quot;demo_nodes_cpp&quot;</span> <span class="na">exec=</span><span class="s">&quot;listener&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/launch&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="machine">
+<h3>机器 <a class="reference external" href="http://localhost:3000/#/home?msgid=706">[待校准&#64;706]</a><a class="headerlink" href="#machine" title="永久链接至标题"></a></h3>
+<p>目前不支持。 <a class="reference external" href="http://localhost:3000/#/home?msgid=707">[待校准&#64;707]</a></p>
+</div>
+<div class="section" id="test">
+<h3>测试 <a class="reference external" href="http://localhost:3000/#/home?msgid=708">[待校准&#64;708]</a><a class="headerlink" href="#test" title="永久链接至标题"></a></h3>
+<p>目前不支持。 <a class="reference external" href="http://localhost:3000/#/home?msgid=707">[待校准&#64;707]</a></p>
+</div>
+</div>
+<div class="section" id="new-tags-in-ros-2">
+<h2>ROS 2中的新标签 <a class="reference external" href="http://localhost:3000/#/home?msgid=709">[待校准&#64;709]</a><a class="headerlink" href="#new-tags-in-ros-2" title="永久链接至标题"></a></h2>
+<div class="section" id="set-env-and-unset-env">
+<h3>set_env和unset_env <a class="reference external" href="http://localhost:3000/#/home?msgid=710">[待校准&#64;710]</a><a class="headerlink" href="#set-env-and-unset-env" title="永久链接至标题"></a></h3>
+<p>见 <a class="reference internal" href="#env">env</a> 标签说明。 <a class="reference external" href="http://localhost:3000/#/home?msgid=711">[待校准&#64;711]</a></p>
+</div>
+<div class="section" id="push-ros-namespace">
+<h3>push-ros-namespace <a class="reference external" href="http://localhost:3000/#/home?msgid=712">[待校准&#64;712]</a><a class="headerlink" href="#push-ros-namespace" title="永久链接至标题"></a></h3>
+<p>[需手动修复的语法]``include`` and <code class="docutils literal notranslate"><span class="pre">group</span></code> tags don't accept an <code class="docutils literal notranslate"><span class="pre">ns</span></code> attribute。此动作可用作解决方法: <a class="reference external" href="http://localhost:3000/#/home?msgid=713">[待校准&#64;713]</a></p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;!-Other tags--&gt;</span>
+<span class="nt">&lt;group&gt;</span>
+   <span class="nt">&lt;push-ros-namespace</span> <span class="na">namespace=</span><span class="s">&quot;my_ns&quot;</span><span class="nt">/&gt;</span>
+   <span class="c">&lt;!--Nodes here are namespaced with &quot;my_ns&quot;.--&gt;</span>
+   <span class="c">&lt;!--If there is an include action here, its nodes will also be namespaced.--&gt;</span>
+   <span class="nt">&lt;push-ros-namespace</span> <span class="na">namespace=</span><span class="s">&quot;another_ns&quot;</span><span class="nt">/&gt;</span>
+   <span class="c">&lt;!--Nodes here are namespaced with &quot;another_ns/my_ns&quot;.--&gt;</span>
+   <span class="nt">&lt;push-ros-namespace</span> <span class="na">namespace=</span><span class="s">&quot;/absolute_ns&quot;</span><span class="nt">/&gt;</span>
+   <span class="c">&lt;!--Nodes here are namespaced with &quot;/absolute_ns&quot;.--&gt;</span>
+   <span class="c">&lt;!--The following node receives an absolute namespace, so it will ignore the others previously pushed.--&gt;</span>
+   <span class="c">&lt;!--The full path of the node will be /asd/my_node.--&gt;</span>
+   <span class="nt">&lt;node</span> <span class="na">pkg=</span><span class="s">&quot;my_pkg&quot;</span> <span class="na">exec=</span><span class="s">&quot;my_executable&quot;</span> <span class="na">name=</span><span class="s">&quot;my_node&quot;</span> <span class="na">ns=</span><span class="s">&quot;/asd&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/group&gt;</span>
+<span class="c">&lt;!--Nodes outside the group action won&#39;t be namespaced.--&gt;</span>
+<span class="cp">&lt;!-Other tags--&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="let">
+<h3>让 <a class="reference external" href="http://localhost:3000/#/home?msgid=714">[待校准&#64;714]</a><a class="headerlink" href="#let" title="永久链接至标题"></a></h3>
+<p>这是用值属性替换 <code class="docutils literal notranslate"><span class="pre">arg</span></code> 标签。 <a class="reference external" href="http://localhost:3000/#/home?msgid=715">[待校准&#64;715]</a></p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;let</span> <span class="na">var=</span><span class="s">&quot;foo&quot;</span> <span class="na">value=</span><span class="s">&quot;asd&quot;</span><span class="nt">/&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="executable">
+<h3>可执行文件 <a class="reference external" href="http://localhost:3000/#/home?msgid=716">[待校准&#64;716]</a><a class="headerlink" href="#executable" title="永久链接至标题"></a></h3>
+<p>它允许运行任何可执行文件。 <a class="reference external" href="http://localhost:3000/#/home?msgid=717">[待校准&#64;717]</a></p>
+<div class="section" id="id7">
+<h4>示例 <a class="reference external" href="http://localhost:3000/#/home?msgid=653">[待校准&#64;653]</a><a class="headerlink" href="#id7" title="永久链接至标题"></a></h4>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;executable</span> <span class="na">cmd=</span><span class="s">&quot;ls -las&quot;</span> <span class="na">cwd=</span><span class="s">&quot;/var/log&quot;</span> <span class="na">name=</span><span class="s">&quot;my_exec&quot;</span> <span class="na">launch-prefix=</span><span class="s">&quot;something&quot;</span> <span class="na">output=</span><span class="s">&quot;screen&quot;</span> <span class="na">shell=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;env</span> <span class="na">name=</span><span class="s">&quot;LD_LIBRARY&quot;</span> <span class="na">value=</span><span class="s">&quot;/lib/some.so&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/executable&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="replacing-an-include-tag">
+<h2>替换包含标签 <a class="reference external" href="http://localhost:3000/#/home?msgid=718">[待校准&#64;718]</a><a class="headerlink" href="#replacing-an-include-tag" title="永久链接至标题"></a></h2>
+<p>为了将一个launch文件包含在一个命名空间下，如在ROS 1中，那么 <code class="docutils literal notranslate"><span class="pre">include</span></code> 标签必须嵌套在 <code class="docutils literal notranslate"><span class="pre">group</span></code> 标签中。 <a class="reference external" href="http://localhost:3000/#/home?msgid=719">[待校准&#64;719]</a></p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;group&gt;</span>
+   <span class="nt">&lt;include</span> <span class="na">file=</span><span class="s">&quot;another_launch_file&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/group&gt;</span>
+</pre></div>
+</div>
+<p>然后，添加 <code class="docutils literal notranslate"><span class="pre">push-ros-namespace</span></code> 动作标签以指定命名空间，而不是使用 <code class="docutils literal notranslate"><span class="pre">ns</span></code> 属性: <a class="reference external" href="http://localhost:3000/#/home?msgid=720">[待校准&#64;720]</a></p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;group&gt;</span>
+   <span class="nt">&lt;push-ros-namespace</span> <span class="na">namespace=</span><span class="s">&quot;my_ns&quot;</span><span class="nt">/&gt;</span>
+   <span class="nt">&lt;include</span> <span class="na">file=</span><span class="s">&quot;another_launch_file&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/group&gt;</span>
+</pre></div>
+</div>
+<p>套料 <code class="docutils literal notranslate"><span class="pre">include</span></code> 标签下 <code class="docutils literal notranslate"><span class="pre">group</span></code> 标签只需指定命名空间 <a class="reference external" href="http://localhost:3000/#/home?msgid=721">[待校准&#64;721]</a></p>
+</div>
+<div class="section" id="substitutions">
+<h2>替换 <a class="reference external" href="http://localhost:3000/#/home?msgid=722">[待校准&#64;722]</a><a class="headerlink" href="#substitutions" title="永久链接至标题"></a></h2>
+<p>关于ROS 1取代的文件可以在 <a class="reference external" href="https://wiki.ros.org/roslaunch/XML">roslaunch XML wiki</a> 中找到。替换语法没有改变，即它仍然遵循 “$ (替换名称arg1 arg2 ...)” 模式。然而，w.r.t.有一些变化。ROS 1: <a class="reference external" href="http://localhost:3000/#/home?msgid=723">[待校准&#64;723]</a></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">env</span></code> and <code class="docutils literal notranslate"><span class="pre">optenv</span></code> tags have been replaced by the <code class="docutils literal notranslate"><span class="pre">env</span></code> tag. <code class="docutils literal notranslate"><span class="pre">$(env</span> <span class="pre">&lt;NAME&gt;)</span></code> will fail if the environment variable doesn't exist. <code class="docutils literal notranslate"><span class="pre">$(env</span> <span class="pre">&lt;NAME&gt;</span> <span class="pre">'')</span></code> does the same as ROS 1's <code class="docutils literal notranslate"><span class="pre">$(optenv</span> <span class="pre">&lt;NAME&gt;)</span></code>. <code class="docutils literal notranslate"><span class="pre">$(env</span> <span class="pre">&lt;NAME&gt;</span> <span class="pre">&lt;DEFAULT&gt;)</span></code> does the same as ROS 1's <code class="docutils literal notranslate"><span class="pre">$(env</span> <span class="pre">&lt;NAME&gt;</span> <span class="pre">&lt;DEFAULT&gt;)</span></code> or <code class="docutils literal notranslate"><span class="pre">$(optenv</span> <span class="pre">&lt;NAME&gt;</span> <span class="pre">&lt;DEFAULT&gt;)</span></code>. <a class="reference external" href="http://localhost:3000/#/home?msgid=724">[待校准&#64;724]</a></p></li>
+<li><p>[需手动修复的语法]``find`` has been replaced with <code class="docutils literal notranslate"><span class="pre">find-pkg-share</span></code> (substituting the share directory of an installed package). Alternatively <code class="docutils literal notranslate"><span class="pre">find-pkg-prefix</span></code> will返回已安装包的根目录。 <a class="reference external" href="http://localhost:3000/#/home?msgid=725">[待校准&#64;725]</a></p></li>
+<li><p>有一种新的 <code class="docutils literal notranslate"><span class="pre">exec-in-pkg</span></code> 替代品。例如: “$ (执行pkg &lt;package_name&gt; &lt;exec_name&gt;)”。 <a class="reference external" href="http://localhost:3000/#/home?msgid=726">[待校准&#64;726]</a></p></li>
+<li><p>有一种新的 <code class="docutils literal notranslate"><span class="pre">find-exec</span></code> 替代品。 <a class="reference external" href="http://localhost:3000/#/home?msgid=727">[待校准&#64;727]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">arg</span></code> has been replaced with <code class="docutils literal notranslate"><span class="pre">var</span></code>. It looks at configurations defined either with <code class="docutils literal notranslate"><span class="pre">arg</span></code> or <code class="docutils literal notranslate"><span class="pre">let</span></code> tag. <a class="reference external" href="http://localhost:3000/#/home?msgid=728">[待校准&#64;728]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">eval</span></code> and <code class="docutils literal notranslate"><span class="pre">dirname</span></code> substitutions没变。 <a class="reference external" href="http://localhost:3000/#/home?msgid=729">[待校准&#64;729]</a></p></li>
+<li><p>不支持``anon`` substitution。 <a class="reference external" href="http://localhost:3000/#/home?msgid=730">[待校准&#64;730]</a></p></li>
+</ul>
+</div>
+<div class="section" id="id8">
+<h2>类型推理规则 <a class="reference external" href="http://localhost:3000/#/home?msgid=658">[待校准&#64;658]</a><a class="headerlink" href="#id8" title="永久链接至标题"></a></h2>
+<p>在 <code class="docutils literal notranslate"><span class="pre">param</span></code> 标签的 <code class="docutils literal notranslate"><span class="pre">Type</span> <span class="pre">inference</span> <span class="pre">rules</span></code> 小节中显示的规则适用于任何属性。例如: <a class="reference external" href="http://localhost:3000/#/home?msgid=731">[待校准&#64;731]</a></p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!--Setting a string value to an attribute expecting an int will raise an error.--&gt;</span>
+<span class="nt">&lt;tag1</span> <span class="na">attr-expecting-an-int=</span><span class="s">&quot;&#39;1&#39;&quot;</span><span class="nt">/&gt;</span>
+<span class="c">&lt;!--Correct version.--&gt;</span>
+<span class="nt">&lt;tag1</span> <span class="na">attr-expecting-an-int=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
+<span class="c">&lt;!--Setting an integer in an attribute expecting a string will raise an error.--&gt;</span>
+<span class="nt">&lt;tag2</span> <span class="na">attr-expecting-a-str=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
+<span class="c">&lt;!--Correct version.--&gt;</span>
+<span class="nt">&lt;tag2</span> <span class="na">attr-expecting-a-str=</span><span class="s">&quot;&#39;1&#39;&quot;</span><span class="nt">/&gt;</span>
+<span class="c">&lt;!--Setting a list of strings in an attribute expecting a string will raise an error.--&gt;</span>
+<span class="nt">&lt;tag3</span> <span class="na">attr-expecting-a-str=</span><span class="s">&quot;asd, bsd&quot;</span> <span class="na">str-attr-sep=</span><span class="s">&quot;, &quot;</span><span class="nt">/&gt;</span>
+<span class="c">&lt;!--Correct version.--&gt;</span>
+<span class="nt">&lt;tag3</span> <span class="na">attr-expecting-a-str=</span><span class="s">&quot;don&#39;t use a separator&quot;</span><span class="nt">/&gt;</span>
+</pre></div>
+</div>
+<p>一些属性接受多个类型，例如 <code class="docutils literal notranslate"><span class="pre">value</span></code> 属性 <code class="docutils literal notranslate"><span class="pre">param</span></code> 标签。通常情况下， <code class="docutils literal notranslate"><span class="pre">int</span></code>  (或 <code class="docutils literal notranslate"><span class="pre">float</span></code> ) 类型的参数也接受 <code class="docutils literal notranslate"><span class="pre">str</span></code> ，稍后将被替换，并通过动作试图转换为 <code class="docutils literal notranslate"><span class="pre">int</span></code>  (或 <code class="docutils literal notranslate"><span class="pre">float</span></code> )。 <a class="reference external" href="http://localhost:3000/#/home?msgid=732">[待校准&#64;732]</a></p>
+</div>
+</div>
+
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Ament-CMake-Python-Documentation.html" class="btn btn-neutral float-left" title="[需手动修复的语法]ament _ cmake_python用户文档 [待校准@360]" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="Launch-file-different-formats.html" class="btn btn-neutral float-right" title="对ROS 2Launch文件使用Python、XML和YAML [待校准@611]" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2022, Open Robotics.</p>
+  </div>
+
+  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-17821189-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-17821189-2', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

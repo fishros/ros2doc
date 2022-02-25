@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>关于内部ROS 2接口 [待校准@5265] &mdash; ROS 2 documentation  文档</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.ros.org/en/Concepts/About-Internal-Interfaces.html" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="关于ROS 2中间件实现 [待校准@5347]" href="About-Middleware-Implementations.html" />
+    <link rel="prev" title="关于构建系统 [待校准@4969]" href="About-Build-System.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> ROS 2 documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Installation.html">安装 [待校准&#64;5690]</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Ubuntu-Development-Setup.html">在Ubuntu Linux上构建ROS 2 [待校准&#64;5886]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Ubuntu-Install-Binary.html">在Ubuntu Linux上安装ROS 2 [待校准&#64;5937]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Ubuntu-Install-Debians.html">通过Debian包安装ROS 2 [待校准&#64;5959]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/macOS-Development-Setup.html">在macOS上构建ROS 2 [待校准&#64;6117]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/macOS-Install-Binary.html">在macOS上安装ROS 2 [待校准&#64;6148]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Windows-Development-Setup.html">在Windows上构建ROS 2 [待校准&#64;5973]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Windows-Install-Binary.html">在Windows上安装ROS 2 [待校准&#64;6050]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Fedora-Development-Setup.html">在Fedora Linux上构建ROS 2 [待校准&#64;5836]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Latest-Development-Setup.html">安装最新的ROS 2开发版本 [待校准&#64;5840]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Maintaining-a-Source-Checkout.html">主源文件检出ROS 2Foxy [待校准&#64;5850]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Testing.html">用于测试的替代安装源 [待校准&#64;5873]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/DDS-Implementations.html">安装DDS实现 [待校准&#64;5717]</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Install-Connext-Security-Plugins.html">安装Connext安全插件 [待校准&#64;5768]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Install-Connext-University-Eval.html">安装大学或RTI Connext DDS的评估版本 [待校准&#64;5782]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Working-with-Eclipse-CycloneDDS.html">使用EclipseCycloneDDS [待校准&#64;5796]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Working-with-GurumNetworks-GurumDDS.html">与GurumNetworks GurumDDS合作 [待校准&#64;5812]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Working-with-eProsima-Fast-DDS.html">与eProsimaFast DDS合作 [待校准&#64;5829]</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Docs-Guide.html">文档指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorials.html">教程 [待校准&#64;6242]</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Configuring-ROS2-Environment.html">配置ROS 2环境 [待校准&#64;6646]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Turtlesim/Introducing-Turtlesim.html">介绍turtlesim和rqt [待校准&#64;8428]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Understanding-ROS2-Nodes.html">了解ROS 2节点 [待校准&#64;8733]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Topics/Understanding-ROS2-Topics.html">理解ROS 2话题 [待校准&#64;8368]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Services/Understanding-ROS2-Services.html">了解ROS 2服务 [待校准&#64;7742]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Parameters/Understanding-ROS2-Parameters.html">理解ROS 2参数 [待校准&#64;7371]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Understanding-ROS2-Actions.html">理解ROS 2动作 [待校准&#64;8684]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Rqt-Console/Using-Rqt-Console.html">使用rqt_控制台 [待校准&#64;7712]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Launch/CLI-Intro.html">介绍ROS 2launch [待校准&#64;7101]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Ros2bag/Recording-And-Playing-Back-Data.html">记录和回放数据 [待校准&#64;7639]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Workspace/Creating-A-Workspace.html">创建工作空间 [待校准&#64;8836]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Creating-Your-First-ROS2-Package.html">创建您的第一个ROS 2包 [待校准&#64;6677]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Writing-A-Simple-Cpp-Publisher-And-Subscriber.html">编写简单的发布者和订阅者 (c ++) [待校准&#64;8905]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Writing-A-Simple-Py-Publisher-And-Subscriber.html">编写简单的发布者和订阅者 (Python) [待校准&#64;8992]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Writing-A-Simple-Cpp-Service-And-Client.html">编写简单的服务和客户端 (c ++) [待校准&#64;8953]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Writing-A-Simple-Py-Service-And-Client.html">编写简单的服务和客户端 (Python) [待校准&#64;9028]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Custom-ROS2-Interfaces.html">创建自定义ROS 2 msg 和 srv 文件 [待校准&#64;6739]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Single-Package-Define-And-Use-Interface.html">在ROS 2接口上扩展 [待校准&#64;7844]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Using-Parameters-In-A-Class-CPP.html">在类 (c ++) 中使用参数 [待校准&#64;8769]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Using-Parameters-In-A-Class-Python.html">在类中使用参数 (Python) [待校准&#64;8809]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Getting-Started-With-Ros2doctor.html">开始使用ros2doctor [待校准&#64;7010]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Pluginlib.html">创建和使用插件 (c ++) [待校准&#64;7411]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Actions/Creating-an-Action.html">创建动作 [待校准&#64;6271]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Actions/Writing-a-Cpp-Action-Server-Client.html">编写动作服务器和客户端 (c ++) [待校准&#64;6313]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Actions/Writing-a-Py-Action-Server-Client.html">编写动作服务器和客户端 (Python) [待校准&#64;6385]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Composition.html">在单个进程中组成多个节点 [待校准&#64;6594]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Colcon-Tutorial.html">使用colcon构建包 [待校准&#64;6535]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Launch/Launch-Main.html">Launch教程 [待校准&#64;7160]</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Launch/Creating-Launch-Files.html">创建launch文件 [待校准&#64;7122]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Launch/Launch-system.html">[需手动修复的语法]Launch/监控多节点[需手动修复的语法]Launch [待校准&#64;7174]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Launch/Using-Substitutions.html">在launch文件中使用替换 [待校准&#64;7297]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Launch/Using-Event-Handlers.html">在launch文件中使用事件处理程序 [待校准&#64;7201]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Launch/Using-ROS2-Launch-For-Large-Projects.html">在大型项目中使用ROS 2launch [待校准&#64;7234]</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Tf2/Tf2-Main.html">tf2教程 [待校准&#64;8078]</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Introduction-To-Tf2.html">tf2简介 [待校准&#64;7994]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Writing-A-Tf2-Static-Broadcaster-Py.html">编写tf2静态广播器 (Python) [待校准&#64;8299]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Writing-A-Tf2-Static-Broadcaster-Cpp.html">编写tf2静态广播器 (c ++) [待校准&#64;8257]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Writing-A-Tf2-Broadcaster-Py.html">编写tf2广播器 (Python) [待校准&#64;8220]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Writing-A-Tf2-Broadcaster-Cpp.html">编写tf2广播器 (c ++) [待校准&#64;8181]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Writing-A-Tf2-Listener-Py.html">编写tf2监听程序 (Python) [待校准&#64;8251]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Writing-A-Tf2-Listener-Cpp.html">编写tf2监听程序 (c ++) [待校准&#64;8233]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Adding-A-Frame-Py.html">添加帧 (Python) [待校准&#64;7950]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Adding-A-Frame-Cpp.html">添加帧 (c ++) [待校准&#64;7914]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Learning-About-Tf2-And-Time-Py.html">学习tf2和时间 (Python) [待校准&#64;8040]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Learning-About-Tf2-And-Time-Cpp.html">学习tf2和时间 (c ++) [待校准&#64;8023]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Time-Travel-With-Tf2-Py.html">时间穿梭tf2 (Python) [待校准&#64;8130]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Time-Travel-With-Tf2-Cpp.html">时间穿梭带tf2 (C++) [待校准&#64;8105]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Debugging-Tf2-Problems.html">调试tf2问题 [待校准&#64;7956]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Quaternion-Fundamentals.html">四元数基金amentals [待校准&#64;8054]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.html">使用stamped数据类型与tf2_ros: MessageFilter [待校准&#64;8138]</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/URDF/URDF-Main.html">URDF教程 [待校准&#64;8607]</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/URDF/Building-a-Visual-Robot-Model-with-URDF-from-Scratch.html">从头开始用URDF构建视觉机器人模型 [待校准&#64;8556]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/URDF/Building-a-Movable-Robot-Model-with-URDF.html">用URDF建立可移动机器人模型 [待校准&#64;8534]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/URDF/Adding-Physical-and-Collision-Properties-to-a-URDF-Model.html">向URDF模型添加物理和碰撞属性 [待校准&#64;8487]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/URDF/Using-Xacro-to-Clean-Up-a-URDF-File.html">使用Xacro清理URDF文件 [待校准&#64;8635]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/URDF/Using-URDF-with-Robot-State-Publisher.html">将URDF与robot_state_发布者结合使用 [待校准&#64;8609]</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Topics/Topic-Statistics-Tutorial.html">ROS 2话题统计教程 (c ++) [待校准&#64;8311]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Discovery-Server/Discovery-Server.html">使用Fast DDS Discovery Server作为发现协议 [社区贡献] [待校准&#64;6879]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Allocator-Template-Tutorial.html">实现自定义内存分配器 [待校准&#64;6445]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Simulators/Webots/Setting-up-a-Robot-Simulation-Webots.html">设置机器人仿真 (Webots) [待校准&#64;7782]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Deploying-ROS-2-on-IBM-Cloud.html">IBM Cloud Kubernetes上的ROS2 [社区-贡献] [待校准&#64;6792]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Eclipse-Oxygen-with-ROS-2-and-rviz2.html">带有ROS 2和rviz2的Eclipse Oxygen [社区贡献] [待校准&#64;6947]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Building-Realtime-rt_preempt-kernel-for-ROS-2.html">为ROS 2构建实时Linux [社区-贡献] [待校准&#64;6514]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Ros2bag/Recording-A-Bag-From-Your-Own-Node.html">从您自己的节点记录一个包 [待校准&#64;7554]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Building-ROS2-Package-with-eclipse-2021-06.html">使用eclipse 2021-06构建ROS 2包 [待校准&#64;6486]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Quality-of-Service.html">使用服务质量设置处理有损网络 [待校准&#64;7462]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Managed-Nodes.html">具有托管生命周期的节点管理 [待校准&#64;7369]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Intra-Process-Communication.html">高效的流程内通讯 [待校准&#64;7051]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Rosbag-with-ROS1-Bridge.html">使用ROS 1bridge用rosbag记录和回放话题数据 [待校准&#64;7685]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Real-Time-Programming.html">ROS 2中的实时编程 [待校准&#64;7491]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/dummy-robot-demo.html">尝试dummy robot例程 [待校准&#64;9056]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Logging-and-logger-configuration.html">日志和日志记录器配置例程 [待校准&#64;7322]</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../How-To-Guides.html">操作指南 [待校准&#64;204]</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Installation-Troubleshooting.html">安装故障诊断工具 [待校准&#64;535]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Developing-a-ROS-2-Package.html">开发ROS 2包 [待校准&#64;514]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Ament-CMake-Documentation.html">[需手动修复的语法]ament _ cmake用户文档 [待校准&#64;208]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Ament-CMake-Python-Documentation.html">[需手动修复的语法]ament _ cmake_python用户文档 [待校准&#64;360]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Launch-files-migration-guide.html">迁移launch文件ROS 1ROS 2 [待校准&#64;638]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Launch-file-different-formats.html">对ROS 2Launch文件使用Python、XML和YAML [待校准&#64;611]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Launching-composable-nodes.html">使用ROS 2launch到launch可组合节点 [待校准&#64;733]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Parameters-YAML-files-migration-guide.html">将YAML参数文件从ROS 1迁移到ROS 2 [待校准&#64;850]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Node-arguments.html">通过命令行将ROS参数传递给节点 [待校准&#64;746]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Sync-Vs-Async.html">同步与异步服务客户端 [待校准&#64;972]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/DDS-tuning.html">DDS调谐信息 [待校准&#64;470]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Overriding-QoS-Policies-For-Recording-And-Playback.html">rosbag2: 重载QoS策略 [待校准&#64;772]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Working-with-multiple-RMW-implementations.html">使用多个ROS 2中间件实现 [待校准&#64;1068]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Cross-compilation.html">交叉编译 [待校准&#64;383]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Releasing-a-ROS-2-package-with-bloom.html">发布带有bloom的ROS 2包 [待校准&#64;937]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Using-Python-Packages.html">将Python包与ROS 2结合使用 [待校准&#64;1011]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/RQt-Port-Plugin-Windows.html">将RQt插件移植到Windows [待校准&#64;862]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Run-2-nodes-in-single-or-separate-docker-containers.html">在Docker中运行ROS 2节点 [社区-贡献] [待校准&#64;959]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Package-maintainer-guide.html">ROS 2包维护者指南 [待校准&#64;785]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Building-a-Custom-Debian-Package.html">构建自定义Debian包 [待校准&#64;371]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Topics-Services-Actions.html">话题vs服务vsAction [待校准&#64;997]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Using-Variants.html">使用变体 [待校准&#64;1031]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Using-ros2-param.html">使用 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span></code> 命令行工具 [待校准&#64;1046]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/RQt-Source-Install.html">从源文件构建RQt [待校准&#64;883]</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../How-To-Guides/RQt-Source-Install-MacOS.html">在macOS上从源文件构建RQt [待校准&#64;908]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../How-To-Guides/RQt-Source-Install-Windows10.html">在Windows 10上从源文件构建RQt [待校准&#64;916]</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../Concepts.html">概念 [待校准&#64;4938]</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="About-Domain-ID.html">ROS_DOMAIN_ID [待校准&#64;5194]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="About-Different-Middleware-Vendors.html">关于不同的ROS 2 DDS/RTPS供应商 [待校准&#64;5153]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="About-Logging.html">关于日志和日志记录器配置 [待校准&#64;5325]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="About-Quality-of-Service-Settings.html">关于服务质量设置 [待校准&#64;5369]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="About-ROS-2-Client-Libraries.html">关于ROS 2客户端库 [待校准&#64;5459]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="About-ROS-Interfaces.html">关于ROS 2接口 [待校准&#64;5526]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="About-ROS-2-Parameters.html">关于ROS 2中的参数 [待校准&#64;5490]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="About-Executors.html">执行器 [待校准&#64;5227]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="About-Topic-Statistics.html">关于话题统计 [待校准&#64;5671]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="About-Command-Line-Tools.html">使用命令行工具进行自检 [待校准&#64;5091]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="About-RQt.html">RQt的概述和使用 [待校准&#64;5625]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="About-Composition.html">关于组件 [待校准&#64;5119]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="About-Catment.html">[需手动修复的语法]ament和catkin的混合研究 [待校准&#64;5019]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="About-Cross-Compilation.html">关于交叉编译 [待校准&#64;5141]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="About-Tf2.html">关于tf2 [待校准&#64;5653]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="About-Build-System.html">关于构建系统 [待校准&#64;4969]</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">关于内部ROS 2接口 [待校准&#64;5265]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="About-Middleware-Implementations.html">关于ROS 2中间件实现 [待校准&#64;5347]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="About-Client-Interfaces.html">ROS 2客户端接口 (客户端库) [待校准&#64;5079]</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Contributing.html">贡献 [待校准&#64;9128]</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Contributing/Developer-Guide.html">ROS 2开发人员指南 [待校准&#64;9430]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Contributing/Code-Style-Language-Versions.html">代码样式和语言版本 [待校准&#64;9212]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Contributing/Quality-Guide.html">质量指南: 确保代码质量 [待校准&#64;10012]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Contributing/Migration-Guide.html">从ROS 1迁移指南 [待校准&#64;9780]</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Contributing/Migration-Guide-Python.html">来自ROS 1的Python迁移指南 [待校准&#64;10003]</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Contributing/Build-Farms.html">ROS Build Farms [待校准&#64;9167]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Contributing/Windows-Tips-and-Tricks.html">Windows提示和技巧 [待校准&#64;10105]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Contributing/Contributing-To-ROS-2-Documentation.html">为ROS 2文档做出贡献 [待校准&#64;9366]</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Contact.html">联系人 [待校准&#64;6167]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ROSCon-Content.html">ROSCon内容 [待校准&#64;105]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Releases.html">发行版 [待校准&#64;1233]</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Alpha-Overview.html">ROS 2 α 发行版本 (2015年8月-2016年10月) [待校准&#64;1306]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Beta1-Overview.html">贝塔1 (代号'Asphalt'; 2016年12月) [待校准&#64;1386]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Beta2-Overview.html">贝塔2 (代号'r2b2'; 2017年7月) [待校准&#64;1420]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Beta3-Overview.html">贝塔3 (代号'r2b3'; 2017年9月) [待校准&#64;1451]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Ardent-Apalone.html">ROS 2Ardent阿帕隆 (代号'ardent'; 2017年12月) [待校准&#64;4089]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Bouncy-Bolson.html">ROS 2 Bouncy Bolson (代号'bouncy'; 2018年6月) [待校准&#64;4130]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Crystal-Clemmys.html">ROS 2Crystal Clemmys (代号'crystal'; 2018年12月) [待校准&#64;4158]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Dashing-Diademata.html">ROS 2DashingDiademata (代号'dashing'; 2019年5月31日) [待校准&#64;4237]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Eloquent-Elusor.html">ROS 2EloquentElusor (代号'eloquent'; 2019年11月22日) [待校准&#64;4427]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Foxy-Fitzroy.html">ROS 2FoxyFitzroy (代号'foxy'; 2020年6月5日) [待校准&#64;4503]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Galactic-Geochelone.html">ROS 2GalacticGeochelone (代号'galactic'; 2021年5月) [待校准&#64;4649]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Galactic-Geochelone-Complete-Changelog.html">ROS 2GalacticGeochelone完整变更日志 [待校准&#64;1470]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Humble-Hawksbill.html">ROS 2Humble Hawksbill (代号'humble'; 2022年5月) [待校准&#64;4845]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Rolling-Ridley.html">ROS 2Rolling Ridley (代号'rolling'; 2020年6月) [待校准&#64;4929]</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Features.html">功能状态 [待校准&#64;9074]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Roadmap.html">路线图 [待校准&#64;45]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Feature-Ideas.html">特色创意 [待校准&#64;1123]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Governance.html">项目管理 [待校准&#64;10131]</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Governance/ROS2-TSC-Charter.html">ROS 2技术指导委员会章程 [待校准&#64;10280]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Governance/ROS2-TSC-Intake-process.html">ROS 2 TSC申请人摄入流程 [待校准&#64;10368]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Governance/How-To-Start-A-Community-Working-Group.html">如何成立社区工作组 [待校准&#64;10253]</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Marketing.html">营销材料 [待校准&#64;6193]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Related-Projects.html">相关项目 [待校准&#64;6209]</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Related-Projects/Intel-ROS2-Projects.html">[需手动修复的语法]IntelROS 2项目 [待校准&#64;6210]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Related-Projects/Nvidia-ROS2-Projects.html">[需手动修复的语法]NVIDIAROS 2项目 [待校准&#64;6228]</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Glossary.html">术语表 [待校准&#64;1217]</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ROS 2 documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../Concepts.html">概念 [待校准&#64;4938]</a> &raquo;</li>
+      <li>关于内部ROS 2接口 [待校准&#64;5265]</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/ros2/ros2_documentation/blob/foxy/source/Concepts/About-Internal-Interfaces.rst" class="fa fa-github"> 在 GitHub 上修改</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+
+
+  <div class="section" id="about-internal-ros-2-interfaces">
+<h1>关于内部ROS 2接口 <a class="reference external" href="http://localhost:3000/#/home?msgid=5265">[待校准&#64;5265]</a><a class="headerlink" href="#about-internal-ros-2-interfaces" title="永久链接至标题"></a></h1>
+<p>内部ROS接口是公共的C | Api | 供正在创建 | 客户端库 | 或添加新的底层中间件的开发人员使用，但不适用于典型的ROS用户。ROS | 客户端库 | 提供大多数ROS用户熟悉的面向 | Api的用户，并且可能使用多种编程语言。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5266">[待校准&#64;5266]</a></p>
+<div class="section" id="internal-api-architecture-overview">
+<h2>内部API架构概述 <a class="reference external" href="http://localhost:3000/#/home?msgid=5267">[待校准&#64;5267]</a><a class="headerlink" href="#internal-api-architecture-overview" title="永久链接至标题"></a></h2>
+<p>有两个主要的内部接口: <a class="reference external" href="http://localhost:3000/#/home?msgid=5268">[待校准&#64;5268]</a></p>
+<ul class="simple">
+<li><p>ROS中间件接口 ( <code class="docutils literal notranslate"><span class="pre">rmw</span></code>  | API <a href="#id1"><span class="problematic" id="id2">|</span></a>) <a class="reference external" href="http://localhost:3000/#/home?msgid=5269">[待校准&#64;5269]</a></p></li>
+<li><p>ROS客户端库接口 ( <code class="docutils literal notranslate"><span class="pre">rcl</span></code>  | API <a href="#id1"><span class="problematic" id="id2">|</span></a>) <a class="reference external" href="http://localhost:3000/#/home?msgid=5270">[待校准&#64;5270]</a></p></li>
+</ul>
+<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">rmw</span></code>  | API | 是ROS 2软件堆栈和底层中间件实现之间的接口。用于ROS 2的底层中间件是DDS或RTPS实现，负责发现、发布和订阅机制、服务的请求-回复机制以及消息类型的序列化。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5271">[待校准&#64;5271]</a></p>
+<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">rcl</span></code>  | API | 是一个稍高的 | API <a href="#id1"><span class="problematic" id="id2">|</span></a>，用于实现 | 客户端库 | 并且不直接接触中间件实现，而是通过ROS中间件接口 ( <code class="docutils literal notranslate"><span class="pre">rmw</span></code>  | API <a href="#id3"><span class="problematic" id="id4">|</span></a>) 来做到这一点。文章动作。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5272">[待校准&#64;5272]</a></p>
+<div class="figure align-default">
+<img alt="ros2软件堆栈 `[待校准&#64;5273] &lt;http://localhost:3000/#/home?msgid=5273&gt;`_ " src="../_images/ros_client_library_api_stack.png" />
+</div>
+<p>如图所示，这些 | API | 被堆叠，使得典型的ROS用户将使用 | 客户端库 | | API <a href="#id4"><span class="problematic" id="id5">|，e。g.  ``rclcpp`` ，实现他们的代码 (可执行或库)。|</span></a> 客户端库 | 的实现，例如 <code class="docutils literal notranslate"><span class="pre">rclcpp</span></code> ，使用 <code class="docutils literal notranslate"><span class="pre">rcl</span></code> 接口，该接口提供对ROS图和图事件的访问。 <code class="docutils literal notranslate"><span class="pre">rcl</span></code> 实施又使用 <code class="docutils literal notranslate"><span class="pre">rmw</span></code>  | API | 访问ROS图。 <code class="docutils literal notranslate"><span class="pre">rcl</span></code> 实现的目的是为更复杂的ROS概念和实用程序提供一个通用的实现，这些概念和实用程序可能被各种 | 客户端库 | 使用，同时与正在使用的底层中间件保持不可知。 <code class="docutils literal notranslate"><span class="pre">rmw</span></code> 接口的目的是获取支持ROS客户端库所需的绝对最小中间件功能。最后， <code class="docutils literal notranslate"><span class="pre">rmw</span></code>  | API | 的实现由中间件实现特定 | 包 <a href="#id1"><span class="problematic" id="id2">|</span></a>，e提供。g.  <code class="docutils literal notranslate"><span class="pre">rmw_fastrtps_cpp</span></code> ，其库是根据供应商特定的DDS接口和类型编译的。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5274">[待校准&#64;5274]</a></p>
+<p>在上图中还有一个标有 <code class="docutils literal notranslate"><span class="pre">ros_to_dds</span></code> 的盒子，此框的目的是表示可能的包的类别，允许用户使用ROS等效项访问DDS供应商特定的对象和设置。文章摘要: 该动作界面的目标之一是将ROS用户空间代码与正在使用的中间件完全隔离，因此，不断变化的DDS供应商甚至中间件技术对用户代码的影响最小。然而，我们认识到，有时进入实施并手动调整设置是有用的，尽管可能会有后果。通过要求使用这些包中的一个来访问底层DDS供应商的对象，我们可以避免在正常接口中暴露供应商特定的符号和标题。通过检查包的依赖关系以查看是否使用了这些 <code class="docutils literal notranslate"><span class="pre">ros_to_dds</span></code> 包中的一个，也可以很容易地看到哪些代码可能违反了供应商的可移植性。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5275">[待校准&#64;5275]</a></p>
+</div>
+<div class="section" id="type-specific-interfaces">
+<span id="id1"></span><h2>特定类型接口 <a class="reference external" href="http://localhost:3000/#/home?msgid=5276">[待校准&#64;5276]</a><a class="headerlink" href="#type-specific-interfaces" title="永久链接至标题"></a></h2>
+<p>一直以来，| Api | 的某些部分必然特定于要交换的消息类型，例如发布消息或订阅话题，因此，需要为每种消息类型生成代码。下图布局了从用户定义的 <code class="docutils literal notranslate"><span class="pre">rosidl</span></code> 文件 (例如 <code class="docutils literal notranslate"><span class="pre">.msg</span></code> 文件) 到用户和系统用于执行特定类型功能的特定类型代码的路径: <a class="reference external" href="http://localhost:3000/#/home?msgid=5277">[待校准&#64;5277]</a></p>
+<div class="figure align-default" id="id2">
+<img alt="ros2 idl静态类型支持堆栈 `[待校准&#64;5278] &lt;http://localhost:3000/#/home?msgid=5278&gt;`_ " src="../_images/ros_idl_api_stack_static.png" />
+<p class="caption"><span class="caption-text">图: 流程图  &quot;static&quot; 类型支持生成，从 <code class="docutils literal notranslate"><span class="pre">rosidl</span></code> 文件用户面临码。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5279">[待校准&#64;5279]</a></span><a class="headerlink" href="#id2" title="永久链接至图片"></a></p>
+</div>
+<p>图表的右侧显示了 <code class="docutils literal notranslate"><span class="pre">.msg</span></code> 文件是如何直接传递给特定语言代码生成器的，例如 <code class="docutils literal notranslate"><span class="pre">rosidl_generator_cpp</span></code> 或 <code class="docutils literal notranslate"><span class="pre">rosidl_generator_py</span></code> 。这些生成器负责创建用户将包括 (或导入) 的代码，并将其用作 <code class="docutils literal notranslate"><span class="pre">.msg</span></code> 文件中定义的消息的内存表示。例如，考虑消息 <code class="docutils literal notranslate"><span class="pre">std_msgs/String</span></code> ，用户可以在C++ 中使用此文件和语句 <code class="docutils literal notranslate"><span class="pre">#include</span> <span class="pre">&lt;std_msgs/msg/string.hpp&gt;</span></code> ，或者他们可以在Python中使用语句 <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">std_msgs.msg</span> <span class="pre">import</span> <span class="pre">String</span></code> 。这些语句之所以有效，是因为这些语言特定 (但与中间件无关) 生成器包生成的文件。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5280">[待校准&#64;5280]</a></p>
+<p>另外， <code class="docutils literal notranslate"><span class="pre">.msg</span></code> 文件用于为每种类型生成类型支持代码。在这种情况下，类型支持是指: 特定于给定类型并由系统用于执行给定类型的特定任务的元数据或函数。对给定消息的类型支持可能包括消息中每个字段的名称和类型列表。它还可能包含对可以为该类型执行特定任务的代码的引用，例如发布消息。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5281">[待校准&#64;5281]</a></p>
+<div class="section" id="static-type-support">
+<h3>静态类型支持 <a class="reference external" href="http://localhost:3000/#/home?msgid=5282">[待校准&#64;5282]</a><a class="headerlink" href="#static-type-support" title="永久链接至标题"></a></h3>
+<p>当类型支持引用代码来执行特定消息类型的特定功能时，该代码有时需要执行中间件特定的工作。例如，考虑特定类型的发布函数，当使用  &quot;vendor A&quot; 时，该函数需要调用  &quot;vendor A&quot; 的 | API <a href="#id1"><span class="problematic" id="id2">|</span></a>，但是当使用  &quot;vendor B&quot; 时，它需要调用  &quot;vendor B&quot; 的 | API <a href="#id3"><span class="problematic" id="id4">|</span></a>。为了允许中间件供应商特定代码，用户定义的 <code class="docutils literal notranslate"><span class="pre">.msg</span></code> 文件可能导致供应商特定代码的生成。通过类型支持文章动作，这个供应商特定的代码仍然对用户隐藏，这类似于  &quot;Private Implementation&quot;  (或皮条客) 模式的工作方式。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5283">[待校准&#64;5283]</a></p>
+</div>
+<div class="section" id="static-type-support-with-dds">
+<h3>带有DDS的静态类型支持 <a class="reference external" href="http://localhost:3000/#/home?msgid=5284">[待校准&#64;5284]</a><a class="headerlink" href="#static-type-support-with-dds" title="永久链接至标题"></a></h3>
+<p>对于基于DDS的中间件供应商，并具体调用那些基于OMG IDL文件 ( <code class="docutils literal notranslate"><span class="pre">.idl</span></code> 文件) 生成代码的，用户定义的 <code class="docutils literal notranslate"><span class="pre">rosidl</span></code> 文件 ( <code class="docutils literal notranslate"><span class="pre">.msg</span></code> 文件) 被转换成等效的OMG IDL文件 ( <code class="docutils literal notranslate"><span class="pre">.idl</span></code> 文件)。从这些OMG IDL文件中，创建供应商特定的代码，然后在类型特定的函数中使用，这些函数由给定类型的类型支持引用。上面的图表在左手边展示了这一点，在这里 <code class="docutils literal notranslate"><span class="pre">.msg</span></code> 的文件被 <code class="docutils literal notranslate"><span class="pre">rosidl_dds</span></code> 包装消耗来产生 <code class="docutils literal notranslate"><span class="pre">.idl</span></code> 的文件，然后这些 <code class="docutils literal notranslate"><span class="pre">.idl</span></code> 给定文件语言具体DDS供应商特定类型支持生成包。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5285">[待校准&#64;5285]</a></p>
+<p>例如，考虑Connext DDS实现，它有一个调用ed <code class="docutils literal notranslate"><span class="pre">rosidl_typesupport_connext_cpp</span></code> 的包。这个包负责生成代码来处理诸如发布到给定消息类型的c ++ 版本的话题之类的事情，使用 <code class="docutils literal notranslate"><span class="pre">rosidl_dds</span></code> 包生成的 <code class="docutils literal notranslate"><span class="pre">.idl</span></code> 文件来这样做。同样，该代码虽然特定于Connext，但由于类型支持中的文章摘要动作，仍然没有向用户公开。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5286">[待校准&#64;5286]</a></p>
+</div>
+<div class="section" id="dynamic-type-support">
+<h3>动态类型支持 <a class="reference external" href="http://localhost:3000/#/home?msgid=5287">[待校准&#64;5287]</a><a class="headerlink" href="#dynamic-type-support" title="永久链接至标题"></a></h3>
+<p>实现类型支持的另一种方法是具有用于发布到话题之类的通用函数，而不是为每种消息类型生成函数的版本。为了实现这一点，这个通用函数需要一些关于正在发布的消息类型的元信息，诸如字段名称和类型在消息类型中显示顺序的列表之类的内容。然后，要发布消息，您可以调用通用发布函数，并传递要发布的消息以及包含有关消息类型的必要元数据的结构。这被称为  &quot;dynamic&quot; 型支持，与  &quot;static&quot; 型支持相反，  &quot;static&quot; 型支持需要每种类型的函数的生成版本。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5288">[待校准&#64;5288]</a></p>
+<div class="figure align-default" id="id3">
+<img alt="ros2 idl动态类型支持堆栈 `[待校准&#64;5289] &lt;http://localhost:3000/#/home?msgid=5289&gt;`_ " src="../_images/ros_idl_api_stack_dynamic.png" />
+<p class="caption"><span class="caption-text">图: 流程图  &quot;dynamic&quot; 类型支持生成，从 <code class="docutils literal notranslate"><span class="pre">rosidl</span></code> 文件用户面临码。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5290">[待校准&#64;5290]</a></span><a class="headerlink" href="#id3" title="永久链接至图片"></a></p>
+</div>
+<p>上图显示了从用户定义的 <code class="docutils literal notranslate"><span class="pre">rosidl</span></code> 文件到生成的面向用户的代码的流程。它与静态类型支持的图非常相似，并且仅在图的左侧表示的类型支持的生成方式上有所不同。在动态类型支持中， <code class="docutils literal notranslate"><span class="pre">.msg</span></code> 文件直接转换为面向用户的代码。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5291">[待校准&#64;5291]</a></p>
+<p>此代码也与中间件无关，因为它仅包含有关消息的元信息。实际完成工作的函数，例如发布到一个话题，对于消息类型是通用的，并且将对中间件特定的 | Api | 进行任何必要的调用。请注意，此方法不是为dds供应商提供类型支持代码的特定包 (静态类型支持就是这种情况)，而是为每种语言提供中间件不可知包，例如g.  <code class="docutils literal notranslate"><span class="pre">rosidl_typesupport_introspection_c</span></code> 和 <code class="docutils literal notranslate"><span class="pre">rosidl_typesupport_introspection_cpp</span></code> 。包名称的 <code class="docutils literal notranslate"><span class="pre">introspection</span></code> 部分指的是利用消息类型生成的元数据对任何消息实例进行反思的能力。这是基金ament能力，允许像  &quot;publish to a topic&quot; 这样的功能的通用实现。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5292">[待校准&#64;5292]</a></p>
+<p>这种方法的优点是所有生成的代码都与中间件无关，这意味着只要它们允许动态类型支持，就可以将其重新用于不同的中间件实现。它还会导致生成的代码更少，从而减少编译时间和代码大小。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5293">[待校准&#64;5293]</a></p>
+<p>但是，动态类型支持要求底层中间件支持类似形式的动态类型支持。对于DDS，DDS-XTypes标准允许使用元信息而不是生成的代码发布消息。为了支持动态类型支持，底层中间件中需要DDS-XTypes或类似的东西。此外，这种类型支持的方法通常比静态类型支持的替代方法慢。可以编写静态类型支持中的特定类型生成的代码，以提高效率，因为它不需要迭代消息类型的元数据来执行诸如序列化之类的操作。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5294">[待校准&#64;5294]</a></p>
+</div>
+</div>
+<div class="section" id="the-rcl-repository">
+<h2><code class="docutils literal notranslate"><span class="pre">rcl</span></code> 储存库 <a class="reference external" href="http://localhost:3000/#/home?msgid=5295">[待校准&#64;5295]</a><a class="headerlink" href="#the-rcl-repository" title="永久链接至标题"></a></h2>
+<p>ROS客户端库接口 ( <code class="docutils literal notranslate"><span class="pre">rcl</span></code>  | API <a href="#id1"><span class="problematic" id="id2">|</span></a>) 可由 | 客户端库 | (例如g.  <code class="docutils literal notranslate"><span class="pre">rclc</span></code> 、 <code class="docutils literal notranslate"><span class="pre">rclcpp</span></code> 、 <code class="docutils literal notranslate"><span class="pre">rclpy</span></code> 等)，以避免重复逻辑和特征。通过重用 <code class="docutils literal notranslate"><span class="pre">rcl</span></code>  | API <a href="#id3"><span class="problematic" id="id4">|</span></a>，客户端库可以更小，彼此更一致。客户端库的某些部分被故意排除在 <code class="docutils literal notranslate"><span class="pre">rcl</span></code>  | API | 之外，因为应该使用语言惯用方法来实现系统的这些部分。一个很好的例子就是执行模型，而 <code class="docutils literal notranslate"><span class="pre">rcl</span></code> 根本没有解决这个问题。相反，客户端库应该提供一种语言惯用解决方案，如C中的 <code class="docutils literal notranslate"><span class="pre">pthreads</span></code> 、C 11 11中的 “std:: 线程” 和Python中的 <code class="docutils literal notranslate"><span class="pre">threading.Thread</span></code> 。通常， <code class="docutils literal notranslate"><span class="pre">rcl</span></code> 接口提供的功能不是特定于语言模式的，也不是特定于特定消息类型的。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5296">[待校准&#64;5296]</a></p>
+<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">rcl</span></code>  | API | 位于 | GitHub | _ 上的 <a class="reference external" href="https://github.com/ros2/rcl">ros2/rcl</a> 仓库中，包含C标头接口。[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">rcl</span></code> C实施由[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">rcl</span></code>  | 包装 | 在同一个仓库提供。这种实现避免了与中间件的直接接触，而是使用了 <code class="docutils literal notranslate"><span class="pre">rmw</span></code> 和 <code class="docutils literal notranslate"><span class="pre">rosidl</span></code>  | Api <a href="#id1"><span class="problematic" id="id2">|</span></a>。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5297">[待校准&#64;5297]</a></p>
+<p>有关 <code class="docutils literal notranslate"><span class="pre">rcl</span></code>  | API | 的完整定义，请参阅其 <a class="reference external" href="http://docs.ros2.org/foxy/api/rcl/index.html">API documentation</a> : <a class="reference external" href="http://localhost:3000/#/home?msgid=5298">[待校准&#64;5298]</a></p>
+</div>
+<div class="section" id="the-rmw-repository">
+<h2><code class="docutils literal notranslate"><span class="pre">rmw</span></code> 储存库 <a class="reference external" href="http://localhost:3000/#/home?msgid=5299">[待校准&#64;5299]</a><a class="headerlink" href="#the-rmw-repository" title="永久链接至标题"></a></h2>
+<p>ROS中间件接口 ( <code class="docutils literal notranslate"><span class="pre">rmw</span></code>  | API <a href="#id1"><span class="problematic" id="id2">|</span></a>) 是在顶部构建ROS所需的最小原始中间件功能集。提供者不同中间件实现必须实现此接口以支持整个ROS堆叠。目前所有的中间件实现是不同DDS供应商。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5300">[待校准&#64;5300]</a></p>
+<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">rmw</span></code>  | API | 位于 <a class="reference external" href="https://github.com/ros2/rmw">ros2/rmw</a> 仓库。[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">rmw</span></code>  | 包 | 包含定义接口的C头，其实现由不同DDS供应商的各种rmw | 包 | 提供。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5301">[待校准&#64;5301]</a></p>
+<p>有关 <code class="docutils literal notranslate"><span class="pre">rmw</span></code>  | API | 的定义，请参阅 | API | 文档: <a class="reference external" href="http://localhost:3000/#/home?msgid=5302">[待校准&#64;5302]</a></p>
+<p><a class="reference external" href="http://docs.ros2.org/foxy/api/rmw/index.html">api/rmw/index.html</a></p>
+</div>
+<div class="section" id="the-rosidl-repository">
+<h2><code class="docutils literal notranslate"><span class="pre">rosidl</span></code> 储存库 <a class="reference external" href="http://localhost:3000/#/home?msgid=5304">[待校准&#64;5304]</a><a class="headerlink" href="#the-rosidl-repository" title="永久链接至标题"></a></h2>
+<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">rosidl</span></code>  | API | 由一些与消息相关的静态函数和类型组成，并定义了不同语言的消息应生成哪些代码。| API | 中指定的生成的消息代码将是特定于语言的，但可能会也可能不会将生成的代码重新用于其他语言。| API | 中指定的生成消息代码包含消息数据结构、构造函数、销毁函数等内容。| API | 还将实现一种获取消息类型的类型支持结构的方法，该方法在发布或订阅该消息类型的话题时使用。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5305">[待校准&#64;5305]</a></p>
+<p>有几个仓库在 <code class="docutils literal notranslate"><span class="pre">rosidl</span></code>  | API | 和实现中发挥作用。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5306">[待校准&#64;5306]</a></p>
+<p>的 <code class="docutils literal notranslate"><span class="pre">rosidl</span></code> 仓库，位于 | GitHub | _ 在 <a class="reference external" href="https://github.com/ros2/rosidl">ros2/rosidl</a> ，定义消息IDL语法，即 <code class="docutils literal notranslate"><span class="pre">.msg</span></code> 文件、 <code class="docutils literal notranslate"><span class="pre">.srv</span></code> 文件等的语法，并包含 | 包 | 用于解析文件，用于提供CMake基础设施以从消息生成代码，用于生成与实现无关的代码 (标头和源文件)，以及用于建立默认的生成器集。仓库包含以下 | 包 <a href="#id1"><span class="problematic" id="id2">|</span></a>: <a class="reference external" href="http://localhost:3000/#/home?msgid=5307">[待校准&#64;5307]</a></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">rosidl_cmake</span></code>: provides CMake functions and CMake Modules for generating code from <code class="docutils literal notranslate"><span class="pre">rosidl</span></code> files, e.g. <code class="docutils literal notranslate"><span class="pre">.msg</span></code> files, <code class="docutils literal notranslate"><span class="pre">.srv</span></code> files等 <a class="reference external" href="http://localhost:3000/#/home?msgid=5308">[待校准&#64;5308]</a></p></li>
+<li><p>[需手动修复的语法]``rosidl_default_generators``:定义了默认生成器列表，确保它们作为依赖项安装，但也可以使用其他注入的生成器。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5309">[待校准&#64;5309]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rosidl_generator_c</span></code>: provides tools to generate C header files (<code class="docutils literal notranslate"><span class="pre">.h</span></code>) for <code class="docutils literal notranslate"><span class="pre">rosidl</span></code> files. <a class="reference external" href="http://localhost:3000/#/home?msgid=5310">[待校准&#64;5310]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rosidl_generator_cpp</span></code>: provides tools to generate C++ header files (<code class="docutils literal notranslate"><span class="pre">.hpp</span></code>) for <code class="docutils literal notranslate"><span class="pre">rosidl</span></code> files. <a class="reference external" href="http://localhost:3000/#/home?msgid=5311">[待校准&#64;5311]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rosidl_generator_py</span></code>: provides tools to generate Python modules for <code class="docutils literal notranslate"><span class="pre">rosidl</span></code> files. <a class="reference external" href="http://localhost:3000/#/home?msgid=5312">[待校准&#64;5312]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rosidl_parser</span></code>: provides Python <a class="reference internal" href="../Glossary.html#term-API"><span class="xref std std-term">API</span></a> for parsing <code class="docutils literal notranslate"><span class="pre">rosidl</span></code> files. <a class="reference external" href="http://localhost:3000/#/home?msgid=5313">[待校准&#64;5313]</a></p></li>
+</ul>
+<p>用于其他语言的发电机，例如 <code class="docutils literal notranslate"><span class="pre">rosidl_generator_java</span></code> ，是外部托管的 (在不同的仓库中)，但将使用与上述发电机用于  &quot;register&quot; 本身作为 <code class="docutils literal notranslate"><span class="pre">rosidl</span></code> 发电机相同的机制。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5314">[待校准&#64;5314]</a></p>
+<p>除了上述 | 包 | 用于解析和生成 <code class="docutils literal notranslate"><span class="pre">rosidl</span></code> 文件的标头之外， <code class="docutils literal notranslate"><span class="pre">rosidl</span></code> 仓库还包含 | 包 | 与  &quot;type support&quot; 有关的文件中定义的消息类型。类型支持是指解释和操作由特定类型的ROS消息实例表示的信息的能力 (例如，发布消息)。类型支持可以由编译时生成的代码提供，也可以根据 <code class="docutils literal notranslate"><span class="pre">rosidl</span></code> 文件的内容 (例如 <code class="docutils literal notranslate"><span class="pre">.msg</span></code> 或 <code class="docutils literal notranslate"><span class="pre">.srv</span></code> 文件) 进行编程调用，以及通过自省数据接收的数据。在后者的情况下，类型支持是通过消息的运行时解释来完成的，由ROS 2生成的消息代码可以与rmw实现无关。通过数据自省提供这种类型支持的包有: <a class="reference external" href="http://localhost:3000/#/home?msgid=5315">[待校准&#64;5315]</a></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">rosidl_typesupport_introspection_c</span></code>: provides tools for generating C code for supporting <code class="docutils literal notranslate"><span class="pre">rosidl</span></code> message数据类型。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5316">[待校准&#64;5316]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rosidl_typesupport_introspection_cpp</span></code>: provides tools for generating C++ code for supporting <code class="docutils literal notranslate"><span class="pre">rosidl</span></code> message数据类型。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5317">[待校准&#64;5317]</a></p></li>
+</ul>
+<p>在类型支持将在编译时生成而不是在编程调用y生成的情况下，将需要使用特定于rmw实现的包。这是因为典型调用y特定的rmw实现将需要以特定于DDS供应商的方式存储和操作数据，以便DDS实现使用它。有关更多详细信息，请参见上面的 <a class="reference internal" href="#type-specific-interfaces"><span class="std std-ref">特定类型接口 [待校准&#64;5276]</span></a> 部分。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5318">[待校准&#64;5318]</a></p>
+<p>有关 <code class="docutils literal notranslate"><span class="pre">rosidl</span></code>  | API | (静态和生成) 中确切内容的更多信息，请参阅本页: <a class="reference external" href="http://localhost:3000/#/home?msgid=5319">[待校准&#64;5319]</a></p>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>TODO: 链接到 <code class="docutils literal notranslate"><span class="pre">rosidl</span></code> 的定义 | Api | <a class="reference external" href="http://localhost:3000/#/home?msgid=5320">[待校准&#64;5320]</a></p>
+</div>
+</div>
+<div class="section" id="the-rcutils-repository">
+<h2><code class="docutils literal notranslate"><span class="pre">rcutils</span></code> 储存库 <a class="reference external" href="http://localhost:3000/#/home?msgid=5321">[待校准&#64;5321]</a><a class="headerlink" href="#the-rcutils-repository" title="永久链接至标题"></a></h2>
+<p>ROS 2 C实用程序 ( <code class="docutils literal notranslate"><span class="pre">rcutils</span></code> ) 是一个C | API | 由整个ROS 2代码库中使用的宏、函数和数据结构组成。这些主要用于错误处理、命令行参数解析和日志，它们不是特定于客户端或中间件层的，并且可以由两者共享。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5322">[待校准&#64;5322]</a></p>
+<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">rcutils</span></code>  | API | 和实现位于 | GitHub | _ 上的 <a class="reference external" href="https://github.com/ros2/rcutils">ros2/rcutils</a> 仓库中，其中包含C标头接口。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5323">[待校准&#64;5323]</a></p>
+<p>有关 <code class="docutils literal notranslate"><span class="pre">rcutils</span></code>  | API | 的完整定义，请参阅 <a class="reference external" href="http://docs.ros2.org/foxy/api/rcutils/index.html">its API documentation</a>  <a class="reference external" href="http://localhost:3000/#/home?msgid=5324">[待校准&#64;5324]</a></p>
+</div>
+</div>
+
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="About-Build-System.html" class="btn btn-neutral float-left" title="关于构建系统 [待校准@4969]" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="About-Middleware-Implementations.html" class="btn btn-neutral float-right" title="关于ROS 2中间件实现 [待校准@5347]" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2022, Open Robotics.</p>
+  </div>
+
+  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-17821189-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-17821189-2', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>
