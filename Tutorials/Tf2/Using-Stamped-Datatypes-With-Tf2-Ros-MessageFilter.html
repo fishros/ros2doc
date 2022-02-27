@@ -249,7 +249,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../Related-Projects/Nvidia-ROS2-Projects.html">[需手动修复的语法]NVIDIAROS 2项目 [待校准&#64;6668]</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../Glossary.html">相关术语 `[小鱼&#64;1] http://dev.ros2.fishros.com/calibpage/#/home?msgid=1&gt;`_</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Glossary.html">术语表</a></li>
 </ul>
 
         </div>
@@ -281,12 +281,12 @@
 
 
   <div class="section" id="using-stamped-datatypes-with-tf2-ros-messagefilter">
-<span id="usingstampeddatatypeswithtf2rosmessagefilter"></span><h1>使用stamped数据类型与tf2_ros: MessageFilter <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8578">[待校准&#64;8578]</a><a class="headerlink" href="#using-stamped-datatypes-with-tf2-ros-messagefilter" title="永久链接至标题"></a></h1>
-<p>Goal目标: Learn了解如何使用 “tf2_ros:: messagefilter” 处理stamped数据类型。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8579">[待校准&#64;8579]</a></p>
-<p>Tutorial教程级别: Advanced高级 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7643">[待校准&#64;7643]</a></p>
-<p>Time时间: 10 10分钟 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7452">[待校准&#64;7452]</a></p>
+<span id="usingstampeddatatypeswithtf2rosmessagefilter"></span><h1>使用stamped数据类型与tf2_ros: MessageFilter <a class="reference external" href="http://localhost:3000/#/home?msgid=8578">[待校准&#64;8578]</a><a class="headerlink" href="#using-stamped-datatypes-with-tf2-ros-messagefilter" title="永久链接至标题"></a></h1>
+<p>Goal目标: Learn了解如何使用 “tf2_ros:: messagefilter” 处理stamped数据类型。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8579">[待校准&#64;8579]</a></p>
+<p>Tutorial教程级别: Advanced高级 <a class="reference external" href="http://localhost:3000/#/home?msgid=7643">[待校准&#64;7643]</a></p>
+<p>Time时间: 10 10分钟 <a class="reference external" href="http://localhost:3000/#/home?msgid=7452">[待校准&#64;7452]</a></p>
 <div class="contents local topic" id="contents">
-<p class="topic-title">内容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6715">[待校准&#64;6715]</a></p>
+<p class="topic-title">内容 <a class="reference external" href="http://localhost:3000/#/home?msgid=6715">[待校准&#64;6715]</a></p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#background" id="id2">背景 [待校准&#64;6716]</a></p></li>
 <li><p><a class="reference internal" href="#setting-up-the-example" id="id3">设置示例 [待校准&#64;8586]</a></p>
@@ -311,25 +311,25 @@
 </ul>
 </div>
 <div class="section" id="background">
-<h2>背景 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6716">[待校准&#64;6716]</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
-<p>本教程介绍如何在tf2中使用传感器数据。传感器数据的一些真实例子是: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8580">[待校准&#64;8580]</a></p>
+<h2>背景 <a class="reference external" href="http://localhost:3000/#/home?msgid=6716">[待校准&#64;6716]</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
+<p>本教程介绍如何在tf2中使用传感器数据。传感器数据的一些真实例子是: <a class="reference external" href="http://localhost:3000/#/home?msgid=8580">[待校准&#64;8580]</a></p>
 <blockquote>
 <div><ul class="simple">
-<li><p>单声道和立体声相机 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8581">[待校准&#64;8581]</a></p></li>
-<li><p>激光扫描 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8582">[待校准&#64;8582]</a></p></li>
+<li><p>单声道和立体声相机 <a class="reference external" href="http://localhost:3000/#/home?msgid=8581">[待校准&#64;8581]</a></p></li>
+<li><p>激光扫描 <a class="reference external" href="http://localhost:3000/#/home?msgid=8582">[待校准&#64;8582]</a></p></li>
 </ul>
 </div></blockquote>
-<p>假设一只名为 <code class="docutils literal notranslate"><span class="pre">turtle3</span></code> 的新乌龟被创造出来了，它没有很好的里程计，但是有一个头顶摄像机跟踪它的位置，并把它作为与 <code class="docutils literal notranslate"><span class="pre">world</span></code> 帧相关的 <code class="docutils literal notranslate"><span class="pre">PointStamped</span></code> 信息发布。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8583">[待校准&#64;8583]</a></p>
-<p>[需手动修复的语法]``turtle1`` wants to know where <code class="docutils literal notranslate"><span class="pre">turtle3</span></code> is与自身相比。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8584">[待校准&#64;8584]</a></p>
-<p>要做到这一点， <code class="docutils literal notranslate"><span class="pre">turtle1</span></code> 必须倾听 <code class="docutils literal notranslate"><span class="pre">turtle3</span></code> 姿势被发表的话题，等到转换成想要的帧准备好，然后再进行操作。为了使这变得更容易，请使用 “tf2_ros::MessageFilter `` is very useful. The `` tf2_ros:: messageFilter'' 将订阅带有标头的任何ROS 2消息并将其缓存，直到可以将其转换为目标帧为止。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8585">[待校准&#64;8585]</a></p>
+<p>假设一只名为 <code class="docutils literal notranslate"><span class="pre">turtle3</span></code> 的新乌龟被创造出来了，它没有很好的里程计，但是有一个头顶摄像机跟踪它的位置，并把它作为与 <code class="docutils literal notranslate"><span class="pre">world</span></code> 帧相关的 <code class="docutils literal notranslate"><span class="pre">PointStamped</span></code> 信息发布。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8583">[待校准&#64;8583]</a></p>
+<p>[需手动修复的语法]``turtle1`` wants to know where <code class="docutils literal notranslate"><span class="pre">turtle3</span></code> is与自身相比。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8584">[待校准&#64;8584]</a></p>
+<p>要做到这一点， <code class="docutils literal notranslate"><span class="pre">turtle1</span></code> 必须倾听 <code class="docutils literal notranslate"><span class="pre">turtle3</span></code> 姿势被发表的话题，等到转换成想要的帧准备好，然后再进行操作。为了使这变得更容易，请使用 “tf2_ros::MessageFilter `` is very useful. The `` tf2_ros:: messageFilter'' 将订阅带有标头的任何ROS 2消息并将其缓存，直到可以将其转换为目标帧为止。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8585">[待校准&#64;8585]</a></p>
 </div>
 <div class="section" id="setting-up-the-example">
-<h2>设置示例 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8586">[待校准&#64;8586]</a><a class="headerlink" href="#setting-up-the-example" title="永久链接至标题"></a></h2>
+<h2>设置示例 <a class="reference external" href="http://localhost:3000/#/home?msgid=8586">[待校准&#64;8586]</a><a class="headerlink" href="#setting-up-the-example" title="永久链接至标题"></a></h2>
 <div class="section" id="write-the-broadcaster-node-of-pointstamped-messages">
-<h3>1写入标记消息的广播器节点 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8587">[待校准&#64;8587]</a><a class="headerlink" href="#write-the-broadcaster-node-of-pointstamped-messages" title="永久链接至标题"></a></h3>
-<p>本教程会成立例程应用具有节点 (Python) 广播 <code class="docutils literal notranslate"><span class="pre">PointStamped</span></code> 位置信息 <code class="docutils literal notranslate"><span class="pre">turtle3</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8588">[待校准&#64;8588]</a></p>
-<p>首先，让我们创建源文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8589">[待校准&#64;8589]</a></p>
-<p>转到我们在上一教程中创建的 <code class="docutils literal notranslate"><span class="pre">learning_tf2_py</span></code>  <a class="reference internal" href="Writing-A-Tf2-Static-Broadcaster-Py.html"><span class="doc">package</span></a> 。在 <code class="docutils literal notranslate"><span class="pre">src/learning_tf2_py/learning_tf2_py</span></code> 目录中，通过输入以下命令下载示例传感器消息广播器代码: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8590">[待校准&#64;8590]</a></p>
+<h3>1写入标记消息的广播器节点 <a class="reference external" href="http://localhost:3000/#/home?msgid=8587">[待校准&#64;8587]</a><a class="headerlink" href="#write-the-broadcaster-node-of-pointstamped-messages" title="永久链接至标题"></a></h3>
+<p>本教程会成立例程应用具有节点 (Python) 广播 <code class="docutils literal notranslate"><span class="pre">PointStamped</span></code> 位置信息 <code class="docutils literal notranslate"><span class="pre">turtle3</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8588">[待校准&#64;8588]</a></p>
+<p>首先，让我们创建源文件。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8589">[待校准&#64;8589]</a></p>
+<p>转到我们在上一教程中创建的 <code class="docutils literal notranslate"><span class="pre">learning_tf2_py</span></code>  <a class="reference internal" href="Writing-A-Tf2-Static-Broadcaster-Py.html"><span class="doc">package</span></a> 。在 <code class="docutils literal notranslate"><span class="pre">src/learning_tf2_py/learning_tf2_py</span></code> 目录中，通过输入以下命令下载示例传感器消息广播器代码: <a class="reference external" href="http://localhost:3000/#/home?msgid=8590">[待校准&#64;8590]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-0-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-0-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-0-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-0-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-0-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">wget https://raw.githubusercontent.com/ros/geometry_tutorials/ros2/turtle_tf2_py/turtle_tf2_py/turtle_tf2_message_broadcaster.py</span>
 </pre></div>
@@ -337,16 +337,16 @@
 </div><div aria-labelledby="tab-0-bWFjT1M=" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-bWFjT1M=" name="bWFjT1M=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">wget https://raw.githubusercontent.com/ros/geometry_tutorials/ros2/turtle_tf2_py/turtle_tf2_py/turtle_tf2_message_broadcaster.py</span>
 </pre></div>
 </div>
-</div><div aria-labelledby="tab-0-V2luZG93cw==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-V2luZG93cw==" name="V2luZG93cw==" role="tabpanel" tabindex="0"><p>在Windows命令行提示符下: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8363">[待校准&#64;8363]</a></p>
+</div><div aria-labelledby="tab-0-V2luZG93cw==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-V2luZG93cw==" name="V2luZG93cw==" role="tabpanel" tabindex="0"><p>在Windows命令行提示符下: <a class="reference external" href="http://localhost:3000/#/home?msgid=8363">[待校准&#64;8363]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">curl -sk https://raw.githubusercontent.com/ros/geometry_tutorials/ros2/turtle_tf2_py/turtle_tf2_py/turtle_tf2_message_broadcaster.py -o turtle_tf2_message_broadcaster.py</span>
 </pre></div>
 </div>
-<p>或者在powershell中: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8364">[待校准&#64;8364]</a></p>
+<p>或者在powershell中: <a class="reference external" href="http://localhost:3000/#/home?msgid=8364">[待校准&#64;8364]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">curl https://raw.githubusercontent.com/ros/geometry_tutorials/ros2/turtle_tf2_py/turtle_tf2_py/turtle_tf2_message_broadcaster.py -o turtle_tf2_message_broadcaster.py</span>
 </pre></div>
 </div>
 </div></div>
-<p>使用您喜欢的文本编辑器打开文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8591">[待校准&#64;8591]</a></p>
+<p>使用您喜欢的文本编辑器打开文件。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8591">[待校准&#64;8591]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">geometry_msgs.msg</span> <span class="kn">import</span> <span class="n">PointStamped</span>
 <span class="kn">from</span> <span class="nn">geometry_msgs.msg</span> <span class="kn">import</span> <span class="n">Twist</span>
 
@@ -433,8 +433,8 @@
 </pre></div>
 </div>
 <div class="section" id="examine-the-code">
-<h4>1.1检查代码 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8367">[待校准&#64;8367]</a><a class="headerlink" href="#examine-the-code" title="永久链接至标题"></a></h4>
-<p>现在让我们看一下代码。首先，在 <code class="docutils literal notranslate"><span class="pre">on_timer</span></code> 调用回调函数，我们生成 <code class="docutils literal notranslate"><span class="pre">turtle3</span></code> 的异步调用的 <code class="docutils literal notranslate"><span class="pre">Spawn</span></code> 服务 <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> ，初始化位置 (4，2，0)，当海龟产卵服务准备好了。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8592">[待校准&#64;8592]</a></p>
+<h4>1.1检查代码 <a class="reference external" href="http://localhost:3000/#/home?msgid=8367">[待校准&#64;8367]</a><a class="headerlink" href="#examine-the-code" title="永久链接至标题"></a></h4>
+<p>现在让我们看一下代码。首先，在 <code class="docutils literal notranslate"><span class="pre">on_timer</span></code> 调用回调函数，我们生成 <code class="docutils literal notranslate"><span class="pre">turtle3</span></code> 的异步调用的 <code class="docutils literal notranslate"><span class="pre">Spawn</span></code> 服务 <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> ，初始化位置 (4，2，0)，当海龟产卵服务准备好了。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8592">[待校准&#64;8592]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize request with turtle name and coordinates</span>
 <span class="c1"># Note that x, y and theta are defined as floats in turtlesim/srv/Spawn</span>
 <span class="n">request</span> <span class="o">=</span> <span class="n">Spawn</span><span class="o">.</span><span class="n">Request</span><span class="p">()</span>
@@ -446,13 +446,13 @@
 <span class="bp">self</span><span class="o">.</span><span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">spawner</span><span class="o">.</span><span class="n">call_async</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>之后，节点发布话题 <code class="docutils literal notranslate"><span class="pre">turtle3/cmd_vel</span></code> ，话题 <code class="docutils literal notranslate"><span class="pre">turtle3/turtle_point_stamped</span></code> ，订阅话题 <code class="docutils literal notranslate"><span class="pre">turtle3/pose</span></code> ，并对每条传入的消息运行调用函数 <code class="docutils literal notranslate"><span class="pre">handle_turtle_pose</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8593">[待校准&#64;8593]</a></p>
+<p>之后，节点发布话题 <code class="docutils literal notranslate"><span class="pre">turtle3/cmd_vel</span></code> ，话题 <code class="docutils literal notranslate"><span class="pre">turtle3/turtle_point_stamped</span></code> ，订阅话题 <code class="docutils literal notranslate"><span class="pre">turtle3/pose</span></code> ，并对每条传入的消息运行调用函数 <code class="docutils literal notranslate"><span class="pre">handle_turtle_pose</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8593">[待校准&#64;8593]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="bp">self</span><span class="o">.</span><span class="n">vel_pub</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_publisher</span><span class="p">(</span><span class="n">Twist</span><span class="p">,</span> <span class="s1">&#39;/turtle3/cmd_vel&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
 <span class="bp">self</span><span class="o">.</span><span class="n">sub</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_subscription</span><span class="p">(</span><span class="n">Pose</span><span class="p">,</span> <span class="s1">&#39;/turtle3/pose&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">handle_turtle_pose</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
 <span class="bp">self</span><span class="o">.</span><span class="n">pub</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_publisher</span><span class="p">(</span><span class="n">PointStamped</span><span class="p">,</span> <span class="s1">&#39;/turtle3/turtle_point_stamped&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>最后，在调用返回函数 <code class="docutils literal notranslate"><span class="pre">handle_turtle_pose</span></code> 中，我们初始化 <code class="docutils literal notranslate"><span class="pre">turtle3</span></code> 的 <code class="docutils literal notranslate"><span class="pre">Twist</span></code> 信息并发布它们，这将使 <code class="docutils literal notranslate"><span class="pre">turtle3</span></code> 沿着一个圆圈移动。然后我们填补 <code class="docutils literal notranslate"><span class="pre">PointStamped</span></code> 信息 <code class="docutils literal notranslate"><span class="pre">turtle3</span></code> 传入 <code class="docutils literal notranslate"><span class="pre">Pose</span></code> 消息发布。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8594">[待校准&#64;8594]</a></p>
+<p>最后，在调用返回函数 <code class="docutils literal notranslate"><span class="pre">handle_turtle_pose</span></code> 中，我们初始化 <code class="docutils literal notranslate"><span class="pre">turtle3</span></code> 的 <code class="docutils literal notranslate"><span class="pre">Twist</span></code> 信息并发布它们，这将使 <code class="docutils literal notranslate"><span class="pre">turtle3</span></code> 沿着一个圆圈移动。然后我们填补 <code class="docutils literal notranslate"><span class="pre">PointStamped</span></code> 信息 <code class="docutils literal notranslate"><span class="pre">turtle3</span></code> 传入 <code class="docutils literal notranslate"><span class="pre">Pose</span></code> 消息发布。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8594">[待校准&#64;8594]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">vel_msg</span> <span class="o">=</span> <span class="n">Twist</span><span class="p">()</span>
 <span class="n">vel_msg</span><span class="o">.</span><span class="n">linear</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mf">1.0</span>
 <span class="n">vel_msg</span><span class="o">.</span><span class="n">angular</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="mf">1.0</span>
@@ -469,8 +469,8 @@
 </div>
 </div>
 <div class="section" id="write-the-launch-file">
-<h4>1.2写launch文件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8369">[待校准&#64;8369]</a><a class="headerlink" href="#write-the-launch-file" title="永久链接至标题"></a></h4>
-<p>为了运行此例程，我们需要创建launch文件 <code class="docutils literal notranslate"><span class="pre">turtle_tf2_sensor_message.launch.py</span></code> 在 <code class="docutils literal notranslate"><span class="pre">launch</span></code> 子目录包装 <code class="docutils literal notranslate"><span class="pre">learning_tf2_py</span></code> : <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8595">[待校准&#64;8595]</a></p>
+<h4>1.2写launch文件 <a class="reference external" href="http://localhost:3000/#/home?msgid=8369">[待校准&#64;8369]</a><a class="headerlink" href="#write-the-launch-file" title="永久链接至标题"></a></h4>
+<p>为了运行此例程，我们需要创建launch文件 <code class="docutils literal notranslate"><span class="pre">turtle_tf2_sensor_message.launch.py</span></code> 在 <code class="docutils literal notranslate"><span class="pre">launch</span></code> 子目录包装 <code class="docutils literal notranslate"><span class="pre">learning_tf2_py</span></code> : <a class="reference external" href="http://localhost:3000/#/home?msgid=8595">[待校准&#64;8595]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">launch</span> <span class="kn">import</span> <span class="n">LaunchDescription</span>
 <span class="kn">from</span> <span class="nn">launch.actions</span> <span class="kn">import</span> <span class="n">DeclareLaunchArgument</span>
 <span class="kn">from</span> <span class="nn">launch_ros.actions</span> <span class="kn">import</span> <span class="n">Node</span>
@@ -514,15 +514,15 @@
 </div>
 </div>
 <div class="section" id="add-an-entry-point-and-build-the-package">
-<h4>1.3添加入口点并构建包 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8596">[待校准&#64;8596]</a><a class="headerlink" href="#add-an-entry-point-and-build-the-package" title="永久链接至标题"></a></h4>
-<p>不要忘记在包的 <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> 文件中添加可执行文件: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8597">[待校准&#64;8597]</a></p>
+<h4>1.3添加入口点并构建包 <a class="reference external" href="http://localhost:3000/#/home?msgid=8596">[待校准&#64;8596]</a><a class="headerlink" href="#add-an-entry-point-and-build-the-package" title="永久链接至标题"></a></h4>
+<p>不要忘记在包的 <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> 文件中添加可执行文件: <a class="reference external" href="http://localhost:3000/#/home?msgid=8597">[待校准&#64;8597]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;console_scripts&#39;</span><span class="p">:</span> <span class="p">[</span>
     <span class="o">...</span>
     <span class="s1">&#39;turtle_tf2_message_broadcaster = learning_tf2_py.turtle_tf2_message_broadcaster:main&#39;</span><span class="p">,</span>
 <span class="p">],</span>
 </pre></div>
 </div>
-<p>然后我们可以构建包: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8598">[待校准&#64;8598]</a></p>
+<p>然后我们可以构建包: <a class="reference external" href="http://localhost:3000/#/home?msgid=8598">[待校准&#64;8598]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-1-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-1-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-1-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-1-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-1-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-1-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">colcon build --packages-select learning_tf2_py</span>
 </pre></div>
@@ -537,9 +537,9 @@
 </div>
 </div>
 <div class="section" id="writing-the-message-filter-listener-node">
-<h3>2编写消息过滤器/侦听器节点 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8599">[待校准&#64;8599]</a><a class="headerlink" href="#writing-the-message-filter-listener-node" title="永久链接至标题"></a></h3>
-<p>现在，获得串流 <code class="docutils literal notranslate"><span class="pre">PointStamped</span></code> 数据 <code class="docutils literal notranslate"><span class="pre">turtle3</span></code> 在帧的 <code class="docutils literal notranslate"><span class="pre">turtle1</span></code> 可靠，我们将创建源文件文件消息/侦听节点。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8600">[待校准&#64;8600]</a></p>
-<p>转到我们在上一教程中创建的 <code class="docutils literal notranslate"><span class="pre">learning_tf2_cpp</span></code>  <a class="reference internal" href="Writing-A-Tf2-Static-Broadcaster-Cpp.html"><span class="doc">package</span></a> 。在 <code class="docutils literal notranslate"><span class="pre">src/learning_tf2_cpp/src</span></code> 目录中，通过输入以下命令下载文件 <code class="docutils literal notranslate"><span class="pre">turtle_tf2_message_filter.cpp</span></code> : <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8601">[待校准&#64;8601]</a></p>
+<h3>2编写消息过滤器/侦听器节点 <a class="reference external" href="http://localhost:3000/#/home?msgid=8599">[待校准&#64;8599]</a><a class="headerlink" href="#writing-the-message-filter-listener-node" title="永久链接至标题"></a></h3>
+<p>现在，获得串流 <code class="docutils literal notranslate"><span class="pre">PointStamped</span></code> 数据 <code class="docutils literal notranslate"><span class="pre">turtle3</span></code> 在帧的 <code class="docutils literal notranslate"><span class="pre">turtle1</span></code> 可靠，我们将创建源文件文件消息/侦听节点。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8600">[待校准&#64;8600]</a></p>
+<p>转到我们在上一教程中创建的 <code class="docutils literal notranslate"><span class="pre">learning_tf2_cpp</span></code>  <a class="reference internal" href="Writing-A-Tf2-Static-Broadcaster-Cpp.html"><span class="doc">package</span></a> 。在 <code class="docutils literal notranslate"><span class="pre">src/learning_tf2_cpp/src</span></code> 目录中，通过输入以下命令下载文件 <code class="docutils literal notranslate"><span class="pre">turtle_tf2_message_filter.cpp</span></code> : <a class="reference external" href="http://localhost:3000/#/home?msgid=8601">[待校准&#64;8601]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-2-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-2-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-2-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-2-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-2-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-2-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-2-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-2-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">wget https://raw.githubusercontent.com/ros/geometry_tutorials/ros2/turtle_tf2_cpp/src/turtle_tf2_message_filter.cpp</span>
 </pre></div>
@@ -547,16 +547,16 @@
 </div><div aria-labelledby="tab-2-bWFjT1M=" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-2-bWFjT1M=" name="bWFjT1M=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">wget https://raw.githubusercontent.com/ros/geometry_tutorials/ros2/turtle_tf2_cpp/src/turtle_tf2_message_filter.cpp</span>
 </pre></div>
 </div>
-</div><div aria-labelledby="tab-2-V2luZG93cw==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-2-V2luZG93cw==" name="V2luZG93cw==" role="tabpanel" tabindex="0"><p>在Windows命令行提示符下: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8363">[待校准&#64;8363]</a></p>
+</div><div aria-labelledby="tab-2-V2luZG93cw==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-2-V2luZG93cw==" name="V2luZG93cw==" role="tabpanel" tabindex="0"><p>在Windows命令行提示符下: <a class="reference external" href="http://localhost:3000/#/home?msgid=8363">[待校准&#64;8363]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">curl -sk wget https://raw.githubusercontent.com/ros/geometry_tutorials/ros2/turtle_tf2_cpp/src/turtle_tf2_message_filter.cpp -o turtle_tf2_message_filter.cpp</span>
 </pre></div>
 </div>
-<p>或者在powershell中: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8364">[待校准&#64;8364]</a></p>
+<p>或者在powershell中: <a class="reference external" href="http://localhost:3000/#/home?msgid=8364">[待校准&#64;8364]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">curl https://raw.githubusercontent.com/ros/geometry_tutorials/ros2/turtle_tf2_cpp/src/turtle_tf2_message_filter.cpp -o turtle_tf2_message_filter.cpp</span>
 </pre></div>
 </div>
 </div></div>
-<p>使用您喜欢的文本编辑器打开文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8591">[待校准&#64;8591]</a></p>
+<p>使用您喜欢的文本编辑器打开文件。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8591">[待校准&#64;8591]</a></p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;geometry_msgs/msg/point_stamped.hpp&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;message_filters/subscriber.h&gt;</span><span class="cp"></span>
 
@@ -642,8 +642,8 @@
 </pre></div>
 </div>
 <div class="section" id="id1">
-<h4>2.1检查代码 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8007">[待校准&#64;8007]</a><a class="headerlink" href="#id1" title="永久链接至标题"></a></h4>
-<p>首先，您必须包括 <code class="docutils literal notranslate"><span class="pre">tf2_ros</span></code> 包中的 “tf2_ros:: messagefilter” 标题，以及以前使用的 <code class="docutils literal notranslate"><span class="pre">tf2</span></code> 和 <code class="docutils literal notranslate"><span class="pre">ros2</span></code> 相关标题。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8602">[待校准&#64;8602]</a></p>
+<h4>2.1检查代码 <a class="reference external" href="http://localhost:3000/#/home?msgid=8007">[待校准&#64;8007]</a><a class="headerlink" href="#id1" title="永久链接至标题"></a></h4>
+<p>首先，您必须包括 <code class="docutils literal notranslate"><span class="pre">tf2_ros</span></code> 包中的 “tf2_ros:: messagefilter” 标题，以及以前使用的 <code class="docutils literal notranslate"><span class="pre">tf2</span></code> 和 <code class="docutils literal notranslate"><span class="pre">ros2</span></code> 相关标题。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8602">[待校准&#64;8602]</a></p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;geometry_msgs/msg/point_stamped.hpp&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;message_filters/subscriber.h&gt;</span><span class="cp"></span>
 
@@ -659,7 +659,7 @@
 <span class="cp">#endif</span>
 </pre></div>
 </div>
-<p>第二，需要持续实例 ”tf2_ros: Buffer''，” tf2_ros: TransformListener `` and `` tf2_ros: MessageFilter''。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8603">[待校准&#64;8603]</a></p>
+<p>第二，需要持续实例 ”tf2_ros: Buffer''，” tf2_ros: TransformListener `` and `` tf2_ros: MessageFilter''。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8603">[待校准&#64;8603]</a></p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">target_frame_</span><span class="p">;</span>
 <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">tf2_ros</span><span class="o">::</span><span class="n">Buffer</span><span class="o">&gt;</span> <span class="n">tf2_buffer_</span><span class="p">;</span>
 <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">tf2_ros</span><span class="o">::</span><span class="n">TransformListener</span><span class="o">&gt;</span> <span class="n">tf2_listener_</span><span class="p">;</span>
@@ -667,7 +667,7 @@
 <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">tf2_ros</span><span class="o">::</span><span class="n">MessageFilter</span><span class="o">&lt;</span><span class="n">geometry_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">PointStamped</span><span class="o">&gt;&gt;</span> <span class="n">tf2_filter_</span><span class="p">;</span>
 </pre></div>
 </div>
-<p>第三，必须使用该 <code class="docutils literal notranslate"><span class="pre">Subscriber</span></code> 对象初始化ROS 2 “消息过滤器:: 订阅者 `` must be initialized with the topic. And the `` tf2_ros:: 消息过滤器”。 <code class="docutils literal notranslate"><span class="pre">MessageFilter</span></code> 构造函数中注意的其他参数是 <code class="docutils literal notranslate"><span class="pre">target_frame</span></code> 函数和调用back函数。目标帧是确保 <code class="docutils literal notranslate"><span class="pre">canTransform</span></code> 成功的帧。调用back函数是在数据准备就绪时将被调用的函数。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8604">[待校准&#64;8604]</a></p>
+<p>第三，必须使用该 <code class="docutils literal notranslate"><span class="pre">Subscriber</span></code> 对象初始化ROS 2 “消息过滤器:: 订阅者 `` must be initialized with the topic. And the `` tf2_ros:: 消息过滤器”。 <code class="docutils literal notranslate"><span class="pre">MessageFilter</span></code> 构造函数中注意的其他参数是 <code class="docutils literal notranslate"><span class="pre">target_frame</span></code> 函数和调用back函数。目标帧是确保 <code class="docutils literal notranslate"><span class="pre">canTransform</span></code> 成功的帧。调用back函数是在数据准备就绪时将被调用的函数。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8604">[待校准&#64;8604]</a></p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">PoseDrawer</span><span class="p">()</span>
 <span class="o">:</span> <span class="n">Node</span><span class="p">(</span><span class="s">&quot;turtle_tf2_pose_drawer&quot;</span><span class="p">)</span>
 <span class="p">{</span>
@@ -697,7 +697,7 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>最后，当数据准备好时，调用back方法将调用 <code class="docutils literal notranslate"><span class="pre">tf2_buffer_-&gt;transform</span></code> ，并将输出打印到控制台。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8605">[待校准&#64;8605]</a></p>
+<p>最后，当数据准备好时，调用back方法将调用 <code class="docutils literal notranslate"><span class="pre">tf2_buffer_-&gt;transform</span></code> ，并将输出打印到控制台。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8605">[待校准&#64;8605]</a></p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">private</span><span class="o">:</span>
 <span class="kt">void</span> <span class="n">msgCallback</span><span class="p">(</span><span class="k">const</span> <span class="n">geometry_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">PointStamped</span><span class="o">::</span><span class="n">SharedPtr</span> <span class="n">point_ptr</span><span class="p">)</span>
 <span class="p">{</span>
@@ -719,18 +719,18 @@
 </div>
 </div>
 <div class="section" id="build-the-package">
-<h4>2.2构建包 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8606">[待校准&#64;8606]</a><a class="headerlink" href="#build-the-package" title="永久链接至标题"></a></h4>
-<p>在构建 <code class="docutils literal notranslate"><span class="pre">learning_tf2_cpp</span></code> 包之前，请在此包的 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 文件中添加另外两个依赖项: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8607">[待校准&#64;8607]</a></p>
+<h4>2.2构建包 <a class="reference external" href="http://localhost:3000/#/home?msgid=8606">[待校准&#64;8606]</a><a class="headerlink" href="#build-the-package" title="永久链接至标题"></a></h4>
+<p>在构建 <code class="docutils literal notranslate"><span class="pre">learning_tf2_cpp</span></code> 包之前，请在此包的 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 文件中添加另外两个依赖项: <a class="reference external" href="http://localhost:3000/#/home?msgid=8607">[待校准&#64;8607]</a></p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;depend&gt;</span>message_filters<span class="nt">&lt;/depend&gt;</span>
 <span class="nt">&lt;depend&gt;</span>tf2_geometry_msgs<span class="nt">&lt;/depend&gt;</span>
 </pre></div>
 </div>
-<p>在 <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> 文件中，在现有依赖项下添加两行: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8608">[待校准&#64;8608]</a></p>
+<p>在 <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> 文件中，在现有依赖项下添加两行: <a class="reference external" href="http://localhost:3000/#/home?msgid=8608">[待校准&#64;8608]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">find_package(message_filters REQUIRED)</span>
 <span class="go">find_package(tf2_geometry_msgs REQUIRED)</span>
 </pre></div>
 </div>
-<p>最重要的是，将这些行添加到依赖项下方: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8609">[待校准&#64;8609]</a></p>
+<p>最重要的是，将这些行添加到依赖项下方: <a class="reference external" href="http://localhost:3000/#/home?msgid=8609">[待校准&#64;8609]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">find_file(TF2_CPP_HEADERS</span>
 <span class="go">  NAMES tf2_geometry_msgs.hpp</span>
 <span class="go">  PATHS ${tf2_geometry_msgs_INCLUDE_DIRS}</span>
@@ -739,7 +739,7 @@
 <span class="go">)</span>
 </pre></div>
 </div>
-<p>之后，添加可执行文件并将其命名为 <code class="docutils literal notranslate"><span class="pre">turtle_tf2_message_filter</span></code> ，稍后将在 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">run</span></code> 中使用。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8610">[待校准&#64;8610]</a></p>
+<p>之后，添加可执行文件并将其命名为 <code class="docutils literal notranslate"><span class="pre">turtle_tf2_message_filter</span></code> ，稍后将在 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">run</span></code> 中使用。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8610">[待校准&#64;8610]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">add_executable(turtle_tf2_message_filter src/turtle_tf2_message_filter.cpp)</span>
 <span class="go">ament_target_dependencies(</span>
 <span class="go">  turtle_tf2_message_filter</span>
@@ -752,13 +752,13 @@
 <span class="go">)</span>
 </pre></div>
 </div>
-<p>最后，添加 “安装 (目标……) `` section (below other existing nodes) so `` ros2运行” 可以找到您的可执行文件: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8611">[待校准&#64;8611]</a></p>
+<p>最后，添加 “安装 (目标……) `` section (below other existing nodes) so `` ros2运行” 可以找到您的可执行文件: <a class="reference external" href="http://localhost:3000/#/home?msgid=8611">[待校准&#64;8611]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">install(TARGETS</span>
 <span class="go">  turtle_tf2_message_filter</span>
 <span class="go">  DESTINATION lib/${PROJECT_NAME})</span>
 </pre></div>
 </div>
-<p>现在打开一个新终端，导航到工作区的根目录，然后使用以下命令重建包: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8612">[待校准&#64;8612]</a></p>
+<p>现在打开一个新终端，导航到工作区的根目录，然后使用以下命令重建包: <a class="reference external" href="http://localhost:3000/#/home?msgid=8612">[待校准&#64;8612]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-3-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-3-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-3-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-3-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-3-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-3-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-3-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-3-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">colcon build --packages-select learning_tf2_cpp</span>
 </pre></div>
@@ -774,21 +774,21 @@
 </div>
 </div>
 <div class="section" id="running-and-results">
-<h2>运行和结果 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8613">[待校准&#64;8613]</a><a class="headerlink" href="#running-and-results" title="永久链接至标题"></a></h2>
-<p>首先我们需要运行多个节点 (包括广播器节点PointStamped消息) launch的launch文件 <code class="docutils literal notranslate"><span class="pre">turtle_tf2_sensor_message.launch.py</span></code> : <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8614">[待校准&#64;8614]</a></p>
+<h2>运行和结果 <a class="reference external" href="http://localhost:3000/#/home?msgid=8613">[待校准&#64;8613]</a><a class="headerlink" href="#running-and-results" title="永久链接至标题"></a></h2>
+<p>首先我们需要运行多个节点 (包括广播器节点PointStamped消息) launch的launch文件 <code class="docutils literal notranslate"><span class="pre">turtle_tf2_sensor_message.launch.py</span></code> : <a class="reference external" href="http://localhost:3000/#/home?msgid=8614">[待校准&#64;8614]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 launch learning_tf2_py turtle_tf2_sensor_message.launch.py</span>
 </pre></div>
 </div>
-<p>这将打开带有两只海龟的 <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> 窗口， <code class="docutils literal notranslate"><span class="pre">turtle3</span></code> 沿着一个圆圈移动，而 <code class="docutils literal notranslate"><span class="pre">turtle1</span></code> 起初没有移动。但是你可以在另一个终端运行 <code class="docutils literal notranslate"><span class="pre">turtle_teleop_key</span></code> 节点来驱动 <code class="docutils literal notranslate"><span class="pre">turtle1</span></code> 移动: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8615">[待校准&#64;8615]</a></p>
+<p>这将打开带有两只海龟的 <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> 窗口， <code class="docutils literal notranslate"><span class="pre">turtle3</span></code> 沿着一个圆圈移动，而 <code class="docutils literal notranslate"><span class="pre">turtle1</span></code> 起初没有移动。但是你可以在另一个终端运行 <code class="docutils literal notranslate"><span class="pre">turtle_teleop_key</span></code> 节点来驱动 <code class="docutils literal notranslate"><span class="pre">turtle1</span></code> 移动: <a class="reference external" href="http://localhost:3000/#/home?msgid=8615">[待校准&#64;8615]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run turtlesim turtle_teleop_key</span>
 </pre></div>
 </div>
 <img alt="../../_images/turtlesim_messagefilter.png" src="../../_images/turtlesim_messagefilter.png" />
-<p>现在如果你重复这个话题 <code class="docutils literal notranslate"><span class="pre">turtle3/turtle_point_stamped</span></code> : <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8616">[待校准&#64;8616]</a></p>
+<p>现在如果你重复这个话题 <code class="docutils literal notranslate"><span class="pre">turtle3/turtle_point_stamped</span></code> : <a class="reference external" href="http://localhost:3000/#/home?msgid=8616">[待校准&#64;8616]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 topic echo /turtle3/turtle_point_stamped</span>
 </pre></div>
 </div>
-<p>然后会有如下输出: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8617">[待校准&#64;8617]</a></p>
+<p>然后会有如下输出: <a class="reference external" href="http://localhost:3000/#/home?msgid=8617">[待校准&#64;8617]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">header:</span>
 <span class="go">  stamp:</span>
 <span class="go">    sec: 1629877510</span>
@@ -821,11 +821,11 @@
 <span class="go">---</span>
 </pre></div>
 </div>
-<p>例程运行时，打开另一个终端并运行消息筛选器/侦听器节点: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8618">[待校准&#64;8618]</a></p>
+<p>例程运行时，打开另一个终端并运行消息筛选器/侦听器节点: <a class="reference external" href="http://localhost:3000/#/home?msgid=8618">[待校准&#64;8618]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run learning_tf2_cpp turtle_tf2_message_filter</span>
 </pre></div>
 </div>
-<p>如果它运行正常，您应该看到如下流数据: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8619">[待校准&#64;8619]</a></p>
+<p>如果它运行正常，您应该看到如下流数据: <a class="reference external" href="http://localhost:3000/#/home?msgid=8619">[待校准&#64;8619]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">[INFO] [1630016162.006173900] [turtle_tf2_pose_drawer]: Point of turtle3 in frame of turtle1: x:-6.493231 y:-2.961614 z:0.000000</span>
 
 <span class="go">[INFO] [1630016162.006291983] [turtle_tf2_pose_drawer]: Point of turtle3 in frame of turtle1: x:-6.472169 y:-3.004742 z:0.000000</span>
@@ -837,8 +837,8 @@
 </div>
 </div>
 <div class="section" id="summary">
-<h2>总结 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6747">[待校准&#64;6747]</a><a class="headerlink" href="#summary" title="永久链接至标题"></a></h2>
-<p>在本教程中，您学习了如何在tf2中使用传感器数据/消息。具体调用y来说，你学会了如何在一个话题上发布 <code class="docutils literal notranslate"><span class="pre">PointStamped</span></code> 信息，以及如何倾听这个话题，并用 “tf2_ros:: messagefilter” 转换 <code class="docutils literal notranslate"><span class="pre">PointStamped</span></code> 信息的帧。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8620">[待校准&#64;8620]</a></p>
+<h2>总结 <a class="reference external" href="http://localhost:3000/#/home?msgid=6747">[待校准&#64;6747]</a><a class="headerlink" href="#summary" title="永久链接至标题"></a></h2>
+<p>在本教程中，您学习了如何在tf2中使用传感器数据/消息。具体调用y来说，你学会了如何在一个话题上发布 <code class="docutils literal notranslate"><span class="pre">PointStamped</span></code> 信息，以及如何倾听这个话题，并用 “tf2_ros:: messagefilter” 转换 <code class="docutils literal notranslate"><span class="pre">PointStamped</span></code> 信息的帧。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8620">[待校准&#64;8620]</a></p>
 </div>
 </div>
 

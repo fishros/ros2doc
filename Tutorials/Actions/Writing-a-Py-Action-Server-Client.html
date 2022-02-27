@@ -249,7 +249,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../Related-Projects/Nvidia-ROS2-Projects.html">[需手动修复的语法]NVIDIAROS 2项目 [待校准&#64;6668]</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../Glossary.html">相关术语 `[小鱼&#64;1] http://dev.ros2.fishros.com/calibpage/#/home?msgid=1&gt;`_</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Glossary.html">术语表</a></li>
 </ul>
 
         </div>
@@ -280,12 +280,12 @@
 
 
   <div class="section" id="writing-an-action-server-and-client-python">
-<span id="actionspy"></span><h1>编写动作服务器和客户端 (Python) <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6825">[待校准&#64;6825]</a><a class="headerlink" href="#writing-an-action-server-and-client-python" title="永久链接至标题"></a></h1>
-<p>Goal目标: Python在Python中实现动作服务器和客户端。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6826">[待校准&#64;6826]</a></p>
-<p>Tutorial教程级别: Intermediate中级 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6713">[待校准&#64;6713]</a></p>
-<p>Time时间: 15 15分钟 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6755">[待校准&#64;6755]</a></p>
+<span id="actionspy"></span><h1>编写动作服务器和客户端 (Python) <a class="reference external" href="http://localhost:3000/#/home?msgid=6825">[待校准&#64;6825]</a><a class="headerlink" href="#writing-an-action-server-and-client-python" title="永久链接至标题"></a></h1>
+<p>Goal目标: Python在Python中实现动作服务器和客户端。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6826">[待校准&#64;6826]</a></p>
+<p>Tutorial教程级别: Intermediate中级 <a class="reference external" href="http://localhost:3000/#/home?msgid=6713">[待校准&#64;6713]</a></p>
+<p>Time时间: 15 15分钟 <a class="reference external" href="http://localhost:3000/#/home?msgid=6755">[待校准&#64;6755]</a></p>
 <div class="contents local topic" id="contents">
-<p class="topic-title">内容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6715">[待校准&#64;6715]</a></p>
+<p class="topic-title">内容 <a class="reference external" href="http://localhost:3000/#/home?msgid=6715">[待校准&#64;6715]</a></p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#background" id="id1">背景 [待校准&#64;6716]</a></p></li>
 <li><p><a class="reference internal" href="#prerequisites" id="id2">先决条件 [待校准&#64;6718]</a></p></li>
@@ -300,20 +300,20 @@
 </ul>
 </div>
 <div class="section" id="background">
-<h2>背景 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6716">[待校准&#64;6716]</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
-<p>[需手动修复的语法]Action是ROS 2中异步通讯的一种形式。* [需手动修复的语法]Action客户端 * 向 * 动作服务器 * 发送目标请求。* [需手动修复的语法]Action服务器 * 向 * 动作客户端 * 发送目标反馈和结果。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6827">[待校准&#64;6827]</a></p>
+<h2>背景 <a class="reference external" href="http://localhost:3000/#/home?msgid=6716">[待校准&#64;6716]</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
+<p>[需手动修复的语法]Action是ROS 2中异步通讯的一种形式。* [需手动修复的语法]Action客户端 * 向 * 动作服务器 * 发送目标请求。* [需手动修复的语法]Action服务器 * 向 * 动作客户端 * 发送目标反馈和结果。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6827">[待校准&#64;6827]</a></p>
 </div>
 <div class="section" id="prerequisites">
-<h2>先决条件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6718">[待校准&#64;6718]</a><a class="headerlink" href="#prerequisites" title="永久链接至标题"></a></h2>
-<p>您将需要上一教程 “ <a class="reference internal" href="Creating-an-Action.html"><span class="doc">创建动作 [待校准&#64;6711]</span></a> ” 中定义的 <code class="docutils literal notranslate"><span class="pre">action_tutorials_interfaces</span></code> 包和 <code class="docutils literal notranslate"><span class="pre">Fibonacci.action</span></code> 接口。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6757">[待校准&#64;6757]</a></p>
+<h2>先决条件 <a class="reference external" href="http://localhost:3000/#/home?msgid=6718">[待校准&#64;6718]</a><a class="headerlink" href="#prerequisites" title="永久链接至标题"></a></h2>
+<p>您将需要上一教程 “ <a class="reference internal" href="Creating-an-Action.html"><span class="doc">创建动作 [待校准&#64;6711]</span></a> ” 中定义的 <code class="docutils literal notranslate"><span class="pre">action_tutorials_interfaces</span></code> 包和 <code class="docutils literal notranslate"><span class="pre">Fibonacci.action</span></code> 接口。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6757">[待校准&#64;6757]</a></p>
 </div>
 <div class="section" id="tasks">
-<h2>任务 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6725">[待校准&#64;6725]</a><a class="headerlink" href="#tasks" title="永久链接至标题"></a></h2>
+<h2>任务 <a class="reference external" href="http://localhost:3000/#/home?msgid=6725">[待校准&#64;6725]</a><a class="headerlink" href="#tasks" title="永久链接至标题"></a></h2>
 <div class="section" id="writing-an-action-server">
-<h3>1编写动作服务器 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6828">[待校准&#64;6828]</a><a class="headerlink" href="#writing-an-action-server" title="永久链接至标题"></a></h3>
-<p>让我们集中精力编写一个动作服务器，使用我们在 <a class="reference internal" href="Creating-an-Action.html"><span class="doc">创建动作 [待校准&#64;6711]</span></a> 教程中创建的动作来计算斐波那契序列。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6766">[待校准&#64;6766]</a></p>
-<p>到目前为止，您已经创建了包，并使用 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">run</span></code> 运行您的节点。但是，为了在本教程中保持简单，我们将把动作服务器的范围限定为一个文件。如果你想看看动作教程的完整包是什么样子的，请查看 <a class="reference external" href="https://github.com/ros2/demos/tree/foxy/action_tutorials">action_tutorials</a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6829">[待校准&#64;6829]</a></p>
-<p>在您的主目录中打开一个新文件，让我们调用它 <code class="docutils literal notranslate"><span class="pre">fibonacci_action_server.py</span></code> ，并添加以下代码: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6830">[待校准&#64;6830]</a></p>
+<h3>1编写动作服务器 <a class="reference external" href="http://localhost:3000/#/home?msgid=6828">[待校准&#64;6828]</a><a class="headerlink" href="#writing-an-action-server" title="永久链接至标题"></a></h3>
+<p>让我们集中精力编写一个动作服务器，使用我们在 <a class="reference internal" href="Creating-an-Action.html"><span class="doc">创建动作 [待校准&#64;6711]</span></a> 教程中创建的动作来计算斐波那契序列。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6766">[待校准&#64;6766]</a></p>
+<p>到目前为止，您已经创建了包，并使用 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">run</span></code> 运行您的节点。但是，为了在本教程中保持简单，我们将把动作服务器的范围限定为一个文件。如果你想看看动作教程的完整包是什么样子的，请查看 <a class="reference external" href="https://github.com/ros2/demos/tree/foxy/action_tutorials">action_tutorials</a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6829">[待校准&#64;6829]</a></p>
+<p>在您的主目录中打开一个新文件，让我们调用它 <code class="docutils literal notranslate"><span class="pre">fibonacci_action_server.py</span></code> ，并添加以下代码: <a class="reference external" href="http://localhost:3000/#/home?msgid=6830">[待校准&#64;6830]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">rclpy</span>
 <span class="kn">from</span> <span class="nn">rclpy.action</span> <span class="kn">import</span> <span class="n">ActionServer</span>
 <span class="kn">from</span> <span class="nn">rclpy.node</span> <span class="kn">import</span> <span class="n">Node</span>
@@ -349,11 +349,11 @@
     <span class="n">main</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>第8行定义了 <code class="docutils literal notranslate"><span class="pre">FibonacciActionServer</span></code> 类，它是 <code class="docutils literal notranslate"><span class="pre">Node</span></code> 的子类。通过调用 <code class="docutils literal notranslate"><span class="pre">Node</span></code> 构造函数来初始化类，命名我们的节点 <code class="docutils literal notranslate"><span class="pre">fibonacci_action_server</span></code> : <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6831">[待校准&#64;6831]</a></p>
+<p>第8行定义了 <code class="docutils literal notranslate"><span class="pre">FibonacciActionServer</span></code> 类，它是 <code class="docutils literal notranslate"><span class="pre">Node</span></code> 的子类。通过调用 <code class="docutils literal notranslate"><span class="pre">Node</span></code> 构造函数来初始化类，命名我们的节点 <code class="docutils literal notranslate"><span class="pre">fibonacci_action_server</span></code> : <a class="reference external" href="http://localhost:3000/#/home?msgid=6831">[待校准&#64;6831]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s1">&#39;fibonacci_action_server&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>在构造函数中，我们还实例化一个新的动作服务器: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6832">[待校准&#64;6832]</a></p>
+<p>在构造函数中，我们还实例化一个新的动作服务器: <a class="reference external" href="http://localhost:3000/#/home?msgid=6832">[待校准&#64;6832]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>        <span class="bp">self</span><span class="o">.</span><span class="n">_action_server</span> <span class="o">=</span> <span class="n">ActionServer</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">Fibonacci</span><span class="p">,</span>
@@ -361,22 +361,22 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">execute_callback</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>一个动作服务器需要四个参数: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6833">[待校准&#64;6833]</a></p>
+<p>一个动作服务器需要四个参数: <a class="reference external" href="http://localhost:3000/#/home?msgid=6833">[待校准&#64;6833]</a></p>
 <ol class="arabic simple">
-<li><p>一个ROS 2节点，用于将动作客户端添加到:  <code class="docutils literal notranslate"><span class="pre">self</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6834">[待校准&#64;6834]</a></p></li>
-<li><p>动作类型:  <code class="docutils literal notranslate"><span class="pre">Fibonacci</span></code>  (第5行输入)。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6835">[待校准&#64;6835]</a></p></li>
-<li><p>动作名称: “'fibonacci'”。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6776">[待校准&#64;6776]</a></p></li>
-<li><p>用于执行可接受目标的调用返回函数:  <code class="docutils literal notranslate"><span class="pre">self.execute_callback</span></code> 。此调用必须返回动作类型的结果消息。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6836">[待校准&#64;6836]</a></p></li>
+<li><p>一个ROS 2节点，用于将动作客户端添加到:  <code class="docutils literal notranslate"><span class="pre">self</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6834">[待校准&#64;6834]</a></p></li>
+<li><p>动作类型:  <code class="docutils literal notranslate"><span class="pre">Fibonacci</span></code>  (第5行输入)。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6835">[待校准&#64;6835]</a></p></li>
+<li><p>动作名称: “'fibonacci'”。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6776">[待校准&#64;6776]</a></p></li>
+<li><p>用于执行可接受目标的调用返回函数:  <code class="docutils literal notranslate"><span class="pre">self.execute_callback</span></code> 。此调用必须返回动作类型的结果消息。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6836">[待校准&#64;6836]</a></p></li>
 </ol>
-<p>我们还在课堂上定义了一种 <code class="docutils literal notranslate"><span class="pre">execute_callback</span></code> 方法: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6837">[待校准&#64;6837]</a></p>
+<p>我们还在课堂上定义了一种 <code class="docutils literal notranslate"><span class="pre">execute_callback</span></code> 方法: <a class="reference external" href="http://localhost:3000/#/home?msgid=6837">[待校准&#64;6837]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="k">def</span> <span class="nf">execute_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">goal_handle</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Executing goal...&#39;</span><span class="p">)</span>
         <span class="n">result</span> <span class="o">=</span> <span class="n">Fibonacci</span><span class="o">.</span><span class="n">Result</span><span class="p">()</span>
         <span class="k">return</span> <span class="n">result</span>
 </pre></div>
 </div>
-<p>一旦目标被接受，将调用此方法来执行目标。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6838">[待校准&#64;6838]</a></p>
-<p>让我们尝试运行我们的动作服务器: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6839">[待校准&#64;6839]</a></p>
+<p>一旦目标被接受，将调用此方法来执行目标。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6838">[待校准&#64;6838]</a></p>
+<p>让我们尝试运行我们的动作服务器: <a class="reference external" href="http://localhost:3000/#/home?msgid=6839">[待校准&#64;6839]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-0-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-0-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-0-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-0-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-0-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3 fibonacci_action_server.py
 </pre></div>
@@ -388,12 +388,12 @@
 </pre></div>
 </div>
 </div></div>
-<p>在另一个终端中，我们可以使用命令行界面发送目标: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6840">[待校准&#64;6840]</a></p>
+<p>在另一个终端中，我们可以使用命令行界面发送目标: <a class="reference external" href="http://localhost:3000/#/home?msgid=6840">[待校准&#64;6840]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 action send_goal fibonacci action_tutorials_interfaces/action/Fibonacci <span class="s2">&quot;{order: 5}&quot;</span>
 </pre></div>
 </div>
-<p>在运行动作服务器的终端中，您应该会看到一条记录的消息 “正在执行目标...”，然后是未设置目标状态的警告。默认情况下，如果在execute调用中没有设置目标句柄状态，它将假定 * 中止 * 状态。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6841">[待校准&#64;6841]</a></p>
-<p>我们可以使用目标手柄上的方法 <a class="reference external" href="http://docs.ros2.org/foxy/api/rclpy/api/actions.html#rclpy.action.server.ServerGoalHandle.succeeded">succeed()</a> 来表明目标是成功的: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6842">[待校准&#64;6842]</a></p>
+<p>在运行动作服务器的终端中，您应该会看到一条记录的消息 “正在执行目标...”，然后是未设置目标状态的警告。默认情况下，如果在execute调用中没有设置目标句柄状态，它将假定 * 中止 * 状态。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6841">[待校准&#64;6841]</a></p>
+<p>我们可以使用目标手柄上的方法 <a class="reference external" href="http://docs.ros2.org/foxy/api/rclpy/api/actions.html#rclpy.action.server.ServerGoalHandle.succeeded">succeed()</a> 来表明目标是成功的: <a class="reference external" href="http://localhost:3000/#/home?msgid=6842">[待校准&#64;6842]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="k">def</span> <span class="nf">execute_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">goal_handle</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Executing goal...&#39;</span><span class="p">)</span>
 <span class="hll">        <span class="n">goal_handle</span><span class="o">.</span><span class="n">succeed</span><span class="p">()</span>
@@ -401,8 +401,8 @@
         <span class="k">return</span> <span class="n">result</span>
 </pre></div>
 </div>
-<p>现在，如果您重新启动动作服务器并发送另一个目标，您应该会看到目标以 <code class="docutils literal notranslate"><span class="pre">SUCCEEDED</span></code> 状态完成。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6843">[待校准&#64;6843]</a></p>
-<p>现在，让我们的目标执行实际计算并返回请求的斐波那契序列: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6844">[待校准&#64;6844]</a></p>
+<p>现在，如果您重新启动动作服务器并发送另一个目标，您应该会看到目标以 <code class="docutils literal notranslate"><span class="pre">SUCCEEDED</span></code> 状态完成。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6843">[待校准&#64;6843]</a></p>
+<p>现在，让我们的目标执行实际计算并返回请求的斐波那契序列: <a class="reference external" href="http://localhost:3000/#/home?msgid=6844">[待校准&#64;6844]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="k">def</span> <span class="nf">execute_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">goal_handle</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Executing goal...&#39;</span><span class="p">)</span>
 
@@ -418,12 +418,12 @@
 </span>        <span class="k">return</span> <span class="n">result</span>
 </pre></div>
 </div>
-<p>计算序列后，我们将其分配给result message字段，然后再返回。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6845">[待校准&#64;6845]</a></p>
-<p>再次，重新启动动作服务器并发送另一个目标。你应该看到目标以正确的结果序列结束。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6846">[待校准&#64;6846]</a></p>
+<p>计算序列后，我们将其分配给result message字段，然后再返回。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6845">[待校准&#64;6845]</a></p>
+<p>再次，重新启动动作服务器并发送另一个目标。你应该看到目标以正确的结果序列结束。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6846">[待校准&#64;6846]</a></p>
 <div class="section" id="publishing-feedback">
-<h4>1.2发布反馈 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6847">[待校准&#64;6847]</a><a class="headerlink" href="#publishing-feedback" title="永久链接至标题"></a></h4>
-<p>动作的好处之一是能够在目标执行期间向动作客户提供反馈。我们可以通过调用目标手柄的 <a class="reference external" href="http://docs.ros2.org/foxy/api/rclpy/api/actions.html#rclpy.action.server.ServerGoalHandle.publish_feedback">publish_feedback()</a> 方法，让我们的动作服务器为动作客户端发布反馈。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6848">[待校准&#64;6848]</a></p>
-<p>我们将替换 <code class="docutils literal notranslate"><span class="pre">sequence</span></code> 变量，并使用反馈消息来存储序列。每次更新for循环中的反馈消息后，我们都会发布反馈消息并休眠以获得戏剧性效果: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6849">[待校准&#64;6849]</a></p>
+<h4>1.2发布反馈 <a class="reference external" href="http://localhost:3000/#/home?msgid=6847">[待校准&#64;6847]</a><a class="headerlink" href="#publishing-feedback" title="永久链接至标题"></a></h4>
+<p>动作的好处之一是能够在目标执行期间向动作客户提供反馈。我们可以通过调用目标手柄的 <a class="reference external" href="http://docs.ros2.org/foxy/api/rclpy/api/actions.html#rclpy.action.server.ServerGoalHandle.publish_feedback">publish_feedback()</a> 方法，让我们的动作服务器为动作客户端发布反馈。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6848">[待校准&#64;6848]</a></p>
+<p>我们将替换 <code class="docutils literal notranslate"><span class="pre">sequence</span></code> 变量，并使用反馈消息来存储序列。每次更新for循环中的反馈消息后，我们都会发布反馈消息并休眠以获得戏剧性效果: <a class="reference external" href="http://localhost:3000/#/home?msgid=6849">[待校准&#64;6849]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="kn">import</span> <span class="nn">time</span>
 </span>
 <span class="kn">import</span> <span class="nn">rclpy</span>
@@ -475,15 +475,15 @@
     <span class="n">main</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>重新启动动作服务器后，我们可以通过使用带有 <code class="docutils literal notranslate"><span class="pre">--feedback</span></code> 选项的命令行工具来确认反馈现在已发布: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6850">[待校准&#64;6850]</a></p>
+<p>重新启动动作服务器后，我们可以通过使用带有 <code class="docutils literal notranslate"><span class="pre">--feedback</span></code> 选项的命令行工具来确认反馈现在已发布: <a class="reference external" href="http://localhost:3000/#/home?msgid=6850">[待校准&#64;6850]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 action send_goal --feedback fibonacci action_tutorials_interfaces/action/Fibonacci <span class="s2">&quot;{order: 5}&quot;</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="section" id="writing-an-action-client">
-<h3>2编写动作客户端 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6851">[待校准&#64;6851]</a><a class="headerlink" href="#writing-an-action-client" title="永久链接至标题"></a></h3>
-<p>我们还将把动作客户端的范围限定为一个文件。打开一个新文件，让我们调用它 <code class="docutils literal notranslate"><span class="pre">fibonacci_action_client.py</span></code> ，并添加以下样板代码: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6852">[待校准&#64;6852]</a></p>
+<h3>2编写动作客户端 <a class="reference external" href="http://localhost:3000/#/home?msgid=6851">[待校准&#64;6851]</a><a class="headerlink" href="#writing-an-action-client" title="永久链接至标题"></a></h3>
+<p>我们还将把动作客户端的范围限定为一个文件。打开一个新文件，让我们调用它 <code class="docutils literal notranslate"><span class="pre">fibonacci_action_client.py</span></code> ，并添加以下样板代码: <a class="reference external" href="http://localhost:3000/#/home?msgid=6852">[待校准&#64;6852]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">rclpy</span>
 <span class="kn">from</span> <span class="nn">rclpy.action</span> <span class="kn">import</span> <span class="n">ActionClient</span>
 <span class="kn">from</span> <span class="nn">rclpy.node</span> <span class="kn">import</span> <span class="n">Node</span>
@@ -520,22 +520,22 @@
     <span class="n">main</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>我们已经定义了 <code class="docutils literal notranslate"><span class="pre">FibonacciActionClient</span></code> 类，它是 <code class="docutils literal notranslate"><span class="pre">Node</span></code> 的子类。通过调用 <code class="docutils literal notranslate"><span class="pre">Node</span></code> 构造函数来初始化类，命名我们的节点 <code class="docutils literal notranslate"><span class="pre">fibonacci_action_client</span></code> : <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6853">[待校准&#64;6853]</a></p>
+<p>我们已经定义了 <code class="docutils literal notranslate"><span class="pre">FibonacciActionClient</span></code> 类，它是 <code class="docutils literal notranslate"><span class="pre">Node</span></code> 的子类。通过调用 <code class="docutils literal notranslate"><span class="pre">Node</span></code> 构造函数来初始化类，命名我们的节点 <code class="docutils literal notranslate"><span class="pre">fibonacci_action_client</span></code> : <a class="reference external" href="http://localhost:3000/#/home?msgid=6853">[待校准&#64;6853]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s1">&#39;fibonacci_action_client&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>同样在类构造函数中，我们使用上一个关于 <a class="reference internal" href="Creating-an-Action.html"><span class="doc">创建动作 [待校准&#64;6711]</span></a> 的教程中的自定义动作定义创建了一个动作客户端: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6854">[待校准&#64;6854]</a></p>
+<p>同样在类构造函数中，我们使用上一个关于 <a class="reference internal" href="Creating-an-Action.html"><span class="doc">创建动作 [待校准&#64;6711]</span></a> 的教程中的自定义动作定义创建了一个动作客户端: <a class="reference external" href="http://localhost:3000/#/home?msgid=6854">[待校准&#64;6854]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>        <span class="bp">self</span><span class="o">.</span><span class="n">_action_client</span> <span class="o">=</span> <span class="n">ActionClient</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">Fibonacci</span><span class="p">,</span> <span class="s1">&#39;fibonacci&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>我们通过传递三个参数来创建 <code class="docutils literal notranslate"><span class="pre">ActionClient</span></code> : <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6855">[待校准&#64;6855]</a></p>
+<p>我们通过传递三个参数来创建 <code class="docutils literal notranslate"><span class="pre">ActionClient</span></code> : <a class="reference external" href="http://localhost:3000/#/home?msgid=6855">[待校准&#64;6855]</a></p>
 <ol class="arabic simple">
-<li><p>一个ROS 2节点，用于将动作客户端添加到:  <code class="docutils literal notranslate"><span class="pre">self</span></code>  <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6856">[待校准&#64;6856]</a></p></li>
-<li><p>动作类型:  <code class="docutils literal notranslate"><span class="pre">Fibonacci</span></code>  <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6857">[待校准&#64;6857]</a></p></li>
-<li><p>动作名称: “'fibonacci'” <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6858">[待校准&#64;6858]</a></p></li>
+<li><p>一个ROS 2节点，用于将动作客户端添加到:  <code class="docutils literal notranslate"><span class="pre">self</span></code>  <a class="reference external" href="http://localhost:3000/#/home?msgid=6856">[待校准&#64;6856]</a></p></li>
+<li><p>动作类型:  <code class="docutils literal notranslate"><span class="pre">Fibonacci</span></code>  <a class="reference external" href="http://localhost:3000/#/home?msgid=6857">[待校准&#64;6857]</a></p></li>
+<li><p>动作名称: “'fibonacci'” <a class="reference external" href="http://localhost:3000/#/home?msgid=6858">[待校准&#64;6858]</a></p></li>
 </ol>
-<p>我们动作客户端不能与动作服务器相同动作名称和类型。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6859">[待校准&#64;6859]</a></p>
-<p>我们还定义方法 <code class="docutils literal notranslate"><span class="pre">send_goal</span></code> 在 <code class="docutils literal notranslate"><span class="pre">FibonacciActionClient</span></code> 类: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6860">[待校准&#64;6860]</a></p>
+<p>我们动作客户端不能与动作服务器相同动作名称和类型。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6859">[待校准&#64;6859]</a></p>
+<p>我们还定义方法 <code class="docutils literal notranslate"><span class="pre">send_goal</span></code> 在 <code class="docutils literal notranslate"><span class="pre">FibonacciActionClient</span></code> 类: <a class="reference external" href="http://localhost:3000/#/home?msgid=6860">[待校准&#64;6860]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="k">def</span> <span class="nf">send_goal</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">order</span><span class="p">):</span>
         <span class="n">goal_msg</span> <span class="o">=</span> <span class="n">Fibonacci</span><span class="o">.</span><span class="n">Goal</span><span class="p">()</span>
         <span class="n">goal_msg</span><span class="o">.</span><span class="n">order</span> <span class="o">=</span> <span class="n">order</span>
@@ -545,10 +545,10 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_action_client</span><span class="o">.</span><span class="n">send_goal_async</span><span class="p">(</span><span class="n">goal_msg</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>此方法等待动作服务器可用，然后向服务器发送目标。它返回了我们以后可以等待的未来。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6861">[待校准&#64;6861]</a></p>
-<p>在类定义之后，我们定义了一个函数 <code class="docutils literal notranslate"><span class="pre">main()</span></code> ，该函数初始化ROS 2并创建我们的 <code class="docutils literal notranslate"><span class="pre">FibonacciActionClient</span></code> 节点的实例。然后它发送一个目标，并等待直到该目标完成。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6862">[待校准&#64;6862]</a></p>
-<p>最后，我们在Python程序的入口调用 <code class="docutils literal notranslate"><span class="pre">main()</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6863">[待校准&#64;6863]</a></p>
-<p>让我们先运行之前构建的动作服务器来测试我们的动作客户端: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6864">[待校准&#64;6864]</a></p>
+<p>此方法等待动作服务器可用，然后向服务器发送目标。它返回了我们以后可以等待的未来。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6861">[待校准&#64;6861]</a></p>
+<p>在类定义之后，我们定义了一个函数 <code class="docutils literal notranslate"><span class="pre">main()</span></code> ，该函数初始化ROS 2并创建我们的 <code class="docutils literal notranslate"><span class="pre">FibonacciActionClient</span></code> 节点的实例。然后它发送一个目标，并等待直到该目标完成。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6862">[待校准&#64;6862]</a></p>
+<p>最后，我们在Python程序的入口调用 <code class="docutils literal notranslate"><span class="pre">main()</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6863">[待校准&#64;6863]</a></p>
+<p>让我们先运行之前构建的动作服务器来测试我们的动作客户端: <a class="reference external" href="http://localhost:3000/#/home?msgid=6864">[待校准&#64;6864]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-1-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-1-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-1-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-1-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-1-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-1-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3 fibonacci_action_server.py
 </pre></div>
@@ -560,7 +560,7 @@
 </pre></div>
 </div>
 </div></div>
-<p>在另一个终端中，运行动作客户端: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6865">[待校准&#64;6865]</a></p>
+<p>在另一个终端中，运行动作客户端: <a class="reference external" href="http://localhost:3000/#/home?msgid=6865">[待校准&#64;6865]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-2-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-2-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-2-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-2-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-2-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-2-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-2-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-2-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3 fibonacci_action_client.py
 </pre></div>
@@ -572,7 +572,7 @@
 </pre></div>
 </div>
 </div></div>
-<p>当动作服务器成功执行目标时，您应该会看到它打印的消息: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6866">[待校准&#64;6866]</a></p>
+<p>当动作服务器成功执行目标时，您应该会看到它打印的消息: <a class="reference external" href="http://localhost:3000/#/home?msgid=6866">[待校准&#64;6866]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span>INFO<span class="o">]</span> <span class="o">[</span>fibonacci_action_server<span class="o">]</span>: Executing goal...
 <span class="o">[</span>INFO<span class="o">]</span> <span class="o">[</span>fibonacci_action_server<span class="o">]</span>: Feedback: array<span class="o">(</span><span class="s1">&#39;i&#39;</span>, <span class="o">[</span><span class="m">0</span>, <span class="m">1</span>, <span class="m">1</span><span class="o">])</span>
 <span class="o">[</span>INFO<span class="o">]</span> <span class="o">[</span>fibonacci_action_server<span class="o">]</span>: Feedback: array<span class="o">(</span><span class="s1">&#39;i&#39;</span>, <span class="o">[</span><span class="m">0</span>, <span class="m">1</span>, <span class="m">1</span>, <span class="m">2</span><span class="o">])</span>
@@ -581,11 +581,11 @@
 <span class="c1"># etc.</span>
 </pre></div>
 </div>
-<p>动作客户端应该启动，然后快速完成。此时，我们有一个功能正常的动作客户端，但是我们没有看到任何结果或得到任何反馈。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6867">[待校准&#64;6867]</a></p>
+<p>动作客户端应该启动，然后快速完成。此时，我们有一个功能正常的动作客户端，但是我们没有看到任何结果或得到任何反馈。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6867">[待校准&#64;6867]</a></p>
 <div class="section" id="getting-a-result">
-<h4>2.1得到结果 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6868">[待校准&#64;6868]</a><a class="headerlink" href="#getting-a-result" title="永久链接至标题"></a></h4>
-<p>所以我们可以发送一个目标，但是我们怎么知道它什么时候完成呢？我们可以通过几个步骤获得结果信息。首先，我们需要为我们发送的目标获得一个目标句柄。然后，我们可以使用目标句柄来请求结果。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6869">[待校准&#64;6869]</a></p>
-<p>以下是此示例的完整代码: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6870">[待校准&#64;6870]</a></p>
+<h4>2.1得到结果 <a class="reference external" href="http://localhost:3000/#/home?msgid=6868">[待校准&#64;6868]</a><a class="headerlink" href="#getting-a-result" title="永久链接至标题"></a></h4>
+<p>所以我们可以发送一个目标，但是我们怎么知道它什么时候完成呢？我们可以通过几个步骤获得结果信息。首先，我们需要为我们发送的目标获得一个目标句柄。然后，我们可以使用目标句柄来请求结果。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6869">[待校准&#64;6869]</a></p>
+<p>以下是此示例的完整代码: <a class="reference external" href="http://localhost:3000/#/home?msgid=6870">[待校准&#64;6870]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">rclpy</span>
 <span class="kn">from</span> <span class="nn">rclpy.action</span> <span class="kn">import</span> <span class="n">ActionClient</span>
 <span class="kn">from</span> <span class="nn">rclpy.node</span> <span class="kn">import</span> <span class="n">Node</span>
@@ -640,11 +640,11 @@
     <span class="n">main</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>[需手动修复的语法] <a class="reference external" href="http://docs.ros2.org/foxy/api/rclpy/api/actions.html#rclpy.action.client.ActionClient.send_goal_async">ActionClient.send_goal_async()</a> 法返回目标句柄的未来。首先，我们注册一个对未来完成时的调用: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6871">[待校准&#64;6871]</a></p>
+<p>[需手动修复的语法] <a class="reference external" href="http://docs.ros2.org/foxy/api/rclpy/api/actions.html#rclpy.action.client.ActionClient.send_goal_async">ActionClient.send_goal_async()</a> 法返回目标句柄的未来。首先，我们注册一个对未来完成时的调用: <a class="reference external" href="http://localhost:3000/#/home?msgid=6871">[待校准&#64;6871]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>        <span class="bp">self</span><span class="o">.</span><span class="n">_send_goal_future</span><span class="o">.</span><span class="n">add_done_callback</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">goal_response_callback</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>请注意，当动作服务器接受或拒绝目标请求时，未来就完成了。让我们更详细地看看 <code class="docutils literal notranslate"><span class="pre">goal_response_callback</span></code> 。我们可以检查目标是否被拒绝，并尽早返回，因为我们知道不会有结果: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6872">[待校准&#64;6872]</a></p>
+<p>请注意，当动作服务器接受或拒绝目标请求时，未来就完成了。让我们更详细地看看 <code class="docutils literal notranslate"><span class="pre">goal_response_callback</span></code> 。我们可以检查目标是否被拒绝，并尽早返回，因为我们知道不会有结果: <a class="reference external" href="http://localhost:3000/#/home?msgid=6872">[待校准&#64;6872]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="k">def</span> <span class="nf">goal_response_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">future</span><span class="p">):</span>
         <span class="n">goal_handle</span> <span class="o">=</span> <span class="n">future</span><span class="o">.</span><span class="n">result</span><span class="p">()</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="n">goal_handle</span><span class="o">.</span><span class="n">accepted</span><span class="p">:</span>
@@ -654,19 +654,19 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Goal accepted :)&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>现在我们有了一个目标句柄，我们可以用它来请求方法 <a class="reference external" href="http://docs.ros2.org/foxy/api/rclpy/api/actions.html#rclpy.action.client.ClientGoalHandle.get_result_async">get_result_async()</a> 的结果。类似于发送目标，我们将得到一个未来，当结果准备好时就会完成。让我们注册一个调用，就像我们对目标响应所做的那样: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6873">[待校准&#64;6873]</a></p>
+<p>现在我们有了一个目标句柄，我们可以用它来请求方法 <a class="reference external" href="http://docs.ros2.org/foxy/api/rclpy/api/actions.html#rclpy.action.client.ClientGoalHandle.get_result_async">get_result_async()</a> 的结果。类似于发送目标，我们将得到一个未来，当结果准备好时就会完成。让我们注册一个调用，就像我们对目标响应所做的那样: <a class="reference external" href="http://localhost:3000/#/home?msgid=6873">[待校准&#64;6873]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>        <span class="bp">self</span><span class="o">.</span><span class="n">_get_result_future</span> <span class="o">=</span> <span class="n">goal_handle</span><span class="o">.</span><span class="n">get_result_async</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_get_result_future</span><span class="o">.</span><span class="n">add_done_callback</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_result_callback</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>在调用back时，我们记录结果序列并关闭ROS 2以进行干净退出: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6874">[待校准&#64;6874]</a></p>
+<p>在调用back时，我们记录结果序列并关闭ROS 2以进行干净退出: <a class="reference external" href="http://localhost:3000/#/home?msgid=6874">[待校准&#64;6874]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="k">def</span> <span class="nf">get_result_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">future</span><span class="p">):</span>
         <span class="n">result</span> <span class="o">=</span> <span class="n">future</span><span class="o">.</span><span class="n">result</span><span class="p">()</span><span class="o">.</span><span class="n">result</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Result: {0}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">sequence</span><span class="p">))</span>
         <span class="n">rclpy</span><span class="o">.</span><span class="n">shutdown</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>通过在单独终端中运行动作服务器，请继续尝试运行我们的斐波那契动作客户端! <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6875">[待校准&#64;6875]</a></p>
+<p>通过在单独终端中运行动作服务器，请继续尝试运行我们的斐波那契动作客户端! <a class="reference external" href="http://localhost:3000/#/home?msgid=6875">[待校准&#64;6875]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-3-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-3-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-3-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-3-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-3-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-3-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-3-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-3-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3 fibonacci_action_client.py
 </pre></div>
@@ -678,12 +678,12 @@
 </pre></div>
 </div>
 </div></div>
-<p>您应该会看到被接受目标和最终结果的记录消息。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6876">[待校准&#64;6876]</a></p>
+<p>您应该会看到被接受目标和最终结果的记录消息。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6876">[待校准&#64;6876]</a></p>
 </div>
 <div class="section" id="getting-feedback">
-<h4>2.2获得反馈 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6877">[待校准&#64;6877]</a><a class="headerlink" href="#getting-feedback" title="永久链接至标题"></a></h4>
-<p>我们的动作客户端可以发送目标。不错!但是如果我们能从动作服务器得到一些关于我们发送的目标的反馈，那就太好了。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6878">[待校准&#64;6878]</a></p>
-<p>以下是此示例的完整代码: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6870">[待校准&#64;6870]</a></p>
+<h4>2.2获得反馈 <a class="reference external" href="http://localhost:3000/#/home?msgid=6877">[待校准&#64;6877]</a><a class="headerlink" href="#getting-feedback" title="永久链接至标题"></a></h4>
+<p>我们的动作客户端可以发送目标。不错!但是如果我们能从动作服务器得到一些关于我们发送的目标的反馈，那就太好了。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6878">[待校准&#64;6878]</a></p>
+<p>以下是此示例的完整代码: <a class="reference external" href="http://localhost:3000/#/home?msgid=6870">[待校准&#64;6870]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">rclpy</span>
 <span class="kn">from</span> <span class="nn">rclpy.action</span> <span class="kn">import</span> <span class="n">ActionClient</span>
 <span class="kn">from</span> <span class="nn">rclpy.node</span> <span class="kn">import</span> <span class="n">Node</span>
@@ -742,30 +742,30 @@
     <span class="n">main</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>以下是反馈消息的调用返回函数: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6879">[待校准&#64;6879]</a></p>
+<p>以下是反馈消息的调用返回函数: <a class="reference external" href="http://localhost:3000/#/home?msgid=6879">[待校准&#64;6879]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="k">def</span> <span class="nf">feedback_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">feedback_msg</span><span class="p">):</span>
         <span class="n">feedback</span> <span class="o">=</span> <span class="n">feedback_msg</span><span class="o">.</span><span class="n">feedback</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Received feedback: {0}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">feedback</span><span class="o">.</span><span class="n">partial_sequence</span><span class="p">))</span>
 </pre></div>
 </div>
-<p>在调用back中，我们得到消息的反馈部分，并将 <code class="docutils literal notranslate"><span class="pre">partial_sequence</span></code> 字段打印到屏幕上。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6880">[待校准&#64;6880]</a></p>
-<p>我们需要将调用注册回动作客户端。这是通过在我们发送目标时另外将调用传递回动作客户端来实现的: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6881">[待校准&#64;6881]</a></p>
+<p>在调用back中，我们得到消息的反馈部分，并将 <code class="docutils literal notranslate"><span class="pre">partial_sequence</span></code> 字段打印到屏幕上。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6880">[待校准&#64;6880]</a></p>
+<p>我们需要将调用注册回动作客户端。这是通过在我们发送目标时另外将调用传递回动作客户端来实现的: <a class="reference external" href="http://localhost:3000/#/home?msgid=6881">[待校准&#64;6881]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>        <span class="bp">self</span><span class="o">.</span><span class="n">_send_goal_future</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_action_client</span><span class="o">.</span><span class="n">send_goal_async</span><span class="p">(</span><span class="n">goal_msg</span><span class="p">,</span> <span class="n">feedback_callback</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">feedback_callback</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>我们都准备好了。如果我们运行我们的动作客户端，你应该会看到反馈被打印到屏幕上。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6882">[待校准&#64;6882]</a></p>
+<p>我们都准备好了。如果我们运行我们的动作客户端，你应该会看到反馈被打印到屏幕上。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6882">[待校准&#64;6882]</a></p>
 </div>
 </div>
 </div>
 <div class="section" id="summary">
-<h2>总结 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6747">[待校准&#64;6747]</a><a class="headerlink" href="#summary" title="永久链接至标题"></a></h2>
-<p>在本教程中，您将Python动作服务器和动作客户端逐行组合在一起，并将它们配置为交换目标、反馈和结果。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6883">[待校准&#64;6883]</a></p>
+<h2>总结 <a class="reference external" href="http://localhost:3000/#/home?msgid=6747">[待校准&#64;6747]</a><a class="headerlink" href="#summary" title="永久链接至标题"></a></h2>
+<p>在本教程中，您将Python动作服务器和动作客户端逐行组合在一起，并将它们配置为交换目标、反馈和结果。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6883">[待校准&#64;6883]</a></p>
 </div>
 <div class="section" id="related-content">
-<h2>相关内容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6751">[待校准&#64;6751]</a><a class="headerlink" href="#related-content" title="永久链接至标题"></a></h2>
+<h2>相关内容 <a class="reference external" href="http://localhost:3000/#/home?msgid=6751">[待校准&#64;6751]</a><a class="headerlink" href="#related-content" title="永久链接至标题"></a></h2>
 <ul class="simple">
-<li><p>有几种方法可以写一个动作服务器和客户端Python; 查看 <code class="docutils literal notranslate"><span class="pre">minimal_action_server</span></code> 和 <code class="docutils literal notranslate"><span class="pre">minimal_action_client</span></code> 包在 <a class="reference external" href="https://github.com/ros2/examples/tree/foxy/rclpy/actions">ros2/examples</a> 回购。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6884">[待校准&#64;6884]</a></p></li>
-<li><p>有关ROS动作的更多详细信息，请参考 <a class="reference external" href="http://design.ros2.org/articles/actions.html">design article</a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6752">[待校准&#64;6752]</a></p></li>
+<li><p>有几种方法可以写一个动作服务器和客户端Python; 查看 <code class="docutils literal notranslate"><span class="pre">minimal_action_server</span></code> 和 <code class="docutils literal notranslate"><span class="pre">minimal_action_client</span></code> 包在 <a class="reference external" href="https://github.com/ros2/examples/tree/foxy/rclpy/actions">ros2/examples</a> 回购。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6884">[待校准&#64;6884]</a></p></li>
+<li><p>有关ROS动作的更多详细信息，请参考 <a class="reference external" href="http://design.ros2.org/articles/actions.html">design article</a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6752">[待校准&#64;6752]</a></p></li>
 </ul>
 </div>
 </div>

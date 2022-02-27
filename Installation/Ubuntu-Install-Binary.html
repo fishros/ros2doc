@@ -248,7 +248,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Related-Projects/Nvidia-ROS2-Projects.html">[需手动修复的语法]NVIDIAROS 2项目 [待校准&#64;6668]</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../Glossary.html">相关术语 `[小鱼&#64;1] http://dev.ros2.fishros.com/calibpage/#/home?msgid=1&gt;`_</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Glossary.html">术语表</a></li>
 </ul>
 
         </div>
@@ -279,9 +279,9 @@
 
 
   <div class="section" id="installing-ros-2-on-ubuntu-linux">
-<h1>在Ubuntu Linux上安装ROS 2 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5525">[待校准&#64;5525]</a><a class="headerlink" href="#installing-ros-2-on-ubuntu-linux" title="永久链接至标题"></a></h1>
+<h1>在Ubuntu Linux上安装ROS 2 <a class="reference external" href="http://localhost:3000/#/home?msgid=5525">[待校准&#64;5525]</a><a class="headerlink" href="#installing-ros-2-on-ubuntu-linux" title="永久链接至标题"></a></h1>
 <div class="contents local topic" id="table-of-contents">
-<p class="topic-title">目录 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5475">[待校准&#64;5475]</a></p>
+<p class="topic-title">目录 <a class="reference external" href="http://localhost:3000/#/home?msgid=5475">[待校准&#64;5475]</a></p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#system-requirements" id="id1">系统要求 [待校准&#64;5529]</a></p></li>
 <li><p><a class="reference internal" href="#add-the-ros-2-apt-repository" id="id2">添加ROS 2 apt仓库 [待校准&#64;5487]</a></p></li>
@@ -306,38 +306,38 @@
 <li><p><a class="reference internal" href="#uninstall" id="id15">卸载 [待校准&#64;5522]</a></p></li>
 </ul>
 </div>
-<p>本页介绍如何从预构建的二进制包在Ubuntu Linux上安装ROS 2。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5526">[待校准&#64;5526]</a></p>
+<p>本页介绍如何从预构建的二进制包在Ubuntu Linux上安装ROS 2。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5526">[待校准&#64;5526]</a></p>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
-<p>预构建的二进制文件不包括所有ROS 2包。包括 <a class="reference external" href="https://ros.org/reps/rep-2001.html#ros-base">ROS base variant</a> 中的所有包，并且只包括 <a class="reference external" href="https://ros.org/reps/rep-2001.html#desktop-variants">ROS desktop variant</a> 中的包的一个子集。包的准确列表由列在 <a class="reference external" href="https://github.com/ros2/ros2/blob/foxy/ros2.repos">this ros2.repos file</a> 列的仓库描述。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5527">[待校准&#64;5527]</a></p>
+<p>预构建的二进制文件不包括所有ROS 2包。包括 <a class="reference external" href="https://ros.org/reps/rep-2001.html#ros-base">ROS base variant</a> 中的所有包，并且只包括 <a class="reference external" href="https://ros.org/reps/rep-2001.html#desktop-variants">ROS desktop variant</a> 中的包的一个子集。包的准确列表由列在 <a class="reference external" href="https://github.com/ros2/ros2/blob/foxy/ros2.repos">this ros2.repos file</a> 列的仓库描述。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5527">[待校准&#64;5527]</a></p>
 </div>
-<p>还有 <a class="reference internal" href="Ubuntu-Install-Debians.html"><span class="doc">Debian packages</span></a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5528">[待校准&#64;5528]</a></p>
+<p>还有 <a class="reference internal" href="Ubuntu-Install-Debians.html"><span class="doc">Debian packages</span></a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5528">[待校准&#64;5528]</a></p>
 <div class="section" id="system-requirements">
-<h2>系统要求 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5529">[待校准&#64;5529]</a><a class="headerlink" href="#system-requirements" title="永久链接至标题"></a></h2>
-<p>我们支持Ubuntu LinuxFocal Fossa (20.04) 64位x86和64位ARM。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5530">[待校准&#64;5530]</a></p>
+<h2>系统要求 <a class="reference external" href="http://localhost:3000/#/home?msgid=5529">[待校准&#64;5529]</a><a class="headerlink" href="#system-requirements" title="永久链接至标题"></a></h2>
+<p>我们支持Ubuntu LinuxFocal Fossa (20.04) 64位x86和64位ARM。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5530">[待校准&#64;5530]</a></p>
 </div>
 <div class="section" id="add-the-ros-2-apt-repository">
-<h2>添加ROS 2 apt仓库 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5487">[待校准&#64;5487]</a><a class="headerlink" href="#add-the-ros-2-apt-repository" title="永久链接至标题"></a></h2>
-<p>您需要将ROS 2 apt仓库添加到您的系统中。为此，首先使用如下apt授权我们的GPG密钥: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5488">[待校准&#64;5488]</a></p>
+<h2>添加ROS 2 apt仓库 <a class="reference external" href="http://localhost:3000/#/home?msgid=5487">[待校准&#64;5487]</a><a class="headerlink" href="#add-the-ros-2-apt-repository" title="永久链接至标题"></a></h2>
+<p>您需要将ROS 2 apt仓库添加到您的系统中。为此，首先使用如下apt授权我们的GPG密钥: <a class="reference external" href="http://localhost:3000/#/home?msgid=5488">[待校准&#64;5488]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt update <span class="o">&amp;&amp;</span> sudo apt install curl gnupg2 lsb-release
 sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key  -o /usr/share/keyrings/ros-archive-keyring.gpg
 </pre></div>
 </div>
-<p>然后将仓库添加到源文件列表中: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5489">[待校准&#64;5489]</a></p>
+<p>然后将仓库添加到源文件列表中: <a class="reference external" href="http://localhost:3000/#/home?msgid=5489">[待校准&#64;5489]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="s2">&quot;deb [arch=</span><span class="k">$(</span>dpkg --print-architecture<span class="k">)</span><span class="s2"> signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu </span><span class="k">$(</span><span class="nb">source</span> /etc/os-release <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="nv">$UBUNTU_CODENAME</span><span class="k">)</span><span class="s2"> main&quot;</span> <span class="p">|</span> sudo tee /etc/apt/sources.list.d/ros2.list &gt; /dev/null
 </pre></div>
 </div>
 </div>
 <div class="section" id="downloading-ros-2">
-<h2>下载ROS 2 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5531">[待校准&#64;5531]</a><a class="headerlink" href="#downloading-ros-2" title="永久链接至标题"></a></h2>
+<h2>下载ROS 2 <a class="reference external" href="http://localhost:3000/#/home?msgid=5531">[待校准&#64;5531]</a><a class="headerlink" href="#downloading-ros-2" title="永久链接至标题"></a></h2>
 <ul>
-<li><p>去 <a class="reference external" href="https://github.com/ros2/ros2/releases">the releases page</a>  <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5532">[待校准&#64;5532]</a></p></li>
-<li><p>下载Ubuntu的最新包; 让我们假设它最终在 “~/下载/ros2-package-linux-x86_64.tar.bz2”。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5533">[待校准&#64;5533]</a></p>
+<li><p>去 <a class="reference external" href="https://github.com/ros2/ros2/releases">the releases page</a>  <a class="reference external" href="http://localhost:3000/#/home?msgid=5532">[待校准&#64;5532]</a></p></li>
+<li><p>下载Ubuntu的最新包; 让我们假设它最终在 “~/下载/ros2-package-linux-x86_64.tar.bz2”。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5533">[待校准&#64;5533]</a></p>
 <ul class="simple">
-<li><p>注意: 可能有多个二进制下载选项，这可能会导致文件名不同。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5534">[待校准&#64;5534]</a></p></li>
+<li><p>注意: 可能有多个二进制下载选项，这可能会导致文件名不同。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5534">[待校准&#64;5534]</a></p></li>
 </ul>
 </li>
-<li><p>打开包装: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5535">[待校准&#64;5535]</a></p>
+<li><p>打开包装: <a class="reference external" href="http://localhost:3000/#/home?msgid=5535">[待校准&#64;5535]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir -p ~/ros2_foxy
 <span class="nb">cd</span> ~/ros2_foxy
 tar xf ~/Downloads/ros2-package-linux-x86_64.tar.bz2
@@ -347,7 +347,7 @@ tar xf ~/Downloads/ros2-package-linux-x86_64.tar.bz2
 </ul>
 </div>
 <div class="section" id="installing-and-initializing-rosdep">
-<h2>安装和初始化rosdep <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5536">[待校准&#64;5536]</a><a class="headerlink" href="#installing-and-initializing-rosdep" title="永久链接至标题"></a></h2>
+<h2>安装和初始化rosdep <a class="reference external" href="http://localhost:3000/#/home?msgid=5536">[待校准&#64;5536]</a><a class="headerlink" href="#installing-and-initializing-rosdep" title="永久链接至标题"></a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt update
 sudo apt install -y python3-rosdep
 sudo rosdep init
@@ -356,76 +356,76 @@ rosdep update
 </div>
 </div>
 <div class="section" id="installing-the-missing-dependencies">
-<span id="linux-install-binary-install-missing-dependencies"></span><h2>安装缺少的依赖项 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5537">[待校准&#64;5537]</a><a class="headerlink" href="#installing-the-missing-dependencies" title="永久链接至标题"></a></h2>
-<p>根据您下载的版本设置您的rosdistribution。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5538">[待校准&#64;5538]</a></p>
+<span id="linux-install-binary-install-missing-dependencies"></span><h2>安装缺少的依赖项 <a class="reference external" href="http://localhost:3000/#/home?msgid=5537">[待校准&#64;5537]</a><a class="headerlink" href="#installing-the-missing-dependencies" title="永久链接至标题"></a></h2>
+<p>根据您下载的版本设置您的rosdistribution。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5538">[待校准&#64;5538]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rosdep install --from-paths ~/ros2_foxy/ros2-linux/share --ignore-src -y --skip-keys <span class="s2">&quot;cyclonedds fastcdr fastrtps rti-connext-dds-5.3.1 urdfdom_headers&quot;</span>
 </pre></div>
 </div>
-<p>注意: 如果你使用的是一个基于Ubuntu的发行版 (比如Linux Mint)，但没有这样标识自己，你会收到一条错误信息，比如 <code class="docutils literal notranslate"><span class="pre">Unsupported</span> <span class="pre">OS</span> <span class="pre">[mint]</span></code> 。在这种情况下，将 “-- os = ubuntu: focal” 附加到上述命令中。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5494">[待校准&#64;5494]</a></p>
+<p>注意: 如果你使用的是一个基于Ubuntu的发行版 (比如Linux Mint)，但没有这样标识自己，你会收到一条错误信息，比如 <code class="docutils literal notranslate"><span class="pre">Unsupported</span> <span class="pre">OS</span> <span class="pre">[mint]</span></code> 。在这种情况下，将 “-- os = ubuntu: focal” 附加到上述命令中。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5494">[待校准&#64;5494]</a></p>
 <dl>
 <dt><em>Optional</em>:</dt><dd><div class="line-block">
-<div class="line">如果你想使用ROS 1&lt;-&gt;2bridge，那么你也必须安装ROS 1。<a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5540">[待校准&#64;5540]</a></div>
-<div class="line">遵循正常安装说明: <a class="reference external" href="http://wiki.ros.org/noetic/Installation/Ubuntu">http://wiki.ros.org/noetic/Installation/Ubuntu</a> <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5541">[待校准&#64;5541]</a></div>
+<div class="line">如果你想使用ROS 1&lt;-&gt;2bridge，那么你也必须安装ROS 1。<a class="reference external" href="http://localhost:3000/#/home?msgid=5540">[待校准&#64;5540]</a></div>
+<div class="line">遵循正常安装说明: <a class="reference external" href="http://wiki.ros.org/noetic/Installation/Ubuntu">http://wiki.ros.org/noetic/Installation/Ubuntu</a> <a class="reference external" href="http://localhost:3000/#/home?msgid=5541">[待校准&#64;5541]</a></div>
 </div>
 </dd>
 </dl>
 <div class="section" id="installing-the-python3-libraries">
-<h3>安装python 3库 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5542">[待校准&#64;5542]</a><a class="headerlink" href="#installing-the-python3-libraries" title="永久链接至标题"></a></h3>
+<h3>安装python 3库 <a class="reference external" href="http://localhost:3000/#/home?msgid=5542">[待校准&#64;5542]</a><a class="headerlink" href="#installing-the-python3-libraries" title="永久链接至标题"></a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt install -y libpython3-dev python3-pip
 pip3 install -U argcomplete
 </pre></div>
 </div>
 </div>
 <div class="section" id="install-additional-dds-implementations-optional">
-<h3>安装额外的DDS实现 (可选) <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5495">[待校准&#64;5495]</a><a class="headerlink" href="#install-additional-dds-implementations-optional" title="永久链接至标题"></a></h3>
-<p>如果你想使用另一个DDS或RTPS供应商，除了默认的，eProsima的快速RTPS，你可以找到说明 <a class="reference internal" href="DDS-Implementations.html"><span class="doc">here</span></a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5496">[待校准&#64;5496]</a></p>
+<h3>安装额外的DDS实现 (可选) <a class="reference external" href="http://localhost:3000/#/home?msgid=5495">[待校准&#64;5495]</a><a class="headerlink" href="#install-additional-dds-implementations-optional" title="永久链接至标题"></a></h3>
+<p>如果你想使用另一个DDS或RTPS供应商，除了默认的，eProsima的快速RTPS，你可以找到说明 <a class="reference internal" href="DDS-Implementations.html"><span class="doc">here</span></a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5496">[待校准&#64;5496]</a></p>
 </div>
 </div>
 <div class="section" id="environment-setup">
-<h2>环境设置 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5501">[待校准&#64;5501]</a><a class="headerlink" href="#environment-setup" title="永久链接至标题"></a></h2>
+<h2>环境设置 <a class="reference external" href="http://localhost:3000/#/home?msgid=5501">[待校准&#64;5501]</a><a class="headerlink" href="#environment-setup" title="永久链接至标题"></a></h2>
 <div class="section" id="sourcing-the-setup-script">
-<h3>采购安装脚本 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5543">[待校准&#64;5543]</a><a class="headerlink" href="#sourcing-the-setup-script" title="永久链接至标题"></a></h3>
-<p>通过采购以下文件来设置您的环境。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5503">[待校准&#64;5503]</a></p>
+<h3>采购安装脚本 <a class="reference external" href="http://localhost:3000/#/home?msgid=5543">[待校准&#64;5543]</a><a class="headerlink" href="#sourcing-the-setup-script" title="永久链接至标题"></a></h3>
+<p>通过采购以下文件来设置您的环境。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5503">[待校准&#64;5503]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>. ~/ros2_foxy/ros2-linux/setup.bash
 </pre></div>
 </div>
 </div>
 </div>
 <div class="section" id="try-some-examples">
-<h2>尝试一些例子 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5504">[待校准&#64;5504]</a><a class="headerlink" href="#try-some-examples" title="永久链接至标题"></a></h2>
-<p>在一个终端中，源文件安装文件，然后运行c <code class="docutils literal notranslate"><span class="pre">talker</span></code> : <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5544">[待校准&#64;5544]</a></p>
+<h2>尝试一些例子 <a class="reference external" href="http://localhost:3000/#/home?msgid=5504">[待校准&#64;5504]</a><a class="headerlink" href="#try-some-examples" title="永久链接至标题"></a></h2>
+<p>在一个终端中，源文件安装文件，然后运行c <code class="docutils literal notranslate"><span class="pre">talker</span></code> : <a class="reference external" href="http://localhost:3000/#/home?msgid=5544">[待校准&#64;5544]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>. ~/ros2_foxy/ros2-linux/setup.bash
 ros2 run demo_nodes_cpp talker
 </pre></div>
 </div>
-<p>在另一个终端源文件中，安装文件，然后运行Python <code class="docutils literal notranslate"><span class="pre">listener</span></code> : <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5545">[待校准&#64;5545]</a></p>
+<p>在另一个终端源文件中，安装文件，然后运行Python <code class="docutils literal notranslate"><span class="pre">listener</span></code> : <a class="reference external" href="http://localhost:3000/#/home?msgid=5545">[待校准&#64;5545]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>. ~/ros2_foxy/ros2-linux/setup.bash
 ros2 run demo_nodes_py listener
 </pre></div>
 </div>
-<p>你应该看到 <code class="docutils literal notranslate"><span class="pre">talker</span></code> 说这是 <code class="docutils literal notranslate"><span class="pre">Publishing</span></code> 消息 <code class="docutils literal notranslate"><span class="pre">listener</span></code> 说 <code class="docutils literal notranslate"><span class="pre">I</span> <span class="pre">heard</span></code> 这些消息。这将验证capis和Python api是否正常工作。万岁! <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5507">[待校准&#64;5507]</a></p>
+<p>你应该看到 <code class="docutils literal notranslate"><span class="pre">talker</span></code> 说这是 <code class="docutils literal notranslate"><span class="pre">Publishing</span></code> 消息 <code class="docutils literal notranslate"><span class="pre">listener</span></code> 说 <code class="docutils literal notranslate"><span class="pre">I</span> <span class="pre">heard</span></code> 这些消息。这将验证capis和Python api是否正常工作。万岁! <a class="reference external" href="http://localhost:3000/#/home?msgid=5507">[待校准&#64;5507]</a></p>
 </div>
 <div class="section" id="next-steps-after-installing">
-<h2>安装后的下一步 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5508">[待校准&#64;5508]</a><a class="headerlink" href="#next-steps-after-installing" title="永久链接至标题"></a></h2>
-<p>继续使用 <a class="reference internal" href="../Tutorials.html"><span class="doc">tutorials and demos</span></a> 来配置您的环境，创建您自己的工作区和包，并学习ROS 2核心概念。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5509">[待校准&#64;5509]</a></p>
+<h2>安装后的下一步 <a class="reference external" href="http://localhost:3000/#/home?msgid=5508">[待校准&#64;5508]</a><a class="headerlink" href="#next-steps-after-installing" title="永久链接至标题"></a></h2>
+<p>继续使用 <a class="reference internal" href="../Tutorials.html"><span class="doc">tutorials and demos</span></a> 来配置您的环境，创建您自己的工作区和包，并学习ROS 2核心概念。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5509">[待校准&#64;5509]</a></p>
 </div>
 <div class="section" id="using-the-ros-1-bridge">
-<h2>使用ROS 1bridge <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5510">[待校准&#64;5510]</a><a class="headerlink" href="#using-the-ros-1-bridge" title="永久链接至标题"></a></h2>
-<p>[需手动修复的语法]ROS 1bridge可以连接从[需手动修复的语法]ROS 1到ROS 2的话题，反之亦然。看到专用 <a class="reference external" href="https://github.com/ros2/ros1_bridge/blob/master/README.md">documentation</a> 如何构建和使用[需手动修复的语法]ROS 1bridge。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5511">[待校准&#64;5511]</a></p>
+<h2>使用ROS 1bridge <a class="reference external" href="http://localhost:3000/#/home?msgid=5510">[待校准&#64;5510]</a><a class="headerlink" href="#using-the-ros-1-bridge" title="永久链接至标题"></a></h2>
+<p>[需手动修复的语法]ROS 1bridge可以连接从[需手动修复的语法]ROS 1到ROS 2的话题，反之亦然。看到专用 <a class="reference external" href="https://github.com/ros2/ros1_bridge/blob/master/README.md">documentation</a> 如何构建和使用[需手动修复的语法]ROS 1bridge。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5511">[待校准&#64;5511]</a></p>
 </div>
 <div class="section" id="additional-rmw-implementations-optional">
-<h2>附加RMW实现 (可选) <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5512">[待校准&#64;5512]</a><a class="headerlink" href="#additional-rmw-implementations-optional" title="永久链接至标题"></a></h2>
-<p>ROS 2使用的默认中间件是 <code class="docutils literal notranslate"><span class="pre">Fast-RTPS</span></code> ，但中间件 (RMW) 可以在运行时替换。查看关于如何使用多个RMWs的 <a class="reference internal" href="../How-To-Guides/Working-with-multiple-RMW-implementations.html"><span class="doc">guide</span></a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5513">[待校准&#64;5513]</a></p>
+<h2>附加RMW实现 (可选) <a class="reference external" href="http://localhost:3000/#/home?msgid=5512">[待校准&#64;5512]</a><a class="headerlink" href="#additional-rmw-implementations-optional" title="永久链接至标题"></a></h2>
+<p>ROS 2使用的默认中间件是 <code class="docutils literal notranslate"><span class="pre">Fast-RTPS</span></code> ，但中间件 (RMW) 可以在运行时替换。查看关于如何使用多个RMWs的 <a class="reference internal" href="../How-To-Guides/Working-with-multiple-RMW-implementations.html"><span class="doc">guide</span></a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5513">[待校准&#64;5513]</a></p>
 </div>
 <div class="section" id="troubleshooting">
-<h2>故障排除 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5520">[待校准&#64;5520]</a><a class="headerlink" href="#troubleshooting" title="永久链接至标题"></a></h2>
-<p>故障排除技术可以找到 <a class="reference internal" href="../How-To-Guides/Installation-Troubleshooting.html"><span class="doc">here</span></a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5546">[待校准&#64;5546]</a></p>
+<h2>故障排除 <a class="reference external" href="http://localhost:3000/#/home?msgid=5520">[待校准&#64;5520]</a><a class="headerlink" href="#troubleshooting" title="永久链接至标题"></a></h2>
+<p>故障排除技术可以找到 <a class="reference internal" href="../How-To-Guides/Installation-Troubleshooting.html"><span class="doc">here</span></a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5546">[待校准&#64;5546]</a></p>
 </div>
 <div class="section" id="uninstall">
-<h2>卸载 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5522">[待校准&#64;5522]</a><a class="headerlink" href="#uninstall" title="永久链接至标题"></a></h2>
+<h2>卸载 <a class="reference external" href="http://localhost:3000/#/home?msgid=5522">[待校准&#64;5522]</a><a class="headerlink" href="#uninstall" title="永久链接至标题"></a></h2>
 <ol class="arabic">
-<li><p>如果你按照上面的指示用colcon安装了你的工作区，  &quot;uninstalling&quot; 可能只是打开一个新的终端，而不是采购工作区的 <code class="docutils literal notranslate"><span class="pre">setup</span></code> 文件。这样，您的环境就会表现得好像您的系统上没有安装Foxy。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5523">[待校准&#64;5523]</a></p></li>
-<li><p>如果您还尝试释放空间，则可以使用以下命令删除整个工作区目录: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5524">[待校准&#64;5524]</a></p>
+<li><p>如果你按照上面的指示用colcon安装了你的工作区，  &quot;uninstalling&quot; 可能只是打开一个新的终端，而不是采购工作区的 <code class="docutils literal notranslate"><span class="pre">setup</span></code> 文件。这样，您的环境就会表现得好像您的系统上没有安装Foxy。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5523">[待校准&#64;5523]</a></p></li>
+<li><p>如果您还尝试释放空间，则可以使用以下命令删除整个工作区目录: <a class="reference external" href="http://localhost:3000/#/home?msgid=5524">[待校准&#64;5524]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rm -rf ~/ros2_foxy
 </pre></div>
 </div>

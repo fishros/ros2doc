@@ -249,7 +249,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Related-Projects/Nvidia-ROS2-Projects.html">[需手动修复的语法]NVIDIAROS 2项目 [待校准&#64;6668]</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../Glossary.html">相关术语 `[小鱼&#64;1] http://dev.ros2.fishros.com/calibpage/#/home?msgid=1&gt;`_</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Glossary.html">术语表</a></li>
 </ul>
 
         </div>
@@ -280,9 +280,9 @@
 
 
   <div class="section" id="about-logging-and-logger-configuration">
-<h1>关于日志和日志记录器配置 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9901">[待校准&#64;9901]</a><a class="headerlink" href="#about-logging-and-logger-configuration" title="永久链接至标题"></a></h1>
+<h1>关于日志和日志记录器配置 <a class="reference external" href="http://localhost:3000/#/home?msgid=9901">[待校准&#64;9901]</a><a class="headerlink" href="#about-logging-and-logger-configuration" title="永久链接至标题"></a></h1>
 <div class="contents local topic" id="table-of-contents">
-<p class="topic-title">目录 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9597">[待校准&#64;9597]</a></p>
+<p class="topic-title">目录 <a class="reference external" href="http://localhost:3000/#/home?msgid=9597">[待校准&#64;9597]</a></p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#overview" id="id1">概述 [待校准&#64;9718]</a></p></li>
 <li><p><a class="reference internal" href="#logger-concepts" id="id2">日志记录器概念 [待校准&#64;9911]</a></p></li>
@@ -290,45 +290,45 @@
 </ul>
 </div>
 <div class="section" id="overview">
-<h2>概述 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9718">[待校准&#64;9718]</a><a class="headerlink" href="#overview" title="永久链接至标题"></a></h2>
-<p>当前支持的日志功能是: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9902">[待校准&#64;9902]</a></p>
+<h2>概述 <a class="reference external" href="http://localhost:3000/#/home?msgid=9718">[待校准&#64;9718]</a><a class="headerlink" href="#overview" title="永久链接至标题"></a></h2>
+<p>当前支持的日志功能是: <a class="reference external" href="http://localhost:3000/#/home?msgid=9902">[待校准&#64;9902]</a></p>
 <ul class="simple">
-<li><p>客户端库 ( <code class="docutils literal notranslate"><span class="pre">rclcpp</span></code> 和 <code class="docutils literal notranslate"><span class="pre">rclpy</span></code> ) 使用通用日志库提供: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9903">[待校准&#64;9903]</a></p>
+<li><p>客户端库 ( <code class="docutils literal notranslate"><span class="pre">rclcpp</span></code> 和 <code class="docutils literal notranslate"><span class="pre">rclpy</span></code> ) 使用通用日志库提供: <a class="reference external" href="http://localhost:3000/#/home?msgid=9903">[待校准&#64;9903]</a></p>
 <ul>
-<li><p>带有各种过滤器的日志调用。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9904">[待校准&#64;9904]</a></p></li>
-<li><p>日志记录器的层次结构 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9905">[待校准&#64;9905]</a></p></li>
-<li><p>与自动调用的节点相关联的日志记录器使用节点的名称和命名空间。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9906">[待校准&#64;9906]</a></p></li>
+<li><p>带有各种过滤器的日志调用。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9904">[待校准&#64;9904]</a></p></li>
+<li><p>日志记录器的层次结构 <a class="reference external" href="http://localhost:3000/#/home?msgid=9905">[待校准&#64;9905]</a></p></li>
+<li><p>与自动调用的节点相关联的日志记录器使用节点的名称和命名空间。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9906">[待校准&#64;9906]</a></p></li>
 </ul>
 </li>
-<li><p>控制台输出。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9907">[待校准&#64;9907]</a></p>
+<li><p>控制台输出。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9907">[待校准&#64;9907]</a></p>
 <ul>
-<li><p>文件输出和类似于 <a class="reference external" href="https://wiki.ros.org/rosout">rosout</a> 的功能即将到来，用于远程消息消费。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9908">[待校准&#64;9908]</a></p></li>
+<li><p>文件输出和类似于 <a class="reference external" href="https://wiki.ros.org/rosout">rosout</a> 的功能即将到来，用于远程消息消费。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9908">[待校准&#64;9908]</a></p></li>
 </ul>
 </li>
-<li><p>日志记录器级别的编程配置。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9909">[待校准&#64;9909]</a></p>
+<li><p>日志记录器级别的编程配置。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9909">[待校准&#64;9909]</a></p>
 <ul>
-<li><p>支持默认日志记录器级别的Launch时配置; 即将发布配置文件和运行时的外部配置。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9910">[待校准&#64;9910]</a></p></li>
+<li><p>支持默认日志记录器级别的Launch时配置; 即将发布配置文件和运行时的外部配置。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9910">[待校准&#64;9910]</a></p></li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="section" id="logger-concepts">
-<h2>日志记录器概念 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9911">[待校准&#64;9911]</a><a class="headerlink" href="#logger-concepts" title="永久链接至标题"></a></h2>
-<p>日志消息具有与之相关的严重性级别:  <code class="docutils literal notranslate"><span class="pre">DEBUG</span></code> 、 <code class="docutils literal notranslate"><span class="pre">INFO</span></code> 、 <code class="docutils literal notranslate"><span class="pre">WARN</span></code> 、 <code class="docutils literal notranslate"><span class="pre">ERROR</span></code> 或 <code class="docutils literal notranslate"><span class="pre">FATAL</span></code> ，按升序排列。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9912">[待校准&#64;9912]</a></p>
-<p>日志记录器将仅处理严重性等于或高于为日志记录器选择的指定级别的日志消息。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9913">[待校准&#64;9913]</a></p>
-<p>每个节点 (在 <code class="docutils literal notranslate"><span class="pre">rclcpp</span></code> 和 <code class="docutils literal notranslate"><span class="pre">rclpy</span></code> 中) 都有一个与之关联的日志记录器，自动调用y包括节点的名称和命名空间。如果节点的名称在外部重新映射到源文件中定义的名称以外的其他名称，则它将反映在日志记录器名称中。还可以创建使用特定名称的非节点日志记录器。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9914">[待校准&#64;9914]</a></p>
-<p>日志记录器名称表示层次结构。如果名为 “abc.de f” 的日志记录器的级别未设置，它将服从其父级名为  &quot;abc&quot; 的级别，如果该级别也未设置，将使用默认的日志记录器级别。当日志记录器  &quot;abc&quot; 的水平改变时，它的所有后代 (例如g.“abc.de f”，“abc。ghi。jkl”) 将影响其级别，除非已明确设置其级别。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9915">[待校准&#64;9915]</a></p>
+<h2>日志记录器概念 <a class="reference external" href="http://localhost:3000/#/home?msgid=9911">[待校准&#64;9911]</a><a class="headerlink" href="#logger-concepts" title="永久链接至标题"></a></h2>
+<p>日志消息具有与之相关的严重性级别:  <code class="docutils literal notranslate"><span class="pre">DEBUG</span></code> 、 <code class="docutils literal notranslate"><span class="pre">INFO</span></code> 、 <code class="docutils literal notranslate"><span class="pre">WARN</span></code> 、 <code class="docutils literal notranslate"><span class="pre">ERROR</span></code> 或 <code class="docutils literal notranslate"><span class="pre">FATAL</span></code> ，按升序排列。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9912">[待校准&#64;9912]</a></p>
+<p>日志记录器将仅处理严重性等于或高于为日志记录器选择的指定级别的日志消息。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9913">[待校准&#64;9913]</a></p>
+<p>每个节点 (在 <code class="docutils literal notranslate"><span class="pre">rclcpp</span></code> 和 <code class="docutils literal notranslate"><span class="pre">rclpy</span></code> 中) 都有一个与之关联的日志记录器，自动调用y包括节点的名称和命名空间。如果节点的名称在外部重新映射到源文件中定义的名称以外的其他名称，则它将反映在日志记录器名称中。还可以创建使用特定名称的非节点日志记录器。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9914">[待校准&#64;9914]</a></p>
+<p>日志记录器名称表示层次结构。如果名为 “abc.de f” 的日志记录器的级别未设置，它将服从其父级名为  &quot;abc&quot; 的级别，如果该级别也未设置，将使用默认的日志记录器级别。当日志记录器  &quot;abc&quot; 的水平改变时，它的所有后代 (例如g.“abc.de f”，“abc。ghi。jkl”) 将影响其级别，除非已明确设置其级别。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9915">[待校准&#64;9915]</a></p>
 </div>
 <div class="section" id="logging-usage">
-<h2>日志使用情况 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9916">[待校准&#64;9916]</a><a class="headerlink" href="#logging-usage" title="永久链接至标题"></a></h2>
+<h2>日志使用情况 <a class="reference external" href="http://localhost:3000/#/home?msgid=9916">[待校准&#64;9916]</a><a class="headerlink" href="#logging-usage" title="永久链接至标题"></a></h2>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-Qysr" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-0-Qysr" name="Qysr" role="tab" tabindex="0">C++</button><button aria-controls="panel-0-UHl0aG9u" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="-1">Python</button></div><div aria-labelledby="tab-0-Qysr" class="sphinx-tabs-panel group-tab" id="panel-0-Qysr" name="Qysr" role="tabpanel" tabindex="0"><ul class="simple">
-<li><p>例如用法，请参见 <a class="reference internal" href="../Tutorials/Logging-and-logger-configuration.html"><span class="doc">logging demo</span></a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9918">[待校准&#64;9918]</a></p></li>
-<li><p>有关功能的广泛列表，请参阅 <a class="reference external" href="https://docs.ros2.org/latest/api/rclcpp/logging_8hpp.html">rclcpp documentation</a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9919">[待校准&#64;9919]</a></p></li>
+<li><p>例如用法，请参见 <a class="reference internal" href="../Tutorials/Logging-and-logger-configuration.html"><span class="doc">logging demo</span></a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9918">[待校准&#64;9918]</a></p></li>
+<li><p>有关功能的广泛列表，请参阅 <a class="reference external" href="https://docs.ros2.org/latest/api/rclcpp/logging_8hpp.html">rclcpp documentation</a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9919">[待校准&#64;9919]</a></p></li>
 </ul>
 </div><div aria-labelledby="tab-0-UHl0aG9u" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-UHl0aG9u" name="UHl0aG9u" role="tabpanel" tabindex="0"><ul class="simple">
-<li><p>有关节点日志记录器的使用情况，请参见 <a class="reference external" href="https://github.com/ros2/examples/blob/master/rclpy/services/minimal_client/examples_rclpy_minimal_client/client.py">rclpy examples</a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9921">[待校准&#64;9921]</a></p></li>
-<li><p>例如，关键词参数的使用 (例如， <code class="docutils literal notranslate"><span class="pre">skip_first</span></code> ， <code class="docutils literal notranslate"><span class="pre">once</span></code> ) 见 <a class="reference external" href="https://github.com/ros2/rclpy/blob/master/rclpy/test/test_logging.py">rclpy tests</a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9922">[待校准&#64;9922]</a></p></li>
+<li><p>有关节点日志记录器的使用情况，请参见 <a class="reference external" href="https://github.com/ros2/examples/blob/master/rclpy/services/minimal_client/examples_rclpy_minimal_client/client.py">rclpy examples</a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9921">[待校准&#64;9921]</a></p></li>
+<li><p>例如，关键词参数的使用 (例如， <code class="docutils literal notranslate"><span class="pre">skip_first</span></code> ， <code class="docutils literal notranslate"><span class="pre">once</span></code> ) 见 <a class="reference external" href="https://github.com/ros2/rclpy/blob/master/rclpy/test/test_logging.py">rclpy tests</a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9922">[待校准&#64;9922]</a></p></li>
 </ul>
 </div></div>
 </div>

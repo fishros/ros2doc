@@ -249,7 +249,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../Related-Projects/Nvidia-ROS2-Projects.html">[需手动修复的语法]NVIDIAROS 2项目 [待校准&#64;6668]</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../Glossary.html">相关术语 `[小鱼&#64;1] http://dev.ros2.fishros.com/calibpage/#/home?msgid=1&gt;`_</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Glossary.html">术语表</a></li>
 </ul>
 
         </div>
@@ -280,12 +280,12 @@
 
 
   <div class="section" id="recording-a-bag-from-your-own-node">
-<span id="ros2bagownnode"></span><h1>从您自己的节点记录一个包 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7994">[待校准&#64;7994]</a><a class="headerlink" href="#recording-a-bag-from-your-own-node" title="永久链接至标题"></a></h1>
-<p>Goal目标: Record将数据从您自己的节点记录到包中。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7995">[待校准&#64;7995]</a></p>
-<p>Tutorial教程级别: Advanced高级 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7643">[待校准&#64;7643]</a></p>
-<p>Time时间: 20 20分钟 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7181">[待校准&#64;7181]</a></p>
+<span id="ros2bagownnode"></span><h1>从您自己的节点记录一个包 <a class="reference external" href="http://localhost:3000/#/home?msgid=7994">[待校准&#64;7994]</a><a class="headerlink" href="#recording-a-bag-from-your-own-node" title="永久链接至标题"></a></h1>
+<p>Goal目标: Record将数据从您自己的节点记录到包中。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7995">[待校准&#64;7995]</a></p>
+<p>Tutorial教程级别: Advanced高级 <a class="reference external" href="http://localhost:3000/#/home?msgid=7643">[待校准&#64;7643]</a></p>
+<p>Time时间: 20 20分钟 <a class="reference external" href="http://localhost:3000/#/home?msgid=7181">[待校准&#64;7181]</a></p>
 <div class="contents local topic" id="contents">
-<p class="topic-title">内容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6715">[待校准&#64;6715]</a></p>
+<p class="topic-title">内容 <a class="reference external" href="http://localhost:3000/#/home?msgid=6715">[待校准&#64;6715]</a></p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#background" id="id7">背景 [待校准&#64;6716]</a></p></li>
 <li><p><a class="reference internal" href="#prerequisites" id="id8">先决条件 [待校准&#64;6718]</a></p></li>
@@ -302,31 +302,31 @@
 </ul>
 </div>
 <div class="section" id="background">
-<h2>背景 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6716">[待校准&#64;6716]</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
-<p>[需手动修复的语法]``rosbag2`` doesn't just provide the <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">bag</span></code> command线工具。它还提供了一个API，用于从您自己的源文件读取和写入包。这使您可以订阅某个话题，并将收到的数据保存到包中，同时对该数据执行您选择的任何其他处理。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7996">[待校准&#64;7996]</a></p>
+<h2>背景 <a class="reference external" href="http://localhost:3000/#/home?msgid=6716">[待校准&#64;6716]</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
+<p>[需手动修复的语法]``rosbag2`` doesn't just provide the <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">bag</span></code> command线工具。它还提供了一个API，用于从您自己的源文件读取和写入包。这使您可以订阅某个话题，并将收到的数据保存到包中，同时对该数据执行您选择的任何其他处理。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7996">[待校准&#64;7996]</a></p>
 </div>
 <div class="section" id="prerequisites">
-<h2>先决条件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6718">[待校准&#64;6718]</a><a class="headerlink" href="#prerequisites" title="永久链接至标题"></a></h2>
-<p>您应该安装 <code class="docutils literal notranslate"><span class="pre">rosbag2</span></code> 包作为常规ROS 2设置的一部分。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7997">[待校准&#64;7997]</a></p>
-<p>如果您是从Linux上的Debian包安装的，则默认情况下可能会安装它。如果不是，您可以使用此命令安装它。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7998">[待校准&#64;7998]</a></p>
+<h2>先决条件 <a class="reference external" href="http://localhost:3000/#/home?msgid=6718">[待校准&#64;6718]</a><a class="headerlink" href="#prerequisites" title="永久链接至标题"></a></h2>
+<p>您应该安装 <code class="docutils literal notranslate"><span class="pre">rosbag2</span></code> 包作为常规ROS 2设置的一部分。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7997">[待校准&#64;7997]</a></p>
+<p>如果您是从Linux上的Debian包安装的，则默认情况下可能会安装它。如果不是，您可以使用此命令安装它。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7998">[待校准&#64;7998]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sudo apt install ros-foxy-rosbag2</span>
 </pre></div>
 </div>
-<p>本教程讨论使用ROS 2包，包括从终端。你应该已经完成了 <a class="reference internal" href="Recording-And-Playing-Back-Data.html"><span class="doc">basic ROS 2 bag tutorial</span></a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7999">[待校准&#64;7999]</a></p>
+<p>本教程讨论使用ROS 2包，包括从终端。你应该已经完成了 <a class="reference internal" href="Recording-And-Playing-Back-Data.html"><span class="doc">basic ROS 2 bag tutorial</span></a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7999">[待校准&#64;7999]</a></p>
 </div>
 <div class="section" id="tasks">
-<h2>任务 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6725">[待校准&#64;6725]</a><a class="headerlink" href="#tasks" title="永久链接至标题"></a></h2>
+<h2>任务 <a class="reference external" href="http://localhost:3000/#/home?msgid=6725">[待校准&#64;6725]</a><a class="headerlink" href="#tasks" title="永久链接至标题"></a></h2>
 <div class="section" id="create-a-package">
-<h3>1创建包 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7137">[待校准&#64;7137]</a><a class="headerlink" href="#create-a-package" title="永久链接至标题"></a></h3>
-<p>打开一个新的终端和 <a class="reference internal" href="../Configuring-ROS2-Environment.html"><span class="doc">source your ROS 2 installation</span></a> ，这样 <code class="docutils literal notranslate"><span class="pre">ros2</span></code> 命令就可以工作了。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8000">[待校准&#64;8000]</a></p>
-<p>导航到 <code class="docutils literal notranslate"><span class="pre">dev_ws</span></code> 目录创建 <a class="reference internal" href="../Workspace/Creating-A-Workspace.html#new-directory"><span class="std std-ref">previous tutorial</span></a> 。导航到 <code class="docutils literal notranslate"><span class="pre">dev_ws/src</span></code> 目录并创建一个新包: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8001">[待校准&#64;8001]</a></p>
+<h3>1创建包 <a class="reference external" href="http://localhost:3000/#/home?msgid=7137">[待校准&#64;7137]</a><a class="headerlink" href="#create-a-package" title="永久链接至标题"></a></h3>
+<p>打开一个新的终端和 <a class="reference internal" href="../Configuring-ROS2-Environment.html"><span class="doc">source your ROS 2 installation</span></a> ，这样 <code class="docutils literal notranslate"><span class="pre">ros2</span></code> 命令就可以工作了。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8000">[待校准&#64;8000]</a></p>
+<p>导航到 <code class="docutils literal notranslate"><span class="pre">dev_ws</span></code> 目录创建 <a class="reference internal" href="../Workspace/Creating-A-Workspace.html#new-directory"><span class="std std-ref">previous tutorial</span></a> 。导航到 <code class="docutils literal notranslate"><span class="pre">dev_ws/src</span></code> 目录并创建一个新包: <a class="reference external" href="http://localhost:3000/#/home?msgid=8001">[待校准&#64;8001]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 pkg create --build-type ament_cmake bag_recorder_nodes --dependencies rclcpp rosbag2_cpp example_interfaces</span>
 </pre></div>
 </div>
-<p>您的终端将返回一条消息，验证您的包 <code class="docutils literal notranslate"><span class="pre">bag_recorder_nodes</span></code> 及其所有必要的文件和文件夹的创建。 <code class="docutils literal notranslate"><span class="pre">--dependencies</span></code> 参数将自动调用y向 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 和 <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> 添加必要的依赖线。在这种情况下，包装将使用 <code class="docutils literal notranslate"><span class="pre">rosbag2_cpp</span></code> 包装以及 <code class="docutils literal notranslate"><span class="pre">rclcpp</span></code> 包装。本教程的后面部分还需要依赖于 <code class="docutils literal notranslate"><span class="pre">example_interfaces</span></code> 包。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8002">[待校准&#64;8002]</a></p>
+<p>您的终端将返回一条消息，验证您的包 <code class="docutils literal notranslate"><span class="pre">bag_recorder_nodes</span></code> 及其所有必要的文件和文件夹的创建。 <code class="docutils literal notranslate"><span class="pre">--dependencies</span></code> 参数将自动调用y向 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 和 <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> 添加必要的依赖线。在这种情况下，包装将使用 <code class="docutils literal notranslate"><span class="pre">rosbag2_cpp</span></code> 包装以及 <code class="docutils literal notranslate"><span class="pre">rclcpp</span></code> 包装。本教程的后面部分还需要依赖于 <code class="docutils literal notranslate"><span class="pre">example_interfaces</span></code> 包。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8002">[待校准&#64;8002]</a></p>
 <div class="section" id="update-package-xml">
-<h4>1.1更新 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code>  <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8003">[待校准&#64;8003]</a><a class="headerlink" href="#update-package-xml" title="永久链接至标题"></a></h4>
-<p>因为您在包创建过程中使用了 <code class="docutils literal notranslate"><span class="pre">--dependencies</span></code> 选项，所以您不必手动向 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 或 <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> 添加依赖项。但是，与往常一样，请确保将描述、维护人员电子邮件和姓名以及许可信息添加到 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8004">[待校准&#64;8004]</a></p>
+<h4>1.1更新 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code>  <a class="reference external" href="http://localhost:3000/#/home?msgid=8003">[待校准&#64;8003]</a><a class="headerlink" href="#update-package-xml" title="永久链接至标题"></a></h4>
+<p>因为您在包创建过程中使用了 <code class="docutils literal notranslate"><span class="pre">--dependencies</span></code> 选项，所以您不必手动向 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 或 <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> 添加依赖项。但是，与往常一样，请确保将描述、维护人员电子邮件和姓名以及许可信息添加到 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8004">[待校准&#64;8004]</a></p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;description&gt;</span>C++ bag writing tutorial<span class="nt">&lt;/description&gt;</span>
 <span class="nt">&lt;maintainer</span> <span class="na">email=</span><span class="s">&quot;you@email.com&quot;</span><span class="nt">&gt;</span>Your Name<span class="nt">&lt;/maintainer&gt;</span>
 <span class="nt">&lt;license&gt;</span>Apache License 2.0<span class="nt">&lt;/license&gt;</span>
@@ -335,8 +335,8 @@
 </div>
 </div>
 <div class="section" id="write-the-c-node">
-<h3>2编写cnode节点 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8005">[待校准&#64;8005]</a><a class="headerlink" href="#write-the-c-node" title="永久链接至标题"></a></h3>
-<p>在 <code class="docutils literal notranslate"><span class="pre">dev_ws/src/bag_recorder_nodes/src</span></code> 目录内，创建一个调用 <code class="docutils literal notranslate"><span class="pre">simple_bag_recorder.cpp</span></code> 的新文件，并将以下代码粘贴到其中。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8006">[待校准&#64;8006]</a></p>
+<h3>2编写cnode节点 <a class="reference external" href="http://localhost:3000/#/home?msgid=8005">[待校准&#64;8005]</a><a class="headerlink" href="#write-the-c-node" title="永久链接至标题"></a></h3>
+<p>在 <code class="docutils literal notranslate"><span class="pre">dev_ws/src/bag_recorder_nodes/src</span></code> 目录内，创建一个调用 <code class="docutils literal notranslate"><span class="pre">simple_bag_recorder.cpp</span></code> 的新文件，并将以下代码粘贴到其中。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8006">[待校准&#64;8006]</a></p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;rclcpp/rclcpp.hpp&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;std_msgs/msg/string.hpp&gt;</span><span class="cp"></span>
 
@@ -411,49 +411,49 @@
 </pre></div>
 </div>
 <div class="section" id="examine-the-code">
-<h4>2.1检查代码 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8007">[待校准&#64;8007]</a><a class="headerlink" href="#examine-the-code" title="永久链接至标题"></a></h4>
-<p>顶部的 “# include” 语句是包依赖项。注意包含来自 <code class="docutils literal notranslate"><span class="pre">rosbag2_cpp</span></code> 包的标题的功能和必要的结构来处理包文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8008">[待校准&#64;8008]</a></p>
-<p>在类构造函数中，我们首先创建将用于写入包的writer对象。我们必须为袋子提供存储选项。这些指定了袋子的名称 ( <code class="docutils literal notranslate"><span class="pre">my_bag</span></code> ) 和格式 ( <code class="docutils literal notranslate"><span class="pre">sqlite3</span></code> )。我们还必须提供转换选项，这些选项指定输入到编写器中的数据将如何序列化，以及在写入包时如何序列化相同的数据。在大多数情况下，您可以将它们指定为相同的值，因为不需要转换序列化格式。我们使用 <code class="docutils literal notranslate"><span class="pre">rmw_get_serialization_format()</span></code> 函数来检索底层中间件使用的序列化格式。这是将接收数据的序列化格式，我们将其存储在包中的格式也是如此。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8009">[待校准&#64;8009]</a></p>
-<p>最后，第三行创建writer对象。我们创建了一个 <code class="docutils literal notranslate"><span class="pre">SequentialWriter</span></code> ，这是最简单的作家对象。它不会执行高级操作，例如在将数据写入包时压缩数据。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8010">[待校准&#64;8010]</a></p>
+<h4>2.1检查代码 <a class="reference external" href="http://localhost:3000/#/home?msgid=8007">[待校准&#64;8007]</a><a class="headerlink" href="#examine-the-code" title="永久链接至标题"></a></h4>
+<p>顶部的 “# include” 语句是包依赖项。注意包含来自 <code class="docutils literal notranslate"><span class="pre">rosbag2_cpp</span></code> 包的标题的功能和必要的结构来处理包文件。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8008">[待校准&#64;8008]</a></p>
+<p>在类构造函数中，我们首先创建将用于写入包的writer对象。我们必须为袋子提供存储选项。这些指定了袋子的名称 ( <code class="docutils literal notranslate"><span class="pre">my_bag</span></code> ) 和格式 ( <code class="docutils literal notranslate"><span class="pre">sqlite3</span></code> )。我们还必须提供转换选项，这些选项指定输入到编写器中的数据将如何序列化，以及在写入包时如何序列化相同的数据。在大多数情况下，您可以将它们指定为相同的值，因为不需要转换序列化格式。我们使用 <code class="docutils literal notranslate"><span class="pre">rmw_get_serialization_format()</span></code> 函数来检索底层中间件使用的序列化格式。这是将接收数据的序列化格式，我们将其存储在包中的格式也是如此。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8009">[待校准&#64;8009]</a></p>
+<p>最后，第三行创建writer对象。我们创建了一个 <code class="docutils literal notranslate"><span class="pre">SequentialWriter</span></code> ，这是最简单的作家对象。它不会执行高级操作，例如在将数据写入包时压缩数据。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8010">[待校准&#64;8010]</a></p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">rosbag2_cpp</span><span class="o">::</span><span class="n">StorageOptions</span> <span class="n">storage_options</span><span class="p">({</span><span class="s">&quot;my_bag&quot;</span><span class="p">,</span> <span class="s">&quot;sqlite3&quot;</span><span class="p">});</span>
 <span class="n">rosbag2_cpp</span><span class="o">::</span><span class="n">ConverterOptions</span> <span class="n">converter_options</span><span class="p">({</span><span class="n">rmw_get_serialization_format</span><span class="p">(),</span> <span class="n">rmw_get_serialization_format</span><span class="p">()});</span>
 <span class="n">writer_</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">make_unique</span><span class="o">&lt;</span><span class="n">rosbag2_cpp</span><span class="o">::</span><span class="n">writers</span><span class="o">::</span><span class="n">SequentialWriter</span><span class="o">&gt;</span><span class="p">();</span>
 </pre></div>
 </div>
-<p>现在我们有了一个作家对象，我们可以用它打开袋子。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8011">[待校准&#64;8011]</a></p>
+<p>现在我们有了一个作家对象，我们可以用它打开袋子。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8011">[待校准&#64;8011]</a></p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">writer_</span><span class="o">-&gt;</span><span class="n">open</span><span class="p">(</span><span class="n">storage_options</span><span class="p">,</span> <span class="n">converter_options</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>下一步是通知作者我们将写给书包的每个话题。这是通过调用 <code class="docutils literal notranslate"><span class="pre">create_topic</span></code> 并传递 “rosbag2_storage::话题metadata” 结构的实例来完成的。在这里，我们使用现代的csyntax语法在适当的位置构造此结构的实例，而不是单独创建它并将其传递。存储在 “rosbag2_storage::话题metadata” 结构中的参数为: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8012">[待校准&#64;8012]</a></p>
+<p>下一步是通知作者我们将写给书包的每个话题。这是通过调用 <code class="docutils literal notranslate"><span class="pre">create_topic</span></code> 并传递 “rosbag2_storage::话题metadata” 结构的实例来完成的。在这里，我们使用现代的csyntax语法在适当的位置构造此结构的实例，而不是单独创建它并将其传递。存储在 “rosbag2_storage::话题metadata” 结构中的参数为: <a class="reference external" href="http://localhost:3000/#/home?msgid=8012">[待校准&#64;8012]</a></p>
 <ul class="simple">
-<li><p>话题的名称。请注意，这不需要与接收数据的话题相同。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8013">[待校准&#64;8013]</a></p></li>
-<li><p>话题中的数据类型。这必须与存储在包中的数据类型相同。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8014">[待校准&#64;8014]</a></p></li>
-<li><p>数据的序列化格式。如前所述，我们仅使用与底层中间件相同的序列化格式。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8015">[待校准&#64;8015]</a></p></li>
-<li><p>为话题指定的任何QoS设置。这些必须以YAML格式指定。将其保留为空string将使用系统默认值。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8016">[待校准&#64;8016]</a></p></li>
+<li><p>话题的名称。请注意，这不需要与接收数据的话题相同。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8013">[待校准&#64;8013]</a></p></li>
+<li><p>话题中的数据类型。这必须与存储在包中的数据类型相同。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8014">[待校准&#64;8014]</a></p></li>
+<li><p>数据的序列化格式。如前所述，我们仅使用与底层中间件相同的序列化格式。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8015">[待校准&#64;8015]</a></p></li>
+<li><p>为话题指定的任何QoS设置。这些必须以YAML格式指定。将其保留为空string将使用系统默认值。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8016">[待校准&#64;8016]</a></p></li>
 </ul>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">writer_</span><span class="o">-&gt;</span><span class="n">create_topic</span><span class="p">({</span><span class="s">&quot;chatter&quot;</span><span class="p">,</span> <span class="s">&quot;std_msgs/msg/String&quot;</span><span class="p">,</span> <span class="n">rmw_get_serialization_format</span><span class="p">(),</span> <span class="s">&quot;&quot;</span><span class="p">});</span>
 </pre></div>
 </div>
-<p>现在，通过设置编写器来记录我们传递给它的数据，我们创建一个订阅并为它指定一个调用。我们将在调用中将数据写入包中。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8017">[待校准&#64;8017]</a></p>
+<p>现在，通过设置编写器来记录我们传递给它的数据，我们创建一个订阅并为它指定一个调用。我们将在调用中将数据写入包中。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8017">[待校准&#64;8017]</a></p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">subscription_</span> <span class="o">=</span> <span class="n">create_subscription</span><span class="o">&lt;</span><span class="n">std_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">String</span><span class="o">&gt;</span><span class="p">(</span>
   <span class="s">&quot;chatter&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">bind</span><span class="p">(</span><span class="o">&amp;</span><span class="n">SimpleBagRecorder</span><span class="o">::</span><span class="n">topic_callback</span><span class="p">,</span> <span class="k">this</span><span class="p">,</span> <span class="n">_1</span><span class="p">));</span>
 </pre></div>
 </div>
-<p>调用back本身不同于典型的调用back。而不是接收话题的数据类型的实例，而是接收 “rclcpp:: serializedmessage”。我们这样做有两个原因。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8018">[待校准&#64;8018]</a></p>
+<p>调用back本身不同于典型的调用back。而不是接收话题的数据类型的实例，而是接收 “rclcpp:: serializedmessage”。我们这样做有两个原因。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8018">[待校准&#64;8018]</a></p>
 <ol class="arabic simple">
-<li><p>在写入包之前，需要对消息数据进行序列化，因此，与其在接收数据时取消序列化，然后重新序列化，我们要求ROS按原样给我们序列化的消息。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8019">[待校准&#64;8019]</a></p></li>
-<li><p>writer API需要一个序列化消息，因此通过向ROS请求序列化消息，我们节省了自己对数据进行序列化的工作。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8020">[待校准&#64;8020]</a></p></li>
+<li><p>在写入包之前，需要对消息数据进行序列化，因此，与其在接收数据时取消序列化，然后重新序列化，我们要求ROS按原样给我们序列化的消息。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8019">[待校准&#64;8019]</a></p></li>
+<li><p>writer API需要一个序列化消息，因此通过向ROS请求序列化消息，我们节省了自己对数据进行序列化的工作。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8020">[待校准&#64;8020]</a></p></li>
 </ol>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">topic_callback</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">rclcpp</span><span class="o">::</span><span class="n">SerializedMessage</span><span class="o">&gt;</span> <span class="n">msg</span><span class="p">)</span> <span class="k">const</span>
 <span class="p">{</span>
 </pre></div>
 </div>
-<p>在订阅调用中，首先要做的是创建 “rosbag2_storage:: serializedbagmessage” 的实例。这是表示包中的单个数据样本的数据类型。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8021">[待校准&#64;8021]</a></p>
+<p>在订阅调用中，首先要做的是创建 “rosbag2_storage:: serializedbagmessage” 的实例。这是表示包中的单个数据样本的数据类型。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8021">[待校准&#64;8021]</a></p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span> <span class="n">bag_message</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">rosbag2_storage</span><span class="o">::</span><span class="n">SerializedBagMessage</span><span class="o">&gt;</span><span class="p">();</span>
 </pre></div>
 </div>
-<p>由于直接处理来自中间件的序列化数据的内存管理要求，下一个代码块有些复杂。序列化数据的内存归 <code class="docutils literal notranslate"><span class="pre">SerializedMessage</span></code> 对象所有，但我们将传递给包的 <code class="docutils literal notranslate"><span class="pre">SerializedBagMessage</span></code> 对象必须拥有内存。否则，内存可能会超出范围，并在写入包之前被删除，从而导致内存访问错误。为了防止这种情况，我们在 <code class="docutils literal notranslate"><span class="pre">SerializedMessage</span></code> 物体上调用 <code class="docutils literal notranslate"><span class="pre">release_rcl_serialized_message()</span></code> 。这使得它释放对记忆的所有权，允许 <code class="docutils literal notranslate"><span class="pre">SerializedBagMessage</span></code> 获得所有权。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8022">[待校准&#64;8022]</a></p>
-<p>然而，我们也需要确保 <code class="docutils literal notranslate"><span class="pre">SerializedBagMessage</span></code> 物体在被清理时会正确地删除内存。这是通过在创建 <code class="docutils literal notranslate"><span class="pre">bag_message</span></code> 实例的 <code class="docutils literal notranslate"><span class="pre">serialized_data</span></code> 成员时提供自定义删除器函数来实现的。这是将lambda函数传递到 <code class="docutils literal notranslate"><span class="pre">std::shared_ptr&lt;rcutils_uint8_array_t&gt;</span></code> 对象的构造函数中的目的 (即 <code class="docutils literal notranslate"><span class="pre">bag_message</span></code> 物体的 <code class="docutils literal notranslate"><span class="pre">serialized_data</span></code> 成员)。当 <code class="docutils literal notranslate"><span class="pre">shared_ptr</span></code> 超出范围时，将调用lambda函数并清理内存。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8023">[待校准&#64;8023]</a></p>
+<p>由于直接处理来自中间件的序列化数据的内存管理要求，下一个代码块有些复杂。序列化数据的内存归 <code class="docutils literal notranslate"><span class="pre">SerializedMessage</span></code> 对象所有，但我们将传递给包的 <code class="docutils literal notranslate"><span class="pre">SerializedBagMessage</span></code> 对象必须拥有内存。否则，内存可能会超出范围，并在写入包之前被删除，从而导致内存访问错误。为了防止这种情况，我们在 <code class="docutils literal notranslate"><span class="pre">SerializedMessage</span></code> 物体上调用 <code class="docutils literal notranslate"><span class="pre">release_rcl_serialized_message()</span></code> 。这使得它释放对记忆的所有权，允许 <code class="docutils literal notranslate"><span class="pre">SerializedBagMessage</span></code> 获得所有权。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8022">[待校准&#64;8022]</a></p>
+<p>然而，我们也需要确保 <code class="docutils literal notranslate"><span class="pre">SerializedBagMessage</span></code> 物体在被清理时会正确地删除内存。这是通过在创建 <code class="docutils literal notranslate"><span class="pre">bag_message</span></code> 实例的 <code class="docutils literal notranslate"><span class="pre">serialized_data</span></code> 成员时提供自定义删除器函数来实现的。这是将lambda函数传递到 <code class="docutils literal notranslate"><span class="pre">std::shared_ptr&lt;rcutils_uint8_array_t&gt;</span></code> 对象的构造函数中的目的 (即 <code class="docutils literal notranslate"><span class="pre">bag_message</span></code> 物体的 <code class="docutils literal notranslate"><span class="pre">serialized_data</span></code> 成员)。当 <code class="docutils literal notranslate"><span class="pre">shared_ptr</span></code> 超出范围时，将调用lambda函数并清理内存。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8023">[待校准&#64;8023]</a></p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">bag_message</span><span class="o">-&gt;</span><span class="n">serialized_data</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">rcutils_uint8_array_t</span><span class="o">&gt;</span><span class="p">(</span>
   <span class="k">new</span> <span class="n">rcutils_uint8_array_t</span><span class="p">,</span>
   <span class="p">[</span><span class="k">this</span><span class="p">](</span><span class="n">rcutils_uint8_array_t</span> <span class="o">*</span><span class="n">msg</span><span class="p">)</span> <span class="p">{</span>
@@ -467,31 +467,31 @@
 <span class="o">*</span><span class="n">bag_message</span><span class="o">-&gt;</span><span class="n">serialized_data</span> <span class="o">=</span> <span class="n">msg</span><span class="o">-&gt;</span><span class="n">release_rcl_serialized_message</span><span class="p">();</span>
 </pre></div>
 </div>
-<p>下一行用来告诉作者这个样本是为了什么话题。这是必要的，因为序列化消息不包含任何类型信息，并且可能会错误地写入包中的任何话题。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8024">[待校准&#64;8024]</a></p>
+<p>下一行用来告诉作者这个样本是为了什么话题。这是必要的，因为序列化消息不包含任何类型信息，并且可能会错误地写入包中的任何话题。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8024">[待校准&#64;8024]</a></p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">bag_message</span><span class="o">-&gt;</span><span class="n">topic_name</span> <span class="o">=</span> <span class="s">&quot;chatter&quot;</span><span class="p">;</span>
 </pre></div>
 </div>
-<p>时间戳的消息必须设置在 <code class="docutils literal notranslate"><span class="pre">time_stamp</span></code> 成员 <code class="docutils literal notranslate"><span class="pre">bag_message</span></code> 对象。这可以是任何适合您的数据的值，但是两个共同的值是数据生成的时间 (如果知道) 和接收时间。第二种选择，即接收时间，在此使用。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8025">[待校准&#64;8025]</a></p>
+<p>时间戳的消息必须设置在 <code class="docutils literal notranslate"><span class="pre">time_stamp</span></code> 成员 <code class="docutils literal notranslate"><span class="pre">bag_message</span></code> 对象。这可以是任何适合您的数据的值，但是两个共同的值是数据生成的时间 (如果知道) 和接收时间。第二种选择，即接收时间，在此使用。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8025">[待校准&#64;8025]</a></p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">rcutils_system_time_now</span><span class="p">(</span><span class="o">&amp;</span><span class="n">bag_message</span><span class="o">-&gt;</span><span class="n">time_stamp</span><span class="p">)</span> <span class="o">!=</span> <span class="n">RCUTILS_RET_OK</span><span class="p">)</span> <span class="p">{</span>
   <span class="n">RCLCPP_ERROR</span><span class="p">(</span><span class="n">get_logger</span><span class="p">(),</span> <span class="s">&quot;Error getting current time: %s&quot;</span><span class="p">,</span>
     <span class="n">rcutils_get_error_string</span><span class="p">().</span><span class="n">str</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>调用back的最后一步是将数据传递给writer对象，以便将其写入bag。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8026">[待校准&#64;8026]</a></p>
+<p>调用back的最后一步是将数据传递给writer对象，以便将其写入bag。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8026">[待校准&#64;8026]</a></p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">writer_</span><span class="o">-&gt;</span><span class="n">write</span><span class="p">(</span><span class="n">bag_message</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>该类包含两个成员变量。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8027">[待校准&#64;8027]</a></p>
+<p>该类包含两个成员变量。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8027">[待校准&#64;8027]</a></p>
 <ol class="arabic simple">
-<li><p>订阅对象。请注意，模板参数是调用back的类型，而不是话题的类型。在这种情况下，调用back会收到一个 “rclcpp:: serializedmessage” 共享指针，因此这是模板参数必须的。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8028">[待校准&#64;8028]</a></p></li>
-<li><p>指向用于写入包的writer对象的托管指针。请注意，此处使用的编写器类型为 “rosbag2_cpp:: 编写器:: sequentialwriter”。其他作家可能有不同的行为。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8029">[待校准&#64;8029]</a></p></li>
+<li><p>订阅对象。请注意，模板参数是调用back的类型，而不是话题的类型。在这种情况下，调用back会收到一个 “rclcpp:: serializedmessage” 共享指针，因此这是模板参数必须的。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8028">[待校准&#64;8028]</a></p></li>
+<li><p>指向用于写入包的writer对象的托管指针。请注意，此处使用的编写器类型为 “rosbag2_cpp:: 编写器:: sequentialwriter”。其他作家可能有不同的行为。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8029">[待校准&#64;8029]</a></p></li>
 </ol>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">rclcpp</span><span class="o">::</span><span class="n">Subscription</span><span class="o">&lt;</span><span class="n">rclcpp</span><span class="o">::</span><span class="n">SerializedMessage</span><span class="o">&gt;::</span><span class="n">SharedPtr</span> <span class="n">subscription_</span><span class="p">;</span>
 <span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">rosbag2_cpp</span><span class="o">::</span><span class="n">writers</span><span class="o">::</span><span class="n">SequentialWriter</span><span class="o">&gt;</span> <span class="n">writer_</span><span class="p">;</span>
 </pre></div>
 </div>
-<p>该文件以用于创建节点实例并开始ROS处理的 <code class="docutils literal notranslate"><span class="pre">main</span></code> 函数结束。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8030">[待校准&#64;8030]</a></p>
+<p>该文件以用于创建节点实例并开始ROS处理的 <code class="docutils literal notranslate"><span class="pre">main</span></code> 函数结束。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8030">[待校准&#64;8030]</a></p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span> <span class="n">argv</span><span class="p">[])</span>
 <span class="p">{</span>
   <span class="n">rclcpp</span><span class="o">::</span><span class="n">init</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span> <span class="n">argv</span><span class="p">);</span>
@@ -503,8 +503,8 @@
 </div>
 </div>
 <div class="section" id="add-executable">
-<h4>2.2添加可执行文件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8031">[待校准&#64;8031]</a><a class="headerlink" href="#add-executable" title="永久链接至标题"></a></h4>
-<p>现在打开 <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> 文件。在 <code class="docutils literal notranslate"><span class="pre">find_package(rosbag2_cpp</span> <span class="pre">REQUIRED)</span></code> 依赖项下添加以下代码行。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8032">[待校准&#64;8032]</a></p>
+<h4>2.2添加可执行文件 <a class="reference external" href="http://localhost:3000/#/home?msgid=8031">[待校准&#64;8031]</a><a class="headerlink" href="#add-executable" title="永久链接至标题"></a></h4>
+<p>现在打开 <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> 文件。在 <code class="docutils literal notranslate"><span class="pre">find_package(rosbag2_cpp</span> <span class="pre">REQUIRED)</span></code> 依赖项下添加以下代码行。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8032">[待校准&#64;8032]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">add_executable(simple_bag_recorder src/simple_bag_recorder.cpp)</span>
 <span class="go">ament_target_dependencies(simple_bag_recorder rclcpp rosbag2_cpp)</span>
 
@@ -517,8 +517,8 @@
 </div>
 </div>
 <div class="section" id="build-and-run">
-<h3>3构建和运行 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8033">[待校准&#64;8033]</a><a class="headerlink" href="#build-and-run" title="永久链接至标题"></a></h3>
-<p>导航回工作区的根， <code class="docutils literal notranslate"><span class="pre">dev_ws</span></code> ，并构建新的包。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8034">[待校准&#64;8034]</a></p>
+<h3>3构建和运行 <a class="reference external" href="http://localhost:3000/#/home?msgid=8033">[待校准&#64;8033]</a><a class="headerlink" href="#build-and-run" title="永久链接至标题"></a></h3>
+<p>导航回工作区的根， <code class="docutils literal notranslate"><span class="pre">dev_ws</span></code> ，并构建新的包。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8034">[待校准&#64;8034]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-0-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-0-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-0-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-0-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-0-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">colcon build --packages-select bag_recorder_nodes</span>
 </pre></div>
@@ -530,7 +530,7 @@
 </pre></div>
 </div>
 </div></div>
-<p>打开一个新终端，导航到 <code class="docutils literal notranslate"><span class="pre">dev_ws</span></code> ，然后源文件安装文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8035">[待校准&#64;8035]</a></p>
+<p>打开一个新终端，导航到 <code class="docutils literal notranslate"><span class="pre">dev_ws</span></code> ，然后源文件安装文件。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8035">[待校准&#64;8035]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-1-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-1-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-1-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-1-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-1-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-1-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">source install/setup.bash</span>
 </pre></div>
@@ -542,7 +542,7 @@
 </pre></div>
 </div>
 </div></div>
-<p>为包创建一个目录。此目录将包含构成单个包的所有文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8036">[待校准&#64;8036]</a></p>
+<p>为包创建一个目录。此目录将包含构成单个包的所有文件。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8036">[待校准&#64;8036]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-2-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-2-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-2-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-2-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-2-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-2-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-2-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-2-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">mkdir my_bag</span>
 </pre></div>
@@ -554,32 +554,32 @@
 </pre></div>
 </div>
 </div></div>
-<p>(如果 <code class="docutils literal notranslate"><span class="pre">my_bag</span></code> 目录已经存在，您必须先删除它，然后再重新创建它。) <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8037">[待校准&#64;8037]</a></p>
-<p>现在运行节点: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7899">[待校准&#64;7899]</a></p>
+<p>(如果 <code class="docutils literal notranslate"><span class="pre">my_bag</span></code> 目录已经存在，您必须先删除它，然后再重新创建它。) <a class="reference external" href="http://localhost:3000/#/home?msgid=8037">[待校准&#64;8037]</a></p>
+<p>现在运行节点: <a class="reference external" href="http://localhost:3000/#/home?msgid=7899">[待校准&#64;7899]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run bag_recorder_nodes simple_bag_recorder</span>
 </pre></div>
 </div>
-<p>打开第二个终端并运行 <code class="docutils literal notranslate"><span class="pre">talker</span></code> 示例节点。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8038">[待校准&#64;8038]</a></p>
+<p>打开第二个终端并运行 <code class="docutils literal notranslate"><span class="pre">talker</span></code> 示例节点。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8038">[待校准&#64;8038]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run demo_nodes_cpp talker</span>
 </pre></div>
 </div>
-<p>这将开始发布关于 <code class="docutils literal notranslate"><span class="pre">chatter</span></code> 话题的数据。当写袋节点接收到这些数据时，它会将其写入 <code class="docutils literal notranslate"><span class="pre">my_bag</span></code> 袋。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8039">[待校准&#64;8039]</a></p>
-<p>终止两个节点。然后，在一个终端启动 <code class="docutils literal notranslate"><span class="pre">listener</span></code> 示例节点。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8040">[待校准&#64;8040]</a></p>
+<p>这将开始发布关于 <code class="docutils literal notranslate"><span class="pre">chatter</span></code> 话题的数据。当写袋节点接收到这些数据时，它会将其写入 <code class="docutils literal notranslate"><span class="pre">my_bag</span></code> 袋。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8039">[待校准&#64;8039]</a></p>
+<p>终止两个节点。然后，在一个终端启动 <code class="docutils literal notranslate"><span class="pre">listener</span></code> 示例节点。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8040">[待校准&#64;8040]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run demo_nodes_cpp listener</span>
 </pre></div>
 </div>
-<p>在另一个终端，使用 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">bag</span></code> 播放节点录制的包。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8041">[待校准&#64;8041]</a></p>
+<p>在另一个终端，使用 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">bag</span></code> 播放节点录制的包。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8041">[待校准&#64;8041]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 bag play my_bag</span>
 </pre></div>
 </div>
-<p>你会看到来自袋子的信息被 <code class="docutils literal notranslate"><span class="pre">listener</span></code> 节点接收。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8042">[待校准&#64;8042]</a></p>
+<p>你会看到来自袋子的信息被 <code class="docutils literal notranslate"><span class="pre">listener</span></code> 节点接收。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8042">[待校准&#64;8042]</a></p>
 </div>
 <div class="section" id="record-synthetic-data-from-a-node">
-<h3>4记录来自节点的合成数据 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8043">[待校准&#64;8043]</a><a class="headerlink" href="#record-synthetic-data-from-a-node" title="永久链接至标题"></a></h3>
-<p>任何数据都可以记录到一个袋子里，而不仅仅是通过一个话题接收到的数据。从您自己的节点写入包的常见用例是生成和存储合成数据。在本节中，您将学习如何编写生成一些数据并将其存储在包中的节点。我们将例程指定两种方法来执行此操作。第一个使用带有计时器的节点; 如果数据生成在节点外部，例如直接从硬件读取数据 (例如g.照相机)。第二种方法不使用节点; 当您不需要使用ROS基础结构中的任何功能时，可以使用此方法。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8044">[待校准&#64;8044]</a></p>
+<h3>4记录来自节点的合成数据 <a class="reference external" href="http://localhost:3000/#/home?msgid=8043">[待校准&#64;8043]</a><a class="headerlink" href="#record-synthetic-data-from-a-node" title="永久链接至标题"></a></h3>
+<p>任何数据都可以记录到一个袋子里，而不仅仅是通过一个话题接收到的数据。从您自己的节点写入包的常见用例是生成和存储合成数据。在本节中，您将学习如何编写生成一些数据并将其存储在包中的节点。我们将例程指定两种方法来执行此操作。第一个使用带有计时器的节点; 如果数据生成在节点外部，例如直接从硬件读取数据 (例如g.照相机)。第二种方法不使用节点; 当您不需要使用ROS基础结构中的任何功能时，可以使用此方法。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8044">[待校准&#64;8044]</a></p>
 <div class="section" id="write-a-c-node">
-<h4>4.1编写cnode节点 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8045">[待校准&#64;8045]</a><a class="headerlink" href="#write-a-c-node" title="永久链接至标题"></a></h4>
-<p>在 <code class="docutils literal notranslate"><span class="pre">dev_ws/src/bag_recorder_nodes/src</span></code> 目录内，创建一个调用 <code class="docutils literal notranslate"><span class="pre">data_generator_node.cpp</span></code> 的新文件，并将以下代码粘贴到其中。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8046">[待校准&#64;8046]</a></p>
+<h4>4.1编写cnode节点 <a class="reference external" href="http://localhost:3000/#/home?msgid=8045">[待校准&#64;8045]</a><a class="headerlink" href="#write-a-c-node" title="永久链接至标题"></a></h4>
+<p>在 <code class="docutils literal notranslate"><span class="pre">dev_ws/src/bag_recorder_nodes/src</span></code> 目录内，创建一个调用 <code class="docutils literal notranslate"><span class="pre">data_generator_node.cpp</span></code> 的新文件，并将以下代码粘贴到其中。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8046">[待校准&#64;8046]</a></p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;chrono&gt;</span><span class="cp"></span>
 
 <span class="cp">#include</span> <span class="cpf">&lt;example_interfaces/msg/int32.hpp&gt;</span><span class="cp"></span>
@@ -663,31 +663,31 @@
 </div>
 </div>
 <div class="section" id="id1">
-<h4>4.2检查代码 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8047">[待校准&#64;8047]</a><a class="headerlink" href="#id1" title="永久链接至标题"></a></h4>
-<p>此代码的大部分与第一个示例相同。这里描述了重要的区别。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8048">[待校准&#64;8048]</a></p>
-<p>首先，更改包的名称。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8049">[待校准&#64;8049]</a></p>
+<h4>4.2检查代码 <a class="reference external" href="http://localhost:3000/#/home?msgid=8047">[待校准&#64;8047]</a><a class="headerlink" href="#id1" title="永久链接至标题"></a></h4>
+<p>此代码的大部分与第一个示例相同。这里描述了重要的区别。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8048">[待校准&#64;8048]</a></p>
+<p>首先，更改包的名称。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8049">[待校准&#64;8049]</a></p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">rosbag2_cpp</span><span class="o">::</span><span class="n">StorageOptions</span> <span class="n">storage_options</span><span class="p">({</span><span class="s">&quot;timed_synthetic_bag&quot;</span><span class="p">,</span> <span class="s">&quot;sqlite3&quot;</span><span class="p">});</span>
 </pre></div>
 </div>
-<p>将存储的话题名称和数据类型也不同，因此需要告知作者这一点。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8050">[待校准&#64;8050]</a></p>
+<p>将存储的话题名称和数据类型也不同，因此需要告知作者这一点。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8050">[待校准&#64;8050]</a></p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">writer_</span><span class="o">-&gt;</span><span class="n">create_topic</span><span class="p">({</span><span class="s">&quot;synthetic&quot;</span><span class="p">,</span> <span class="s">&quot;example_interfaces/msg/Int32&quot;</span><span class="p">,</span> <span class="n">rmw_get_serialization_format</span><span class="p">(),</span> <span class="s">&quot;&quot;</span><span class="p">});</span>
 </pre></div>
 </div>
-<p>这个节点有一个计时器，而不是订阅一个话题。计时器以一秒钟的周期触发，并在给定成员函数触发时调用s。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8051">[待校准&#64;8051]</a></p>
+<p>这个节点有一个计时器，而不是订阅一个话题。计时器以一秒钟的周期触发，并在给定成员函数触发时调用s。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8051">[待校准&#64;8051]</a></p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">timer_</span> <span class="o">=</span> <span class="n">create_wall_timer</span><span class="p">(</span><span class="mi">1</span><span class="n">s</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">bind</span><span class="p">(</span><span class="o">&amp;</span><span class="n">DataGenerator</span><span class="o">::</span><span class="n">timer_callback</span><span class="p">,</span> <span class="k">this</span><span class="p">));</span>
 </pre></div>
 </div>
-<p>在计时器调用中，我们生成 (或以其他方式获取，例如从连接到某些硬件的串行端口读取) 我们希望存储在包中的数据。此示例与先前示例之间的重要区别在于，数据尚未序列化。因为包编写器需要序列化数据，所以我们必须先序列化它。这可以使用 “rclcpp:: serialization” 类来完成。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8052">[待校准&#64;8052]</a></p>
+<p>在计时器调用中，我们生成 (或以其他方式获取，例如从连接到某些硬件的串行端口读取) 我们希望存储在包中的数据。此示例与先前示例之间的重要区别在于，数据尚未序列化。因为包编写器需要序列化数据，所以我们必须先序列化它。这可以使用 “rclcpp:: serialization” 类来完成。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8052">[待校准&#64;8052]</a></p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span> <span class="n">serializer</span> <span class="o">=</span> <span class="n">rclcpp</span><span class="o">::</span><span class="n">Serialization</span><span class="o">&lt;</span><span class="n">example_interfaces</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">Int32</span><span class="o">&gt;</span><span class="p">();</span>
 <span class="k">auto</span> <span class="n">serialized_message</span> <span class="o">=</span> <span class="n">rclcpp</span><span class="o">::</span><span class="n">SerializedMessage</span><span class="p">();</span>
 <span class="n">serializer</span><span class="p">.</span><span class="n">serialize_message</span><span class="p">(</span><span class="o">&amp;</span><span class="n">data</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">serialized_message</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>调用back中的其余代码是相同的，稍作修改以考虑到话题名称和数据类型的差异，并在每次执行调用back时增加数据。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8053">[待校准&#64;8053]</a></p>
+<p>调用back中的其余代码是相同的，稍作修改以考虑到话题名称和数据类型的差异，并在每次执行调用back时增加数据。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8053">[待校准&#64;8053]</a></p>
 </div>
 <div class="section" id="id2">
-<h4>4.3添加可执行文件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8054">[待校准&#64;8054]</a><a class="headerlink" href="#id2" title="永久链接至标题"></a></h4>
-<p>打开 <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> 文件并添加以下行后先前添加 (具体调用y，后 <code class="docutils literal notranslate"><span class="pre">install(TARGETS</span> <span class="pre">...)</span></code> 微距调用)。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8055">[待校准&#64;8055]</a></p>
+<h4>4.3添加可执行文件 <a class="reference external" href="http://localhost:3000/#/home?msgid=8054">[待校准&#64;8054]</a><a class="headerlink" href="#id2" title="永久链接至标题"></a></h4>
+<p>打开 <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> 文件并添加以下行后先前添加 (具体调用y，后 <code class="docutils literal notranslate"><span class="pre">install(TARGETS</span> <span class="pre">...)</span></code> 微距调用)。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8055">[待校准&#64;8055]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">add_executable(data_generator_node src/data_generator_node.cpp)</span>
 <span class="go">ament_target_dependencies(data_generator_node rclcpp rosbag2_cpp example_interfaces)</span>
 
@@ -699,8 +699,8 @@
 </div>
 </div>
 <div class="section" id="id3">
-<h4>4.4构建和运行 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8056">[待校准&#64;8056]</a><a class="headerlink" href="#id3" title="永久链接至标题"></a></h4>
-<p>导航回工作区的根， <code class="docutils literal notranslate"><span class="pre">dev_ws</span></code> ，并构建您的包。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8057">[待校准&#64;8057]</a></p>
+<h4>4.4构建和运行 <a class="reference external" href="http://localhost:3000/#/home?msgid=8056">[待校准&#64;8056]</a><a class="headerlink" href="#id3" title="永久链接至标题"></a></h4>
+<p>导航回工作区的根， <code class="docutils literal notranslate"><span class="pre">dev_ws</span></code> ，并构建您的包。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8057">[待校准&#64;8057]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-3-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-3-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-3-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-3-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-3-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-3-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-3-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-3-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">colcon build --packages-select bag_recorder_nodes</span>
 </pre></div>
@@ -712,7 +712,7 @@
 </pre></div>
 </div>
 </div></div>
-<p>打开一个新终端，导航到 <code class="docutils literal notranslate"><span class="pre">dev_ws</span></code> ，然后源文件安装文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8035">[待校准&#64;8035]</a></p>
+<p>打开一个新终端，导航到 <code class="docutils literal notranslate"><span class="pre">dev_ws</span></code> ，然后源文件安装文件。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8035">[待校准&#64;8035]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-4-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-4-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-4-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-4-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-4-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-4-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-4-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-4-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">source install/setup.bash</span>
 </pre></div>
@@ -724,7 +724,7 @@
 </pre></div>
 </div>
 </div></div>
-<p>为包创建一个目录。此目录将包含构成单个包的所有文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8036">[待校准&#64;8036]</a></p>
+<p>为包创建一个目录。此目录将包含构成单个包的所有文件。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8036">[待校准&#64;8036]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-5-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-5-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-5-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-5-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-5-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-5-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-5-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-5-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">mkdir timed_synthetic_bag</span>
 </pre></div>
@@ -736,28 +736,28 @@
 </pre></div>
 </div>
 </div></div>
-<p>(如果 <code class="docutils literal notranslate"><span class="pre">timed_synthetic_bag</span></code> 目录已经存在，您必须先删除它，然后再重新创建它。) <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8058">[待校准&#64;8058]</a></p>
-<p>现在运行节点: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7899">[待校准&#64;7899]</a></p>
+<p>(如果 <code class="docutils literal notranslate"><span class="pre">timed_synthetic_bag</span></code> 目录已经存在，您必须先删除它，然后再重新创建它。) <a class="reference external" href="http://localhost:3000/#/home?msgid=8058">[待校准&#64;8058]</a></p>
+<p>现在运行节点: <a class="reference external" href="http://localhost:3000/#/home?msgid=7899">[待校准&#64;7899]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run bag_recorder_nodes data_generator_node</span>
 </pre></div>
 </div>
-<p>等待30秒左右，然后用 <code class="docutils literal notranslate"><span class="pre">ctrl-c</span></code> 终止节点。接下来，回放创建的包。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8059">[待校准&#64;8059]</a></p>
+<p>等待30秒左右，然后用 <code class="docutils literal notranslate"><span class="pre">ctrl-c</span></code> 终止节点。接下来，回放创建的包。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8059">[待校准&#64;8059]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 bag play timed_synthetic_bag</span>
 </pre></div>
 </div>
-<p>打开第二个终端，回应 <code class="docutils literal notranslate"><span class="pre">/synthetic</span></code> 话题。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8060">[待校准&#64;8060]</a></p>
+<p>打开第二个终端，回应 <code class="docutils literal notranslate"><span class="pre">/synthetic</span></code> 话题。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8060">[待校准&#64;8060]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 topic echo /synthetic</span>
 </pre></div>
 </div>
-<p>您将看到生成并存储在袋中的数据以每秒一条消息的速度打印到控制台。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8061">[待校准&#64;8061]</a></p>
+<p>您将看到生成并存储在袋中的数据以每秒一条消息的速度打印到控制台。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8061">[待校准&#64;8061]</a></p>
 </div>
 </div>
 <div class="section" id="record-synthetic-data-from-an-executable">
-<h3>5记录来自可执行文件的合成数据 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8062">[待校准&#64;8062]</a><a class="headerlink" href="#record-synthetic-data-from-an-executable" title="永久链接至标题"></a></h3>
-<p>现在，您可以创建一个包来存储来自除话题以外的源文件的数据，您将学习如何从非节点可执行文件生成和记录合成数据。这种方法的优点是代码更简单，可快速创建大量数据。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8063">[待校准&#64;8063]</a></p>
+<h3>5记录来自可执行文件的合成数据 <a class="reference external" href="http://localhost:3000/#/home?msgid=8062">[待校准&#64;8062]</a><a class="headerlink" href="#record-synthetic-data-from-an-executable" title="永久链接至标题"></a></h3>
+<p>现在，您可以创建一个包来存储来自除话题以外的源文件的数据，您将学习如何从非节点可执行文件生成和记录合成数据。这种方法的优点是代码更简单，可快速创建大量数据。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8063">[待校准&#64;8063]</a></p>
 <div class="section" id="write-a-c-executable">
-<h4>5.1编写cexecutable可执行文件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8064">[待校准&#64;8064]</a><a class="headerlink" href="#write-a-c-executable" title="永久链接至标题"></a></h4>
-<p>在 <code class="docutils literal notranslate"><span class="pre">dev_ws/src/bag_recorder_nodes/src</span></code> 目录内，创建一个调用 <code class="docutils literal notranslate"><span class="pre">data_generator_executable.cpp</span></code> 的新文件，并将以下代码粘贴到其中。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8065">[待校准&#64;8065]</a></p>
+<h4>5.1编写cexecutable可执行文件 <a class="reference external" href="http://localhost:3000/#/home?msgid=8064">[待校准&#64;8064]</a><a class="headerlink" href="#write-a-c-executable" title="永久链接至标题"></a></h4>
+<p>在 <code class="docutils literal notranslate"><span class="pre">dev_ws/src/bag_recorder_nodes/src</span></code> 目录内，创建一个调用 <code class="docutils literal notranslate"><span class="pre">data_generator_executable.cpp</span></code> 的新文件，并将以下代码粘贴到其中。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8065">[待校准&#64;8065]</a></p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
 
 <span class="cp">#include</span> <span class="cpf">&lt;rclcpp/rclcpp.hpp&gt;</span><span class="cp"></span>
@@ -826,9 +826,9 @@
 </div>
 </div>
 <div class="section" id="id4">
-<h4>5.2检查代码 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8066">[待校准&#64;8066]</a><a class="headerlink" href="#id4" title="永久链接至标题"></a></h4>
-<p>该样本与先前样本的比较将揭示它们并没有什么不同。唯一显著的区别是使用for循环来驱动数据生成，而不是计时器。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8067">[待校准&#64;8067]</a></p>
-<p>请注意，我们现在也在为数据生成时间戳，而不是依赖于每个样本的当前系统时间。时间戳可以是您需要的任何值。数据将以这些时间戳给出的速率回放，因此这是控制样本默认回放速度的有用方法。还请注意，虽然每个样本之间的间隔是整整一秒的时间，但此可执行文件不需要在每个样本之间等待一秒钟。这使我们能够在比回放所需的更短的时间内生成大量覆盖时间跨度的数据。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8068">[待校准&#64;8068]</a></p>
+<h4>5.2检查代码 <a class="reference external" href="http://localhost:3000/#/home?msgid=8066">[待校准&#64;8066]</a><a class="headerlink" href="#id4" title="永久链接至标题"></a></h4>
+<p>该样本与先前样本的比较将揭示它们并没有什么不同。唯一显著的区别是使用for循环来驱动数据生成，而不是计时器。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8067">[待校准&#64;8067]</a></p>
+<p>请注意，我们现在也在为数据生成时间戳，而不是依赖于每个样本的当前系统时间。时间戳可以是您需要的任何值。数据将以这些时间戳给出的速率回放，因此这是控制样本默认回放速度的有用方法。还请注意，虽然每个样本之间的间隔是整整一秒的时间，但此可执行文件不需要在每个样本之间等待一秒钟。这使我们能够在比回放所需的更短的时间内生成大量覆盖时间跨度的数据。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8068">[待校准&#64;8068]</a></p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">rcutils_time_point_value_t</span> <span class="n">time_stamp</span><span class="p">;</span>
 <span class="k">if</span> <span class="p">(</span><span class="n">rcutils_system_time_now</span><span class="p">(</span><span class="o">&amp;</span><span class="n">time_stamp</span><span class="p">)</span> <span class="o">!=</span> <span class="n">RCUTILS_RET_OK</span><span class="p">)</span> <span class="p">{</span>
   <span class="n">std</span><span class="o">::</span><span class="n">cerr</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Error getting current time: &quot;</span> <span class="o">&lt;&lt;</span>
@@ -845,8 +845,8 @@
 </div>
 </div>
 <div class="section" id="id5">
-<h4>5.3添加可执行文件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8069">[待校准&#64;8069]</a><a class="headerlink" href="#id5" title="永久链接至标题"></a></h4>
-<p>打开 <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> 文件，并在之前添加的行之后添加以下行。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8070">[待校准&#64;8070]</a></p>
+<h4>5.3添加可执行文件 <a class="reference external" href="http://localhost:3000/#/home?msgid=8069">[待校准&#64;8069]</a><a class="headerlink" href="#id5" title="永久链接至标题"></a></h4>
+<p>打开 <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> 文件，并在之前添加的行之后添加以下行。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8070">[待校准&#64;8070]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">add_executable(data_generator_executable src/data_generator_executable.cpp)</span>
 <span class="go">ament_target_dependencies(data_generator_executable rclcpp rosbag2_cpp example_interfaces)</span>
 
@@ -858,8 +858,8 @@
 </div>
 </div>
 <div class="section" id="id6">
-<h4>5.4构建和运行 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8071">[待校准&#64;8071]</a><a class="headerlink" href="#id6" title="永久链接至标题"></a></h4>
-<p>导航回工作区的根， <code class="docutils literal notranslate"><span class="pre">dev_ws</span></code> ，并构建您的包。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8057">[待校准&#64;8057]</a></p>
+<h4>5.4构建和运行 <a class="reference external" href="http://localhost:3000/#/home?msgid=8071">[待校准&#64;8071]</a><a class="headerlink" href="#id6" title="永久链接至标题"></a></h4>
+<p>导航回工作区的根， <code class="docutils literal notranslate"><span class="pre">dev_ws</span></code> ，并构建您的包。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8057">[待校准&#64;8057]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-6-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-6-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-6-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-6-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-6-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-6-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-6-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-6-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">colcon build --packages-select bag_recorder_nodes</span>
 </pre></div>
@@ -871,7 +871,7 @@
 </pre></div>
 </div>
 </div></div>
-<p>打开终端，导航到 <code class="docutils literal notranslate"><span class="pre">dev_ws</span></code> ，然后源文件安装文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8072">[待校准&#64;8072]</a></p>
+<p>打开终端，导航到 <code class="docutils literal notranslate"><span class="pre">dev_ws</span></code> ，然后源文件安装文件。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8072">[待校准&#64;8072]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-7-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-7-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-7-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-7-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-7-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-7-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-7-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-7-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">source install/setup.bash</span>
 </pre></div>
@@ -883,7 +883,7 @@
 </pre></div>
 </div>
 </div></div>
-<p>为包创建一个目录。此目录将包含构成单个包的所有文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8036">[待校准&#64;8036]</a></p>
+<p>为包创建一个目录。此目录将包含构成单个包的所有文件。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8036">[待校准&#64;8036]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-8-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-8-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-8-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-8-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-8-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-8-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-8-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-8-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">mkdir big_synthetic_bag</span>
 </pre></div>
@@ -895,27 +895,27 @@
 </pre></div>
 </div>
 </div></div>
-<p>(如果 <code class="docutils literal notranslate"><span class="pre">big_synthetic_bag</span></code> 目录已经存在，您必须先删除它，然后再重新创建它。) <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8073">[待校准&#64;8073]</a></p>
-<p>现在运行可执行文件: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8074">[待校准&#64;8074]</a></p>
+<p>(如果 <code class="docutils literal notranslate"><span class="pre">big_synthetic_bag</span></code> 目录已经存在，您必须先删除它，然后再重新创建它。) <a class="reference external" href="http://localhost:3000/#/home?msgid=8073">[待校准&#64;8073]</a></p>
+<p>现在运行可执行文件: <a class="reference external" href="http://localhost:3000/#/home?msgid=8074">[待校准&#64;8074]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run bag_recorder_nodes data_generator_executable</span>
 </pre></div>
 </div>
-<p>请注意，可执行文件运行和完成非常快。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8075">[待校准&#64;8075]</a></p>
-<p>现在回放创建的包。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8076">[待校准&#64;8076]</a></p>
+<p>请注意，可执行文件运行和完成非常快。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8075">[待校准&#64;8075]</a></p>
+<p>现在回放创建的包。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8076">[待校准&#64;8076]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 bag play big_synthetic_bag</span>
 </pre></div>
 </div>
-<p>打开第二个终端，回应 <code class="docutils literal notranslate"><span class="pre">/synthetic</span></code> 话题。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8060">[待校准&#64;8060]</a></p>
+<p>打开第二个终端，回应 <code class="docutils literal notranslate"><span class="pre">/synthetic</span></code> 话题。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8060">[待校准&#64;8060]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 topic echo /synthetic</span>
 </pre></div>
 </div>
-<p>您将看到生成并存储在袋中的数据以每秒一条消息的速度打印到控制台。即使袋子生成得很快，它仍然会按照时间戳显示的速度回放。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8077">[待校准&#64;8077]</a></p>
+<p>您将看到生成并存储在袋中的数据以每秒一条消息的速度打印到控制台。即使袋子生成得很快，它仍然会按照时间戳显示的速度回放。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8077">[待校准&#64;8077]</a></p>
 </div>
 </div>
 </div>
 <div class="section" id="summary">
-<h2>总结 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6747">[待校准&#64;6747]</a><a class="headerlink" href="#summary" title="永久链接至标题"></a></h2>
-<p>您创建了一个节点，将它接收到的关于一个话题的数据记录到一个袋子中。您测试了使用节点记录一个包，并通过回放包验证了数据记录。然后，您继续创建一个节点和一个可执行文件，以生成合成数据并将其存储在袋子中。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8078">[待校准&#64;8078]</a></p>
+<h2>总结 <a class="reference external" href="http://localhost:3000/#/home?msgid=6747">[待校准&#64;6747]</a><a class="headerlink" href="#summary" title="永久链接至标题"></a></h2>
+<p>您创建了一个节点，将它接收到的关于一个话题的数据记录到一个袋子中。您测试了使用节点记录一个包，并通过回放包验证了数据记录。然后，您继续创建一个节点和一个可执行文件，以生成合成数据并将其存储在袋子中。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8078">[待校准&#64;8078]</a></p>
 </div>
 </div>
 

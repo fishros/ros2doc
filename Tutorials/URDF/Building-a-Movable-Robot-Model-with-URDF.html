@@ -248,7 +248,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../Related-Projects/Nvidia-ROS2-Projects.html">[需手动修复的语法]NVIDIAROS 2项目 [待校准&#64;6668]</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../Glossary.html">相关术语 `[小鱼&#64;1] http://dev.ros2.fishros.com/calibpage/#/home?msgid=1&gt;`_</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Glossary.html">术语表</a></li>
 </ul>
 
         </div>
@@ -280,14 +280,14 @@
 
 
   <div class="section" id="building-a-movable-robot-model-with-urdf">
-<span id="moveableurdf"></span><h1>用URDF建立可移动机器人模型 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8974">[待校准&#64;8974]</a><a class="headerlink" href="#building-a-movable-robot-model-with-urdf" title="永久链接至标题"></a></h1>
-<p>Goal目标: Learn学习如何在URDF中定义活动关节 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8975">[待校准&#64;8975]</a></p>
-<p>Tutorial教程级别: Beginner初学者 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7088">[待校准&#64;7088]</a></p>
-<p>在本教程中，我们将修改我们在 <a class="reference internal" href="Building-a-Visual-Robot-Model-with-URDF-from-Scratch.html"><span class="doc">previous tutorial</span></a> 中制作的R2D2模型，使其具有可移动的接头。在之前的模型中，所有的关节都是固定的。现在我们将探索其他三种重要的关节类型: 连续关节、旋转关节和棱柱关节。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8976">[待校准&#64;8976]</a></p>
-<p>在继续之前，请确保已安装所有先决条件。有关需要什么的信息，请参阅 <a class="reference internal" href="Building-a-Visual-Robot-Model-with-URDF-from-Scratch.html"><span class="doc">previous tutorial</span></a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8977">[待校准&#64;8977]</a></p>
-<p>同样，本教程中提到的所有机器人模型都可以在 <a class="reference external" href="https://index.ros.org/p/urdf_tutorial">urdf_tutorial</a> 包中找到。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8978">[待校准&#64;8978]</a></p>
+<span id="moveableurdf"></span><h1>用URDF建立可移动机器人模型 <a class="reference external" href="http://localhost:3000/#/home?msgid=8974">[待校准&#64;8974]</a><a class="headerlink" href="#building-a-movable-robot-model-with-urdf" title="永久链接至标题"></a></h1>
+<p>Goal目标: Learn学习如何在URDF中定义活动关节 <a class="reference external" href="http://localhost:3000/#/home?msgid=8975">[待校准&#64;8975]</a></p>
+<p>Tutorial教程级别: Beginner初学者 <a class="reference external" href="http://localhost:3000/#/home?msgid=7088">[待校准&#64;7088]</a></p>
+<p>在本教程中，我们将修改我们在 <a class="reference internal" href="Building-a-Visual-Robot-Model-with-URDF-from-Scratch.html"><span class="doc">previous tutorial</span></a> 中制作的R2D2模型，使其具有可移动的接头。在之前的模型中，所有的关节都是固定的。现在我们将探索其他三种重要的关节类型: 连续关节、旋转关节和棱柱关节。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8976">[待校准&#64;8976]</a></p>
+<p>在继续之前，请确保已安装所有先决条件。有关需要什么的信息，请参阅 <a class="reference internal" href="Building-a-Visual-Robot-Model-with-URDF-from-Scratch.html"><span class="doc">previous tutorial</span></a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8977">[待校准&#64;8977]</a></p>
+<p>同样，本教程中提到的所有机器人模型都可以在 <a class="reference external" href="https://index.ros.org/p/urdf_tutorial">urdf_tutorial</a> 包中找到。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8978">[待校准&#64;8978]</a></p>
 <div class="contents local topic" id="contents">
-<p class="topic-title">内容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6715">[待校准&#64;6715]</a></p>
+<p class="topic-title">内容 <a class="reference external" href="http://localhost:3000/#/home?msgid=6715">[待校准&#64;6715]</a></p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#the-head" id="id1">头 [待校准&#64;8983]</a></p></li>
 <li><p><a class="reference internal" href="#the-gripper" id="id2">抓爪 [待校准&#64;8986]</a></p></li>
@@ -297,15 +297,15 @@
 <li><p><a class="reference internal" href="#next-steps" id="id6">下一步 [待校准&#64;6749]</a></p></li>
 </ul>
 </div>
-<p>带有柔性接头的 <a class="reference external" href="https://github.com/ros/urdf_tutorial/blob/ros2/urdf/06-flexible.urdf">Here is the new urdf</a> 。您可以将它与以前的版本进行比较，看看所有已经改变的东西，但是我们将只关注三个示例关节。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8979">[待校准&#64;8979]</a></p>
-<p>要可视化和控制此模型，请运行与上一教程相同的命令: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8980">[待校准&#64;8980]</a></p>
+<p>带有柔性接头的 <a class="reference external" href="https://github.com/ros/urdf_tutorial/blob/ros2/urdf/06-flexible.urdf">Here is the new urdf</a> 。您可以将它与以前的版本进行比较，看看所有已经改变的东西，但是我们将只关注三个示例关节。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8979">[待校准&#64;8979]</a></p>
+<p>要可视化和控制此模型，请运行与上一教程相同的命令: <a class="reference external" href="http://localhost:3000/#/home?msgid=8980">[待校准&#64;8980]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 launch urdf_tutorial display.launch.py model:=urdf/06-flexible.urdf</span>
 </pre></div>
 </div>
-<p>但是，现在这也将弹出一个GUI，允许您控制所有非固定关节的值。玩一些模型，看看它是如何移动的。然后，我们可以看看我们是如何做到这一点的。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8981">[待校准&#64;8981]</a></p>
-<a class="reference internal image-reference" href="https://raw.githubusercontent.com/ros/urdf_tutorial/ros2/images/flexible.png"><img alt="柔性模型截图 `[待校准&#64;8982] &lt;http://dev.ros2.fishros.com/calibpage/#/home?msgid=8982&gt;`_ " src="https://raw.githubusercontent.com/ros/urdf_tutorial/ros2/images/flexible.png" style="width: 800px;" /></a>
+<p>但是，现在这也将弹出一个GUI，允许您控制所有非固定关节的值。玩一些模型，看看它是如何移动的。然后，我们可以看看我们是如何做到这一点的。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8981">[待校准&#64;8981]</a></p>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/ros/urdf_tutorial/ros2/images/flexible.png"><img alt="柔性模型截图 `[待校准&#64;8982] &lt;http://localhost:3000/#/home?msgid=8982&gt;`_ " src="https://raw.githubusercontent.com/ros/urdf_tutorial/ros2/images/flexible.png" style="width: 800px;" /></a>
 <div class="section" id="the-head">
-<h2>头 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8983">[待校准&#64;8983]</a><a class="headerlink" href="#the-head" title="永久链接至标题"></a></h2>
+<h2>头 <a class="reference external" href="http://localhost:3000/#/home?msgid=8983">[待校准&#64;8983]</a><a class="headerlink" href="#the-head" title="永久链接至标题"></a></h2>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;joint</span> <span class="na">name=</span><span class="s">&quot;head_swivel&quot;</span> <span class="na">type=</span><span class="s">&quot;continuous&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;parent</span> <span class="na">link=</span><span class="s">&quot;base_link&quot;</span><span class="nt">/&gt;</span>
   <span class="nt">&lt;child</span> <span class="na">link=</span><span class="s">&quot;head&quot;</span><span class="nt">/&gt;</span>
@@ -314,11 +314,11 @@
 <span class="nt">&lt;/joint&gt;</span>
 </pre></div>
 </div>
-<p>身体和头部之间的连接是一个连续的关节，这意味着它可以从负无穷大到正无穷大的任何角度。车轮也是这样建模的，因此它们可以永远向两个方向滚动。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8984">[待校准&#64;8984]</a></p>
-<p>我们必须添加的唯一附加信息是旋转轴，此处由xyz三元组指定，它指定了头部将围绕其旋转的矢量。因为我们希望它绕过z轴，所以我们指定矢量  &quot;0 0 1&quot; 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8985">[待校准&#64;8985]</a></p>
+<p>身体和头部之间的连接是一个连续的关节，这意味着它可以从负无穷大到正无穷大的任何角度。车轮也是这样建模的，因此它们可以永远向两个方向滚动。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8984">[待校准&#64;8984]</a></p>
+<p>我们必须添加的唯一附加信息是旋转轴，此处由xyz三元组指定，它指定了头部将围绕其旋转的矢量。因为我们希望它绕过z轴，所以我们指定矢量  &quot;0 0 1&quot; 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8985">[待校准&#64;8985]</a></p>
 </div>
 <div class="section" id="the-gripper">
-<h2>抓爪 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8986">[待校准&#64;8986]</a><a class="headerlink" href="#the-gripper" title="永久链接至标题"></a></h2>
+<h2>抓爪 <a class="reference external" href="http://localhost:3000/#/home?msgid=8986">[待校准&#64;8986]</a><a class="headerlink" href="#the-gripper" title="永久链接至标题"></a></h2>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;joint</span> <span class="na">name=</span><span class="s">&quot;left_gripper_joint&quot;</span> <span class="na">type=</span><span class="s">&quot;revolute&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;axis</span> <span class="na">xyz=</span><span class="s">&quot;0 0 1&quot;</span><span class="nt">/&gt;</span>
   <span class="nt">&lt;limit</span> <span class="na">effort=</span><span class="s">&quot;1000.0&quot;</span> <span class="na">lower=</span><span class="s">&quot;0.0&quot;</span> <span class="na">upper=</span><span class="s">&quot;0.548&quot;</span> <span class="na">velocity=</span><span class="s">&quot;0.5&quot;</span><span class="nt">/&gt;</span>
@@ -328,10 +328,10 @@
 <span class="nt">&lt;/joint&gt;</span>
 </pre></div>
 </div>
-<p>左右夹持器接头都被建模为旋转接头。这意味着它们以与连续关节相同的方式旋转，但是它们有严格的限制。因此，我们必须包括限制标签，指定关节的上限和下限 (以弧度为单位)。我们还必须为这个关节指定一个最大速度和努力，但是实际值对我们这里的目的并不重要。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8987">[待校准&#64;8987]</a></p>
+<p>左右夹持器接头都被建模为旋转接头。这意味着它们以与连续关节相同的方式旋转，但是它们有严格的限制。因此，我们必须包括限制标签，指定关节的上限和下限 (以弧度为单位)。我们还必须为这个关节指定一个最大速度和努力，但是实际值对我们这里的目的并不重要。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8987">[待校准&#64;8987]</a></p>
 </div>
 <div class="section" id="the-gripper-arm">
-<h2>抓臂 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8988">[待校准&#64;8988]</a><a class="headerlink" href="#the-gripper-arm" title="永久链接至标题"></a></h2>
+<h2>抓臂 <a class="reference external" href="http://localhost:3000/#/home?msgid=8988">[待校准&#64;8988]</a><a class="headerlink" href="#the-gripper-arm" title="永久链接至标题"></a></h2>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;joint</span> <span class="na">name=</span><span class="s">&quot;gripper_extension&quot;</span> <span class="na">type=</span><span class="s">&quot;prismatic&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;parent</span> <span class="na">link=</span><span class="s">&quot;base_link&quot;</span><span class="nt">/&gt;</span>
   <span class="nt">&lt;child</span> <span class="na">link=</span><span class="s">&quot;gripper_pole&quot;</span><span class="nt">/&gt;</span>
@@ -340,20 +340,20 @@
 <span class="nt">&lt;/joint&gt;</span>
 </pre></div>
 </div>
-<p>夹持器臂是一种不同的接头，即棱柱形接头。这意味着它沿着轴移动，而不是围绕它。这种平移运动使得我们的机器人模型能够延伸和缩回它的抓臂。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8989">[待校准&#64;8989]</a></p>
-<p>棱柱形臂的极限以与旋转接头相同的方式规定，除了单位是米而不是弧度。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8990">[待校准&#64;8990]</a></p>
+<p>夹持器臂是一种不同的接头，即棱柱形接头。这意味着它沿着轴移动，而不是围绕它。这种平移运动使得我们的机器人模型能够延伸和缩回它的抓臂。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8989">[待校准&#64;8989]</a></p>
+<p>棱柱形臂的极限以与旋转接头相同的方式规定，除了单位是米而不是弧度。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8990">[待校准&#64;8990]</a></p>
 </div>
 <div class="section" id="other-types-of-joints">
-<h2>其他类型的接头 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8991">[待校准&#64;8991]</a><a class="headerlink" href="#other-types-of-joints" title="永久链接至标题"></a></h2>
-<p>还有另外两种关节在太空中四处移动。而棱柱形关节只能沿着一个维度移动，而平面关节可以在一个平面或两个维度上移动。此外，浮动接头不受约束，并且可以在三个维度中的任何一个上移动。这些关节不能仅由一个数字指定，因此不包括在本教程中。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8992">[待校准&#64;8992]</a></p>
+<h2>其他类型的接头 <a class="reference external" href="http://localhost:3000/#/home?msgid=8991">[待校准&#64;8991]</a><a class="headerlink" href="#other-types-of-joints" title="永久链接至标题"></a></h2>
+<p>还有另外两种关节在太空中四处移动。而棱柱形关节只能沿着一个维度移动，而平面关节可以在一个平面或两个维度上移动。此外，浮动接头不受约束，并且可以在三个维度中的任何一个上移动。这些关节不能仅由一个数字指定，因此不包括在本教程中。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8992">[待校准&#64;8992]</a></p>
 </div>
 <div class="section" id="specifying-the-pose">
-<h2>指定姿势 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8993">[待校准&#64;8993]</a><a class="headerlink" href="#specifying-the-pose" title="永久链接至标题"></a></h2>
-<p>当你在图形用户界面中移动滑块时，模型在Rviz中移动。这是怎么做到的？首先， <a class="reference external" href="https://index.ros.org/p/joint_state_publisher_gui">GUI</a> 解析URDF并找到所有非固定关节及其极限。然后，它使用滑块的值发布 <a class="reference external" href="https://github.com/ros2/common_interfaces/blob/eloquent/sensor_msgs/msg/JointState.msg">sensor_msgs/msg/JointState</a> 乙消息。然后这些被 <a class="reference external" href="https://index.ros.org/p/robot_state_publisher">robot_state_publisher</a> 用来计算不同部分之间的所有变换。然后，生成的变换树用于显示Rviz中的所有形状。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8994">[待校准&#64;8994]</a></p>
+<h2>指定姿势 <a class="reference external" href="http://localhost:3000/#/home?msgid=8993">[待校准&#64;8993]</a><a class="headerlink" href="#specifying-the-pose" title="永久链接至标题"></a></h2>
+<p>当你在图形用户界面中移动滑块时，模型在Rviz中移动。这是怎么做到的？首先， <a class="reference external" href="https://index.ros.org/p/joint_state_publisher_gui">GUI</a> 解析URDF并找到所有非固定关节及其极限。然后，它使用滑块的值发布 <a class="reference external" href="https://github.com/ros2/common_interfaces/blob/eloquent/sensor_msgs/msg/JointState.msg">sensor_msgs/msg/JointState</a> 乙消息。然后这些被 <a class="reference external" href="https://index.ros.org/p/robot_state_publisher">robot_state_publisher</a> 用来计算不同部分之间的所有变换。然后，生成的变换树用于显示Rviz中的所有形状。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8994">[待校准&#64;8994]</a></p>
 </div>
 <div class="section" id="next-steps">
-<h2>下一步 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6749">[待校准&#64;6749]</a><a class="headerlink" href="#next-steps" title="永久链接至标题"></a></h2>
-<p>既然你有了一个明显的功能模型，你就可以 <a class="reference internal" href="Adding-Physical-and-Collision-Properties-to-a-URDF-Model.html"><span class="doc">add in some physical properties</span></a>, or <a class="reference internal" href="Using-Xacro-to-Clean-Up-a-URDF-File.html"><span class="doc">start using xacro to simplify your code</span></a> 了。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8995">[待校准&#64;8995]</a></p>
+<h2>下一步 <a class="reference external" href="http://localhost:3000/#/home?msgid=6749">[待校准&#64;6749]</a><a class="headerlink" href="#next-steps" title="永久链接至标题"></a></h2>
+<p>既然你有了一个明显的功能模型，你就可以 <a class="reference internal" href="Adding-Physical-and-Collision-Properties-to-a-URDF-Model.html"><span class="doc">add in some physical properties</span></a>, or <a class="reference internal" href="Using-Xacro-to-Clean-Up-a-URDF-File.html"><span class="doc">start using xacro to simplify your code</span></a> 了。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8995">[待校准&#64;8995]</a></p>
 </div>
 </div>
 

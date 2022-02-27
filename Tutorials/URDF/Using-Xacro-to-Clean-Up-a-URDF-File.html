@@ -248,7 +248,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../Related-Projects/Nvidia-ROS2-Projects.html">[需手动修复的语法]NVIDIAROS 2项目 [待校准&#64;6668]</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../Glossary.html">相关术语 `[小鱼&#64;1] http://dev.ros2.fishros.com/calibpage/#/home?msgid=1&gt;`_</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Glossary.html">术语表</a></li>
 </ul>
 
         </div>
@@ -280,20 +280,20 @@
 
 
   <div class="section" id="using-xacro-to-clean-up-a-urdf-file">
-<span id="urdfxacro"></span><h1>使用Xacro清理URDF文件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9075">[待校准&#64;9075]</a><a class="headerlink" href="#using-xacro-to-clean-up-a-urdf-file" title="永久链接至标题"></a></h1>
-<p>Goal目标: Learn学习一些技巧，使用Xacro减少URDF文件中的代码量 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9076">[待校准&#64;9076]</a></p>
-<p>Tutorial教程级别: Beginner初学者 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7088">[待校准&#64;7088]</a></p>
-<p>到目前为止，如果你在家里用自己的机器人设计来完成所有这些步骤，你可能会厌倦做各种各样的数学运算来获得非常简单的机器人描述来正确解析。幸运的是，你可以使用 <a class="reference external" href="https://index.ros.org/p/xacro">xacro</a> 包装让你的生活更简单。它做了三件非常有帮助的事情。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9077">[待校准&#64;9077]</a></p>
+<span id="urdfxacro"></span><h1>使用Xacro清理URDF文件 <a class="reference external" href="http://localhost:3000/#/home?msgid=9075">[待校准&#64;9075]</a><a class="headerlink" href="#using-xacro-to-clean-up-a-urdf-file" title="永久链接至标题"></a></h1>
+<p>Goal目标: Learn学习一些技巧，使用Xacro减少URDF文件中的代码量 <a class="reference external" href="http://localhost:3000/#/home?msgid=9076">[待校准&#64;9076]</a></p>
+<p>Tutorial教程级别: Beginner初学者 <a class="reference external" href="http://localhost:3000/#/home?msgid=7088">[待校准&#64;7088]</a></p>
+<p>到目前为止，如果你在家里用自己的机器人设计来完成所有这些步骤，你可能会厌倦做各种各样的数学运算来获得非常简单的机器人描述来正确解析。幸运的是，你可以使用 <a class="reference external" href="https://index.ros.org/p/xacro">xacro</a> 包装让你的生活更简单。它做了三件非常有帮助的事情。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9077">[待校准&#64;9077]</a></p>
 <blockquote>
 <div><ul class="simple">
-<li><p>常数 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9078">[待校准&#64;9078]</a></p></li>
-<li><p>简单数学 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9079">[待校准&#64;9079]</a></p></li>
-<li><p>宏 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9080">[待校准&#64;9080]</a></p></li>
+<li><p>常数 <a class="reference external" href="http://localhost:3000/#/home?msgid=9078">[待校准&#64;9078]</a></p></li>
+<li><p>简单数学 <a class="reference external" href="http://localhost:3000/#/home?msgid=9079">[待校准&#64;9079]</a></p></li>
+<li><p>宏 <a class="reference external" href="http://localhost:3000/#/home?msgid=9080">[待校准&#64;9080]</a></p></li>
 </ul>
 </div></blockquote>
-<p>在本教程中，我们将介绍所有这些快捷方式，以帮助减小URDF文件的整体大小并使其更易于阅读和维护。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9081">[待校准&#64;9081]</a></p>
+<p>在本教程中，我们将介绍所有这些快捷方式，以帮助减小URDF文件的整体大小并使其更易于阅读和维护。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9081">[待校准&#64;9081]</a></p>
 <div class="contents local topic" id="contents">
-<p class="topic-title">内容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6715">[待校准&#64;6715]</a></p>
+<p class="topic-title">内容 <a class="reference external" href="http://localhost:3000/#/home?msgid=6715">[待校准&#64;6715]</a></p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#using-xacro" id="id2">使用Xacro [待校准&#64;9082]</a></p></li>
 <li><p><a class="reference internal" href="#constants" id="id3">常数 [待校准&#64;9078]</a></p></li>
@@ -312,12 +312,12 @@
 </ul>
 </div>
 <div class="section" id="using-xacro">
-<h2>使用Xacro <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9082">[待校准&#64;9082]</a><a class="headerlink" href="#using-xacro" title="永久链接至标题"></a></h2>
-<p>顾名思义， <a class="reference external" href="https://index.ros.org/p/xacro">xacro</a> 是XML的宏语言。xacro程序运行所有宏并输出结果。典型用法如下所示: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9083">[待校准&#64;9083]</a></p>
+<h2>使用Xacro <a class="reference external" href="http://localhost:3000/#/home?msgid=9082">[待校准&#64;9082]</a><a class="headerlink" href="#using-xacro" title="永久链接至标题"></a></h2>
+<p>顾名思义， <a class="reference external" href="https://index.ros.org/p/xacro">xacro</a> 是XML的宏语言。xacro程序运行所有宏并输出结果。典型用法如下所示: <a class="reference external" href="http://localhost:3000/#/home?msgid=9083">[待校准&#64;9083]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">xacro model.xacro &gt; model.urdf</span>
 </pre></div>
 </div>
-<p>您还可以自动调用y在launch文件中生成urdf。这很方便，因为它保持最新，不会占用硬盘空间。但是，生成它确实需要时间，因此请注意，您的launch文件可能需要更长的时间才能启动。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9084">[待校准&#64;9084]</a></p>
+<p>您还可以自动调用y在launch文件中生成urdf。这很方便，因为它保持最新，不会占用硬盘空间。但是，生成它确实需要时间，因此请注意，您的launch文件可能需要更长的时间才能启动。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9084">[待校准&#64;9084]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">path_to_urdf</span> <span class="o">=</span> <span class="n">get_package_share_path</span><span class="p">(</span><span class="s1">&#39;pr2_description&#39;</span><span class="p">)</span> <span class="o">/</span> <span class="s1">&#39;robots&#39;</span> <span class="o">/</span> <span class="s1">&#39;pr2.urdf.xacro&#39;</span>
 <span class="n">robot_state_publisher_node</span> <span class="o">=</span> <span class="n">launch_ros</span><span class="o">.</span><span class="n">actions</span><span class="o">.</span><span class="n">Node</span><span class="p">(</span>
     <span class="n">package</span><span class="o">=</span><span class="s1">&#39;robot_state_publisher&#39;</span><span class="p">,</span>
@@ -330,15 +330,15 @@
 <span class="p">)</span>
 </pre></div>
 </div>
-<p>在URDF文件的顶部，必须指定命名空间，以便文件正确解析。例如，这是有效xacro文件的前两行: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9085">[待校准&#64;9085]</a></p>
+<p>在URDF文件的顶部，必须指定命名空间，以便文件正确解析。例如，这是有效xacro文件的前两行: <a class="reference external" href="http://localhost:3000/#/home?msgid=9085">[待校准&#64;9085]</a></p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot;?&gt;</span>
 <span class="nt">&lt;robot</span> <span class="na">xmlns:xacro=</span><span class="s">&quot;http://www.ros.org/wiki/xacro&quot;</span> <span class="na">name=</span><span class="s">&quot;firefighter&quot;</span><span class="nt">&gt;</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="constants">
-<h2>常数 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9078">[待校准&#64;9078]</a><a class="headerlink" href="#constants" title="永久链接至标题"></a></h2>
-<p>让我们快速看一下R2D2中的base_link。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9086">[待校准&#64;9086]</a></p>
+<h2>常数 <a class="reference external" href="http://localhost:3000/#/home?msgid=9078">[待校准&#64;9078]</a><a class="headerlink" href="#constants" title="永久链接至标题"></a></h2>
+<p>让我们快速看一下R2D2中的base_link。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9086">[待校准&#64;9086]</a></p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;link</span> <span class="na">name=</span><span class="s">&quot;base_link&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;visual&gt;</span>
     <span class="nt">&lt;geometry&gt;</span>
@@ -354,8 +354,8 @@
 <span class="nt">&lt;/link&gt;</span>
 </pre></div>
 </div>
-<p>这里的信息有点多余。我们两次指定圆柱体的长度和半径。更糟糕的是，如果我们想改变这一点，我们需要在两个不同的地方这样做。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9087">[待校准&#64;9087]</a></p>
-<p>幸运的是，xacro允许您指定充当常量的属性。相反，我们可以编写上面的代码。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9088">[待校准&#64;9088]</a></p>
+<p>这里的信息有点多余。我们两次指定圆柱体的长度和半径。更糟糕的是，如果我们想改变这一点，我们需要在两个不同的地方这样做。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9087">[待校准&#64;9087]</a></p>
+<p>幸运的是，xacro允许您指定充当常量的属性。相反，我们可以编写上面的代码。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9088">[待校准&#64;9088]</a></p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;xacro:property</span> <span class="na">name=</span><span class="s">&quot;width&quot;</span> <span class="na">value=</span><span class="s">&quot;0.2&quot;</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;xacro:property</span> <span class="na">name=</span><span class="s">&quot;bodylen&quot;</span> <span class="na">value=</span><span class="s">&quot;0.6&quot;</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;link</span> <span class="na">name=</span><span class="s">&quot;base_link&quot;</span><span class="nt">&gt;</span>
@@ -374,57 +374,57 @@
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>前两行指定了这两个值。它们几乎可以在任何地方 (假设有效的XML) 、任何级别、在它们被使用之前或之后被定义。通常他们在顶端。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9089">[待校准&#64;9089]</a></p></li>
-<li><p>我们使用美元符号和花括号来表示值，而不是在几何元素中指定实际半径。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9090">[待校准&#64;9090]</a></p></li>
-<li><p>该代码将生成与上面所示相同的代码。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9091">[待校准&#64;9091]</a></p></li>
+<li><p>前两行指定了这两个值。它们几乎可以在任何地方 (假设有效的XML) 、任何级别、在它们被使用之前或之后被定义。通常他们在顶端。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9089">[待校准&#64;9089]</a></p></li>
+<li><p>我们使用美元符号和花括号来表示值，而不是在几何元素中指定实际半径。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9090">[待校准&#64;9090]</a></p></li>
+<li><p>该代码将生成与上面所示相同的代码。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9091">[待校准&#64;9091]</a></p></li>
 </ul>
-<p>然后使用 ${} 构造的内容的值替换 ${}。这意味着您可以将其与属性中的其他文本组合。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9092">[待校准&#64;9092]</a></p>
+<p>然后使用 ${} 构造的内容的值替换 ${}。这意味着您可以将其与属性中的其他文本组合。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9092">[待校准&#64;9092]</a></p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;xacro:property</span> <span class="na">name=</span><span class="s">”robotname”</span> <span class="na">value=</span><span class="s">”marvin”</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;link</span> <span class="na">name=</span><span class="s">”${robotname}s_leg”</span> <span class="nt">/&gt;</span>
 </pre></div>
 </div>
-<p>这将产生 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9093">[待校准&#64;9093]</a></p>
+<p>这将产生 <a class="reference external" href="http://localhost:3000/#/home?msgid=9093">[待校准&#64;9093]</a></p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;link</span> <span class="na">name=</span><span class="s">”marvins_leg”</span> <span class="nt">/&gt;</span>
 </pre></div>
 </div>
-<p>然而，${} 中的内容不一定只是一个属性，这将我们带到了下一个要点... <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9094">[待校准&#64;9094]</a></p>
+<p>然而，${} 中的内容不一定只是一个属性，这将我们带到了下一个要点... <a class="reference external" href="http://localhost:3000/#/home?msgid=9094">[待校准&#64;9094]</a></p>
 </div>
 <div class="section" id="math">
-<h2>数学 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9095">[待校准&#64;9095]</a><a class="headerlink" href="#math" title="永久链接至标题"></a></h2>
-<p>您可以使用四个基本操作 (+，-，<a href="#id1"><span class="problematic" id="id2">*</span></a>，/) 、一元减号和括号在 ${} 构造中构建任意复杂表达式。示例: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9096">[待校准&#64;9096]</a></p>
+<h2>数学 <a class="reference external" href="http://localhost:3000/#/home?msgid=9095">[待校准&#64;9095]</a><a class="headerlink" href="#math" title="永久链接至标题"></a></h2>
+<p>您可以使用四个基本操作 (+，-，<a href="#id1"><span class="problematic" id="id2">*</span></a>，/) 、一元减号和括号在 ${} 构造中构建任意复杂表达式。示例: <a class="reference external" href="http://localhost:3000/#/home?msgid=9096">[待校准&#64;9096]</a></p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;cylinder</span> <span class="na">radius=</span><span class="s">&quot;${wheeldiam/2}&quot;</span> <span class="na">length=</span><span class="s">&quot;0.1&quot;</span><span class="nt">/&gt;</span>
 <span class="nt">&lt;origin</span> <span class="na">xyz=</span><span class="s">&quot;${reflect*(width+.02)} 0 0.25&quot;</span> <span class="nt">/&gt;</span>
 </pre></div>
 </div>
-<p>你也可以使用更多的基本数学运算，如 <code class="docutils literal notranslate"><span class="pre">sin</span></code> 和 <code class="docutils literal notranslate"><span class="pre">cos</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9097">[待校准&#64;9097]</a></p>
+<p>你也可以使用更多的基本数学运算，如 <code class="docutils literal notranslate"><span class="pre">sin</span></code> 和 <code class="docutils literal notranslate"><span class="pre">cos</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9097">[待校准&#64;9097]</a></p>
 </div>
 <div class="section" id="macros">
-<h2>宏 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9080">[待校准&#64;9080]</a><a class="headerlink" href="#macros" title="永久链接至标题"></a></h2>
-<p>这是xacro包最大、最有用的组件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9098">[待校准&#64;9098]</a></p>
+<h2>宏 <a class="reference external" href="http://localhost:3000/#/home?msgid=9080">[待校准&#64;9080]</a><a class="headerlink" href="#macros" title="永久链接至标题"></a></h2>
+<p>这是xacro包最大、最有用的组件。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9098">[待校准&#64;9098]</a></p>
 <div class="section" id="simple-macro">
-<h3>简单宏 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9099">[待校准&#64;9099]</a><a class="headerlink" href="#simple-macro" title="永久链接至标题"></a></h3>
-<p>让我们来看看一个简单的无用宏。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9100">[待校准&#64;9100]</a></p>
+<h3>简单宏 <a class="reference external" href="http://localhost:3000/#/home?msgid=9099">[待校准&#64;9099]</a><a class="headerlink" href="#simple-macro" title="永久链接至标题"></a></h3>
+<p>让我们来看看一个简单的无用宏。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9100">[待校准&#64;9100]</a></p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;xacro:macro</span> <span class="na">name=</span><span class="s">&quot;default_origin&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;origin</span> <span class="na">xyz=</span><span class="s">&quot;0 0 0&quot;</span> <span class="na">rpy=</span><span class="s">&quot;0 0 0&quot;</span><span class="nt">/&gt;</span>
 <span class="nt">&lt;/xacro:macro&gt;</span>
 <span class="nt">&lt;xacro:default_origin</span> <span class="nt">/&gt;</span>
 </pre></div>
 </div>
-<p>(这是没有用的，因为如果未指定原点，则它具有与此相同的值。)此代码将生成以下内容。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9101">[待校准&#64;9101]</a></p>
+<p>(这是没有用的，因为如果未指定原点，则它具有与此相同的值。)此代码将生成以下内容。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9101">[待校准&#64;9101]</a></p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;origin</span> <span class="na">rpy=</span><span class="s">&quot;0 0 0&quot;</span> <span class="na">xyz=</span><span class="s">&quot;0 0 0&quot;</span><span class="nt">/&gt;</span>
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>该名称不是techni调用y必需元素，但您需要指定它才能使用它。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9102">[待校准&#64;9102]</a></p></li>
-<li><p>“&lt;xacro:$ NAME /&gt; `` is replaced with the contents of the `` xacro: macro” 标签的每个实例。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9103">[待校准&#64;9103]</a></p></li>
-<li><p>请注意，即使它不完全相同 (两个属性已切换顺序)，生成的XML也是等效的。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9104">[待校准&#64;9104]</a></p></li>
-<li><p>如果找不到具有指定名称的xacro，它将不会被扩展，也不会生成错误。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9105">[待校准&#64;9105]</a></p></li>
+<li><p>该名称不是techni调用y必需元素，但您需要指定它才能使用它。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9102">[待校准&#64;9102]</a></p></li>
+<li><p>“&lt;xacro:$ NAME /&gt; `` is replaced with the contents of the `` xacro: macro” 标签的每个实例。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9103">[待校准&#64;9103]</a></p></li>
+<li><p>请注意，即使它不完全相同 (两个属性已切换顺序)，生成的XML也是等效的。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9104">[待校准&#64;9104]</a></p></li>
+<li><p>如果找不到具有指定名称的xacro，它将不会被扩展，也不会生成错误。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9105">[待校准&#64;9105]</a></p></li>
 </ul>
 </div>
 <div class="section" id="parameterized-macro">
-<h3>参数化宏 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9106">[待校准&#64;9106]</a><a class="headerlink" href="#parameterized-macro" title="永久链接至标题"></a></h3>
-<p>您还可以参数化宏，使它们不会每次都生成相同的文本。当与数学功能相结合时，这甚至更加强大。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9107">[待校准&#64;9107]</a></p>
-<p>首先，让我们以R2D2中使用的简单宏为例。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9108">[待校准&#64;9108]</a></p>
+<h3>参数化宏 <a class="reference external" href="http://localhost:3000/#/home?msgid=9106">[待校准&#64;9106]</a><a class="headerlink" href="#parameterized-macro" title="永久链接至标题"></a></h3>
+<p>您还可以参数化宏，使它们不会每次都生成相同的文本。当与数学功能相结合时，这甚至更加强大。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9107">[待校准&#64;9107]</a></p>
+<p>首先，让我们以R2D2中使用的简单宏为例。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9108">[待校准&#64;9108]</a></p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;xacro:macro</span> <span class="na">name=</span><span class="s">&quot;default_inertial&quot;</span> <span class="na">params=</span><span class="s">&quot;mass&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;inertial&gt;</span>
             <span class="nt">&lt;mass</span> <span class="na">value=</span><span class="s">&quot;${mass}&quot;</span> <span class="nt">/&gt;</span>
@@ -435,12 +435,12 @@
 <span class="nt">&lt;/xacro:macro&gt;</span>
 </pre></div>
 </div>
-<p>这可以与代码一起使用 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9109">[待校准&#64;9109]</a></p>
+<p>这可以与代码一起使用 <a class="reference external" href="http://localhost:3000/#/home?msgid=9109">[待校准&#64;9109]</a></p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;xacro:default_inertial</span> <span class="na">mass=</span><span class="s">&quot;10&quot;</span><span class="nt">/&gt;</span>
 </pre></div>
 </div>
-<p>参数就像属性一样，您可以在表达式中使用它们 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9110">[待校准&#64;9110]</a></p>
-<p>您也可以使用整个块作为参数。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9111">[待校准&#64;9111]</a></p>
+<p>参数就像属性一样，您可以在表达式中使用它们 <a class="reference external" href="http://localhost:3000/#/home?msgid=9110">[待校准&#64;9110]</a></p>
+<p>您也可以使用整个块作为参数。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9111">[待校准&#64;9111]</a></p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;xacro:macro</span> <span class="na">name=</span><span class="s">&quot;blue_shape&quot;</span> <span class="na">params=</span><span class="s">&quot;name *shape&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;link</span> <span class="na">name=</span><span class="s">&quot;${name}&quot;</span><span class="nt">&gt;</span>
         <span class="nt">&lt;visual&gt;</span>
@@ -463,23 +463,23 @@
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>要指定块参数，请在其参数名称前包含星号。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9112">[待校准&#64;9112]</a></p></li>
-<li><p>可以使用insert_block命令插入块 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9113">[待校准&#64;9113]</a></p></li>
-<li><p>任意多次插入块。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9114">[待校准&#64;9114]</a></p></li>
+<li><p>要指定块参数，请在其参数名称前包含星号。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9112">[待校准&#64;9112]</a></p></li>
+<li><p>可以使用insert_block命令插入块 <a class="reference external" href="http://localhost:3000/#/home?msgid=9113">[待校准&#64;9113]</a></p></li>
+<li><p>任意多次插入块。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9114">[待校准&#64;9114]</a></p></li>
 </ul>
 </div>
 </div>
 <div class="section" id="practical-usage">
-<h2>实用 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9115">[待校准&#64;9115]</a><a class="headerlink" href="#practical-usage" title="永久链接至标题"></a></h2>
-<p>xacro语言在允许你做的事情上相当灵活。除了上面显示的默认惯性宏之外，这里还有一些在 <a class="reference external" href="https://github.com/ros/urdf_tutorial/blob/master/urdf/08-macroed.urdf.xacro">R2D2 model</a> 中使用xacro的有用方法。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9116">[待校准&#64;9116]</a></p>
-<p>要查看xacro文件生成的模型，请运行与前面教程相同的命令: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9117">[待校准&#64;9117]</a></p>
+<h2>实用 <a class="reference external" href="http://localhost:3000/#/home?msgid=9115">[待校准&#64;9115]</a><a class="headerlink" href="#practical-usage" title="永久链接至标题"></a></h2>
+<p>xacro语言在允许你做的事情上相当灵活。除了上面显示的默认惯性宏之外，这里还有一些在 <a class="reference external" href="https://github.com/ros/urdf_tutorial/blob/master/urdf/08-macroed.urdf.xacro">R2D2 model</a> 中使用xacro的有用方法。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9116">[待校准&#64;9116]</a></p>
+<p>要查看xacro文件生成的模型，请运行与前面教程相同的命令: <a class="reference external" href="http://localhost:3000/#/home?msgid=9117">[待校准&#64;9117]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 launch urdf_tutorial display.launch.py model:=urdf/08-macroed.urdf.xacro</span>
 </pre></div>
 </div>
-<p>(launch文件一直在运行xacro命令，但是由于没有要扩展的宏，所以没关系) <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9118">[待校准&#64;9118]</a></p>
+<p>(launch文件一直在运行xacro命令，但是由于没有要扩展的宏，所以没关系) <a class="reference external" href="http://localhost:3000/#/home?msgid=9118">[待校准&#64;9118]</a></p>
 <div class="section" id="leg-macro">
-<h3>腿部宏 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9119">[待校准&#64;9119]</a><a class="headerlink" href="#leg-macro" title="永久链接至标题"></a></h3>
-<p>通常，您希望在不同位置创建多个外观相似的对象。您可以使用宏和一些简单的数学来减少您必须编写的代码量，就像我们使用R2的两条腿一样。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9120">[待校准&#64;9120]</a></p>
+<h3>腿部宏 <a class="reference external" href="http://localhost:3000/#/home?msgid=9119">[待校准&#64;9119]</a><a class="headerlink" href="#leg-macro" title="永久链接至标题"></a></h3>
+<p>通常，您希望在不同位置创建多个外观相似的对象。您可以使用宏和一些简单的数学来减少您必须编写的代码量，就像我们使用R2的两条腿一样。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9120">[待校准&#64;9120]</a></p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;xacro:macro</span> <span class="na">name=</span><span class="s">&quot;leg&quot;</span> <span class="na">params=</span><span class="s">&quot;prefix reflect&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;link</span> <span class="na">name=</span><span class="s">&quot;${prefix}_leg&quot;</span><span class="nt">&gt;</span>
         <span class="nt">&lt;visual&gt;</span>
@@ -510,9 +510,9 @@
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>常见技巧1: 使用名称前缀获取两个类似名称的对象。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9121">[待校准&#64;9121]</a></p></li>
-<li><p>常见技巧2: 用数学计算联合起源。在你改变机器人大小的情况下，用一些数学来改变一个属性来计算关节偏移将会省去很多麻烦。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9122">[待校准&#64;9122]</a></p></li>
-<li><p>常见技巧3: 使用反射参数，并将其设置为1或-1。看看我们如何使用反射参数将腿放在底部 _ to _ $ {前缀} _ 腿原点的身体两侧。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9123">[待校准&#64;9123]</a></p></li>
+<li><p>常见技巧1: 使用名称前缀获取两个类似名称的对象。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9121">[待校准&#64;9121]</a></p></li>
+<li><p>常见技巧2: 用数学计算联合起源。在你改变机器人大小的情况下，用一些数学来改变一个属性来计算关节偏移将会省去很多麻烦。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9122">[待校准&#64;9122]</a></p></li>
+<li><p>常见技巧3: 使用反射参数，并将其设置为1或-1。看看我们如何使用反射参数将腿放在底部 _ to _ $ {前缀} _ 腿原点的身体两侧。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9123">[待校准&#64;9123]</a></p></li>
 </ul>
 </div>
 </div>

@@ -248,7 +248,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Related-Projects/Nvidia-ROS2-Projects.html">[需手动修复的语法]NVIDIAROS 2项目 [待校准&#64;6668]</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../Glossary.html">相关术语 `[小鱼&#64;1] http://dev.ros2.fishros.com/calibpage/#/home?msgid=1&gt;`_</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Glossary.html">术语表</a></li>
 </ul>
 
         </div>
@@ -279,14 +279,14 @@
 
 
   <div class="section" id="recording-and-playback-of-topic-data-with-rosbag-using-the-ros-1-bridge">
-<h1>使用ROS 1bridge用rosbag记录和回放话题数据 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8125">[待校准&#64;8125]</a><a class="headerlink" href="#recording-and-playback-of-topic-data-with-rosbag-using-the-ros-1-bridge" title="永久链接至标题"></a></h1>
-<p>本教程是 * 在ROS 1和ROS 2 * 例程之间的桥接通讯的后续，可以在其他 <a class="reference internal" href="../Tutorials.html"><span class="doc">demos</span></a>, 中找到，在下面假设您已经完成了该教程。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8126">[待校准&#64;8126]</a></p>
-<p>ros1 _ bridge可以从 <a class="reference internal" href="../Installation.html"><span class="doc">binary packages</span></a> or <a class="reference external" href="https://github.com/ros2/ros1_bridge/blob/foxy/README.md#building-the-bridge-from-source">built from source</a> 安装; 两者都适用于这些例子。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8127">[待校准&#64;8127]</a></p>
-<p>接下来是一系列附加示例，例如上述 * ROS 1与ROS 2 * 例程之间的桥接通讯末尾的示例。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8128">[待校准&#64;8128]</a></p>
+<h1>使用ROS 1bridge用rosbag记录和回放话题数据 <a class="reference external" href="http://localhost:3000/#/home?msgid=8125">[待校准&#64;8125]</a><a class="headerlink" href="#recording-and-playback-of-topic-data-with-rosbag-using-the-ros-1-bridge" title="永久链接至标题"></a></h1>
+<p>本教程是 * 在ROS 1和ROS 2 * 例程之间的桥接通讯的后续，可以在其他 <a class="reference internal" href="../Tutorials.html"><span class="doc">demos</span></a>, 中找到，在下面假设您已经完成了该教程。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8126">[待校准&#64;8126]</a></p>
+<p>ros1 _ bridge可以从 <a class="reference internal" href="../Installation.html"><span class="doc">binary packages</span></a> or <a class="reference external" href="https://github.com/ros2/ros1_bridge/blob/foxy/README.md#building-the-bridge-from-source">built from source</a> 安装; 两者都适用于这些例子。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8127">[待校准&#64;8127]</a></p>
+<p>接下来是一系列附加示例，例如上述 * ROS 1与ROS 2 * 例程之间的桥接通讯末尾的示例。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8128">[待校准&#64;8128]</a></p>
 <div class="section" id="recording-topic-data-with-rosbag-and-ros-1-bridge">
-<h2>用罗斯包和ROS 1桥记录话题数据 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8129">[待校准&#64;8129]</a><a class="headerlink" href="#recording-topic-data-with-rosbag-and-ros-1-bridge" title="永久链接至标题"></a></h2>
-<p>在此示例中，我们将使用 <code class="docutils literal notranslate"><span class="pre">cam2image</span></code> 例程程序带有ROS 2和Python脚本模拟简易turtlebot机器人的传感器数据，bridge它ROS 1使用rosbag转记录下来。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8130">[待校准&#64;8130]</a></p>
-<p>首先，我们将在一个新的外壳中运行ROS 1 <code class="docutils literal notranslate"><span class="pre">roscore</span></code> : <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8131">[待校准&#64;8131]</a></p>
+<h2>用罗斯包和ROS 1桥记录话题数据 <a class="reference external" href="http://localhost:3000/#/home?msgid=8129">[待校准&#64;8129]</a><a class="headerlink" href="#recording-topic-data-with-rosbag-and-ros-1-bridge" title="永久链接至标题"></a></h2>
+<p>在此示例中，我们将使用 <code class="docutils literal notranslate"><span class="pre">cam2image</span></code> 例程程序带有ROS 2和Python脚本模拟简易turtlebot机器人的传感器数据，bridge它ROS 1使用rosbag转记录下来。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8130">[待校准&#64;8130]</a></p>
+<p>首先，我们将在一个新的外壳中运行ROS 1 <code class="docutils literal notranslate"><span class="pre">roscore</span></code> : <a class="reference external" href="http://localhost:3000/#/home?msgid=8131">[待校准&#64;8131]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Shell A:</span>
 . /opt/ros/kinetic/setup.bash
 <span class="c1"># Or, on OSX, something like:</span>
@@ -294,7 +294,7 @@
 roscore
 </pre></div>
 </div>
-<p>然后，我们将在另一个外壳中运行带有 <code class="docutils literal notranslate"><span class="pre">--bridge-all-topics</span></code> 乙选项的ROS 1ROS =&gt; ROS 2 <code class="docutils literal notranslate"><span class="pre">dynamic_bridge</span></code>  (这样我们就可以做 <code class="docutils literal notranslate"><span class="pre">rostopic</span> <span class="pre">list</span></code> 并看到它们): <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8132">[待校准&#64;8132]</a></p>
+<p>然后，我们将在另一个外壳中运行带有 <code class="docutils literal notranslate"><span class="pre">--bridge-all-topics</span></code> 乙选项的ROS 1ROS =&gt; ROS 2 <code class="docutils literal notranslate"><span class="pre">dynamic_bridge</span></code>  (这样我们就可以做 <code class="docutils literal notranslate"><span class="pre">rostopic</span> <span class="pre">list</span></code> 并看到它们): <a class="reference external" href="http://localhost:3000/#/home?msgid=8132">[待校准&#64;8132]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Shell B:</span>
 . /opt/ros/kinetic/setup.bash
 <span class="c1"># Or, on OSX, something like:</span>
@@ -306,9 +306,9 @@ roscore
 ros2 run ros1_bridge dynamic_bridge --bridge-all-topics
 </pre></div>
 </div>
-<p>请记住将 <code class="docutils literal notranslate"><span class="pre">&lt;workspace-with-bridge&gt;</span></code> 替换为提取ROS 2二进制文件或从源文件构建ROS 2的路径。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8133">[待校准&#64;8133]</a></p>
+<p>请记住将 <code class="docutils literal notranslate"><span class="pre">&lt;workspace-with-bridge&gt;</span></code> 替换为提取ROS 2二进制文件或从源文件构建ROS 2的路径。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8133">[待校准&#64;8133]</a></p>
 <hr class="docutils" />
-<p>现在，我们可以启动ROS 2程序，该程序将模拟我们的turtlebot式机器人。首先，我们将使用 <code class="docutils literal notranslate"><span class="pre">-b</span></code> 选项运行 <code class="docutils literal notranslate"><span class="pre">cam2image</span></code> 程序，这样它就不需要相机来工作: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8134">[待校准&#64;8134]</a></p>
+<p>现在，我们可以启动ROS 2程序，该程序将模拟我们的turtlebot式机器人。首先，我们将使用 <code class="docutils literal notranslate"><span class="pre">-b</span></code> 选项运行 <code class="docutils literal notranslate"><span class="pre">cam2image</span></code> 程序，这样它就不需要相机来工作: <a class="reference external" href="http://localhost:3000/#/home?msgid=8134">[待校准&#64;8134]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Shell C:</span>
 . /opt/ros/ardent/setup.bash
 <span class="c1"># Or, if building ROS 2 from source:</span>
@@ -316,8 +316,8 @@ ros2 run ros1_bridge dynamic_bridge --bridge-all-topics
 ros2 run image_tools cam2image -- -b
 </pre></div>
 </div>
-<p>TODO: 使用命名空间话题名称 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8135">[待校准&#64;8135]</a></p>
-<p>然后，我们将运行一个简单的Python脚本，从Kobuki库中模拟 <code class="docutils literal notranslate"><span class="pre">odom</span></code> 和 <code class="docutils literal notranslate"><span class="pre">imu_data</span></code> 话题。我会为imu数据使用更准确的 “~ 传感器/imu_data” 话题名称，但是我们在ROS 2中还没有命名空间支持 (它来了!)。将此脚本放在调用ed <code class="docutils literal notranslate"><span class="pre">emulate_kobuki_node.py</span></code> 的文件中: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8136">[待校准&#64;8136]</a></p>
+<p>TODO: 使用命名空间话题名称 <a class="reference external" href="http://localhost:3000/#/home?msgid=8135">[待校准&#64;8135]</a></p>
+<p>然后，我们将运行一个简单的Python脚本，从Kobuki库中模拟 <code class="docutils literal notranslate"><span class="pre">odom</span></code> 和 <code class="docutils literal notranslate"><span class="pre">imu_data</span></code> 话题。我会为imu数据使用更准确的 “~ 传感器/imu_data” 话题名称，但是我们在ROS 2中还没有命名空间支持 (它来了!)。将此脚本放在调用ed <code class="docutils literal notranslate"><span class="pre">emulate_kobuki_node.py</span></code> 的文件中: <a class="reference external" href="http://localhost:3000/#/home?msgid=8136">[待校准&#64;8136]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
 
 <span class="kn">import</span> <span class="nn">sys</span>
@@ -358,7 +358,7 @@ ros2 run image_tools cam2image -- -b
     <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">main</span><span class="p">())</span>
 </pre></div>
 </div>
-<p>您可以在新的ROS 2 shell中运行此python脚本: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8137">[待校准&#64;8137]</a></p>
+<p>您可以在新的ROS 2 shell中运行此python脚本: <a class="reference external" href="http://localhost:3000/#/home?msgid=8137">[待校准&#64;8137]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Shell D:</span>
 . /opt/ros/ardent/setup.bash
 <span class="c1"># Or, if building ROS 2 from source:</span>
@@ -367,7 +367,7 @@ python3 emulate_kobuki_node.py
 </pre></div>
 </div>
 <hr class="docutils" />
-<p>既然所有的数据源文件和动态bridge都在运行，我们可以在一个新的ROS 1外壳中看到可用的话题: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8138">[待校准&#64;8138]</a></p>
+<p>既然所有的数据源文件和动态bridge都在运行，我们可以在一个新的ROS 1外壳中看到可用的话题: <a class="reference external" href="http://localhost:3000/#/home?msgid=8138">[待校准&#64;8138]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Shell E:</span>
 . /opt/ros/kinetic/setup.bash
 <span class="c1"># Or, on OSX, something like:</span>
@@ -375,7 +375,7 @@ python3 emulate_kobuki_node.py
 rostopic list
 </pre></div>
 </div>
-<p>你应该看到这样的东西: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7529">[待校准&#64;7529]</a></p>
+<p>你应该看到这样的东西: <a class="reference external" href="http://localhost:3000/#/home?msgid=7529">[待校准&#64;7529]</a></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="n">rostopic</span> <span class="nb">list</span>
 <span class="o">/</span><span class="n">image</span>
 <span class="o">/</span><span class="n">imu_data</span>
@@ -384,24 +384,24 @@ rostopic list
 <span class="o">/</span><span class="n">rosout_agg</span>
 </pre></div>
 </div>
-<p>我们现在可以用 <code class="docutils literal notranslate"><span class="pre">rosbag</span> <span class="pre">record</span></code> 在同一个外壳中记录这些数据: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8139">[待校准&#64;8139]</a></p>
+<p>我们现在可以用 <code class="docutils literal notranslate"><span class="pre">rosbag</span> <span class="pre">record</span></code> 在同一个外壳中记录这些数据: <a class="reference external" href="http://localhost:3000/#/home?msgid=8139">[待校准&#64;8139]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Shell E:</span>
 rosbag record /image /imu_data /odom
 </pre></div>
 </div>
-<p>几秒钟后你可以 <code class="docutils literal notranslate"><span class="pre">Ctrl-c</span></code> 的 <code class="docutils literal notranslate"><span class="pre">rosbag</span></code> 命令和做一个 <code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-lh</span></code> 看到大文件，你可能会看到这样: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8140">[待校准&#64;8140]</a></p>
+<p>几秒钟后你可以 <code class="docutils literal notranslate"><span class="pre">Ctrl-c</span></code> 的 <code class="docutils literal notranslate"><span class="pre">rosbag</span></code> 命令和做一个 <code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-lh</span></code> 看到大文件，你可能会看到这样: <a class="reference external" href="http://localhost:3000/#/home?msgid=8140">[待校准&#64;8140]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>% ls -lh
 total <span class="m">0</span>
 -rw-rw-r-- <span class="m">1</span> william william  12M Feb <span class="m">23</span> <span class="m">16</span>:59 <span class="m">2017</span>-02-23-16-59-47.bag
 </pre></div>
 </div>
-<p>尽管您的包的文件名会有所不同 (因为它是从日期和时间派生而来的)。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8141">[待校准&#64;8141]</a></p>
+<p>尽管您的包的文件名会有所不同 (因为它是从日期和时间派生而来的)。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8141">[待校准&#64;8141]</a></p>
 </div>
 <div class="section" id="playing-back-topic-data-with-rosbag-and-ros-1-bridge">
-<h2>用罗斯包和ROS 1桥回放话题数据 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8142">[待校准&#64;8142]</a><a class="headerlink" href="#playing-back-topic-data-with-rosbag-and-ros-1-bridge" title="永久链接至标题"></a></h2>
-<p>现在我们有了一个袋子文件，你可以使用任何ROS 1工具来反思袋子文件，比如 <code class="docutils literal notranslate"><span class="pre">rosbag</span> <span class="pre">info</span> <span class="pre">&lt;bag</span> <span class="pre">file&gt;</span></code> 、 <code class="docutils literal notranslate"><span class="pre">rostopic</span> <span class="pre">list</span> <span class="pre">-b</span> <span class="pre">&lt;bag</span> <span class="pre">file&gt;</span></code> 或 <code class="docutils literal notranslate"><span class="pre">rqt_bag</span> <span class="pre">&lt;bag</span> <span class="pre">file&gt;</span></code> 。然而，我们也可以使用 <code class="docutils literal notranslate"><span class="pre">rosbag</span> <span class="pre">play</span></code> 和ROS 1ROS =&gt; ROS 2 <code class="docutils literal notranslate"><span class="pre">dynamic_bridge</span></code> 将包数据回放到ROS 2中。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8143">[待校准&#64;8143]</a></p>
-<p>首先关闭为上一教程打开的所有shell，停止任何正在运行的程序。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8144">[待校准&#64;8144]</a></p>
-<p>然后在一个新的外壳中开始 <code class="docutils literal notranslate"><span class="pre">roscore</span></code> : <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8145">[待校准&#64;8145]</a></p>
+<h2>用罗斯包和ROS 1桥回放话题数据 <a class="reference external" href="http://localhost:3000/#/home?msgid=8142">[待校准&#64;8142]</a><a class="headerlink" href="#playing-back-topic-data-with-rosbag-and-ros-1-bridge" title="永久链接至标题"></a></h2>
+<p>现在我们有了一个袋子文件，你可以使用任何ROS 1工具来反思袋子文件，比如 <code class="docutils literal notranslate"><span class="pre">rosbag</span> <span class="pre">info</span> <span class="pre">&lt;bag</span> <span class="pre">file&gt;</span></code> 、 <code class="docutils literal notranslate"><span class="pre">rostopic</span> <span class="pre">list</span> <span class="pre">-b</span> <span class="pre">&lt;bag</span> <span class="pre">file&gt;</span></code> 或 <code class="docutils literal notranslate"><span class="pre">rqt_bag</span> <span class="pre">&lt;bag</span> <span class="pre">file&gt;</span></code> 。然而，我们也可以使用 <code class="docutils literal notranslate"><span class="pre">rosbag</span> <span class="pre">play</span></code> 和ROS 1ROS =&gt; ROS 2 <code class="docutils literal notranslate"><span class="pre">dynamic_bridge</span></code> 将包数据回放到ROS 2中。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8143">[待校准&#64;8143]</a></p>
+<p>首先关闭为上一教程打开的所有shell，停止任何正在运行的程序。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8144">[待校准&#64;8144]</a></p>
+<p>然后在一个新的外壳中开始 <code class="docutils literal notranslate"><span class="pre">roscore</span></code> : <a class="reference external" href="http://localhost:3000/#/home?msgid=8145">[待校准&#64;8145]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Shell P:</span>
 . /opt/ros/kinetic/setup.bash
 <span class="c1"># Or, on OSX, something like:</span>
@@ -409,7 +409,7 @@ total <span class="m">0</span>
 roscore
 </pre></div>
 </div>
-<p>然后在另一个外壳中运行 <code class="docutils literal notranslate"><span class="pre">dynamic_bridge</span></code> : <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8146">[待校准&#64;8146]</a></p>
+<p>然后在另一个外壳中运行 <code class="docutils literal notranslate"><span class="pre">dynamic_bridge</span></code> : <a class="reference external" href="http://localhost:3000/#/home?msgid=8146">[待校准&#64;8146]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Shell Q:</span>
 . /opt/ros/kinetic/setup.bash
 <span class="c1"># Or, on OSX, something like:</span>
@@ -421,7 +421,7 @@ roscore
 ros2 run ros1_bridge dynamic_bridge --bridge-all-topics
 </pre></div>
 </div>
-<p>然后在另一个新的外壳中用 <code class="docutils literal notranslate"><span class="pre">rosbag</span> <span class="pre">play</span></code> 播放袋子数据，使用 <code class="docutils literal notranslate"><span class="pre">--loop</span></code> 选项，这样我们就不必为短袋子重新启动它: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8147">[待校准&#64;8147]</a></p>
+<p>然后在另一个新的外壳中用 <code class="docutils literal notranslate"><span class="pre">rosbag</span> <span class="pre">play</span></code> 播放袋子数据，使用 <code class="docutils literal notranslate"><span class="pre">--loop</span></code> 选项，这样我们就不必为短袋子重新启动它: <a class="reference external" href="http://localhost:3000/#/home?msgid=8147">[待校准&#64;8147]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Shell R:</span>
 . /opt/ros/kinetic/setup.bash
 <span class="c1"># Or, on OSX, something like:</span>
@@ -429,9 +429,9 @@ ros2 run ros1_bridge dynamic_bridge --bridge-all-topics
 rosbag play --loop path/to/bag_file
 </pre></div>
 </div>
-<p>确保用要播放的bag文件的路径替换 <code class="docutils literal notranslate"><span class="pre">path/to/bag_file</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8148">[待校准&#64;8148]</a></p>
+<p>确保用要播放的bag文件的路径替换 <code class="docutils literal notranslate"><span class="pre">path/to/bag_file</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8148">[待校准&#64;8148]</a></p>
 <hr class="docutils" />
-<p>现在数据正在回放，bridge正在运行，我们可以看到ROS 2中出现的数据。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8149">[待校准&#64;8149]</a></p>
+<p>现在数据正在回放，bridge正在运行，我们可以看到ROS 2中出现的数据。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8149">[待校准&#64;8149]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Shell S:</span>
 . /opt/ros/ardent/setup.bash
 <span class="c1"># Or, if building ROS 2 from source:</span>
@@ -440,7 +440,7 @@ ros2 topic list
 ros2 topic <span class="nb">echo</span> /odom
 </pre></div>
 </div>
-<p>你应该看到如下内容: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8150">[待校准&#64;8150]</a></p>
+<p>你应该看到如下内容: <a class="reference external" href="http://localhost:3000/#/home?msgid=8150">[待校准&#64;8150]</a></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="n">ros2</span> <span class="n">topic</span> <span class="nb">list</span>
 <span class="o">/</span><span class="n">clock</span>
 <span class="o">/</span><span class="n">image</span>
@@ -449,7 +449,7 @@ ros2 topic <span class="nb">echo</span> /odom
 <span class="o">/</span><span class="n">parameter_events</span>
 </pre></div>
 </div>
-<p>您还可以使用 <code class="docutils literal notranslate"><span class="pre">showimage</span></code> 工具从包里看到正在播放的图像: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8151">[待校准&#64;8151]</a></p>
+<p>您还可以使用 <code class="docutils literal notranslate"><span class="pre">showimage</span></code> 工具从包里看到正在播放的图像: <a class="reference external" href="http://localhost:3000/#/home?msgid=8151">[待校准&#64;8151]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 run image_tools showimage
 </pre></div>
 </div>

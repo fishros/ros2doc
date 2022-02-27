@@ -248,7 +248,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Related-Projects/Nvidia-ROS2-Projects.html">[需手动修复的语法]NVIDIAROS 2项目 [待校准&#64;6668]</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../Glossary.html">相关术语 `[小鱼&#64;1] http://dev.ros2.fishros.com/calibpage/#/home?msgid=1&gt;`_</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Glossary.html">术语表</a></li>
 </ul>
 
         </div>
@@ -279,9 +279,9 @@
 
 
   <div class="section" id="releasing-a-ros-2-package-with-bloom">
-<h1>发布带有bloom的ROS 2包 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6488">[待校准&#64;6488]</a><a class="headerlink" href="#releasing-a-ros-2-package-with-bloom" title="永久链接至标题"></a></h1>
+<h1>发布带有bloom的ROS 2包 <a class="reference external" href="http://localhost:3000/#/home?msgid=6488">[待校准&#64;6488]</a><a class="headerlink" href="#releasing-a-ros-2-package-with-bloom" title="永久链接至标题"></a></h1>
 <div class="contents local topic" id="table-of-contents">
-<p class="topic-title">目录 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5761">[待校准&#64;5761]</a></p>
+<p class="topic-title">目录 <a class="reference external" href="http://localhost:3000/#/home?msgid=5761">[待校准&#64;5761]</a></p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#introduction" id="id1">简介 [待校准&#64;6489]</a></p></li>
 <li><p><a class="reference internal" href="#required-tools" id="id2">所需工具 [待校准&#64;6491]</a></p>
@@ -295,48 +295,48 @@
 </ul>
 </div>
 <div class="section" id="introduction">
-<h2>简介 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6489">[待校准&#64;6489]</a><a class="headerlink" href="#introduction" title="永久链接至标题"></a></h2>
-<p>本页介绍如何准备要在公共ROS 2 buildfarm上发布的仓库。创建包后，这是将包放入公开可用的Debian包的下一步 (i.e.，你可以通过 <code class="docutils literal notranslate"><span class="pre">apt</span></code> 安装软件包)。本页包括在遵循 <a class="reference external" href="https://wiki.ros.org/bloom/Tutorials/FirstTimeRelease">Bloom release tutorial on the ROS Wiki</a> 之前要执行的ROS 2特定说明。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6490">[待校准&#64;6490]</a></p>
+<h2>简介 <a class="reference external" href="http://localhost:3000/#/home?msgid=6489">[待校准&#64;6489]</a><a class="headerlink" href="#introduction" title="永久链接至标题"></a></h2>
+<p>本页介绍如何准备要在公共ROS 2 buildfarm上发布的仓库。创建包后，这是将包放入公开可用的Debian包的下一步 (i.e.，你可以通过 <code class="docutils literal notranslate"><span class="pre">apt</span></code> 安装软件包)。本页包括在遵循 <a class="reference external" href="https://wiki.ros.org/bloom/Tutorials/FirstTimeRelease">Bloom release tutorial on the ROS Wiki</a> 之前要执行的ROS 2特定说明。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6490">[待校准&#64;6490]</a></p>
 </div>
 <div class="section" id="required-tools">
-<h2>所需工具 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6491">[待校准&#64;6491]</a><a class="headerlink" href="#required-tools" title="永久链接至标题"></a></h2>
+<h2>所需工具 <a class="reference external" href="http://localhost:3000/#/home?msgid=6491">[待校准&#64;6491]</a><a class="headerlink" href="#required-tools" title="永久链接至标题"></a></h2>
 <ul class="simple">
-<li><p>[需手动修复的语法]``bloom`` &gt;= 0.10.7 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6492">[待校准&#64;6492]</a></p></li>
-<li><p>[需手动修复的语法]``catkin_pkg`` &gt;= 0.4.23 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6493">[待校准&#64;6493]</a></p></li>
+<li><p>[需手动修复的语法]``bloom`` &gt;= 0.10.7 <a class="reference external" href="http://localhost:3000/#/home?msgid=6492">[待校准&#64;6492]</a></p></li>
+<li><p>[需手动修复的语法]``catkin_pkg`` &gt;= 0.4.23 <a class="reference external" href="http://localhost:3000/#/home?msgid=6493">[待校准&#64;6493]</a></p></li>
 </ul>
 <div class="section" id="ensure-that-you-have-the-latest-version-of-bloom-and-catkin-pkg">
-<h3>确保您拥有最新版本的bloom和catkin _ pkg <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6494">[待校准&#64;6494]</a><a class="headerlink" href="#ensure-that-you-have-the-latest-version-of-bloom-and-catkin-pkg" title="永久链接至标题"></a></h3>
-<p>参见以上版本要求。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6495">[待校准&#64;6495]</a></p>
+<h3>确保您拥有最新版本的bloom和catkin _ pkg <a class="reference external" href="http://localhost:3000/#/home?msgid=6494">[待校准&#64;6494]</a><a class="headerlink" href="#ensure-that-you-have-the-latest-version-of-bloom-and-catkin-pkg" title="永久链接至标题"></a></h3>
+<p>参见以上版本要求。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6495">[待校准&#64;6495]</a></p>
 <ul>
-<li><p>确保你ros仓库的源文件 (参见 <a class="reference internal" href="../Installation/Ubuntu-Install-Debians.html#linux-install-debians-setup-sources"><span class="std std-ref">here</span></a> )。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6496">[待校准&#64;6496]</a></p></li>
-<li><p>安装最新版本的bloom和catkin _ pkg: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6497">[待校准&#64;6497]</a></p>
+<li><p>确保你ros仓库的源文件 (参见 <a class="reference internal" href="../Installation/Ubuntu-Install-Debians.html#linux-install-debians-setup-sources"><span class="std std-ref">here</span></a> )。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6496">[待校准&#64;6496]</a></p></li>
+<li><p>安装最新版本的bloom和catkin _ pkg: <a class="reference external" href="http://localhost:3000/#/home?msgid=6497">[待校准&#64;6497]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt install python3-catkin-pkg python3-bloom
 </pre></div>
 </div>
 </li>
 </ul>
-<p>如果您使用的bloom版本早于0.6.8，则需要使用v3索引url进行发布。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6498">[待校准&#64;6498]</a></p>
+<p>如果您使用的bloom版本早于0.6.8，则需要使用v3索引url进行发布。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6498">[待校准&#64;6498]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">ROSDISTRO_INDEX_URL</span><span class="o">=</span><span class="s1">&#39;https://raw.githubusercontent.com/ros/rosdistro/master/index.yaml&#39;</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="section" id="minor-differences-from-ros-1-bloom">
-<h2>与ROS 1开花的细微差别 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6499">[待校准&#64;6499]</a><a class="headerlink" href="#minor-differences-from-ros-1-bloom" title="永久链接至标题"></a></h2>
-<p>如果你以前在ROS 1中盛开过包，你应该熟悉ROS 2流程。主要区别在于，ROS 2包的发布仓库位于专门的GitHub组织中:  <a class="reference external" href="https://github.com/ros2-gbp/">ROS 2 release repositories</a> 。专用组织允许新的自动化支持 <a class="reference internal" href="../Releases/Release-Rolling-Ridley.html"><span class="doc">Rolling distribution</span></a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6500">[待校准&#64;6500]</a></p>
-<p>如果您不打算将仓库发布到滚动状态，则仍支持将托管在其他地方的发布仓库用于稳定的分发。自稳定分布创建滚动将开始释放仓库在ros2-gbp组织建议使用ros2-gbp释放仓库所有ROS 2分布避免破碎释放信息。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6501">[待校准&#64;6501]</a></p>
-<p>将来，ros2-gbp发布仓库可能会成为滚动的硬性要求，并且为所有ROS 2发行版维护单个发布仓库简化了滚动分发维护人员和包维护人员的发行版本维护。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6502">[待校准&#64;6502]</a></p>
-<p>为了请求新的发布仓库或更新维护人员对ros2-gbp组织中现有发布仓库的访问权限，您可以使用 <a class="reference external" href="https://github.com/ros2-gbp/ros2-gbp-github-org/issues/new/choose">create an issue</a> in the <a class="reference external" href="https://github.com/ros2-gbp/ros2-gbp-github-org">ros2-gbp-github-org</a> 管理仓库。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6503">[待校准&#64;6503]</a></p>
+<h2>与ROS 1开花的细微差别 <a class="reference external" href="http://localhost:3000/#/home?msgid=6499">[待校准&#64;6499]</a><a class="headerlink" href="#minor-differences-from-ros-1-bloom" title="永久链接至标题"></a></h2>
+<p>如果你以前在ROS 1中盛开过包，你应该熟悉ROS 2流程。主要区别在于，ROS 2包的发布仓库位于专门的GitHub组织中:  <a class="reference external" href="https://github.com/ros2-gbp/">ROS 2 release repositories</a> 。专用组织允许新的自动化支持 <a class="reference internal" href="../Releases/Release-Rolling-Ridley.html"><span class="doc">Rolling distribution</span></a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6500">[待校准&#64;6500]</a></p>
+<p>如果您不打算将仓库发布到滚动状态，则仍支持将托管在其他地方的发布仓库用于稳定的分发。自稳定分布创建滚动将开始释放仓库在ros2-gbp组织建议使用ros2-gbp释放仓库所有ROS 2分布避免破碎释放信息。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6501">[待校准&#64;6501]</a></p>
+<p>将来，ros2-gbp发布仓库可能会成为滚动的硬性要求，并且为所有ROS 2发行版维护单个发布仓库简化了滚动分发维护人员和包维护人员的发行版本维护。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6502">[待校准&#64;6502]</a></p>
+<p>为了请求新的发布仓库或更新维护人员对ros2-gbp组织中现有发布仓库的访问权限，您可以使用 <a class="reference external" href="https://github.com/ros2-gbp/ros2-gbp-github-org/issues/new/choose">create an issue</a> in the <a class="reference external" href="https://github.com/ros2-gbp/ros2-gbp-github-org">ros2-gbp-github-org</a> 管理仓库。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6503">[待校准&#64;6503]</a></p>
 </div>
 <div class="section" id="procedure">
-<h2>程序 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6504">[待校准&#64;6504]</a><a class="headerlink" href="#procedure" title="永久链接至标题"></a></h2>
-<p>与ROS 1相同:  <a class="reference external" href="https://wiki.ros.org/bloom/Tutorials/FirstTimeRelease">Following this tutorial</a>  <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6505">[待校准&#64;6505]</a></p>
-<p>如果移植ROS 1包ROS 2，建议创建新 <code class="docutils literal notranslate"><span class="pre">-release</span></code> 仓库。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6506">[待校准&#64;6506]</a></p>
+<h2>程序 <a class="reference external" href="http://localhost:3000/#/home?msgid=6504">[待校准&#64;6504]</a><a class="headerlink" href="#procedure" title="永久链接至标题"></a></h2>
+<p>与ROS 1相同:  <a class="reference external" href="https://wiki.ros.org/bloom/Tutorials/FirstTimeRelease">Following this tutorial</a>  <a class="reference external" href="http://localhost:3000/#/home?msgid=6505">[待校准&#64;6505]</a></p>
+<p>如果移植ROS 1包ROS 2，建议创建新 <code class="docutils literal notranslate"><span class="pre">-release</span></code> 仓库。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6506">[待校准&#64;6506]</a></p>
 </div>
 <div class="section" id="build-status">
-<h2>构建状态 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6507">[待校准&#64;6507]</a><a class="headerlink" href="#build-status" title="永久链接至标题"></a></h2>
+<h2>构建状态 <a class="reference external" href="http://localhost:3000/#/home?msgid=6507">[待校准&#64;6507]</a><a class="headerlink" href="#build-status" title="永久链接至标题"></a></h2>
 <ul class="simple">
-<li><p>建造农场 <a class="reference external" href="http://build.ros2.org/">Jenkins</a> 前端的个人建造细节。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6508">[待校准&#64;6508]</a></p></li>
+<li><p>建造农场 <a class="reference external" href="http://build.ros2.org/">Jenkins</a> 前端的个人建造细节。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6508">[待校准&#64;6508]</a></p></li>
 <li><p>The <a class="reference external" href="http://repo.ros2.org/status_page/">ROS 2 Package Status Pages</a> (e.g. <a class="reference external" href="http://repo.ros2.org/status_page/ros_foxy_default.html">Foxy Default</a>).</p></li>
 </ul>
 </div>

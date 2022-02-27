@@ -248,7 +248,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Related-Projects/Nvidia-ROS2-Projects.html">[需手动修复的语法]NVIDIAROS 2项目 [待校准&#64;6668]</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../Glossary.html">相关术语 `[小鱼&#64;1] http://dev.ros2.fishros.com/calibpage/#/home?msgid=1&gt;`_</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Glossary.html">术语表</a></li>
 </ul>
 
         </div>
@@ -279,34 +279,34 @@
 
 
   <div class="section" id="dds-tuning-information">
-<h1>DDS调谐信息 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6021">[待校准&#64;6021]</a><a class="headerlink" href="#dds-tuning-information" title="永久链接至标题"></a></h1>
-<p>本页提供了一些关于参数调整的指导，这些参数调整被发现可以解决在实际情况下在Linux上使用各种DDS实现时所面临的问题。我们在Linux上或使用一个供应商时发现的问题可能会发生在其他平台和此处未记录的供应商身上。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6022">[待校准&#64;6022]</a></p>
-<p>以下建议是调整的起点; 它们适用于特定的系统和环境，但调整可能因多种因素而异。在调试时，您可能需要增加或减少与消息大小、网络拓扑等因素相关的值。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6023">[待校准&#64;6023]</a></p>
-<p>重要的是要认识到，优化参数可能会给重新源文件带来代价，并且可能会影响系统的某些部分，超出预期的改进范围。提高可靠性的好处应该与每个个案的任何不利因素相权衡。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6024">[待校准&#64;6024]</a></p>
+<h1>DDS调谐信息 <a class="reference external" href="http://localhost:3000/#/home?msgid=6021">[待校准&#64;6021]</a><a class="headerlink" href="#dds-tuning-information" title="永久链接至标题"></a></h1>
+<p>本页提供了一些关于参数调整的指导，这些参数调整被发现可以解决在实际情况下在Linux上使用各种DDS实现时所面临的问题。我们在Linux上或使用一个供应商时发现的问题可能会发生在其他平台和此处未记录的供应商身上。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6022">[待校准&#64;6022]</a></p>
+<p>以下建议是调整的起点; 它们适用于特定的系统和环境，但调整可能因多种因素而异。在调试时，您可能需要增加或减少与消息大小、网络拓扑等因素相关的值。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6023">[待校准&#64;6023]</a></p>
+<p>重要的是要认识到，优化参数可能会给重新源文件带来代价，并且可能会影响系统的某些部分，超出预期的改进范围。提高可靠性的好处应该与每个个案的任何不利因素相权衡。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6024">[待校准&#64;6024]</a></p>
 <div class="section" id="cross-vendor-tuning">
-<span id="id1"></span><h2>跨供应商调整 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6025">[待校准&#64;6025]</a><a class="headerlink" href="#cross-vendor-tuning" title="永久链接至标题"></a></h2>
-<p>Issue问题: when当一些IP片段被丢弃时，通过有损 (通常是WiFi) 连接发送数据会变得有问题，这可能导致接收端的内核缓冲区变满。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6026">[待校准&#64;6026]</a></p>
-<p>当UDP数据包缺少至少一个IP片段时，其余接收到的片段会填满内核缓冲区。默认情况下，linux内核将在尝试重组数据包片段30秒后超时。因为内核缓冲区已满此时 (默认大小是256KB)，无新片段可以进来，所以连接看似  &quot;hang&quot; 长时间。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6027">[待校准&#64;6027]</a></p>
-<p>此问题在所有DDS供应商中都是通用的，因此解决方案涉及调整内核参数。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6028">[待校准&#64;6028]</a></p>
-<p>Solution解决方案: Use使用尽力而为的QoS设置，而不是可靠的。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6029">[待校准&#64;6029]</a></p>
-<p>尽力而为的设置减少了网络流量，因为DDS的实施不需要产生可靠通讯的开销，如果发布者要求对发送给订阅者的消息进行确认，并且必须重新发送未正确接收的样本。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6030">[待校准&#64;6030]</a></p>
-<p>但是，如果用于IP片段的内核缓冲区已满，则症状仍然相同 (阻塞30秒)。这个解决方案应该在不需要调整参数的情况下改善问题。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6031">[待校准&#64;6031]</a></p>
+<span id="id1"></span><h2>跨供应商调整 <a class="reference external" href="http://localhost:3000/#/home?msgid=6025">[待校准&#64;6025]</a><a class="headerlink" href="#cross-vendor-tuning" title="永久链接至标题"></a></h2>
+<p>Issue问题: when当一些IP片段被丢弃时，通过有损 (通常是WiFi) 连接发送数据会变得有问题，这可能导致接收端的内核缓冲区变满。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6026">[待校准&#64;6026]</a></p>
+<p>当UDP数据包缺少至少一个IP片段时，其余接收到的片段会填满内核缓冲区。默认情况下，linux内核将在尝试重组数据包片段30秒后超时。因为内核缓冲区已满此时 (默认大小是256KB)，无新片段可以进来，所以连接看似  &quot;hang&quot; 长时间。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6027">[待校准&#64;6027]</a></p>
+<p>此问题在所有DDS供应商中都是通用的，因此解决方案涉及调整内核参数。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6028">[待校准&#64;6028]</a></p>
+<p>Solution解决方案: Use使用尽力而为的QoS设置，而不是可靠的。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6029">[待校准&#64;6029]</a></p>
+<p>尽力而为的设置减少了网络流量，因为DDS的实施不需要产生可靠通讯的开销，如果发布者要求对发送给订阅者的消息进行确认，并且必须重新发送未正确接收的样本。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6030">[待校准&#64;6030]</a></p>
+<p>但是，如果用于IP片段的内核缓冲区已满，则症状仍然相同 (阻塞30秒)。这个解决方案应该在不需要调整参数的情况下改善问题。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6031">[待校准&#64;6031]</a></p>
 <p><strong>Solution:</strong> Reduce the value of the <code class="docutils literal notranslate"><span class="pre">ipfrag_time</span></code> parameter.</p>
-<p>[需手动修复的语法]``net.ipv4.ipfrag_time / /proc/sys/net/ipv4/ipfrag_time``  (默认30秒): 将IP片段保存在内存中的时间 (以秒为单位)。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6033">[待校准&#64;6033]</a></p>
-<p>例如，通过运行以下命令将值减小到3s: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6034">[待校准&#64;6034]</a></p>
+<p>[需手动修复的语法]``net.ipv4.ipfrag_time / /proc/sys/net/ipv4/ipfrag_time``  (默认30秒): 将IP片段保存在内存中的时间 (以秒为单位)。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6033">[待校准&#64;6033]</a></p>
+<p>例如，通过运行以下命令将值减小到3s: <a class="reference external" href="http://localhost:3000/#/home?msgid=6034">[待校准&#64;6034]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sudo sysctl net.ipv4.ipfrag_time=3</span>
 </pre></div>
 </div>
-<p>减小此参数的值还会减少未收到片段的时间窗口。对于所有传入的片段，该参数是全局的，因此需要为每个环境考虑降低其值的可行性。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6035">[待校准&#64;6035]</a></p>
+<p>减小此参数的值还会减少未收到片段的时间窗口。对于所有传入的片段，该参数是全局的，因此需要为每个环境考虑降低其值的可行性。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6035">[待校准&#64;6035]</a></p>
 <p><strong>Solution:</strong> Increase the value of the <code class="docutils literal notranslate"><span class="pre">ipfrag_high_thresh</span></code> parameter.</p>
-<p>[需手动修复的语法]``net.ipv4.ipfrag_high_thresh / /proc/sys/net/ipv4/ipfrag_high_thresh``  (默认值: 262144字节): 用于重新组装IP片段的最大内存。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6037">[待校准&#64;6037]</a></p>
-<p>例如，通过运行以下命令将值增加到128mb: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6038">[待校准&#64;6038]</a></p>
+<p>[需手动修复的语法]``net.ipv4.ipfrag_high_thresh / /proc/sys/net/ipv4/ipfrag_high_thresh``  (默认值: 262144字节): 用于重新组装IP片段的最大内存。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6037">[待校准&#64;6037]</a></p>
+<p>例如，通过运行以下命令将值增加到128mb: <a class="reference external" href="http://localhost:3000/#/home?msgid=6038">[待校准&#64;6038]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sudo sysctl net.ipv4.ipfrag_high_thresh=134217728     # (128 MB)</span>
 </pre></div>
 </div>
-<p>显著增加此参数的值是为了确保缓冲区永远不会完全满。然而，假设每个UDP数据包缺少一个片段，该值可能必须非常高才能保存在 <code class="docutils literal notranslate"><span class="pre">ipfrag_time</span></code> 时间窗内收到的所有数据。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6039">[待校准&#64;6039]</a></p>
-<p>Issue问题: Sending使用非原始类型的大型可变大小数组发送自定义消息会导致较高的序列化/反序列化开销和CPU负载。这可能会导致出版商停滞不前，因为在 <code class="docutils literal notranslate"><span class="pre">publish()</span></code> 和工具 (如 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">topic</span> <span class="pre">hz</span></code> ) 上花费的时间过长，无法报告收到消息的实际频率。请注意，例如 <code class="docutils literal notranslate"><span class="pre">builtin_interfaces/Time</span></code> 也被视为非原始类型，将产生更高的序列化开销。由于增加的序列化开销，当天真地将自定义消息类型从ROS 1过渡到ROS 2时，可以观察到严重的性能下降。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6040">[待校准&#64;6040]</a></p>
-<p>Workaround解决方法: Use使用多个原语数组而不是单个自定义类型数组，或者像在 <code class="docutils literal notranslate"><span class="pre">PointCloud2</span></code> 消息中那样打包到字节数组中。例如，将 <code class="docutils literal notranslate"><span class="pre">FooArray</span></code> 信息定义为: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6041">[待校准&#64;6041]</a></p>
+<p>显著增加此参数的值是为了确保缓冲区永远不会完全满。然而，假设每个UDP数据包缺少一个片段，该值可能必须非常高才能保存在 <code class="docutils literal notranslate"><span class="pre">ipfrag_time</span></code> 时间窗内收到的所有数据。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6039">[待校准&#64;6039]</a></p>
+<p>Issue问题: Sending使用非原始类型的大型可变大小数组发送自定义消息会导致较高的序列化/反序列化开销和CPU负载。这可能会导致出版商停滞不前，因为在 <code class="docutils literal notranslate"><span class="pre">publish()</span></code> 和工具 (如 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">topic</span> <span class="pre">hz</span></code> ) 上花费的时间过长，无法报告收到消息的实际频率。请注意，例如 <code class="docutils literal notranslate"><span class="pre">builtin_interfaces/Time</span></code> 也被视为非原始类型，将产生更高的序列化开销。由于增加的序列化开销，当天真地将自定义消息类型从ROS 1过渡到ROS 2时，可以观察到严重的性能下降。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6040">[待校准&#64;6040]</a></p>
+<p>Workaround解决方法: Use使用多个原语数组而不是单个自定义类型数组，或者像在 <code class="docutils literal notranslate"><span class="pre">PointCloud2</span></code> 消息中那样打包到字节数组中。例如，将 <code class="docutils literal notranslate"><span class="pre">FooArray</span></code> 信息定义为: <a class="reference external" href="http://localhost:3000/#/home?msgid=6041">[待校准&#64;6041]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Foo[] my_large_array</span>
 </pre></div>
 </div>
@@ -315,36 +315,36 @@
 <span class="go">uint32 foo_2</span>
 </pre></div>
 </div>
-<p>相反，将 <code class="docutils literal notranslate"><span class="pre">FooArray</span></code> 定义为: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6043">[待校准&#64;6043]</a></p>
+<p>相反，将 <code class="docutils literal notranslate"><span class="pre">FooArray</span></code> 定义为: <a class="reference external" href="http://localhost:3000/#/home?msgid=6043">[待校准&#64;6043]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">uint64[] foo_1_array</span>
 <span class="go">uint32[] foo_2_array</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="fast-rtps-tuning">
-<h2>快速RTPS调整 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6044">[待校准&#64;6044]</a><a class="headerlink" href="#fast-rtps-tuning" title="永久链接至标题"></a></h2>
-<p>Issue问题: Fast通过WiFi运行时，快速RTPS会向网络注入大量数据或快速发布的数据。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6045">[待校准&#64;6045]</a></p>
-<p>见 <a class="reference internal" href="#cross-vendor-tuning"><span class="std std-ref">Cross-vendor tuning</span></a> 下的解决方案。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6046">[待校准&#64;6046]</a></p>
+<h2>快速RTPS调整 <a class="reference external" href="http://localhost:3000/#/home?msgid=6044">[待校准&#64;6044]</a><a class="headerlink" href="#fast-rtps-tuning" title="永久链接至标题"></a></h2>
+<p>Issue问题: Fast通过WiFi运行时，快速RTPS会向网络注入大量数据或快速发布的数据。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6045">[待校准&#64;6045]</a></p>
+<p>见 <a class="reference internal" href="#cross-vendor-tuning"><span class="std std-ref">Cross-vendor tuning</span></a> 下的解决方案。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6046">[待校准&#64;6046]</a></p>
 </div>
 <div class="section" id="cyclone-dds-tuning">
-<h2>CycloneDDS调谐 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6047">[待校准&#64;6047]</a><a class="headerlink" href="#cyclone-dds-tuning" title="永久链接至标题"></a></h2>
-<p>Issue问题: 尽管使用了可靠的设置并通过有线网络传输，但CycloneDDS无法可靠地传递大消息。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6048">[待校准&#64;6048]</a></p>
-<p>这个问题应该是 <a class="reference external" href="https://github.com/eclipse-cyclonedds/cyclonedds/issues/484">addressed soon</a> 。在此之前，我们提出了以下解决方案 (使用 <a class="reference external" href="https://github.com/jacobperron/pc_pipe">this test program</a> 调试): <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6049">[待校准&#64;6049]</a></p>
-<p>Solution解决方案: Increase增加linux内核接收缓冲区的最大大小和Cyclone使用的最小套接字接收缓冲区大小。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6050">[待校准&#64;6050]</a></p>
+<h2>CycloneDDS调谐 <a class="reference external" href="http://localhost:3000/#/home?msgid=6047">[待校准&#64;6047]</a><a class="headerlink" href="#cyclone-dds-tuning" title="永久链接至标题"></a></h2>
+<p>Issue问题: 尽管使用了可靠的设置并通过有线网络传输，但CycloneDDS无法可靠地传递大消息。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6048">[待校准&#64;6048]</a></p>
+<p>这个问题应该是 <a class="reference external" href="https://github.com/eclipse-cyclonedds/cyclonedds/issues/484">addressed soon</a> 。在此之前，我们提出了以下解决方案 (使用 <a class="reference external" href="https://github.com/jacobperron/pc_pipe">this test program</a> 调试): <a class="reference external" href="http://localhost:3000/#/home?msgid=6049">[待校准&#64;6049]</a></p>
+<p>Solution解决方案: Increase增加linux内核接收缓冲区的最大大小和Cyclone使用的最小套接字接收缓冲区大小。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6050">[待校准&#64;6050]</a></p>
 <p><em>Adjustments to solve for a 9MB message:</em></p>
-<p>通过运行以下命令设置最大接收缓冲区大小 <code class="docutils literal notranslate"><span class="pre">rmem_max</span></code> : <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6052">[待校准&#64;6052]</a></p>
+<p>通过运行以下命令设置最大接收缓冲区大小 <code class="docutils literal notranslate"><span class="pre">rmem_max</span></code> : <a class="reference external" href="http://localhost:3000/#/home?msgid=6052">[待校准&#64;6052]</a></p>
 <blockquote>
 <div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sudo sysctl -w net.core.rmem_max=2147483647</span>
 </pre></div>
 </div>
 </div></blockquote>
-<p>或者通过将 <code class="docutils literal notranslate"><span class="pre">/etc/sysctl.d/10-cyclone-max.conf</span></code> 文件编辑为包含以下内容来永久设置它: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6053">[待校准&#64;6053]</a></p>
+<p>或者通过将 <code class="docutils literal notranslate"><span class="pre">/etc/sysctl.d/10-cyclone-max.conf</span></code> 文件编辑为包含以下内容来永久设置它: <a class="reference external" href="http://localhost:3000/#/home?msgid=6053">[待校准&#64;6053]</a></p>
 <blockquote>
 <div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">net.core.rmem_max=2147483647</span>
 </pre></div>
 </div>
 </div></blockquote>
-<p>接下来，要设置Cyclone请求的最小套接字接收缓冲区大小，请编写一个配置文件供Cyclone在启动时使用，如下所示: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6054">[待校准&#64;6054]</a></p>
+<p>接下来，要设置Cyclone请求的最小套接字接收缓冲区大小，请编写一个配置文件供Cyclone在启动时使用，如下所示: <a class="reference external" href="http://localhost:3000/#/home?msgid=6054">[待校准&#64;6054]</a></p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span>
 <span class="nt">&lt;CycloneDDS</span> <span class="na">xmlns=</span><span class="s">&quot;https://cdds.io/config&quot;</span> <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span> <span class="na">xsi:schemaLocation=</span><span class="s">&quot;https://cdds.io/config</span>
 <span class="s">https://raw.githubusercontent.com/eclipse-cyclonedds/cyclonedds/master/etc/cyclonedds.xsd&quot;</span><span class="nt">&gt;</span>
@@ -356,27 +356,27 @@
 <span class="nt">&lt;/CycloneDDS&gt;</span>
 </pre></div>
 </div>
-<p>然后，无论何时运行节点，都要设置以下环境变量: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6055">[待校准&#64;6055]</a></p>
+<p>然后，无论何时运行节点，都要设置以下环境变量: <a class="reference external" href="http://localhost:3000/#/home?msgid=6055">[待校准&#64;6055]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">CYCLONEDDS_URI=file:///absolute/path/to/config_file.xml</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="rti-connext-tuning">
-<h2>RTI Connext调谐 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6056">[待校准&#64;6056]</a><a class="headerlink" href="#rti-connext-tuning" title="永久链接至标题"></a></h2>
-<p>Issue问题: con尽管使用了可靠的设置并通过有线网络传输，但Connext无法可靠地传递大消息。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6057">[待校准&#64;6057]</a></p>
+<h2>RTI Connext调谐 <a class="reference external" href="http://localhost:3000/#/home?msgid=6056">[待校准&#64;6056]</a><a class="headerlink" href="#rti-connext-tuning" title="永久链接至标题"></a></h2>
+<p>Issue问题: con尽管使用了可靠的设置并通过有线网络传输，但Connext无法可靠地传递大消息。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6057">[待校准&#64;6057]</a></p>
 <p><strong>Solution:</strong> This <a class="reference external" href="https://github.com/jacobperron/pc_pipe/blob/master/etc/ROS2TEST_QOS_PROFILES.xml">Connext QoS profile</a>, along with increasing the <code class="docutils literal notranslate"><span class="pre">rmem_max</span></code> parameter.</p>
-<p>通过运行以下命令设置最大接收缓冲区大小 <code class="docutils literal notranslate"><span class="pre">rmem_max</span></code> : <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6052">[待校准&#64;6052]</a></p>
+<p>通过运行以下命令设置最大接收缓冲区大小 <code class="docutils literal notranslate"><span class="pre">rmem_max</span></code> : <a class="reference external" href="http://localhost:3000/#/home?msgid=6052">[待校准&#64;6052]</a></p>
 <blockquote>
 <div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sudo sysctl -w net.core.rmem_max=4194304</span>
 </pre></div>
 </div>
 </div></blockquote>
-<p>通过在linux内核中将 <code class="docutils literal notranslate"><span class="pre">net.core.rmem_max</span></code> 调整到4mb，QoS配置文件可以产生真正可靠的行为。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6059">[待校准&#64;6059]</a></p>
-<p>这种配置已被证明可以通过SHMEM | UDPv4可靠地传递消息，并且仅在一台计算机上使用UDPv4。还使用4MB和20MB的 <code class="docutils literal notranslate"><span class="pre">rmem_max</span></code> 测试了多机配置 (两台机器连接1Gbps以太网)，无丢弃消息，平均消息传递时间分别为700毫秒和371毫秒。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6060">[待校准&#64;6060]</a></p>
-<p>在不配置内核的 <code class="docutils literal notranslate"><span class="pre">rmem_max</span></code> 的情况下，相同的Connext QoS配置文件最多需要12秒才能传送数据。然而，它总是至少设法完成交付。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6061">[待校准&#64;6061]</a></p>
+<p>通过在linux内核中将 <code class="docutils literal notranslate"><span class="pre">net.core.rmem_max</span></code> 调整到4mb，QoS配置文件可以产生真正可靠的行为。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6059">[待校准&#64;6059]</a></p>
+<p>这种配置已被证明可以通过SHMEM | UDPv4可靠地传递消息，并且仅在一台计算机上使用UDPv4。还使用4MB和20MB的 <code class="docutils literal notranslate"><span class="pre">rmem_max</span></code> 测试了多机配置 (两台机器连接1Gbps以太网)，无丢弃消息，平均消息传递时间分别为700毫秒和371毫秒。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6060">[待校准&#64;6060]</a></p>
+<p>在不配置内核的 <code class="docutils literal notranslate"><span class="pre">rmem_max</span></code> 的情况下，相同的Connext QoS配置文件最多需要12秒才能传送数据。然而，它总是至少设法完成交付。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6061">[待校准&#64;6061]</a></p>
 <p><strong>Solution:</strong> Use the <a class="reference external" href="https://github.com/jacobperron/pc_pipe/blob/master/etc/ROS2TEST_QOS_PROFILES.xml">Connext QoS profile</a> <em>without</em> adjusting <code class="docutils literal notranslate"><span class="pre">rmem_max</span></code>.</p>
-<p>Ros2test_qos_profile.Xml文件是使用RTI关于 <a class="reference external" href="https://community.rti.com/forum-topic/transfering-large-data-over-dds">configuring flow controllers</a> 的文档配置的。它有慢、中、快流量控制器 (见Connext QoS配置文件链接)。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6063">[待校准&#64;6063]</a></p>
-<p>介质流量控制器为我们的案例产生了最好的结果。然而，控制器仍然需要根据他们正在操作的特定机器/网络/环境进行调整。Connext流量控制器可用于调整带宽及其发送数据的侵略性，尽管一旦通过特定设置的带宽，性能将开始下降。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6064">[待校准&#64;6064]</a></p>
+<p>Ros2test_qos_profile.Xml文件是使用RTI关于 <a class="reference external" href="https://community.rti.com/forum-topic/transfering-large-data-over-dds">configuring flow controllers</a> 的文档配置的。它有慢、中、快流量控制器 (见Connext QoS配置文件链接)。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6063">[待校准&#64;6063]</a></p>
+<p>介质流量控制器为我们的案例产生了最好的结果。然而，控制器仍然需要根据他们正在操作的特定机器/网络/环境进行调整。Connext流量控制器可用于调整带宽及其发送数据的侵略性，尽管一旦通过特定设置的带宽，性能将开始下降。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6064">[待校准&#64;6064]</a></p>
 </div>
 </div>
 

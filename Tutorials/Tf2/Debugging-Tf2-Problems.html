@@ -248,7 +248,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../Related-Projects/Nvidia-ROS2-Projects.html">[需手动修复的语法]NVIDIAROS 2项目 [待校准&#64;6668]</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../Glossary.html">相关术语 `[小鱼&#64;1] http://dev.ros2.fishros.com/calibpage/#/home?msgid=1&gt;`_</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Glossary.html">术语表</a></li>
 </ul>
 
         </div>
@@ -280,12 +280,12 @@
 
 
   <div class="section" id="debugging-tf2-problems">
-<span id="debuggingtf2problems"></span><h1>调试tf2问题 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8396">[待校准&#64;8396]</a><a class="headerlink" href="#debugging-tf2-problems" title="永久链接至标题"></a></h1>
-<p>Goal目标: Learn了解如何使用系统方法调试tf2相关问题。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8397">[待校准&#64;8397]</a></p>
-<p>Tutorial教程级别: Advanced高级 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7643">[待校准&#64;7643]</a></p>
-<p>Time时间: 10 10分钟 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7452">[待校准&#64;7452]</a></p>
+<span id="debuggingtf2problems"></span><h1>调试tf2问题 <a class="reference external" href="http://localhost:3000/#/home?msgid=8396">[待校准&#64;8396]</a><a class="headerlink" href="#debugging-tf2-problems" title="永久链接至标题"></a></h1>
+<p>Goal目标: Learn了解如何使用系统方法调试tf2相关问题。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8397">[待校准&#64;8397]</a></p>
+<p>Tutorial教程级别: Advanced高级 <a class="reference external" href="http://localhost:3000/#/home?msgid=7643">[待校准&#64;7643]</a></p>
+<p>Time时间: 10 10分钟 <a class="reference external" href="http://localhost:3000/#/home?msgid=7452">[待校准&#64;7452]</a></p>
 <div class="contents local topic" id="contents">
-<p class="topic-title">内容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6715">[待校准&#64;6715]</a></p>
+<p class="topic-title">内容 <a class="reference external" href="http://localhost:3000/#/home?msgid=6715">[待校准&#64;6715]</a></p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#background" id="id1">背景 [待校准&#64;6716]</a></p></li>
 <li><p><a class="reference internal" href="#debugging-example" id="id2">调试示例 [待校准&#64;8399]</a></p>
@@ -300,24 +300,24 @@
 </ul>
 </div>
 <div class="section" id="background">
-<h2>背景 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6716">[待校准&#64;6716]</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
-<p>本教程将引导您完成调试典型tf2问题的步骤。它还将使用许多tf2调试工具，如 <code class="docutils literal notranslate"><span class="pre">tf2_echo</span></code> 、 <code class="docutils literal notranslate"><span class="pre">tf2_monitor</span></code> 和 <code class="docutils literal notranslate"><span class="pre">view_frames</span></code> 。本教程假设您已经完成了 <a class="reference internal" href="Tf2-Main.html"><span class="doc">learning tf2</span></a> 教程。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8398">[待校准&#64;8398]</a></p>
+<h2>背景 <a class="reference external" href="http://localhost:3000/#/home?msgid=6716">[待校准&#64;6716]</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
+<p>本教程将引导您完成调试典型tf2问题的步骤。它还将使用许多tf2调试工具，如 <code class="docutils literal notranslate"><span class="pre">tf2_echo</span></code> 、 <code class="docutils literal notranslate"><span class="pre">tf2_monitor</span></code> 和 <code class="docutils literal notranslate"><span class="pre">view_frames</span></code> 。本教程假设您已经完成了 <a class="reference internal" href="Tf2-Main.html"><span class="doc">learning tf2</span></a> 教程。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8398">[待校准&#64;8398]</a></p>
 </div>
 <div class="section" id="debugging-example">
-<h2>调试示例 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8399">[待校准&#64;8399]</a><a class="headerlink" href="#debugging-example" title="永久链接至标题"></a></h2>
+<h2>调试示例 <a class="reference external" href="http://localhost:3000/#/home?msgid=8399">[待校准&#64;8399]</a><a class="headerlink" href="#debugging-example" title="永久链接至标题"></a></h2>
 <div class="section" id="setting-and-starting-the-example">
-<h3>1设置并开始示例 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8400">[待校准&#64;8400]</a><a class="headerlink" href="#setting-and-starting-the-example" title="永久链接至标题"></a></h3>
-<p>在本教程中，我们将设置一个有许多问题的例程应用程序。本教程的目标是应用系统的方法来发现和解决这些问题。首先，让我们创建源文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8401">[待校准&#64;8401]</a></p>
-<p>转到我们在 <a class="reference internal" href="Tf2-Main.html"><span class="doc">tf2 tutorials</span></a>. Inside the `  <code class="xref any docutils literal notranslate"><span class="pre">src</span></code> 目录中创建的 <code class="docutils literal notranslate"><span class="pre">learning_tf2_cpp</span></code> 包，复制源文件 <code class="docutils literal notranslate"><span class="pre">turtle_tf2_listener.cpp</span></code> ，并将其重命名为 <code class="docutils literal notranslate"><span class="pre">turtle_tf2_listener_debug.cpp</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8402">[待校准&#64;8402]</a></p>
-<p>使用您喜欢的文本编辑器打开文件，并将第67行从 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8403">[待校准&#64;8403]</a></p>
+<h3>1设置并开始示例 <a class="reference external" href="http://localhost:3000/#/home?msgid=8400">[待校准&#64;8400]</a><a class="headerlink" href="#setting-and-starting-the-example" title="永久链接至标题"></a></h3>
+<p>在本教程中，我们将设置一个有许多问题的例程应用程序。本教程的目标是应用系统的方法来发现和解决这些问题。首先，让我们创建源文件。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8401">[待校准&#64;8401]</a></p>
+<p>转到我们在 <a class="reference internal" href="Tf2-Main.html"><span class="doc">tf2 tutorials</span></a>. Inside the `  <code class="xref any docutils literal notranslate"><span class="pre">src</span></code> 目录中创建的 <code class="docutils literal notranslate"><span class="pre">learning_tf2_cpp</span></code> 包，复制源文件 <code class="docutils literal notranslate"><span class="pre">turtle_tf2_listener.cpp</span></code> ，并将其重命名为 <code class="docutils literal notranslate"><span class="pre">turtle_tf2_listener_debug.cpp</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8402">[待校准&#64;8402]</a></p>
+<p>使用您喜欢的文本编辑器打开文件，并将第67行从 <a class="reference external" href="http://localhost:3000/#/home?msgid=8403">[待校准&#64;8403]</a></p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">to_frame_rel</span> <span class="o">=</span> <span class="s">&quot;turtle2&quot;</span><span class="p">;</span>
 </pre></div>
 </div>
-<p>到 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8404">[待校准&#64;8404]</a></p>
+<p>到 <a class="reference external" href="http://localhost:3000/#/home?msgid=8404">[待校准&#64;8404]</a></p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">to_frame_rel</span> <span class="o">=</span> <span class="s">&quot;turtle3&quot;</span><span class="p">;</span>
 </pre></div>
 </div>
-<p>并将第75-79行中的 <code class="docutils literal notranslate"><span class="pre">lookupTransform()</span></code> 调用从 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8405">[待校准&#64;8405]</a></p>
+<p>并将第75-79行中的 <code class="docutils literal notranslate"><span class="pre">lookupTransform()</span></code> 调用从 <a class="reference external" href="http://localhost:3000/#/home?msgid=8405">[待校准&#64;8405]</a></p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">try</span> <span class="p">{</span>
    <span class="n">transformStamped</span> <span class="o">=</span> <span class="n">tf_buffer_</span><span class="o">-&gt;</span><span class="n">lookupTransform</span><span class="p">(</span>
      <span class="n">toFrameRel</span><span class="p">,</span>
@@ -326,7 +326,7 @@
 <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">tf2</span><span class="o">::</span><span class="n">TransformException</span> <span class="o">&amp;</span> <span class="n">ex</span><span class="p">)</span> <span class="p">{</span>
 </pre></div>
 </div>
-<p>到 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8404">[待校准&#64;8404]</a></p>
+<p>到 <a class="reference external" href="http://localhost:3000/#/home?msgid=8404">[待校准&#64;8404]</a></p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">try</span> <span class="p">{</span>
    <span class="n">transformStamped</span> <span class="o">=</span> <span class="n">tf_buffer_</span><span class="o">-&gt;</span><span class="n">lookupTransform</span><span class="p">(</span>
      <span class="n">toFrameRel</span><span class="p">,</span>
@@ -335,7 +335,7 @@
 <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">tf2</span><span class="o">::</span><span class="n">TransformException</span> <span class="o">&amp;</span> <span class="n">ex</span><span class="p">)</span> <span class="p">{</span>
 </pre></div>
 </div>
-<p>并保存对文件的更改。为了运行此例程，我们需要创建launch文件 <code class="docutils literal notranslate"><span class="pre">start_tf2_debug_demo.launch.py</span></code> 在 <code class="docutils literal notranslate"><span class="pre">launch</span></code> 子目录包装 <code class="docutils literal notranslate"><span class="pre">learning_tf2_cpp</span></code> : <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8406">[待校准&#64;8406]</a></p>
+<p>并保存对文件的更改。为了运行此例程，我们需要创建launch文件 <code class="docutils literal notranslate"><span class="pre">start_tf2_debug_demo.launch.py</span></code> 在 <code class="docutils literal notranslate"><span class="pre">launch</span></code> 子目录包装 <code class="docutils literal notranslate"><span class="pre">learning_tf2_cpp</span></code> : <a class="reference external" href="http://localhost:3000/#/home?msgid=8406">[待校准&#64;8406]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">launch</span> <span class="kn">import</span> <span class="n">LaunchDescription</span>
 <span class="kn">from</span> <span class="nn">launch.actions</span> <span class="kn">import</span> <span class="n">DeclareLaunchArgument</span>
 <span class="kn">from</span> <span class="nn">launch.substitutions</span> <span class="kn">import</span> <span class="n">LaunchConfiguration</span>
@@ -381,16 +381,16 @@
    <span class="p">])</span>
 </pre></div>
 </div>
-<p>不要忘记将 <code class="docutils literal notranslate"><span class="pre">turtle_tf2_listener_debug</span></code> 可执行文件添加到 <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> 中并构建包。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8407">[待校准&#64;8407]</a></p>
-<p>现在让我们运行它，看看会发生什么: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8408">[待校准&#64;8408]</a></p>
+<p>不要忘记将 <code class="docutils literal notranslate"><span class="pre">turtle_tf2_listener_debug</span></code> 可执行文件添加到 <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> 中并构建包。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8407">[待校准&#64;8407]</a></p>
+<p>现在让我们运行它，看看会发生什么: <a class="reference external" href="http://localhost:3000/#/home?msgid=8408">[待校准&#64;8408]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 launch learning_tf2_cpp start_tf2_debug_demo.launch.py</span>
 </pre></div>
 </div>
-<p>你现在会看到turtlesim出现了。同时，如果你运行 <code class="docutils literal notranslate"><span class="pre">turtle_teleop_key</span></code> 在另一个终端窗口，可以使用箭头键来驱动 <code class="docutils literal notranslate"><span class="pre">turtle1</span></code> 周围。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8409">[待校准&#64;8409]</a></p>
+<p>你现在会看到turtlesim出现了。同时，如果你运行 <code class="docutils literal notranslate"><span class="pre">turtle_teleop_key</span></code> 在另一个终端窗口，可以使用箭头键来驱动 <code class="docutils literal notranslate"><span class="pre">turtle1</span></code> 周围。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8409">[待校准&#64;8409]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run turtlesim turtle_teleop_key</span>
 </pre></div>
 </div>
-<p>你也会注意到在左下角有第二只乌龟。如果例程能够正常工作，那么第二只乌龟应该跟随你可以用箭头键命令的乌龟。然而，情况并非如此，因为我们必须首先解决一些问题。您应注意以下消息: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8410">[待校准&#64;8410]</a></p>
+<p>你也会注意到在左下角有第二只乌龟。如果例程能够正常工作，那么第二只乌龟应该跟随你可以用箭头键命令的乌龟。然而，情况并非如此，因为我们必须首先解决一些问题。您应注意以下消息: <a class="reference external" href="http://localhost:3000/#/home?msgid=8410">[待校准&#64;8410]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">[turtle_tf2_listener_debug-4] [INFO] [1630223454.942322623] [listener_debug]: Could not</span>
 <span class="go">transform turtle3 to turtle1: &quot;turtle3&quot; passed to lookupTransform argument target_frame</span>
 <span class="go">does not exist</span>
@@ -398,12 +398,12 @@
 </div>
 </div>
 <div class="section" id="finding-the-tf2-request">
-<h3>2查找tf2请求 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8411">[待校准&#64;8411]</a><a class="headerlink" href="#finding-the-tf2-request" title="永久链接至标题"></a></h3>
-<p>首先，我们需要找出我们到底要求tf2做什么。因此，我们进入使用tf2的代码部分。打开 <code class="docutils literal notranslate"><span class="pre">src/turtle_tf2_listener_debug.cpp</span></code> 文件，看看第67行: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8412">[待校准&#64;8412]</a></p>
+<h3>2查找tf2请求 <a class="reference external" href="http://localhost:3000/#/home?msgid=8411">[待校准&#64;8411]</a><a class="headerlink" href="#finding-the-tf2-request" title="永久链接至标题"></a></h3>
+<p>首先，我们需要找出我们到底要求tf2做什么。因此，我们进入使用tf2的代码部分。打开 <code class="docutils literal notranslate"><span class="pre">src/turtle_tf2_listener_debug.cpp</span></code> 文件，看看第67行: <a class="reference external" href="http://localhost:3000/#/home?msgid=8412">[待校准&#64;8412]</a></p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">to_frame_rel</span> <span class="o">=</span> <span class="s">&quot;turtle3&quot;</span><span class="p">;</span>
 </pre></div>
 </div>
-<p>第75-79行: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8413">[待校准&#64;8413]</a></p>
+<p>第75-79行: <a class="reference external" href="http://localhost:3000/#/home?msgid=8413">[待校准&#64;8413]</a></p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">try</span> <span class="p">{</span>
    <span class="n">transformStamped</span> <span class="o">=</span> <span class="n">tf_buffer_</span><span class="o">-&gt;</span><span class="n">lookupTransform</span><span class="p">(</span>
      <span class="n">toFrameRel</span><span class="p">,</span>
@@ -412,33 +412,33 @@
 <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">tf2</span><span class="o">::</span><span class="n">TransformException</span> <span class="o">&amp;</span> <span class="n">ex</span><span class="p">)</span> <span class="p">{</span>
 </pre></div>
 </div>
-<p>在这里，我们对tf2进行实际请求。这三个论点直接告诉我们我们在问tf2什么: 在时间 <code class="docutils literal notranslate"><span class="pre">now</span></code> 时从帧 <code class="docutils literal notranslate"><span class="pre">turtle3</span></code> 转换到帧 <code class="docutils literal notranslate"><span class="pre">turtle1</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8414">[待校准&#64;8414]</a></p>
-<p>现在，让我们看看为什么对tf2的请求失败。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8415">[待校准&#64;8415]</a></p>
+<p>在这里，我们对tf2进行实际请求。这三个论点直接告诉我们我们在问tf2什么: 在时间 <code class="docutils literal notranslate"><span class="pre">now</span></code> 时从帧 <code class="docutils literal notranslate"><span class="pre">turtle3</span></code> 转换到帧 <code class="docutils literal notranslate"><span class="pre">turtle1</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8414">[待校准&#64;8414]</a></p>
+<p>现在，让我们看看为什么对tf2的请求失败。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8415">[待校准&#64;8415]</a></p>
 </div>
 <div class="section" id="checking-the-frames">
-<h3>3检查帧 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8416">[待校准&#64;8416]</a><a class="headerlink" href="#checking-the-frames" title="永久链接至标题"></a></h3>
-<p>首先，为了找出tf2是否知道我们在 <code class="docutils literal notranslate"><span class="pre">turtle3</span></code> 和 <code class="docutils literal notranslate"><span class="pre">turtle1</span></code> 之间的转换，我们将使用 <code class="docutils literal notranslate"><span class="pre">tf2_echo</span></code> 工具。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8417">[待校准&#64;8417]</a></p>
+<h3>3检查帧 <a class="reference external" href="http://localhost:3000/#/home?msgid=8416">[待校准&#64;8416]</a><a class="headerlink" href="#checking-the-frames" title="永久链接至标题"></a></h3>
+<p>首先，为了找出tf2是否知道我们在 <code class="docutils literal notranslate"><span class="pre">turtle3</span></code> 和 <code class="docutils literal notranslate"><span class="pre">turtle1</span></code> 之间的转换，我们将使用 <code class="docutils literal notranslate"><span class="pre">tf2_echo</span></code> 工具。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8417">[待校准&#64;8417]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run tf2_ros tf2_echo turtle3 turtle1</span>
 </pre></div>
 </div>
-<p>输出告诉我们帧 <code class="docutils literal notranslate"><span class="pre">turtle3</span></code> 不存在: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8418">[待校准&#64;8418]</a></p>
+<p>输出告诉我们帧 <code class="docutils literal notranslate"><span class="pre">turtle3</span></code> 不存在: <a class="reference external" href="http://localhost:3000/#/home?msgid=8418">[待校准&#64;8418]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">[INFO] [1630223557.477636052] [tf2_echo]: Waiting for transform turtle3 -&gt;  turtle1:</span>
 <span class="go">Invalid frame ID &quot;turtle3&quot; passed to canTransform argument target_frame - frame does</span>
 <span class="go">not exist</span>
 </pre></div>
 </div>
-<p>那么存在哪些帧？如果你想得到这个的图形表示，使用 <code class="docutils literal notranslate"><span class="pre">view_frames</span></code> 工具。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8419">[待校准&#64;8419]</a></p>
+<p>那么存在哪些帧？如果你想得到这个的图形表示，使用 <code class="docutils literal notranslate"><span class="pre">view_frames</span></code> 工具。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8419">[待校准&#64;8419]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run tf2_tools view_frames</span>
 </pre></div>
 </div>
-<p>打开生成的 <code class="docutils literal notranslate"><span class="pre">frames.pdf</span></code> 文件，查看以下输出: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8420">[待校准&#64;8420]</a></p>
+<p>打开生成的 <code class="docutils literal notranslate"><span class="pre">frames.pdf</span></code> 文件，查看以下输出: <a class="reference external" href="http://localhost:3000/#/home?msgid=8420">[待校准&#64;8420]</a></p>
 <img alt="../../_images/turtlesim_frames.png" src="../../_images/turtlesim_frames.png" />
-<p>所以很明显，问题是我们要求从帧 <code class="docutils literal notranslate"><span class="pre">turtle3</span></code> 转换，这是不存在的。要修复这个错误，只需在第67行用 <code class="docutils literal notranslate"><span class="pre">turtle2</span></code> 替换 <code class="docutils literal notranslate"><span class="pre">turtle3</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8421">[待校准&#64;8421]</a></p>
-<p>现在停止正在运行的例程，构建它，然后再次运行它: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8422">[待校准&#64;8422]</a></p>
+<p>所以很明显，问题是我们要求从帧 <code class="docutils literal notranslate"><span class="pre">turtle3</span></code> 转换，这是不存在的。要修复这个错误，只需在第67行用 <code class="docutils literal notranslate"><span class="pre">turtle2</span></code> 替换 <code class="docutils literal notranslate"><span class="pre">turtle3</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8421">[待校准&#64;8421]</a></p>
+<p>现在停止正在运行的例程，构建它，然后再次运行它: <a class="reference external" href="http://localhost:3000/#/home?msgid=8422">[待校准&#64;8422]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 launch turtle_tf2 start_debug_demo.launch.py</span>
 </pre></div>
 </div>
-<p>我们马上遇到了下一个问题: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8423">[待校准&#64;8423]</a></p>
+<p>我们马上遇到了下一个问题: <a class="reference external" href="http://localhost:3000/#/home?msgid=8423">[待校准&#64;8423]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">[turtle_tf2_listener_debug-4] [INFO] [1630223704.617382464] [listener_debug]: Could not</span>
 <span class="go">transform turtle2 to turtle1: Lookup would require extrapolation into the future. Requested</span>
 <span class="go">time 1630223704.617054 but the latest data is at time 1630223704.616726, when looking up</span>
@@ -447,12 +447,12 @@
 </div>
 </div>
 <div class="section" id="checking-the-timestamp">
-<h3>4检查时间戳 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8424">[待校准&#64;8424]</a><a class="headerlink" href="#checking-the-timestamp" title="永久链接至标题"></a></h3>
-<p>既然我们解决了帧名称问题，现在是时候查看时间戳了。请记住，我们正试图得到当前 <code class="docutils literal notranslate"><span class="pre">turtle2</span></code> 和 <code class="docutils literal notranslate"><span class="pre">turtle1</span></code> 之间的转变 (即 <code class="docutils literal notranslate"><span class="pre">now</span></code> )。要获取有关时间的统计信息，请使用相应的帧s调用 <code class="docutils literal notranslate"><span class="pre">tf2_monitor</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8425">[待校准&#64;8425]</a></p>
+<h3>4检查时间戳 <a class="reference external" href="http://localhost:3000/#/home?msgid=8424">[待校准&#64;8424]</a><a class="headerlink" href="#checking-the-timestamp" title="永久链接至标题"></a></h3>
+<p>既然我们解决了帧名称问题，现在是时候查看时间戳了。请记住，我们正试图得到当前 <code class="docutils literal notranslate"><span class="pre">turtle2</span></code> 和 <code class="docutils literal notranslate"><span class="pre">turtle1</span></code> 之间的转变 (即 <code class="docutils literal notranslate"><span class="pre">now</span></code> )。要获取有关时间的统计信息，请使用相应的帧s调用 <code class="docutils literal notranslate"><span class="pre">tf2_monitor</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8425">[待校准&#64;8425]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run tf2_ros tf2_monitor turtle2 turtle1</span>
 </pre></div>
 </div>
-<p>结果应该如下所示: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8426">[待校准&#64;8426]</a></p>
+<p>结果应该如下所示: <a class="reference external" href="http://localhost:3000/#/home?msgid=8426">[待校准&#64;8426]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">RESULTS: for turtle2 to turtle1</span>
 <span class="go">Chain is: turtle1</span>
 <span class="go">Net delay     avg = 0.00287347: max = 0.0167241</span>
@@ -464,7 +464,7 @@
 <span class="go">Node: &lt;no authority available&gt; 125.246 Hz, Average Delay: 0.000290237 Max Delay: 0.000786781</span>
 </pre></div>
 </div>
-<p>这里的关键部分是链条从 <code class="docutils literal notranslate"><span class="pre">turtle2</span></code> 到 <code class="docutils literal notranslate"><span class="pre">turtle1</span></code> 的延迟。输出显示平均延迟约为3毫秒。这意味着tf2只能在经过3毫秒后在海龟之间转换。所以，如果我们在3毫秒前要求tf2在海龟之间转换，而不是 <code class="docutils literal notranslate"><span class="pre">now</span></code> ，tf2有时会给我们一个答案。让我们将第75-79行更改为: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8427">[待校准&#64;8427]</a></p>
+<p>这里的关键部分是链条从 <code class="docutils literal notranslate"><span class="pre">turtle2</span></code> 到 <code class="docutils literal notranslate"><span class="pre">turtle1</span></code> 的延迟。输出显示平均延迟约为3毫秒。这意味着tf2只能在经过3毫秒后在海龟之间转换。所以，如果我们在3毫秒前要求tf2在海龟之间转换，而不是 <code class="docutils literal notranslate"><span class="pre">now</span></code> ，tf2有时会给我们一个答案。让我们将第75-79行更改为: <a class="reference external" href="http://localhost:3000/#/home?msgid=8427">[待校准&#64;8427]</a></p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">try</span> <span class="p">{</span>
    <span class="n">transformStamped</span> <span class="o">=</span> <span class="n">tf_buffer_</span><span class="o">-&gt;</span><span class="n">lookupTransform</span><span class="p">(</span>
      <span class="n">toFrameRel</span><span class="p">,</span>
@@ -473,13 +473,13 @@
 <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">tf2</span><span class="o">::</span><span class="n">TransformException</span> <span class="o">&amp;</span> <span class="n">ex</span><span class="p">)</span> <span class="p">{</span>
 </pre></div>
 </div>
-<p>在新代码中，我们要求在100毫秒前在海龟之间进行转换。通常使用更长的周期，只是为了确保转换将到达。停止例程，构建并运行: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8428">[待校准&#64;8428]</a></p>
+<p>在新代码中，我们要求在100毫秒前在海龟之间进行转换。通常使用更长的周期，只是为了确保转换将到达。停止例程，构建并运行: <a class="reference external" href="http://localhost:3000/#/home?msgid=8428">[待校准&#64;8428]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 launch turtle_tf2 start_debug_demo.launch.py</span>
 </pre></div>
 </div>
-<p>你应该终于看到乌龟动了! <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8429">[待校准&#64;8429]</a></p>
+<p>你应该终于看到乌龟动了! <a class="reference external" href="http://localhost:3000/#/home?msgid=8429">[待校准&#64;8429]</a></p>
 <img alt="../../_images/turtlesim_follow1.png" src="../../_images/turtlesim_follow1.png" />
-<p>我们做的最后一个解决方案并不是你真正想做的，只是为了确保那是我们的问题。真正的修复如下所示: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8430">[待校准&#64;8430]</a></p>
+<p>我们做的最后一个解决方案并不是你真正想做的，只是为了确保那是我们的问题。真正的修复如下所示: <a class="reference external" href="http://localhost:3000/#/home?msgid=8430">[待校准&#64;8430]</a></p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">try</span> <span class="p">{</span>
    <span class="n">transformStamped</span> <span class="o">=</span> <span class="n">tf_buffer_</span><span class="o">-&gt;</span><span class="n">lookupTransform</span><span class="p">(</span>
      <span class="n">toFrameRel</span><span class="p">,</span>
@@ -488,7 +488,7 @@
 <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">tf2</span><span class="o">::</span><span class="n">TransformException</span> <span class="o">&amp;</span> <span class="n">ex</span><span class="p">)</span> <span class="p">{</span>
 </pre></div>
 </div>
-<p>或者像这样: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8431">[待校准&#64;8431]</a></p>
+<p>或者像这样: <a class="reference external" href="http://localhost:3000/#/home?msgid=8431">[待校准&#64;8431]</a></p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">try</span> <span class="p">{</span>
    <span class="n">transformStamped</span> <span class="o">=</span> <span class="n">tf_buffer_</span><span class="o">-&gt;</span><span class="n">lookupTransform</span><span class="p">(</span>
      <span class="n">toFrameRel</span><span class="p">,</span>
@@ -497,7 +497,7 @@
 <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">tf2</span><span class="o">::</span><span class="n">TransformException</span> <span class="o">&amp;</span> <span class="n">ex</span><span class="p">)</span> <span class="p">{</span>
 </pre></div>
 </div>
-<p>您可以在 <a class="reference internal" href="Learning-About-Tf2-And-Time-Cpp.html"><span class="doc">Learning about tf2 and time</span></a> 教程中了解更多关于超时的信息，并如下所示使用它们: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8432">[待校准&#64;8432]</a></p>
+<p>您可以在 <a class="reference internal" href="Learning-About-Tf2-And-Time-Cpp.html"><span class="doc">Learning about tf2 and time</span></a> 教程中了解更多关于超时的信息，并如下所示使用它们: <a class="reference external" href="http://localhost:3000/#/home?msgid=8432">[待校准&#64;8432]</a></p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">try</span> <span class="p">{</span>
    <span class="n">transformStamped</span> <span class="o">=</span> <span class="n">tf_buffer_</span><span class="o">-&gt;</span><span class="n">lookupTransform</span><span class="p">(</span>
      <span class="n">toFrameRel</span><span class="p">,</span>
@@ -510,8 +510,8 @@
 </div>
 </div>
 <div class="section" id="summary">
-<h2>总结 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6747">[待校准&#64;6747]</a><a class="headerlink" href="#summary" title="永久链接至标题"></a></h2>
-<p>在本教程中，您学习了如何使用系统方法调试tf2相关问题。您还学习了如何使用tf2调试工具，如 <code class="docutils literal notranslate"><span class="pre">tf2_echo</span></code> 、 <code class="docutils literal notranslate"><span class="pre">tf2_monitor</span></code> 和 <code class="docutils literal notranslate"><span class="pre">view_frames</span></code> ，来帮助您调试这些tf2问题。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8433">[待校准&#64;8433]</a></p>
+<h2>总结 <a class="reference external" href="http://localhost:3000/#/home?msgid=6747">[待校准&#64;6747]</a><a class="headerlink" href="#summary" title="永久链接至标题"></a></h2>
+<p>在本教程中，您学习了如何使用系统方法调试tf2相关问题。您还学习了如何使用tf2调试工具，如 <code class="docutils literal notranslate"><span class="pre">tf2_echo</span></code> 、 <code class="docutils literal notranslate"><span class="pre">tf2_monitor</span></code> 和 <code class="docutils literal notranslate"><span class="pre">view_frames</span></code> ，来帮助您调试这些tf2问题。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8433">[待校准&#64;8433]</a></p>
 </div>
 </div>
 

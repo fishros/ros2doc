@@ -248,7 +248,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Related-Projects/Nvidia-ROS2-Projects.html">[需手动修复的语法]NVIDIAROS 2项目 [待校准&#64;6668]</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../Glossary.html">相关术语 `[小鱼&#64;1] http://dev.ros2.fishros.com/calibpage/#/home?msgid=1&gt;`_</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Glossary.html">术语表</a></li>
 </ul>
 
         </div>
@@ -280,24 +280,24 @@
 
 
   <div class="section" id="building-rqt-from-source-on-macos">
-<h1>在macOS上从源文件构建RQt <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6459">[待校准&#64;6459]</a><a class="headerlink" href="#building-rqt-from-source-on-macos" title="永久链接至标题"></a></h1>
-<p>本页提供了在macOS上从源文件构建RQt的具体信息。在继续进行 <a class="reference internal" href="RQt-Source-Install.html"><span class="doc">RQt Source Install</span></a> 页面之前，请遵循这些说明。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6460">[待校准&#64;6460]</a></p>
+<h1>在macOS上从源文件构建RQt <a class="reference external" href="http://localhost:3000/#/home?msgid=6459">[待校准&#64;6459]</a><a class="headerlink" href="#building-rqt-from-source-on-macos" title="永久链接至标题"></a></h1>
+<p>本页提供了在macOS上从源文件构建RQt的具体信息。在继续进行 <a class="reference internal" href="RQt-Source-Install.html"><span class="doc">RQt Source Install</span></a> 页面之前，请遵循这些说明。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6460">[待校准&#64;6460]</a></p>
 <div class="section" id="system-requirements">
-<h2>系统要求 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6436">[待校准&#64;6436]</a><a class="headerlink" href="#system-requirements" title="永久链接至标题"></a></h2>
-<p>RQt在macOS 10.12上受支持，但10.13似乎也可以工作。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6461">[待校准&#64;6461]</a></p>
+<h2>系统要求 <a class="reference external" href="http://localhost:3000/#/home?msgid=6436">[待校准&#64;6436]</a><a class="headerlink" href="#system-requirements" title="永久链接至标题"></a></h2>
+<p>RQt在macOS 10.12上受支持，但10.13似乎也可以工作。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6461">[待校准&#64;6461]</a></p>
 </div>
 <div class="section" id="dependencies">
-<h2>依赖关系 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6462">[待校准&#64;6462]</a><a class="headerlink" href="#dependencies" title="永久链接至标题"></a></h2>
-<p>RQt包的主要依赖项是sip和pyqt5。将来可能会支持PySide2。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6463">[待校准&#64;6463]</a></p>
+<h2>依赖关系 <a class="reference external" href="http://localhost:3000/#/home?msgid=6462">[待校准&#64;6462]</a><a class="headerlink" href="#dependencies" title="永久链接至标题"></a></h2>
+<p>RQt包的主要依赖项是sip和pyqt5。将来可能会支持PySide2。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6463">[待校准&#64;6463]</a></p>
 <div class="section" id="install-dependencies">
-<h3>安装依赖项 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5926">[待校准&#64;5926]</a><a class="headerlink" href="#install-dependencies" title="永久链接至标题"></a></h3>
+<h3>安装依赖项 <a class="reference external" href="http://localhost:3000/#/home?msgid=5926">[待校准&#64;5926]</a><a class="headerlink" href="#install-dependencies" title="永久链接至标题"></a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ brew install sip pyqt5
 $ brew install graphviz
 $ python3 -m pip install pygraphviz pydot
 $ brew link --force qt
 </pre></div>
 </div>
-<p>这是最快的解决方案，但在升级Qt或其他包期望Qt 4时可能会引起问题。另一个选择是更新您的 <code class="docutils literal notranslate"><span class="pre">PATH</span></code> 和 <code class="docutils literal notranslate"><span class="pre">CMAKE_PREFIX_PATH</span></code> ，以包括Qt安装位置: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6464">[待校准&#64;6464]</a></p>
+<p>这是最快的解决方案，但在升级Qt或其他包期望Qt 4时可能会引起问题。另一个选择是更新您的 <code class="docutils literal notranslate"><span class="pre">PATH</span></code> 和 <code class="docutils literal notranslate"><span class="pre">CMAKE_PREFIX_PATH</span></code> ，以包括Qt安装位置: <a class="reference external" href="http://localhost:3000/#/home?msgid=6464">[待校准&#64;6464]</a></p>
 <blockquote>
 <div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span>brew --prefix qt<span class="k">)</span><span class="s2">/bin:</span><span class="nv">$PATH</span><span class="s2">&quot;</span>
 $ <span class="nb">export</span> <span class="nv">CMAKE_PREFIX_PATH</span><span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span>brew --prefix qt<span class="k">)</span><span class="s2">:</span><span class="nv">$CMAKE_PREFIX_PATH</span><span class="s2">&quot;</span>
@@ -307,8 +307,8 @@ $ <span class="nb">export</span> <span class="nv">CMAKE_PREFIX_PATH</span><span 
 </div>
 </div>
 <div class="section" id="install-rqt-by-source">
-<h2>通过源文件安装RQt <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6465">[待校准&#64;6465]</a><a class="headerlink" href="#install-rqt-by-source" title="永久链接至标题"></a></h2>
-<p>继续 <a class="reference internal" href="RQt-Source-Install.html"><span class="doc">RQt source install page</span></a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6466">[待校准&#64;6466]</a></p>
+<h2>通过源文件安装RQt <a class="reference external" href="http://localhost:3000/#/home?msgid=6465">[待校准&#64;6465]</a><a class="headerlink" href="#install-rqt-by-source" title="永久链接至标题"></a></h2>
+<p>继续 <a class="reference internal" href="RQt-Source-Install.html"><span class="doc">RQt source install page</span></a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6466">[待校准&#64;6466]</a></p>
 </div>
 </div>
 

@@ -248,7 +248,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../Related-Projects/Nvidia-ROS2-Projects.html">[需手动修复的语法]NVIDIAROS 2项目 [待校准&#64;6668]</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../Glossary.html">相关术语 `[小鱼&#64;1] http://dev.ros2.fishros.com/calibpage/#/home?msgid=1&gt;`_</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Glossary.html">术语表</a></li>
 </ul>
 
         </div>
@@ -279,12 +279,12 @@
 
 
   <div class="section" id="understanding-ros-2-services">
-<span id="ros2services"></span><h1>了解ROS 2服务 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8182">[待校准&#64;8182]</a><a class="headerlink" href="#understanding-ros-2-services" title="永久链接至标题"></a></h1>
-<p>Goal目标: Learn使用命令行工具了解ROS 2中的服务。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8183">[待校准&#64;8183]</a></p>
-<p>Tutorial教程级别: Beginner初学者 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7088">[待校准&#64;7088]</a></p>
-<p>Time时间: 10 10分钟 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7452">[待校准&#64;7452]</a></p>
+<span id="ros2services"></span><h1>了解ROS 2服务 <a class="reference external" href="http://localhost:3000/#/home?msgid=8182">[待校准&#64;8182]</a><a class="headerlink" href="#understanding-ros-2-services" title="永久链接至标题"></a></h1>
+<p>Goal目标: Learn使用命令行工具了解ROS 2中的服务。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8183">[待校准&#64;8183]</a></p>
+<p>Tutorial教程级别: Beginner初学者 <a class="reference external" href="http://localhost:3000/#/home?msgid=7088">[待校准&#64;7088]</a></p>
+<p>Time时间: 10 10分钟 <a class="reference external" href="http://localhost:3000/#/home?msgid=7452">[待校准&#64;7452]</a></p>
 <div class="contents local topic" id="contents">
-<p class="topic-title">内容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6715">[待校准&#64;6715]</a></p>
+<p class="topic-title">内容 <a class="reference external" href="http://localhost:3000/#/home?msgid=6715">[待校准&#64;6715]</a></p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#background" id="id1">背景 [待校准&#64;6716]</a></p></li>
 <li><p><a class="reference internal" href="#prerequisites" id="id2">先决条件 [待校准&#64;6718]</a></p></li>
@@ -304,34 +304,34 @@
 </ul>
 </div>
 <div class="section" id="background">
-<h2>背景 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6716">[待校准&#64;6716]</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
-<p>服务是ROS图中节点的另一种通讯方法。服务基于调用和响应模型，而不是话题的发布者-订阅者模型。而话题允许节点订阅数据流得到不断更新，服务提供数据时具体调用y调用由客户端。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8184">[待校准&#64;8184]</a></p>
+<h2>背景 <a class="reference external" href="http://localhost:3000/#/home?msgid=6716">[待校准&#64;6716]</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
+<p>服务是ROS图中节点的另一种通讯方法。服务基于调用和响应模型，而不是话题的发布者-订阅者模型。而话题允许节点订阅数据流得到不断更新，服务提供数据时具体调用y调用由客户端。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8184">[待校准&#64;8184]</a></p>
 <img alt="../../_images/Service-SingleServiceClient.gif" src="../../_images/Service-SingleServiceClient.gif" />
 <img alt="../../_images/Service-MultipleServiceClient.gif" src="../../_images/Service-MultipleServiceClient.gif" />
 </div>
 <div class="section" id="prerequisites">
-<h2>先决条件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6718">[待校准&#64;6718]</a><a class="headerlink" href="#prerequisites" title="永久链接至标题"></a></h2>
-<p>本教程中提到的一些概念，如 <a class="reference internal" href="../Understanding-ROS2-Nodes.html"><span class="doc">nodes</span></a> 和 <a class="reference internal" href="../Topics/Understanding-ROS2-Topics.html"><span class="doc">topics</span></a> ，在本系列的先前教程中有所介绍。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8185">[待校准&#64;8185]</a></p>
-<p>你需要 <a class="reference internal" href="../Turtlesim/Introducing-Turtlesim.html"><span class="doc">turtlesim package</span></a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8186">[待校准&#64;8186]</a></p>
-<p>和往常一样，不要忘记在 <a class="reference internal" href="../Configuring-ROS2-Environment.html"><span class="doc">every new terminal you open</span></a> 中源文件ROS 2。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7566">[待校准&#64;7566]</a></p>
+<h2>先决条件 <a class="reference external" href="http://localhost:3000/#/home?msgid=6718">[待校准&#64;6718]</a><a class="headerlink" href="#prerequisites" title="永久链接至标题"></a></h2>
+<p>本教程中提到的一些概念，如 <a class="reference internal" href="../Understanding-ROS2-Nodes.html"><span class="doc">nodes</span></a> 和 <a class="reference internal" href="../Topics/Understanding-ROS2-Topics.html"><span class="doc">topics</span></a> ，在本系列的先前教程中有所介绍。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8185">[待校准&#64;8185]</a></p>
+<p>你需要 <a class="reference internal" href="../Turtlesim/Introducing-Turtlesim.html"><span class="doc">turtlesim package</span></a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8186">[待校准&#64;8186]</a></p>
+<p>和往常一样，不要忘记在 <a class="reference internal" href="../Configuring-ROS2-Environment.html"><span class="doc">every new terminal you open</span></a> 中源文件ROS 2。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7566">[待校准&#64;7566]</a></p>
 </div>
 <div class="section" id="tasks">
-<h2>任务 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6725">[待校准&#64;6725]</a><a class="headerlink" href="#tasks" title="永久链接至标题"></a></h2>
+<h2>任务 <a class="reference external" href="http://localhost:3000/#/home?msgid=6725">[待校准&#64;6725]</a><a class="headerlink" href="#tasks" title="永久链接至标题"></a></h2>
 <div class="section" id="setup">
-<h3>1设置 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7567">[待校准&#64;7567]</a><a class="headerlink" href="#setup" title="永久链接至标题"></a></h3>
-<p>启动两个turtlesim节点， <code class="docutils literal notranslate"><span class="pre">/turtlesim</span></code> 和 <code class="docutils literal notranslate"><span class="pre">/teleop_turtle</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7815">[待校准&#64;7815]</a></p>
-<p>打开新终端并运行: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7339">[待校准&#64;7339]</a></p>
+<h3>1设置 <a class="reference external" href="http://localhost:3000/#/home?msgid=7567">[待校准&#64;7567]</a><a class="headerlink" href="#setup" title="永久链接至标题"></a></h3>
+<p>启动两个turtlesim节点， <code class="docutils literal notranslate"><span class="pre">/turtlesim</span></code> 和 <code class="docutils literal notranslate"><span class="pre">/teleop_turtle</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7815">[待校准&#64;7815]</a></p>
+<p>打开新终端并运行: <a class="reference external" href="http://localhost:3000/#/home?msgid=7339">[待校准&#64;7339]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run turtlesim turtlesim_node</span>
 </pre></div>
 </div>
-<p>打开另一个终端并运行: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7816">[待校准&#64;7816]</a></p>
+<p>打开另一个终端并运行: <a class="reference external" href="http://localhost:3000/#/home?msgid=7816">[待校准&#64;7816]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run turtlesim turtle_teleop_key</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="ros2-service-list">
-<h3>2 ros2服务列表 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8187">[待校准&#64;8187]</a><a class="headerlink" href="#ros2-service-list" title="永久链接至标题"></a></h3>
-<p>在新终端中运行 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">service</span> <span class="pre">list</span></code> 命令将返回系统中当前活动的所有服务的列表: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8188">[待校准&#64;8188]</a></p>
+<h3>2 ros2服务列表 <a class="reference external" href="http://localhost:3000/#/home?msgid=8187">[待校准&#64;8187]</a><a class="headerlink" href="#ros2-service-list" title="永久链接至标题"></a></h3>
+<p>在新终端中运行 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">service</span> <span class="pre">list</span></code> 命令将返回系统中当前活动的所有服务的列表: <a class="reference external" href="http://localhost:3000/#/home?msgid=8188">[待校准&#64;8188]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">/clear</span>
 <span class="go">/kill</span>
 <span class="go">/reset</span>
@@ -353,32 +353,32 @@
 <span class="go">/turtlesim/set_parameters_atomically</span>
 </pre></div>
 </div>
-<p>你将会看到两个节点都有相同的六个服务，它们的名字中有 <code class="docutils literal notranslate"><span class="pre">parameters</span></code> 。几乎ROS 2中的每个节点都有这些构建参数的基础设施服务。在下一个教程中将会有更多关于参数的信息。在本教程中，将在讨论中省略参数服务。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8189">[待校准&#64;8189]</a></p>
-<p>现在，让我们关注turtlesim特定服务， <code class="docutils literal notranslate"><span class="pre">/clear</span></code> ， <code class="docutils literal notranslate"><span class="pre">/kill</span></code> ， <code class="docutils literal notranslate"><span class="pre">/reset</span></code> ， <code class="docutils literal notranslate"><span class="pre">/spawn</span></code> ， <code class="docutils literal notranslate"><span class="pre">/turtle1/set_pen</span></code> ， <code class="docutils literal notranslate"><span class="pre">/turtle1/teleport_absolute</span></code> ， <code class="docutils literal notranslate"><span class="pre">/turtle1/teleport_relative</span></code> 。您可以在 <a class="reference internal" href="../Turtlesim/Introducing-Turtlesim.html"><span class="doc">“Introducing turtlesim and rqt”</span></a> 教程中使用rqt调用与其中一些服务的交互。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8190">[待校准&#64;8190]</a></p>
+<p>你将会看到两个节点都有相同的六个服务，它们的名字中有 <code class="docutils literal notranslate"><span class="pre">parameters</span></code> 。几乎ROS 2中的每个节点都有这些构建参数的基础设施服务。在下一个教程中将会有更多关于参数的信息。在本教程中，将在讨论中省略参数服务。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8189">[待校准&#64;8189]</a></p>
+<p>现在，让我们关注turtlesim特定服务， <code class="docutils literal notranslate"><span class="pre">/clear</span></code> ， <code class="docutils literal notranslate"><span class="pre">/kill</span></code> ， <code class="docutils literal notranslate"><span class="pre">/reset</span></code> ， <code class="docutils literal notranslate"><span class="pre">/spawn</span></code> ， <code class="docutils literal notranslate"><span class="pre">/turtle1/set_pen</span></code> ， <code class="docutils literal notranslate"><span class="pre">/turtle1/teleport_absolute</span></code> ， <code class="docutils literal notranslate"><span class="pre">/turtle1/teleport_relative</span></code> 。您可以在 <a class="reference internal" href="../Turtlesim/Introducing-Turtlesim.html"><span class="doc">“Introducing turtlesim and rqt”</span></a> 教程中使用rqt调用与其中一些服务的交互。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8190">[待校准&#64;8190]</a></p>
 </div>
 <div class="section" id="ros2-service-type">
-<h3>3 ros2服务类型 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8191">[待校准&#64;8191]</a><a class="headerlink" href="#ros2-service-type" title="永久链接至标题"></a></h3>
-<p>服务具有描述服务的请求和响应数据如何构造的类型。服务类型的定义与话题类型相似，除了服务类型有两个部分: 一个用于请求的消息，另一个用于响应。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8192">[待校准&#64;8192]</a></p>
-<p>要找出服务的类型，请使用以下命令: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8193">[待校准&#64;8193]</a></p>
+<h3>3 ros2服务类型 <a class="reference external" href="http://localhost:3000/#/home?msgid=8191">[待校准&#64;8191]</a><a class="headerlink" href="#ros2-service-type" title="永久链接至标题"></a></h3>
+<p>服务具有描述服务的请求和响应数据如何构造的类型。服务类型的定义与话题类型相似，除了服务类型有两个部分: 一个用于请求的消息，另一个用于响应。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8192">[待校准&#64;8192]</a></p>
+<p>要找出服务的类型，请使用以下命令: <a class="reference external" href="http://localhost:3000/#/home?msgid=8193">[待校准&#64;8193]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 service type &lt;service_name&gt;</span>
 </pre></div>
 </div>
-<p>让我们来看看turtlesim的 <code class="docutils literal notranslate"><span class="pre">/clear</span></code> 服务。在新终端中，输入命令: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8194">[待校准&#64;8194]</a></p>
+<p>让我们来看看turtlesim的 <code class="docutils literal notranslate"><span class="pre">/clear</span></code> 服务。在新终端中，输入命令: <a class="reference external" href="http://localhost:3000/#/home?msgid=8194">[待校准&#64;8194]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 service type /clear</span>
 </pre></div>
 </div>
-<p>应该返回: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8195">[待校准&#64;8195]</a></p>
+<p>应该返回: <a class="reference external" href="http://localhost:3000/#/home?msgid=8195">[待校准&#64;8195]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">std_srvs/srv/Empty</span>
 </pre></div>
 </div>
-<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">Empty</span></code> 类型是指服务调用在发出请求时不发送任何数据，在收到响应时不接收任何数据。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8196">[待校准&#64;8196]</a></p>
+<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">Empty</span></code> 类型是指服务调用在发出请求时不发送任何数据，在收到响应时不接收任何数据。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8196">[待校准&#64;8196]</a></p>
 <div class="section" id="ros2-service-list-t">
-<h4>3.1 ros2服务列表-t <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8197">[待校准&#64;8197]</a><a class="headerlink" href="#ros2-service-list-t" title="永久链接至标题"></a></h4>
-<p>要同时查看所有活动服务的类型，您可以将 <code class="docutils literal notranslate"><span class="pre">--show-types</span></code> 选项 (缩写为 <code class="docutils literal notranslate"><span class="pre">-t</span></code> ) 附加到 <code class="docutils literal notranslate"><span class="pre">list</span></code> 命令中: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8198">[待校准&#64;8198]</a></p>
+<h4>3.1 ros2服务列表-t <a class="reference external" href="http://localhost:3000/#/home?msgid=8197">[待校准&#64;8197]</a><a class="headerlink" href="#ros2-service-list-t" title="永久链接至标题"></a></h4>
+<p>要同时查看所有活动服务的类型，您可以将 <code class="docutils literal notranslate"><span class="pre">--show-types</span></code> 选项 (缩写为 <code class="docutils literal notranslate"><span class="pre">-t</span></code> ) 附加到 <code class="docutils literal notranslate"><span class="pre">list</span></code> 命令中: <a class="reference external" href="http://localhost:3000/#/home?msgid=8198">[待校准&#64;8198]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 service list -t</span>
 </pre></div>
 </div>
-<p>它将返回: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8090">[待校准&#64;8090]</a></p>
+<p>它将返回: <a class="reference external" href="http://localhost:3000/#/home?msgid=8090">[待校准&#64;8090]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">/clear [std_srvs/srv/Empty]</span>
 <span class="go">/kill [turtlesim/srv/Kill]</span>
 <span class="go">/reset [std_srvs/srv/Empty]</span>
@@ -393,42 +393,42 @@
 </div>
 </div>
 <div class="section" id="ros2-service-find">
-<h3>4 ros2服务查找 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8199">[待校准&#64;8199]</a><a class="headerlink" href="#ros2-service-find" title="永久链接至标题"></a></h3>
-<p>如果要查找特定类型的所有服务，可以使用以下命令: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8200">[待校准&#64;8200]</a></p>
+<h3>4 ros2服务查找 <a class="reference external" href="http://localhost:3000/#/home?msgid=8199">[待校准&#64;8199]</a><a class="headerlink" href="#ros2-service-find" title="永久链接至标题"></a></h3>
+<p>如果要查找特定类型的所有服务，可以使用以下命令: <a class="reference external" href="http://localhost:3000/#/home?msgid=8200">[待校准&#64;8200]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 service find &lt;type_name&gt;</span>
 </pre></div>
 </div>
-<p>例如，您可以找到所有 <code class="docutils literal notranslate"><span class="pre">Empty</span></code> 类型化服务，如下所示: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8201">[待校准&#64;8201]</a></p>
+<p>例如，您可以找到所有 <code class="docutils literal notranslate"><span class="pre">Empty</span></code> 类型化服务，如下所示: <a class="reference external" href="http://localhost:3000/#/home?msgid=8201">[待校准&#64;8201]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 service find std_srvs/srv/Empty</span>
 </pre></div>
 </div>
-<p>它将返回: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8090">[待校准&#64;8090]</a></p>
+<p>它将返回: <a class="reference external" href="http://localhost:3000/#/home?msgid=8090">[待校准&#64;8090]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">/clear</span>
 <span class="go">/reset</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="ros2-interface-show">
-<h3>5 ros2界面展示 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8202">[待校准&#64;8202]</a><a class="headerlink" href="#ros2-interface-show" title="永久链接至标题"></a></h3>
-<p>您可以从命令行调用服务，但首先需要了解输入参数的结构。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8203">[待校准&#64;8203]</a></p>
+<h3>5 ros2界面展示 <a class="reference external" href="http://localhost:3000/#/home?msgid=8202">[待校准&#64;8202]</a><a class="headerlink" href="#ros2-interface-show" title="永久链接至标题"></a></h3>
+<p>您可以从命令行调用服务，但首先需要了解输入参数的结构。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8203">[待校准&#64;8203]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 interface show &lt;type_name&gt;.srv</span>
 </pre></div>
 </div>
-<p>要对 <code class="docutils literal notranslate"><span class="pre">/clear</span></code> 服务的类型 <code class="docutils literal notranslate"><span class="pre">Empty</span></code> 运行此命令: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8204">[待校准&#64;8204]</a></p>
+<p>要对 <code class="docutils literal notranslate"><span class="pre">/clear</span></code> 服务的类型 <code class="docutils literal notranslate"><span class="pre">Empty</span></code> 运行此命令: <a class="reference external" href="http://localhost:3000/#/home?msgid=8204">[待校准&#64;8204]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 interface show std_srvs/srv/Empty.srv</span>
 </pre></div>
 </div>
-<p>它将返回: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8090">[待校准&#64;8090]</a></p>
+<p>它将返回: <a class="reference external" href="http://localhost:3000/#/home?msgid=8090">[待校准&#64;8090]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">---</span>
 </pre></div>
 </div>
-<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">---</span></code> 将请求结构 (上) 与响应结构 (下) 分开。但是，正如你之前所了解的， <code class="docutils literal notranslate"><span class="pre">Empty</span></code> 型不发送或接收任何数据。所以，自然地，它的结构是空白的。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8205">[待校准&#64;8205]</a></p>
-<p>让我们反思一个发送和接收数据类型的服务，比如 <code class="docutils literal notranslate"><span class="pre">/spawn</span></code> 。从 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">service</span> <span class="pre">list</span> <span class="pre">-t</span></code> 的结果，我们知道 <code class="docutils literal notranslate"><span class="pre">/spawn</span></code> 的类型是 <code class="docutils literal notranslate"><span class="pre">turtlesim/srv/Spawn</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8206">[待校准&#64;8206]</a></p>
-<p>要查看 <code class="docutils literal notranslate"><span class="pre">/spawn</span></code> 调用和请求中的参数，请运行以下命令: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8207">[待校准&#64;8207]</a></p>
+<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">---</span></code> 将请求结构 (上) 与响应结构 (下) 分开。但是，正如你之前所了解的， <code class="docutils literal notranslate"><span class="pre">Empty</span></code> 型不发送或接收任何数据。所以，自然地，它的结构是空白的。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8205">[待校准&#64;8205]</a></p>
+<p>让我们反思一个发送和接收数据类型的服务，比如 <code class="docutils literal notranslate"><span class="pre">/spawn</span></code> 。从 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">service</span> <span class="pre">list</span> <span class="pre">-t</span></code> 的结果，我们知道 <code class="docutils literal notranslate"><span class="pre">/spawn</span></code> 的类型是 <code class="docutils literal notranslate"><span class="pre">turtlesim/srv/Spawn</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8206">[待校准&#64;8206]</a></p>
+<p>要查看 <code class="docutils literal notranslate"><span class="pre">/spawn</span></code> 调用和请求中的参数，请运行以下命令: <a class="reference external" href="http://localhost:3000/#/home?msgid=8207">[待校准&#64;8207]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 interface show turtlesim/srv/Spawn</span>
 </pre></div>
 </div>
-<p>它将返回: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8090">[待校准&#64;8090]</a></p>
+<p>它将返回: <a class="reference external" href="http://localhost:3000/#/home?msgid=8090">[待校准&#64;8090]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">float32 x</span>
 <span class="go">float32 y</span>
 <span class="go">float32 theta</span>
@@ -437,50 +437,50 @@
 <span class="go">string name</span>
 </pre></div>
 </div>
-<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">---</span></code> 线上的信息告诉我们调用 <code class="docutils literal notranslate"><span class="pre">/spawn</span></code> 所需的参数。 <code class="docutils literal notranslate"><span class="pre">x</span></code> 、 <code class="docutils literal notranslate"><span class="pre">y</span></code> 和 <code class="docutils literal notranslate"><span class="pre">theta</span></code> 决定产卵海龟的位置， <code class="docutils literal notranslate"><span class="pre">name</span></code> 显然是可选的。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8208">[待校准&#64;8208]</a></p>
-<p>在这种情况下，行下的信息不是您需要知道的，但它可以帮助您理解从调用中获得的响应的数据类型。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8209">[待校准&#64;8209]</a></p>
+<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">---</span></code> 线上的信息告诉我们调用 <code class="docutils literal notranslate"><span class="pre">/spawn</span></code> 所需的参数。 <code class="docutils literal notranslate"><span class="pre">x</span></code> 、 <code class="docutils literal notranslate"><span class="pre">y</span></code> 和 <code class="docutils literal notranslate"><span class="pre">theta</span></code> 决定产卵海龟的位置， <code class="docutils literal notranslate"><span class="pre">name</span></code> 显然是可选的。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8208">[待校准&#64;8208]</a></p>
+<p>在这种情况下，行下的信息不是您需要知道的，但它可以帮助您理解从调用中获得的响应的数据类型。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8209">[待校准&#64;8209]</a></p>
 </div>
 <div class="section" id="ros2-service-call">
-<h3>6 ros2服务调用 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8210">[待校准&#64;8210]</a><a class="headerlink" href="#ros2-service-call" title="永久链接至标题"></a></h3>
-<p>既然您知道什么是服务类型，如何找到服务的类型，以及如何找到该类型参数的结构，您可以使用以下方法调用服务: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8211">[待校准&#64;8211]</a></p>
+<h3>6 ros2服务调用 <a class="reference external" href="http://localhost:3000/#/home?msgid=8210">[待校准&#64;8210]</a><a class="headerlink" href="#ros2-service-call" title="永久链接至标题"></a></h3>
+<p>既然您知道什么是服务类型，如何找到服务的类型，以及如何找到该类型参数的结构，您可以使用以下方法调用服务: <a class="reference external" href="http://localhost:3000/#/home?msgid=8211">[待校准&#64;8211]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 service call &lt;service_name&gt; &lt;service_type&gt; &lt;arguments&gt;</span>
 </pre></div>
 </div>
-<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">&lt;arguments&gt;</span></code> 部分是可选的。例如，您知道 <code class="docutils literal notranslate"><span class="pre">Empty</span></code> 类型化服务没有任何参数: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8212">[待校准&#64;8212]</a></p>
+<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">&lt;arguments&gt;</span></code> 部分是可选的。例如，您知道 <code class="docutils literal notranslate"><span class="pre">Empty</span></code> 类型化服务没有任何参数: <a class="reference external" href="http://localhost:3000/#/home?msgid=8212">[待校准&#64;8212]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 service call /clear std_srvs/srv/Empty</span>
 </pre></div>
 </div>
-<p>此命令将清除海龟绘制的任何线条的turtlesim窗口。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8213">[待校准&#64;8213]</a></p>
+<p>此命令将清除海龟绘制的任何线条的turtlesim窗口。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8213">[待校准&#64;8213]</a></p>
 <img alt="../../_images/clear.png" src="../../_images/clear.png" />
-<p>现在让我们通过调用 <code class="docutils literal notranslate"><span class="pre">/spawn</span></code> 并输入参数来产生一只新的乌龟。从命令行在服务调用中输入 <code class="docutils literal notranslate"><span class="pre">&lt;arguments&gt;</span></code> 需要采用YAML语法。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8214">[待校准&#64;8214]</a></p>
-<p>输入命令: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8115">[待校准&#64;8115]</a></p>
+<p>现在让我们通过调用 <code class="docutils literal notranslate"><span class="pre">/spawn</span></code> 并输入参数来产生一只新的乌龟。从命令行在服务调用中输入 <code class="docutils literal notranslate"><span class="pre">&lt;arguments&gt;</span></code> 需要采用YAML语法。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8214">[待校准&#64;8214]</a></p>
+<p>输入命令: <a class="reference external" href="http://localhost:3000/#/home?msgid=8115">[待校准&#64;8115]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 service call /spawn turtlesim/srv/Spawn &quot;{x: 2, y: 2, theta: 0.2, name: &#39;&#39;}&quot;</span>
 </pre></div>
 </div>
-<p>您将获得正在发生的事情的这种方法样式的视图，然后是服务响应: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8215">[待校准&#64;8215]</a></p>
+<p>您将获得正在发生的事情的这种方法样式的视图，然后是服务响应: <a class="reference external" href="http://localhost:3000/#/home?msgid=8215">[待校准&#64;8215]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">requester: making request: turtlesim.srv.Spawn_Request(x=2.0, y=2.0, theta=0.2, name=&#39;&#39;)</span>
 
 <span class="go">response:</span>
 <span class="go">turtlesim.srv.Spawn_Response(name=&#39;turtle2&#39;)</span>
 </pre></div>
 </div>
-<p>您的turtlesim窗口将立即更新新产生的海龟: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8216">[待校准&#64;8216]</a></p>
+<p>您的turtlesim窗口将立即更新新产生的海龟: <a class="reference external" href="http://localhost:3000/#/home?msgid=8216">[待校准&#64;8216]</a></p>
 <img alt="../../_images/spawn.png" src="../../_images/spawn.png" />
 </div>
 </div>
 <div class="section" id="summary">
-<h2>总结 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6747">[待校准&#64;6747]</a><a class="headerlink" href="#summary" title="永久链接至标题"></a></h2>
-<p>节点可以使用ROS 2中的服务进行通信。与话题不同 -- 一种单向通讯模式，其中一个节点发布可以被一个或多个订阅者使用的信息 -- 服务是一种请求/响应模式，其中客户端向提供服务的节点和服务处理请求并生成响应。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8217">[待校准&#64;8217]</a></p>
-<p>您通常不希望使用服务进行连续调用; 话题甚至动作都更适合。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8218">[待校准&#64;8218]</a></p>
-<p>在本教程中，您使用命令行工具来识别、详细说明和调用服务。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8219">[待校准&#64;8219]</a></p>
+<h2>总结 <a class="reference external" href="http://localhost:3000/#/home?msgid=6747">[待校准&#64;6747]</a><a class="headerlink" href="#summary" title="永久链接至标题"></a></h2>
+<p>节点可以使用ROS 2中的服务进行通信。与话题不同 -- 一种单向通讯模式，其中一个节点发布可以被一个或多个订阅者使用的信息 -- 服务是一种请求/响应模式，其中客户端向提供服务的节点和服务处理请求并生成响应。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8217">[待校准&#64;8217]</a></p>
+<p>您通常不希望使用服务进行连续调用; 话题甚至动作都更适合。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8218">[待校准&#64;8218]</a></p>
+<p>在本教程中，您使用命令行工具来识别、详细说明和调用服务。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8219">[待校准&#64;8219]</a></p>
 </div>
 <div class="section" id="next-steps">
-<h2>下一步 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6749">[待校准&#64;6749]</a><a class="headerlink" href="#next-steps" title="永久链接至标题"></a></h2>
-<p>在下一个教程中: doc:'//Parameters/Understanding-ROS2-Parameters'，您将学习如何配置节点设置。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8220">[待校准&#64;8220]</a></p>
+<h2>下一步 <a class="reference external" href="http://localhost:3000/#/home?msgid=6749">[待校准&#64;6749]</a><a class="headerlink" href="#next-steps" title="永久链接至标题"></a></h2>
+<p>在下一个教程中: doc:'//Parameters/Understanding-ROS2-Parameters'，您将学习如何配置节点设置。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8220">[待校准&#64;8220]</a></p>
 </div>
 <div class="section" id="related-content">
-<h2>相关内容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6751">[待校准&#64;6751]</a><a class="headerlink" href="#related-content" title="永久链接至标题"></a></h2>
-<p>看看 <a class="reference external" href="https://discourse.ubuntu.com/t/call-services-in-ros-2/15261">this tutorial</a> ; 这是使用机器人手臂的  &quot;Understanding ROS 2 services&quot; 的一个极好的现实应用。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8221">[待校准&#64;8221]</a></p>
+<h2>相关内容 <a class="reference external" href="http://localhost:3000/#/home?msgid=6751">[待校准&#64;6751]</a><a class="headerlink" href="#related-content" title="永久链接至标题"></a></h2>
+<p>看看 <a class="reference external" href="https://discourse.ubuntu.com/t/call-services-in-ros-2/15261">this tutorial</a> ; 这是使用机器人手臂的  &quot;Understanding ROS 2 services&quot; 的一个极好的现实应用。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8221">[待校准&#64;8221]</a></p>
 </div>
 </div>
 

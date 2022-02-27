@@ -248,7 +248,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Related-Projects/Nvidia-ROS2-Projects.html">[需手动修复的语法]NVIDIAROS 2项目 [待校准&#64;6668]</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../Glossary.html">相关术语 `[小鱼&#64;1] http://dev.ros2.fishros.com/calibpage/#/home?msgid=1&gt;`_</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Glossary.html">术语表</a></li>
 </ul>
 
         </div>
@@ -279,9 +279,9 @@
 
 
   <div class="section" id="about-topic-statistics">
-<span id="abouttopicstats"></span><h1>关于话题统计 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10247">[待校准&#64;10247]</a><a class="headerlink" href="#about-topic-statistics" title="永久链接至标题"></a></h1>
+<span id="abouttopicstats"></span><h1>关于话题统计 <a class="reference external" href="http://localhost:3000/#/home?msgid=10247">[待校准&#64;10247]</a><a class="headerlink" href="#about-topic-statistics" title="永久链接至标题"></a></h1>
 <div class="contents local topic" id="table-of-contents">
-<p class="topic-title">目录 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9597">[待校准&#64;9597]</a></p>
+<p class="topic-title">目录 <a class="reference external" href="http://localhost:3000/#/home?msgid=9597">[待校准&#64;9597]</a></p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#overview" id="id1">概述 [待校准&#64;9718]</a></p></li>
 <li><p><a class="reference internal" href="#how-statistics-are-calculated" id="id2">如何计算统计数据 [待校准&#64;10250]</a></p></li>
@@ -292,45 +292,45 @@
 </ul>
 </div>
 <div class="section" id="overview">
-<h2>概述 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9718">[待校准&#64;9718]</a><a class="headerlink" href="#overview" title="永久链接至标题"></a></h2>
-<p>ROS 2为任何订阅收到的消息提供了统计信息的集成度量。允许用户收集订阅统计信息使他们能够描述其系统的性能或帮助诊断任何当前问题。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10248">[待校准&#64;10248]</a></p>
-<p>所提供的测量是接收到的消息年龄和接收到的消息周期。对于每次测量，所提供的统计数据包括平均值、最大值、最小值、标准差和样本计数。这些统计数据是在移动窗口中计算的。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10249">[待校准&#64;10249]</a></p>
+<h2>概述 <a class="reference external" href="http://localhost:3000/#/home?msgid=9718">[待校准&#64;9718]</a><a class="headerlink" href="#overview" title="永久链接至标题"></a></h2>
+<p>ROS 2为任何订阅收到的消息提供了统计信息的集成度量。允许用户收集订阅统计信息使他们能够描述其系统的性能或帮助诊断任何当前问题。 <a class="reference external" href="http://localhost:3000/#/home?msgid=10248">[待校准&#64;10248]</a></p>
+<p>所提供的测量是接收到的消息年龄和接收到的消息周期。对于每次测量，所提供的统计数据包括平均值、最大值、最小值、标准差和样本计数。这些统计数据是在移动窗口中计算的。 <a class="reference external" href="http://localhost:3000/#/home?msgid=10249">[待校准&#64;10249]</a></p>
 </div>
 <div class="section" id="how-statistics-are-calculated">
-<h2>如何计算统计数据 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10250">[待校准&#64;10250]</a><a class="headerlink" href="#how-statistics-are-calculated" title="永久链接至标题"></a></h2>
-<p>通过使用 <a class="reference external" href="https://github.com/ros-tooling/libstatistics_collector">libstatistics_collector</a> 包中实现的实用程序，在恒定时间和恒定内存中计算每个统计集。当订阅收到新消息时，这是用于在当前测量窗口中计算的新示例。计算的平均值仅仅是 <a class="reference external" href="https://en.wikipedia.org/wiki/Moving_average">moving average</a> 。最大、最小和样本计数在收到每个新样本后更新，而标准偏差使用 <a class="reference external" href="https://en.wikipedia.org/wiki/Algorithms_for_calculating_variance#Welford's_online_algorithm">Welford's online algorithm</a> 计算。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10251">[待校准&#64;10251]</a></p>
+<h2>如何计算统计数据 <a class="reference external" href="http://localhost:3000/#/home?msgid=10250">[待校准&#64;10250]</a><a class="headerlink" href="#how-statistics-are-calculated" title="永久链接至标题"></a></h2>
+<p>通过使用 <a class="reference external" href="https://github.com/ros-tooling/libstatistics_collector">libstatistics_collector</a> 包中实现的实用程序，在恒定时间和恒定内存中计算每个统计集。当订阅收到新消息时，这是用于在当前测量窗口中计算的新示例。计算的平均值仅仅是 <a class="reference external" href="https://en.wikipedia.org/wiki/Moving_average">moving average</a> 。最大、最小和样本计数在收到每个新样本后更新，而标准偏差使用 <a class="reference external" href="https://en.wikipedia.org/wiki/Algorithms_for_calculating_variance#Welford's_online_algorithm">Welford's online algorithm</a> 计算。 <a class="reference external" href="http://localhost:3000/#/home?msgid=10251">[待校准&#64;10251]</a></p>
 </div>
 <div class="section" id="types-of-statistics-calculated">
-<h2>计算的统计信息类型 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10252">[待校准&#64;10252]</a><a class="headerlink" href="#types-of-statistics-calculated" title="永久链接至标题"></a></h2>
+<h2>计算的统计信息类型 <a class="reference external" href="http://localhost:3000/#/home?msgid=10252">[待校准&#64;10252]</a><a class="headerlink" href="#types-of-statistics-calculated" title="永久链接至标题"></a></h2>
 <ul class="simple">
-<li><p>接收消息周期 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10253">[待校准&#64;10253]</a></p>
+<li><p>接收消息周期 <a class="reference external" href="http://localhost:3000/#/home?msgid=10253">[待校准&#64;10253]</a></p>
 <ul>
-<li><p>单位: 毫秒 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10254">[待校准&#64;10254]</a></p></li>
-<li><p>使用系统时钟测量接收消息之间的时间间隔 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10255">[待校准&#64;10255]</a></p></li>
+<li><p>单位: 毫秒 <a class="reference external" href="http://localhost:3000/#/home?msgid=10254">[待校准&#64;10254]</a></p></li>
+<li><p>使用系统时钟测量接收消息之间的时间间隔 <a class="reference external" href="http://localhost:3000/#/home?msgid=10255">[待校准&#64;10255]</a></p></li>
 </ul>
 </li>
-<li><p>收到的消息年龄 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10256">[待校准&#64;10256]</a></p>
+<li><p>收到的消息年龄 <a class="reference external" href="http://localhost:3000/#/home?msgid=10256">[待校准&#64;10256]</a></p>
 <ul>
-<li><p>单位: 毫秒 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10254">[待校准&#64;10254]</a></p></li>
-<li><p>要求消息在标题字段中填充时间戳，以便计算从发布者发送的消息的年龄。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10257">[待校准&#64;10257]</a></p></li>
+<li><p>单位: 毫秒 <a class="reference external" href="http://localhost:3000/#/home?msgid=10254">[待校准&#64;10254]</a></p></li>
+<li><p>要求消息在标题字段中填充时间戳，以便计算从发布者发送的消息的年龄。 <a class="reference external" href="http://localhost:3000/#/home?msgid=10257">[待校准&#64;10257]</a></p></li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="section" id="behavior">
-<h2>行为 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10258">[待校准&#64;10258]</a><a class="headerlink" href="#behavior" title="永久链接至标题"></a></h2>
-<p>默认情况下，话题统计测量不启用。通过订阅配置选项为特定节点启用此功能后，将为该特定订阅启用接收消息年龄和接收消息周期测量。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10259">[待校准&#64;10259]</a></p>
-<p>数据在可配置时期 (默认1秒) 以 <a class="reference external" href="https://github.com/ros2/rcl_interfaces/blob/master/statistics_msgs/msg/MetricsMessage.msg">statistics_msg/msg/MetricsMessage</a> 形式发布到可配置话题 (默认 <code class="docutils literal notranslate"><span class="pre">/statistics</span></code> )。请注意，发布期间也用作示例收集窗口期间。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10260">[待校准&#64;10260]</a></p>
-<p>由于接收到的消息周期需要标题字段中的消息时间戳，因此将发布空数据。也就是说，如果未找到时间戳，则所有统计值均为NaN。发布NaN值而不是根本不发布避免了信号问题的缺失，并且旨在明确表明无法进行测量。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10261">[待校准&#64;10261]</a></p>
-<p>接收到的消息周期统计的每个窗口的第一个样本不会产生测量。这是因为计算这一统计数据需要知道前一条消息到达的时间，因此窗口产量测量中的后续样本。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10262">[待校准&#64;10262]</a></p>
+<h2>行为 <a class="reference external" href="http://localhost:3000/#/home?msgid=10258">[待校准&#64;10258]</a><a class="headerlink" href="#behavior" title="永久链接至标题"></a></h2>
+<p>默认情况下，话题统计测量不启用。通过订阅配置选项为特定节点启用此功能后，将为该特定订阅启用接收消息年龄和接收消息周期测量。 <a class="reference external" href="http://localhost:3000/#/home?msgid=10259">[待校准&#64;10259]</a></p>
+<p>数据在可配置时期 (默认1秒) 以 <a class="reference external" href="https://github.com/ros2/rcl_interfaces/blob/master/statistics_msgs/msg/MetricsMessage.msg">statistics_msg/msg/MetricsMessage</a> 形式发布到可配置话题 (默认 <code class="docutils literal notranslate"><span class="pre">/statistics</span></code> )。请注意，发布期间也用作示例收集窗口期间。 <a class="reference external" href="http://localhost:3000/#/home?msgid=10260">[待校准&#64;10260]</a></p>
+<p>由于接收到的消息周期需要标题字段中的消息时间戳，因此将发布空数据。也就是说，如果未找到时间戳，则所有统计值均为NaN。发布NaN值而不是根本不发布避免了信号问题的缺失，并且旨在明确表明无法进行测量。 <a class="reference external" href="http://localhost:3000/#/home?msgid=10261">[待校准&#64;10261]</a></p>
+<p>接收到的消息周期统计的每个窗口的第一个样本不会产生测量。这是因为计算这一统计数据需要知道前一条消息到达的时间，因此窗口产量测量中的后续样本。 <a class="reference external" href="http://localhost:3000/#/home?msgid=10262">[待校准&#64;10262]</a></p>
 </div>
 <div class="section" id="comparison-to-ros-1">
-<h2>与ROS 1的比较 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9972">[待校准&#64;9972]</a><a class="headerlink" href="#comparison-to-ros-1" title="永久链接至标题"></a></h2>
-<p>与ROS 1 <a class="reference external" href="https://wiki.ros.org/Topics#Topic_statistics">Topic Statistics</a> 相似，消息年龄和消息周期都是从订阅端计算的。目前不提供其他ROS 1指标，例如丢弃消息的数量或流量。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10263">[待校准&#64;10263]</a></p>
+<h2>与ROS 1的比较 <a class="reference external" href="http://localhost:3000/#/home?msgid=9972">[待校准&#64;9972]</a><a class="headerlink" href="#comparison-to-ros-1" title="永久链接至标题"></a></h2>
+<p>与ROS 1 <a class="reference external" href="https://wiki.ros.org/Topics#Topic_statistics">Topic Statistics</a> 相似，消息年龄和消息周期都是从订阅端计算的。目前不提供其他ROS 1指标，例如丢弃消息的数量或流量。 <a class="reference external" href="http://localhost:3000/#/home?msgid=10263">[待校准&#64;10263]</a></p>
 </div>
 <div class="section" id="support">
-<h2>支持 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10264">[待校准&#64;10264]</a><a class="headerlink" href="#support" title="永久链接至标题"></a></h2>
-<p>目前，仅适用于c ++ (rclcpp) 的ROS 2Foxy支持此功能。未来的工作和改进，如Python支持，可以在 <a class="reference external" href="https://github.com/ros2/ros2/issues/917">here</a> 找到。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10265">[待校准&#64;10265]</a></p>
+<h2>支持 <a class="reference external" href="http://localhost:3000/#/home?msgid=10264">[待校准&#64;10264]</a><a class="headerlink" href="#support" title="永久链接至标题"></a></h2>
+<p>目前，仅适用于c ++ (rclcpp) 的ROS 2Foxy支持此功能。未来的工作和改进，如Python支持，可以在 <a class="reference external" href="https://github.com/ros2/ros2/issues/917">here</a> 找到。 <a class="reference external" href="http://localhost:3000/#/home?msgid=10265">[待校准&#64;10265]</a></p>
 </div>
 </div>
 

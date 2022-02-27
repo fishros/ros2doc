@@ -248,7 +248,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Related-Projects/Nvidia-ROS2-Projects.html">[需手动修复的语法]NVIDIAROS 2项目 [待校准&#64;6668]</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../Glossary.html">相关术语 `[小鱼&#64;1] http://dev.ros2.fishros.com/calibpage/#/home?msgid=1&gt;`_</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Glossary.html">术语表</a></li>
 </ul>
 
         </div>
@@ -279,9 +279,9 @@
 
 
   <div class="section" id="eclipse-oxygen-with-ros-2-and-rviz2-community-contributed">
-<h1>带有ROS 2和rviz2的Eclipse Oxygen [社区贡献] <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7387">[待校准&#64;7387]</a><a class="headerlink" href="#eclipse-oxygen-with-ros-2-and-rviz2-community-contributed" title="永久链接至标题"></a></h1>
+<h1>带有ROS 2和rviz2的Eclipse Oxygen [社区贡献] <a class="reference external" href="http://localhost:3000/#/home?msgid=7387">[待校准&#64;7387]</a><a class="headerlink" href="#eclipse-oxygen-with-ros-2-and-rviz2-community-contributed" title="永久链接至标题"></a></h1>
 <div class="contents local topic" id="table-of-contents">
-<p class="topic-title">目录 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6886">[待校准&#64;6886]</a></p>
+<p class="topic-title">目录 <a class="reference external" href="http://localhost:3000/#/home?msgid=6886">[待校准&#64;6886]</a></p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#setup" id="id1">设置 [待校准&#64;7388]</a></p></li>
 <li><p><a class="reference internal" href="#eclipse-indexer" id="id2">Eclipse索引器 [待校准&#64;7439]</a></p></li>
@@ -289,91 +289,91 @@
 </ul>
 </div>
 <div class="section" id="setup">
-<h2>设置 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7388">[待校准&#64;7388]</a><a class="headerlink" href="#setup" title="永久链接至标题"></a></h2>
-<p>本教程假设Eclipse Oxygen、git和Egit (<a class="reference external" href="http://www.eclipse.org/egit/download/">http://www.eclipse.org/egit/download/</a>) 已经安装 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7389">[待校准&#64;7389]</a></p>
-<p>在整个教程中，我们将eclipse工作区命名为与ros2包相同的名称，但这不是必需的。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7390">[待校准&#64;7390]</a></p>
-<p>提示: 我们为每个ROS-2包使用嵌套项目和一个Eclipse工作区。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7391">[待校准&#64;7391]</a></p>
-<a class="reference external image-reference" href="https://i.imgur.com/ePQaXE3.png"><img alt="月食-launcher `[待校准&#64;7392] &lt;http://dev.ros2.fishros.com/calibpage/#/home?msgid=7392&gt;`_ " src="https://i.imgur.com/ePQaXE3.png" /></a>
-<p>创建一个cproject项目。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7393">[待校准&#64;7393]</a></p>
-<a class="reference external image-reference" href="https://i.imgur.com/XIsATcN.png"><img alt="eclipse-1 `[待校准&#64;6957] &lt;http://dev.ros2.fishros.com/calibpage/#/home?msgid=6957&gt;`_ " src="https://i.imgur.com/XIsATcN.png" /></a>
-<a class="reference external image-reference" href="https://i.imgur.com/PNVxEJN.png"><img alt="eclipse-2 `[待校准&#64;7394] &lt;http://dev.ros2.fishros.com/calibpage/#/home?msgid=7394&gt;`_ " src="https://i.imgur.com/PNVxEJN.png" /></a>
-<p>选择ROS 2包名称作为项目名称。选择Makefile项目和其他工具链。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7395">[待校准&#64;7395]</a></p>
-<a class="reference external image-reference" href="https://i.imgur.com/yt5WkkN.png"><img alt="eclipse-2 `[待校准&#64;7394] &lt;http://dev.ros2.fishros.com/calibpage/#/home?msgid=7394&gt;`_ " src="https://i.imgur.com/yt5WkkN.png" /></a>
-<p>点击完成 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7396">[待校准&#64;7396]</a></p>
-<a class="reference external image-reference" href="https://i.imgur.com/Ef0tLiP.png"><img alt="eclipse-2 `[待校准&#64;7394] &lt;http://dev.ros2.fishros.com/calibpage/#/home?msgid=7394&gt;`_ " src="https://i.imgur.com/Ef0tLiP.png" /></a>
-<p>我们的项目应该在  &quot;Project Explorer&quot; 中展示。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7397">[待校准&#64;7397]</a></p>
-<a class="reference external image-reference" href="https://i.imgur.com/kYutC7W.png"><img alt="eclipse-3 `[待校准&#64;7398] &lt;http://dev.ros2.fishros.com/calibpage/#/home?msgid=7398&gt;`_ " src="https://i.imgur.com/kYutC7W.png" /></a>
-<p>在我们的项目中创建一个调用ed  &quot;src&quot; 的文件夹。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7399">[待校准&#64;7399]</a></p>
-<a class="reference external image-reference" href="https://i.imgur.com/6uFtcLT.png"><img alt="eclipse-4 `[待校准&#64;7400] &lt;http://dev.ros2.fishros.com/calibpage/#/home?msgid=7400&gt;`_ " src="https://i.imgur.com/6uFtcLT.png" /></a>
-<p>导入git仓库。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7401">[待校准&#64;7401]</a></p>
-<a class="reference external image-reference" href="https://i.imgur.com/pae8YOu.png"><img alt="eclipse-5 `[待校准&#64;7402] &lt;http://dev.ros2.fishros.com/calibpage/#/home?msgid=7402&gt;`_ " src="https://i.imgur.com/pae8YOu.png" /></a>
-<p>放入仓库URL。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7403">[待校准&#64;7403]</a></p>
-<a class="reference external image-reference" href="https://i.imgur.com/HuPcPx9.png"><img alt="eclipse-6 `[待校准&#64;7404] &lt;http://dev.ros2.fishros.com/calibpage/#/home?msgid=7404&gt;`_ " src="https://i.imgur.com/HuPcPx9.png" /></a>
-<p>重要提示: 使用我们之前创建的项目的源文件文件夹作为目标文件夹。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7405">[待校准&#64;7405]</a></p>
-<p>提示: 如果在选择目标文件夹路径时遇到问题，则Eclipse对话框需要在name字段中输入名称。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7406">[待校准&#64;7406]</a></p>
-<a class="reference external image-reference" href="https://i.imgur.com/arFZfa4.png"><img alt="eclipse-7 `[待校准&#64;7407] &lt;http://dev.ros2.fishros.com/calibpage/#/home?msgid=7407&gt;`_ " src="https://i.imgur.com/arFZfa4.png" /></a>
-<p>使用新建项目向导导入。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7408">[待校准&#64;7408]</a></p>
-<a class="reference external image-reference" href="https://i.imgur.com/ety2Lxf.png"><img alt="eclipse-8 `[待校准&#64;7409] &lt;http://dev.ros2.fishros.com/calibpage/#/home?msgid=7409&gt;`_ " src="https://i.imgur.com/ety2Lxf.png" /></a>
-<p>创建常规-&gt; 项目。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7410">[待校准&#64;7410]</a></p>
-<a class="reference external image-reference" href="https://i.imgur.com/rpAjqqW.png"><img alt="eclipse-9 `[待校准&#64;7411] &lt;http://dev.ros2.fishros.com/calibpage/#/home?msgid=7411&gt;`_ " src="https://i.imgur.com/rpAjqqW.png" /></a>
-<p>使用git仓库名称作为项目名称。重要提示: 使用我们克隆的git仓库的文件夹作为  &quot;Location&quot; 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7412">[待校准&#64;7412]</a></p>
-<a class="reference external image-reference" href="https://i.imgur.com/nEoT0RB.png"><img alt="eclipse-10 `[待校准&#64;7413] &lt;http://dev.ros2.fishros.com/calibpage/#/home?msgid=7413&gt;`_ " src="https://i.imgur.com/nEoT0RB.png" /></a>
-<p>git项目和新项目应在项目资源管理器视图中可见。相同的文件被多次列出，但只有一个项目与Egit链接。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7414">[待校准&#64;7414]</a></p>
-<a class="reference external image-reference" href="https://i.imgur.com/sSQ8ooN.png"><img alt="eclipse-11 `[待校准&#64;7415] &lt;http://dev.ros2.fishros.com/calibpage/#/home?msgid=7415&gt;`_ " src="https://i.imgur.com/sSQ8ooN.png" /></a>
-<p>再次重复此过程。导入git仓库pluginlib。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7416">[待校准&#64;7416]</a></p>
-<a class="reference external image-reference" href="https://i.imgur.com/hnbscVx.png"><img alt="eclipse-12 `[待校准&#64;7417] &lt;http://dev.ros2.fishros.com/calibpage/#/home?msgid=7417&gt;`_ " src="https://i.imgur.com/hnbscVx.png" /></a>
-<p>重要提示: 将源文件中的文件夹用作 “目标-&gt; 目录”。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7418">[待校准&#64;7418]</a></p>
-<a class="reference external image-reference" href="https://i.imgur.com/8Z3hlFL.png"><img alt="eclipse-13 `[待校准&#64;7419] &lt;http://dev.ros2.fishros.com/calibpage/#/home?msgid=7419&gt;`_ " src="https://i.imgur.com/8Z3hlFL.png" /></a>
-<p>重要提示: 使用我们克隆git仓库的文件夹作为新项目的位置。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7420">[待校准&#64;7420]</a></p>
-<a class="reference external image-reference" href="https://i.imgur.com/xySYIQi.png"><img alt="eclipse-14 `[待校准&#64;7421] &lt;http://dev.ros2.fishros.com/calibpage/#/home?msgid=7421&gt;`_ " src="https://i.imgur.com/xySYIQi.png" /></a>
-<p>对tinyxml2_vendor git仓库运行相同的存储过程。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7422">[待校准&#64;7422]</a></p>
-<a class="reference external image-reference" href="https://i.imgur.com/izC5Hke.png"><img alt="eclipse-15 `[待校准&#64;7423] &lt;http://dev.ros2.fishros.com/calibpage/#/home?msgid=7423&gt;`_ " src="https://i.imgur.com/izC5Hke.png" /></a>
-<p>重要提示: 再次使用源文件中的文件夹。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7424">[待校准&#64;7424]</a></p>
-<a class="reference external image-reference" href="https://i.imgur.com/UR8S3I8.png"><img alt="eclipse-16 `[待校准&#64;7425] &lt;http://dev.ros2.fishros.com/calibpage/#/home?msgid=7425&gt;`_ " src="https://i.imgur.com/UR8S3I8.png" /></a>
-<p>重要提示: 使用我们克隆的文件夹的位置作为新项目文件夹。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7426">[待校准&#64;7426]</a></p>
-<a class="reference external image-reference" href="https://i.imgur.com/aMu1nNZ.png"><img alt="eclipse-17 `[待校准&#64;7427] &lt;http://dev.ros2.fishros.com/calibpage/#/home?msgid=7427&gt;`_ " src="https://i.imgur.com/aMu1nNZ.png" /></a>
-<p>现在，所有四个项目都应该在项目资源管理器视图中可见。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7428">[待校准&#64;7428]</a></p>
-<a class="reference external image-reference" href="https://i.imgur.com/36zbuUx.png"><img alt="日食-18 `[待校准&#64;7429] &lt;http://dev.ros2.fishros.com/calibpage/#/home?msgid=7429&gt;`_ " src="https://i.imgur.com/36zbuUx.png" /></a>
-<p>单击项目资源管理器视图的右上角，我们可以将项目演示文稿更改为分层视图。现在它看起来像一个ROS-2的项目，就像它在硬盘上一样。但是这种观点失去了与Egit的联系，所以使用平面项目演示。如果你想知道，例如哪个作者写了哪个代码行，等等，那么Egit链接是很好的。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7430">[待校准&#64;7430]</a></p>
-<a class="reference external image-reference" href="https://i.imgur.com/vOhRUGB.png"><img alt="eclipse-19 `[待校准&#64;7431] &lt;http://dev.ros2.fishros.com/calibpage/#/home?msgid=7431&gt;`_ " src="https://i.imgur.com/vOhRUGB.png" /></a>
-<p>转到 “C/C + + build” 部分，将  &quot;ament&quot; 放入  &quot;Build command&quot; 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7432">[待校准&#64;7432]</a></p>
-<a class="reference external image-reference" href="https://i.imgur.com/vXhRwEb.png"><img alt="eclipse-26 `[待校准&#64;7433] &lt;http://dev.ros2.fishros.com/calibpage/#/home?msgid=7433&gt;`_ " src="https://i.imgur.com/vXhRwEb.png" /></a>
-<p>转到  &quot;Behavior&quot; 选项卡，取消选择  &quot;clean&quot; ，并将  &quot;build&quot; 放入构建文本框中。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7434">[待校准&#64;7434]</a></p>
-<a class="reference external image-reference" href="https://i.imgur.com/4CegjkC.png"><img alt="eclipse-26 `[待校准&#64;7433] &lt;http://dev.ros2.fishros.com/calibpage/#/home?msgid=7433&gt;`_ " src="https://i.imgur.com/4CegjkC.png" /></a>
-<p>在  &quot;Build project&quot; 发挥作用之前，我们需要关闭日食。打开外壳并源文件ROS-2安装程序。bash文件，然后将cd放入eclipse项目的目录 (此处: /home/ubu/rviz2_ws)，并从此目录内启动Eclipse。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7435">[待校准&#64;7435]</a></p>
-<a class="reference external image-reference" href="https://i.imgur.com/ZyPGJLa.png"><img alt="eclipse-27 `[待校准&#64;7436] &lt;http://dev.ros2.fishros.com/calibpage/#/home?msgid=7436&gt;`_ " src="https://i.imgur.com/ZyPGJLa.png" /></a>
-<p>现在，代码完成、egit注释、eclipse C/C Tools工具等都应该可以工作。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7437">[待校准&#64;7437]</a></p>
-<a class="reference external image-reference" href="https://i.imgur.com/YUEH3lM.png"><img alt="eclipse-28 `[待校准&#64;7438] &lt;http://dev.ros2.fishros.com/calibpage/#/home?msgid=7438&gt;`_ " src="https://i.imgur.com/YUEH3lM.png" /></a>
+<h2>设置 <a class="reference external" href="http://localhost:3000/#/home?msgid=7388">[待校准&#64;7388]</a><a class="headerlink" href="#setup" title="永久链接至标题"></a></h2>
+<p>本教程假设Eclipse Oxygen、git和Egit (<a class="reference external" href="http://www.eclipse.org/egit/download/">http://www.eclipse.org/egit/download/</a>) 已经安装 <a class="reference external" href="http://localhost:3000/#/home?msgid=7389">[待校准&#64;7389]</a></p>
+<p>在整个教程中，我们将eclipse工作区命名为与ros2包相同的名称，但这不是必需的。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7390">[待校准&#64;7390]</a></p>
+<p>提示: 我们为每个ROS-2包使用嵌套项目和一个Eclipse工作区。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7391">[待校准&#64;7391]</a></p>
+<a class="reference external image-reference" href="https://i.imgur.com/ePQaXE3.png"><img alt="月食-launcher `[待校准&#64;7392] &lt;http://localhost:3000/#/home?msgid=7392&gt;`_ " src="https://i.imgur.com/ePQaXE3.png" /></a>
+<p>创建一个cproject项目。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7393">[待校准&#64;7393]</a></p>
+<a class="reference external image-reference" href="https://i.imgur.com/XIsATcN.png"><img alt="eclipse-1 `[待校准&#64;6957] &lt;http://localhost:3000/#/home?msgid=6957&gt;`_ " src="https://i.imgur.com/XIsATcN.png" /></a>
+<a class="reference external image-reference" href="https://i.imgur.com/PNVxEJN.png"><img alt="eclipse-2 `[待校准&#64;7394] &lt;http://localhost:3000/#/home?msgid=7394&gt;`_ " src="https://i.imgur.com/PNVxEJN.png" /></a>
+<p>选择ROS 2包名称作为项目名称。选择Makefile项目和其他工具链。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7395">[待校准&#64;7395]</a></p>
+<a class="reference external image-reference" href="https://i.imgur.com/yt5WkkN.png"><img alt="eclipse-2 `[待校准&#64;7394] &lt;http://localhost:3000/#/home?msgid=7394&gt;`_ " src="https://i.imgur.com/yt5WkkN.png" /></a>
+<p>点击完成 <a class="reference external" href="http://localhost:3000/#/home?msgid=7396">[待校准&#64;7396]</a></p>
+<a class="reference external image-reference" href="https://i.imgur.com/Ef0tLiP.png"><img alt="eclipse-2 `[待校准&#64;7394] &lt;http://localhost:3000/#/home?msgid=7394&gt;`_ " src="https://i.imgur.com/Ef0tLiP.png" /></a>
+<p>我们的项目应该在  &quot;Project Explorer&quot; 中展示。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7397">[待校准&#64;7397]</a></p>
+<a class="reference external image-reference" href="https://i.imgur.com/kYutC7W.png"><img alt="eclipse-3 `[待校准&#64;7398] &lt;http://localhost:3000/#/home?msgid=7398&gt;`_ " src="https://i.imgur.com/kYutC7W.png" /></a>
+<p>在我们的项目中创建一个调用ed  &quot;src&quot; 的文件夹。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7399">[待校准&#64;7399]</a></p>
+<a class="reference external image-reference" href="https://i.imgur.com/6uFtcLT.png"><img alt="eclipse-4 `[待校准&#64;7400] &lt;http://localhost:3000/#/home?msgid=7400&gt;`_ " src="https://i.imgur.com/6uFtcLT.png" /></a>
+<p>导入git仓库。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7401">[待校准&#64;7401]</a></p>
+<a class="reference external image-reference" href="https://i.imgur.com/pae8YOu.png"><img alt="eclipse-5 `[待校准&#64;7402] &lt;http://localhost:3000/#/home?msgid=7402&gt;`_ " src="https://i.imgur.com/pae8YOu.png" /></a>
+<p>放入仓库URL。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7403">[待校准&#64;7403]</a></p>
+<a class="reference external image-reference" href="https://i.imgur.com/HuPcPx9.png"><img alt="eclipse-6 `[待校准&#64;7404] &lt;http://localhost:3000/#/home?msgid=7404&gt;`_ " src="https://i.imgur.com/HuPcPx9.png" /></a>
+<p>重要提示: 使用我们之前创建的项目的源文件文件夹作为目标文件夹。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7405">[待校准&#64;7405]</a></p>
+<p>提示: 如果在选择目标文件夹路径时遇到问题，则Eclipse对话框需要在name字段中输入名称。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7406">[待校准&#64;7406]</a></p>
+<a class="reference external image-reference" href="https://i.imgur.com/arFZfa4.png"><img alt="eclipse-7 `[待校准&#64;7407] &lt;http://localhost:3000/#/home?msgid=7407&gt;`_ " src="https://i.imgur.com/arFZfa4.png" /></a>
+<p>使用新建项目向导导入。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7408">[待校准&#64;7408]</a></p>
+<a class="reference external image-reference" href="https://i.imgur.com/ety2Lxf.png"><img alt="eclipse-8 `[待校准&#64;7409] &lt;http://localhost:3000/#/home?msgid=7409&gt;`_ " src="https://i.imgur.com/ety2Lxf.png" /></a>
+<p>创建常规-&gt; 项目。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7410">[待校准&#64;7410]</a></p>
+<a class="reference external image-reference" href="https://i.imgur.com/rpAjqqW.png"><img alt="eclipse-9 `[待校准&#64;7411] &lt;http://localhost:3000/#/home?msgid=7411&gt;`_ " src="https://i.imgur.com/rpAjqqW.png" /></a>
+<p>使用git仓库名称作为项目名称。重要提示: 使用我们克隆的git仓库的文件夹作为  &quot;Location&quot; 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7412">[待校准&#64;7412]</a></p>
+<a class="reference external image-reference" href="https://i.imgur.com/nEoT0RB.png"><img alt="eclipse-10 `[待校准&#64;7413] &lt;http://localhost:3000/#/home?msgid=7413&gt;`_ " src="https://i.imgur.com/nEoT0RB.png" /></a>
+<p>git项目和新项目应在项目资源管理器视图中可见。相同的文件被多次列出，但只有一个项目与Egit链接。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7414">[待校准&#64;7414]</a></p>
+<a class="reference external image-reference" href="https://i.imgur.com/sSQ8ooN.png"><img alt="eclipse-11 `[待校准&#64;7415] &lt;http://localhost:3000/#/home?msgid=7415&gt;`_ " src="https://i.imgur.com/sSQ8ooN.png" /></a>
+<p>再次重复此过程。导入git仓库pluginlib。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7416">[待校准&#64;7416]</a></p>
+<a class="reference external image-reference" href="https://i.imgur.com/hnbscVx.png"><img alt="eclipse-12 `[待校准&#64;7417] &lt;http://localhost:3000/#/home?msgid=7417&gt;`_ " src="https://i.imgur.com/hnbscVx.png" /></a>
+<p>重要提示: 将源文件中的文件夹用作 “目标-&gt; 目录”。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7418">[待校准&#64;7418]</a></p>
+<a class="reference external image-reference" href="https://i.imgur.com/8Z3hlFL.png"><img alt="eclipse-13 `[待校准&#64;7419] &lt;http://localhost:3000/#/home?msgid=7419&gt;`_ " src="https://i.imgur.com/8Z3hlFL.png" /></a>
+<p>重要提示: 使用我们克隆git仓库的文件夹作为新项目的位置。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7420">[待校准&#64;7420]</a></p>
+<a class="reference external image-reference" href="https://i.imgur.com/xySYIQi.png"><img alt="eclipse-14 `[待校准&#64;7421] &lt;http://localhost:3000/#/home?msgid=7421&gt;`_ " src="https://i.imgur.com/xySYIQi.png" /></a>
+<p>对tinyxml2_vendor git仓库运行相同的存储过程。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7422">[待校准&#64;7422]</a></p>
+<a class="reference external image-reference" href="https://i.imgur.com/izC5Hke.png"><img alt="eclipse-15 `[待校准&#64;7423] &lt;http://localhost:3000/#/home?msgid=7423&gt;`_ " src="https://i.imgur.com/izC5Hke.png" /></a>
+<p>重要提示: 再次使用源文件中的文件夹。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7424">[待校准&#64;7424]</a></p>
+<a class="reference external image-reference" href="https://i.imgur.com/UR8S3I8.png"><img alt="eclipse-16 `[待校准&#64;7425] &lt;http://localhost:3000/#/home?msgid=7425&gt;`_ " src="https://i.imgur.com/UR8S3I8.png" /></a>
+<p>重要提示: 使用我们克隆的文件夹的位置作为新项目文件夹。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7426">[待校准&#64;7426]</a></p>
+<a class="reference external image-reference" href="https://i.imgur.com/aMu1nNZ.png"><img alt="eclipse-17 `[待校准&#64;7427] &lt;http://localhost:3000/#/home?msgid=7427&gt;`_ " src="https://i.imgur.com/aMu1nNZ.png" /></a>
+<p>现在，所有四个项目都应该在项目资源管理器视图中可见。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7428">[待校准&#64;7428]</a></p>
+<a class="reference external image-reference" href="https://i.imgur.com/36zbuUx.png"><img alt="日食-18 `[待校准&#64;7429] &lt;http://localhost:3000/#/home?msgid=7429&gt;`_ " src="https://i.imgur.com/36zbuUx.png" /></a>
+<p>单击项目资源管理器视图的右上角，我们可以将项目演示文稿更改为分层视图。现在它看起来像一个ROS-2的项目，就像它在硬盘上一样。但是这种观点失去了与Egit的联系，所以使用平面项目演示。如果你想知道，例如哪个作者写了哪个代码行，等等，那么Egit链接是很好的。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7430">[待校准&#64;7430]</a></p>
+<a class="reference external image-reference" href="https://i.imgur.com/vOhRUGB.png"><img alt="eclipse-19 `[待校准&#64;7431] &lt;http://localhost:3000/#/home?msgid=7431&gt;`_ " src="https://i.imgur.com/vOhRUGB.png" /></a>
+<p>转到 “C/C + + build” 部分，将  &quot;ament&quot; 放入  &quot;Build command&quot; 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7432">[待校准&#64;7432]</a></p>
+<a class="reference external image-reference" href="https://i.imgur.com/vXhRwEb.png"><img alt="eclipse-26 `[待校准&#64;7433] &lt;http://localhost:3000/#/home?msgid=7433&gt;`_ " src="https://i.imgur.com/vXhRwEb.png" /></a>
+<p>转到  &quot;Behavior&quot; 选项卡，取消选择  &quot;clean&quot; ，并将  &quot;build&quot; 放入构建文本框中。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7434">[待校准&#64;7434]</a></p>
+<a class="reference external image-reference" href="https://i.imgur.com/4CegjkC.png"><img alt="eclipse-26 `[待校准&#64;7433] &lt;http://localhost:3000/#/home?msgid=7433&gt;`_ " src="https://i.imgur.com/4CegjkC.png" /></a>
+<p>在  &quot;Build project&quot; 发挥作用之前，我们需要关闭日食。打开外壳并源文件ROS-2安装程序。bash文件，然后将cd放入eclipse项目的目录 (此处: /home/ubu/rviz2_ws)，并从此目录内启动Eclipse。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7435">[待校准&#64;7435]</a></p>
+<a class="reference external image-reference" href="https://i.imgur.com/ZyPGJLa.png"><img alt="eclipse-27 `[待校准&#64;7436] &lt;http://localhost:3000/#/home?msgid=7436&gt;`_ " src="https://i.imgur.com/ZyPGJLa.png" /></a>
+<p>现在，代码完成、egit注释、eclipse C/C Tools工具等都应该可以工作。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7437">[待校准&#64;7437]</a></p>
+<a class="reference external image-reference" href="https://i.imgur.com/YUEH3lM.png"><img alt="eclipse-28 `[待校准&#64;7438] &lt;http://localhost:3000/#/home?msgid=7438&gt;`_ " src="https://i.imgur.com/YUEH3lM.png" /></a>
 </div>
 <div class="section" id="eclipse-indexer">
-<h2>Eclipse索引器 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7439">[待校准&#64;7439]</a><a class="headerlink" href="#eclipse-indexer" title="永久链接至标题"></a></h2>
-<p>打开rviz2的main.cpp可能会显示很多  &quot;unresolved inclusion&quot; 警告。要解决此问题，请转到项目-&gt; 属性-&gt; cgeneral常规-&gt; 路径和符号。点击  &quot;References&quot; 标签并选择  &quot;ros2_ws&quot; 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7440">[待校准&#64;7440]</a></p>
-<a class="reference external image-reference" href="https://i.imgur.com/mp9Pgzu.png"><img alt="eclipse-28 `[待校准&#64;7438] &lt;http://dev.ros2.fishros.com/calibpage/#/home?msgid=7438&gt;`_ " src="https://i.imgur.com/mp9Pgzu.png" /></a>
-<p>转到C/C ++-常规-&gt; 路径和符号，单击  &quot;Source locations&quot; 选项卡，然后单击  &quot;Link folder&quot; 。选择qt5包含的位置。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7441">[待校准&#64;7441]</a></p>
-<a class="reference external image-reference" href="https://i.imgur.com/TYgDACE.png"><img alt="eclipse-28 `[待校准&#64;7438] &lt;http://dev.ros2.fishros.com/calibpage/#/home?msgid=7438&gt;`_ " src="https://i.imgur.com/TYgDACE.png" /></a>
-<p>应该显示下一张图片。将排除添加到源文件位置是一个好主意，这样一些目录 (如  &quot;Build&quot; 和  &quot;Install&quot; ) 就不会被索引。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7442">[待校准&#64;7442]</a></p>
-<a class="reference external image-reference" href="https://i.imgur.com/nv9tEAP.png"><img alt="eclipse-28 `[待校准&#64;7438] &lt;http://dev.ros2.fishros.com/calibpage/#/home?msgid=7438&gt;`_ " src="https://i.imgur.com/nv9tEAP.png" /></a>
-<p>转到cgeneral常规-&gt; 预处理器包括，选择 “CDT GCC内置编译器设置 [共享]   &quot; and enter in the &quot; 命令获取编译器规格” 文本框如下: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7443">[待校准&#64;7443]</a></p>
+<h2>Eclipse索引器 <a class="reference external" href="http://localhost:3000/#/home?msgid=7439">[待校准&#64;7439]</a><a class="headerlink" href="#eclipse-indexer" title="永久链接至标题"></a></h2>
+<p>打开rviz2的main.cpp可能会显示很多  &quot;unresolved inclusion&quot; 警告。要解决此问题，请转到项目-&gt; 属性-&gt; cgeneral常规-&gt; 路径和符号。点击  &quot;References&quot; 标签并选择  &quot;ros2_ws&quot; 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7440">[待校准&#64;7440]</a></p>
+<a class="reference external image-reference" href="https://i.imgur.com/mp9Pgzu.png"><img alt="eclipse-28 `[待校准&#64;7438] &lt;http://localhost:3000/#/home?msgid=7438&gt;`_ " src="https://i.imgur.com/mp9Pgzu.png" /></a>
+<p>转到C/C ++-常规-&gt; 路径和符号，单击  &quot;Source locations&quot; 选项卡，然后单击  &quot;Link folder&quot; 。选择qt5包含的位置。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7441">[待校准&#64;7441]</a></p>
+<a class="reference external image-reference" href="https://i.imgur.com/TYgDACE.png"><img alt="eclipse-28 `[待校准&#64;7438] &lt;http://localhost:3000/#/home?msgid=7438&gt;`_ " src="https://i.imgur.com/TYgDACE.png" /></a>
+<p>应该显示下一张图片。将排除添加到源文件位置是一个好主意，这样一些目录 (如  &quot;Build&quot; 和  &quot;Install&quot; ) 就不会被索引。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7442">[待校准&#64;7442]</a></p>
+<a class="reference external image-reference" href="https://i.imgur.com/nv9tEAP.png"><img alt="eclipse-28 `[待校准&#64;7438] &lt;http://localhost:3000/#/home?msgid=7438&gt;`_ " src="https://i.imgur.com/nv9tEAP.png" /></a>
+<p>转到cgeneral常规-&gt; 预处理器包括，选择 “CDT GCC内置编译器设置 [共享]   &quot; and enter in the &quot; 命令获取编译器规格” 文本框如下: <a class="reference external" href="http://localhost:3000/#/home?msgid=7443">[待校准&#64;7443]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>-std<span class="o">=</span>c++14
 </pre></div>
 </div>
-<a class="reference external image-reference" href="https://i.imgur.com/9DNXpDD.png"><img alt="eclipse-28 `[待校准&#64;7438] &lt;http://dev.ros2.fishros.com/calibpage/#/home?msgid=7438&gt;`_ " src="https://i.imgur.com/9DNXpDD.png" /></a>
-<p>转到 “C/C General-&gt;Indexer”，然后在图像中选择以下内容。例如解决例如QApplication的  &quot;index unused headers as c files&quot; ，因为QApplication标头内容仅包含 “qapplication.h”。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7444">[待校准&#64;7444]</a></p>
-<a class="reference external image-reference" href="https://i.imgur.com/Wxeheak.png"><img alt="eclipse-28 `[待校准&#64;7438] &lt;http://dev.ros2.fishros.com/calibpage/#/home?msgid=7438&gt;`_ " src="https://i.imgur.com/Wxeheak.png" /></a>
-<p>运行索引器后 (稍后会发生，所以您稍后也会看到这一点)，您可以看到它添加了什么 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7445">[待校准&#64;7445]</a></p>
-<a class="reference external image-reference" href="https://i.imgur.com/xtxZ4bg.png"><img alt="eclipse-28 `[待校准&#64;7438] &lt;http://dev.ros2.fishros.com/calibpage/#/home?msgid=7438&gt;`_ " src="https://i.imgur.com/xtxZ4bg.png" /></a>
-<p>之后，右键单击rviz2项目，然后选择 “索引器-&gt; 重建”，这将开始重建索引 (右下角有一个图标显示进度)。一旦索引完成重建，它应该能够解析所有包含。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7446">[待校准&#64;7446]</a></p>
-<a class="reference external image-reference" href="https://i.imgur.com/uGZaHau.png"><img alt="eclipse-28 `[待校准&#64;7438] &lt;http://dev.ros2.fishros.com/calibpage/#/home?msgid=7438&gt;`_ " src="https://i.imgur.com/uGZaHau.png" /></a>
+<a class="reference external image-reference" href="https://i.imgur.com/9DNXpDD.png"><img alt="eclipse-28 `[待校准&#64;7438] &lt;http://localhost:3000/#/home?msgid=7438&gt;`_ " src="https://i.imgur.com/9DNXpDD.png" /></a>
+<p>转到 “C/C General-&gt;Indexer”，然后在图像中选择以下内容。例如解决例如QApplication的  &quot;index unused headers as c files&quot; ，因为QApplication标头内容仅包含 “qapplication.h”。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7444">[待校准&#64;7444]</a></p>
+<a class="reference external image-reference" href="https://i.imgur.com/Wxeheak.png"><img alt="eclipse-28 `[待校准&#64;7438] &lt;http://localhost:3000/#/home?msgid=7438&gt;`_ " src="https://i.imgur.com/Wxeheak.png" /></a>
+<p>运行索引器后 (稍后会发生，所以您稍后也会看到这一点)，您可以看到它添加了什么 <a class="reference external" href="http://localhost:3000/#/home?msgid=7445">[待校准&#64;7445]</a></p>
+<a class="reference external image-reference" href="https://i.imgur.com/xtxZ4bg.png"><img alt="eclipse-28 `[待校准&#64;7438] &lt;http://localhost:3000/#/home?msgid=7438&gt;`_ " src="https://i.imgur.com/xtxZ4bg.png" /></a>
+<p>之后，右键单击rviz2项目，然后选择 “索引器-&gt; 重建”，这将开始重建索引 (右下角有一个图标显示进度)。一旦索引完成重建，它应该能够解析所有包含。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7446">[待校准&#64;7446]</a></p>
+<a class="reference external image-reference" href="https://i.imgur.com/uGZaHau.png"><img alt="eclipse-28 `[待校准&#64;7438] &lt;http://localhost:3000/#/home?msgid=7438&gt;`_ " src="https://i.imgur.com/uGZaHau.png" /></a>
 </div>
 <div class="section" id="debugging-with-eclipse">
-<h2>使用eclipse调试 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7447">[待校准&#64;7447]</a><a class="headerlink" href="#debugging-with-eclipse" title="永久链接至标题"></a></h2>
-<p>转到 “C/C ++-Build” 并添加到build命令: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7448">[待校准&#64;7448]</a></p>
+<h2>使用eclipse调试 <a class="reference external" href="http://localhost:3000/#/home?msgid=7447">[待校准&#64;7447]</a><a class="headerlink" href="#debugging-with-eclipse" title="永久链接至标题"></a></h2>
+<p>转到 “C/C ++-Build” 并添加到build命令: <a class="reference external" href="http://localhost:3000/#/home?msgid=7448">[待校准&#64;7448]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>-DCMAKE_BUILD_TYPE<span class="o">=</span>Debug
 </pre></div>
 </div>
-<a class="reference external image-reference" href="https://i.imgur.com/KXFYDHg.png"><img alt="eclipse-28 `[待校准&#64;7438] &lt;http://dev.ros2.fishros.com/calibpage/#/home?msgid=7438&gt;`_ " src="https://i.imgur.com/KXFYDHg.png" /></a>
-<p>然后在eclipse中转到 “运行-&gt; 调试配置  &quot; and add the following and click on &quot; 调试”。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7449">[待校准&#64;7449]</a></p>
-<a class="reference external image-reference" href="https://i.imgur.com/ywzAxUP.png"><img alt="eclipse-28 `[待校准&#64;7438] &lt;http://dev.ros2.fishros.com/calibpage/#/home?msgid=7438&gt;`_ " src="https://i.imgur.com/ywzAxUP.png" /></a>
+<a class="reference external image-reference" href="https://i.imgur.com/KXFYDHg.png"><img alt="eclipse-28 `[待校准&#64;7438] &lt;http://localhost:3000/#/home?msgid=7438&gt;`_ " src="https://i.imgur.com/KXFYDHg.png" /></a>
+<p>然后在eclipse中转到 “运行-&gt; 调试配置  &quot; and add the following and click on &quot; 调试”。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7449">[待校准&#64;7449]</a></p>
+<a class="reference external image-reference" href="https://i.imgur.com/ywzAxUP.png"><img alt="eclipse-28 `[待校准&#64;7438] &lt;http://localhost:3000/#/home?msgid=7438&gt;`_ " src="https://i.imgur.com/ywzAxUP.png" /></a>
 </div>
 </div>
 

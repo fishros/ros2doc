@@ -248,7 +248,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Related-Projects/Nvidia-ROS2-Projects.html">[需手动修复的语法]NVIDIAROS 2项目 [待校准&#64;6668]</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../Glossary.html">相关术语 `[小鱼&#64;1] http://dev.ros2.fishros.com/calibpage/#/home?msgid=1&gt;`_</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Glossary.html">术语表</a></li>
 </ul>
 
         </div>
@@ -279,9 +279,9 @@
 
 
   <div class="section" id="building-ros-2-on-windows">
-<h1>在Windows上构建ROS 2 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5561">[待校准&#64;5561]</a><a class="headerlink" href="#building-ros-2-on-windows" title="永久链接至标题"></a></h1>
+<h1>在Windows上构建ROS 2 <a class="reference external" href="http://localhost:3000/#/home?msgid=5561">[待校准&#64;5561]</a><a class="headerlink" href="#building-ros-2-on-windows" title="永久链接至标题"></a></h1>
 <div class="contents local topic" id="table-of-contents">
-<p class="topic-title">目录 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5475">[待校准&#64;5475]</a></p>
+<p class="topic-title">目录 <a class="reference external" href="http://localhost:3000/#/home?msgid=5475">[待校准&#64;5475]</a></p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#prerequisites" id="id1">先决条件 [待校准&#64;5386]</a></p>
 <ul>
@@ -312,102 +312,102 @@
 <li><p><a class="reference internal" href="#uninstall" id="id18">卸载 [待校准&#64;5522]</a></p></li>
 </ul>
 </div>
-<p>本指南介绍了如何在Windows上为ROS 2设置开发版本环境。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5562">[待校准&#64;5562]</a></p>
+<p>本指南介绍了如何在Windows上为ROS 2设置开发版本环境。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5562">[待校准&#64;5562]</a></p>
 <div class="section" id="prerequisites">
-<h2>先决条件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5386">[待校准&#64;5386]</a><a class="headerlink" href="#prerequisites" title="永久链接至标题"></a></h2>
-<p>首先按照二进制安装页面上的 <a class="reference internal" href="Windows-Install-Binary.html#windows-install-binary-installing-prerequisites"><span class="std std-ref">Installing Prerequisites</span></a>  步骤操作。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5563">[待校准&#64;5563]</a></p>
-<p>当你到达  &quot;Downloading ROS 2&quot; 区时，停下来返回这里。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5564">[待校准&#64;5564]</a></p>
+<h2>先决条件 <a class="reference external" href="http://localhost:3000/#/home?msgid=5386">[待校准&#64;5386]</a><a class="headerlink" href="#prerequisites" title="永久链接至标题"></a></h2>
+<p>首先按照二进制安装页面上的 <a class="reference internal" href="Windows-Install-Binary.html#windows-install-binary-installing-prerequisites"><span class="std std-ref">Installing Prerequisites</span></a>  步骤操作。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5563">[待校准&#64;5563]</a></p>
+<p>当你到达  &quot;Downloading ROS 2&quot; 区时，停下来返回这里。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5564">[待校准&#64;5564]</a></p>
 <div class="section" id="language-support">
-<h3>语言支持 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5565">[待校准&#64;5565]</a><a class="headerlink" href="#language-support" title="永久链接至标题"></a></h3>
-<p>确保你有一个支持 <code class="docutils literal notranslate"><span class="pre">UTF-8</span></code> 的区域。例如，对于中文Windows 10安装，您可能需要安装 <a class="reference external" href="https://support.microsoft.com/en-us/windows/language-packs-for-windows-a5094319-a92d-18de-5b53-1cfc697cfca8">English language pack</a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5566">[待校准&#64;5566]</a></p>
+<h3>语言支持 <a class="reference external" href="http://localhost:3000/#/home?msgid=5565">[待校准&#64;5565]</a><a class="headerlink" href="#language-support" title="永久链接至标题"></a></h3>
+<p>确保你有一个支持 <code class="docutils literal notranslate"><span class="pre">UTF-8</span></code> 的区域。例如，对于中文Windows 10安装，您可能需要安装 <a class="reference external" href="https://support.microsoft.com/en-us/windows/language-packs-for-windows-a5094319-a92d-18de-5b53-1cfc697cfca8">English language pack</a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5566">[待校准&#64;5566]</a></p>
 </div>
 <div class="section" id="additional-prerequisites">
-<h3>附加先决条件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5567">[待校准&#64;5567]</a><a class="headerlink" href="#additional-prerequisites" title="永久链接至标题"></a></h3>
-<p>从源文件构建时，您需要安装一些额外的先决条件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5568">[待校准&#64;5568]</a></p>
+<h3>附加先决条件 <a class="reference external" href="http://localhost:3000/#/home?msgid=5567">[待校准&#64;5567]</a><a class="headerlink" href="#additional-prerequisites" title="永久链接至标题"></a></h3>
+<p>从源文件构建时，您需要安装一些额外的先决条件。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5568">[待校准&#64;5568]</a></p>
 <div class="section" id="install-additional-prerequisites-from-chocolatey">
-<h4>从Chocolatey安装额外的先决条件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5569">[待校准&#64;5569]</a><a class="headerlink" href="#install-additional-prerequisites-from-chocolatey" title="永久链接至标题"></a></h4>
-<p>首先安装git: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5570">[待校准&#64;5570]</a></p>
+<h4>从Chocolatey安装额外的先决条件 <a class="reference external" href="http://localhost:3000/#/home?msgid=5569">[待校准&#64;5569]</a><a class="headerlink" href="#install-additional-prerequisites-from-chocolatey" title="永久链接至标题"></a></h4>
+<p>首先安装git: <a class="reference external" href="http://localhost:3000/#/home?msgid=5570">[待校准&#64;5570]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>choco install -y git
 </pre></div>
 </div>
-<p>您需要将Git cmd文件夹 “c: 程序文件 Git cmd'” 附加到路径中 (您可以通过单击Windows图标，键入  &quot;Environment Variables&quot; ，然后点击  &quot;Edit the system environment variables&quot; 。在生成的对话框中，单击  &quot;Environment Variables&quot; ，在底部窗格中单击  &quot;Path&quot; ，然后单击  &quot;Edit&quot; 并添加路径)。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5571">[待校准&#64;5571]</a></p>
+<p>您需要将Git cmd文件夹 “c: 程序文件 Git cmd'” 附加到路径中 (您可以通过单击Windows图标，键入  &quot;Environment Variables&quot; ，然后点击  &quot;Edit the system environment variables&quot; 。在生成的对话框中，单击  &quot;Environment Variables&quot; ，在底部窗格中单击  &quot;Path&quot; ，然后单击  &quot;Edit&quot; 并添加路径)。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5571">[待校准&#64;5571]</a></p>
 </div>
 </div>
 </div>
 <div class="section" id="install-developer-tools">
-<h2>安装开发人员工具 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5572">[待校准&#64;5572]</a><a class="headerlink" href="#install-developer-tools" title="永久链接至标题"></a></h2>
-<p>现在，我们准备安装一些用于帮助开发ROS 2的工具。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5573">[待校准&#64;5573]</a></p>
-<p>让我们从 <code class="docutils literal notranslate"><span class="pre">vcstool</span></code> 开始: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5574">[待校准&#64;5574]</a></p>
+<h2>安装开发人员工具 <a class="reference external" href="http://localhost:3000/#/home?msgid=5572">[待校准&#64;5572]</a><a class="headerlink" href="#install-developer-tools" title="永久链接至标题"></a></h2>
+<p>现在，我们准备安装一些用于帮助开发ROS 2的工具。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5573">[待校准&#64;5573]</a></p>
+<p>让我们从 <code class="docutils literal notranslate"><span class="pre">vcstool</span></code> 开始: <a class="reference external" href="http://localhost:3000/#/home?msgid=5574">[待校准&#64;5574]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install -U vcstool
 </pre></div>
 </div>
-<p>你可以通过运行 <code class="docutils literal notranslate"><span class="pre">vcs</span></code> 来测试它 (你应该可以在同一个cmd提示中这样做)。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5575">[待校准&#64;5575]</a></p>
-<p>接下来，安装 <code class="docutils literal notranslate"><span class="pre">colcon</span></code> : <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5576">[待校准&#64;5576]</a></p>
+<p>你可以通过运行 <code class="docutils literal notranslate"><span class="pre">vcs</span></code> 来测试它 (你应该可以在同一个cmd提示中这样做)。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5575">[待校准&#64;5575]</a></p>
+<p>接下来，安装 <code class="docutils literal notranslate"><span class="pre">colcon</span></code> : <a class="reference external" href="http://localhost:3000/#/home?msgid=5576">[待校准&#64;5576]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install -U colcon-common-extensions
 </pre></div>
 </div>
-<p>你可以通过运行 <code class="docutils literal notranslate"><span class="pre">colcon</span></code> 来测试它 (你应该可以在同一个cmd提示中这样做)。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5577">[待校准&#64;5577]</a></p>
-<p>另外，你应该安装 <code class="docutils literal notranslate"><span class="pre">curl</span></code> : <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5578">[待校准&#64;5578]</a></p>
+<p>你可以通过运行 <code class="docutils literal notranslate"><span class="pre">colcon</span></code> 来测试它 (你应该可以在同一个cmd提示中这样做)。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5577">[待校准&#64;5577]</a></p>
+<p>另外，你应该安装 <code class="docutils literal notranslate"><span class="pre">curl</span></code> : <a class="reference external" href="http://localhost:3000/#/home?msgid=5578">[待校准&#64;5578]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>choco install -y curl
 </pre></div>
 </div>
 </div>
 <div class="section" id="install-dependencies">
-<h2>安装依赖项 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5579">[待校准&#64;5579]</a><a class="headerlink" href="#install-dependencies" title="永久链接至标题"></a></h2>
-<p>接下来安装最新版本的 <code class="docutils literal notranslate"><span class="pre">setuptools</span></code> 和 <code class="docutils literal notranslate"><span class="pre">pip</span></code> : <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5580">[待校准&#64;5580]</a></p>
+<h2>安装依赖项 <a class="reference external" href="http://localhost:3000/#/home?msgid=5579">[待校准&#64;5579]</a><a class="headerlink" href="#install-dependencies" title="永久链接至标题"></a></h2>
+<p>接下来安装最新版本的 <code class="docutils literal notranslate"><span class="pre">setuptools</span></code> 和 <code class="docutils literal notranslate"><span class="pre">pip</span></code> : <a class="reference external" href="http://localhost:3000/#/home?msgid=5580">[待校准&#64;5580]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m pip install -U setuptools pip
 </pre></div>
 </div>
-<p>然后，您可以继续安装其他Python依赖项: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5581">[待校准&#64;5581]</a></p>
+<p>然后，您可以继续安装其他Python依赖项: <a class="reference external" href="http://localhost:3000/#/home?msgid=5581">[待校准&#64;5581]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install -U catkin_pkg cryptography EmPy ifcfg lark-parser lxml numpy pyparsing pyyaml
 </pre></div>
 </div>
-<p>接下来安装测试工具，如 <code class="docutils literal notranslate"><span class="pre">pytest</span></code> 等: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5582">[待校准&#64;5582]</a></p>
+<p>接下来安装测试工具，如 <code class="docutils literal notranslate"><span class="pre">pytest</span></code> 等: <a class="reference external" href="http://localhost:3000/#/home?msgid=5582">[待校准&#64;5582]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install -U pytest pytest-mock coverage mock
 </pre></div>
 </div>
-<p>接下来安装像 <code class="docutils literal notranslate"><span class="pre">flake8</span></code> 和其他的油缸和格子: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5583">[待校准&#64;5583]</a></p>
+<p>接下来安装像 <code class="docutils literal notranslate"><span class="pre">flake8</span></code> 和其他的油缸和格子: <a class="reference external" href="http://localhost:3000/#/home?msgid=5583">[待校准&#64;5583]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install -U flake8 flake8-blind-except flake8-builtins flake8-class-newline flake8-comprehensions flake8-deprecated flake8-docstrings flake8-import-order flake8-quotes <span class="nv">mypy</span><span class="o">==</span><span class="m">0</span>.761 pep8 pydocstyle
 </pre></div>
 </div>
-<p>接下来安装cppcheck: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5584">[待校准&#64;5584]</a></p>
+<p>接下来安装cppcheck: <a class="reference external" href="http://localhost:3000/#/home?msgid=5584">[待校准&#64;5584]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>choco install -y cppcheck
 </pre></div>
 </div>
-<p>接下来安装xmllint: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5585">[待校准&#64;5585]</a></p>
+<p>接下来安装xmllint: <a class="reference external" href="http://localhost:3000/#/home?msgid=5585">[待校准&#64;5585]</a></p>
 <ul class="simple">
-<li><p>从https://www.zlatkovic.com/projects/libxml/ 下载 <code class="docutils literal notranslate"><span class="pre">libxml2</span></code> 的 <a class="reference external" href="https://www.zlatkovic.com/pub/libxml/64bit/">64 bit binary archives</a>  (及其属地 <code class="docutils literal notranslate"><span class="pre">iconv</span></code> 和 <code class="docutils literal notranslate"><span class="pre">zlib</span></code> ) <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5586">[待校准&#64;5586]</a></p></li>
-<li><p>打开所有archives到例如 ''c: xmllint'' <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5587">[待校准&#64;5587]</a></p></li>
-<li><p>将 “c: xmllint bin” 添加到 <code class="docutils literal notranslate"><span class="pre">PATH</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5588">[待校准&#64;5588]</a></p></li>
+<li><p>从https://www.zlatkovic.com/projects/libxml/ 下载 <code class="docutils literal notranslate"><span class="pre">libxml2</span></code> 的 <a class="reference external" href="https://www.zlatkovic.com/pub/libxml/64bit/">64 bit binary archives</a>  (及其属地 <code class="docutils literal notranslate"><span class="pre">iconv</span></code> 和 <code class="docutils literal notranslate"><span class="pre">zlib</span></code> ) <a class="reference external" href="http://localhost:3000/#/home?msgid=5586">[待校准&#64;5586]</a></p></li>
+<li><p>打开所有archives到例如 ''c: xmllint'' <a class="reference external" href="http://localhost:3000/#/home?msgid=5587">[待校准&#64;5587]</a></p></li>
+<li><p>将 “c: xmllint bin” 添加到 <code class="docutils literal notranslate"><span class="pre">PATH</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5588">[待校准&#64;5588]</a></p></li>
 </ul>
 <div class="section" id="install-qt5">
-<h3>安装Qt5 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5589">[待校准&#64;5589]</a><a class="headerlink" href="#install-qt5" title="永久链接至标题"></a></h3>
-<p>仅当您正在构建rviz时才需要此部分，但它附带了我们的默认源文件集，因此如果您不知道，则假设您正在构建它。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5590">[待校准&#64;5590]</a></p>
-<p>首先从Qt的网站获取安装程序: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5591">[待校准&#64;5591]</a></p>
-<p><a class="reference external" href="https://www.qt.io/download">https://www.qt.io/download</a> <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5592">[待校准&#64;5592]</a></p>
-<p>选择开源版本，然后选择 <code class="docutils literal notranslate"><span class="pre">Qt</span> <span class="pre">Online</span> <span class="pre">Installer</span> <span class="pre">for</span> <span class="pre">Windows</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5593">[待校准&#64;5593]</a></p>
-<p>运行安装程序并安装qt5。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5594">[待校准&#64;5594]</a></p>
-<p>我们建议您将其安装到默认位置 “c: qt”，但是如果您选择其他位置，请确保相应地更新以下路径。当选择要安装的组件时，Foxy和更高版本绝对需要的唯一东西是 <code class="docutils literal notranslate"><span class="pre">Qt</span></code>  -&gt;  <code class="docutils literal notranslate"><span class="pre">Qt</span> <span class="pre">5.15.0</span></code> 树下合适的MSVC 64位组件。在撰写本文档时，我们正在使用 <code class="docutils literal notranslate"><span class="pre">5.15.0</span></code> ，这's what we recommend since that'我们在Windows上测试的全部内容，但以后的版本可能也会起作用。对于Foxy及以后，一定要选择 <code class="docutils literal notranslate"><span class="pre">MSVC</span> <span class="pre">2019</span> <span class="pre">64-bit</span></code> 。之后，默认设置就可以了。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5595">[待校准&#64;5595]</a></p>
-<p>最后，设置 <code class="docutils literal notranslate"><span class="pre">Qt5_DIR</span></code> 环境变量 <code class="docutils literal notranslate"><span class="pre">cmd.exe</span></code> 你打算建立使CMake可以找到: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5596">[待校准&#64;5596]</a></p>
+<h3>安装Qt5 <a class="reference external" href="http://localhost:3000/#/home?msgid=5589">[待校准&#64;5589]</a><a class="headerlink" href="#install-qt5" title="永久链接至标题"></a></h3>
+<p>仅当您正在构建rviz时才需要此部分，但它附带了我们的默认源文件集，因此如果您不知道，则假设您正在构建它。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5590">[待校准&#64;5590]</a></p>
+<p>首先从Qt的网站获取安装程序: <a class="reference external" href="http://localhost:3000/#/home?msgid=5591">[待校准&#64;5591]</a></p>
+<p><a class="reference external" href="https://www.qt.io/download">https://www.qt.io/download</a> <a class="reference external" href="http://localhost:3000/#/home?msgid=5592">[待校准&#64;5592]</a></p>
+<p>选择开源版本，然后选择 <code class="docutils literal notranslate"><span class="pre">Qt</span> <span class="pre">Online</span> <span class="pre">Installer</span> <span class="pre">for</span> <span class="pre">Windows</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5593">[待校准&#64;5593]</a></p>
+<p>运行安装程序并安装qt5。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5594">[待校准&#64;5594]</a></p>
+<p>我们建议您将其安装到默认位置 “c: qt”，但是如果您选择其他位置，请确保相应地更新以下路径。当选择要安装的组件时，Foxy和更高版本绝对需要的唯一东西是 <code class="docutils literal notranslate"><span class="pre">Qt</span></code>  -&gt;  <code class="docutils literal notranslate"><span class="pre">Qt</span> <span class="pre">5.15.0</span></code> 树下合适的MSVC 64位组件。在撰写本文档时，我们正在使用 <code class="docutils literal notranslate"><span class="pre">5.15.0</span></code> ，这's what we recommend since that'我们在Windows上测试的全部内容，但以后的版本可能也会起作用。对于Foxy及以后，一定要选择 <code class="docutils literal notranslate"><span class="pre">MSVC</span> <span class="pre">2019</span> <span class="pre">64-bit</span></code> 。之后，默认设置就可以了。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5595">[待校准&#64;5595]</a></p>
+<p>最后，设置 <code class="docutils literal notranslate"><span class="pre">Qt5_DIR</span></code> 环境变量 <code class="docutils literal notranslate"><span class="pre">cmd.exe</span></code> 你打算建立使CMake可以找到: <a class="reference external" href="http://localhost:3000/#/home?msgid=5596">[待校准&#64;5596]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span> <span class="nv">Qt5_DIR</span><span class="o">=</span>C:<span class="se">\Q</span>t<span class="se">\5</span>.15.0<span class="se">\m</span>svc2019_64
 </pre></div>
 </div>
-<p>您可以使用 “setx-m Qt5_DIR C :Qt 5.15.0 msvc2019_64” 永久设置它，但这需要管理员。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5597">[待校准&#64;5597]</a></p>
+<p>您可以使用 “setx-m Qt5_DIR C :Qt 5.15.0 msvc2019_64” 永久设置它，但这需要管理员。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5597">[待校准&#64;5597]</a></p>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
-<p>此路径可能会根据您使用的MSVC版本或是否将其安装到其他目录而更改。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5598">[待校准&#64;5598]</a></p>
+<p>此路径可能会根据您使用的MSVC版本或是否将其安装到其他目录而更改。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5598">[待校准&#64;5598]</a></p>
 </div>
 </div>
 </div>
 <div class="section" id="get-the-ros-2-code">
-<h2>获取ROS 2代码 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5599">[待校准&#64;5599]</a><a class="headerlink" href="#get-the-ros-2-code" title="永久链接至标题"></a></h2>
-<p>现在我们有了开发版本工具，我们可以获取ROS 2源文件代码。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5600">[待校准&#64;5600]</a></p>
-<p>首先设置一个开发版本文件夹，例如 “c: dev ros2_foxy”: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5601">[待校准&#64;5601]</a></p>
+<h2>获取ROS 2代码 <a class="reference external" href="http://localhost:3000/#/home?msgid=5599">[待校准&#64;5599]</a><a class="headerlink" href="#get-the-ros-2-code" title="永久链接至标题"></a></h2>
+<p>现在我们有了开发版本工具，我们可以获取ROS 2源文件代码。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5600">[待校准&#64;5600]</a></p>
+<p>首先设置一个开发版本文件夹，例如 “c: dev ros2_foxy”: <a class="reference external" href="http://localhost:3000/#/home?msgid=5601">[待校准&#64;5601]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>md <span class="se">\d</span>ev<span class="se">\r</span>os2_foxy<span class="se">\s</span>rc
 <span class="nb">cd</span> <span class="se">\d</span>ev<span class="se">\r</span>os2_foxy
 </pre></div>
 </div>
-<p>获取定义要克隆的仓库的 <code class="docutils literal notranslate"><span class="pre">ros2.repos</span></code> 文件: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5602">[待校准&#64;5602]</a></p>
+<p>获取定义要克隆的仓库的 <code class="docutils literal notranslate"><span class="pre">ros2.repos</span></code> 文件: <a class="reference external" href="http://localhost:3000/#/home?msgid=5602">[待校准&#64;5602]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># CMD</span>
 curl -sk https://raw.githubusercontent.com/ros2/ros2/foxy/ros2.repos -o ros2.repos
 
@@ -415,7 +415,7 @@ curl -sk https://raw.githubusercontent.com/ros2/ros2/foxy/ros2.repos -o ros2.rep
 curl https://raw.githubusercontent.com/ros2/ros2/foxy/ros2.repos -o ros2.repos
 </pre></div>
 </div>
-<p>接下来，您可以使用 <code class="docutils literal notranslate"><span class="pre">vcs</span></code> 导入 <code class="docutils literal notranslate"><span class="pre">ros2.repos</span></code> 文件中列出的仓库: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5603">[待校准&#64;5603]</a></p>
+<p>接下来，您可以使用 <code class="docutils literal notranslate"><span class="pre">vcs</span></code> 导入 <code class="docutils literal notranslate"><span class="pre">ros2.repos</span></code> 文件中列出的仓库: <a class="reference external" href="http://localhost:3000/#/home?msgid=5603">[待校准&#64;5603]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># CMD</span>
 vcs import src &lt; ros2.repos
 
@@ -424,103 +424,103 @@ vcs import --input ros2.repos src
 </pre></div>
 </div>
 <div class="section" id="install-additional-dds-implementations-optional">
-<h3>安装额外的DDS实现 (可选) <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5495">[待校准&#64;5495]</a><a class="headerlink" href="#install-additional-dds-implementations-optional" title="永久链接至标题"></a></h3>
-<p>如果你想使用另一个DDS或RTPS供应商，除了默认的，eProsima的快速RTPS，你可以找到说明 <a class="reference internal" href="DDS-Implementations.html"><span class="doc">here</span></a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5496">[待校准&#64;5496]</a></p>
+<h3>安装额外的DDS实现 (可选) <a class="reference external" href="http://localhost:3000/#/home?msgid=5495">[待校准&#64;5495]</a><a class="headerlink" href="#install-additional-dds-implementations-optional" title="永久链接至标题"></a></h3>
+<p>如果你想使用另一个DDS或RTPS供应商，除了默认的，eProsima的快速RTPS，你可以找到说明 <a class="reference internal" href="DDS-Implementations.html"><span class="doc">here</span></a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5496">[待校准&#64;5496]</a></p>
 </div>
 </div>
 <div class="section" id="build-the-ros-2-code">
-<h2>构建ROS 2代码 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5604">[待校准&#64;5604]</a><a class="headerlink" href="#build-the-ros-2-code" title="永久链接至标题"></a></h2>
-<p id="windows-dev-build-ros2">要构建ROS 2，您需要以管理员身份运行Visual Studio命令提示符 (  &quot;x64 Native Tools Command Prompt for VS 2019&quot; )。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5605">[待校准&#64;5605]</a></p>
-<p>快速RTPS与ROS 2源文件捆绑在一起，除非您将 <code class="docutils literal notranslate"><span class="pre">AMENT_IGNORE</span></code> 文件放在 “src eProsima” 文件夹中，否则它将始终被构建。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5606">[待校准&#64;5606]</a></p>
-<p>要构建 “dev ros2_foxy” 文件夹树: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5607">[待校准&#64;5607]</a></p>
+<h2>构建ROS 2代码 <a class="reference external" href="http://localhost:3000/#/home?msgid=5604">[待校准&#64;5604]</a><a class="headerlink" href="#build-the-ros-2-code" title="永久链接至标题"></a></h2>
+<p id="windows-dev-build-ros2">要构建ROS 2，您需要以管理员身份运行Visual Studio命令提示符 (  &quot;x64 Native Tools Command Prompt for VS 2019&quot; )。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5605">[待校准&#64;5605]</a></p>
+<p>快速RTPS与ROS 2源文件捆绑在一起，除非您将 <code class="docutils literal notranslate"><span class="pre">AMENT_IGNORE</span></code> 文件放在 “src eProsima” 文件夹中，否则它将始终被构建。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5606">[待校准&#64;5606]</a></p>
+<p>要构建 “dev ros2_foxy” 文件夹树: <a class="reference external" href="http://localhost:3000/#/home?msgid=5607">[待校准&#64;5607]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>colcon build --merge-install
 </pre></div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
-<p>我们在这里使用 <code class="docutils literal notranslate"><span class="pre">--merge-install</span></code> 来避免在构建结束时太长的 <code class="docutils literal notranslate"><span class="pre">PATH</span></code> 变量。如果要调整这些说明以构建较小的工作区，则可以使用默认行为，即隔离安装，即每个包安装到不同的文件夹的位置。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5608">[待校准&#64;5608]</a></p>
+<p>我们在这里使用 <code class="docutils literal notranslate"><span class="pre">--merge-install</span></code> 来避免在构建结束时太长的 <code class="docutils literal notranslate"><span class="pre">PATH</span></code> 变量。如果要调整这些说明以构建较小的工作区，则可以使用默认行为，即隔离安装，即每个包安装到不同的文件夹的位置。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5608">[待校准&#64;5608]</a></p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
-<p>如果您正在进行调试构建，请使用 <code class="docutils literal notranslate"><span class="pre">python_d</span> <span class="pre">path\to\colcon_executable</span> <span class="pre">build</span> <span class="pre">--cmake-args</span> <span class="pre">-DCMAKE_BUILD_TYPE=Debug</span></code>. See <a class="reference internal" href="#extra-stuff-for-debug-mode">Extra stuff for debug mode</a> 了解有关在Windows上的调试构建中运行Python代码的更多信息。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5609">[待校准&#64;5609]</a></p>
+<p>如果您正在进行调试构建，请使用 <code class="docutils literal notranslate"><span class="pre">python_d</span> <span class="pre">path\to\colcon_executable</span> <span class="pre">build</span> <span class="pre">--cmake-args</span> <span class="pre">-DCMAKE_BUILD_TYPE=Debug</span></code>. See <a class="reference internal" href="#extra-stuff-for-debug-mode">Extra stuff for debug mode</a> 了解有关在Windows上的调试构建中运行Python代码的更多信息。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5609">[待校准&#64;5609]</a></p>
 </div>
 </div>
 <div class="section" id="environment-setup">
-<h2>环境设置 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5501">[待校准&#64;5501]</a><a class="headerlink" href="#environment-setup" title="永久链接至标题"></a></h2>
-<p>启动命令shell并源文件ROS 2安装文件以设置工作区: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5610">[待校准&#64;5610]</a></p>
+<h2>环境设置 <a class="reference external" href="http://localhost:3000/#/home?msgid=5501">[待校准&#64;5501]</a><a class="headerlink" href="#environment-setup" title="永久链接至标题"></a></h2>
+<p>启动命令shell并源文件ROS 2安装文件以设置工作区: <a class="reference external" href="http://localhost:3000/#/home?msgid=5610">[待校准&#64;5610]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>call C:<span class="se">\d</span>ev<span class="se">\r</span>os2_foxy<span class="se">\i</span>nstall<span class="se">\l</span>ocal_setup.bat
 </pre></div>
 </div>
-<p>这将自动调用y为任何为其构建支持的DDS供应商设置环境。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5611">[待校准&#64;5611]</a></p>
-<p>正常情况下，如果没有其他错误，则前一个命令输出 “系统找不到指定的路径。” 恰好一次。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5612">[待校准&#64;5612]</a></p>
+<p>这将自动调用y为任何为其构建支持的DDS供应商设置环境。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5611">[待校准&#64;5611]</a></p>
+<p>正常情况下，如果没有其他错误，则前一个命令输出 “系统找不到指定的路径。” 恰好一次。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5612">[待校准&#64;5612]</a></p>
 </div>
 <div class="section" id="test-and-run">
-<h2>测试和运行 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5613">[待校准&#64;5613]</a><a class="headerlink" href="#test-and-run" title="永久链接至标题"></a></h2>
-<p>请注意，首次运行任何可执行文件时，必须允许通过Windows防火墙弹出窗口访问网络。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5614">[待校准&#64;5614]</a></p>
-<p>您可以使用以下命令运行测试: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5615">[待校准&#64;5615]</a></p>
+<h2>测试和运行 <a class="reference external" href="http://localhost:3000/#/home?msgid=5613">[待校准&#64;5613]</a><a class="headerlink" href="#test-and-run" title="永久链接至标题"></a></h2>
+<p>请注意，首次运行任何可执行文件时，必须允许通过Windows防火墙弹出窗口访问网络。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5614">[待校准&#64;5614]</a></p>
+<p>您可以使用以下命令运行测试: <a class="reference external" href="http://localhost:3000/#/home?msgid=5615">[待校准&#64;5615]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>colcon <span class="nb">test</span> --merge-install
 </pre></div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
-<p>只有当它也用于构建步骤时，才使用``--merge-install`` should。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5616">[待校准&#64;5616]</a></p>
+<p>只有当它也用于构建步骤时，才使用``--merge-install`` should。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5616">[待校准&#64;5616]</a></p>
 </div>
-<p>之后，您可以使用以下命令获取测试摘要: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5617">[待校准&#64;5617]</a></p>
+<p>之后，您可以使用以下命令获取测试摘要: <a class="reference external" href="http://localhost:3000/#/home?msgid=5617">[待校准&#64;5617]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>colcon test-result
 </pre></div>
 </div>
-<p>要运行这些示例，首先打开一个干净的新 <code class="docutils literal notranslate"><span class="pre">cmd.exe</span></code> ，并通过采购 <code class="docutils literal notranslate"><span class="pre">local_setup.bat</span></code> 文件来设置工作区。然后，运行c <code class="docutils literal notranslate"><span class="pre">talker</span></code>  : <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5618">[待校准&#64;5618]</a></p>
+<p>要运行这些示例，首先打开一个干净的新 <code class="docutils literal notranslate"><span class="pre">cmd.exe</span></code> ，并通过采购 <code class="docutils literal notranslate"><span class="pre">local_setup.bat</span></code> 文件来设置工作区。然后，运行c <code class="docutils literal notranslate"><span class="pre">talker</span></code>  : <a class="reference external" href="http://localhost:3000/#/home?msgid=5618">[待校准&#64;5618]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>call install<span class="se">\l</span>ocal_setup.bat
 ros2 run demo_nodes_cpp talker
 </pre></div>
 </div>
-<p>在单独的shell中，您可以执行相同的操作，而是运行Python <code class="docutils literal notranslate"><span class="pre">listener</span></code>  : <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5619">[待校准&#64;5619]</a></p>
+<p>在单独的shell中，您可以执行相同的操作，而是运行Python <code class="docutils literal notranslate"><span class="pre">listener</span></code>  : <a class="reference external" href="http://localhost:3000/#/home?msgid=5619">[待校准&#64;5619]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>call install<span class="se">\l</span>ocal_setup.bat
 ros2 run demo_nodes_py listener
 </pre></div>
 </div>
-<p>你应该看到 <code class="docutils literal notranslate"><span class="pre">talker</span></code> 说这是 <code class="docutils literal notranslate"><span class="pre">Publishing</span></code> 消息 <code class="docutils literal notranslate"><span class="pre">listener</span></code> 说 <code class="docutils literal notranslate"><span class="pre">I</span> <span class="pre">heard</span></code> 这些消息。这将验证capis和Python api是否正常工作。万岁! <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5507">[待校准&#64;5507]</a></p>
+<p>你应该看到 <code class="docutils literal notranslate"><span class="pre">talker</span></code> 说这是 <code class="docutils literal notranslate"><span class="pre">Publishing</span></code> 消息 <code class="docutils literal notranslate"><span class="pre">listener</span></code> 说 <code class="docutils literal notranslate"><span class="pre">I</span> <span class="pre">heard</span></code> 这些消息。这将验证capis和Python api是否正常工作。万岁! <a class="reference external" href="http://localhost:3000/#/home?msgid=5507">[待校准&#64;5507]</a></p>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
-<p>不建议在相同的cmd提示中构建已为 <code class="docutils literal notranslate"><span class="pre">local_setup.bat</span></code> 源文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5620">[待校准&#64;5620]</a></p>
+<p>不建议在相同的cmd提示中构建已为 <code class="docutils literal notranslate"><span class="pre">local_setup.bat</span></code> 源文件。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5620">[待校准&#64;5620]</a></p>
 </div>
 </div>
 <div class="section" id="next-steps-after-installing">
-<h2>安装后的下一步 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5508">[待校准&#64;5508]</a><a class="headerlink" href="#next-steps-after-installing" title="永久链接至标题"></a></h2>
-<p>继续使用 <a class="reference internal" href="../Tutorials.html"><span class="doc">tutorials and demos</span></a> 来配置您的环境，创建您自己的工作区和包，并学习ROS 2核心概念。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5509">[待校准&#64;5509]</a></p>
+<h2>安装后的下一步 <a class="reference external" href="http://localhost:3000/#/home?msgid=5508">[待校准&#64;5508]</a><a class="headerlink" href="#next-steps-after-installing" title="永久链接至标题"></a></h2>
+<p>继续使用 <a class="reference internal" href="../Tutorials.html"><span class="doc">tutorials and demos</span></a> 来配置您的环境，创建您自己的工作区和包，并学习ROS 2核心概念。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5509">[待校准&#64;5509]</a></p>
 </div>
 <div class="section" id="using-the-ros-1-bridge">
-<h2>使用ROS 1bridge <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5510">[待校准&#64;5510]</a><a class="headerlink" href="#using-the-ros-1-bridge" title="永久链接至标题"></a></h2>
-<p>[需手动修复的语法]ROS 1bridge可以连接从[需手动修复的语法]ROS 1到ROS 2的话题，反之亦然。看到专用 <a class="reference external" href="https://github.com/ros2/ros1_bridge/blob/master/README.md">documentation</a> 如何构建和使用[需手动修复的语法]ROS 1bridge。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5511">[待校准&#64;5511]</a></p>
+<h2>使用ROS 1bridge <a class="reference external" href="http://localhost:3000/#/home?msgid=5510">[待校准&#64;5510]</a><a class="headerlink" href="#using-the-ros-1-bridge" title="永久链接至标题"></a></h2>
+<p>[需手动修复的语法]ROS 1bridge可以连接从[需手动修复的语法]ROS 1到ROS 2的话题，反之亦然。看到专用 <a class="reference external" href="https://github.com/ros2/ros1_bridge/blob/master/README.md">documentation</a> 如何构建和使用[需手动修复的语法]ROS 1bridge。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5511">[待校准&#64;5511]</a></p>
 </div>
 <div class="section" id="additional-rmw-implementations-optional">
-<h2>附加RMW实现 (可选) <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5512">[待校准&#64;5512]</a><a class="headerlink" href="#additional-rmw-implementations-optional" title="永久链接至标题"></a></h2>
-<p>ROS 2使用的默认中间件是 <code class="docutils literal notranslate"><span class="pre">Fast-RTPS</span></code> ，但中间件 (RMW) 可以在运行时替换。查看关于如何使用多个RMWs的 <a class="reference internal" href="../How-To-Guides/Working-with-multiple-RMW-implementations.html"><span class="doc">guide</span></a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5513">[待校准&#64;5513]</a></p>
+<h2>附加RMW实现 (可选) <a class="reference external" href="http://localhost:3000/#/home?msgid=5512">[待校准&#64;5512]</a><a class="headerlink" href="#additional-rmw-implementations-optional" title="永久链接至标题"></a></h2>
+<p>ROS 2使用的默认中间件是 <code class="docutils literal notranslate"><span class="pre">Fast-RTPS</span></code> ，但中间件 (RMW) 可以在运行时替换。查看关于如何使用多个RMWs的 <a class="reference internal" href="../How-To-Guides/Working-with-multiple-RMW-implementations.html"><span class="doc">guide</span></a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5513">[待校准&#64;5513]</a></p>
 </div>
 <div class="section" id="extra-stuff-for-debug-mode">
-<h2>调试模式的额外内容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5621">[待校准&#64;5621]</a><a class="headerlink" href="#extra-stuff-for-debug-mode" title="永久链接至标题"></a></h2>
-<p>如果您希望能够在调试模式下运行所有测试，您需要安装更多内容: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5622">[待校准&#64;5622]</a></p>
+<h2>调试模式的额外内容 <a class="reference external" href="http://localhost:3000/#/home?msgid=5621">[待校准&#64;5621]</a><a class="headerlink" href="#extra-stuff-for-debug-mode" title="永久链接至标题"></a></h2>
+<p>如果您希望能够在调试模式下运行所有测试，您需要安装更多内容: <a class="reference external" href="http://localhost:3000/#/home?msgid=5622">[待校准&#64;5622]</a></p>
 <ul class="simple">
-<li><p>为了能够提取Python源文件tarball，您可以使用PeaZip: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5623">[待校准&#64;5623]</a></p></li>
+<li><p>为了能够提取Python源文件tarball，您可以使用PeaZip: <a class="reference external" href="http://localhost:3000/#/home?msgid=5623">[待校准&#64;5623]</a></p></li>
 </ul>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>choco install -y peazip
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>您还需要SVN，因为某些Python源文件构建依赖项是通过SVN签出的: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5624">[待校准&#64;5624]</a></p></li>
+<li><p>您还需要SVN，因为某些Python源文件构建依赖项是通过SVN签出的: <a class="reference external" href="http://localhost:3000/#/home?msgid=5624">[待校准&#64;5624]</a></p></li>
 </ul>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>choco install -y svn hg
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>安装上述内容后，您需要退出并重新启动命令提示符。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5625">[待校准&#64;5625]</a></p></li>
-<li><p>从 <code class="docutils literal notranslate"><span class="pre">tgz</span></code> 中获取并提取Python 3.8.3源文件: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5626">[待校准&#64;5626]</a></p>
+<li><p>安装上述内容后，您需要退出并重新启动命令提示符。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5625">[待校准&#64;5625]</a></p></li>
+<li><p>从 <code class="docutils literal notranslate"><span class="pre">tgz</span></code> 中获取并提取Python 3.8.3源文件: <a class="reference external" href="http://localhost:3000/#/home?msgid=5626">[待校准&#64;5626]</a></p>
 <ul>
-<li><p><a class="reference external" href="https://www.python.org/ftp/python/">https://www.python.org/ftp/python/</a> 3.8.3/Python-3.8.3.tgz <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5627">[待校准&#64;5627]</a></p></li>
-<li><p>为了使这些说明简洁，请解压缩到 “c: dev Python-3.8.3” <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5628">[待校准&#64;5628]</a></p></li>
+<li><p><a class="reference external" href="https://www.python.org/ftp/python/">https://www.python.org/ftp/python/</a> 3.8.3/Python-3.8.3.tgz <a class="reference external" href="http://localhost:3000/#/home?msgid=5627">[待校准&#64;5627]</a></p></li>
+<li><p>为了使这些说明简洁，请解压缩到 “c: dev Python-3.8.3” <a class="reference external" href="http://localhost:3000/#/home?msgid=5628">[待校准&#64;5628]</a></p></li>
 </ul>
 </li>
-<li><p>现在，从Visual Studio命令提示符以调试模式构建Python源文件: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5629">[待校准&#64;5629]</a></p></li>
+<li><p>现在，从Visual Studio命令提示符以调试模式构建Python源文件: <a class="reference external" href="http://localhost:3000/#/home?msgid=5629">[待校准&#64;5629]</a></p></li>
 </ul>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> C:<span class="se">\d</span>ev<span class="se">\P</span>ython-3.8.3<span class="se">\P</span>Cbuild
 get_externals.bat
@@ -528,7 +528,7 @@ build.bat -p x64 -d
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>最后，将构建产品复制到发布模式Python可执行文件和DLL旁边的Python 38安装目录中: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5630">[待校准&#64;5630]</a></p></li>
+<li><p>最后，将构建产品复制到发布模式Python可执行文件和DLL旁边的Python 38安装目录中: <a class="reference external" href="http://localhost:3000/#/home?msgid=5630">[待校准&#64;5630]</a></p></li>
 </ul>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> C:<span class="se">\d</span>ev<span class="se">\P</span>ython-3.8.3<span class="se">\P</span>Cbuild<span class="se">\a</span>md64
 copy python_d.exe C:<span class="se">\P</span>ython38 /Y
@@ -541,54 +541,54 @@ copy sqlite3_d.dll C:<span class="se">\P</span>ython38<span class="se">\D</span>
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>现在，从新的命令提示符，确保 <code class="docutils literal notranslate"><span class="pre">python_d</span></code> 工作: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5631">[待校准&#64;5631]</a></p></li>
+<li><p>现在，从新的命令提示符，确保 <code class="docutils literal notranslate"><span class="pre">python_d</span></code> 工作: <a class="reference external" href="http://localhost:3000/#/home?msgid=5631">[待校准&#64;5631]</a></p></li>
 </ul>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python_d -c <span class="s2">&quot;import _ctypes ; import coverage&quot;</span>
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>验证 <code class="docutils literal notranslate"><span class="pre">python_d</span></code> 的操作后，有必要使用启用调试的库重新安装一些依赖项: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5632">[待校准&#64;5632]</a></p></li>
+<li><p>验证 <code class="docutils literal notranslate"><span class="pre">python_d</span></code> 的操作后，有必要使用启用调试的库重新安装一些依赖项: <a class="reference external" href="http://localhost:3000/#/home?msgid=5632">[待校准&#64;5632]</a></p></li>
 </ul>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python_d -m pip install --force-reinstall https://github.com/ros2/ros2/releases/download/numpy-archives/numpy-1.18.4-cp38-cp38d-win_amd64.whl
 python_d -m pip install --force-reinstall https://github.com/ros2/ros2/releases/download/lxml-archives/lxml-4.5.1-cp38-cp38d-win_amd64.whl
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>验证这些依赖项的安装: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5633">[待校准&#64;5633]</a></p></li>
+<li><p>验证这些依赖项的安装: <a class="reference external" href="http://localhost:3000/#/home?msgid=5633">[待校准&#64;5633]</a></p></li>
 </ul>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python_d -c <span class="s2">&quot;from lxml import etree ; import numpy&quot;</span>
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>当您希望返回到构建发行二进制文件时，必须卸载调试变体并使用发行变体: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5634">[待校准&#64;5634]</a></p></li>
+<li><p>当您希望返回到构建发行二进制文件时，必须卸载调试变体并使用发行变体: <a class="reference external" href="http://localhost:3000/#/home?msgid=5634">[待校准&#64;5634]</a></p></li>
 </ul>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m pip uninstall numpy lxml
 python -m pip install numpy lxml
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>要创建可执行文件python脚本 (.Exe)，应使用python _ d调用colcon以及相应的CMake构建类型。如果使用pip安装colcon，则可以通过 <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">show</span> <span class="pre">colcon-core</span></code> 找到colcon可执行文件的路径。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5635">[待校准&#64;5635]</a></p></li>
+<li><p>要创建可执行文件python脚本 (.Exe)，应使用python _ d调用colcon以及相应的CMake构建类型。如果使用pip安装colcon，则可以通过 <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">show</span> <span class="pre">colcon-core</span></code> 找到colcon可执行文件的路径。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5635">[待校准&#64;5635]</a></p></li>
 </ul>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python_d path<span class="se">\t</span>o<span class="se">\c</span>olcon_executable build --merge-install --cmake-args -DCMAKE_BUILD_TYPE<span class="o">=</span>Debug
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>万岁，你完蛋了! <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5636">[待校准&#64;5636]</a></p></li>
+<li><p>万岁，你完蛋了! <a class="reference external" href="http://localhost:3000/#/home?msgid=5636">[待校准&#64;5636]</a></p></li>
 </ul>
 </div>
 <div class="section" id="stay-up-to-date">
-<h2>保持最新 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5518">[待校准&#64;5518]</a><a class="headerlink" href="#stay-up-to-date" title="永久链接至标题"></a></h2>
-<p>请参阅 <a class="reference internal" href="Maintaining-a-Source-Checkout.html"><span class="doc">主源文件检出ROS 2Foxy [待校准&#64;5438]</span></a> 以定期调用y刷新源文件安装。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5519">[待校准&#64;5519]</a></p>
+<h2>保持最新 <a class="reference external" href="http://localhost:3000/#/home?msgid=5518">[待校准&#64;5518]</a><a class="headerlink" href="#stay-up-to-date" title="永久链接至标题"></a></h2>
+<p>请参阅 <a class="reference internal" href="Maintaining-a-Source-Checkout.html"><span class="doc">主源文件检出ROS 2Foxy [待校准&#64;5438]</span></a> 以定期调用y刷新源文件安装。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5519">[待校准&#64;5519]</a></p>
 </div>
 <div class="section" id="troubleshooting">
-<h2>故障排除 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5520">[待校准&#64;5520]</a><a class="headerlink" href="#troubleshooting" title="永久链接至标题"></a></h2>
-<p>故障排除技术可以找到 <a class="reference internal" href="../How-To-Guides/Installation-Troubleshooting.html#windows-troubleshooting"><span class="std std-ref">here</span></a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5637">[待校准&#64;5637]</a></p>
+<h2>故障排除 <a class="reference external" href="http://localhost:3000/#/home?msgid=5520">[待校准&#64;5520]</a><a class="headerlink" href="#troubleshooting" title="永久链接至标题"></a></h2>
+<p>故障排除技术可以找到 <a class="reference internal" href="../How-To-Guides/Installation-Troubleshooting.html#windows-troubleshooting"><span class="std std-ref">here</span></a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5637">[待校准&#64;5637]</a></p>
 </div>
 <div class="section" id="uninstall">
-<h2>卸载 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5522">[待校准&#64;5522]</a><a class="headerlink" href="#uninstall" title="永久链接至标题"></a></h2>
+<h2>卸载 <a class="reference external" href="http://localhost:3000/#/home?msgid=5522">[待校准&#64;5522]</a><a class="headerlink" href="#uninstall" title="永久链接至标题"></a></h2>
 <ol class="arabic">
-<li><p>如果你按照上面的指示用colcon安装了你的工作区，  &quot;uninstalling&quot; 可能只是打开一个新的终端，而不是采购工作区的 <code class="docutils literal notranslate"><span class="pre">setup</span></code> 文件。这样，您的环境就会表现得好像您的系统上没有安装Foxy。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5523">[待校准&#64;5523]</a></p></li>
-<li><p>如果您还尝试释放空间，则可以使用以下命令删除整个工作区目录: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5524">[待校准&#64;5524]</a></p>
+<li><p>如果你按照上面的指示用colcon安装了你的工作区，  &quot;uninstalling&quot; 可能只是打开一个新的终端，而不是采购工作区的 <code class="docutils literal notranslate"><span class="pre">setup</span></code> 文件。这样，您的环境就会表现得好像您的系统上没有安装Foxy。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5523">[待校准&#64;5523]</a></p></li>
+<li><p>如果您还尝试释放空间，则可以使用以下命令删除整个工作区目录: <a class="reference external" href="http://localhost:3000/#/home?msgid=5524">[待校准&#64;5524]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rmdir /s /q <span class="se">\r</span>os2_foxy
 </pre></div>
 </div>

@@ -248,7 +248,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Related-Projects/Nvidia-ROS2-Projects.html">[需手动修复的语法]NVIDIAROS 2项目 [待校准&#64;6668]</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../Glossary.html">相关术语 `[小鱼&#64;1] http://dev.ros2.fishros.com/calibpage/#/home?msgid=1&gt;`_</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Glossary.html">术语表</a></li>
 </ul>
 
         </div>
@@ -279,99 +279,99 @@
 
 
   <div class="section" id="about-quality-of-service-settings">
-<h1>关于服务质量设置 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9945">[待校准&#64;9945]</a><a class="headerlink" href="#about-quality-of-service-settings" title="永久链接至标题"></a></h1>
+<h1>关于服务质量设置 <a class="reference external" href="http://localhost:3000/#/home?msgid=9945">[待校准&#64;9945]</a><a class="headerlink" href="#about-quality-of-service-settings" title="永久链接至标题"></a></h1>
 <div class="section" id="overview">
-<h2>概述 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9718">[待校准&#64;9718]</a><a class="headerlink" href="#overview" title="永久链接至标题"></a></h2>
-<p>ROS 2提供了丰富多样的服务质量 (QoS) 策略，使您可以调整节点之间的通讯。有了一套正确的服务质量策略，ROS 2可以像TCP一样可靠，也可以像UDP一样尽力而为，在这两者之间有很多很多可能的状态。与主要只支持TCP的ROS 1不同，ROS 2在具有 “尽力而为” 策略更合适的有损无线网络的环境中，受益于底层DDS传输的灵活性，或者在实时计算系统中，需要适当质量的服务配置文件来满足截止日期。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9946">[待校准&#64;9946]</a></p>
-<p>一组QoS “策略” 结合在一起形成QoS “配置文件”。考虑到为给定场景选择正确的QoS策略的复杂性，ROS 2为常见用例 (例如传感器数据) 提供了一组预定义的QoS配置文件。同时，开发人员可以灵活地控制QoS配置文件的特定策略。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9947">[待校准&#64;9947]</a></p>
-<p>可以为发布者、订阅、服务服务器和客户端指定QoS配置文件。QoS配置文件可以独立地应用于上述实体的每个实例，但是如果使用不同的配置文件，则它们可能不兼容，从而阻止消息的传递。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9948">[待校准&#64;9948]</a></p>
+<h2>概述 <a class="reference external" href="http://localhost:3000/#/home?msgid=9718">[待校准&#64;9718]</a><a class="headerlink" href="#overview" title="永久链接至标题"></a></h2>
+<p>ROS 2提供了丰富多样的服务质量 (QoS) 策略，使您可以调整节点之间的通讯。有了一套正确的服务质量策略，ROS 2可以像TCP一样可靠，也可以像UDP一样尽力而为，在这两者之间有很多很多可能的状态。与主要只支持TCP的ROS 1不同，ROS 2在具有 “尽力而为” 策略更合适的有损无线网络的环境中，受益于底层DDS传输的灵活性，或者在实时计算系统中，需要适当质量的服务配置文件来满足截止日期。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9946">[待校准&#64;9946]</a></p>
+<p>一组QoS “策略” 结合在一起形成QoS “配置文件”。考虑到为给定场景选择正确的QoS策略的复杂性，ROS 2为常见用例 (例如传感器数据) 提供了一组预定义的QoS配置文件。同时，开发人员可以灵活地控制QoS配置文件的特定策略。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9947">[待校准&#64;9947]</a></p>
+<p>可以为发布者、订阅、服务服务器和客户端指定QoS配置文件。QoS配置文件可以独立地应用于上述实体的每个实例，但是如果使用不同的配置文件，则它们可能不兼容，从而阻止消息的传递。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9948">[待校准&#64;9948]</a></p>
 </div>
 <div class="section" id="qos-policies">
-<h2>QoS策略 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9949">[待校准&#64;9949]</a><a class="headerlink" href="#qos-policies" title="永久链接至标题"></a></h2>
-<p>基本QoS配置文件当前包括以下策略的设置: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9950">[待校准&#64;9950]</a></p>
+<h2>QoS策略 <a class="reference external" href="http://localhost:3000/#/home?msgid=9949">[待校准&#64;9949]</a><a class="headerlink" href="#qos-policies" title="永久链接至标题"></a></h2>
+<p>基本QoS配置文件当前包括以下策略的设置: <a class="reference external" href="http://localhost:3000/#/home?msgid=9950">[待校准&#64;9950]</a></p>
 <ul class="simple">
-<li><p>历史 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9951">[待校准&#64;9951]</a></p>
+<li><p>历史 <a class="reference external" href="http://localhost:3000/#/home?msgid=9951">[待校准&#64;9951]</a></p>
 <ul>
 <li><p><em>Keep last</em>: only store up to N samples, configurable via the queue depth option.</p></li>
 <li><p><em>Keep all</em>: store all samples, subject to the configured resource limits of the underlying middleware.</p></li>
 </ul>
 </li>
-<li><p>深度 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9954">[待校准&#64;9954]</a></p>
+<li><p>深度 <a class="reference external" href="http://localhost:3000/#/home?msgid=9954">[待校准&#64;9954]</a></p>
 <ul>
 <li><p><em>Queue size</em>: only honored if the “history” policy was set to “keep last”.</p></li>
 </ul>
 </li>
-<li><p>可靠性 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9956">[待校准&#64;9956]</a></p>
+<li><p>可靠性 <a class="reference external" href="http://localhost:3000/#/home?msgid=9956">[待校准&#64;9956]</a></p>
 <ul>
 <li><p><em>Best effort</em>: attempt to deliver samples, but may lose them if the network is not robust.</p></li>
 <li><p><em>Reliable</em>: guarantee that samples are delivered, may retry multiple times.</p></li>
 </ul>
 </li>
-<li><p>耐久性 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9959">[待校准&#64;9959]</a></p>
+<li><p>耐久性 <a class="reference external" href="http://localhost:3000/#/home?msgid=9959">[待校准&#64;9959]</a></p>
 <ul>
 <li><p><em>Transient local</em>: the publisher becomes responsible for persisting samples for “late-joining” subscriptions.</p></li>
 <li><p><em>Volatile</em>: no attempt is made to persist samples.</p></li>
 </ul>
 </li>
-<li><p>截止日期 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9962">[待校准&#64;9962]</a></p>
+<li><p>截止日期 <a class="reference external" href="http://localhost:3000/#/home?msgid=9962">[待校准&#64;9962]</a></p>
 <ul>
 <li><p><em>Duration</em>: the expected maximum amount of time between subsequent messages being published to a topic</p></li>
 </ul>
 </li>
-<li><p>寿命 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9964">[待校准&#64;9964]</a></p>
+<li><p>寿命 <a class="reference external" href="http://localhost:3000/#/home?msgid=9964">[待校准&#64;9964]</a></p>
 <ul>
 <li><p><em>Duration</em>: the maximum amount of time between the publishing and the reception of a message without the message being considered stale or expired (expired messages are silently dropped and are effectively never received).</p></li>
 </ul>
 </li>
-<li><p>活泼 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9966">[待校准&#64;9966]</a></p>
+<li><p>活泼 <a class="reference external" href="http://localhost:3000/#/home?msgid=9966">[待校准&#64;9966]</a></p>
 <ul>
 <li><p><em>Automatic</em>: the system will consider all of the node’s publishers to be alive for another “lease duration” when any one of its publishers has published a message.</p></li>
 <li><p><em>Manual by topic</em>: the system will consider the publisher to be alive for another “lease duration” if it manually asserts that it is still alive (via a call to the publisher API).</p></li>
 </ul>
 </li>
-<li><p>租赁期限 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9969">[待校准&#64;9969]</a></p>
+<li><p>租赁期限 <a class="reference external" href="http://localhost:3000/#/home?msgid=9969">[待校准&#64;9969]</a></p>
 <ul>
 <li><p><em>Duration</em>: the maximum period of time a publisher has to indicate that it is alive before the system considers it to have lost liveliness (losing liveliness could be an indication of a failure).</p></li>
 </ul>
 </li>
 </ul>
-<p>对于不是持续时间的每个策略，还有 “系统默认” 选项，它使用底层中间件的默认。对于每个具有持续时间的策略，还存在一个 “默认” 选项，这意味着持续时间未指定，底层中间件通常将其解释为无限长的持续时间。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9971">[待校准&#64;9971]</a></p>
+<p>对于不是持续时间的每个策略，还有 “系统默认” 选项，它使用底层中间件的默认。对于每个具有持续时间的策略，还存在一个 “默认” 选项，这意味着持续时间未指定，底层中间件通常将其解释为无限长的持续时间。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9971">[待校准&#64;9971]</a></p>
 <div class="section" id="comparison-to-ros-1">
-<h3>与ROS 1的比较 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9972">[待校准&#64;9972]</a><a class="headerlink" href="#comparison-to-ros-1" title="永久链接至标题"></a></h3>
-<p>ROS 2中的 “历史” 和 “深度” 策略相结合以提供类似于ROS 1中的队列大小的功能。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9973">[待校准&#64;9973]</a></p>
-<p>ROS 2中的 “可靠性” 策略类似于使用UDPROS (仅在 <code class="docutils literal notranslate"><span class="pre">roscpp</span></code> 中) 来 “尽最大努力”，或者使用TCPROS (ROS 1默认) 来 “可靠”。但是请注意，即使ROS 2中的可靠策略也是使用UDP实现的，这允许在适当的情况下进行多播。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9974">[待校准&#64;9974]</a></p>
-<p>“持久性” 政策 “瞬态局部”，结合任何深度，提供类似于 “锁定” 出版商的功能。ROS 2中的其余策略与ROS 1中可用的任何策略都不相似，这意味着ROS 2在这方面比ROS 1更具特色。将来，ROS 2中可能会提供更多的QoS策略。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9975">[待校准&#64;9975]</a></p>
+<h3>与ROS 1的比较 <a class="reference external" href="http://localhost:3000/#/home?msgid=9972">[待校准&#64;9972]</a><a class="headerlink" href="#comparison-to-ros-1" title="永久链接至标题"></a></h3>
+<p>ROS 2中的 “历史” 和 “深度” 策略相结合以提供类似于ROS 1中的队列大小的功能。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9973">[待校准&#64;9973]</a></p>
+<p>ROS 2中的 “可靠性” 策略类似于使用UDPROS (仅在 <code class="docutils literal notranslate"><span class="pre">roscpp</span></code> 中) 来 “尽最大努力”，或者使用TCPROS (ROS 1默认) 来 “可靠”。但是请注意，即使ROS 2中的可靠策略也是使用UDP实现的，这允许在适当的情况下进行多播。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9974">[待校准&#64;9974]</a></p>
+<p>“持久性” 政策 “瞬态局部”，结合任何深度，提供类似于 “锁定” 出版商的功能。ROS 2中的其余策略与ROS 1中可用的任何策略都不相似，这意味着ROS 2在这方面比ROS 1更具特色。将来，ROS 2中可能会提供更多的QoS策略。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9975">[待校准&#64;9975]</a></p>
 </div>
 </div>
 <div class="section" id="qos-profiles">
-<h2>QoS配置文件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9976">[待校准&#64;9976]</a><a class="headerlink" href="#qos-profiles" title="永久链接至标题"></a></h2>
-<p>配置文件允许开发人员专注于他们的应用程序，而不必担心每个可能的QoS设置。QoS配置文件定义了一组策略，这些策略有望在特定用例中很好地结合在一起。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9977">[待校准&#64;9977]</a></p>
-<p>当前定义的QoS配置文件如下: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9978">[待校准&#64;9978]</a></p>
+<h2>QoS配置文件 <a class="reference external" href="http://localhost:3000/#/home?msgid=9976">[待校准&#64;9976]</a><a class="headerlink" href="#qos-profiles" title="永久链接至标题"></a></h2>
+<p>配置文件允许开发人员专注于他们的应用程序，而不必担心每个可能的QoS设置。QoS配置文件定义了一组策略，这些策略有望在特定用例中很好地结合在一起。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9977">[待校准&#64;9977]</a></p>
+<p>当前定义的QoS配置文件如下: <a class="reference external" href="http://localhost:3000/#/home?msgid=9978">[待校准&#64;9978]</a></p>
 <ul>
-<li><p>发布者和订阅的默认QoS设置 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9979">[待校准&#64;9979]</a></p>
-<p>为了使从ROS 1到ROS 2的过渡更容易，需要执行类似的网络行为。默认情况下，ROS 2中的发布者和订阅对于队列大小为10的历史记录具有 “最后保留”，对于可靠性具有 “可靠”，对于耐用性具有 “易失性”，和 “系统默认” 的活力。截止日期、寿命和租赁持续时间也都设置为 “默认”。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9980">[待校准&#64;9980]</a></p>
+<li><p>发布者和订阅的默认QoS设置 <a class="reference external" href="http://localhost:3000/#/home?msgid=9979">[待校准&#64;9979]</a></p>
+<p>为了使从ROS 1到ROS 2的过渡更容易，需要执行类似的网络行为。默认情况下，ROS 2中的发布者和订阅对于队列大小为10的历史记录具有 “最后保留”，对于可靠性具有 “可靠”，对于耐用性具有 “易失性”，和 “系统默认” 的活力。截止日期、寿命和租赁持续时间也都设置为 “默认”。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9980">[待校准&#64;9980]</a></p>
 </li>
-<li><p>服务 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9981">[待校准&#64;9981]</a></p>
-<p>与出版商和订阅一样，服务是可靠的。服务使用易失性持久性尤为重要，否则重新启动的服务服务器可能会收到过时的请求。虽然保护客户端不接收多个响应，但不保护服务器免受接收过时请求的副作用。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9982">[待校准&#64;9982]</a></p>
+<li><p>服务 <a class="reference external" href="http://localhost:3000/#/home?msgid=9981">[待校准&#64;9981]</a></p>
+<p>与出版商和订阅一样，服务是可靠的。服务使用易失性持久性尤为重要，否则重新启动的服务服务器可能会收到过时的请求。虽然保护客户端不接收多个响应，但不保护服务器免受接收过时请求的副作用。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9982">[待校准&#64;9982]</a></p>
 </li>
-<li><p>传感器数据 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9983">[待校准&#64;9983]</a></p>
-<p>对于传感器数据，在大多数情况下，及时接收读数比确保所有读数都到达更为重要。也就是说，开发人员希望最新的样本一被捕获，就以丢失一些为代价。因此，传感器数据配置文件使用最大的努力可靠性和较小的队列大小。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9984">[待校准&#64;9984]</a></p>
+<li><p>传感器数据 <a class="reference external" href="http://localhost:3000/#/home?msgid=9983">[待校准&#64;9983]</a></p>
+<p>对于传感器数据，在大多数情况下，及时接收读数比确保所有读数都到达更为重要。也就是说，开发人员希望最新的样本一被捕获，就以丢失一些为代价。因此，传感器数据配置文件使用最大的努力可靠性和较小的队列大小。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9984">[待校准&#64;9984]</a></p>
 </li>
-<li><p>参数 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9985">[待校准&#64;9985]</a></p>
-<p>ROS 2中的参数基于服务，因此具有类似的配置文件。不同之处在于，参数使用更大的队列深度，这样当例如参数客户端无法到达参数服务服务器时，请求就不会丢失。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9986">[待校准&#64;9986]</a></p>
+<li><p>参数 <a class="reference external" href="http://localhost:3000/#/home?msgid=9985">[待校准&#64;9985]</a></p>
+<p>ROS 2中的参数基于服务，因此具有类似的配置文件。不同之处在于，参数使用更大的队列深度，这样当例如参数客户端无法到达参数服务服务器时，请求就不会丢失。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9986">[待校准&#64;9986]</a></p>
 </li>
-<li><p>系统默认 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9987">[待校准&#64;9987]</a></p>
-<p>这将对所有策略使用RMW实现的默认值。不同的RMW实现可能有不同的默认值。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9988">[待校准&#64;9988]</a></p>
+<li><p>系统默认 <a class="reference external" href="http://localhost:3000/#/home?msgid=9987">[待校准&#64;9987]</a></p>
+<p>这将对所有策略使用RMW实现的默认值。不同的RMW实现可能有不同的默认值。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9988">[待校准&#64;9988]</a></p>
 </li>
 </ul>
-<p>用于上述配置文件的特定政策的 <a class="reference external" href="https://github.com/ros2/rmw/blob/master/rmw/include/rmw/qos_profiles.h">Click here</a> 。这些配置文件中的设置会根据社区的反馈进行进一步调整。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9989">[待校准&#64;9989]</a></p>
+<p>用于上述配置文件的特定政策的 <a class="reference external" href="https://github.com/ros2/rmw/blob/master/rmw/include/rmw/qos_profiles.h">Click here</a> 。这些配置文件中的设置会根据社区的反馈进行进一步调整。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9989">[待校准&#64;9989]</a></p>
 </div>
 <div class="section" id="qos-compatibilities">
-<h2>QoS兼容性 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9990">[待校准&#64;9990]</a><a class="headerlink" href="#qos-compatibilities" title="永久链接至标题"></a></h2>
-<p>Note注意: This本节涉及发布者和订阅，但内容以相同的方式适用于服务服务器和客户端。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9991">[待校准&#64;9991]</a></p>
-<p>QoS配置文件可以独立为发布者和订阅配置。仅当发布服务器和订阅具有兼容的QoS配置文件时，才会在发布服务器和订阅之间建立连接。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9992">[待校准&#64;9992]</a></p>
-<p>QoS配置文件兼容性是基于 “请求与提供” 模型确定的。订阅 * 请求 * 它愿意接受的 “最低质量” 的QoS配置文件，出版商 * 提供 * 一个QoS配置文件，这是它能够提供的 “最高质量”。连接只有如果每政策要求QoS配置文件不是更string耳鼻喉科比提供QoS配置文件。多个订阅可以同时连接到单个发布者，即使它们请求的QoS配置文件不同。发布者和订阅之间的兼容性不受其他发布者和订阅存在的影响。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9993">[待校准&#64;9993]</a></p>
-<p>下表显示了不同策略设置的兼容性和结果: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9994">[待校准&#64;9994]</a></p>
+<h2>QoS兼容性 <a class="reference external" href="http://localhost:3000/#/home?msgid=9990">[待校准&#64;9990]</a><a class="headerlink" href="#qos-compatibilities" title="永久链接至标题"></a></h2>
+<p>Note注意: This本节涉及发布者和订阅，但内容以相同的方式适用于服务服务器和客户端。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9991">[待校准&#64;9991]</a></p>
+<p>QoS配置文件可以独立为发布者和订阅配置。仅当发布服务器和订阅具有兼容的QoS配置文件时，才会在发布服务器和订阅之间建立连接。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9992">[待校准&#64;9992]</a></p>
+<p>QoS配置文件兼容性是基于 “请求与提供” 模型确定的。订阅 * 请求 * 它愿意接受的 “最低质量” 的QoS配置文件，出版商 * 提供 * 一个QoS配置文件，这是它能够提供的 “最高质量”。连接只有如果每政策要求QoS配置文件不是更string耳鼻喉科比提供QoS配置文件。多个订阅可以同时连接到单个发布者，即使它们请求的QoS配置文件不同。发布者和订阅之间的兼容性不受其他发布者和订阅存在的影响。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9993">[待校准&#64;9993]</a></p>
+<p>下表显示了不同策略设置的兼容性和结果: <a class="reference external" href="http://localhost:3000/#/home?msgid=9994">[待校准&#64;9994]</a></p>
 <p><em>Compatibility of reliability QoS policies:</em></p>
 <table class="docutils align-default">
 <colgroup>
@@ -380,27 +380,27 @@
 <col style="width: 33%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p>出版商 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9996">[待校准&#64;9996]</a></p></th>
-<th class="head"><p>订阅 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9997">[待校准&#64;9997]</a></p></th>
-<th class="head"><p>兼容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9998">[待校准&#64;9998]</a></p></th>
+<tr class="row-odd"><th class="head"><p>出版商 <a class="reference external" href="http://localhost:3000/#/home?msgid=9996">[待校准&#64;9996]</a></p></th>
+<th class="head"><p>订阅 <a class="reference external" href="http://localhost:3000/#/home?msgid=9997">[待校准&#64;9997]</a></p></th>
+<th class="head"><p>兼容 <a class="reference external" href="http://localhost:3000/#/home?msgid=9998">[待校准&#64;9998]</a></p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>尽最大努力 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9999">[待校准&#64;9999]</a></p></td>
-<td><p>尽最大努力 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9999">[待校准&#64;9999]</a></p></td>
-<td><p>是的 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10000">[待校准&#64;10000]</a></p></td>
+<tr class="row-even"><td><p>尽最大努力 <a class="reference external" href="http://localhost:3000/#/home?msgid=9999">[待校准&#64;9999]</a></p></td>
+<td><p>尽最大努力 <a class="reference external" href="http://localhost:3000/#/home?msgid=9999">[待校准&#64;9999]</a></p></td>
+<td><p>是的 <a class="reference external" href="http://localhost:3000/#/home?msgid=10000">[待校准&#64;10000]</a></p></td>
 </tr>
-<tr class="row-odd"><td><p>尽最大努力 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9999">[待校准&#64;9999]</a></p></td>
-<td><p>可靠 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10001">[待校准&#64;10001]</a></p></td>
-<td><p>不 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10002">[待校准&#64;10002]</a></p></td>
+<tr class="row-odd"><td><p>尽最大努力 <a class="reference external" href="http://localhost:3000/#/home?msgid=9999">[待校准&#64;9999]</a></p></td>
+<td><p>可靠 <a class="reference external" href="http://localhost:3000/#/home?msgid=10001">[待校准&#64;10001]</a></p></td>
+<td><p>不 <a class="reference external" href="http://localhost:3000/#/home?msgid=10002">[待校准&#64;10002]</a></p></td>
 </tr>
-<tr class="row-even"><td><p>可靠 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10001">[待校准&#64;10001]</a></p></td>
-<td><p>尽最大努力 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9999">[待校准&#64;9999]</a></p></td>
-<td><p>是的 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10000">[待校准&#64;10000]</a></p></td>
+<tr class="row-even"><td><p>可靠 <a class="reference external" href="http://localhost:3000/#/home?msgid=10001">[待校准&#64;10001]</a></p></td>
+<td><p>尽最大努力 <a class="reference external" href="http://localhost:3000/#/home?msgid=9999">[待校准&#64;9999]</a></p></td>
+<td><p>是的 <a class="reference external" href="http://localhost:3000/#/home?msgid=10000">[待校准&#64;10000]</a></p></td>
 </tr>
-<tr class="row-odd"><td><p>可靠 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10001">[待校准&#64;10001]</a></p></td>
-<td><p>可靠 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10001">[待校准&#64;10001]</a></p></td>
-<td><p>是的 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10000">[待校准&#64;10000]</a></p></td>
+<tr class="row-odd"><td><p>可靠 <a class="reference external" href="http://localhost:3000/#/home?msgid=10001">[待校准&#64;10001]</a></p></td>
+<td><p>可靠 <a class="reference external" href="http://localhost:3000/#/home?msgid=10001">[待校准&#64;10001]</a></p></td>
+<td><p>是的 <a class="reference external" href="http://localhost:3000/#/home?msgid=10000">[待校准&#64;10000]</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -412,33 +412,33 @@
 <col style="width: 33%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p>出版商 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9996">[待校准&#64;9996]</a></p></th>
-<th class="head"><p>订阅 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9997">[待校准&#64;9997]</a></p></th>
-<th class="head"><p>兼容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9998">[待校准&#64;9998]</a></p></th>
+<tr class="row-odd"><th class="head"><p>出版商 <a class="reference external" href="http://localhost:3000/#/home?msgid=9996">[待校准&#64;9996]</a></p></th>
+<th class="head"><p>订阅 <a class="reference external" href="http://localhost:3000/#/home?msgid=9997">[待校准&#64;9997]</a></p></th>
+<th class="head"><p>兼容 <a class="reference external" href="http://localhost:3000/#/home?msgid=9998">[待校准&#64;9998]</a></p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>易失性 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10004">[待校准&#64;10004]</a></p></td>
-<td><p>易失性 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10004">[待校准&#64;10004]</a></p></td>
-<td><p>是的 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10000">[待校准&#64;10000]</a></p></td>
+<tr class="row-even"><td><p>易失性 <a class="reference external" href="http://localhost:3000/#/home?msgid=10004">[待校准&#64;10004]</a></p></td>
+<td><p>易失性 <a class="reference external" href="http://localhost:3000/#/home?msgid=10004">[待校准&#64;10004]</a></p></td>
+<td><p>是的 <a class="reference external" href="http://localhost:3000/#/home?msgid=10000">[待校准&#64;10000]</a></p></td>
 </tr>
-<tr class="row-odd"><td><p>易失性 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10004">[待校准&#64;10004]</a></p></td>
-<td><p>瞬态局部 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10005">[待校准&#64;10005]</a></p></td>
-<td><p>不 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10002">[待校准&#64;10002]</a></p></td>
+<tr class="row-odd"><td><p>易失性 <a class="reference external" href="http://localhost:3000/#/home?msgid=10004">[待校准&#64;10004]</a></p></td>
+<td><p>瞬态局部 <a class="reference external" href="http://localhost:3000/#/home?msgid=10005">[待校准&#64;10005]</a></p></td>
+<td><p>不 <a class="reference external" href="http://localhost:3000/#/home?msgid=10002">[待校准&#64;10002]</a></p></td>
 </tr>
-<tr class="row-even"><td><p>瞬态局部 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10005">[待校准&#64;10005]</a></p></td>
-<td><p>易失性 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10004">[待校准&#64;10004]</a></p></td>
-<td><p>是的 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10000">[待校准&#64;10000]</a></p></td>
+<tr class="row-even"><td><p>瞬态局部 <a class="reference external" href="http://localhost:3000/#/home?msgid=10005">[待校准&#64;10005]</a></p></td>
+<td><p>易失性 <a class="reference external" href="http://localhost:3000/#/home?msgid=10004">[待校准&#64;10004]</a></p></td>
+<td><p>是的 <a class="reference external" href="http://localhost:3000/#/home?msgid=10000">[待校准&#64;10000]</a></p></td>
 </tr>
-<tr class="row-odd"><td><p>瞬态局部 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10005">[待校准&#64;10005]</a></p></td>
-<td><p>瞬态局部 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10005">[待校准&#64;10005]</a></p></td>
-<td><p>是的 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10000">[待校准&#64;10000]</a></p></td>
+<tr class="row-odd"><td><p>瞬态局部 <a class="reference external" href="http://localhost:3000/#/home?msgid=10005">[待校准&#64;10005]</a></p></td>
+<td><p>瞬态局部 <a class="reference external" href="http://localhost:3000/#/home?msgid=10005">[待校准&#64;10005]</a></p></td>
+<td><p>是的 <a class="reference external" href="http://localhost:3000/#/home?msgid=10000">[待校准&#64;10000]</a></p></td>
 </tr>
 </tbody>
 </table>
 <p><em>Compatibility of deadline QoS policies:</em></p>
 <blockquote>
-<div><p>假设 * x * 和 * y * 是任意有效的持续时间值。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10007">[待校准&#64;10007]</a></p>
+<div><p>假设 * x * 和 * y * 是任意有效的持续时间值。 <a class="reference external" href="http://localhost:3000/#/home?msgid=10007">[待校准&#64;10007]</a></p>
 </div></blockquote>
 <table class="docutils align-default">
 <colgroup>
@@ -447,35 +447,35 @@
 <col style="width: 33%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p>出版商 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9996">[待校准&#64;9996]</a></p></th>
-<th class="head"><p>订阅 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9997">[待校准&#64;9997]</a></p></th>
-<th class="head"><p>兼容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9998">[待校准&#64;9998]</a></p></th>
+<tr class="row-odd"><th class="head"><p>出版商 <a class="reference external" href="http://localhost:3000/#/home?msgid=9996">[待校准&#64;9996]</a></p></th>
+<th class="head"><p>订阅 <a class="reference external" href="http://localhost:3000/#/home?msgid=9997">[待校准&#64;9997]</a></p></th>
+<th class="head"><p>兼容 <a class="reference external" href="http://localhost:3000/#/home?msgid=9998">[待校准&#64;9998]</a></p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>默认 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10008">[待校准&#64;10008]</a></p></td>
-<td><p>默认 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10008">[待校准&#64;10008]</a></p></td>
-<td><p>是的 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10000">[待校准&#64;10000]</a></p></td>
+<tr class="row-even"><td><p>默认 <a class="reference external" href="http://localhost:3000/#/home?msgid=10008">[待校准&#64;10008]</a></p></td>
+<td><p>默认 <a class="reference external" href="http://localhost:3000/#/home?msgid=10008">[待校准&#64;10008]</a></p></td>
+<td><p>是的 <a class="reference external" href="http://localhost:3000/#/home?msgid=10000">[待校准&#64;10000]</a></p></td>
 </tr>
-<tr class="row-odd"><td><p>默认 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10008">[待校准&#64;10008]</a></p></td>
+<tr class="row-odd"><td><p>默认 <a class="reference external" href="http://localhost:3000/#/home?msgid=10008">[待校准&#64;10008]</a></p></td>
 <td><p><em>x</em></p></td>
-<td><p>不 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10002">[待校准&#64;10002]</a></p></td>
+<td><p>不 <a class="reference external" href="http://localhost:3000/#/home?msgid=10002">[待校准&#64;10002]</a></p></td>
 </tr>
 <tr class="row-even"><td><p><em>x</em></p></td>
-<td><p>默认 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10008">[待校准&#64;10008]</a></p></td>
-<td><p>是的 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10000">[待校准&#64;10000]</a></p></td>
+<td><p>默认 <a class="reference external" href="http://localhost:3000/#/home?msgid=10008">[待校准&#64;10008]</a></p></td>
+<td><p>是的 <a class="reference external" href="http://localhost:3000/#/home?msgid=10000">[待校准&#64;10000]</a></p></td>
 </tr>
 <tr class="row-odd"><td><p><em>x</em></p></td>
 <td><p><em>x</em></p></td>
-<td><p>是的 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10000">[待校准&#64;10000]</a></p></td>
+<td><p>是的 <a class="reference external" href="http://localhost:3000/#/home?msgid=10000">[待校准&#64;10000]</a></p></td>
 </tr>
 <tr class="row-even"><td><p><em>x</em></p></td>
 <td><p><em>y</em> (where <em>y</em> &gt; <em>x</em>)</p></td>
-<td><p>是的 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10000">[待校准&#64;10000]</a></p></td>
+<td><p>是的 <a class="reference external" href="http://localhost:3000/#/home?msgid=10000">[待校准&#64;10000]</a></p></td>
 </tr>
 <tr class="row-odd"><td><p><em>x</em></p></td>
 <td><p><em>y</em> (where <em>y</em> &lt; <em>x</em>)</p></td>
-<td><p>不 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10002">[待校准&#64;10002]</a></p></td>
+<td><p>不 <a class="reference external" href="http://localhost:3000/#/home?msgid=10002">[待校准&#64;10002]</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -487,33 +487,33 @@
 <col style="width: 33%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p>出版商 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9996">[待校准&#64;9996]</a></p></th>
-<th class="head"><p>订阅 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9997">[待校准&#64;9997]</a></p></th>
-<th class="head"><p>兼容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9998">[待校准&#64;9998]</a></p></th>
+<tr class="row-odd"><th class="head"><p>出版商 <a class="reference external" href="http://localhost:3000/#/home?msgid=9996">[待校准&#64;9996]</a></p></th>
+<th class="head"><p>订阅 <a class="reference external" href="http://localhost:3000/#/home?msgid=9997">[待校准&#64;9997]</a></p></th>
+<th class="head"><p>兼容 <a class="reference external" href="http://localhost:3000/#/home?msgid=9998">[待校准&#64;9998]</a></p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>自动 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10013">[待校准&#64;10013]</a></p></td>
-<td><p>自动 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10013">[待校准&#64;10013]</a></p></td>
-<td><p>是的 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10000">[待校准&#64;10000]</a></p></td>
+<tr class="row-even"><td><p>自动 <a class="reference external" href="http://localhost:3000/#/home?msgid=10013">[待校准&#64;10013]</a></p></td>
+<td><p>自动 <a class="reference external" href="http://localhost:3000/#/home?msgid=10013">[待校准&#64;10013]</a></p></td>
+<td><p>是的 <a class="reference external" href="http://localhost:3000/#/home?msgid=10000">[待校准&#64;10000]</a></p></td>
 </tr>
-<tr class="row-odd"><td><p>自动 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10013">[待校准&#64;10013]</a></p></td>
-<td><p>按话题分类的手册 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10014">[待校准&#64;10014]</a></p></td>
-<td><p>不 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10002">[待校准&#64;10002]</a></p></td>
+<tr class="row-odd"><td><p>自动 <a class="reference external" href="http://localhost:3000/#/home?msgid=10013">[待校准&#64;10013]</a></p></td>
+<td><p>按话题分类的手册 <a class="reference external" href="http://localhost:3000/#/home?msgid=10014">[待校准&#64;10014]</a></p></td>
+<td><p>不 <a class="reference external" href="http://localhost:3000/#/home?msgid=10002">[待校准&#64;10002]</a></p></td>
 </tr>
-<tr class="row-even"><td><p>按话题分类的手册 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10014">[待校准&#64;10014]</a></p></td>
-<td><p>自动 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10013">[待校准&#64;10013]</a></p></td>
-<td><p>是的 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10000">[待校准&#64;10000]</a></p></td>
+<tr class="row-even"><td><p>按话题分类的手册 <a class="reference external" href="http://localhost:3000/#/home?msgid=10014">[待校准&#64;10014]</a></p></td>
+<td><p>自动 <a class="reference external" href="http://localhost:3000/#/home?msgid=10013">[待校准&#64;10013]</a></p></td>
+<td><p>是的 <a class="reference external" href="http://localhost:3000/#/home?msgid=10000">[待校准&#64;10000]</a></p></td>
 </tr>
-<tr class="row-odd"><td><p>按话题分类的手册 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10014">[待校准&#64;10014]</a></p></td>
-<td><p>按话题分类的手册 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10014">[待校准&#64;10014]</a></p></td>
-<td><p>是的 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10000">[待校准&#64;10000]</a></p></td>
+<tr class="row-odd"><td><p>按话题分类的手册 <a class="reference external" href="http://localhost:3000/#/home?msgid=10014">[待校准&#64;10014]</a></p></td>
+<td><p>按话题分类的手册 <a class="reference external" href="http://localhost:3000/#/home?msgid=10014">[待校准&#64;10014]</a></p></td>
+<td><p>是的 <a class="reference external" href="http://localhost:3000/#/home?msgid=10000">[待校准&#64;10000]</a></p></td>
 </tr>
 </tbody>
 </table>
 <p><em>Compatibility of lease duration QoS policies:</em></p>
 <blockquote>
-<div><p>假设 * x * 和 * y * 是任意有效的持续时间值。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10007">[待校准&#64;10007]</a></p>
+<div><p>假设 * x * 和 * y * 是任意有效的持续时间值。 <a class="reference external" href="http://localhost:3000/#/home?msgid=10007">[待校准&#64;10007]</a></p>
 </div></blockquote>
 <table class="docutils align-default">
 <colgroup>
@@ -522,70 +522,70 @@
 <col style="width: 33%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p>出版商 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9996">[待校准&#64;9996]</a></p></th>
-<th class="head"><p>订阅 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9997">[待校准&#64;9997]</a></p></th>
-<th class="head"><p>兼容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9998">[待校准&#64;9998]</a></p></th>
+<tr class="row-odd"><th class="head"><p>出版商 <a class="reference external" href="http://localhost:3000/#/home?msgid=9996">[待校准&#64;9996]</a></p></th>
+<th class="head"><p>订阅 <a class="reference external" href="http://localhost:3000/#/home?msgid=9997">[待校准&#64;9997]</a></p></th>
+<th class="head"><p>兼容 <a class="reference external" href="http://localhost:3000/#/home?msgid=9998">[待校准&#64;9998]</a></p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>默认 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10008">[待校准&#64;10008]</a></p></td>
-<td><p>默认 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10008">[待校准&#64;10008]</a></p></td>
-<td><p>是的 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10000">[待校准&#64;10000]</a></p></td>
+<tr class="row-even"><td><p>默认 <a class="reference external" href="http://localhost:3000/#/home?msgid=10008">[待校准&#64;10008]</a></p></td>
+<td><p>默认 <a class="reference external" href="http://localhost:3000/#/home?msgid=10008">[待校准&#64;10008]</a></p></td>
+<td><p>是的 <a class="reference external" href="http://localhost:3000/#/home?msgid=10000">[待校准&#64;10000]</a></p></td>
 </tr>
-<tr class="row-odd"><td><p>默认 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10008">[待校准&#64;10008]</a></p></td>
+<tr class="row-odd"><td><p>默认 <a class="reference external" href="http://localhost:3000/#/home?msgid=10008">[待校准&#64;10008]</a></p></td>
 <td><p><em>x</em></p></td>
-<td><p>不 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10002">[待校准&#64;10002]</a></p></td>
+<td><p>不 <a class="reference external" href="http://localhost:3000/#/home?msgid=10002">[待校准&#64;10002]</a></p></td>
 </tr>
 <tr class="row-even"><td><p><em>x</em></p></td>
-<td><p>默认 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10008">[待校准&#64;10008]</a></p></td>
-<td><p>是的 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10000">[待校准&#64;10000]</a></p></td>
+<td><p>默认 <a class="reference external" href="http://localhost:3000/#/home?msgid=10008">[待校准&#64;10008]</a></p></td>
+<td><p>是的 <a class="reference external" href="http://localhost:3000/#/home?msgid=10000">[待校准&#64;10000]</a></p></td>
 </tr>
 <tr class="row-odd"><td><p><em>x</em></p></td>
 <td><p><em>x</em></p></td>
-<td><p>是的 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10000">[待校准&#64;10000]</a></p></td>
+<td><p>是的 <a class="reference external" href="http://localhost:3000/#/home?msgid=10000">[待校准&#64;10000]</a></p></td>
 </tr>
 <tr class="row-even"><td><p><em>x</em></p></td>
 <td><p><em>y</em> (where <em>y</em> &gt; <em>x</em>)</p></td>
-<td><p>是的 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10000">[待校准&#64;10000]</a></p></td>
+<td><p>是的 <a class="reference external" href="http://localhost:3000/#/home?msgid=10000">[待校准&#64;10000]</a></p></td>
 </tr>
 <tr class="row-odd"><td><p><em>x</em></p></td>
 <td><p><em>y</em> (where <em>y</em> &lt; <em>x</em>)</p></td>
-<td><p>不 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10002">[待校准&#64;10002]</a></p></td>
+<td><p>不 <a class="reference external" href="http://localhost:3000/#/home?msgid=10002">[待校准&#64;10002]</a></p></td>
 </tr>
 </tbody>
 </table>
-<p>为了建立连接，所有影响兼容性的策略都必须兼容。例如，即使请求和提供的QoS配置文件对具有兼容的可靠性QoS策略，但它们具有不兼容的持久性QoS策略，也不会建立连接。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10016">[待校准&#64;10016]</a></p>
-<p>未建立连接时，发布者和订阅之间不会传递任何消息。有检测这种情况的机制，这将在后面的章节中介绍。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10017">[待校准&#64;10017]</a></p>
+<p>为了建立连接，所有影响兼容性的策略都必须兼容。例如，即使请求和提供的QoS配置文件对具有兼容的可靠性QoS策略，但它们具有不兼容的持久性QoS策略，也不会建立连接。 <a class="reference external" href="http://localhost:3000/#/home?msgid=10016">[待校准&#64;10016]</a></p>
+<p>未建立连接时，发布者和订阅之间不会传递任何消息。有检测这种情况的机制，这将在后面的章节中介绍。 <a class="reference external" href="http://localhost:3000/#/home?msgid=10017">[待校准&#64;10017]</a></p>
 <div class="section" id="id1">
-<h3>与ROS 1的比较 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9972">[待校准&#64;9972]</a><a class="headerlink" href="#id1" title="永久链接至标题"></a></h3>
-<p>历史调用y在ROS 1中，任何在相同话题上具有相同消息类型的出版商和订阅者都将被连接。在使用ROS 2时，需要注意的是请求和提供的QoS配置文件不兼容的可能性。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10018">[待校准&#64;10018]</a></p>
+<h3>与ROS 1的比较 <a class="reference external" href="http://localhost:3000/#/home?msgid=9972">[待校准&#64;9972]</a><a class="headerlink" href="#id1" title="永久链接至标题"></a></h3>
+<p>历史调用y在ROS 1中，任何在相同话题上具有相同消息类型的出版商和订阅者都将被连接。在使用ROS 2时，需要注意的是请求和提供的QoS配置文件不兼容的可能性。 <a class="reference external" href="http://localhost:3000/#/home?msgid=10018">[待校准&#64;10018]</a></p>
 </div>
 </div>
 <div class="section" id="qos-events">
-<h2>QoS事件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10019">[待校准&#64;10019]</a><a class="headerlink" href="#qos-events" title="永久链接至标题"></a></h2>
-<p>一些QoS策略有可能与之相关的事件。开发人员可以为每个发布者和订阅提供由这些QoS事件触发的调用函数，并以他们认为合适的方式处理它们，类似于处理话题上接收的消息的方式。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10020">[待校准&#64;10020]</a></p>
-<p>开发人员可以订阅与发布者关联的以下QoS事件: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10021">[待校准&#64;10021]</a></p>
+<h2>QoS事件 <a class="reference external" href="http://localhost:3000/#/home?msgid=10019">[待校准&#64;10019]</a><a class="headerlink" href="#qos-events" title="永久链接至标题"></a></h2>
+<p>一些QoS策略有可能与之相关的事件。开发人员可以为每个发布者和订阅提供由这些QoS事件触发的调用函数，并以他们认为合适的方式处理它们，类似于处理话题上接收的消息的方式。 <a class="reference external" href="http://localhost:3000/#/home?msgid=10020">[待校准&#64;10020]</a></p>
+<p>开发人员可以订阅与发布者关联的以下QoS事件: <a class="reference external" href="http://localhost:3000/#/home?msgid=10021">[待校准&#64;10021]</a></p>
 <ul>
-<li><p>错过截止日期 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10022">[待校准&#64;10022]</a></p>
-<p>发布者未在截止日期QoS策略规定的预期持续时间内发布消息。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10023">[待校准&#64;10023]</a></p>
+<li><p>错过截止日期 <a class="reference external" href="http://localhost:3000/#/home?msgid=10022">[待校准&#64;10022]</a></p>
+<p>发布者未在截止日期QoS策略规定的预期持续时间内发布消息。 <a class="reference external" href="http://localhost:3000/#/home?msgid=10023">[待校准&#64;10023]</a></p>
 </li>
-<li><p>失去活力 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10024">[待校准&#64;10024]</a></p>
-<p>出版商未能表明其在租赁期限内的活力。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10025">[待校准&#64;10025]</a></p>
+<li><p>失去活力 <a class="reference external" href="http://localhost:3000/#/home?msgid=10024">[待校准&#64;10024]</a></p>
+<p>出版商未能表明其在租赁期限内的活力。 <a class="reference external" href="http://localhost:3000/#/home?msgid=10025">[待校准&#64;10025]</a></p>
 </li>
-<li><p>提供不兼容的QoS <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10026">[待校准&#64;10026]</a></p>
-<p>发布者在请求所提供的QoS配置文件无法满足的QoS配置文件的同一话题上遇到订阅，导致发布者与该订阅之间没有连接。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10027">[待校准&#64;10027]</a></p>
+<li><p>提供不兼容的QoS <a class="reference external" href="http://localhost:3000/#/home?msgid=10026">[待校准&#64;10026]</a></p>
+<p>发布者在请求所提供的QoS配置文件无法满足的QoS配置文件的同一话题上遇到订阅，导致发布者与该订阅之间没有连接。 <a class="reference external" href="http://localhost:3000/#/home?msgid=10027">[待校准&#64;10027]</a></p>
 </li>
 </ul>
-<p>开发人员可以订阅与订阅关联的以下QoS事件: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10028">[待校准&#64;10028]</a></p>
+<p>开发人员可以订阅与订阅关联的以下QoS事件: <a class="reference external" href="http://localhost:3000/#/home?msgid=10028">[待校准&#64;10028]</a></p>
 <ul>
-<li><p>错过要求的截止日期 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10029">[待校准&#64;10029]</a></p>
-<p>订阅未在截止日期QoS策略规定的预期持续时间内收到消息。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10030">[待校准&#64;10030]</a></p>
+<li><p>错过要求的截止日期 <a class="reference external" href="http://localhost:3000/#/home?msgid=10029">[待校准&#64;10029]</a></p>
+<p>订阅未在截止日期QoS策略规定的预期持续时间内收到消息。 <a class="reference external" href="http://localhost:3000/#/home?msgid=10030">[待校准&#64;10030]</a></p>
 </li>
-<li><p>活力改变了 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10031">[待校准&#64;10031]</a></p>
-<p>订阅注意到一个或多个出版商在订阅话题上未能表明他们在租赁期限内的活力。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10032">[待校准&#64;10032]</a></p>
+<li><p>活力改变了 <a class="reference external" href="http://localhost:3000/#/home?msgid=10031">[待校准&#64;10031]</a></p>
+<p>订阅注意到一个或多个出版商在订阅话题上未能表明他们在租赁期限内的活力。 <a class="reference external" href="http://localhost:3000/#/home?msgid=10032">[待校准&#64;10032]</a></p>
 </li>
-<li><p>请求的不兼容QoS <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10033">[待校准&#64;10033]</a></p>
-<p>订阅在提供不满足所请求的QoS配置文件的同一话题上遇到了发布者，导致订阅与该发布者之间没有连接。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10034">[待校准&#64;10034]</a></p>
+<li><p>请求的不兼容QoS <a class="reference external" href="http://localhost:3000/#/home?msgid=10033">[待校准&#64;10033]</a></p>
+<p>订阅在提供不满足所请求的QoS配置文件的同一话题上遇到了发布者，导致订阅与该发布者之间没有连接。 <a class="reference external" href="http://localhost:3000/#/home?msgid=10034">[待校准&#64;10034]</a></p>
 </li>
 </ul>
 </div>

@@ -248,7 +248,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Related-Projects/Nvidia-ROS2-Projects.html">[需手动修复的语法]NVIDIAROS 2项目 [待校准&#64;6668]</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../Glossary.html">相关术语 `[小鱼&#64;1] http://dev.ros2.fishros.com/calibpage/#/home?msgid=1&gt;`_</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Glossary.html">术语表</a></li>
 </ul>
 
         </div>
@@ -279,42 +279,42 @@
 
 
   <div class="section" id="alternative-installation-sources-for-testing">
-<h1>用于测试的替代安装源 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5461">[待校准&#64;5461]</a><a class="headerlink" href="#alternative-installation-sources-for-testing" title="永久链接至标题"></a></h1>
-<p>许多ROS包作为预构建的二进制文件提供。通常，当遵循 <a class="reference internal" href="../Installation.html"><span class="doc">安装 [待校准&#64;5278]</span></a> 时，你会得到二进制文件的发布版本。还有一些二进制文件的预发布版本，可用于正式发布之前的测试。如果您想试用ROS二进制文件的预发布版本，本文将介绍几个选项。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5462">[待校准&#64;5462]</a></p>
+<h1>用于测试的替代安装源 <a class="reference external" href="http://localhost:3000/#/home?msgid=5461">[待校准&#64;5461]</a><a class="headerlink" href="#alternative-installation-sources-for-testing" title="永久链接至标题"></a></h1>
+<p>许多ROS包作为预构建的二进制文件提供。通常，当遵循 <a class="reference internal" href="../Installation.html"><span class="doc">安装 [待校准&#64;5278]</span></a> 时，你会得到二进制文件的发布版本。还有一些二进制文件的预发布版本，可用于正式发布之前的测试。如果您想试用ROS二进制文件的预发布版本，本文将介绍几个选项。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5462">[待校准&#64;5462]</a></p>
 <div class="section" id="debian-testing-repository">
-<h2>Debian测试仓库 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5463">[待校准&#64;5463]</a><a class="headerlink" href="#debian-testing-repository" title="永久链接至标题"></a></h2>
-<p>当包被释放到ROS分发 (使用bloom) 时，buildfarm会将它们构建到debian包中，这些包会暂时存储在building apt仓库中。在重建依赖包时，自动进程周期调用y将构建中的包同步到辅助仓库调用ros-test。ros-测试旨在作为一个浸泡区，开发人员和前沿用户可以为包提供额外的测试，在将它们手动同步到公共ros仓库之前，用户可能会从中调用y安装包。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5464">[待校准&#64;5464]</a></p>
-<p>大约每两周，rosdistribution的发布管理器将ros测试的内容手动同步到主ROS仓库中。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5465">[待校准&#64;5465]</a></p>
-<p>对于基于Debian的操作系统，您可以从ros测试仓库安装二进制包。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5466">[待校准&#64;5466]</a></p>
+<h2>Debian测试仓库 <a class="reference external" href="http://localhost:3000/#/home?msgid=5463">[待校准&#64;5463]</a><a class="headerlink" href="#debian-testing-repository" title="永久链接至标题"></a></h2>
+<p>当包被释放到ROS分发 (使用bloom) 时，buildfarm会将它们构建到debian包中，这些包会暂时存储在building apt仓库中。在重建依赖包时，自动进程周期调用y将构建中的包同步到辅助仓库调用ros-test。ros-测试旨在作为一个浸泡区，开发人员和前沿用户可以为包提供额外的测试，在将它们手动同步到公共ros仓库之前，用户可能会从中调用y安装包。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5464">[待校准&#64;5464]</a></p>
+<p>大约每两周，rosdistribution的发布管理器将ros测试的内容手动同步到主ROS仓库中。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5465">[待校准&#64;5465]</a></p>
+<p>对于基于Debian的操作系统，您可以从ros测试仓库安装二进制包。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5466">[待校准&#64;5466]</a></p>
 <ol class="arabic">
-<li><p>确保从Debian包安装了有效的ROS 2 (请参阅 <a class="reference internal" href="../Installation.html"><span class="doc">安装 [待校准&#64;5278]</span></a> )。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5467">[待校准&#64;5467]</a></p></li>
-<li><p>编辑 (用sudo)  <code class="docutils literal notranslate"><span class="pre">/etc/apt/sources.list.d/ros2-latest.list</span></code> 文件，用 <code class="docutils literal notranslate"><span class="pre">ros2-testing</span></code> 改变 <code class="docutils literal notranslate"><span class="pre">ros2</span></code> 。例如，在UbuntuFocal 上，内容应如下所示: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5468">[待校准&#64;5468]</a></p>
+<li><p>确保从Debian包安装了有效的ROS 2 (请参阅 <a class="reference internal" href="../Installation.html"><span class="doc">安装 [待校准&#64;5278]</span></a> )。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5467">[待校准&#64;5467]</a></p></li>
+<li><p>编辑 (用sudo)  <code class="docutils literal notranslate"><span class="pre">/etc/apt/sources.list.d/ros2-latest.list</span></code> 文件，用 <code class="docutils literal notranslate"><span class="pre">ros2-testing</span></code> 改变 <code class="docutils literal notranslate"><span class="pre">ros2</span></code> 。例如，在UbuntuFocal 上，内容应如下所示: <a class="reference external" href="http://localhost:3000/#/home?msgid=5468">[待校准&#64;5468]</a></p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="c1"># deb http://packages.ros.org/ros2/ubuntu focal main</span>
 deb http://packages.ros.org/ros2-testing/ubuntu focal main
 </pre></div>
 </div>
 </li>
-<li><p>更新 <code class="docutils literal notranslate"><span class="pre">apt</span></code> 指数: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5469">[待校准&#64;5469]</a></p>
+<li><p>更新 <code class="docutils literal notranslate"><span class="pre">apt</span></code> 指数: <a class="reference external" href="http://localhost:3000/#/home?msgid=5469">[待校准&#64;5469]</a></p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>sudo apt update
 </pre></div>
 </div>
 </li>
-<li><p>您现在可以从测试仓库安装单个包，例如: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5470">[待校准&#64;5470]</a></p>
+<li><p>您现在可以从测试仓库安装单个包，例如: <a class="reference external" href="http://localhost:3000/#/home?msgid=5470">[待校准&#64;5470]</a></p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>sudo apt install ros-foxy-my-just-released-package
 </pre></div>
 </div>
 </li>
-<li><p>或者，您可以将整个ROS 2安装移动到测试仓库: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5471">[待校准&#64;5471]</a></p>
+<li><p>或者，您可以将整个ROS 2安装移动到测试仓库: <a class="reference external" href="http://localhost:3000/#/home?msgid=5471">[待校准&#64;5471]</a></p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>sudo apt dist-upgrade
 </pre></div>
 </div>
 </li>
-<li><p>完成测试后，您可以通过换回 <code class="docutils literal notranslate"><span class="pre">/etc/apt/sources.list.d/ros2-latest.list</span></code> 的内容来切换回正常仓库: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5472">[待校准&#64;5472]</a></p>
+<li><p>完成测试后，您可以通过换回 <code class="docutils literal notranslate"><span class="pre">/etc/apt/sources.list.d/ros2-latest.list</span></code> 的内容来切换回正常仓库: <a class="reference external" href="http://localhost:3000/#/home?msgid=5472">[待校准&#64;5472]</a></p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>deb http://packages.ros.org/ros2/ubuntu focal main
 <span class="c1"># deb http://packages.ros.org/ros2-testing/ubuntu focal main</span>
 </pre></div>
 </div>
-<p>并进行更新和升级: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5473">[待校准&#64;5473]</a></p>
+<p>并进行更新和升级: <a class="reference external" href="http://localhost:3000/#/home?msgid=5473">[待校准&#64;5473]</a></p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>sudo apt update
 sudo apt dist-upgrade
 </pre></div>

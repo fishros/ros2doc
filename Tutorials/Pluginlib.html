@@ -249,7 +249,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Related-Projects/Nvidia-ROS2-Projects.html">[需手动修复的语法]NVIDIAROS 2项目 [待校准&#64;6668]</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../Glossary.html">相关术语 `[小鱼&#64;1] http://dev.ros2.fishros.com/calibpage/#/home?msgid=1&gt;`_</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Glossary.html">术语表</a></li>
 </ul>
 
         </div>
@@ -280,12 +280,12 @@
 
 
   <div class="section" id="creating-and-using-plugins-c">
-<h1>创建和使用插件 (c ++) <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7851">[待校准&#64;7851]</a><a class="headerlink" href="#creating-and-using-plugins-c" title="永久链接至标题"></a></h1>
-<p>Goal目标: Learn学习使用pluginlib创建和加载简单插件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7852">[待校准&#64;7852]</a></p>
-<p>Tutorial教程级别: Beginner初学者 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7088">[待校准&#64;7088]</a></p>
+<h1>创建和使用插件 (c ++) <a class="reference external" href="http://localhost:3000/#/home?msgid=7851">[待校准&#64;7851]</a><a class="headerlink" href="#creating-and-using-plugins-c" title="永久链接至标题"></a></h1>
+<p>Goal目标: Learn学习使用pluginlib创建和加载简单插件 <a class="reference external" href="http://localhost:3000/#/home?msgid=7852">[待校准&#64;7852]</a></p>
+<p>Tutorial教程级别: Beginner初学者 <a class="reference external" href="http://localhost:3000/#/home?msgid=7088">[待校准&#64;7088]</a></p>
 <p><strong>Minimum Platform:</strong> Ardent</p>
 <div class="contents local topic" id="contents">
-<p class="topic-title">内容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6715">[待校准&#64;6715]</a></p>
+<p class="topic-title">内容 <a class="reference external" href="http://localhost:3000/#/home?msgid=6715">[待校准&#64;6715]</a></p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#background" id="id1">背景 [待校准&#64;6716]</a></p></li>
 <li><p><a class="reference internal" href="#prerequisites" id="id2">先决条件 [待校准&#64;6718]</a></p></li>
@@ -307,27 +307,27 @@
 </ul>
 </div>
 <div class="section" id="background">
-<h2>背景 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6716">[待校准&#64;6716]</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
-<p>本教程源自 <a class="reference external" href="http://wiki.ros.org/pluginlib">http://wiki.ros.org/pluginlib</a> and <a class="reference external" href="http://wiki.ros.org/pluginlib/Tutorials/Writing%20and%20Using%20a%20Simple%20Plugin">Writing and Using a Simple Plugin Tutorial</a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7854">[待校准&#64;7854]</a></p>
-<p>pluginlib是一个c + + 库，用于从ROS包中加载和卸载插件。插件是从运行时库加载的动态调用y可加载类 (即共享对象，动态调用y链接库)。使用pluginlib，不必将其应用程序与包含类的库显式链接-相反，pluginlib可以在任何时候打开包含导出类的库，而无需应用程序事先了解该库或包含类定义的头文件。插件可用于扩展/修改应用程序行为，而无需应用程序源文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7855">[待校准&#64;7855]</a></p>
+<h2>背景 <a class="reference external" href="http://localhost:3000/#/home?msgid=6716">[待校准&#64;6716]</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
+<p>本教程源自 <a class="reference external" href="http://wiki.ros.org/pluginlib">http://wiki.ros.org/pluginlib</a> and <a class="reference external" href="http://wiki.ros.org/pluginlib/Tutorials/Writing%20and%20Using%20a%20Simple%20Plugin">Writing and Using a Simple Plugin Tutorial</a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7854">[待校准&#64;7854]</a></p>
+<p>pluginlib是一个c + + 库，用于从ROS包中加载和卸载插件。插件是从运行时库加载的动态调用y可加载类 (即共享对象，动态调用y链接库)。使用pluginlib，不必将其应用程序与包含类的库显式链接-相反，pluginlib可以在任何时候打开包含导出类的库，而无需应用程序事先了解该库或包含类定义的头文件。插件可用于扩展/修改应用程序行为，而无需应用程序源文件。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7855">[待校准&#64;7855]</a></p>
 </div>
 <div class="section" id="prerequisites">
-<h2>先决条件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6718">[待校准&#64;6718]</a><a class="headerlink" href="#prerequisites" title="永久链接至标题"></a></h2>
-<p>本教程假定了基本的c ++ 知识，并且您已经安装了 <code class="docutils literal notranslate"><span class="pre">pluginlib</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7856">[待校准&#64;7856]</a></p>
+<h2>先决条件 <a class="reference external" href="http://localhost:3000/#/home?msgid=6718">[待校准&#64;6718]</a><a class="headerlink" href="#prerequisites" title="永久链接至标题"></a></h2>
+<p>本教程假定了基本的c ++ 知识，并且您已经安装了 <code class="docutils literal notranslate"><span class="pre">pluginlib</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7856">[待校准&#64;7856]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sudo apt-get install ros-foxy-pluginlib</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="tasks">
-<h2>任务 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6725">[待校准&#64;6725]</a><a class="headerlink" href="#tasks" title="永久链接至标题"></a></h2>
-<p>在本教程中，您将创建两个新包，一个定义基类，另一个提供插件。基类将定义一个通用的多边形类，然后我们的插件将定义特定的形状。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7857">[待校准&#64;7857]</a></p>
+<h2>任务 <a class="reference external" href="http://localhost:3000/#/home?msgid=6725">[待校准&#64;6725]</a><a class="headerlink" href="#tasks" title="永久链接至标题"></a></h2>
+<p>在本教程中，您将创建两个新包，一个定义基类，另一个提供插件。基类将定义一个通用的多边形类，然后我们的插件将定义特定的形状。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7857">[待校准&#64;7857]</a></p>
 <div class="section" id="create-the-base-class-package">
-<h3>1创建基类包 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7858">[待校准&#64;7858]</a><a class="headerlink" href="#create-the-base-class-package" title="永久链接至标题"></a></h3>
-<p>使用以下终端命令在 <code class="docutils literal notranslate"><span class="pre">dev_ws/src</span></code> 文件夹中创建一个新的空包。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7859">[待校准&#64;7859]</a></p>
+<h3>1创建基类包 <a class="reference external" href="http://localhost:3000/#/home?msgid=7858">[待校准&#64;7858]</a><a class="headerlink" href="#create-the-base-class-package" title="永久链接至标题"></a></h3>
+<p>使用以下终端命令在 <code class="docutils literal notranslate"><span class="pre">dev_ws/src</span></code> 文件夹中创建一个新的空包。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7859">[待校准&#64;7859]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 pkg create --build-type ament_cmake polygon_base --dependencies pluginlib --node-name area_node</span>
 </pre></div>
 </div>
-<p>打开您最喜欢的编辑器，编辑 <code class="docutils literal notranslate"><span class="pre">dev_ws/src/polygon_base/include/polygon_base/regular_polygon.hpp</span></code> ，并在其中粘贴以下内容: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7860">[待校准&#64;7860]</a></p>
+<p>打开您最喜欢的编辑器，编辑 <code class="docutils literal notranslate"><span class="pre">dev_ws/src/polygon_base/include/polygon_base/regular_polygon.hpp</span></code> ，并在其中粘贴以下内容: <a class="reference external" href="http://localhost:3000/#/home?msgid=7860">[待校准&#64;7860]</a></p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#ifndef POLYGON_BASE_REGULAR_POLYGON_HPP</span>
 <span class="cp">#define POLYGON_BASE_REGULAR_POLYGON_HPP</span>
 
@@ -348,31 +348,31 @@
 <span class="cp">#endif  </span><span class="c1">// POLYGON_BASE_REGULAR_POLYGON_HPP</span>
 </pre></div>
 </div>
-<p>上面的代码应该是不言自明的...我们正在创建一个调用ed <code class="docutils literal notranslate"><span class="pre">RegularPolygon</span></code> 的抽象类。需要注意的一件事是存在initialize方法。对于 <code class="docutils literal notranslate"><span class="pre">pluginlib</span></code> ，类需要一个没有参数的构造函数，因此，如果需要任何参数，我们使用initialize方法来初始化对象。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7861">[待校准&#64;7861]</a></p>
-<p>我们需要让这个标题对其他类可用，所以打开 <code class="docutils literal notranslate"><span class="pre">dev_ws/src/polygon_base/CMakeLists.txt</span></code> 进行编辑。在 <code class="docutils literal notranslate"><span class="pre">ament_target_dependencies</span></code> 命令后添加以下行。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7862">[待校准&#64;7862]</a></p>
+<p>上面的代码应该是不言自明的...我们正在创建一个调用ed <code class="docutils literal notranslate"><span class="pre">RegularPolygon</span></code> 的抽象类。需要注意的一件事是存在initialize方法。对于 <code class="docutils literal notranslate"><span class="pre">pluginlib</span></code> ，类需要一个没有参数的构造函数，因此，如果需要任何参数，我们使用initialize方法来初始化对象。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7861">[待校准&#64;7861]</a></p>
+<p>我们需要让这个标题对其他类可用，所以打开 <code class="docutils literal notranslate"><span class="pre">dev_ws/src/polygon_base/CMakeLists.txt</span></code> 进行编辑。在 <code class="docutils literal notranslate"><span class="pre">ament_target_dependencies</span></code> 命令后添加以下行。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7862">[待校准&#64;7862]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">install(</span>
 <span class="go">  DIRECTORY include/</span>
 <span class="go">  DESTINATION include</span>
 <span class="go">)</span>
 </pre></div>
 </div>
-<p>并将此命令添加到 <code class="docutils literal notranslate"><span class="pre">ament_package</span></code> 命令之前 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7863">[待校准&#64;7863]</a></p>
+<p>并将此命令添加到 <code class="docutils literal notranslate"><span class="pre">ament_package</span></code> 命令之前 <a class="reference external" href="http://localhost:3000/#/home?msgid=7863">[待校准&#64;7863]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ament_export_include_directories(</span>
 <span class="go">  include</span>
 <span class="go">)</span>
 </pre></div>
 </div>
-<p>稍后，我们将返回此包以编写测试节点。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7864">[待校准&#64;7864]</a></p>
+<p>稍后，我们将返回此包以编写测试节点。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7864">[待校准&#64;7864]</a></p>
 </div>
 <div class="section" id="create-the-plugin-package">
-<h3>2创建插件包 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7865">[待校准&#64;7865]</a><a class="headerlink" href="#create-the-plugin-package" title="永久链接至标题"></a></h3>
-<p>现在，我们将编写抽象类的两个非虚拟实现。使用以下终端命令在 <code class="docutils literal notranslate"><span class="pre">dev_ws/src</span></code> 文件夹中创建第二个空包。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7866">[待校准&#64;7866]</a></p>
+<h3>2创建插件包 <a class="reference external" href="http://localhost:3000/#/home?msgid=7865">[待校准&#64;7865]</a><a class="headerlink" href="#create-the-plugin-package" title="永久链接至标题"></a></h3>
+<p>现在，我们将编写抽象类的两个非虚拟实现。使用以下终端命令在 <code class="docutils literal notranslate"><span class="pre">dev_ws/src</span></code> 文件夹中创建第二个空包。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7866">[待校准&#64;7866]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 pkg create --build-type ament_cmake polygon_plugins --dependencies polygon_base pluginlib --library-name polygon_plugins</span>
 </pre></div>
 </div>
 <div class="section" id="source-code-for-the-plugins">
-<h4>2.1插件的源代码 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7867">[待校准&#64;7867]</a><a class="headerlink" href="#source-code-for-the-plugins" title="永久链接至标题"></a></h4>
-<p>打开 <code class="docutils literal notranslate"><span class="pre">dev_ws/src/polygon_plugins/src/polygon_plugins.cpp</span></code> 进行编辑，并在其中粘贴以下内容: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7868">[待校准&#64;7868]</a></p>
+<h4>2.1插件的源代码 <a class="reference external" href="http://localhost:3000/#/home?msgid=7867">[待校准&#64;7867]</a><a class="headerlink" href="#source-code-for-the-plugins" title="永久链接至标题"></a></h4>
+<p>打开 <code class="docutils literal notranslate"><span class="pre">dev_ws/src/polygon_plugins/src/polygon_plugins.cpp</span></code> 进行编辑，并在其中粘贴以下内容: <a class="reference external" href="http://localhost:3000/#/home?msgid=7868">[待校准&#64;7868]</a></p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;polygon_base/regular_polygon.hpp&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;cmath&gt;</span><span class="cp"></span>
 
@@ -424,16 +424,16 @@
 <span class="n">PLUGINLIB_EXPORT_CLASS</span><span class="p">(</span><span class="n">polygon_plugins</span><span class="o">::</span><span class="n">Triangle</span><span class="p">,</span> <span class="n">polygon_base</span><span class="o">::</span><span class="n">RegularPolygon</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>正方形和三角形类的实现应该相当简单: 保存边长，并使用它来计算面积。唯一特定于pluginlib的部分是最后三行，它调用一些神奇的宏，将类注册为实际插件。让我们来看看 <code class="docutils literal notranslate"><span class="pre">PLUGINLIB_EXPORT_CLASS</span></code> 宏的参数: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7869">[待校准&#64;7869]</a></p>
+<p>正方形和三角形类的实现应该相当简单: 保存边长，并使用它来计算面积。唯一特定于pluginlib的部分是最后三行，它调用一些神奇的宏，将类注册为实际插件。让我们来看看 <code class="docutils literal notranslate"><span class="pre">PLUGINLIB_EXPORT_CLASS</span></code> 宏的参数: <a class="reference external" href="http://localhost:3000/#/home?msgid=7869">[待校准&#64;7869]</a></p>
 <ol class="arabic simple">
-<li><p>插件类的完全限定类型，在本例中为 “polygon_plugins:: square”。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7870">[待校准&#64;7870]</a></p></li>
-<li><p>基类的完全限定类型，在本例中为 “polygon_base:: 正则arpolygon”。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7871">[待校准&#64;7871]</a></p></li>
+<li><p>插件类的完全限定类型，在本例中为 “polygon_plugins:: square”。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7870">[待校准&#64;7870]</a></p></li>
+<li><p>基类的完全限定类型，在本例中为 “polygon_base:: 正则arpolygon”。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7871">[待校准&#64;7871]</a></p></li>
 </ol>
 </div>
 <div class="section" id="plugin-declaration-xml">
-<h4>2.2插件声明XML <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7872">[待校准&#64;7872]</a><a class="headerlink" href="#plugin-declaration-xml" title="永久链接至标题"></a></h4>
-<p>上述步骤使我们的插件实例在加载它们存在的库后就可以创建，但是插件加载程序仍然需要一种方法来查找该库并知道在该库中引用什么。为此，我们还将创建一个XML文件，该文件与包清单中的特殊导出行一起，使所有关于我们的插件的必要信息可用于ROS工具链。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7873">[待校准&#64;7873]</a></p>
-<p>使用以下代码创建 <code class="docutils literal notranslate"><span class="pre">dev_ws/src/polygon_plugins/plugins.xml</span></code> : <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7874">[待校准&#64;7874]</a></p>
+<h4>2.2插件声明XML <a class="reference external" href="http://localhost:3000/#/home?msgid=7872">[待校准&#64;7872]</a><a class="headerlink" href="#plugin-declaration-xml" title="永久链接至标题"></a></h4>
+<p>上述步骤使我们的插件实例在加载它们存在的库后就可以创建，但是插件加载程序仍然需要一种方法来查找该库并知道在该库中引用什么。为此，我们还将创建一个XML文件，该文件与包清单中的特殊导出行一起，使所有关于我们的插件的必要信息可用于ROS工具链。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7873">[待校准&#64;7873]</a></p>
+<p>使用以下代码创建 <code class="docutils literal notranslate"><span class="pre">dev_ws/src/polygon_plugins/plugins.xml</span></code> : <a class="reference external" href="http://localhost:3000/#/home?msgid=7874">[待校准&#64;7874]</a></p>
 <div class="highlight-XML notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;library</span> <span class="na">path=</span><span class="s">&quot;polygon_plugins&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;class</span> <span class="na">type=</span><span class="s">&quot;polygon_plugins::Square&quot;</span> <span class="na">base_class_type=</span><span class="s">&quot;polygon_base::RegularPolygon&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;description&gt;</span>This is a square plugin.<span class="nt">&lt;/description&gt;</span>
@@ -444,23 +444,23 @@
 <span class="nt">&lt;/library&gt;</span>
 </pre></div>
 </div>
-<p>需要注意的几件事: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7875">[待校准&#64;7875]</a></p>
+<p>需要注意的几件事: <a class="reference external" href="http://localhost:3000/#/home?msgid=7875">[待校准&#64;7875]</a></p>
 <ol class="arabic simple">
-<li><p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">library</span></code> 标签给出了包含我们要导出的插件的库的相对路径。在ROS 2中，这只是库的名称。在ROS 1中，它包含前缀 <code class="docutils literal notranslate"><span class="pre">lib</span></code> 或有时 <code class="docutils literal notranslate"><span class="pre">lib/lib</span></code>  (即 <code class="docutils literal notranslate"><span class="pre">lib/libpolygon_plugins</span></code> ) 但是这里更简单。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7876">[待校准&#64;7876]</a></p></li>
-<li><p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">class</span></code> 标签声明了一个插件，我们想从我们的库中导出。让我们来看看它的参数: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7877">[待校准&#64;7877]</a></p></li>
+<li><p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">library</span></code> 标签给出了包含我们要导出的插件的库的相对路径。在ROS 2中，这只是库的名称。在ROS 1中，它包含前缀 <code class="docutils literal notranslate"><span class="pre">lib</span></code> 或有时 <code class="docutils literal notranslate"><span class="pre">lib/lib</span></code>  (即 <code class="docutils literal notranslate"><span class="pre">lib/libpolygon_plugins</span></code> ) 但是这里更简单。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7876">[待校准&#64;7876]</a></p></li>
+<li><p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">class</span></code> 标签声明了一个插件，我们想从我们的库中导出。让我们来看看它的参数: <a class="reference external" href="http://localhost:3000/#/home?msgid=7877">[待校准&#64;7877]</a></p></li>
 </ol>
 <blockquote>
 <div><ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code>: The fully qualified type of the plugin. For us, that's <code class="docutils literal notranslate"><span class="pre">polygon_plugins::Square</span></code>. <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7878">[待校准&#64;7878]</a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">base_class</span></code>: The fully qualified base class type for the plugin. For us, that's <code class="docutils literal notranslate"><span class="pre">polygon_base::RegularPolygon</span></code>. <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7879">[待校准&#64;7879]</a></p></li>
-<li><p>[需手动修复的语法]``description``:对插件及其功能的描述。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7880">[待校准&#64;7880]</a></p></li>
-<li><p>[需手动修复的语法]``name``:过去有一个名称属性，但不再需要。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7881">[待校准&#64;7881]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code>: The fully qualified type of the plugin. For us, that's <code class="docutils literal notranslate"><span class="pre">polygon_plugins::Square</span></code>. <a class="reference external" href="http://localhost:3000/#/home?msgid=7878">[待校准&#64;7878]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">base_class</span></code>: The fully qualified base class type for the plugin. For us, that's <code class="docutils literal notranslate"><span class="pre">polygon_base::RegularPolygon</span></code>. <a class="reference external" href="http://localhost:3000/#/home?msgid=7879">[待校准&#64;7879]</a></p></li>
+<li><p>[需手动修复的语法]``description``:对插件及其功能的描述。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7880">[待校准&#64;7880]</a></p></li>
+<li><p>[需手动修复的语法]``name``:过去有一个名称属性，但不再需要。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7881">[待校准&#64;7881]</a></p></li>
 </ul>
 </div></blockquote>
 </div>
 <div class="section" id="cmake-plugin-declaration">
-<h4>2.3 CMake插件声明 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7882">[待校准&#64;7882]</a><a class="headerlink" href="#cmake-plugin-declaration" title="永久链接至标题"></a></h4>
-<p>最后一步是通过 <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> 导出插件。这与ROS 1不同，后者通过 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 出口。在行读数 <code class="docutils literal notranslate"><span class="pre">find_package(pluginlib</span> <span class="pre">REQUIRED)</span></code> 后，将以下块添加到您的 <code class="docutils literal notranslate"><span class="pre">dev_ws/src/polygon_plugins/CMakeLists.txt</span></code>  <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7883">[待校准&#64;7883]</a></p>
+<h4>2.3 CMake插件声明 <a class="reference external" href="http://localhost:3000/#/home?msgid=7882">[待校准&#64;7882]</a><a class="headerlink" href="#cmake-plugin-declaration" title="永久链接至标题"></a></h4>
+<p>最后一步是通过 <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> 导出插件。这与ROS 1不同，后者通过 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 出口。在行读数 <code class="docutils literal notranslate"><span class="pre">find_package(pluginlib</span> <span class="pre">REQUIRED)</span></code> 后，将以下块添加到您的 <code class="docutils literal notranslate"><span class="pre">dev_ws/src/polygon_plugins/CMakeLists.txt</span></code>  <a class="reference external" href="http://localhost:3000/#/home?msgid=7883">[待校准&#64;7883]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">add_library(polygon_plugins src/polygon_plugins.cpp)</span>
 <span class="go">target_include_directories(polygon_plugins PUBLIC</span>
 <span class="gp">  $</span>&lt;BUILD_INTERFACE:<span class="si">${</span><span class="nv">CMAKE_CURRENT_SOURCE_DIR</span><span class="si">}</span>/include&gt;
@@ -482,7 +482,7 @@
 <span class="go">)</span>
 </pre></div>
 </div>
-<p>在 <code class="docutils literal notranslate"><span class="pre">ament_package</span></code> 命令之前，添加 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7884">[待校准&#64;7884]</a></p>
+<p>在 <code class="docutils literal notranslate"><span class="pre">ament_package</span></code> 命令之前，添加 <a class="reference external" href="http://localhost:3000/#/home?msgid=7884">[待校准&#64;7884]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ament_export_libraries(</span>
 <span class="go">  polygon_plugins</span>
 <span class="go">)</span>
@@ -491,16 +491,16 @@
 <span class="go">)</span>
 </pre></div>
 </div>
-<p>此CMake命令的参数为 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7885">[待校准&#64;7885]</a></p>
+<p>此CMake命令的参数为 <a class="reference external" href="http://localhost:3000/#/home?msgid=7885">[待校准&#64;7885]</a></p>
 <ol class="arabic simple">
-<li><p>基类的包，即 <code class="docutils literal notranslate"><span class="pre">polygon_base</span></code>  <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7886">[待校准&#64;7886]</a></p></li>
-<li><p>插件声明xml的相对路径，即 <code class="docutils literal notranslate"><span class="pre">plugins.xml</span></code>  <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7887">[待校准&#64;7887]</a></p></li>
+<li><p>基类的包，即 <code class="docutils literal notranslate"><span class="pre">polygon_base</span></code>  <a class="reference external" href="http://localhost:3000/#/home?msgid=7886">[待校准&#64;7886]</a></p></li>
+<li><p>插件声明xml的相对路径，即 <code class="docutils literal notranslate"><span class="pre">plugins.xml</span></code>  <a class="reference external" href="http://localhost:3000/#/home?msgid=7887">[待校准&#64;7887]</a></p></li>
 </ol>
 </div>
 </div>
 <div class="section" id="use-the-plugins">
-<h3>3使用插件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7888">[待校准&#64;7888]</a><a class="headerlink" href="#use-the-plugins" title="永久链接至标题"></a></h3>
-<p>现在是时候使用插件了。这可以在任何包中完成，但是在这里我们将在基本包中完成。编辑 <code class="docutils literal notranslate"><span class="pre">dev_ws/src/polygon_base/src/area_node.cpp</span></code> 以包含以下内容: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7889">[待校准&#64;7889]</a></p>
+<h3>3使用插件 <a class="reference external" href="http://localhost:3000/#/home?msgid=7888">[待校准&#64;7888]</a><a class="headerlink" href="#use-the-plugins" title="永久链接至标题"></a></h3>
+<p>现在是时候使用插件了。这可以在任何包中完成，但是在这里我们将在基本包中完成。编辑 <code class="docutils literal notranslate"><span class="pre">dev_ws/src/polygon_base/src/area_node.cpp</span></code> 以包含以下内容: <a class="reference external" href="http://localhost:3000/#/home?msgid=7889">[待校准&#64;7889]</a></p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;pluginlib/class_loader.hpp&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;polygon_base/regular_polygon.hpp&gt;</span><span class="cp"></span>
 
@@ -532,24 +532,24 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">ClassLoader</span></code> 是需要理解的关键类别，在 <code class="docutils literal notranslate"><span class="pre">class_loader.hpp</span></code>  <a class="reference external" href="https://github.com/ros/pluginlib/blob/ros2/pluginlib/include/pluginlib/class_loader.hpp">header</a> 中定义。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7890">[待校准&#64;7890]</a></p>
+<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">ClassLoader</span></code> 是需要理解的关键类别，在 <code class="docutils literal notranslate"><span class="pre">class_loader.hpp</span></code>  <a class="reference external" href="https://github.com/ros/pluginlib/blob/ros2/pluginlib/include/pluginlib/class_loader.hpp">header</a> 中定义。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7890">[待校准&#64;7890]</a></p>
 <blockquote>
 <div><ul class="simple">
-<li><p>它是用基类模板化的，即项目完结，系统自动填充内容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7891">[待校准&#64;7891]</a></p></li>
-<li><p>第一个参数是基类的包名称的string，即 <code class="docutils literal notranslate"><span class="pre">polygon_base</span></code>  <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7892">[待校准&#64;7892]</a></p></li>
-<li><p>第二个参数是带有插件的完全限定基类类型的string，即项目完结，系统自动填充内容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7893">[待校准&#64;7893]</a></p></li>
+<li><p>它是用基类模板化的，即项目完结，系统自动填充内容 <a class="reference external" href="http://localhost:3000/#/home?msgid=7891">[待校准&#64;7891]</a></p></li>
+<li><p>第一个参数是基类的包名称的string，即 <code class="docutils literal notranslate"><span class="pre">polygon_base</span></code>  <a class="reference external" href="http://localhost:3000/#/home?msgid=7892">[待校准&#64;7892]</a></p></li>
+<li><p>第二个参数是带有插件的完全限定基类类型的string，即项目完结，系统自动填充内容 <a class="reference external" href="http://localhost:3000/#/home?msgid=7893">[待校准&#64;7893]</a></p></li>
 </ul>
 </div></blockquote>
-<p>有多种方法来实例化类的实例。在此示例中，我们使用共享指针。我们只需要使用插件类的完全限定类型调用 <code class="docutils literal notranslate"><span class="pre">createSharedInstance</span></code> ，在这种情况下为 “polygon_plugins:: square”。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7894">[待校准&#64;7894]</a></p>
-<p>重要提示: 定义此节点的 <code class="docutils literal notranslate"><span class="pre">polygon_base</span></code> 包不依赖于 <code class="docutils literal notranslate"><span class="pre">polygon_plugins</span></code> 类。将加载dynami调用y的插件，而无需声明任何依赖项。此外，我们使用硬编码的插件名称实例化类，但是您也可以使用参数等对动态调用y进行实例化。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7895">[待校准&#64;7895]</a></p>
+<p>有多种方法来实例化类的实例。在此示例中，我们使用共享指针。我们只需要使用插件类的完全限定类型调用 <code class="docutils literal notranslate"><span class="pre">createSharedInstance</span></code> ，在这种情况下为 “polygon_plugins:: square”。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7894">[待校准&#64;7894]</a></p>
+<p>重要提示: 定义此节点的 <code class="docutils literal notranslate"><span class="pre">polygon_base</span></code> 包不依赖于 <code class="docutils literal notranslate"><span class="pre">polygon_plugins</span></code> 类。将加载dynami调用y的插件，而无需声明任何依赖项。此外，我们使用硬编码的插件名称实例化类，但是您也可以使用参数等对动态调用y进行实例化。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7895">[待校准&#64;7895]</a></p>
 </div>
 <div class="section" id="build-and-run">
-<h3>4构建和运行 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7896">[待校准&#64;7896]</a><a class="headerlink" href="#build-and-run" title="永久链接至标题"></a></h3>
-<p>导航回工作区的根， <code class="docutils literal notranslate"><span class="pre">dev_ws</span></code> ，并构建您的新包: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7897">[待校准&#64;7897]</a></p>
+<h3>4构建和运行 <a class="reference external" href="http://localhost:3000/#/home?msgid=7896">[待校准&#64;7896]</a><a class="headerlink" href="#build-and-run" title="永久链接至标题"></a></h3>
+<p>导航回工作区的根， <code class="docutils literal notranslate"><span class="pre">dev_ws</span></code> ，并构建您的新包: <a class="reference external" href="http://localhost:3000/#/home?msgid=7897">[待校准&#64;7897]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">colcon build --packages-select polygon_base polygon_plugins</span>
 </pre></div>
 </div>
-<p>从 <code class="docutils literal notranslate"><span class="pre">dev_ws</span></code> ，确保源文件安装文件: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7898">[待校准&#64;7898]</a></p>
+<p>从 <code class="docutils literal notranslate"><span class="pre">dev_ws</span></code> ，确保源文件安装文件: <a class="reference external" href="http://localhost:3000/#/home?msgid=7898">[待校准&#64;7898]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-0-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-0-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-0-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-0-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-0-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">. install/setup.bash</span>
 </pre></div>
@@ -561,11 +561,11 @@
 </pre></div>
 </div>
 </div></div>
-<p>现在运行节点: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7899">[待校准&#64;7899]</a></p>
+<p>现在运行节点: <a class="reference external" href="http://localhost:3000/#/home?msgid=7899">[待校准&#64;7899]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run polygon_base area_node</span>
 </pre></div>
 </div>
-<p>它应该打印 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7900">[待校准&#64;7900]</a></p>
+<p>它应该打印 <a class="reference external" href="http://localhost:3000/#/home?msgid=7900">[待校准&#64;7900]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Triangle area: 43.30</span>
 <span class="go">Square area: 100.00</span>
 </pre></div>
@@ -573,8 +573,8 @@
 </div>
 </div>
 <div class="section" id="summary">
-<h2>总结 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6747">[待校准&#64;6747]</a><a class="headerlink" href="#summary" title="永久链接至标题"></a></h2>
-<p>恭喜您!您刚刚编写并使用了您的第一个插件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7901">[待校准&#64;7901]</a></p>
+<h2>总结 <a class="reference external" href="http://localhost:3000/#/home?msgid=6747">[待校准&#64;6747]</a><a class="headerlink" href="#summary" title="永久链接至标题"></a></h2>
+<p>恭喜您!您刚刚编写并使用了您的第一个插件。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7901">[待校准&#64;7901]</a></p>
 </div>
 </div>
 

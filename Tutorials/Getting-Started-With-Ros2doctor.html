@@ -248,7 +248,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Related-Projects/Nvidia-ROS2-Projects.html">[需手动修复的语法]NVIDIAROS 2项目 [待校准&#64;6668]</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../Glossary.html">相关术语 `[小鱼&#64;1] http://dev.ros2.fishros.com/calibpage/#/home?msgid=1&gt;`_</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Glossary.html">术语表</a></li>
 </ul>
 
         </div>
@@ -279,12 +279,12 @@
 
 
   <div class="section" id="getting-started-with-ros2doctor">
-<span id="ros2doctor"></span><h1>开始使用ros2doctor <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7450">[待校准&#64;7450]</a><a class="headerlink" href="#getting-started-with-ros2doctor" title="永久链接至标题"></a></h1>
-<p>Goal目标: using使用 <code class="docutils literal notranslate"><span class="pre">ros2doctor</span></code> 工具识别ROS 2设置中的问题。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7451">[待校准&#64;7451]</a></p>
-<p>Tutorial教程级别: Beginner初学者 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7088">[待校准&#64;7088]</a></p>
-<p>Time时间: 10 10分钟 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7452">[待校准&#64;7452]</a></p>
+<span id="ros2doctor"></span><h1>开始使用ros2doctor <a class="reference external" href="http://localhost:3000/#/home?msgid=7450">[待校准&#64;7450]</a><a class="headerlink" href="#getting-started-with-ros2doctor" title="永久链接至标题"></a></h1>
+<p>Goal目标: using使用 <code class="docutils literal notranslate"><span class="pre">ros2doctor</span></code> 工具识别ROS 2设置中的问题。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7451">[待校准&#64;7451]</a></p>
+<p>Tutorial教程级别: Beginner初学者 <a class="reference external" href="http://localhost:3000/#/home?msgid=7088">[待校准&#64;7088]</a></p>
+<p>Time时间: 10 10分钟 <a class="reference external" href="http://localhost:3000/#/home?msgid=7452">[待校准&#64;7452]</a></p>
 <div class="contents local topic" id="contents">
-<p class="topic-title">内容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6715">[待校准&#64;6715]</a></p>
+<p class="topic-title">内容 <a class="reference external" href="http://localhost:3000/#/home?msgid=6715">[待校准&#64;6715]</a></p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#background" id="id1">背景 [待校准&#64;6716]</a></p></li>
 <li><p><a class="reference internal" href="#prerequisites" id="id2">先决条件 [待校准&#64;6718]</a></p></li>
@@ -301,86 +301,86 @@
 </ul>
 </div>
 <div class="section" id="background">
-<h2>背景 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6716">[待校准&#64;6716]</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
-<p>当您的ROS 2设置没有按预期运行时，您可以使用 <code class="docutils literal notranslate"><span class="pre">ros2doctor</span></code> 工具检查其设置。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7453">[待校准&#64;7453]</a></p>
-<p>[需手动修复的语法]``ros2doctor`` checksROS 2的所有方面，包括平台、版本、网络、环境、运行系统等，并警告您可能出现的错误和问题原因。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7454">[待校准&#64;7454]</a></p>
+<h2>背景 <a class="reference external" href="http://localhost:3000/#/home?msgid=6716">[待校准&#64;6716]</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
+<p>当您的ROS 2设置没有按预期运行时，您可以使用 <code class="docutils literal notranslate"><span class="pre">ros2doctor</span></code> 工具检查其设置。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7453">[待校准&#64;7453]</a></p>
+<p>[需手动修复的语法]``ros2doctor`` checksROS 2的所有方面，包括平台、版本、网络、环境、运行系统等，并警告您可能出现的错误和问题原因。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7454">[待校准&#64;7454]</a></p>
 </div>
 <div class="section" id="prerequisites">
-<h2>先决条件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6718">[待校准&#64;6718]</a><a class="headerlink" href="#prerequisites" title="永久链接至标题"></a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">ros2doctor</span></code> is part of the <code class="docutils literal notranslate"><span class="pre">ros2cli</span></code> package. As long as you have <code class="docutils literal notranslate"><span class="pre">ros2cli</span></code> installed (which any normal install should have), you will be able to use <code class="docutils literal notranslate"><span class="pre">ros2doctor</span></code>. <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7455">[待校准&#64;7455]</a></p>
-<p>本教程使用 <a class="reference internal" href="Turtlesim/Introducing-Turtlesim.html"><span class="doc">turtlesim</span></a> 来说明一些示例。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7456">[待校准&#64;7456]</a></p>
+<h2>先决条件 <a class="reference external" href="http://localhost:3000/#/home?msgid=6718">[待校准&#64;6718]</a><a class="headerlink" href="#prerequisites" title="永久链接至标题"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">ros2doctor</span></code> is part of the <code class="docutils literal notranslate"><span class="pre">ros2cli</span></code> package. As long as you have <code class="docutils literal notranslate"><span class="pre">ros2cli</span></code> installed (which any normal install should have), you will be able to use <code class="docutils literal notranslate"><span class="pre">ros2doctor</span></code>. <a class="reference external" href="http://localhost:3000/#/home?msgid=7455">[待校准&#64;7455]</a></p>
+<p>本教程使用 <a class="reference internal" href="Turtlesim/Introducing-Turtlesim.html"><span class="doc">turtlesim</span></a> 来说明一些示例。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7456">[待校准&#64;7456]</a></p>
 </div>
 <div class="section" id="tasks">
-<h2>任务 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6725">[待校准&#64;6725]</a><a class="headerlink" href="#tasks" title="永久链接至标题"></a></h2>
+<h2>任务 <a class="reference external" href="http://localhost:3000/#/home?msgid=6725">[待校准&#64;6725]</a><a class="headerlink" href="#tasks" title="永久链接至标题"></a></h2>
 <div class="section" id="check-your-setup">
-<h3>1检查您的设置 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7457">[待校准&#64;7457]</a><a class="headerlink" href="#check-your-setup" title="永久链接至标题"></a></h3>
-<p>让我们用 <code class="docutils literal notranslate"><span class="pre">ros2doctor</span></code> 作为一个整体来检查你的一般ROS 2设置。首先，在新终端中源文件ROS 2，然后输入命令: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7458">[待校准&#64;7458]</a></p>
+<h3>1检查您的设置 <a class="reference external" href="http://localhost:3000/#/home?msgid=7457">[待校准&#64;7457]</a><a class="headerlink" href="#check-your-setup" title="永久链接至标题"></a></h3>
+<p>让我们用 <code class="docutils literal notranslate"><span class="pre">ros2doctor</span></code> 作为一个整体来检查你的一般ROS 2设置。首先，在新终端中源文件ROS 2，然后输入命令: <a class="reference external" href="http://localhost:3000/#/home?msgid=7458">[待校准&#64;7458]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 doctor</span>
 </pre></div>
 </div>
-<p>这将对所有安装模块进行检查，并返回警告和错误。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7459">[待校准&#64;7459]</a></p>
-<p>如果您的ROS 2设置处于完美状态，您将看到类似以下的消息: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7460">[待校准&#64;7460]</a></p>
+<p>这将对所有安装模块进行检查，并返回警告和错误。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7459">[待校准&#64;7459]</a></p>
+<p>如果您的ROS 2设置处于完美状态，您将看到类似以下的消息: <a class="reference external" href="http://localhost:3000/#/home?msgid=7460">[待校准&#64;7460]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">All &lt;n&gt; checks passed</span>
 </pre></div>
 </div>
-<p>然而，返回一些警告并不罕见。 <code class="docutils literal notranslate"><span class="pre">UserWarning</span></code> 并不意味着你的设置是不可用的; 它更可能只是一个迹象，表明某些东西是以一种不理想的方式配置的。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7461">[待校准&#64;7461]</a></p>
-<p>如果您确实收到警告，它将如下所示: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7462">[待校准&#64;7462]</a></p>
+<p>然而，返回一些警告并不罕见。 <code class="docutils literal notranslate"><span class="pre">UserWarning</span></code> 并不意味着你的设置是不可用的; 它更可能只是一个迹象，表明某些东西是以一种不理想的方式配置的。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7461">[待校准&#64;7461]</a></p>
+<p>如果您确实收到警告，它将如下所示: <a class="reference external" href="http://localhost:3000/#/home?msgid=7462">[待校准&#64;7462]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&lt;path&gt;: &lt;line&gt;: UserWarning: &lt;message&gt;</span>
 </pre></div>
 </div>
-<p>例如，如果您使用的是不稳定的ROS 2分布，则 <code class="docutils literal notranslate"><span class="pre">ros2doctor</span></code> 会发现此警告: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7463">[待校准&#64;7463]</a></p>
+<p>例如，如果您使用的是不稳定的ROS 2分布，则 <code class="docutils literal notranslate"><span class="pre">ros2doctor</span></code> 会发现此警告: <a class="reference external" href="http://localhost:3000/#/home?msgid=7463">[待校准&#64;7463]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">UserWarning: Distribution &lt;distro&gt; is not fully supported or tested. To get more consistent features, download a stable version at https://index.ros.org/doc/ros2/Installation/</span>
 </pre></div>
 </div>
-<p>如果 <code class="docutils literal notranslate"><span class="pre">ros2doctor</span></code> 只在你的系统中发现警告，你仍然会收到 <code class="docutils literal notranslate"><span class="pre">All</span> <span class="pre">&lt;n&gt;</span> <span class="pre">checks</span> <span class="pre">passed</span></code> 信息。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7464">[待校准&#64;7464]</a></p>
-<p>大多数检查被归类为警告而不是错误。这主要取决于你，用户，来确定反馈 <code class="docutils literal notranslate"><span class="pre">ros2doctor</span></code> 回报的重要性。如果它确实在您的设置中发现了一个罕见的错误，如 “用户警告: 错误:” 所示，则检查被视为失败。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7465">[待校准&#64;7465]</a></p>
-<p>您将在问题反馈列表后看到类似的消息: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7466">[待校准&#64;7466]</a></p>
+<p>如果 <code class="docutils literal notranslate"><span class="pre">ros2doctor</span></code> 只在你的系统中发现警告，你仍然会收到 <code class="docutils literal notranslate"><span class="pre">All</span> <span class="pre">&lt;n&gt;</span> <span class="pre">checks</span> <span class="pre">passed</span></code> 信息。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7464">[待校准&#64;7464]</a></p>
+<p>大多数检查被归类为警告而不是错误。这主要取决于你，用户，来确定反馈 <code class="docutils literal notranslate"><span class="pre">ros2doctor</span></code> 回报的重要性。如果它确实在您的设置中发现了一个罕见的错误，如 “用户警告: 错误:” 所示，则检查被视为失败。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7465">[待校准&#64;7465]</a></p>
+<p>您将在问题反馈列表后看到类似的消息: <a class="reference external" href="http://localhost:3000/#/home?msgid=7466">[待校准&#64;7466]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">1/3 checks failed</span>
 
 <span class="go">Failed modules:  network</span>
 </pre></div>
 </div>
-<p>错误表明系统缺少对ROS 2至关重要的重要设置或功能。应解决错误以确保系统正常运行。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7467">[待校准&#64;7467]</a></p>
+<p>错误表明系统缺少对ROS 2至关重要的重要设置或功能。应解决错误以确保系统正常运行。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7467">[待校准&#64;7467]</a></p>
 </div>
 <div class="section" id="check-a-system">
-<h3>2检查系统 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7468">[待校准&#64;7468]</a><a class="headerlink" href="#check-a-system" title="永久链接至标题"></a></h3>
-<p>您还可以检查正在运行的ROS 2系统，以确定问题的可能原因。为了看到 <code class="docutils literal notranslate"><span class="pre">ros2doctor</span></code> 在一个正在运行的系统上工作，让我们运行Turtlesim，它有彼此主动通信的节点。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7469">[待校准&#64;7469]</a></p>
-<p>通过打开一个新终端，采购ROS 2，并输入以下命令来启动系统: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7470">[待校准&#64;7470]</a></p>
+<h3>2检查系统 <a class="reference external" href="http://localhost:3000/#/home?msgid=7468">[待校准&#64;7468]</a><a class="headerlink" href="#check-a-system" title="永久链接至标题"></a></h3>
+<p>您还可以检查正在运行的ROS 2系统，以确定问题的可能原因。为了看到 <code class="docutils literal notranslate"><span class="pre">ros2doctor</span></code> 在一个正在运行的系统上工作，让我们运行Turtlesim，它有彼此主动通信的节点。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7469">[待校准&#64;7469]</a></p>
+<p>通过打开一个新终端，采购ROS 2，并输入以下命令来启动系统: <a class="reference external" href="http://localhost:3000/#/home?msgid=7470">[待校准&#64;7470]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run turtlesim turtlesim_node</span>
 </pre></div>
 </div>
-<p>打开另一个终端和源文件ROS 2以运行teleop控件: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7471">[待校准&#64;7471]</a></p>
+<p>打开另一个终端和源文件ROS 2以运行teleop控件: <a class="reference external" href="http://localhost:3000/#/home?msgid=7471">[待校准&#64;7471]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run turtlesim turtle_teleop_key</span>
 </pre></div>
 </div>
-<p>现在在自己的终端再次运行 <code class="docutils literal notranslate"><span class="pre">ros2doctor</span></code> 。您将看到上次在设置上运行 <code class="docutils literal notranslate"><span class="pre">ros2doctor</span></code> 时出现的警告和错误 (如果有)。追踪这些将是与系统本身相关的几个新警告: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7472">[待校准&#64;7472]</a></p>
+<p>现在在自己的终端再次运行 <code class="docutils literal notranslate"><span class="pre">ros2doctor</span></code> 。您将看到上次在设置上运行 <code class="docutils literal notranslate"><span class="pre">ros2doctor</span></code> 时出现的警告和错误 (如果有)。追踪这些将是与系统本身相关的几个新警告: <a class="reference external" href="http://localhost:3000/#/home?msgid=7472">[待校准&#64;7472]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">UserWarning: Publisher without subscriber detected on /turtle1/color_sensor.</span>
 <span class="go">UserWarning: Publisher without subscriber detected on /turtle1/pose.</span>
 </pre></div>
 </div>
-<p>似乎 <code class="docutils literal notranslate"><span class="pre">/turtlesim</span></code> 节点将数据发布到两个未订阅的话题， <code class="docutils literal notranslate"><span class="pre">ros2doctor</span></code> 认为这可能会导致问题。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7473">[待校准&#64;7473]</a></p>
-<p>如果你运行命令来回应 <code class="docutils literal notranslate"><span class="pre">/color_sensor</span></code> 和 <code class="docutils literal notranslate"><span class="pre">/pose</span></code> 话题，这些警告将消失，因为出版商将有订阅者。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7474">[待校准&#64;7474]</a></p>
-<p>您可以在turtlesim仍在运行时打开两个新终端，在每个终端中采购ROS 2，并在它们自己的终端中运行以下每个命令来尝试此操作: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7475">[待校准&#64;7475]</a></p>
+<p>似乎 <code class="docutils literal notranslate"><span class="pre">/turtlesim</span></code> 节点将数据发布到两个未订阅的话题， <code class="docutils literal notranslate"><span class="pre">ros2doctor</span></code> 认为这可能会导致问题。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7473">[待校准&#64;7473]</a></p>
+<p>如果你运行命令来回应 <code class="docutils literal notranslate"><span class="pre">/color_sensor</span></code> 和 <code class="docutils literal notranslate"><span class="pre">/pose</span></code> 话题，这些警告将消失，因为出版商将有订阅者。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7474">[待校准&#64;7474]</a></p>
+<p>您可以在turtlesim仍在运行时打开两个新终端，在每个终端中采购ROS 2，并在它们自己的终端中运行以下每个命令来尝试此操作: <a class="reference external" href="http://localhost:3000/#/home?msgid=7475">[待校准&#64;7475]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 topic echo /turtle1/color_sensor</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 topic echo /turtle1/pose</span>
 </pre></div>
 </div>
-<p>然后再次在终端运行 <code class="docutils literal notranslate"><span class="pre">ros2doctor</span></code> 。 <code class="docutils literal notranslate"><span class="pre">publisher</span> <span class="pre">without</span> <span class="pre">subscriber</span></code> 警告将会消失。(确保在运行 <code class="docutils literal notranslate"><span class="pre">echo</span></code> 的终端中输入 “ctrl + c”)。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7476">[待校准&#64;7476]</a></p>
-<p>现在尝试退出turtlesim窗口或退出teleop并再次运行 <code class="docutils literal notranslate"><span class="pre">ros2doctor</span></code> 。既然系统中的一个节点不可用，你会看到更多关于不同话题的警告指示 <code class="docutils literal notranslate"><span class="pre">publisher</span> <span class="pre">without</span> <span class="pre">subscriber</span></code> 或 <code class="docutils literal notranslate"><span class="pre">subscriber</span> <span class="pre">without</span> <span class="pre">publisher</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7477">[待校准&#64;7477]</a></p>
-<p>在一个有许多节点的复杂系统中， <code class="docutils literal notranslate"><span class="pre">ros2doctor</span></code> 对于识别通讯问题的可能原因是非常宝贵的。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7478">[待校准&#64;7478]</a></p>
+<p>然后再次在终端运行 <code class="docutils literal notranslate"><span class="pre">ros2doctor</span></code> 。 <code class="docutils literal notranslate"><span class="pre">publisher</span> <span class="pre">without</span> <span class="pre">subscriber</span></code> 警告将会消失。(确保在运行 <code class="docutils literal notranslate"><span class="pre">echo</span></code> 的终端中输入 “ctrl + c”)。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7476">[待校准&#64;7476]</a></p>
+<p>现在尝试退出turtlesim窗口或退出teleop并再次运行 <code class="docutils literal notranslate"><span class="pre">ros2doctor</span></code> 。既然系统中的一个节点不可用，你会看到更多关于不同话题的警告指示 <code class="docutils literal notranslate"><span class="pre">publisher</span> <span class="pre">without</span> <span class="pre">subscriber</span></code> 或 <code class="docutils literal notranslate"><span class="pre">subscriber</span> <span class="pre">without</span> <span class="pre">publisher</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7477">[待校准&#64;7477]</a></p>
+<p>在一个有许多节点的复杂系统中， <code class="docutils literal notranslate"><span class="pre">ros2doctor</span></code> 对于识别通讯问题的可能原因是非常宝贵的。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7478">[待校准&#64;7478]</a></p>
 </div>
 <div class="section" id="get-a-full-report">
-<h3>3获取完整报告 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7479">[待校准&#64;7479]</a><a class="headerlink" href="#get-a-full-report" title="永久链接至标题"></a></h3>
-<p>而 <code class="docutils literal notranslate"><span class="pre">ros2doctor</span></code> 会让你知道关于你的网络、系统等的警告。，用 <code class="docutils literal notranslate"><span class="pre">--report</span></code> 的参数运行它会给你更多的细节来帮助你分析问题。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7480">[待校准&#64;7480]</a></p>
-<p>如果您收到有关网络设置的警告，并想确切找出导致警告的配置部分，您可能希望使用 <code class="docutils literal notranslate"><span class="pre">--report</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7481">[待校准&#64;7481]</a></p>
-<p>当您需要打开支持票以获得ROS 2的帮助时，这也非常有帮助。您可以将报告的相关部分复制并粘贴到票证中，以便帮助您的人员可以更好地了解您的环境并提供更好的帮助。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7482">[待校准&#64;7482]</a></p>
-<p>要获取完整报告，请在终端中输入以下命令: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7483">[待校准&#64;7483]</a></p>
+<h3>3获取完整报告 <a class="reference external" href="http://localhost:3000/#/home?msgid=7479">[待校准&#64;7479]</a><a class="headerlink" href="#get-a-full-report" title="永久链接至标题"></a></h3>
+<p>而 <code class="docutils literal notranslate"><span class="pre">ros2doctor</span></code> 会让你知道关于你的网络、系统等的警告。，用 <code class="docutils literal notranslate"><span class="pre">--report</span></code> 的参数运行它会给你更多的细节来帮助你分析问题。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7480">[待校准&#64;7480]</a></p>
+<p>如果您收到有关网络设置的警告，并想确切找出导致警告的配置部分，您可能希望使用 <code class="docutils literal notranslate"><span class="pre">--report</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7481">[待校准&#64;7481]</a></p>
+<p>当您需要打开支持票以获得ROS 2的帮助时，这也非常有帮助。您可以将报告的相关部分复制并粘贴到票证中，以便帮助您的人员可以更好地了解您的环境并提供更好的帮助。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7482">[待校准&#64;7482]</a></p>
+<p>要获取完整报告，请在终端中输入以下命令: <a class="reference external" href="http://localhost:3000/#/home?msgid=7483">[待校准&#64;7483]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 doctor --report</span>
 </pre></div>
 </div>
-<p>它将返回分类为五组的信息列表: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7484">[待校准&#64;7484]</a></p>
+<p>它将返回分类为五组的信息列表: <a class="reference external" href="http://localhost:3000/#/home?msgid=7484">[待校准&#64;7484]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">NETWORK CONFIGURATION</span>
 <span class="go">...</span>
 
@@ -397,28 +397,28 @@
 <span class="go">...</span>
 </pre></div>
 </div>
-<p>你可以在这里对照你从运行 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">doctor</span></code> 中得到的警告核对信息。例如，如果 <code class="docutils literal notranslate"><span class="pre">ros2doctor</span></code> 返回了警告 (前面提到过)，即您的分布 “没有得到完全支持或测试”，您可以查看报告的 <code class="docutils literal notranslate"><span class="pre">ROS</span> <span class="pre">2</span> <span class="pre">INFORMATION</span></code> 部分: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7485">[待校准&#64;7485]</a></p>
+<p>你可以在这里对照你从运行 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">doctor</span></code> 中得到的警告核对信息。例如，如果 <code class="docutils literal notranslate"><span class="pre">ros2doctor</span></code> 返回了警告 (前面提到过)，即您的分布 “没有得到完全支持或测试”，您可以查看报告的 <code class="docutils literal notranslate"><span class="pre">ROS</span> <span class="pre">2</span> <span class="pre">INFORMATION</span></code> 部分: <a class="reference external" href="http://localhost:3000/#/home?msgid=7485">[待校准&#64;7485]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">distribution name      : &lt;distro&gt;</span>
 <span class="go">distribution type      : ros2</span>
 <span class="go">distribution status    : prerelease</span>
 <span class="go">release platforms      : {&#39;&lt;platform&gt;&#39;: [&#39;&lt;version&gt;&#39;]}</span>
 </pre></div>
 </div>
-<p>在这里你可以看到 <code class="docutils literal notranslate"><span class="pre">distribution</span> <span class="pre">status</span></code> 是 <code class="docutils literal notranslate"><span class="pre">prerelease</span></code> ，这解释了为什么它没有得到完全支持。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7486">[待校准&#64;7486]</a></p>
+<p>在这里你可以看到 <code class="docutils literal notranslate"><span class="pre">distribution</span> <span class="pre">status</span></code> 是 <code class="docutils literal notranslate"><span class="pre">prerelease</span></code> ，这解释了为什么它没有得到完全支持。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7486">[待校准&#64;7486]</a></p>
 </div>
 </div>
 <div class="section" id="summary">
-<h2>总结 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6747">[待校准&#64;6747]</a><a class="headerlink" href="#summary" title="永久链接至标题"></a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">ros2doctor</span></code> will inform you of problems in your ROS 2 setup and running systems. You can get a deeper look at information behind those warnings by using the <code class="docutils literal notranslate"><span class="pre">--report</span></code> argument. <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7487">[待校准&#64;7487]</a></p>
-<p>请记住， <code class="docutils literal notranslate"><span class="pre">ros2doctor</span></code> 不是调试工具; 它对代码或系统实现方面的错误没有帮助。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7488">[待校准&#64;7488]</a></p>
+<h2>总结 <a class="reference external" href="http://localhost:3000/#/home?msgid=6747">[待校准&#64;6747]</a><a class="headerlink" href="#summary" title="永久链接至标题"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">ros2doctor</span></code> will inform you of problems in your ROS 2 setup and running systems. You can get a deeper look at information behind those warnings by using the <code class="docutils literal notranslate"><span class="pre">--report</span></code> argument. <a class="reference external" href="http://localhost:3000/#/home?msgid=7487">[待校准&#64;7487]</a></p>
+<p>请记住， <code class="docutils literal notranslate"><span class="pre">ros2doctor</span></code> 不是调试工具; 它对代码或系统实现方面的错误没有帮助。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7488">[待校准&#64;7488]</a></p>
 </div>
 <div class="section" id="related-content">
-<h2>相关内容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6751">[待校准&#64;6751]</a><a class="headerlink" href="#related-content" title="永久链接至标题"></a></h2>
-<p>[需手动修复的语法] <a class="reference external" href="https://github.com/ros2/ros2cli/tree/foxy/ros2doctor">ros2doctor’s README</a> 会告诉你更多不同的论点。你可能也想看看 <code class="docutils literal notranslate"><span class="pre">ros2doctor</span></code> 回购协议，因为它对初学者相当友好，是一个开始投稿的好地方。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7489">[待校准&#64;7489]</a></p>
+<h2>相关内容 <a class="reference external" href="http://localhost:3000/#/home?msgid=6751">[待校准&#64;6751]</a><a class="headerlink" href="#related-content" title="永久链接至标题"></a></h2>
+<p>[需手动修复的语法] <a class="reference external" href="https://github.com/ros2/ros2cli/tree/foxy/ros2doctor">ros2doctor’s README</a> 会告诉你更多不同的论点。你可能也想看看 <code class="docutils literal notranslate"><span class="pre">ros2doctor</span></code> 回购协议，因为它对初学者相当友好，是一个开始投稿的好地方。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7489">[待校准&#64;7489]</a></p>
 </div>
 <div class="section" id="next-steps">
-<h2>下一步 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6749">[待校准&#64;6749]</a><a class="headerlink" href="#next-steps" title="永久链接至标题"></a></h2>
-<p>您已经完成了初级教程! <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7490">[待校准&#64;7490]</a></p>
+<h2>下一步 <a class="reference external" href="http://localhost:3000/#/home?msgid=6749">[待校准&#64;6749]</a><a class="headerlink" href="#next-steps" title="永久链接至标题"></a></h2>
+<p>您已经完成了初级教程! <a class="reference external" href="http://localhost:3000/#/home?msgid=7490">[待校准&#64;7490]</a></p>
 </div>
 </div>
 

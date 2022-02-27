@@ -248,7 +248,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../Related-Projects/Nvidia-ROS2-Projects.html">[需手动修复的语法]NVIDIAROS 2项目 [待校准&#64;6668]</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../Glossary.html">相关术语 `[小鱼&#64;1] http://dev.ros2.fishros.com/calibpage/#/home?msgid=1&gt;`_</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Glossary.html">术语表</a></li>
 </ul>
 
         </div>
@@ -279,12 +279,12 @@
 
 
   <div class="section" id="understanding-ros-2-parameters">
-<span id="ros2params"></span><h1>理解ROS 2参数 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7811">[待校准&#64;7811]</a><a class="headerlink" href="#understanding-ros-2-parameters" title="永久链接至标题"></a></h1>
-<p>Goal目标: Learn了解如何在ROS 2中获取、设置、保存和重新加载参数。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7812">[待校准&#64;7812]</a></p>
-<p>Tutorial教程级别: Beginner初学者 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7088">[待校准&#64;7088]</a></p>
-<p>Time时间: 5 5分钟 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6714">[待校准&#64;6714]</a></p>
+<span id="ros2params"></span><h1>理解ROS 2参数 <a class="reference external" href="http://localhost:3000/#/home?msgid=7811">[待校准&#64;7811]</a><a class="headerlink" href="#understanding-ros-2-parameters" title="永久链接至标题"></a></h1>
+<p>Goal目标: Learn了解如何在ROS 2中获取、设置、保存和重新加载参数。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7812">[待校准&#64;7812]</a></p>
+<p>Tutorial教程级别: Beginner初学者 <a class="reference external" href="http://localhost:3000/#/home?msgid=7088">[待校准&#64;7088]</a></p>
+<p>Time时间: 5 5分钟 <a class="reference external" href="http://localhost:3000/#/home?msgid=6714">[待校准&#64;6714]</a></p>
 <div class="contents local topic" id="contents">
-<p class="topic-title">内容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6715">[待校准&#64;6715]</a></p>
+<p class="topic-title">内容 <a class="reference external" href="http://localhost:3000/#/home?msgid=6715">[待校准&#64;6715]</a></p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#background" id="id1">背景 [待校准&#64;6716]</a></p></li>
 <li><p><a class="reference internal" href="#prerequisites" id="id2">先决条件 [待校准&#64;6718]</a></p></li>
@@ -304,35 +304,35 @@
 </ul>
 </div>
 <div class="section" id="background">
-<h2>背景 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6716">[待校准&#64;6716]</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
-<p>参数是节点的配置值。您可以将参数视为节点设置。节点可以将参数存储为整数、浮点数、bool、string和列表。在ROS 2中，每个节点维护自己的参数。有关参数的更多背景信息，请参见 <a class="reference internal" href="../../Concepts/About-ROS-2-Parameters.html"><span class="doc">the concept document</span></a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7813">[待校准&#64;7813]</a></p>
+<h2>背景 <a class="reference external" href="http://localhost:3000/#/home?msgid=6716">[待校准&#64;6716]</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
+<p>参数是节点的配置值。您可以将参数视为节点设置。节点可以将参数存储为整数、浮点数、bool、string和列表。在ROS 2中，每个节点维护自己的参数。有关参数的更多背景信息，请参见 <a class="reference internal" href="../../Concepts/About-ROS-2-Parameters.html"><span class="doc">the concept document</span></a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7813">[待校准&#64;7813]</a></p>
 </div>
 <div class="section" id="prerequisites">
-<h2>先决条件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6718">[待校准&#64;6718]</a><a class="headerlink" href="#prerequisites" title="永久链接至标题"></a></h2>
-<p>本教程使用 <a class="reference internal" href="../Turtlesim/Introducing-Turtlesim.html"><span class="doc">turtlesim package</span></a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7814">[待校准&#64;7814]</a></p>
-<p>和往常一样，不要忘记在 <a class="reference internal" href="../Configuring-ROS2-Environment.html"><span class="doc">every new terminal you open</span></a> 中源文件ROS 2。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7566">[待校准&#64;7566]</a></p>
+<h2>先决条件 <a class="reference external" href="http://localhost:3000/#/home?msgid=6718">[待校准&#64;6718]</a><a class="headerlink" href="#prerequisites" title="永久链接至标题"></a></h2>
+<p>本教程使用 <a class="reference internal" href="../Turtlesim/Introducing-Turtlesim.html"><span class="doc">turtlesim package</span></a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7814">[待校准&#64;7814]</a></p>
+<p>和往常一样，不要忘记在 <a class="reference internal" href="../Configuring-ROS2-Environment.html"><span class="doc">every new terminal you open</span></a> 中源文件ROS 2。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7566">[待校准&#64;7566]</a></p>
 </div>
 <div class="section" id="tasks">
-<h2>任务 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6725">[待校准&#64;6725]</a><a class="headerlink" href="#tasks" title="永久链接至标题"></a></h2>
+<h2>任务 <a class="reference external" href="http://localhost:3000/#/home?msgid=6725">[待校准&#64;6725]</a><a class="headerlink" href="#tasks" title="永久链接至标题"></a></h2>
 <div class="section" id="setup">
-<h3>1设置 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7567">[待校准&#64;7567]</a><a class="headerlink" href="#setup" title="永久链接至标题"></a></h3>
-<p>启动两个turtlesim节点， <code class="docutils literal notranslate"><span class="pre">/turtlesim</span></code> 和 <code class="docutils literal notranslate"><span class="pre">/teleop_turtle</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7815">[待校准&#64;7815]</a></p>
-<p>打开新终端并运行: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7339">[待校准&#64;7339]</a></p>
+<h3>1设置 <a class="reference external" href="http://localhost:3000/#/home?msgid=7567">[待校准&#64;7567]</a><a class="headerlink" href="#setup" title="永久链接至标题"></a></h3>
+<p>启动两个turtlesim节点， <code class="docutils literal notranslate"><span class="pre">/turtlesim</span></code> 和 <code class="docutils literal notranslate"><span class="pre">/teleop_turtle</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7815">[待校准&#64;7815]</a></p>
+<p>打开新终端并运行: <a class="reference external" href="http://localhost:3000/#/home?msgid=7339">[待校准&#64;7339]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run turtlesim turtlesim_node</span>
 </pre></div>
 </div>
-<p>打开另一个终端并运行: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7816">[待校准&#64;7816]</a></p>
+<p>打开另一个终端并运行: <a class="reference external" href="http://localhost:3000/#/home?msgid=7816">[待校准&#64;7816]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run turtlesim turtle_teleop_key</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="ros2-param-list">
-<h3>2 ros2参数列表 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7817">[待校准&#64;7817]</a><a class="headerlink" href="#ros2-param-list" title="永久链接至标题"></a></h3>
-<p>要查看属于节点的参数，请打开新终端并输入以下命令: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7818">[待校准&#64;7818]</a></p>
+<h3>2 ros2参数列表 <a class="reference external" href="http://localhost:3000/#/home?msgid=7817">[待校准&#64;7817]</a><a class="headerlink" href="#ros2-param-list" title="永久链接至标题"></a></h3>
+<p>要查看属于节点的参数，请打开新终端并输入以下命令: <a class="reference external" href="http://localhost:3000/#/home?msgid=7818">[待校准&#64;7818]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 param list</span>
 </pre></div>
 </div>
-<p>您将看到节点命名空间， <code class="docutils literal notranslate"><span class="pre">/teleop_turtle</span></code> 和 <code class="docutils literal notranslate"><span class="pre">/turtlesim</span></code> ，后面是每个节点的参数: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7819">[待校准&#64;7819]</a></p>
+<p>您将看到节点命名空间， <code class="docutils literal notranslate"><span class="pre">/teleop_turtle</span></code> 和 <code class="docutils literal notranslate"><span class="pre">/turtlesim</span></code> ，后面是每个节点的参数: <a class="reference external" href="http://localhost:3000/#/home?msgid=7819">[待校准&#64;7819]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">/teleop_turtle:</span>
 <span class="go">  scale_angular</span>
 <span class="go">  scale_linear</span>
@@ -344,60 +344,60 @@
 <span class="go">  use_sim_time</span>
 </pre></div>
 </div>
-<p>每个节点都有参数 <code class="docutils literal notranslate"><span class="pre">use_sim_time</span></code> ; 它不是turtlesim独有的。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7820">[待校准&#64;7820]</a></p>
-<p>根据它们的名称，看起来 <code class="docutils literal notranslate"><span class="pre">/turtlesim</span></code> 的参数使用RGB颜色值确定turtlesim窗口的背景颜色。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7821">[待校准&#64;7821]</a></p>
-<p>要确定参数的类型，可以使用 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span> <span class="pre">get</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7822">[待校准&#64;7822]</a></p>
+<p>每个节点都有参数 <code class="docutils literal notranslate"><span class="pre">use_sim_time</span></code> ; 它不是turtlesim独有的。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7820">[待校准&#64;7820]</a></p>
+<p>根据它们的名称，看起来 <code class="docutils literal notranslate"><span class="pre">/turtlesim</span></code> 的参数使用RGB颜色值确定turtlesim窗口的背景颜色。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7821">[待校准&#64;7821]</a></p>
+<p>要确定参数的类型，可以使用 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span> <span class="pre">get</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7822">[待校准&#64;7822]</a></p>
 </div>
 <div class="section" id="ros2-param-get">
-<h3>3 ros2参数获取 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7823">[待校准&#64;7823]</a><a class="headerlink" href="#ros2-param-get" title="永久链接至标题"></a></h3>
-<p>要显示参数的类型和当前值，请使用以下命令: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7824">[待校准&#64;7824]</a></p>
+<h3>3 ros2参数获取 <a class="reference external" href="http://localhost:3000/#/home?msgid=7823">[待校准&#64;7823]</a><a class="headerlink" href="#ros2-param-get" title="永久链接至标题"></a></h3>
+<p>要显示参数的类型和当前值，请使用以下命令: <a class="reference external" href="http://localhost:3000/#/home?msgid=7824">[待校准&#64;7824]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 param get &lt;node_name&gt; &lt;parameter_name&gt;</span>
 </pre></div>
 </div>
-<p>让我们找出 <code class="docutils literal notranslate"><span class="pre">/turtlesim</span></code> 参数 <code class="docutils literal notranslate"><span class="pre">background_g</span></code> 的当前值: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7825">[待校准&#64;7825]</a></p>
+<p>让我们找出 <code class="docutils literal notranslate"><span class="pre">/turtlesim</span></code> 参数 <code class="docutils literal notranslate"><span class="pre">background_g</span></code> 的当前值: <a class="reference external" href="http://localhost:3000/#/home?msgid=7825">[待校准&#64;7825]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 param get /turtlesim background_g</span>
 </pre></div>
 </div>
-<p>它将返回值: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7826">[待校准&#64;7826]</a></p>
+<p>它将返回值: <a class="reference external" href="http://localhost:3000/#/home?msgid=7826">[待校准&#64;7826]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Integer value is: 86</span>
 </pre></div>
 </div>
-<p>现在你知道 <code class="docutils literal notranslate"><span class="pre">background_g</span></code> 有一个整数值。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7827">[待校准&#64;7827]</a></p>
-<p>如果你在 <code class="docutils literal notranslate"><span class="pre">background_r</span></code> 和 <code class="docutils literal notranslate"><span class="pre">background_b</span></code> 上运行相同的命令，你将分别得到 <code class="docutils literal notranslate"><span class="pre">69</span></code> 和 <code class="docutils literal notranslate"><span class="pre">255</span></code> 的值。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7828">[待校准&#64;7828]</a></p>
+<p>现在你知道 <code class="docutils literal notranslate"><span class="pre">background_g</span></code> 有一个整数值。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7827">[待校准&#64;7827]</a></p>
+<p>如果你在 <code class="docutils literal notranslate"><span class="pre">background_r</span></code> 和 <code class="docutils literal notranslate"><span class="pre">background_b</span></code> 上运行相同的命令，你将分别得到 <code class="docutils literal notranslate"><span class="pre">69</span></code> 和 <code class="docutils literal notranslate"><span class="pre">255</span></code> 的值。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7828">[待校准&#64;7828]</a></p>
 </div>
 <div class="section" id="ros2-param-set">
-<h3>4 ros2参数集 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7829">[待校准&#64;7829]</a><a class="headerlink" href="#ros2-param-set" title="永久链接至标题"></a></h3>
-<p>要在运行时更改参数的值，请使用以下命令: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7830">[待校准&#64;7830]</a></p>
+<h3>4 ros2参数集 <a class="reference external" href="http://localhost:3000/#/home?msgid=7829">[待校准&#64;7829]</a><a class="headerlink" href="#ros2-param-set" title="永久链接至标题"></a></h3>
+<p>要在运行时更改参数的值，请使用以下命令: <a class="reference external" href="http://localhost:3000/#/home?msgid=7830">[待校准&#64;7830]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 param set &lt;node_name&gt; &lt;parameter_name&gt; &lt;value&gt;</span>
 </pre></div>
 </div>
-<p>让我们改变 <code class="docutils literal notranslate"><span class="pre">/turtlesim</span></code> 的背景色: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7831">[待校准&#64;7831]</a></p>
+<p>让我们改变 <code class="docutils literal notranslate"><span class="pre">/turtlesim</span></code> 的背景色: <a class="reference external" href="http://localhost:3000/#/home?msgid=7831">[待校准&#64;7831]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 param set /turtlesim background_r 150</span>
 </pre></div>
 </div>
-<p>您的终端应返回以下消息: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7832">[待校准&#64;7832]</a></p>
+<p>您的终端应返回以下消息: <a class="reference external" href="http://localhost:3000/#/home?msgid=7832">[待校准&#64;7832]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Set parameter successful</span>
 </pre></div>
 </div>
-<p>turtlesim窗口的背景应更改颜色: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7833">[待校准&#64;7833]</a></p>
+<p>turtlesim窗口的背景应更改颜色: <a class="reference external" href="http://localhost:3000/#/home?msgid=7833">[待校准&#64;7833]</a></p>
 <img alt="../../_images/set.png" src="../../_images/set.png" />
-<p>使用 <code class="docutils literal notranslate"><span class="pre">set</span></code> 命令设置参数只会在当前会话中更改它们，而不会永久更改。但是，您可以保存设置并在下次启动节点时重新加载它们。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7834">[待校准&#64;7834]</a></p>
+<p>使用 <code class="docutils literal notranslate"><span class="pre">set</span></code> 命令设置参数只会在当前会话中更改它们，而不会永久更改。但是，您可以保存设置并在下次启动节点时重新加载它们。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7834">[待校准&#64;7834]</a></p>
 </div>
 <div class="section" id="ros2-param-dump">
-<h3>5 ros2参数转储 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7835">[待校准&#64;7835]</a><a class="headerlink" href="#ros2-param-dump" title="永久链接至标题"></a></h3>
-<p>您可以使用以下命令将节点的所有当前参数值 “转储” 到文件中，以便以后保存: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7836">[待校准&#64;7836]</a></p>
+<h3>5 ros2参数转储 <a class="reference external" href="http://localhost:3000/#/home?msgid=7835">[待校准&#64;7835]</a><a class="headerlink" href="#ros2-param-dump" title="永久链接至标题"></a></h3>
+<p>您可以使用以下命令将节点的所有当前参数值 “转储” 到文件中，以便以后保存: <a class="reference external" href="http://localhost:3000/#/home?msgid=7836">[待校准&#64;7836]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 param dump &lt;node_name&gt;</span>
 </pre></div>
 </div>
-<p>要保存 <code class="docutils literal notranslate"><span class="pre">/turtlesim</span></code> 参数的当前配置，请输入以下命令: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7837">[待校准&#64;7837]</a></p>
+<p>要保存 <code class="docutils literal notranslate"><span class="pre">/turtlesim</span></code> 参数的当前配置，请输入以下命令: <a class="reference external" href="http://localhost:3000/#/home?msgid=7837">[待校准&#64;7837]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 param dump /turtlesim</span>
 </pre></div>
 </div>
-<p>您的终端将返回消息: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7838">[待校准&#64;7838]</a></p>
+<p>您的终端将返回消息: <a class="reference external" href="http://localhost:3000/#/home?msgid=7838">[待校准&#64;7838]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Saving to:  ./turtlesim.yaml</span>
 </pre></div>
 </div>
-<p>您将在运行工作区的目录中找到一个新文件。如果打开此文件，您将看到以下内容: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7839">[待校准&#64;7839]</a></p>
+<p>您将在运行工作区的目录中找到一个新文件。如果打开此文件，您将看到以下内容: <a class="reference external" href="http://localhost:3000/#/home?msgid=7839">[待校准&#64;7839]</a></p>
 <div class="highlight-YAML notranslate"><div class="highlight"><pre><span></span><span class="nt">turtlesim</span><span class="p">:</span>
   <span class="nt">ros__parameters</span><span class="p">:</span>
     <span class="nt">background_b</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">255</span>
@@ -406,19 +406,19 @@
     <span class="nt">use_sim_time</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
 </pre></div>
 </div>
-<p>如果将来要使用相同的参数重新加载节点，则转储参数会派上用场。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7840">[待校准&#64;7840]</a></p>
+<p>如果将来要使用相同的参数重新加载节点，则转储参数会派上用场。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7840">[待校准&#64;7840]</a></p>
 </div>
 <div class="section" id="ros2-param-load">
-<h3>6 ros2参数加载 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7841">[待校准&#64;7841]</a><a class="headerlink" href="#ros2-param-load" title="永久链接至标题"></a></h3>
-<p>您可以使用以下命令将参数从文件加载到当前正在运行的节点: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7842">[待校准&#64;7842]</a></p>
+<h3>6 ros2参数加载 <a class="reference external" href="http://localhost:3000/#/home?msgid=7841">[待校准&#64;7841]</a><a class="headerlink" href="#ros2-param-load" title="永久链接至标题"></a></h3>
+<p>您可以使用以下命令将参数从文件加载到当前正在运行的节点: <a class="reference external" href="http://localhost:3000/#/home?msgid=7842">[待校准&#64;7842]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 param load &lt;node_name&gt; &lt;parameter_file&gt;</span>
 </pre></div>
 </div>
-<p>加载。用 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span> <span class="pre">dump</span></code> 生成的/turtlesim.yaml文件转换为 <code class="docutils literal notranslate"><span class="pre">/turtlesim</span></code> 节点的参数，输入命令: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7843">[待校准&#64;7843]</a></p>
+<p>加载。用 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span> <span class="pre">dump</span></code> 生成的/turtlesim.yaml文件转换为 <code class="docutils literal notranslate"><span class="pre">/turtlesim</span></code> 节点的参数，输入命令: <a class="reference external" href="http://localhost:3000/#/home?msgid=7843">[待校准&#64;7843]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 param load /turtlesim ./turtlesim.yaml</span>
 </pre></div>
 </div>
-<p>您的终端将返回消息: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7838">[待校准&#64;7838]</a></p>
+<p>您的终端将返回消息: <a class="reference external" href="http://localhost:3000/#/home?msgid=7838">[待校准&#64;7838]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Set parameter background_b successful</span>
 <span class="go">Set parameter background_g successful</span>
 <span class="go">Set parameter background_r successful</span>
@@ -427,26 +427,26 @@
 </div>
 </div>
 <div class="section" id="load-parameter-file-on-node-startup">
-<h3>7节点启动时加载参数文件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7844">[待校准&#64;7844]</a><a class="headerlink" href="#load-parameter-file-on-node-startup" title="永久链接至标题"></a></h3>
-<p>要使用保存的参数值启动同一节点，请使用: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7845">[待校准&#64;7845]</a></p>
+<h3>7节点启动时加载参数文件 <a class="reference external" href="http://localhost:3000/#/home?msgid=7844">[待校准&#64;7844]</a><a class="headerlink" href="#load-parameter-file-on-node-startup" title="永久链接至标题"></a></h3>
+<p>要使用保存的参数值启动同一节点，请使用: <a class="reference external" href="http://localhost:3000/#/home?msgid=7845">[待校准&#64;7845]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run &lt;package_name&gt; &lt;executable_name&gt; --ros-args --params-file &lt;file_name&gt;</span>
 </pre></div>
 </div>
-<p>这是启动turtlesim时始终使用的相同命令，添加了标记 <code class="docutils literal notranslate"><span class="pre">--ros-args</span></code> 和 <code class="docutils literal notranslate"><span class="pre">--params-file</span></code> ，然后是要加载的文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7846">[待校准&#64;7846]</a></p>
-<p>停止正在运行的turtlesim节点，以便您可以尝试使用保存的参数重新加载它，使用: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7847">[待校准&#64;7847]</a></p>
+<p>这是启动turtlesim时始终使用的相同命令，添加了标记 <code class="docutils literal notranslate"><span class="pre">--ros-args</span></code> 和 <code class="docutils literal notranslate"><span class="pre">--params-file</span></code> ，然后是要加载的文件。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7846">[待校准&#64;7846]</a></p>
+<p>停止正在运行的turtlesim节点，以便您可以尝试使用保存的参数重新加载它，使用: <a class="reference external" href="http://localhost:3000/#/home?msgid=7847">[待校准&#64;7847]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run turtlesim turtlesim_node --ros-args --params-file ./turtlesim.yaml</span>
 </pre></div>
 </div>
-<p>turtlesim窗口应照常显示，但背景为您之前设置的紫色。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7848">[待校准&#64;7848]</a></p>
+<p>turtlesim窗口应照常显示，但背景为您之前设置的紫色。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7848">[待校准&#64;7848]</a></p>
 </div>
 </div>
 <div class="section" id="summary">
-<h2>总结 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6747">[待校准&#64;6747]</a><a class="headerlink" href="#summary" title="永久链接至标题"></a></h2>
-<p>节点具有用于定义其默认配置值的参数。您可以从命令行获取 <code class="docutils literal notranslate"><span class="pre">get</span></code> 和 <code class="docutils literal notranslate"><span class="pre">set</span></code> 的参数值。您还可以将参数设置保存到文件中，以便在以后的会话中重新加载它们。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7849">[待校准&#64;7849]</a></p>
+<h2>总结 <a class="reference external" href="http://localhost:3000/#/home?msgid=6747">[待校准&#64;6747]</a><a class="headerlink" href="#summary" title="永久链接至标题"></a></h2>
+<p>节点具有用于定义其默认配置值的参数。您可以从命令行获取 <code class="docutils literal notranslate"><span class="pre">get</span></code> 和 <code class="docutils literal notranslate"><span class="pre">set</span></code> 的参数值。您还可以将参数设置保存到文件中，以便在以后的会话中重新加载它们。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7849">[待校准&#64;7849]</a></p>
 </div>
 <div class="section" id="next-steps">
-<h2>下一步 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6749">[待校准&#64;6749]</a><a class="headerlink" href="#next-steps" title="永久链接至标题"></a></h2>
-<p>跳回到ROS 2通讯方法，在下一个教程你将了解 <a class="reference internal" href="../Understanding-ROS2-Actions.html"><span class="doc">actions</span></a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7850">[待校准&#64;7850]</a></p>
+<h2>下一步 <a class="reference external" href="http://localhost:3000/#/home?msgid=6749">[待校准&#64;6749]</a><a class="headerlink" href="#next-steps" title="永久链接至标题"></a></h2>
+<p>跳回到ROS 2通讯方法，在下一个教程你将了解 <a class="reference internal" href="../Understanding-ROS2-Actions.html"><span class="doc">actions</span></a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7850">[待校准&#64;7850]</a></p>
 </div>
 </div>
 

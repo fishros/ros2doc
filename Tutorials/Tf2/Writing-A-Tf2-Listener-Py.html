@@ -249,7 +249,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../Related-Projects/Nvidia-ROS2-Projects.html">[需手动修复的语法]NVIDIAROS 2项目 [待校准&#64;6668]</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../Glossary.html">相关术语 `[小鱼&#64;1] http://dev.ros2.fishros.com/calibpage/#/home?msgid=1&gt;`_</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Glossary.html">术语表</a></li>
 </ul>
 
         </div>
@@ -281,12 +281,12 @@
 
 
   <div class="section" id="writing-a-tf2-listener-python">
-<span id="writingatf2listenerpy"></span><h1>编写tf2监听程序 (Python) <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8691">[待校准&#64;8691]</a><a class="headerlink" href="#writing-a-tf2-listener-python" title="永久链接至标题"></a></h1>
-<p>Goal目标: Learn了解如何使用tf2访问帧转换。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8674">[待校准&#64;8674]</a></p>
-<p>Tutorial教程级别: Intermediate中级 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6713">[待校准&#64;6713]</a></p>
-<p>Time时间: 10 10分钟 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7452">[待校准&#64;7452]</a></p>
+<span id="writingatf2listenerpy"></span><h1>编写tf2监听程序 (Python) <a class="reference external" href="http://localhost:3000/#/home?msgid=8691">[待校准&#64;8691]</a><a class="headerlink" href="#writing-a-tf2-listener-python" title="永久链接至标题"></a></h1>
+<p>Goal目标: Learn了解如何使用tf2访问帧转换。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8674">[待校准&#64;8674]</a></p>
+<p>Tutorial教程级别: Intermediate中级 <a class="reference external" href="http://localhost:3000/#/home?msgid=6713">[待校准&#64;6713]</a></p>
+<p>Time时间: 10 10分钟 <a class="reference external" href="http://localhost:3000/#/home?msgid=7452">[待校准&#64;7452]</a></p>
 <div class="contents local topic" id="contents">
-<p class="topic-title">内容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6715">[待校准&#64;6715]</a></p>
+<p class="topic-title">内容 <a class="reference external" href="http://localhost:3000/#/home?msgid=6715">[待校准&#64;6715]</a></p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#background" id="id1">背景 [待校准&#64;6716]</a></p></li>
 <li><p><a class="reference internal" href="#prerequisites" id="id2">先决条件 [待校准&#64;6718]</a></p></li>
@@ -301,19 +301,19 @@
 </ul>
 </div>
 <div class="section" id="background">
-<h2>背景 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6716">[待校准&#64;6716]</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
-<p>在之前的教程中，我们创建了一个tf2广播器，将海龟的姿势发布到tf2。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8675">[待校准&#64;8675]</a></p>
-<p>在本教程中，我们将创建一个tf2监听程序以开始使用tf2。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8676">[待校准&#64;8676]</a></p>
+<h2>背景 <a class="reference external" href="http://localhost:3000/#/home?msgid=6716">[待校准&#64;6716]</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
+<p>在之前的教程中，我们创建了一个tf2广播器，将海龟的姿势发布到tf2。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8675">[待校准&#64;8675]</a></p>
+<p>在本教程中，我们将创建一个tf2监听程序以开始使用tf2。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8676">[待校准&#64;8676]</a></p>
 </div>
 <div class="section" id="prerequisites">
-<h2>先决条件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6718">[待校准&#64;6718]</a><a class="headerlink" href="#prerequisites" title="永久链接至标题"></a></h2>
-<p>本教程假设您已经完成了 <a class="reference internal" href="Writing-A-Tf2-Broadcaster-Py.html"><span class="doc">tf2 broadcaster tutorial (Python)</span></a> 。在之前的教程中，我们创建了一个 <code class="docutils literal notranslate"><span class="pre">learning_tf2_py</span></code> 包，在这里我们将继续工作。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8692">[待校准&#64;8692]</a></p>
+<h2>先决条件 <a class="reference external" href="http://localhost:3000/#/home?msgid=6718">[待校准&#64;6718]</a><a class="headerlink" href="#prerequisites" title="永久链接至标题"></a></h2>
+<p>本教程假设您已经完成了 <a class="reference internal" href="Writing-A-Tf2-Broadcaster-Py.html"><span class="doc">tf2 broadcaster tutorial (Python)</span></a> 。在之前的教程中，我们创建了一个 <code class="docutils literal notranslate"><span class="pre">learning_tf2_py</span></code> 包，在这里我们将继续工作。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8692">[待校准&#64;8692]</a></p>
 </div>
 <div class="section" id="tasks">
-<h2>任务 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6725">[待校准&#64;6725]</a><a class="headerlink" href="#tasks" title="永久链接至标题"></a></h2>
+<h2>任务 <a class="reference external" href="http://localhost:3000/#/home?msgid=6725">[待校准&#64;6725]</a><a class="headerlink" href="#tasks" title="永久链接至标题"></a></h2>
 <div class="section" id="write-the-listener-node">
-<h3>1写入监听节点 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8678">[待校准&#64;8678]</a><a class="headerlink" href="#write-the-listener-node" title="永久链接至标题"></a></h3>
-<p>让我们先创建源文件。转到我们在上一教程中创建的 <code class="docutils literal notranslate"><span class="pre">learning_tf2_py</span></code> 包。在 <code class="docutils literal notranslate"><span class="pre">src/learning_tf2_py/learning_tf2_py</span></code> 目录中，通过输入以下命令下载示例侦听器代码: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8693">[待校准&#64;8693]</a></p>
+<h3>1写入监听节点 <a class="reference external" href="http://localhost:3000/#/home?msgid=8678">[待校准&#64;8678]</a><a class="headerlink" href="#write-the-listener-node" title="永久链接至标题"></a></h3>
+<p>让我们先创建源文件。转到我们在上一教程中创建的 <code class="docutils literal notranslate"><span class="pre">learning_tf2_py</span></code> 包。在 <code class="docutils literal notranslate"><span class="pre">src/learning_tf2_py/learning_tf2_py</span></code> 目录中，通过输入以下命令下载示例侦听器代码: <a class="reference external" href="http://localhost:3000/#/home?msgid=8693">[待校准&#64;8693]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-0-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-0-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-0-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-0-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-0-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">wget https://raw.githubusercontent.com/ros/geometry_tutorials/ros2/turtle_tf2_py/turtle_tf2_py/turtle_tf2_listener.py</span>
 </pre></div>
@@ -321,16 +321,16 @@
 </div><div aria-labelledby="tab-0-bWFjT1M=" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-bWFjT1M=" name="bWFjT1M=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">wget https://raw.githubusercontent.com/ros/geometry_tutorials/ros2/turtle_tf2_py/turtle_tf2_py/turtle_tf2_listener.py</span>
 </pre></div>
 </div>
-</div><div aria-labelledby="tab-0-V2luZG93cw==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-V2luZG93cw==" name="V2luZG93cw==" role="tabpanel" tabindex="0"><p>在Windows命令行提示符下: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8363">[待校准&#64;8363]</a></p>
+</div><div aria-labelledby="tab-0-V2luZG93cw==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-V2luZG93cw==" name="V2luZG93cw==" role="tabpanel" tabindex="0"><p>在Windows命令行提示符下: <a class="reference external" href="http://localhost:3000/#/home?msgid=8363">[待校准&#64;8363]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">curl -sk https://raw.githubusercontent.com/ros/geometry_tutorials/ros2/turtle_tf2_py/turtle_tf2_py/turtle_tf2_listener.py -o turtle_tf2_listener.py</span>
 </pre></div>
 </div>
-<p>或者在powershell中: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8364">[待校准&#64;8364]</a></p>
+<p>或者在powershell中: <a class="reference external" href="http://localhost:3000/#/home?msgid=8364">[待校准&#64;8364]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">curl https://raw.githubusercontent.com/ros/geometry_tutorials/ros2/turtle_tf2_py/turtle_tf2_py/turtle_tf2_listener.py -o turtle_tf2_listener.py</span>
 </pre></div>
 </div>
 </div></div>
-<p>使用您喜欢的文本编辑器打开文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8591">[待校准&#64;8591]</a></p>
+<p>使用您喜欢的文本编辑器打开文件。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8591">[待校准&#64;8591]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
 
 <span class="kn">from</span> <span class="nn">geometry_msgs.msg</span> <span class="kn">import</span> <span class="n">Twist</span>
@@ -441,23 +441,23 @@
 </pre></div>
 </div>
 <div class="section" id="examine-the-code">
-<h4>1.1检查代码 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8367">[待校准&#64;8367]</a><a class="headerlink" href="#examine-the-code" title="永久链接至标题"></a></h4>
-<p>要了解产卵海龟背后的服务是如何工作的，请参考 <a class="reference internal" href="../Writing-A-Simple-Py-Service-And-Client.html"><span class="doc">writing a simple service and client (Python)</span></a> 教程。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8694">[待校准&#64;8694]</a></p>
-<p>现在，让我们看一下与访问帧转换相关的代码。 <code class="docutils literal notranslate"><span class="pre">tf2_ros</span></code> 包提供了 <code class="docutils literal notranslate"><span class="pre">TransformListener</span></code> 的实现，以帮助简化接收转换的任务。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8695">[待校准&#64;8695]</a></p>
+<h4>1.1检查代码 <a class="reference external" href="http://localhost:3000/#/home?msgid=8367">[待校准&#64;8367]</a><a class="headerlink" href="#examine-the-code" title="永久链接至标题"></a></h4>
+<p>要了解产卵海龟背后的服务是如何工作的，请参考 <a class="reference internal" href="../Writing-A-Simple-Py-Service-And-Client.html"><span class="doc">writing a simple service and client (Python)</span></a> 教程。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8694">[待校准&#64;8694]</a></p>
+<p>现在，让我们看一下与访问帧转换相关的代码。 <code class="docutils literal notranslate"><span class="pre">tf2_ros</span></code> 包提供了 <code class="docutils literal notranslate"><span class="pre">TransformListener</span></code> 的实现，以帮助简化接收转换的任务。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8695">[待校准&#64;8695]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tf2_ros.transform_listener</span> <span class="kn">import</span> <span class="n">TransformListener</span>
 </pre></div>
 </div>
-<p>在这里，我们创建一个 <code class="docutils literal notranslate"><span class="pre">TransformListener</span></code> 对象。创建侦听器后，它开始通过导线接收tf2转换，并将其缓冲长达10秒。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8682">[待校准&#64;8682]</a></p>
+<p>在这里，我们创建一个 <code class="docutils literal notranslate"><span class="pre">TransformListener</span></code> 对象。创建侦听器后，它开始通过导线接收tf2转换，并将其缓冲长达10秒。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8682">[待校准&#64;8682]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="bp">self</span><span class="o">.</span><span class="n">tf_listener</span> <span class="o">=</span> <span class="n">TransformListener</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tf_buffer</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>最后，我们向侦听器查询特定转换。我们使用以下参数调用 <code class="docutils literal notranslate"><span class="pre">lookup_transform</span></code> 方法: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8683">[待校准&#64;8683]</a></p>
+<p>最后，我们向侦听器查询特定转换。我们使用以下参数调用 <code class="docutils literal notranslate"><span class="pre">lookup_transform</span></code> 方法: <a class="reference external" href="http://localhost:3000/#/home?msgid=8683">[待校准&#64;8683]</a></p>
 <ol class="arabic simple">
-<li><p>目标帧 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8559">[待校准&#64;8559]</a></p></li>
-<li><p>源帧 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8561">[待校准&#64;8561]</a></p></li>
-<li><p>我们想要转换的时间 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8684">[待校准&#64;8684]</a></p></li>
+<li><p>目标帧 <a class="reference external" href="http://localhost:3000/#/home?msgid=8559">[待校准&#64;8559]</a></p></li>
+<li><p>源帧 <a class="reference external" href="http://localhost:3000/#/home?msgid=8561">[待校准&#64;8561]</a></p></li>
+<li><p>我们想要转换的时间 <a class="reference external" href="http://localhost:3000/#/home?msgid=8684">[待校准&#64;8684]</a></p></li>
 </ol>
-<p>提供 <code class="docutils literal notranslate"><span class="pre">rclpy.time.Time()</span></code> 将为我们提供最新的转换。所有这些都包含在一个try-exception块中，以处理可能的异常。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8696">[待校准&#64;8696]</a></p>
+<p>提供 <code class="docutils literal notranslate"><span class="pre">rclpy.time.Time()</span></code> 将为我们提供最新的转换。所有这些都包含在一个try-exception块中，以处理可能的异常。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8696">[待校准&#64;8696]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">now</span> <span class="o">=</span> <span class="n">rclpy</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">Time</span><span class="p">()</span>
 <span class="n">trans</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tf_buffer</span><span class="o">.</span><span class="n">lookup_transform</span><span class="p">(</span>
     <span class="n">to_frame_rel</span><span class="p">,</span>
@@ -468,8 +468,8 @@
 </div>
 </div>
 <div class="section" id="build-and-run">
-<h3>2构建和运行 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7729">[待校准&#64;7729]</a><a class="headerlink" href="#build-and-run" title="永久链接至标题"></a></h3>
-<p>使用文本编辑器，打开调用 <code class="docutils literal notranslate"><span class="pre">turtle_tf2_demo.launch.py</span></code> 的launch文件，并在第一个 <code class="docutils literal notranslate"><span class="pre">turtle1</span></code> 广播器节点后添加以下行。此外，在文件开头包括 <code class="docutils literal notranslate"><span class="pre">DeclareLaunchArgument</span></code> 和 <code class="docutils literal notranslate"><span class="pre">LaunchConfiguration</span></code> 的进口: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8686">[待校准&#64;8686]</a></p>
+<h3>2构建和运行 <a class="reference external" href="http://localhost:3000/#/home?msgid=7729">[待校准&#64;7729]</a><a class="headerlink" href="#build-and-run" title="永久链接至标题"></a></h3>
+<p>使用文本编辑器，打开调用 <code class="docutils literal notranslate"><span class="pre">turtle_tf2_demo.launch.py</span></code> 的launch文件，并在第一个 <code class="docutils literal notranslate"><span class="pre">turtle1</span></code> 广播器节点后添加以下行。此外，在文件开头包括 <code class="docutils literal notranslate"><span class="pre">DeclareLaunchArgument</span></code> 和 <code class="docutils literal notranslate"><span class="pre">LaunchConfiguration</span></code> 的进口: <a class="reference external" href="http://localhost:3000/#/home?msgid=8686">[待校准&#64;8686]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">launch</span> <span class="kn">import</span> <span class="n">LaunchDescription</span>
 <span class="kn">from</span> <span class="nn">launch.actions</span> <span class="kn">import</span> <span class="n">DeclareLaunchArgument</span>
 <span class="kn">from</span> <span class="nn">launch.substitutions</span> <span class="kn">import</span> <span class="n">LaunchConfiguration</span>
@@ -502,23 +502,23 @@
     <span class="p">])</span>
 </pre></div>
 </div>
-<p>这将宣布一个 <code class="docutils literal notranslate"><span class="pre">target_frame</span></code> launch的论点，为第二只乌龟启动一个广播器，我们将产卵，听众将订阅这些转变。现在，您可以开始完整的turtle例程了: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8687">[待校准&#64;8687]</a></p>
+<p>这将宣布一个 <code class="docutils literal notranslate"><span class="pre">target_frame</span></code> launch的论点，为第二只乌龟启动一个广播器，我们将产卵，听众将订阅这些转变。现在，您可以开始完整的turtle例程了: <a class="reference external" href="http://localhost:3000/#/home?msgid=8687">[待校准&#64;8687]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 launch learning_tf2_py turtle_tf2_demo.launch.py</span>
 </pre></div>
 </div>
-<p>你应该看看有两只海龟的海龟sim。在第二个终端窗口中，键入以下命令: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8688">[待校准&#64;8688]</a></p>
+<p>你应该看看有两只海龟的海龟sim。在第二个终端窗口中，键入以下命令: <a class="reference external" href="http://localhost:3000/#/home?msgid=8688">[待校准&#64;8688]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run turtlesim turtle_teleop_key</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="checking-the-results">
-<h3>3检查结果 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8476">[待校准&#64;8476]</a><a class="headerlink" href="#checking-the-results" title="永久链接至标题"></a></h3>
-<p>要查看是否正常工作，只需使用箭头键绕开第一只乌龟 (确保终端窗口处于活动状态，而不是模拟器窗口)，你会看到第二只乌龟跟着第一只! <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8689">[待校准&#64;8689]</a></p>
+<h3>3检查结果 <a class="reference external" href="http://localhost:3000/#/home?msgid=8476">[待校准&#64;8476]</a><a class="headerlink" href="#checking-the-results" title="永久链接至标题"></a></h3>
+<p>要查看是否正常工作，只需使用箭头键绕开第一只乌龟 (确保终端窗口处于活动状态，而不是模拟器窗口)，你会看到第二只乌龟跟着第一只! <a class="reference external" href="http://localhost:3000/#/home?msgid=8689">[待校准&#64;8689]</a></p>
 </div>
 </div>
 <div class="section" id="summary">
-<h2>总结 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6747">[待校准&#64;6747]</a><a class="headerlink" href="#summary" title="永久链接至标题"></a></h2>
-<p>在本教程中，您学习了如何使用tf2访问帧转换。你也已经完成了你自己的turtlesim例程，这是你第一次在 <a class="reference internal" href="Introduction-To-Tf2.html"><span class="doc">Introduction to tf2</span></a> 教程中尝试。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8690">[待校准&#64;8690]</a></p>
+<h2>总结 <a class="reference external" href="http://localhost:3000/#/home?msgid=6747">[待校准&#64;6747]</a><a class="headerlink" href="#summary" title="永久链接至标题"></a></h2>
+<p>在本教程中，您学习了如何使用tf2访问帧转换。你也已经完成了你自己的turtlesim例程，这是你第一次在 <a class="reference internal" href="Introduction-To-Tf2.html"><span class="doc">Introduction to tf2</span></a> 教程中尝试。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8690">[待校准&#64;8690]</a></p>
 </div>
 </div>
 

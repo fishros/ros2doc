@@ -248,7 +248,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../Related-Projects/Nvidia-ROS2-Projects.html">[需手动修复的语法]NVIDIAROS 2项目 [待校准&#64;6668]</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../Glossary.html">相关术语 `[小鱼&#64;1] http://dev.ros2.fishros.com/calibpage/#/home?msgid=1&gt;`_</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Glossary.html">术语表</a></li>
 </ul>
 
         </div>
@@ -280,19 +280,19 @@
 
 
   <div class="section" id="launching-monitoring-multiple-nodes-with-launch">
-<h1>[需手动修复的语法]Launch/监控多节点[需手动修复的语法]Launch <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7614">[待校准&#64;7614]</a><a class="headerlink" href="#launching-monitoring-multiple-nodes-with-launch" title="永久链接至标题"></a></h1>
+<h1>[需手动修复的语法]Launch/监控多节点[需手动修复的语法]Launch <a class="reference external" href="http://localhost:3000/#/home?msgid=7614">[待校准&#64;7614]</a><a class="headerlink" href="#launching-monitoring-multiple-nodes-with-launch" title="永久链接至标题"></a></h1>
 <div class="section" id="ros-2-launch-system">
-<h2>ROS 2launch系统 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7615">[待校准&#64;7615]</a><a class="headerlink" href="#ros-2-launch-system" title="永久链接至标题"></a></h2>
-<p>ROS 2中的launch系统负责帮助用户描述其系统的配置，然后按照所述执行。系统的配置包括运行哪些程序、在哪里运行它们、传递它们的参数，和ROS特定的约定，通过为组件提供不同的配置，可以轻松地在整个系统中重用组件。它还负责监控过程launched的状态，并报告和/或对这些过程的状态变化作出反应。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7616">[待校准&#64;7616]</a></p>
-<p>用Python编写的Launch文件可以启动和停止不同的节点，也可以触发和作用于各种事件。提供此帧工作的包是 <code class="docutils literal notranslate"><span class="pre">launch_ros</span></code> ，它在下面使用非ROS特定的 <code class="docutils literal notranslate"><span class="pre">launch</span></code> 帧工作。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7617">[待校准&#64;7617]</a></p>
-<p>[需手动修复的语法] <a class="reference external" href="https://design.ros2.org/articles/roslaunch.html">design document</a> 详述了ROS 2的launch系统设计的目标 (目前并非所有功能都可用)。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7618">[待校准&#64;7618]</a></p>
+<h2>ROS 2launch系统 <a class="reference external" href="http://localhost:3000/#/home?msgid=7615">[待校准&#64;7615]</a><a class="headerlink" href="#ros-2-launch-system" title="永久链接至标题"></a></h2>
+<p>ROS 2中的launch系统负责帮助用户描述其系统的配置，然后按照所述执行。系统的配置包括运行哪些程序、在哪里运行它们、传递它们的参数，和ROS特定的约定，通过为组件提供不同的配置，可以轻松地在整个系统中重用组件。它还负责监控过程launched的状态，并报告和/或对这些过程的状态变化作出反应。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7616">[待校准&#64;7616]</a></p>
+<p>用Python编写的Launch文件可以启动和停止不同的节点，也可以触发和作用于各种事件。提供此帧工作的包是 <code class="docutils literal notranslate"><span class="pre">launch_ros</span></code> ，它在下面使用非ROS特定的 <code class="docutils literal notranslate"><span class="pre">launch</span></code> 帧工作。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7617">[待校准&#64;7617]</a></p>
+<p>[需手动修复的语法] <a class="reference external" href="https://design.ros2.org/articles/roslaunch.html">design document</a> 详述了ROS 2的launch系统设计的目标 (目前并非所有功能都可用)。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7618">[待校准&#64;7618]</a></p>
 </div>
 <div class="section" id="writing-a-ros-2-launch-file">
-<h2>编写ROS 2launch文件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7619">[待校准&#64;7619]</a><a class="headerlink" href="#writing-a-ros-2-launch-file" title="永久链接至标题"></a></h2>
-<p>如果你还没有，一定要完成关于如何 <a class="reference internal" href="../Creating-Your-First-ROS2-Package.html"><span class="doc">create a ROS 2 package</span></a> 的教程。在ROS 2中创建launch文件的一种方法是使用Python文件，该文件由ROS 2 CLI工具 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">launch</span></code> 执行。我们首先在工作区中使用 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">pkg</span> <span class="pre">create</span> <span class="pre">&lt;pkg-name&gt;</span> <span class="pre">--dependencies</span> <span class="pre">[deps]</span></code> 创建一个ROS 2包，并创建一个新的 <code class="docutils literal notranslate"><span class="pre">launch</span></code> 目录。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7620">[待校准&#64;7620]</a></p>
+<h2>编写ROS 2launch文件 <a class="reference external" href="http://localhost:3000/#/home?msgid=7619">[待校准&#64;7619]</a><a class="headerlink" href="#writing-a-ros-2-launch-file" title="永久链接至标题"></a></h2>
+<p>如果你还没有，一定要完成关于如何 <a class="reference internal" href="../Creating-Your-First-ROS2-Package.html"><span class="doc">create a ROS 2 package</span></a> 的教程。在ROS 2中创建launch文件的一种方法是使用Python文件，该文件由ROS 2 CLI工具 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">launch</span></code> 执行。我们首先在工作区中使用 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">pkg</span> <span class="pre">create</span> <span class="pre">&lt;pkg-name&gt;</span> <span class="pre">--dependencies</span> <span class="pre">[deps]</span></code> 创建一个ROS 2包，并创建一个新的 <code class="docutils literal notranslate"><span class="pre">launch</span></code> 目录。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7620">[待校准&#64;7620]</a></p>
 <div class="section" id="python-packages">
-<h3>Python包 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7621">[待校准&#64;7621]</a><a class="headerlink" href="#python-packages" title="永久链接至标题"></a></h3>
-<p>对于Python包，您的目录应如下所示: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7622">[待校准&#64;7622]</a></p>
+<h3>Python包 <a class="reference external" href="http://localhost:3000/#/home?msgid=7621">[待校准&#64;7621]</a><a class="headerlink" href="#python-packages" title="永久链接至标题"></a></h3>
+<p>对于Python包，您的目录应如下所示: <a class="reference external" href="http://localhost:3000/#/home?msgid=7622">[待校准&#64;7622]</a></p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>src/
     my_package/
         launch/
@@ -301,8 +301,8 @@
         package.xml
 </pre></div>
 </div>
-<p>为了让colcon找到launch文件，我们需要使用 <code class="docutils literal notranslate"><span class="pre">setup</span></code> 的 <code class="docutils literal notranslate"><span class="pre">data_files</span></code> 参数通知Python的设置工具我们的launch文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7623">[待校准&#64;7623]</a></p>
-<p>在我们的 <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> 文件中: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7624">[待校准&#64;7624]</a></p>
+<p>为了让colcon找到launch文件，我们需要使用 <code class="docutils literal notranslate"><span class="pre">setup</span></code> 的 <code class="docutils literal notranslate"><span class="pre">data_files</span></code> 参数通知Python的设置工具我们的launch文件。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7623">[待校准&#64;7623]</a></p>
+<p>在我们的 <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> 文件中: <a class="reference external" href="http://localhost:3000/#/home?msgid=7624">[待校准&#64;7624]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">from</span> <span class="nn">glob</span> <span class="kn">import</span> <span class="n">glob</span>
 <span class="kn">from</span> <span class="nn">setuptools</span> <span class="kn">import</span> <span class="n">setup</span>
@@ -321,8 +321,8 @@
 </div>
 </div>
 <div class="section" id="c-packages">
-<h3>Cpackages包 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7625">[待校准&#64;7625]</a><a class="headerlink" href="#c-packages" title="永久链接至标题"></a></h3>
-<p>如果您正在创建一个C++ 包，我们将只通过添加以下内容来调整 <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> 文件: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7626">[待校准&#64;7626]</a></p>
+<h3>Cpackages包 <a class="reference external" href="http://localhost:3000/#/home?msgid=7625">[待校准&#64;7625]</a><a class="headerlink" href="#c-packages" title="永久链接至标题"></a></h3>
+<p>如果您正在创建一个C++ 包，我们将只通过添加以下内容来调整 <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> 文件: <a class="reference external" href="http://localhost:3000/#/home?msgid=7626">[待校准&#64;7626]</a></p>
 <div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="c"># Install launch files.</span>
 <span class="nb">install</span><span class="p">(</span><span class="s">DIRECTORY</span>
   <span class="s">launch</span>
@@ -330,13 +330,13 @@
 <span class="p">)</span>
 </pre></div>
 </div>
-<p>到文件末尾 (但在 <code class="docutils literal notranslate"><span class="pre">ament_package()</span></code> 之前)。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7627">[待校准&#64;7627]</a></p>
+<p>到文件末尾 (但在 <code class="docutils literal notranslate"><span class="pre">ament_package()</span></code> 之前)。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7627">[待校准&#64;7627]</a></p>
 </div>
 <div class="section" id="writing-the-launch-file">
-<h3>写launch文件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7628">[待校准&#64;7628]</a><a class="headerlink" href="#writing-the-launch-file" title="永久链接至标题"></a></h3>
-<p>在你的launch目录内，用 <code class="docutils literal notranslate"><span class="pre">.launch.py</span></code> 后缀创建一个新的launch文件。例如 <code class="docutils literal notranslate"><span class="pre">my_script.launch.py</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7629">[待校准&#64;7629]</a></p>
-<p>因此``.launch.py`` is not specifically required as the file suffix for launch files. Another popular option is <code class="docutils literal notranslate"><span class="pre">_launch.py</span></code>, used in the <a class="reference internal" href="Creating-Launch-Files.html"><span class="doc">beginner level launch files tutorial</span></a>. If you do change the suffix, make sure to adjust the <code class="docutils literal notranslate"><span class="pre">glob()</span></code> argument in your <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> file。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7630">[待校准&#64;7630]</a></p>
-<p>你的launch文件应该定义 <code class="docutils literal notranslate"><span class="pre">generate_launch_description()</span></code> ，它返回 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">launch</span></code> 动词使用的 <code class="docutils literal notranslate"><span class="pre">launch.LaunchDescription()</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7631">[待校准&#64;7631]</a></p>
+<h3>写launch文件 <a class="reference external" href="http://localhost:3000/#/home?msgid=7628">[待校准&#64;7628]</a><a class="headerlink" href="#writing-the-launch-file" title="永久链接至标题"></a></h3>
+<p>在你的launch目录内，用 <code class="docutils literal notranslate"><span class="pre">.launch.py</span></code> 后缀创建一个新的launch文件。例如 <code class="docutils literal notranslate"><span class="pre">my_script.launch.py</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7629">[待校准&#64;7629]</a></p>
+<p>因此``.launch.py`` is not specifically required as the file suffix for launch files. Another popular option is <code class="docutils literal notranslate"><span class="pre">_launch.py</span></code>, used in the <a class="reference internal" href="Creating-Launch-Files.html"><span class="doc">beginner level launch files tutorial</span></a>. If you do change the suffix, make sure to adjust the <code class="docutils literal notranslate"><span class="pre">glob()</span></code> argument in your <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> file。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7630">[待校准&#64;7630]</a></p>
+<p>你的launch文件应该定义 <code class="docutils literal notranslate"><span class="pre">generate_launch_description()</span></code> ，它返回 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">launch</span></code> 动词使用的 <code class="docutils literal notranslate"><span class="pre">launch.LaunchDescription()</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7631">[待校准&#64;7631]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">launch</span>
 <span class="kn">import</span> <span class="nn">launch.actions</span>
 <span class="kn">import</span> <span class="nn">launch.substitutions</span>
@@ -357,23 +357,23 @@
 </div>
 </div>
 <div class="section" id="usage">
-<h3>使用 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7632">[待校准&#64;7632]</a><a class="headerlink" href="#usage" title="永久链接至标题"></a></h3>
-<p>虽然launch文件可以作为独立脚本编写，但ROS中的典型用法是由ROS 2工具调用launch文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7633">[待校准&#64;7633]</a></p>
-<p>后运行 <code class="docutils literal notranslate"><span class="pre">colcon</span> <span class="pre">build</span></code> 和采购工作区，你应该能够launch的launch文件如下: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7634">[待校准&#64;7634]</a></p>
+<h3>使用 <a class="reference external" href="http://localhost:3000/#/home?msgid=7632">[待校准&#64;7632]</a><a class="headerlink" href="#usage" title="永久链接至标题"></a></h3>
+<p>虽然launch文件可以作为独立脚本编写，但ROS中的典型用法是由ROS 2工具调用launch文件。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7633">[待校准&#64;7633]</a></p>
+<p>后运行 <code class="docutils literal notranslate"><span class="pre">colcon</span> <span class="pre">build</span></code> 和采购工作区，你应该能够launch的launch文件如下: <a class="reference external" href="http://localhost:3000/#/home?msgid=7634">[待校准&#64;7634]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 launch my_package script.launch.py
 </pre></div>
 </div>
 </div>
 </div>
 <div class="section" id="example-of-ros-2-launch-concepts">
-<h2>ROS 2launch概念示例 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7635">[待校准&#64;7635]</a><a class="headerlink" href="#example-of-ros-2-launch-concepts" title="永久链接至标题"></a></h2>
-<p>的launch文件 <a class="reference external" href="https://github.com/ros2/launch_ros/blob/foxy/launch_ros/examples/lifecycle_pub_sub_launch.py">this example</a> launches两个节点，节点 <a class="reference internal" href="../Managed-Nodes.html"><span class="doc">managed lifecycle</span></a>  (a  &quot;lifecycle node&quot; )。生命周期节点launch通过 <code class="docutils literal notranslate"><span class="pre">launch_ros</span></code> 自动调用y在状态之间转换时发出 * 事件 <a href="#id1"><span class="problematic" id="id2">*</span></a>。然后，这些事件可以通过launch帧的工作来执行。例如，通过发出其他事件 (例如请求另一个状态转换，生命周期节点launch通过 <code class="docutils literal notranslate"><span class="pre">launch_ros</span></code> 自动调用y具有事件处理程序) 或触发其他 * 动作 * (例如g.启动另一个节点)。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7636">[待校准&#64;7636]</a></p>
-<p>在上述示例中，向 <code class="docutils literal notranslate"><span class="pre">talker</span></code> 生命周期节点请求各种转换请求，并且其转换事件响应于，例如，launch成为 <code class="docutils literal notranslate"><span class="pre">listener</span></code> 节点生命周期健谈达到适当状态。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7637">[待校准&#64;7637]</a></p>
+<h2>ROS 2launch概念示例 <a class="reference external" href="http://localhost:3000/#/home?msgid=7635">[待校准&#64;7635]</a><a class="headerlink" href="#example-of-ros-2-launch-concepts" title="永久链接至标题"></a></h2>
+<p>的launch文件 <a class="reference external" href="https://github.com/ros2/launch_ros/blob/foxy/launch_ros/examples/lifecycle_pub_sub_launch.py">this example</a> launches两个节点，节点 <a class="reference internal" href="../Managed-Nodes.html"><span class="doc">managed lifecycle</span></a>  (a  &quot;lifecycle node&quot; )。生命周期节点launch通过 <code class="docutils literal notranslate"><span class="pre">launch_ros</span></code> 自动调用y在状态之间转换时发出 * 事件 <a href="#id1"><span class="problematic" id="id2">*</span></a>。然后，这些事件可以通过launch帧的工作来执行。例如，通过发出其他事件 (例如请求另一个状态转换，生命周期节点launch通过 <code class="docutils literal notranslate"><span class="pre">launch_ros</span></code> 自动调用y具有事件处理程序) 或触发其他 * 动作 * (例如g.启动另一个节点)。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7636">[待校准&#64;7636]</a></p>
+<p>在上述示例中，向 <code class="docutils literal notranslate"><span class="pre">talker</span></code> 生命周期节点请求各种转换请求，并且其转换事件响应于，例如，launch成为 <code class="docutils literal notranslate"><span class="pre">listener</span></code> 节点生命周期健谈达到适当状态。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7637">[待校准&#64;7637]</a></p>
 </div>
 <div class="section" id="documentation">
-<h2>文档 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7638">[待校准&#64;7638]</a><a class="headerlink" href="#documentation" title="永久链接至标题"></a></h2>
-<p>[需手动修复的语法] <a class="reference external" href="https://github.com/ros2/launch/blob/foxy/launch/doc/source/architecture.rst">The launch documentation</a> 提供了更多关于同样用于 <code class="docutils literal notranslate"><span class="pre">launch_ros</span></code> 的概念的细节。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7639">[待校准&#64;7639]</a></p>
-<p>其他文件/功能示例即将发布。同时见 <a class="reference external" href="https://github.com/ros2/launch">the source code</a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7640">[待校准&#64;7640]</a></p>
+<h2>文档 <a class="reference external" href="http://localhost:3000/#/home?msgid=7638">[待校准&#64;7638]</a><a class="headerlink" href="#documentation" title="永久链接至标题"></a></h2>
+<p>[需手动修复的语法] <a class="reference external" href="https://github.com/ros2/launch/blob/foxy/launch/doc/source/architecture.rst">The launch documentation</a> 提供了更多关于同样用于 <code class="docutils literal notranslate"><span class="pre">launch_ros</span></code> 的概念的细节。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7639">[待校准&#64;7639]</a></p>
+<p>其他文件/功能示例即将发布。同时见 <a class="reference external" href="https://github.com/ros2/launch">the source code</a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7640">[待校准&#64;7640]</a></p>
 </div>
 </div>
 

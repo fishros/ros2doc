@@ -248,7 +248,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../Related-Projects/Nvidia-ROS2-Projects.html">[需手动修复的语法]NVIDIAROS 2项目 [待校准&#64;6668]</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../Glossary.html">相关术语 `[小鱼&#64;1] http://dev.ros2.fishros.com/calibpage/#/home?msgid=1&gt;`_</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Glossary.html">术语表</a></li>
 </ul>
 
         </div>
@@ -280,12 +280,12 @@
 
 
   <div class="section" id="using-urdf-with-robot-state-publisher">
-<span id="urdfplusrsp"></span><h1>将URDF与robot_state_发布者结合使用 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9049">[待校准&#64;9049]</a><a class="headerlink" href="#using-urdf-with-robot-state-publisher" title="永久链接至标题"></a></h1>
-<p>Goal目标: Simulate模拟一个在URDF中建模的步行机器人，并在Rviz中查看它。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9050">[待校准&#64;9050]</a></p>
-<p>Tutorial教程级别: Intermediate中级 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6713">[待校准&#64;6713]</a></p>
-<p>Time时间: 15 15分钟 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6755">[待校准&#64;6755]</a></p>
+<span id="urdfplusrsp"></span><h1>将URDF与robot_state_发布者结合使用 <a class="reference external" href="http://localhost:3000/#/home?msgid=9049">[待校准&#64;9049]</a><a class="headerlink" href="#using-urdf-with-robot-state-publisher" title="永久链接至标题"></a></h1>
+<p>Goal目标: Simulate模拟一个在URDF中建模的步行机器人，并在Rviz中查看它。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9050">[待校准&#64;9050]</a></p>
+<p>Tutorial教程级别: Intermediate中级 <a class="reference external" href="http://localhost:3000/#/home?msgid=6713">[待校准&#64;6713]</a></p>
+<p>Time时间: 15 15分钟 <a class="reference external" href="http://localhost:3000/#/home?msgid=6755">[待校准&#64;6755]</a></p>
 <div class="contents local topic" id="contents">
-<p class="topic-title">内容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6715">[待校准&#64;6715]</a></p>
+<p class="topic-title">内容 <a class="reference external" href="http://localhost:3000/#/home?msgid=6715">[待校准&#64;6715]</a></p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#background" id="id1">背景 [待校准&#64;6716]</a></p></li>
 <li><p><a class="reference internal" href="#prerequisites" id="id2">先决条件 [待校准&#64;6718]</a></p></li>
@@ -304,41 +304,41 @@
 </ul>
 </div>
 <div class="section" id="background">
-<h2>背景 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6716">[待校准&#64;6716]</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
-<p>本教程将向您展示如何为步行机器人建模，将状态发布为 <a class="reference external" href="https://wiki.ros.org/tf2">tf2</a> 信息，并在Rviz中查看仿真。首先，我们创建描述机器人装配的URDF模型。接下来，我们编写一个模拟运动并发布连接状态和转换的节点。然后，我们使用 <code class="docutils literal notranslate"><span class="pre">robot_state_publisher</span></code> 将整个机器人状态发布给 <code class="docutils literal notranslate"><span class="pre">/tf2</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9051">[待校准&#64;9051]</a></p>
+<h2>背景 <a class="reference external" href="http://localhost:3000/#/home?msgid=6716">[待校准&#64;6716]</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
+<p>本教程将向您展示如何为步行机器人建模，将状态发布为 <a class="reference external" href="https://wiki.ros.org/tf2">tf2</a> 信息，并在Rviz中查看仿真。首先，我们创建描述机器人装配的URDF模型。接下来，我们编写一个模拟运动并发布连接状态和转换的节点。然后，我们使用 <code class="docutils literal notranslate"><span class="pre">robot_state_publisher</span></code> 将整个机器人状态发布给 <code class="docutils literal notranslate"><span class="pre">/tf2</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9051">[待校准&#64;9051]</a></p>
 <img alt="../../_images/r2d2_rviz_demo.gif" src="../../_images/r2d2_rviz_demo.gif" />
 </div>
 <div class="section" id="prerequisites">
-<h2>先决条件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6718">[待校准&#64;6718]</a><a class="headerlink" href="#prerequisites" title="永久链接至标题"></a></h2>
+<h2>先决条件 <a class="reference external" href="http://localhost:3000/#/home?msgid=6718">[待校准&#64;6718]</a><a class="headerlink" href="#prerequisites" title="永久链接至标题"></a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://index.ros.org/r/rviz/">rviz2</a></p></li>
 </ul>
-<p>和往常一样，不要忘记在 <a class="reference internal" href="../Configuring-ROS2-Environment.html"><span class="doc">every new terminal you open</span></a> 中源文件ROS 2。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7566">[待校准&#64;7566]</a></p>
+<p>和往常一样，不要忘记在 <a class="reference internal" href="../Configuring-ROS2-Environment.html"><span class="doc">every new terminal you open</span></a> 中源文件ROS 2。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7566">[待校准&#64;7566]</a></p>
 </div>
 <div class="section" id="tasks">
-<h2>任务 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6725">[待校准&#64;6725]</a><a class="headerlink" href="#tasks" title="永久链接至标题"></a></h2>
+<h2>任务 <a class="reference external" href="http://localhost:3000/#/home?msgid=6725">[待校准&#64;6725]</a><a class="headerlink" href="#tasks" title="永久链接至标题"></a></h2>
 <div class="section" id="create-a-package">
-<h3>1创建包 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7137">[待校准&#64;7137]</a><a class="headerlink" href="#create-a-package" title="永久链接至标题"></a></h3>
+<h3>1创建包 <a class="reference external" href="http://localhost:3000/#/home?msgid=7137">[待校准&#64;7137]</a><a class="headerlink" href="#create-a-package" title="永久链接至标题"></a></h3>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">mkdir -p ~/dev_ws/src  # change as needed</span>
 <span class="go">cd ~/dev_ws/src</span>
 <span class="go">ros2 pkg create urdf_tutorial_r2d2 --build-type ament_python --dependencies rclpy</span>
 <span class="go">cd urdf_tutorial_r2d2</span>
 </pre></div>
 </div>
-<p>你现在应该看到一个 <code class="docutils literal notranslate"><span class="pre">urdf_tutorial_r2d2</span></code> 文件夹。接下来，您将对其进行一些更改。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9053">[待校准&#64;9053]</a></p>
+<p>你现在应该看到一个 <code class="docutils literal notranslate"><span class="pre">urdf_tutorial_r2d2</span></code> 文件夹。接下来，您将对其进行一些更改。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9053">[待校准&#64;9053]</a></p>
 </div>
 <div class="section" id="create-the-urdf-file">
-<h3>2创建URDF文件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9054">[待校准&#64;9054]</a><a class="headerlink" href="#create-the-urdf-file" title="永久链接至标题"></a></h3>
-<p>创建我们将在其中存储一些资产的目录: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9055">[待校准&#64;9055]</a></p>
+<h3>2创建URDF文件 <a class="reference external" href="http://localhost:3000/#/home?msgid=9054">[待校准&#64;9054]</a><a class="headerlink" href="#create-the-urdf-file" title="永久链接至标题"></a></h3>
+<p>创建我们将在其中存储一些资产的目录: <a class="reference external" href="http://localhost:3000/#/home?msgid=9055">[待校准&#64;9055]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">mkdir -p urdf</span>
 </pre></div>
 </div>
-<p>下载:  <code class="xref any docutils literal notranslate"><span class="pre">URDF</span> <span class="pre">file</span></code> and save it as <code class="docutils literal notranslate"><span class="pre">~/dev_ws/src/urdf_tutorial_r2d2/urdf/r2d2.urdf.xml</span></code>. Download the <a class="reference download internal" download="" href="../../_downloads/da6b43a9c9a62bac7183458dc5a8a1ef/r2d2.rviz"><code class="xref download docutils literal notranslate"><span class="pre">Rviz</span> <span class="pre">configuration</span> <span class="pre">file</span></code></a>  ，并将其另存为 “~/dev_ws/src/urdf_tutorial_r2d2/urdf/r2d2.Rviz”。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9056">[待校准&#64;9056]</a></p>
+<p>下载:  <code class="xref any docutils literal notranslate"><span class="pre">URDF</span> <span class="pre">file</span></code> and save it as <code class="docutils literal notranslate"><span class="pre">~/dev_ws/src/urdf_tutorial_r2d2/urdf/r2d2.urdf.xml</span></code>. Download the <a class="reference download internal" download="" href="../../_downloads/da6b43a9c9a62bac7183458dc5a8a1ef/r2d2.rviz"><code class="xref download docutils literal notranslate"><span class="pre">Rviz</span> <span class="pre">configuration</span> <span class="pre">file</span></code></a>  ，并将其另存为 “~/dev_ws/src/urdf_tutorial_r2d2/urdf/r2d2.Rviz”。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9056">[待校准&#64;9056]</a></p>
 </div>
 <div class="section" id="publish-the-state">
-<h3>3发布状态 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9057">[待校准&#64;9057]</a><a class="headerlink" href="#publish-the-state" title="永久链接至标题"></a></h3>
-<p>现在我们需要一种方法来指定机器人处于什么状态。为此，我们必须指定所有三个关节和整体里程计。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9058">[待校准&#64;9058]</a></p>
-<p>启动您最喜欢的编辑器，并将以下代码粘贴到 <code class="docutils literal notranslate"><span class="pre">urdf_tutorial_r2d2/state_publisher.py</span></code> 中 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9059">[待校准&#64;9059]</a></p>
+<h3>3发布状态 <a class="reference external" href="http://localhost:3000/#/home?msgid=9057">[待校准&#64;9057]</a><a class="headerlink" href="#publish-the-state" title="永久链接至标题"></a></h3>
+<p>现在我们需要一种方法来指定机器人处于什么状态。为此，我们必须指定所有三个关节和整体里程计。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9058">[待校准&#64;9058]</a></p>
+<p>启动您最喜欢的编辑器，并将以下代码粘贴到 <code class="docutils literal notranslate"><span class="pre">urdf_tutorial_r2d2/state_publisher.py</span></code> 中 <a class="reference external" href="http://localhost:3000/#/home?msgid=9059">[待校准&#64;9059]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sin</span><span class="p">,</span> <span class="n">cos</span><span class="p">,</span> <span class="n">pi</span>
 <span class="kn">import</span> <span class="nn">rclpy</span>
 <span class="kn">from</span> <span class="nn">rclpy.node</span> <span class="kn">import</span> <span class="n">Node</span>
@@ -431,8 +431,8 @@
 </div>
 </div>
 <div class="section" id="create-a-launch-file">
-<h3>4创建一个launch文件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9060">[待校准&#64;9060]</a><a class="headerlink" href="#create-a-launch-file" title="永久链接至标题"></a></h3>
-<p>创建一个新的 <code class="docutils literal notranslate"><span class="pre">launch</span></code> 文件夹。打开编辑器并粘贴以下代码，将其保存为 <code class="docutils literal notranslate"><span class="pre">launch/demo.launch.py</span></code>  <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9061">[待校准&#64;9061]</a></p>
+<h3>4创建一个launch文件 <a class="reference external" href="http://localhost:3000/#/home?msgid=9060">[待校准&#64;9060]</a><a class="headerlink" href="#create-a-launch-file" title="永久链接至标题"></a></h3>
+<p>创建一个新的 <code class="docutils literal notranslate"><span class="pre">launch</span></code> 文件夹。打开编辑器并粘贴以下代码，将其保存为 <code class="docutils literal notranslate"><span class="pre">launch/demo.launch.py</span></code>  <a class="reference external" href="http://localhost:3000/#/home?msgid=9061">[待校准&#64;9061]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">from</span> <span class="nn">ament_index_python.packages</span> <span class="kn">import</span> <span class="n">get_package_share_directory</span>
 <span class="kn">from</span> <span class="nn">launch</span> <span class="kn">import</span> <span class="n">LaunchDescription</span>
@@ -473,10 +473,10 @@
 </div>
 </div>
 <div class="section" id="edit-the-setup-py-file">
-<h3>5编辑setup.py文件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9062">[待校准&#64;9062]</a><a class="headerlink" href="#edit-the-setup-py-file" title="永久链接至标题"></a></h3>
-<p>您必须告诉colcon构建工具如何安装Python包。按如下方式编辑 <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> 文件: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9063">[待校准&#64;9063]</a></p>
+<h3>5编辑setup.py文件 <a class="reference external" href="http://localhost:3000/#/home?msgid=9062">[待校准&#64;9062]</a><a class="headerlink" href="#edit-the-setup-py-file" title="永久链接至标题"></a></h3>
+<p>您必须告诉colcon构建工具如何安装Python包。按如下方式编辑 <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> 文件: <a class="reference external" href="http://localhost:3000/#/home?msgid=9063">[待校准&#64;9063]</a></p>
 <ul class="simple">
-<li><p>包括这些导入语句 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9064">[待校准&#64;9064]</a></p></li>
+<li><p>包括这些导入语句 <a class="reference external" href="http://localhost:3000/#/home?msgid=9064">[待校准&#64;9064]</a></p></li>
 </ul>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">from</span> <span class="nn">glob</span> <span class="kn">import</span> <span class="n">glob</span>
@@ -485,7 +485,7 @@
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>将这两条线添加到 <code class="docutils literal notranslate"><span class="pre">data_files</span></code> 中 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9065">[待校准&#64;9065]</a></p></li>
+<li><p>将这两条线添加到 <code class="docutils literal notranslate"><span class="pre">data_files</span></code> 中 <a class="reference external" href="http://localhost:3000/#/home?msgid=9065">[待校准&#64;9065]</a></p></li>
 </ul>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data_files</span><span class="o">=</span><span class="p">[</span>
   <span class="o">...</span>
@@ -495,17 +495,17 @@
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>修改 <code class="docutils literal notranslate"><span class="pre">entry_points</span></code> 表，以便以后可以从控制台运行'state_publisher' <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9066">[待校准&#64;9066]</a></p></li>
+<li><p>修改 <code class="docutils literal notranslate"><span class="pre">entry_points</span></code> 表，以便以后可以从控制台运行'state_publisher' <a class="reference external" href="http://localhost:3000/#/home?msgid=9066">[待校准&#64;9066]</a></p></li>
 </ul>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;console_scripts&#39;</span><span class="p">:</span> <span class="p">[</span>
     <span class="s1">&#39;state_publisher = urdf_tutorial_r2d2.state_publisher:main&#39;</span>
 <span class="p">],</span>
 </pre></div>
 </div>
-<p>用您的更改保存 <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> 文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9067">[待校准&#64;9067]</a></p>
+<p>用您的更改保存 <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> 文件。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9067">[待校准&#64;9067]</a></p>
 </div>
 <div class="section" id="install-the-package">
-<h3>6安装软件包 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9068">[待校准&#64;9068]</a><a class="headerlink" href="#install-the-package" title="永久链接至标题"></a></h3>
+<h3>6安装软件包 <a class="reference external" href="http://localhost:3000/#/home?msgid=9068">[待校准&#64;9068]</a><a class="headerlink" href="#install-the-package" title="永久链接至标题"></a></h3>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd ~/dev_ws</span>
 <span class="go">colcon build --symlink-install --packages-select urdf_tutorial_r2d2</span>
 <span class="go">source install/setup.bash</span>
@@ -513,22 +513,22 @@
 </div>
 </div>
 <div class="section" id="view-the-results">
-<h3>7查看结果 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9069">[待校准&#64;9069]</a><a class="headerlink" href="#view-the-results" title="永久链接至标题"></a></h3>
-<p>Launch包装 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9070">[待校准&#64;9070]</a></p>
+<h3>7查看结果 <a class="reference external" href="http://localhost:3000/#/home?msgid=9069">[待校准&#64;9069]</a><a class="headerlink" href="#view-the-results" title="永久链接至标题"></a></h3>
+<p>Launch包装 <a class="reference external" href="http://localhost:3000/#/home?msgid=9070">[待校准&#64;9070]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 launch urdf_tutorial_r2d2 demo.launch.py</span>
 </pre></div>
 </div>
-<p>打开一个新的终端，运行Rviz使用 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9071">[待校准&#64;9071]</a></p>
+<p>打开一个新的终端，运行Rviz使用 <a class="reference external" href="http://localhost:3000/#/home?msgid=9071">[待校准&#64;9071]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">rviz2 -d ~/dev_ws/install/urdf_tutorial_r2d2/share/urdf_tutorial_r2d2/r2d2.rviz</span>
 </pre></div>
 </div>
-<p>有关如何使用Rviz的详细信息，请参阅 <a class="reference external" href="http://wiki.ros.org/rviz/UserGuide">User Guide</a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9072">[待校准&#64;9072]</a></p>
+<p>有关如何使用Rviz的详细信息，请参阅 <a class="reference external" href="http://wiki.ros.org/rviz/UserGuide">User Guide</a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9072">[待校准&#64;9072]</a></p>
 </div>
 </div>
 <div class="section" id="summary">
-<h2>总结 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6747">[待校准&#64;6747]</a><a class="headerlink" href="#summary" title="永久链接至标题"></a></h2>
-<p>您创建了一个JointState发布者节点，并将其与 <code class="docutils literal notranslate"><span class="pre">robot_state_publisher</span></code> 耦合以模拟步行机器人。在这些例子中使用的代码可以找到 <a class="reference external" href="https://github.com/benbongalon/ros2-migration/tree/master/urdf_tutorial">here</a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9073">[待校准&#64;9073]</a></p>
-<p>这份 <a class="reference external" href="http://wiki.ros.org/urdf/Tutorials/Using%20urdf%20with%20robot_state_publisher">ROS 1 tutorial</a> 的作者受到了赞扬，其中一些内容被重复使用。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9074">[待校准&#64;9074]</a></p>
+<h2>总结 <a class="reference external" href="http://localhost:3000/#/home?msgid=6747">[待校准&#64;6747]</a><a class="headerlink" href="#summary" title="永久链接至标题"></a></h2>
+<p>您创建了一个JointState发布者节点，并将其与 <code class="docutils literal notranslate"><span class="pre">robot_state_publisher</span></code> 耦合以模拟步行机器人。在这些例子中使用的代码可以找到 <a class="reference external" href="https://github.com/benbongalon/ros2-migration/tree/master/urdf_tutorial">here</a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9073">[待校准&#64;9073]</a></p>
+<p>这份 <a class="reference external" href="http://wiki.ros.org/urdf/Tutorials/Using%20urdf%20with%20robot_state_publisher">ROS 1 tutorial</a> 的作者受到了赞扬，其中一些内容被重复使用。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9074">[待校准&#64;9074]</a></p>
 </div>
 </div>
 

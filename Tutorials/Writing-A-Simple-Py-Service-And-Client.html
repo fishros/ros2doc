@@ -249,7 +249,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Related-Projects/Nvidia-ROS2-Projects.html">[需手动修复的语法]NVIDIAROS 2项目 [待校准&#64;6668]</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../Glossary.html">相关术语 `[小鱼&#64;1] http://dev.ros2.fishros.com/calibpage/#/home?msgid=1&gt;`_</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Glossary.html">术语表</a></li>
 </ul>
 
         </div>
@@ -280,12 +280,12 @@
 
 
   <div class="section" id="writing-a-simple-service-and-client-python">
-<span id="pysrvcli"></span><h1>编写简单的服务和客户端 (Python) <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9468">[待校准&#64;9468]</a><a class="headerlink" href="#writing-a-simple-service-and-client-python" title="永久链接至标题"></a></h1>
-<p>Goal目标: using使用Python创建和运行服务和客户端节点。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9469">[待校准&#64;9469]</a></p>
-<p>Tutorial教程级别: Beginner初学者 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7088">[待校准&#64;7088]</a></p>
-<p>Time时间: 20 20分钟 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7181">[待校准&#64;7181]</a></p>
+<span id="pysrvcli"></span><h1>编写简单的服务和客户端 (Python) <a class="reference external" href="http://localhost:3000/#/home?msgid=9468">[待校准&#64;9468]</a><a class="headerlink" href="#writing-a-simple-service-and-client-python" title="永久链接至标题"></a></h1>
+<p>Goal目标: using使用Python创建和运行服务和客户端节点。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9469">[待校准&#64;9469]</a></p>
+<p>Tutorial教程级别: Beginner初学者 <a class="reference external" href="http://localhost:3000/#/home?msgid=7088">[待校准&#64;7088]</a></p>
+<p>Time时间: 20 20分钟 <a class="reference external" href="http://localhost:3000/#/home?msgid=7181">[待校准&#64;7181]</a></p>
 <div class="contents local topic" id="contents">
-<p class="topic-title">内容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6715">[待校准&#64;6715]</a></p>
+<p class="topic-title">内容 <a class="reference external" href="http://localhost:3000/#/home?msgid=6715">[待校准&#64;6715]</a></p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#background" id="id3">背景 [待校准&#64;6716]</a></p></li>
 <li><p><a class="reference internal" href="#prerequisites" id="id4">先决条件 [待校准&#64;6718]</a></p></li>
@@ -303,37 +303,37 @@
 </ul>
 </div>
 <div class="section" id="background">
-<h2>背景 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6716">[待校准&#64;6716]</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
-<p>当 <a class="reference internal" href="Understanding-ROS2-Nodes.html"><span class="doc">nodes</span></a> 使用 <a class="reference internal" href="Services/Understanding-ROS2-Services.html"><span class="doc">services</span></a> 进行通信时，发送数据请求的节点被调用到客户端节点，响应请求的节点是服务节点。请求和响应的结构由 <code class="docutils literal notranslate"><span class="pre">.srv</span></code> 文件决定。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9395">[待校准&#64;9395]</a></p>
-<p>这里使用的示例是一个简单的整数加法系统; 一个节点请求两个整数的总和，另一个节点响应结果。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9396">[待校准&#64;9396]</a></p>
+<h2>背景 <a class="reference external" href="http://localhost:3000/#/home?msgid=6716">[待校准&#64;6716]</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
+<p>当 <a class="reference internal" href="Understanding-ROS2-Nodes.html"><span class="doc">nodes</span></a> 使用 <a class="reference internal" href="Services/Understanding-ROS2-Services.html"><span class="doc">services</span></a> 进行通信时，发送数据请求的节点被调用到客户端节点，响应请求的节点是服务节点。请求和响应的结构由 <code class="docutils literal notranslate"><span class="pre">.srv</span></code> 文件决定。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9395">[待校准&#64;9395]</a></p>
+<p>这里使用的示例是一个简单的整数加法系统; 一个节点请求两个整数的总和，另一个节点响应结果。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9396">[待校准&#64;9396]</a></p>
 </div>
 <div class="section" id="prerequisites">
-<h2>先决条件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6718">[待校准&#64;6718]</a><a class="headerlink" href="#prerequisites" title="永久链接至标题"></a></h2>
-<p>在之前的教程中，你学习了如何 <a class="reference internal" href="Workspace/Creating-A-Workspace.html"><span class="doc">create a workspace</span></a> and <a class="reference internal" href="Creating-Your-First-ROS2-Package.html"><span class="doc">create a package</span></a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9349">[待校准&#64;9349]</a></p>
+<h2>先决条件 <a class="reference external" href="http://localhost:3000/#/home?msgid=6718">[待校准&#64;6718]</a><a class="headerlink" href="#prerequisites" title="永久链接至标题"></a></h2>
+<p>在之前的教程中，你学习了如何 <a class="reference internal" href="Workspace/Creating-A-Workspace.html"><span class="doc">create a workspace</span></a> and <a class="reference internal" href="Creating-Your-First-ROS2-Package.html"><span class="doc">create a package</span></a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9349">[待校准&#64;9349]</a></p>
 </div>
 <div class="section" id="tasks">
-<h2>任务 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6725">[待校准&#64;6725]</a><a class="headerlink" href="#tasks" title="永久链接至标题"></a></h2>
+<h2>任务 <a class="reference external" href="http://localhost:3000/#/home?msgid=6725">[待校准&#64;6725]</a><a class="headerlink" href="#tasks" title="永久链接至标题"></a></h2>
 <div class="section" id="create-a-package">
-<h3>1创建包 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7137">[待校准&#64;7137]</a><a class="headerlink" href="#create-a-package" title="永久链接至标题"></a></h3>
-<p>打开一个新的终端和 <a class="reference internal" href="Configuring-ROS2-Environment.html"><span class="doc">source your ROS 2 installation</span></a> ，这样 <code class="docutils literal notranslate"><span class="pre">ros2</span></code> 命令就可以工作了。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9214">[待校准&#64;9214]</a></p>
-<p>导航到 <code class="docutils literal notranslate"><span class="pre">dev_ws</span></code> 目录创建 <a class="reference internal" href="Workspace/Creating-A-Workspace.html#new-directory"><span class="std std-ref">previous tutorial</span></a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9215">[待校准&#64;9215]</a></p>
-<p>重新调用应该在 <code class="docutils literal notranslate"><span class="pre">src</span></code> 目录中创建的包，而不是工作区的根目录。导航到 <code class="docutils literal notranslate"><span class="pre">dev_ws/src</span></code> 并创建一个新的包: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9216">[待校准&#64;9216]</a></p>
+<h3>1创建包 <a class="reference external" href="http://localhost:3000/#/home?msgid=7137">[待校准&#64;7137]</a><a class="headerlink" href="#create-a-package" title="永久链接至标题"></a></h3>
+<p>打开一个新的终端和 <a class="reference internal" href="Configuring-ROS2-Environment.html"><span class="doc">source your ROS 2 installation</span></a> ，这样 <code class="docutils literal notranslate"><span class="pre">ros2</span></code> 命令就可以工作了。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9214">[待校准&#64;9214]</a></p>
+<p>导航到 <code class="docutils literal notranslate"><span class="pre">dev_ws</span></code> 目录创建 <a class="reference internal" href="Workspace/Creating-A-Workspace.html#new-directory"><span class="std std-ref">previous tutorial</span></a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9215">[待校准&#64;9215]</a></p>
+<p>重新调用应该在 <code class="docutils literal notranslate"><span class="pre">src</span></code> 目录中创建的包，而不是工作区的根目录。导航到 <code class="docutils literal notranslate"><span class="pre">dev_ws/src</span></code> 并创建一个新的包: <a class="reference external" href="http://localhost:3000/#/home?msgid=9216">[待校准&#64;9216]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 pkg create --build-type ament_python py_srvcli --dependencies rclpy example_interfaces</span>
 </pre></div>
 </div>
-<p>您的终端将返回一条消息，验证您的包 <code class="docutils literal notranslate"><span class="pre">py_srvcli</span></code> 及其所有必要的文件和文件夹的创建。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9470">[待校准&#64;9470]</a></p>
-<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">--dependencies</span></code> 参数将自动调用y将必要的依赖关系添加到 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 。 <code class="docutils literal notranslate"><span class="pre">example_interfaces</span></code> 是包含 <a class="reference external" href="https://github.com/ros2/example_interfaces/blob/foxy/srv/AddTwoInts.srv">the .srv file</a> 的套餐，您需要构建您的请求和回复: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9471">[待校准&#64;9471]</a></p>
+<p>您的终端将返回一条消息，验证您的包 <code class="docutils literal notranslate"><span class="pre">py_srvcli</span></code> 及其所有必要的文件和文件夹的创建。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9470">[待校准&#64;9470]</a></p>
+<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">--dependencies</span></code> 参数将自动调用y将必要的依赖关系添加到 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 。 <code class="docutils literal notranslate"><span class="pre">example_interfaces</span></code> 是包含 <a class="reference external" href="https://github.com/ros2/example_interfaces/blob/foxy/srv/AddTwoInts.srv">the .srv file</a> 的套餐，您需要构建您的请求和回复: <a class="reference external" href="http://localhost:3000/#/home?msgid=9471">[待校准&#64;9471]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">int64 a</span>
 <span class="go">int64 b</span>
 <span class="go">---</span>
 <span class="go">int64 sum</span>
 </pre></div>
 </div>
-<p>前两行是请求的参数，破折号下面是响应。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9399">[待校准&#64;9399]</a></p>
+<p>前两行是请求的参数，破折号下面是响应。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9399">[待校准&#64;9399]</a></p>
 <div class="section" id="update-package-xml">
-<h4>1.1更新 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code>  <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8003">[待校准&#64;8003]</a><a class="headerlink" href="#update-package-xml" title="永久链接至标题"></a></h4>
-<p>因为您在包创建过程中使用了 <code class="docutils literal notranslate"><span class="pre">--dependencies</span></code> 选项，所以您不必手动向 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 添加依赖项。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9472">[待校准&#64;9472]</a></p>
-<p>但是，与往常一样，请确保将描述、维护人员电子邮件和姓名以及许可信息添加到 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9220">[待校准&#64;9220]</a></p>
+<h4>1.1更新 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code>  <a class="reference external" href="http://localhost:3000/#/home?msgid=8003">[待校准&#64;8003]</a><a class="headerlink" href="#update-package-xml" title="永久链接至标题"></a></h4>
+<p>因为您在包创建过程中使用了 <code class="docutils literal notranslate"><span class="pre">--dependencies</span></code> 选项，所以您不必手动向 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 添加依赖项。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9472">[待校准&#64;9472]</a></p>
+<p>但是，与往常一样，请确保将描述、维护人员电子邮件和姓名以及许可信息添加到 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9220">[待校准&#64;9220]</a></p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;description&gt;</span>Python client server tutorial<span class="nt">&lt;/description&gt;</span>
 <span class="nt">&lt;maintainer</span> <span class="na">email=</span><span class="s">&quot;you@email.com&quot;</span><span class="nt">&gt;</span>Your Name<span class="nt">&lt;/maintainer&gt;</span>
 <span class="nt">&lt;license&gt;</span>Apache License 2.0<span class="nt">&lt;/license&gt;</span>
@@ -341,8 +341,8 @@
 </div>
 </div>
 <div class="section" id="update-setup-py">
-<h4>1.2更新 <code class="docutils literal notranslate"><span class="pre">setup.py</span></code>  <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9473">[待校准&#64;9473]</a><a class="headerlink" href="#update-setup-py" title="永久链接至标题"></a></h4>
-<p>添加相同信息 <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> 文件 <code class="docutils literal notranslate"><span class="pre">maintainer</span></code> ， <code class="docutils literal notranslate"><span class="pre">maintainer_email</span></code> ， <code class="docutils literal notranslate"><span class="pre">description</span></code> 和 <code class="docutils literal notranslate"><span class="pre">license</span></code> 字段: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9474">[待校准&#64;9474]</a></p>
+<h4>1.2更新 <code class="docutils literal notranslate"><span class="pre">setup.py</span></code>  <a class="reference external" href="http://localhost:3000/#/home?msgid=9473">[待校准&#64;9473]</a><a class="headerlink" href="#update-setup-py" title="永久链接至标题"></a></h4>
+<p>添加相同信息 <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> 文件 <code class="docutils literal notranslate"><span class="pre">maintainer</span></code> ， <code class="docutils literal notranslate"><span class="pre">maintainer_email</span></code> ， <code class="docutils literal notranslate"><span class="pre">description</span></code> 和 <code class="docutils literal notranslate"><span class="pre">license</span></code> 字段: <a class="reference external" href="http://localhost:3000/#/home?msgid=9474">[待校准&#64;9474]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">maintainer</span><span class="o">=</span><span class="s1">&#39;Your Name&#39;</span><span class="p">,</span>
 <span class="n">maintainer_email</span><span class="o">=</span><span class="s1">&#39;you@email.com&#39;</span><span class="p">,</span>
 <span class="n">description</span><span class="o">=</span><span class="s1">&#39;Python client server tutorial&#39;</span><span class="p">,</span>
@@ -352,8 +352,8 @@
 </div>
 </div>
 <div class="section" id="write-the-service-node">
-<h3>2写入服务节点 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9400">[待校准&#64;9400]</a><a class="headerlink" href="#write-the-service-node" title="永久链接至标题"></a></h3>
-<p>在 <code class="docutils literal notranslate"><span class="pre">dev_ws/src/py_srvcli/py_srvcli</span></code> 目录内，创建一个调用 <code class="docutils literal notranslate"><span class="pre">service_member_function.py</span></code> 的新文件，并将以下代码粘贴到: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9475">[待校准&#64;9475]</a></p>
+<h3>2写入服务节点 <a class="reference external" href="http://localhost:3000/#/home?msgid=9400">[待校准&#64;9400]</a><a class="headerlink" href="#write-the-service-node" title="永久链接至标题"></a></h3>
+<p>在 <code class="docutils literal notranslate"><span class="pre">dev_ws/src/py_srvcli/py_srvcli</span></code> 目录内，创建一个调用 <code class="docutils literal notranslate"><span class="pre">service_member_function.py</span></code> 的新文件，并将以下代码粘贴到: <a class="reference external" href="http://localhost:3000/#/home?msgid=9475">[待校准&#64;9475]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">example_interfaces.srv</span> <span class="kn">import</span> <span class="n">AddTwoInts</span>
 
 <span class="kn">import</span> <span class="nn">rclpy</span>
@@ -388,21 +388,21 @@
 </pre></div>
 </div>
 <div class="section" id="examine-the-code">
-<h4>2.1检查代码 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8007">[待校准&#64;8007]</a><a class="headerlink" href="#examine-the-code" title="永久链接至标题"></a></h4>
-<p>第一个 <code class="docutils literal notranslate"><span class="pre">import</span></code> 语句从 <code class="docutils literal notranslate"><span class="pre">example_interfaces</span></code> 包中导入 <code class="docutils literal notranslate"><span class="pre">AddTwoInts</span></code> 服务类型。以下 <code class="docutils literal notranslate"><span class="pre">import</span></code> 语句导入ROS 2 Python客户端库，并指定调用 <code class="docutils literal notranslate"><span class="pre">Node</span></code> 类。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9476">[待校准&#64;9476]</a></p>
+<h4>2.1检查代码 <a class="reference external" href="http://localhost:3000/#/home?msgid=8007">[待校准&#64;8007]</a><a class="headerlink" href="#examine-the-code" title="永久链接至标题"></a></h4>
+<p>第一个 <code class="docutils literal notranslate"><span class="pre">import</span></code> 语句从 <code class="docutils literal notranslate"><span class="pre">example_interfaces</span></code> 包中导入 <code class="docutils literal notranslate"><span class="pre">AddTwoInts</span></code> 服务类型。以下 <code class="docutils literal notranslate"><span class="pre">import</span></code> 语句导入ROS 2 Python客户端库，并指定调用 <code class="docutils literal notranslate"><span class="pre">Node</span></code> 类。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9476">[待校准&#64;9476]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">example_interfaces.srv</span> <span class="kn">import</span> <span class="n">AddTwoInts</span>
 
 <span class="kn">import</span> <span class="nn">rclpy</span>
 <span class="kn">from</span> <span class="nn">rclpy.node</span> <span class="kn">import</span> <span class="n">Node</span>
 </pre></div>
 </div>
-<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">MinimalService</span></code> 类构造函数初始化名称为 <code class="docutils literal notranslate"><span class="pre">minimal_service</span></code> 的节点。然后，它创建一个服务并定义类型、名称和调用。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9477">[待校准&#64;9477]</a></p>
+<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">MinimalService</span></code> 类构造函数初始化名称为 <code class="docutils literal notranslate"><span class="pre">minimal_service</span></code> 的节点。然后，它创建一个服务并定义类型、名称和调用。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9477">[待校准&#64;9477]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s1">&#39;minimal_service&#39;</span><span class="p">)</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">srv</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_service</span><span class="p">(</span><span class="n">AddTwoInts</span><span class="p">,</span> <span class="s1">&#39;add_two_ints&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">add_two_ints_callback</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>服务调用back的定义接收请求数据，对其求和，并将总和作为响应返回。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9478">[待校准&#64;9478]</a></p>
+<p>服务调用back的定义接收请求数据，对其求和，并将总和作为响应返回。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9478">[待校准&#64;9478]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_two_ints_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">response</span><span class="p">):</span>
     <span class="n">response</span><span class="o">.</span><span class="n">sum</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">a</span> <span class="o">+</span> <span class="n">request</span><span class="o">.</span><span class="n">b</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Incoming request</span><span class="se">\n</span><span class="s1">a: </span><span class="si">%d</span><span class="s1"> b: </span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">a</span><span class="p">,</span> <span class="n">request</span><span class="o">.</span><span class="n">b</span><span class="p">))</span>
@@ -410,20 +410,20 @@
     <span class="k">return</span> <span class="n">response</span>
 </pre></div>
 </div>
-<p>最后，主类初始化ROS 2 Python客户端库，实例化 <code class="docutils literal notranslate"><span class="pre">MinimalService</span></code> 类以创建服务节点，并旋转节点以处理调用。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9479">[待校准&#64;9479]</a></p>
+<p>最后，主类初始化ROS 2 Python客户端库，实例化 <code class="docutils literal notranslate"><span class="pre">MinimalService</span></code> 类以创建服务节点，并旋转节点以处理调用。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9479">[待校准&#64;9479]</a></p>
 </div>
 <div class="section" id="add-an-entry-point">
-<h4>2.2添加入口点 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9263">[待校准&#64;9263]</a><a class="headerlink" href="#add-an-entry-point" title="永久链接至标题"></a></h4>
-<p>要允许 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">run</span></code> 命令运行您的节点，您必须将入口点添加到 <code class="docutils literal notranslate"><span class="pre">setup.py</span></code>  (位于 <code class="docutils literal notranslate"><span class="pre">dev_ws/src/py_srvcli</span></code> 目录中)。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9480">[待校准&#64;9480]</a></p>
-<p>在 “'console_scripts':” 括号中添加以下一行: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9481">[待校准&#64;9481]</a></p>
+<h4>2.2添加入口点 <a class="reference external" href="http://localhost:3000/#/home?msgid=9263">[待校准&#64;9263]</a><a class="headerlink" href="#add-an-entry-point" title="永久链接至标题"></a></h4>
+<p>要允许 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">run</span></code> 命令运行您的节点，您必须将入口点添加到 <code class="docutils literal notranslate"><span class="pre">setup.py</span></code>  (位于 <code class="docutils literal notranslate"><span class="pre">dev_ws/src/py_srvcli</span></code> 目录中)。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9480">[待校准&#64;9480]</a></p>
+<p>在 “'console_scripts':” 括号中添加以下一行: <a class="reference external" href="http://localhost:3000/#/home?msgid=9481">[待校准&#64;9481]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;service = py_srvcli.service_member_function:main&#39;</span><span class="p">,</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="section" id="write-the-client-node">
-<h3>3写入客户端节点 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9413">[待校准&#64;9413]</a><a class="headerlink" href="#write-the-client-node" title="永久链接至标题"></a></h3>
-<p>在 <code class="docutils literal notranslate"><span class="pre">dev_ws/src/py_srvcli/py_srvcli</span></code> 目录内，创建一个调用 <code class="docutils literal notranslate"><span class="pre">client_member_function.py</span></code> 的新文件，并将以下代码粘贴到: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9482">[待校准&#64;9482]</a></p>
+<h3>3写入客户端节点 <a class="reference external" href="http://localhost:3000/#/home?msgid=9413">[待校准&#64;9413]</a><a class="headerlink" href="#write-the-client-node" title="永久链接至标题"></a></h3>
+<p>在 <code class="docutils literal notranslate"><span class="pre">dev_ws/src/py_srvcli/py_srvcli</span></code> 目录内，创建一个调用 <code class="docutils literal notranslate"><span class="pre">client_member_function.py</span></code> 的新文件，并将以下代码粘贴到: <a class="reference external" href="http://localhost:3000/#/home?msgid=9482">[待校准&#64;9482]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
 
 <span class="kn">from</span> <span class="nn">example_interfaces.srv</span> <span class="kn">import</span> <span class="n">AddTwoInts</span>
@@ -475,17 +475,17 @@
 </pre></div>
 </div>
 <div class="section" id="id1">
-<h4>3.1检查代码 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9375">[待校准&#64;9375]</a><a class="headerlink" href="#id1" title="永久链接至标题"></a></h4>
-<p>对客户来说，唯一不同的 <code class="docutils literal notranslate"><span class="pre">import</span></code> 声明是 <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">sys</span></code> 。客户端节点代码使用 <a class="reference external" href="https://docs.python.org/3/library/sys.html#sys.argv">sys.argv</a> 来访问请求的命令行输入参数。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9483">[待校准&#64;9483]</a></p>
-<p>构造函数定义创建与服务节点具有相同类型和名称的客户端。类型和名称必须匹配，客户端和服务才能进行通信。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9484">[待校准&#64;9484]</a></p>
-<p>构造函数中的 <code class="docutils literal notranslate"><span class="pre">while</span></code> 循环检查与客户端类型和名称匹配的服务是否每秒可用一次。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9485">[待校准&#64;9485]</a></p>
-<p>构造函数下方是请求定义，后跟 <code class="docutils literal notranslate"><span class="pre">main</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9486">[待校准&#64;9486]</a></p>
-<p>客户的 <code class="docutils literal notranslate"><span class="pre">main</span></code> 唯一显著的区别是 <code class="docutils literal notranslate"><span class="pre">while</span></code> 环。只要系统正在运行，循环就会检查 <code class="docutils literal notranslate"><span class="pre">future</span></code> ，看看是否有来自服务的响应。如果服务已发送响应，则结果将写入日志消息中。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9487">[待校准&#64;9487]</a></p>
+<h4>3.1检查代码 <a class="reference external" href="http://localhost:3000/#/home?msgid=9375">[待校准&#64;9375]</a><a class="headerlink" href="#id1" title="永久链接至标题"></a></h4>
+<p>对客户来说，唯一不同的 <code class="docutils literal notranslate"><span class="pre">import</span></code> 声明是 <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">sys</span></code> 。客户端节点代码使用 <a class="reference external" href="https://docs.python.org/3/library/sys.html#sys.argv">sys.argv</a> 来访问请求的命令行输入参数。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9483">[待校准&#64;9483]</a></p>
+<p>构造函数定义创建与服务节点具有相同类型和名称的客户端。类型和名称必须匹配，客户端和服务才能进行通信。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9484">[待校准&#64;9484]</a></p>
+<p>构造函数中的 <code class="docutils literal notranslate"><span class="pre">while</span></code> 循环检查与客户端类型和名称匹配的服务是否每秒可用一次。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9485">[待校准&#64;9485]</a></p>
+<p>构造函数下方是请求定义，后跟 <code class="docutils literal notranslate"><span class="pre">main</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9486">[待校准&#64;9486]</a></p>
+<p>客户的 <code class="docutils literal notranslate"><span class="pre">main</span></code> 唯一显著的区别是 <code class="docutils literal notranslate"><span class="pre">while</span></code> 环。只要系统正在运行，循环就会检查 <code class="docutils literal notranslate"><span class="pre">future</span></code> ，看看是否有来自服务的响应。如果服务已发送响应，则结果将写入日志消息中。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9487">[待校准&#64;9487]</a></p>
 </div>
 <div class="section" id="id2">
-<h4>3.2添加入口点 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9463">[待校准&#64;9463]</a><a class="headerlink" href="#id2" title="永久链接至标题"></a></h4>
-<p>与服务节点一样，您还必须添加一个入口点才能运行客户端节点。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9488">[待校准&#64;9488]</a></p>
-<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> 文件的 <code class="docutils literal notranslate"><span class="pre">entry_points</span></code> 字段应该如下所示: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9489">[待校准&#64;9489]</a></p>
+<h4>3.2添加入口点 <a class="reference external" href="http://localhost:3000/#/home?msgid=9463">[待校准&#64;9463]</a><a class="headerlink" href="#id2" title="永久链接至标题"></a></h4>
+<p>与服务节点一样，您还必须添加一个入口点才能运行客户端节点。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9488">[待校准&#64;9488]</a></p>
+<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> 文件的 <code class="docutils literal notranslate"><span class="pre">entry_points</span></code> 字段应该如下所示: <a class="reference external" href="http://localhost:3000/#/home?msgid=9489">[待校准&#64;9489]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">entry_points</span><span class="o">=</span><span class="p">{</span>
     <span class="s1">&#39;console_scripts&#39;</span><span class="p">:</span> <span class="p">[</span>
         <span class="s1">&#39;service = py_srvcli.service_member_function:main&#39;</span><span class="p">,</span>
@@ -497,16 +497,16 @@
 </div>
 </div>
 <div class="section" id="build-and-run">
-<h3>4构建和运行 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7896">[待校准&#64;7896]</a><a class="headerlink" href="#build-and-run" title="永久链接至标题"></a></h3>
-<p>在构建之前，最好在工作区 ( <code class="docutils literal notranslate"><span class="pre">dev_ws</span></code> ) 的根目录下运行 <code class="docutils literal notranslate"><span class="pre">rosdep</span></code> ，以检查是否缺少依赖项: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9228">[待校准&#64;9228]</a></p>
+<h3>4构建和运行 <a class="reference external" href="http://localhost:3000/#/home?msgid=7896">[待校准&#64;7896]</a><a class="headerlink" href="#build-and-run" title="永久链接至标题"></a></h3>
+<p>在构建之前，最好在工作区 ( <code class="docutils literal notranslate"><span class="pre">dev_ws</span></code> ) 的根目录下运行 <code class="docutils literal notranslate"><span class="pre">rosdep</span></code> ，以检查是否缺少依赖项: <a class="reference external" href="http://localhost:3000/#/home?msgid=9228">[待校准&#64;9228]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-0-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-0-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-0-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-0-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-0-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">rosdep install -i --from-path src --rosdistro foxy -y</span>
 </pre></div>
 </div>
-</div><div aria-labelledby="tab-0-bWFjT1M=" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-bWFjT1M=" name="bWFjT1M=" role="tabpanel" tabindex="0"><p>rosdep仅在Linux上运行，因此您可以跳到下一步。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9229">[待校准&#64;9229]</a></p>
-</div><div aria-labelledby="tab-0-V2luZG93cw==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-V2luZG93cw==" name="V2luZG93cw==" role="tabpanel" tabindex="0"><p>rosdep仅在Linux上运行，因此您可以跳到下一步。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9229">[待校准&#64;9229]</a></p>
+</div><div aria-labelledby="tab-0-bWFjT1M=" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-bWFjT1M=" name="bWFjT1M=" role="tabpanel" tabindex="0"><p>rosdep仅在Linux上运行，因此您可以跳到下一步。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9229">[待校准&#64;9229]</a></p>
+</div><div aria-labelledby="tab-0-V2luZG93cw==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-V2luZG93cw==" name="V2luZG93cw==" role="tabpanel" tabindex="0"><p>rosdep仅在Linux上运行，因此您可以跳到下一步。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9229">[待校准&#64;9229]</a></p>
 </div></div>
-<p>导航回工作区的根目录， <code class="docutils literal notranslate"><span class="pre">dev_ws</span></code> ，并构建新的包: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9230">[待校准&#64;9230]</a></p>
+<p>导航回工作区的根目录， <code class="docutils literal notranslate"><span class="pre">dev_ws</span></code> ，并构建新的包: <a class="reference external" href="http://localhost:3000/#/home?msgid=9230">[待校准&#64;9230]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-1-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-1-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-1-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-1-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-1-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-1-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">colcon build --packages-select py_srvcli</span>
 </pre></div>
@@ -518,7 +518,7 @@
 </pre></div>
 </div>
 </div></div>
-<p>打开一个新的终端，导航到 <code class="docutils literal notranslate"><span class="pre">dev_ws</span></code> ，源文件安装文件: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9231">[待校准&#64;9231]</a></p>
+<p>打开一个新的终端，导航到 <code class="docutils literal notranslate"><span class="pre">dev_ws</span></code> ，源文件安装文件: <a class="reference external" href="http://localhost:3000/#/home?msgid=9231">[待校准&#64;9231]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-2-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-2-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-2-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-2-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-2-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-2-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-2-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-2-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">. install/setup.bash</span>
 </pre></div>
@@ -530,40 +530,40 @@
 </pre></div>
 </div>
 </div></div>
-<p>现在运行服务节点: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9423">[待校准&#64;9423]</a></p>
+<p>现在运行服务节点: <a class="reference external" href="http://localhost:3000/#/home?msgid=9423">[待校准&#64;9423]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run py_srvcli service</span>
 </pre></div>
 </div>
-<p>节点将等待客户端的请求。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9490">[待校准&#64;9490]</a></p>
-<p>打开另一个终端，再次从 <code class="docutils literal notranslate"><span class="pre">dev_ws</span></code> 内部源文件。启动客户端节点，后跟由空格分隔的任意两个整数: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9491">[待校准&#64;9491]</a></p>
+<p>节点将等待客户端的请求。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9490">[待校准&#64;9490]</a></p>
+<p>打开另一个终端，再次从 <code class="docutils literal notranslate"><span class="pre">dev_ws</span></code> 内部源文件。启动客户端节点，后跟由空格分隔的任意两个整数: <a class="reference external" href="http://localhost:3000/#/home?msgid=9491">[待校准&#64;9491]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run py_srvcli client 2 3</span>
 </pre></div>
 </div>
-<p>例如，如果您选择 <code class="docutils literal notranslate"><span class="pre">2</span></code> 和 <code class="docutils literal notranslate"><span class="pre">3</span></code> ，客户将收到如下回复: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9426">[待校准&#64;9426]</a></p>
+<p>例如，如果您选择 <code class="docutils literal notranslate"><span class="pre">2</span></code> 和 <code class="docutils literal notranslate"><span class="pre">3</span></code> ，客户将收到如下回复: <a class="reference external" href="http://localhost:3000/#/home?msgid=9426">[待校准&#64;9426]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">[INFO] [minimal_client_async]: Result of add_two_ints: for 2 + 3 = 5</span>
 </pre></div>
 </div>
-<p>返回到服务节点正在运行的终端。您将看到它在收到请求时发布了日志消息: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9492">[待校准&#64;9492]</a></p>
+<p>返回到服务节点正在运行的终端。您将看到它在收到请求时发布了日志消息: <a class="reference external" href="http://localhost:3000/#/home?msgid=9492">[待校准&#64;9492]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">[INFO] [minimal_service]: Incoming request</span>
 <span class="go">a: 2 b: 3</span>
 </pre></div>
 </div>
-<p>在服务器终端中输入 “ctrl + c” 以停止节点旋转。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9428">[待校准&#64;9428]</a></p>
+<p>在服务器终端中输入 “ctrl + c” 以停止节点旋转。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9428">[待校准&#64;9428]</a></p>
 </div>
 </div>
 <div class="section" id="summary">
-<h2>总结 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6747">[待校准&#64;6747]</a><a class="headerlink" href="#summary" title="永久链接至标题"></a></h2>
-<p>您创建了两个节点来通过服务请求和响应数据。您将它们的依赖项和可执行文件添加到包配置文件中，以便您可以构建和运行它们，从而使您可以看到服务/客户端系统正在工作。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9493">[待校准&#64;9493]</a></p>
+<h2>总结 <a class="reference external" href="http://localhost:3000/#/home?msgid=6747">[待校准&#64;6747]</a><a class="headerlink" href="#summary" title="永久链接至标题"></a></h2>
+<p>您创建了两个节点来通过服务请求和响应数据。您将它们的依赖项和可执行文件添加到包配置文件中，以便您可以构建和运行它们，从而使您可以看到服务/客户端系统正在工作。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9493">[待校准&#64;9493]</a></p>
 </div>
 <div class="section" id="next-steps">
-<h2>下一步 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6749">[待校准&#64;6749]</a><a class="headerlink" href="#next-steps" title="永久链接至标题"></a></h2>
-<p>在最近的几个教程中，您一直在利用界面跨话题和服务传递数据。接下来，你将学习如何 <a class="reference internal" href="Custom-ROS2-Interfaces.html"><span class="doc">create custom interfaces</span></a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9430">[待校准&#64;9430]</a></p>
+<h2>下一步 <a class="reference external" href="http://localhost:3000/#/home?msgid=6749">[待校准&#64;6749]</a><a class="headerlink" href="#next-steps" title="永久链接至标题"></a></h2>
+<p>在最近的几个教程中，您一直在利用界面跨话题和服务传递数据。接下来，你将学习如何 <a class="reference internal" href="Custom-ROS2-Interfaces.html"><span class="doc">create custom interfaces</span></a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9430">[待校准&#64;9430]</a></p>
 </div>
 <div class="section" id="related-content">
-<h2>相关内容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6751">[待校准&#64;6751]</a><a class="headerlink" href="#related-content" title="永久链接至标题"></a></h2>
+<h2>相关内容 <a class="reference external" href="http://localhost:3000/#/home?msgid=6751">[待校准&#64;6751]</a><a class="headerlink" href="#related-content" title="永久链接至标题"></a></h2>
 <ul class="simple">
-<li><p>有几种方法可以写服务和客户端Python; 查看 <code class="docutils literal notranslate"><span class="pre">minimal_client</span></code> 和 <code class="docutils literal notranslate"><span class="pre">minimal_service</span></code> 包在 <a class="reference external" href="https://github.com/ros2/examples/tree/foxy/rclpy/services">ros2/examples</a> 回购。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9494">[待校准&#64;9494]</a></p></li>
-<li><p>在本教程中，您在客户端节点中使用了 <code class="docutils literal notranslate"><span class="pre">call_async()</span></code> API来调用服务。还有另一个服务调用API可用于Python调用同步调用。我们不建议使用同步调用，但是如果您想了解更多关于它们的信息，请阅读 <a class="reference internal" href="../How-To-Guides/Sync-Vs-Async.html"><span class="doc">Synchronous vs. asynchronous clients</span></a> 指南。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9495">[待校准&#64;9495]</a></p></li>
+<li><p>有几种方法可以写服务和客户端Python; 查看 <code class="docutils literal notranslate"><span class="pre">minimal_client</span></code> 和 <code class="docutils literal notranslate"><span class="pre">minimal_service</span></code> 包在 <a class="reference external" href="https://github.com/ros2/examples/tree/foxy/rclpy/services">ros2/examples</a> 回购。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9494">[待校准&#64;9494]</a></p></li>
+<li><p>在本教程中，您在客户端节点中使用了 <code class="docutils literal notranslate"><span class="pre">call_async()</span></code> API来调用服务。还有另一个服务调用API可用于Python调用同步调用。我们不建议使用同步调用，但是如果您想了解更多关于它们的信息，请阅读 <a class="reference internal" href="../How-To-Guides/Sync-Vs-Async.html"><span class="doc">Synchronous vs. asynchronous clients</span></a> 指南。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9495">[待校准&#64;9495]</a></p></li>
 </ul>
 </div>
 </div>

@@ -249,7 +249,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Related-Projects/Nvidia-ROS2-Projects.html">[需手动修复的语法]NVIDIAROS 2项目 [待校准&#64;6668]</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../Glossary.html">相关术语 `[小鱼&#64;1] http://dev.ros2.fishros.com/calibpage/#/home?msgid=1&gt;`_</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Glossary.html">术语表</a></li>
 </ul>
 
         </div>
@@ -280,9 +280,9 @@
 
 
   <div class="section" id="use-quality-of-service-settings-to-handle-lossy-networks">
-<h1>使用服务质量设置处理有损网络 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7902">[待校准&#64;7902]</a><a class="headerlink" href="#use-quality-of-service-settings-to-handle-lossy-networks" title="永久链接至标题"></a></h1>
+<h1>使用服务质量设置处理有损网络 <a class="reference external" href="http://localhost:3000/#/home?msgid=7902">[待校准&#64;7902]</a><a class="headerlink" href="#use-quality-of-service-settings-to-handle-lossy-networks" title="永久链接至标题"></a></h1>
 <div class="contents local topic" id="table-of-contents">
-<p class="topic-title">目录 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6886">[待校准&#64;6886]</a></p>
+<p class="topic-title">目录 <a class="reference external" href="http://localhost:3000/#/home?msgid=6886">[待校准&#64;6886]</a></p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#background" id="id1">背景 [待校准&#64;6716]</a></p></li>
 <li><p><a class="reference internal" href="#prerequisites" id="id2">先决条件 [待校准&#64;6718]</a></p></li>
@@ -295,13 +295,13 @@
 </ul>
 </div>
 <div class="section" id="background">
-<h2>背景 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6716">[待校准&#64;6716]</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
-<p>请阅读文档页 <a class="reference internal" href="../Concepts/About-Quality-of-Service-Settings.html"><span class="doc">about QoS settings</span></a>  ，了解ROS 2中可用支持的背景信息。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7903">[待校准&#64;7903]</a></p>
-<p>在此例程中，我们将生成一个发布相机图像的节点和另一个订阅图像并将其显示在屏幕上的节点。然后，我们将模拟它们之间的有损网络连接，并展示不同的服务质量设置如何处理不良链接。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7904">[待校准&#64;7904]</a></p>
+<h2>背景 <a class="reference external" href="http://localhost:3000/#/home?msgid=6716">[待校准&#64;6716]</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
+<p>请阅读文档页 <a class="reference internal" href="../Concepts/About-Quality-of-Service-Settings.html"><span class="doc">about QoS settings</span></a>  ，了解ROS 2中可用支持的背景信息。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7903">[待校准&#64;7903]</a></p>
+<p>在此例程中，我们将生成一个发布相机图像的节点和另一个订阅图像并将其显示在屏幕上的节点。然后，我们将模拟它们之间的有损网络连接，并展示不同的服务质量设置如何处理不良链接。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7904">[待校准&#64;7904]</a></p>
 </div>
 <div class="section" id="prerequisites">
-<h2>先决条件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6718">[待校准&#64;6718]</a><a class="headerlink" href="#prerequisites" title="永久链接至标题"></a></h2>
-<p>本教程假设您有 <a class="reference internal" href="../Installation.html"><span class="doc">working ROS 2 installation</span></a> and OpenCV. See the <a class="reference external" href="http://docs.opencv.org/doc/tutorials/introduction/table_of_content_introduction/table_of_content_introduction.html#table-of-content-introduction">OpenCV documentation</a> 的安装说明。您还需要ROS包装 <code class="docutils literal notranslate"><span class="pre">image_tools</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7905">[待校准&#64;7905]</a></p>
+<h2>先决条件 <a class="reference external" href="http://localhost:3000/#/home?msgid=6718">[待校准&#64;6718]</a><a class="headerlink" href="#prerequisites" title="永久链接至标题"></a></h2>
+<p>本教程假设您有 <a class="reference internal" href="../Installation.html"><span class="doc">working ROS 2 installation</span></a> and OpenCV. See the <a class="reference external" href="http://docs.opencv.org/doc/tutorials/introduction/table_of_content_introduction/table_of_content_introduction.html#table-of-content-introduction">OpenCV documentation</a> 的安装说明。您还需要ROS包装 <code class="docutils literal notranslate"><span class="pre">image_tools</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7905">[待校准&#64;7905]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-TGludXggQmluYXJpZXM=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-0-TGludXggQmluYXJpZXM=" name="TGludXggQmluYXJpZXM=" role="tab" tabindex="0">Linux Binaries</button><button aria-controls="panel-0-RnJvbSBTb3VyY2U=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-RnJvbSBTb3VyY2U=" name="RnJvbSBTb3VyY2U=" role="tab" tabindex="-1">From Source</button></div><div aria-labelledby="tab-0-TGludXggQmluYXJpZXM=" class="sphinx-tabs-panel group-tab" id="panel-0-TGludXggQmluYXJpZXM=" name="TGludXggQmluYXJpZXM=" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt-get install ros-foxy-image-tools
 </pre></div>
@@ -313,9 +313,9 @@ git clone https://github.com/ros2/demos.git -b foxy
 </div></div>
 </div>
 <div class="section" id="run-the-demo">
-<h2>运行例程 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7908">[待校准&#64;7908]</a><a class="headerlink" href="#run-the-demo" title="永久链接至标题"></a></h2>
-<p>在运行例程之前，请确保您的计算机上已连接了可正常工作的网络摄像头。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7909">[待校准&#64;7909]</a></p>
-<p>安装ROS 2后，将安装文件源文件: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7910">[待校准&#64;7910]</a></p>
+<h2>运行例程 <a class="reference external" href="http://localhost:3000/#/home?msgid=7908">[待校准&#64;7908]</a><a class="headerlink" href="#run-the-demo" title="永久链接至标题"></a></h2>
+<p>在运行例程之前，请确保您的计算机上已连接了可正常工作的网络摄像头。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7909">[待校准&#64;7909]</a></p>
+<p>安装ROS 2后，将安装文件源文件: <a class="reference external" href="http://localhost:3000/#/home?msgid=7910">[待校准&#64;7910]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-1-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-1-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-1-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-1-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-1-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-1-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>. &lt;path to ROS <span class="m">2</span> install space&gt;/setup.bash
 </pre></div>
@@ -327,28 +327,28 @@ git clone https://github.com/ros2/demos.git -b foxy
 </pre></div>
 </div>
 </div></div>
-<p>然后运行: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7808">[待校准&#64;7808]</a></p>
+<p>然后运行: <a class="reference external" href="http://localhost:3000/#/home?msgid=7808">[待校准&#64;7808]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 run image_tools showimage
 </pre></div>
 </div>
-<p>什么都不会发生。 <code class="docutils literal notranslate"><span class="pre">showimage</span></code> 是一个订户节点，正在等待 <code class="docutils literal notranslate"><span class="pre">image</span></code> 话题的出版商。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7911">[待校准&#64;7911]</a></p>
-<p>注意: 你必须稍后用 <code class="docutils literal notranslate"><span class="pre">Ctrl-C</span></code> 关闭 <code class="docutils literal notranslate"><span class="pre">showimage</span></code> 工艺。你不能就这么关上窗户。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7912">[待校准&#64;7912]</a></p>
-<p>在单独的终端中，源文件安装文件并运行发布者节点: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7913">[待校准&#64;7913]</a></p>
+<p>什么都不会发生。 <code class="docutils literal notranslate"><span class="pre">showimage</span></code> 是一个订户节点，正在等待 <code class="docutils literal notranslate"><span class="pre">image</span></code> 话题的出版商。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7911">[待校准&#64;7911]</a></p>
+<p>注意: 你必须稍后用 <code class="docutils literal notranslate"><span class="pre">Ctrl-C</span></code> 关闭 <code class="docutils literal notranslate"><span class="pre">showimage</span></code> 工艺。你不能就这么关上窗户。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7912">[待校准&#64;7912]</a></p>
+<p>在单独的终端中，源文件安装文件并运行发布者节点: <a class="reference external" href="http://localhost:3000/#/home?msgid=7913">[待校准&#64;7913]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 run image_tools cam2image
 </pre></div>
 </div>
-<p>这将从您的网络摄像头发布图像。如果你的电脑没有连接相机，有一个命令行选项可以发布预定义的图像。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7914">[待校准&#64;7914]</a></p>
+<p>这将从您的网络摄像头发布图像。如果你的电脑没有连接相机，有一个命令行选项可以发布预定义的图像。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7914">[待校准&#64;7914]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 run image_tools cam2image --ros-args -p burger_mode:<span class="o">=</span>True
 </pre></div>
 </div>
-<p>在此窗口中，您将看到终端输出: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7915">[待校准&#64;7915]</a></p>
+<p>在此窗口中，您将看到终端输出: <a class="reference external" href="http://localhost:3000/#/home?msgid=7915">[待校准&#64;7915]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Publishing image <span class="c1">#1</span>
 Publishing image <span class="c1">#2</span>
 Publishing image <span class="c1">#3</span>
 ...
 </pre></div>
 </div>
-<p>将弹出一个窗口，标题为 “  &quot;view&quot; ”，显示您的相机供稿。在第一个窗口中，您将看到订阅服务器的输出: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7916">[待校准&#64;7916]</a></p>
+<p>将弹出一个窗口，标题为 “  &quot;view&quot; ”，显示您的相机供稿。在第一个窗口中，您将看到订阅服务器的输出: <a class="reference external" href="http://localhost:3000/#/home?msgid=7916">[待校准&#64;7916]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Received image <span class="c1">#1</span>
 Received image <span class="c1">#2</span>
 Received image <span class="c1">#3</span>
@@ -357,44 +357,44 @@ Received image <span class="c1">#3</span>
 </div>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
-<p>macOS用户: 如果这些示例不起作用，或者您收到像 <code class="docutils literal notranslate"><span class="pre">ddsi_conn_write</span> <span class="pre">failed</span> <span class="pre">-1</span></code> 这样的错误，那么您需要增加系统范围内的UDP数据包大小: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7917">[待校准&#64;7917]</a></p>
+<p>macOS用户: 如果这些示例不起作用，或者您收到像 <code class="docutils literal notranslate"><span class="pre">ddsi_conn_write</span> <span class="pre">failed</span> <span class="pre">-1</span></code> 这样的错误，那么您需要增加系统范围内的UDP数据包大小: <a class="reference external" href="http://localhost:3000/#/home?msgid=7917">[待校准&#64;7917]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo sysctl -w net.inet.udp.recvspace<span class="o">=</span><span class="m">209715</span>
 $ sudo sysctl -w net.inet.udp.maxdgram<span class="o">=</span><span class="m">65500</span>
 </pre></div>
 </div>
-<p>这些更改不会在重新启动时持续存在。如果您希望更改保持不变，请将这些行添加到 <code class="docutils literal notranslate"><span class="pre">/etc/sysctl.conf</span></code> 中 (如果文件尚不存在，请创建该文件): <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7918">[待校准&#64;7918]</a></p>
+<p>这些更改不会在重新启动时持续存在。如果您希望更改保持不变，请将这些行添加到 <code class="docutils literal notranslate"><span class="pre">/etc/sysctl.conf</span></code> 中 (如果文件尚不存在，请创建该文件): <a class="reference external" href="http://localhost:3000/#/home?msgid=7918">[待校准&#64;7918]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>net.inet.udp.recvspace<span class="o">=</span><span class="m">209715</span>
 net.inet.udp.maxdgram<span class="o">=</span><span class="m">65500</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="command-line-options">
-<h3>命令行选项 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7919">[待校准&#64;7919]</a><a class="headerlink" href="#command-line-options" title="永久链接至标题"></a></h3>
-<p>在其中一个终端中，将a -h标志添加到原始命令中: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7920">[待校准&#64;7920]</a></p>
+<h3>命令行选项 <a class="reference external" href="http://localhost:3000/#/home?msgid=7919">[待校准&#64;7919]</a><a class="headerlink" href="#command-line-options" title="永久链接至标题"></a></h3>
+<p>在其中一个终端中，将a -h标志添加到原始命令中: <a class="reference external" href="http://localhost:3000/#/home?msgid=7920">[待校准&#64;7920]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 run image_tools showimage -h
 </pre></div>
 </div>
 </div>
 <div class="section" id="add-network-traffic">
-<h3>添加网络流量 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7921">[待校准&#64;7921]</a><a class="headerlink" href="#add-network-traffic" title="永久链接至标题"></a></h3>
+<h3>添加网络流量 <a class="reference external" href="http://localhost:3000/#/home?msgid=7921">[待校准&#64;7921]</a><a class="headerlink" href="#add-network-traffic" title="永久链接至标题"></a></h3>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
-<p>这部分例程赢得了't work on RTI'的Connext DDS。当在同一主机上运行多个节点时，RTI Connext实现将使用共享内存和环回接口。降低环回接口吞吐量不会影响共享内存，因此两个节点之间的流量不会受到影响。参见RMW实施 <a class="reference external" href="https://github.com/ros2/rmw_connext/blob/e71347b944a8cd92acfb89b129b2b10f2575f273/rmw_connext_shared_cpp/src/node.cpp#L96">code</a> 和 <a class="reference external" href="https://community.rti.com/static/documentation/connext-dds/5.3.1/doc/api/connext_dds/api_dotnet/group__UDPv4Transport__Property__t__ignore__loopback__interface.html">RTI Connext Documentation</a>  _ 以供进一步参考。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7922">[待校准&#64;7922]</a></p>
+<p>这部分例程赢得了't work on RTI'的Connext DDS。当在同一主机上运行多个节点时，RTI Connext实现将使用共享内存和环回接口。降低环回接口吞吐量不会影响共享内存，因此两个节点之间的流量不会受到影响。参见RMW实施 <a class="reference external" href="https://github.com/ros2/rmw_connext/blob/e71347b944a8cd92acfb89b129b2b10f2575f273/rmw_connext_shared_cpp/src/node.cpp#L96">code</a> 和 <a class="reference external" href="https://community.rti.com/static/documentation/connext-dds/5.3.1/doc/api/connext_dds/api_dotnet/group__UDPv4Transport__Property__t__ignore__loopback__interface.html">RTI Connext Documentation</a>  _ 以供进一步参考。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7922">[待校准&#64;7922]</a></p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
-<p>下一节是特定于Linux的。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7923">[待校准&#64;7923]</a></p>
-<p>但是，对于macOS和Windows，您可以分别使用实用程序  &quot;Network Link Conditioner&quot;  (unix工具套件的一部分) 和  &quot;Clumsy&quot;  (<a class="reference external" href="http://jagt.github.io/clumsy/index.html">http://jagt.github.io/clumsy/index.html</a>) 实现类似的效果，但是它们不会在本教程中介绍。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7924">[待校准&#64;7924]</a></p>
+<p>下一节是特定于Linux的。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7923">[待校准&#64;7923]</a></p>
+<p>但是，对于macOS和Windows，您可以分别使用实用程序  &quot;Network Link Conditioner&quot;  (unix工具套件的一部分) 和  &quot;Clumsy&quot;  (<a class="reference external" href="http://jagt.github.io/clumsy/index.html">http://jagt.github.io/clumsy/index.html</a>) 实现类似的效果，但是它们不会在本教程中介绍。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7924">[待校准&#64;7924]</a></p>
 </div>
-<p>我们将使用Linux网络流量控制实用程序 <code class="docutils literal notranslate"><span class="pre">tc</span></code>  (<a class="reference external" href="http://linux.die.net/man/8/tc">http://linux.die.net/man/8/tc</a>)。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7925">[待校准&#64;7925]</a></p>
+<p>我们将使用Linux网络流量控制实用程序 <code class="docutils literal notranslate"><span class="pre">tc</span></code>  (<a class="reference external" href="http://linux.die.net/man/8/tc">http://linux.die.net/man/8/tc</a>)。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7925">[待校准&#64;7925]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo tc qdisc add dev lo root netem loss <span class="m">5</span>%
 </pre></div>
 </div>
-<p>这个神奇的咒语将模拟本地环回设备上的5% 个数据包丢失。如果你使用更高分辨率的图像 (如 ”-- ros args -p宽度: = 640 p高度: = 480 <a href="#id1"><span class="problematic" id="id2">``</span></a>) you might want to try a lower packet loss rate (e.g. `` 1 %'')。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7926">[待校准&#64;7926]</a></p>
-<p>接下来，我们启动 <code class="docutils literal notranslate"><span class="pre">cam2image</span></code> 和 <code class="docutils literal notranslate"><span class="pre">showimage</span></code> ，我们很快就会注意到这两个程序似乎都减慢了图像的传输速度。这是由默认QoS设置的行为引起的。在有损信道上加强可靠性意味着发布者 (在本例中为 <code class="docutils literal notranslate"><span class="pre">cam2image</span></code> ) 将重新发送网络数据包，直到收到消费者的确认 (即 <code class="docutils literal notranslate"><span class="pre">showimage</span></code> )。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7927">[待校准&#64;7927]</a></p>
-<p>现在让我们尝试运行这两个程序，但使用更合适的设置。首先，我们将使用 “-p可靠性: = 最佳 _ 努力” 选项来启用最佳努力通讯。现在，发布者将仅尝试传递网络数据包，而不希望得到消费者的认可。我们现在看到 <code class="docutils literal notranslate"><span class="pre">showimage</span></code> 一侧的一些帧被丢弃了，运行 <code class="docutils literal notranslate"><span class="pre">showimage</span></code> 的壳中的帧号将不再是连续的: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7928">[待校准&#64;7928]</a></p>
-<a class="reference external image-reference" href="https://raw.githubusercontent.com/ros2/demos/master/image_tools/doc/qos-best-effort.png"><img alt="尽力而为的图像传输 `[待校准&#64;7929] &lt;http://dev.ros2.fishros.com/calibpage/#/home?msgid=7929&gt;`_ " src="https://raw.githubusercontent.com/ros2/demos/master/image_tools/doc/qos-best-effort.png" /></a>
-<p>完成后，请记住删除排队规则: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7930">[待校准&#64;7930]</a></p>
+<p>这个神奇的咒语将模拟本地环回设备上的5% 个数据包丢失。如果你使用更高分辨率的图像 (如 ”-- ros args -p宽度: = 640 p高度: = 480 <a href="#id1"><span class="problematic" id="id2">``</span></a>) you might want to try a lower packet loss rate (e.g. `` 1 %'')。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7926">[待校准&#64;7926]</a></p>
+<p>接下来，我们启动 <code class="docutils literal notranslate"><span class="pre">cam2image</span></code> 和 <code class="docutils literal notranslate"><span class="pre">showimage</span></code> ，我们很快就会注意到这两个程序似乎都减慢了图像的传输速度。这是由默认QoS设置的行为引起的。在有损信道上加强可靠性意味着发布者 (在本例中为 <code class="docutils literal notranslate"><span class="pre">cam2image</span></code> ) 将重新发送网络数据包，直到收到消费者的确认 (即 <code class="docutils literal notranslate"><span class="pre">showimage</span></code> )。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7927">[待校准&#64;7927]</a></p>
+<p>现在让我们尝试运行这两个程序，但使用更合适的设置。首先，我们将使用 “-p可靠性: = 最佳 _ 努力” 选项来启用最佳努力通讯。现在，发布者将仅尝试传递网络数据包，而不希望得到消费者的认可。我们现在看到 <code class="docutils literal notranslate"><span class="pre">showimage</span></code> 一侧的一些帧被丢弃了，运行 <code class="docutils literal notranslate"><span class="pre">showimage</span></code> 的壳中的帧号将不再是连续的: <a class="reference external" href="http://localhost:3000/#/home?msgid=7928">[待校准&#64;7928]</a></p>
+<a class="reference external image-reference" href="https://raw.githubusercontent.com/ros2/demos/master/image_tools/doc/qos-best-effort.png"><img alt="尽力而为的图像传输 `[待校准&#64;7929] &lt;http://localhost:3000/#/home?msgid=7929&gt;`_ " src="https://raw.githubusercontent.com/ros2/demos/master/image_tools/doc/qos-best-effort.png" /></a>
+<p>完成后，请记住删除排队规则: <a class="reference external" href="http://localhost:3000/#/home?msgid=7930">[待校准&#64;7930]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo tc qdisc delete dev lo root netem loss <span class="m">5</span>%
 </pre></div>
 </div>

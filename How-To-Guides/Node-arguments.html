@@ -249,7 +249,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Related-Projects/Nvidia-ROS2-Projects.html">[需手动修复的语法]NVIDIAROS 2项目 [待校准&#64;6668]</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../Glossary.html">相关术语 `[小鱼&#64;1] http://dev.ros2.fishros.com/calibpage/#/home?msgid=1&gt;`_</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Glossary.html">术语表</a></li>
 </ul>
 
         </div>
@@ -280,16 +280,16 @@
 
 
   <div class="section" id="passing-ros-arguments-to-nodes-via-the-command-line">
-<h1>通过命令行将ROS参数传递给节点 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6297">[待校准&#64;6297]</a><a class="headerlink" href="#passing-ros-arguments-to-nodes-via-the-command-line" title="永久链接至标题"></a></h1>
+<h1>通过命令行将ROS参数传递给节点 <a class="reference external" href="http://localhost:3000/#/home?msgid=6297">[待校准&#64;6297]</a><a class="headerlink" href="#passing-ros-arguments-to-nodes-via-the-command-line" title="永久链接至标题"></a></h1>
 <div class="contents local topic" id="table-of-contents">
-<p class="topic-title">目录 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5761">[待校准&#64;5761]</a></p>
+<p class="topic-title">目录 <a class="reference external" href="http://localhost:3000/#/home?msgid=5761">[待校准&#64;5761]</a></p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#name-remapping" id="id1">名称重新映射 [待校准&#64;6302]</a></p></li>
 <li><p><a class="reference internal" href="#logger-configuration" id="id2">日志记录器配置 [待校准&#64;6310]</a></p></li>
 <li><p><a class="reference internal" href="#parameters" id="id3">参数 [待校准&#64;6312]</a></p></li>
 </ul>
 </div>
-<p>所有ROS节点都采用一组参数，这些参数允许重新配置各种属性。示例包括配置节点的名称/命名空间、使用的话题/服务名称以及节点上的参数。所有特定于ROS的参数必须在 <code class="docutils literal notranslate"><span class="pre">--ros-args</span></code> 标志之后指定: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6298">[待校准&#64;6298]</a></p>
+<p>所有ROS节点都采用一组参数，这些参数允许重新配置各种属性。示例包括配置节点的名称/命名空间、使用的话题/服务名称以及节点上的参数。所有特定于ROS的参数必须在 <code class="docutils literal notranslate"><span class="pre">--ros-args</span></code> 标志之后指定: <a class="reference external" href="http://localhost:3000/#/home?msgid=6298">[待校准&#64;6298]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-RWxvcXVlbnQgYW5kIG5ld2Vy" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-0-RWxvcXVlbnQgYW5kIG5ld2Vy" name="RWxvcXVlbnQgYW5kIG5ld2Vy" role="tab" tabindex="0">Eloquent and newer</button><button aria-controls="panel-0-RGFzaGluZw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-RGFzaGluZw==" name="RGFzaGluZw==" role="tab" tabindex="-1">Dashing</button></div><div aria-labelledby="tab-0-RWxvcXVlbnQgYW5kIG5ld2Vy" class="sphinx-tabs-panel group-tab" id="panel-0-RWxvcXVlbnQgYW5kIG5ld2Vy" name="RWxvcXVlbnQgYW5kIG5ld2Vy" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 run my_package node_executable --ros-args ...
 </pre></div>
@@ -298,25 +298,25 @@
 </pre></div>
 </div>
 </div></div>
-<p>更多细节见 <a class="reference external" href="https://design.ros2.org/articles/ros_command_line_arguments.html">this design doc</a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6301">[待校准&#64;6301]</a></p>
+<p>更多细节见 <a class="reference external" href="https://design.ros2.org/articles/ros_command_line_arguments.html">this design doc</a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6301">[待校准&#64;6301]</a></p>
 <div class="section" id="name-remapping">
-<h2>名称重新映射 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6302">[待校准&#64;6302]</a><a class="headerlink" href="#name-remapping" title="永久链接至标题"></a></h2>
-<p>节点内的名称 (例如话题/服务) 可以使用语法 <code class="docutils literal notranslate"><span class="pre">-r</span> <span class="pre">&lt;old</span> <span class="pre">name&gt;:=&lt;new</span> <span class="pre">name&gt;乙甲-r</span> <span class="pre">__node:=&lt;new</span> <span class="pre">node</span> <span class="pre">name&gt;乙乙-r</span> <span class="pre">__ns:=&lt;new</span> <span class="pre">node</span> <span class="pre">namespace&gt;</span></code> 重新映射。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6303">[待校准&#64;6303]</a></p>
-<p>请注意，这些重铸是  &quot;static&quot; 重铸，因为它们适用于节点的生命周期。  &quot;Dynamic&quot; 重新映射名称后节点开始尚不支持。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6304">[待校准&#64;6304]</a></p>
-<p>有关重新映射参数的更多详细信息，请参见 <a class="reference external" href="https://design.ros2.org/articles/static_remapping.html">this design doc</a>  (并非所有功能都可用)。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6305">[待校准&#64;6305]</a></p>
+<h2>名称重新映射 <a class="reference external" href="http://localhost:3000/#/home?msgid=6302">[待校准&#64;6302]</a><a class="headerlink" href="#name-remapping" title="永久链接至标题"></a></h2>
+<p>节点内的名称 (例如话题/服务) 可以使用语法 <code class="docutils literal notranslate"><span class="pre">-r</span> <span class="pre">&lt;old</span> <span class="pre">name&gt;:=&lt;new</span> <span class="pre">name&gt;乙甲-r</span> <span class="pre">__node:=&lt;new</span> <span class="pre">node</span> <span class="pre">name&gt;乙乙-r</span> <span class="pre">__ns:=&lt;new</span> <span class="pre">node</span> <span class="pre">namespace&gt;</span></code> 重新映射。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6303">[待校准&#64;6303]</a></p>
+<p>请注意，这些重铸是  &quot;static&quot; 重铸，因为它们适用于节点的生命周期。  &quot;Dynamic&quot; 重新映射名称后节点开始尚不支持。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6304">[待校准&#64;6304]</a></p>
+<p>有关重新映射参数的更多详细信息，请参见 <a class="reference external" href="https://design.ros2.org/articles/static_remapping.html">this design doc</a>  (并非所有功能都可用)。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6305">[待校准&#64;6305]</a></p>
 <div class="section" id="example">
-<h3>示例 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6204">[待校准&#64;6204]</a><a class="headerlink" href="#example" title="永久链接至标题"></a></h3>
-<p>以下调用将导致以节点名称 <code class="docutils literal notranslate"><span class="pre">my_talker</span></code> 启动 <code class="docutils literal notranslate"><span class="pre">talker</span></code> 节点，发布名为 <code class="docutils literal notranslate"><span class="pre">my_topic</span></code> 的话题，而不是默认的 <code class="docutils literal notranslate"><span class="pre">chatter</span></code> 。命名空间，必须以斜杠，设置为 <code class="docutils literal notranslate"><span class="pre">/demo</span></code> ，意味着话题创建命名空间 ( <code class="docutils literal notranslate"><span class="pre">/demo/my_topic</span></code> )，而不是全球 ( <code class="docutils literal notranslate"><span class="pre">/my_topic</span></code> )。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6306">[待校准&#64;6306]</a></p>
+<h3>示例 <a class="reference external" href="http://localhost:3000/#/home?msgid=6204">[待校准&#64;6204]</a><a class="headerlink" href="#example" title="永久链接至标题"></a></h3>
+<p>以下调用将导致以节点名称 <code class="docutils literal notranslate"><span class="pre">my_talker</span></code> 启动 <code class="docutils literal notranslate"><span class="pre">talker</span></code> 节点，发布名为 <code class="docutils literal notranslate"><span class="pre">my_topic</span></code> 的话题，而不是默认的 <code class="docutils literal notranslate"><span class="pre">chatter</span></code> 。命名空间，必须以斜杠，设置为 <code class="docutils literal notranslate"><span class="pre">/demo</span></code> ，意味着话题创建命名空间 ( <code class="docutils literal notranslate"><span class="pre">/demo/my_topic</span></code> )，而不是全球 ( <code class="docutils literal notranslate"><span class="pre">/my_topic</span></code> )。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6306">[待校准&#64;6306]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 run demo_nodes_cpp talker --ros-args -r __ns:<span class="o">=</span>/demo -r __node:<span class="o">=</span>my_talker -r chatter:<span class="o">=</span>my_topic
 </pre></div>
 </div>
 <div class="section" id="passing-remapping-arguments-to-specific-nodes">
-<h4>将重新映射参数传递到特定节点 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6307">[待校准&#64;6307]</a><a class="headerlink" href="#passing-remapping-arguments-to-specific-nodes" title="永久链接至标题"></a></h4>
-<p>如果在单个进程中运行多个节点 (例如，使用 <a class="reference internal" href="../Concepts/About-Composition.html"><span class="doc">Composition</span></a> )，则可以使用其名称作为前缀将重新映射参数传递给特定节点。例如，下面将重新映射参数传递给指定的节点: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6308">[待校准&#64;6308]</a></p>
+<h4>将重新映射参数传递到特定节点 <a class="reference external" href="http://localhost:3000/#/home?msgid=6307">[待校准&#64;6307]</a><a class="headerlink" href="#passing-remapping-arguments-to-specific-nodes" title="永久链接至标题"></a></h4>
+<p>如果在单个进程中运行多个节点 (例如，使用 <a class="reference internal" href="../Concepts/About-Composition.html"><span class="doc">Composition</span></a> )，则可以使用其名称作为前缀将重新映射参数传递给特定节点。例如，下面将重新映射参数传递给指定的节点: <a class="reference external" href="http://localhost:3000/#/home?msgid=6308">[待校准&#64;6308]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 run composition manual_composition --ros-args -r talker:__node:<span class="o">=</span>my_talker -r listener:__node:<span class="o">=</span>my_listener
 </pre></div>
 </div>
-<p>以下示例将更改节点名称并重新映射话题 (节点和命名空间的更改总是在重新映射话题之前应用): <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6309">[待校准&#64;6309]</a></p>
+<p>以下示例将更改节点名称并重新映射话题 (节点和命名空间的更改总是在重新映射话题之前应用): <a class="reference external" href="http://localhost:3000/#/home?msgid=6309">[待校准&#64;6309]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 run composition manual_composition --ros-args -r talker:__node:<span class="o">=</span>my_talker -r my_talker:chatter:<span class="o">=</span>my_topic -r listener:__node:<span class="o">=</span>my_listener -r my_listener:chatter:<span class="o">=</span>my_topic
 </pre></div>
 </div>
@@ -324,22 +324,22 @@
 </div>
 </div>
 <div class="section" id="logger-configuration">
-<h2>日志记录器配置 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6310">[待校准&#64;6310]</a><a class="headerlink" href="#logger-configuration" title="永久链接至标题"></a></h2>
-<p>看到 <code class="docutils literal notranslate"><span class="pre">--log-level</span></code> 参数用法在 <a class="reference internal" href="../Tutorials/Logging-and-logger-configuration.html"><span class="doc">the logging page</span></a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6311">[待校准&#64;6311]</a></p>
+<h2>日志记录器配置 <a class="reference external" href="http://localhost:3000/#/home?msgid=6310">[待校准&#64;6310]</a><a class="headerlink" href="#logger-configuration" title="永久链接至标题"></a></h2>
+<p>看到 <code class="docutils literal notranslate"><span class="pre">--log-level</span></code> 参数用法在 <a class="reference internal" href="../Tutorials/Logging-and-logger-configuration.html"><span class="doc">the logging page</span></a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6311">[待校准&#64;6311]</a></p>
 </div>
 <div class="section" id="parameters">
-<h2>参数 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6312">[待校准&#64;6312]</a><a class="headerlink" href="#parameters" title="永久链接至标题"></a></h2>
+<h2>参数 <a class="reference external" href="http://localhost:3000/#/home?msgid=6312">[待校准&#64;6312]</a><a class="headerlink" href="#parameters" title="永久链接至标题"></a></h2>
 <div class="section" id="setting-parameters-directly-from-the-command-line">
-<span id="nodeargsparameters"></span><h3>直接从命令行设置参数 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6313">[待校准&#64;6313]</a><a class="headerlink" href="#setting-parameters-directly-from-the-command-line" title="永久链接至标题"></a></h3>
-<p>您可以使用以下语法直接从命令行设置参数: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6314">[待校准&#64;6314]</a></p>
+<span id="nodeargsparameters"></span><h3>直接从命令行设置参数 <a class="reference external" href="http://localhost:3000/#/home?msgid=6313">[待校准&#64;6313]</a><a class="headerlink" href="#setting-parameters-directly-from-the-command-line" title="永久链接至标题"></a></h3>
+<p>您可以使用以下语法直接从命令行设置参数: <a class="reference external" href="http://localhost:3000/#/home?msgid=6314">[待校准&#64;6314]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 run package_name executable_name --ros-args -p param_name:<span class="o">=</span>param_value
 </pre></div>
 </div>
-<p>例如，您可以运行: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6315">[待校准&#64;6315]</a></p>
+<p>例如，您可以运行: <a class="reference external" href="http://localhost:3000/#/home?msgid=6315">[待校准&#64;6315]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 run demo_nodes_cpp parameter_blackboard --ros-args -p some_int:<span class="o">=</span><span class="m">42</span> -p <span class="s2">&quot;a_string:=Hello world&quot;</span> -p <span class="s2">&quot;some_lists.some_integers:=[1, 2, 3, 4]&quot;</span> -p <span class="s2">&quot;some_lists.some_doubles:=[3.14, 2.718]&quot;</span>
 </pre></div>
 </div>
-<p>其他节点将能够检索参数值，例如: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6316">[待校准&#64;6316]</a></p>
+<p>其他节点将能够检索参数值，例如: <a class="reference external" href="http://localhost:3000/#/home?msgid=6316">[待校准&#64;6316]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ros2 param list parameter_blackboard
 a_string
 some_int
@@ -349,10 +349,10 @@ some_lists.some_integers
 </div>
 </div>
 <div class="section" id="setting-parameters-from-yaml-files">
-<h3>从YAML文件设置参数 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6317">[待校准&#64;6317]</a><a class="headerlink" href="#setting-parameters-from-yaml-files" title="永久链接至标题"></a></h3>
-<p>参数可以从命令行以yaml文件的形式设置。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6318">[待校准&#64;6318]</a></p>
-<p>[需手动修复的语法] <a class="reference external" href="https://github.com/ros2/rcl/tree/foxy/rcl_yaml_param_parser">See here</a> yaml文件语法示例。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6319">[待校准&#64;6319]</a></p>
-<p>例如，将以下内容另存为 <code class="docutils literal notranslate"><span class="pre">demo_params.yaml</span></code> : <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6320">[待校准&#64;6320]</a></p>
+<h3>从YAML文件设置参数 <a class="reference external" href="http://localhost:3000/#/home?msgid=6317">[待校准&#64;6317]</a><a class="headerlink" href="#setting-parameters-from-yaml-files" title="永久链接至标题"></a></h3>
+<p>参数可以从命令行以yaml文件的形式设置。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6318">[待校准&#64;6318]</a></p>
+<p>[需手动修复的语法] <a class="reference external" href="https://github.com/ros2/rcl/tree/foxy/rcl_yaml_param_parser">See here</a> yaml文件语法示例。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6319">[待校准&#64;6319]</a></p>
+<p>例如，将以下内容另存为 <code class="docutils literal notranslate"><span class="pre">demo_params.yaml</span></code> : <a class="reference external" href="http://localhost:3000/#/home?msgid=6320">[待校准&#64;6320]</a></p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">parameter_blackboard</span><span class="p">:</span>
     <span class="nt">ros__parameters</span><span class="p">:</span>
         <span class="nt">some_int</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">42</span>
@@ -362,12 +362,12 @@ some_lists.some_integers
             <span class="nt">some_doubles </span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">3.14</span><span class="p p-Indicator">,</span> <span class="nv">2.718</span><span class="p p-Indicator">]</span>
 </pre></div>
 </div>
-<p>然后用 <code class="docutils literal notranslate"><span class="pre">declare_parameter</span></code> 或 <code class="docutils literal notranslate"><span class="pre">declare_parameters</span></code> 在节点中声明参数 (有关函数签名，请参阅 <a class="reference external" href="https://docs.ros2.org/foxy/api/rclcpp/classrclcpp_1_1Node.html#a222633623e5c933b7953e5718ec3649a">documentation</a> )，或者通过命令行覆盖传入 <a class="reference external" href="https://docs.ros2.org/foxy/api/rclcpp/classrclcpp_1_1NodeOptions.html#a094ceb7af7c9b358ec007a4b8e14d40d">set the node to automatically declare parameters</a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6321">[待校准&#64;6321]</a></p>
-<p>然后运行以下命令: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6322">[待校准&#64;6322]</a></p>
+<p>然后用 <code class="docutils literal notranslate"><span class="pre">declare_parameter</span></code> 或 <code class="docutils literal notranslate"><span class="pre">declare_parameters</span></code> 在节点中声明参数 (有关函数签名，请参阅 <a class="reference external" href="https://docs.ros2.org/foxy/api/rclcpp/classrclcpp_1_1Node.html#a222633623e5c933b7953e5718ec3649a">documentation</a> )，或者通过命令行覆盖传入 <a class="reference external" href="https://docs.ros2.org/foxy/api/rclcpp/classrclcpp_1_1NodeOptions.html#a094ceb7af7c9b358ec007a4b8e14d40d">set the node to automatically declare parameters</a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6321">[待校准&#64;6321]</a></p>
+<p>然后运行以下命令: <a class="reference external" href="http://localhost:3000/#/home?msgid=6322">[待校准&#64;6322]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 run demo_nodes_cpp parameter_blackboard --ros-args --params-file demo_params.yaml
 </pre></div>
 </div>
-<p>其他节点将能够检索参数值，例如: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6316">[待校准&#64;6316]</a></p>
+<p>其他节点将能够检索参数值，例如: <a class="reference external" href="http://localhost:3000/#/home?msgid=6316">[待校准&#64;6316]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ros2 param list parameter_blackboard
 a_string
 some_int
