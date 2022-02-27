@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>创建自定义ROS 2 msg 和 srv 文件 [待校准@6739] &mdash; ROS 2 documentation  文档</title>
+  <title>创建自定义ROS 2 msg 和 srv 文件 [待校准@7179] &mdash; ROS 2 documentation  文档</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
@@ -25,8 +25,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="在ROS 2接口上扩展 [待校准@7844]" href="Single-Package-Define-And-Use-Interface.html" />
-    <link rel="prev" title="编写简单的服务和客户端 (Python) [待校准@9028]" href="Writing-A-Simple-Py-Service-And-Client.html" /> 
+    <link rel="next" title="在ROS 2接口上扩展 [待校准@8284]" href="Single-Package-Define-And-Use-Interface.html" />
+    <link rel="prev" title="编写简单的服务和客户端 (Python) [待校准@9468]" href="Writing-A-Simple-Py-Service-And-Client.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -45,211 +45,211 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../Installation.html">安装 [待校准&#64;5690]</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Installation/Ubuntu-Development-Setup.html">在Ubuntu Linux上构建ROS 2 [待校准&#64;5886]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Installation/Ubuntu-Install-Binary.html">在Ubuntu Linux上安装ROS 2 [待校准&#64;5937]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Installation/Ubuntu-Install-Debians.html">通过Debian包安装ROS 2 [待校准&#64;5959]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Installation/macOS-Development-Setup.html">在macOS上构建ROS 2 [待校准&#64;6117]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Installation/macOS-Install-Binary.html">在macOS上安装ROS 2 [待校准&#64;6148]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Installation/Windows-Development-Setup.html">在Windows上构建ROS 2 [待校准&#64;5973]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Installation/Windows-Install-Binary.html">在Windows上安装ROS 2 [待校准&#64;6050]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Installation/Fedora-Development-Setup.html">在Fedora Linux上构建ROS 2 [待校准&#64;5836]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Installation/Latest-Development-Setup.html">安装最新的ROS 2开发版本 [待校准&#64;5840]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Installation/Maintaining-a-Source-Checkout.html">主源文件检出ROS 2Foxy [待校准&#64;5850]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Installation/Testing.html">用于测试的替代安装源 [待校准&#64;5873]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Installation/DDS-Implementations.html">安装DDS实现 [待校准&#64;5717]</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Install-Connext-Security-Plugins.html">安装Connext安全插件 [待校准&#64;5768]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Install-Connext-University-Eval.html">安装大学或RTI Connext DDS的评估版本 [待校准&#64;5782]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Working-with-Eclipse-CycloneDDS.html">使用EclipseCycloneDDS [待校准&#64;5796]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Working-with-GurumNetworks-GurumDDS.html">与GurumNetworks GurumDDS合作 [待校准&#64;5812]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Working-with-eProsima-Fast-DDS.html">与eProsimaFast DDS合作 [待校准&#64;5829]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Installation.html">安装 [待校准&#64;5278]</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Ubuntu-Development-Setup.html">在Ubuntu Linux上构建ROS 2 [待校准&#64;5474]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Ubuntu-Install-Binary.html">在Ubuntu Linux上安装ROS 2 [待校准&#64;5525]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Ubuntu-Install-Debians.html">通过Debian包安装ROS 2 [待校准&#64;5547]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/macOS-Development-Setup.html">在macOS上构建ROS 2 [待校准&#64;5705]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/macOS-Install-Binary.html">在macOS上安装ROS 2 [待校准&#64;5736]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Windows-Development-Setup.html">在Windows上构建ROS 2 [待校准&#64;5561]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Windows-Install-Binary.html">在Windows上安装ROS 2 [待校准&#64;5638]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Fedora-Development-Setup.html">在Fedora Linux上构建ROS 2 [待校准&#64;5424]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Latest-Development-Setup.html">安装最新的ROS 2开发版本 [待校准&#64;5428]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Maintaining-a-Source-Checkout.html">主源文件检出ROS 2Foxy [待校准&#64;5438]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Testing.html">用于测试的替代安装源 [待校准&#64;5461]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/DDS-Implementations.html">安装DDS实现 [待校准&#64;5305]</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Install-Connext-Security-Plugins.html">安装Connext安全插件 [待校准&#64;5356]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Install-Connext-University-Eval.html">安装大学或RTI Connext DDS的评估版本 [待校准&#64;5370]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Working-with-Eclipse-CycloneDDS.html">使用EclipseCycloneDDS [待校准&#64;5384]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Working-with-GurumNetworks-GurumDDS.html">与GurumNetworks GurumDDS合作 [待校准&#64;5400]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Working-with-eProsima-Fast-DDS.html">与eProsimaFast DDS合作 [待校准&#64;5417]</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../Docs-Guide.html">文档指南</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../Tutorials.html">教程 [待校准&#64;6242]</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="Configuring-ROS2-Environment.html">配置ROS 2环境 [待校准&#64;6646]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Turtlesim/Introducing-Turtlesim.html">介绍turtlesim和rqt [待校准&#64;8428]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Understanding-ROS2-Nodes.html">了解ROS 2节点 [待校准&#64;8733]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Topics/Understanding-ROS2-Topics.html">理解ROS 2话题 [待校准&#64;8368]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Services/Understanding-ROS2-Services.html">了解ROS 2服务 [待校准&#64;7742]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Parameters/Understanding-ROS2-Parameters.html">理解ROS 2参数 [待校准&#64;7371]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Understanding-ROS2-Actions.html">理解ROS 2动作 [待校准&#64;8684]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Rqt-Console/Using-Rqt-Console.html">使用rqt_控制台 [待校准&#64;7712]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Launch/CLI-Intro.html">介绍ROS 2launch [待校准&#64;7101]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Ros2bag/Recording-And-Playing-Back-Data.html">记录和回放数据 [待校准&#64;7639]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Workspace/Creating-A-Workspace.html">创建工作空间 [待校准&#64;8836]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Creating-Your-First-ROS2-Package.html">创建您的第一个ROS 2包 [待校准&#64;6677]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Writing-A-Simple-Cpp-Publisher-And-Subscriber.html">编写简单的发布者和订阅者 (c ++) [待校准&#64;8905]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Writing-A-Simple-Py-Publisher-And-Subscriber.html">编写简单的发布者和订阅者 (Python) [待校准&#64;8992]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Writing-A-Simple-Cpp-Service-And-Client.html">编写简单的服务和客户端 (c ++) [待校准&#64;8953]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Writing-A-Simple-Py-Service-And-Client.html">编写简单的服务和客户端 (Python) [待校准&#64;9028]</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">创建自定义ROS 2 msg 和 srv 文件 [待校准&#64;6739]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Single-Package-Define-And-Use-Interface.html">在ROS 2接口上扩展 [待校准&#64;7844]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Using-Parameters-In-A-Class-CPP.html">在类 (c ++) 中使用参数 [待校准&#64;8769]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Using-Parameters-In-A-Class-Python.html">在类中使用参数 (Python) [待校准&#64;8809]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Getting-Started-With-Ros2doctor.html">开始使用ros2doctor [待校准&#64;7010]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Pluginlib.html">创建和使用插件 (c ++) [待校准&#64;7411]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Actions/Creating-an-Action.html">创建动作 [待校准&#64;6271]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Actions/Writing-a-Cpp-Action-Server-Client.html">编写动作服务器和客户端 (c ++) [待校准&#64;6313]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Actions/Writing-a-Py-Action-Server-Client.html">编写动作服务器和客户端 (Python) [待校准&#64;6385]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Composition.html">在单个进程中组成多个节点 [待校准&#64;6594]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Colcon-Tutorial.html">使用colcon构建包 [待校准&#64;6535]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Launch/Launch-Main.html">Launch教程 [待校准&#64;7160]</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="Launch/Creating-Launch-Files.html">创建launch文件 [待校准&#64;7122]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Launch/Launch-system.html">[需手动修复的语法]Launch/监控多节点[需手动修复的语法]Launch [待校准&#64;7174]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Launch/Using-Substitutions.html">在launch文件中使用替换 [待校准&#64;7297]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Launch/Using-Event-Handlers.html">在launch文件中使用事件处理程序 [待校准&#64;7201]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Launch/Using-ROS2-Launch-For-Large-Projects.html">在大型项目中使用ROS 2launch [待校准&#64;7234]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Docs-Guide.html">文档指南 [待校准&#64;43]</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../Tutorials.html">教程 [待校准&#64;6682]</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Configuring-ROS2-Environment.html">配置ROS 2环境 [待校准&#64;7086]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Turtlesim/Introducing-Turtlesim.html">介绍turtlesim和rqt [待校准&#64;8868]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Understanding-ROS2-Nodes.html">了解ROS 2节点 [待校准&#64;9173]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Topics/Understanding-ROS2-Topics.html">理解ROS 2话题 [待校准&#64;8808]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Services/Understanding-ROS2-Services.html">了解ROS 2服务 [待校准&#64;8182]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Parameters/Understanding-ROS2-Parameters.html">理解ROS 2参数 [待校准&#64;7811]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Understanding-ROS2-Actions.html">理解ROS 2动作 [待校准&#64;9124]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Rqt-Console/Using-Rqt-Console.html">使用rqt_控制台 [待校准&#64;8152]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Launch/CLI-Intro.html">介绍ROS 2launch [待校准&#64;7541]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ros2bag/Recording-And-Playing-Back-Data.html">记录和回放数据 [待校准&#64;8079]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Workspace/Creating-A-Workspace.html">创建工作空间 [待校准&#64;9276]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Creating-Your-First-ROS2-Package.html">创建您的第一个ROS 2包 [待校准&#64;7117]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Writing-A-Simple-Cpp-Publisher-And-Subscriber.html">编写简单的发布者和订阅者 (c ++) [待校准&#64;9345]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Writing-A-Simple-Py-Publisher-And-Subscriber.html">编写简单的发布者和订阅者 (Python) [待校准&#64;9432]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Writing-A-Simple-Cpp-Service-And-Client.html">编写简单的服务和客户端 (c ++) [待校准&#64;9393]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Writing-A-Simple-Py-Service-And-Client.html">编写简单的服务和客户端 (Python) [待校准&#64;9468]</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">创建自定义ROS 2 msg 和 srv 文件 [待校准&#64;7179]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Single-Package-Define-And-Use-Interface.html">在ROS 2接口上扩展 [待校准&#64;8284]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Using-Parameters-In-A-Class-CPP.html">在类 (c ++) 中使用参数 [待校准&#64;9209]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Using-Parameters-In-A-Class-Python.html">在类中使用参数 (Python) [待校准&#64;9249]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Getting-Started-With-Ros2doctor.html">开始使用ros2doctor [待校准&#64;7450]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Pluginlib.html">创建和使用插件 (c ++) [待校准&#64;7851]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Actions/Creating-an-Action.html">创建动作 [待校准&#64;6711]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Actions/Writing-a-Cpp-Action-Server-Client.html">编写动作服务器和客户端 (c ++) [待校准&#64;6753]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Actions/Writing-a-Py-Action-Server-Client.html">编写动作服务器和客户端 (Python) [待校准&#64;6825]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Composition.html">在单个进程中组成多个节点 [待校准&#64;7034]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Colcon-Tutorial.html">使用colcon构建包 [待校准&#64;6975]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Launch/Launch-Main.html">Launch教程 [待校准&#64;7600]</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Launch/Creating-Launch-Files.html">创建launch文件 [待校准&#64;7562]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Launch/Launch-system.html">[需手动修复的语法]Launch/监控多节点[需手动修复的语法]Launch [待校准&#64;7614]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Launch/Using-Substitutions.html">在launch文件中使用替换 [待校准&#64;7737]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Launch/Using-Event-Handlers.html">在launch文件中使用事件处理程序 [待校准&#64;7641]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Launch/Using-ROS2-Launch-For-Large-Projects.html">在大型项目中使用ROS 2launch [待校准&#64;7674]</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="Tf2/Tf2-Main.html">tf2教程 [待校准&#64;8078]</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="Tf2/Introduction-To-Tf2.html">tf2简介 [待校准&#64;7994]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Tf2/Writing-A-Tf2-Static-Broadcaster-Py.html">编写tf2静态广播器 (Python) [待校准&#64;8299]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Tf2/Writing-A-Tf2-Static-Broadcaster-Cpp.html">编写tf2静态广播器 (c ++) [待校准&#64;8257]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Tf2/Writing-A-Tf2-Broadcaster-Py.html">编写tf2广播器 (Python) [待校准&#64;8220]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Tf2/Writing-A-Tf2-Broadcaster-Cpp.html">编写tf2广播器 (c ++) [待校准&#64;8181]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Tf2/Writing-A-Tf2-Listener-Py.html">编写tf2监听程序 (Python) [待校准&#64;8251]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Tf2/Writing-A-Tf2-Listener-Cpp.html">编写tf2监听程序 (c ++) [待校准&#64;8233]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Tf2/Adding-A-Frame-Py.html">添加帧 (Python) [待校准&#64;7950]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Tf2/Adding-A-Frame-Cpp.html">添加帧 (c ++) [待校准&#64;7914]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Tf2/Learning-About-Tf2-And-Time-Py.html">学习tf2和时间 (Python) [待校准&#64;8040]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Tf2/Learning-About-Tf2-And-Time-Cpp.html">学习tf2和时间 (c ++) [待校准&#64;8023]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Tf2/Time-Travel-With-Tf2-Py.html">时间穿梭tf2 (Python) [待校准&#64;8130]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Tf2/Time-Travel-With-Tf2-Cpp.html">时间穿梭带tf2 (C++) [待校准&#64;8105]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Tf2/Debugging-Tf2-Problems.html">调试tf2问题 [待校准&#64;7956]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Tf2/Quaternion-Fundamentals.html">四元数基金amentals [待校准&#64;8054]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.html">使用stamped数据类型与tf2_ros: MessageFilter [待校准&#64;8138]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tf2/Tf2-Main.html">tf2教程 [待校准&#64;8518]</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Tf2/Introduction-To-Tf2.html">tf2简介 [待校准&#64;8434]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tf2/Writing-A-Tf2-Static-Broadcaster-Py.html">编写tf2静态广播器 (Python) [待校准&#64;8739]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tf2/Writing-A-Tf2-Static-Broadcaster-Cpp.html">编写tf2静态广播器 (c ++) [待校准&#64;8697]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tf2/Writing-A-Tf2-Broadcaster-Py.html">编写tf2广播器 (Python) [待校准&#64;8660]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tf2/Writing-A-Tf2-Broadcaster-Cpp.html">编写tf2广播器 (c ++) [待校准&#64;8621]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tf2/Writing-A-Tf2-Listener-Py.html">编写tf2监听程序 (Python) [待校准&#64;8691]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tf2/Writing-A-Tf2-Listener-Cpp.html">编写tf2监听程序 (c ++) [待校准&#64;8673]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tf2/Adding-A-Frame-Py.html">添加帧 (Python) [待校准&#64;8390]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tf2/Adding-A-Frame-Cpp.html">添加帧 (c ++) [待校准&#64;8354]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tf2/Learning-About-Tf2-And-Time-Py.html">学习tf2和时间 (Python) [待校准&#64;8480]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tf2/Learning-About-Tf2-And-Time-Cpp.html">学习tf2和时间 (c ++) [待校准&#64;8463]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tf2/Time-Travel-With-Tf2-Py.html">时间穿梭tf2 (Python) [待校准&#64;8570]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tf2/Time-Travel-With-Tf2-Cpp.html">时间穿梭带tf2 (C++) [待校准&#64;8545]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tf2/Debugging-Tf2-Problems.html">调试tf2问题 [待校准&#64;8396]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tf2/Quaternion-Fundamentals.html">四元数基金amentals [待校准&#64;8494]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.html">使用stamped数据类型与tf2_ros: MessageFilter [待校准&#64;8578]</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="URDF/URDF-Main.html">URDF教程 [待校准&#64;8607]</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="URDF/Building-a-Visual-Robot-Model-with-URDF-from-Scratch.html">从头开始用URDF构建视觉机器人模型 [待校准&#64;8556]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="URDF/Building-a-Movable-Robot-Model-with-URDF.html">用URDF建立可移动机器人模型 [待校准&#64;8534]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="URDF/Adding-Physical-and-Collision-Properties-to-a-URDF-Model.html">向URDF模型添加物理和碰撞属性 [待校准&#64;8487]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="URDF/Using-Xacro-to-Clean-Up-a-URDF-File.html">使用Xacro清理URDF文件 [待校准&#64;8635]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="URDF/Using-URDF-with-Robot-State-Publisher.html">将URDF与robot_state_发布者结合使用 [待校准&#64;8609]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="URDF/URDF-Main.html">URDF教程 [待校准&#64;9047]</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="URDF/Building-a-Visual-Robot-Model-with-URDF-from-Scratch.html">从头开始用URDF构建视觉机器人模型 [待校准&#64;8996]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDF/Building-a-Movable-Robot-Model-with-URDF.html">用URDF建立可移动机器人模型 [待校准&#64;8974]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDF/Adding-Physical-and-Collision-Properties-to-a-URDF-Model.html">向URDF模型添加物理和碰撞属性 [待校准&#64;8927]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDF/Using-Xacro-to-Clean-Up-a-URDF-File.html">使用Xacro清理URDF文件 [待校准&#64;9075]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="URDF/Using-URDF-with-Robot-State-Publisher.html">将URDF与robot_state_发布者结合使用 [待校准&#64;9049]</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="Topics/Topic-Statistics-Tutorial.html">ROS 2话题统计教程 (c ++) [待校准&#64;8311]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Discovery-Server/Discovery-Server.html">使用Fast DDS Discovery Server作为发现协议 [社区贡献] [待校准&#64;6879]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Allocator-Template-Tutorial.html">实现自定义内存分配器 [待校准&#64;6445]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Simulators/Webots/Setting-up-a-Robot-Simulation-Webots.html">设置机器人仿真 (Webots) [待校准&#64;7782]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Deploying-ROS-2-on-IBM-Cloud.html">IBM Cloud Kubernetes上的ROS2 [社区-贡献] [待校准&#64;6792]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Eclipse-Oxygen-with-ROS-2-and-rviz2.html">带有ROS 2和rviz2的Eclipse Oxygen [社区贡献] [待校准&#64;6947]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Building-Realtime-rt_preempt-kernel-for-ROS-2.html">为ROS 2构建实时Linux [社区-贡献] [待校准&#64;6514]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Ros2bag/Recording-A-Bag-From-Your-Own-Node.html">从您自己的节点记录一个包 [待校准&#64;7554]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Building-ROS2-Package-with-eclipse-2021-06.html">使用eclipse 2021-06构建ROS 2包 [待校准&#64;6486]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Quality-of-Service.html">使用服务质量设置处理有损网络 [待校准&#64;7462]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Managed-Nodes.html">具有托管生命周期的节点管理 [待校准&#64;7369]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Intra-Process-Communication.html">高效的流程内通讯 [待校准&#64;7051]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Rosbag-with-ROS1-Bridge.html">使用ROS 1bridge用rosbag记录和回放话题数据 [待校准&#64;7685]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Real-Time-Programming.html">ROS 2中的实时编程 [待校准&#64;7491]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dummy-robot-demo.html">尝试dummy robot例程 [待校准&#64;9056]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Logging-and-logger-configuration.html">日志和日志记录器配置例程 [待校准&#64;7322]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Topics/Topic-Statistics-Tutorial.html">ROS 2话题统计教程 (c ++) [待校准&#64;8751]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Discovery-Server/Discovery-Server.html">使用Fast DDS Discovery Server作为发现协议 [社区贡献] [待校准&#64;7319]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Allocator-Template-Tutorial.html">实现自定义内存分配器 [待校准&#64;6885]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Simulators/Webots/Setting-up-a-Robot-Simulation-Webots.html">设置机器人仿真 (Webots) [待校准&#64;8222]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Deploying-ROS-2-on-IBM-Cloud.html">IBM Cloud Kubernetes上的ROS2 [社区-贡献] [待校准&#64;7232]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Eclipse-Oxygen-with-ROS-2-and-rviz2.html">带有ROS 2和rviz2的Eclipse Oxygen [社区贡献] [待校准&#64;7387]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Building-Realtime-rt_preempt-kernel-for-ROS-2.html">为ROS 2构建实时Linux [社区-贡献] [待校准&#64;6954]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ros2bag/Recording-A-Bag-From-Your-Own-Node.html">从您自己的节点记录一个包 [待校准&#64;7994]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Building-ROS2-Package-with-eclipse-2021-06.html">使用eclipse 2021-06构建ROS 2包 [待校准&#64;6926]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Quality-of-Service.html">使用服务质量设置处理有损网络 [待校准&#64;7902]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Managed-Nodes.html">具有托管生命周期的节点管理 [待校准&#64;7809]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Intra-Process-Communication.html">高效的流程内通讯 [待校准&#64;7491]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Rosbag-with-ROS1-Bridge.html">使用ROS 1bridge用rosbag记录和回放话题数据 [待校准&#64;8125]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Real-Time-Programming.html">ROS 2中的实时编程 [待校准&#64;7931]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dummy-robot-demo.html">尝试dummy robot例程 [待校准&#64;9496]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Logging-and-logger-configuration.html">日志和日志记录器配置例程 [待校准&#64;7762]</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../How-To-Guides.html">操作指南 [待校准&#64;204]</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Installation-Troubleshooting.html">安装故障诊断工具 [待校准&#64;535]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Developing-a-ROS-2-Package.html">开发ROS 2包 [待校准&#64;514]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Ament-CMake-Documentation.html">[需手动修复的语法]ament _ cmake用户文档 [待校准&#64;208]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Ament-CMake-Python-Documentation.html">[需手动修复的语法]ament _ cmake_python用户文档 [待校准&#64;360]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Launch-files-migration-guide.html">迁移launch文件ROS 1ROS 2 [待校准&#64;638]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Launch-file-different-formats.html">对ROS 2Launch文件使用Python、XML和YAML [待校准&#64;611]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Launching-composable-nodes.html">使用ROS 2launch到launch可组合节点 [待校准&#64;733]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Parameters-YAML-files-migration-guide.html">将YAML参数文件从ROS 1迁移到ROS 2 [待校准&#64;850]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Node-arguments.html">通过命令行将ROS参数传递给节点 [待校准&#64;746]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Sync-Vs-Async.html">同步与异步服务客户端 [待校准&#64;972]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/DDS-tuning.html">DDS调谐信息 [待校准&#64;470]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Overriding-QoS-Policies-For-Recording-And-Playback.html">rosbag2: 重载QoS策略 [待校准&#64;772]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Working-with-multiple-RMW-implementations.html">使用多个ROS 2中间件实现 [待校准&#64;1068]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Cross-compilation.html">交叉编译 [待校准&#64;383]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Releasing-a-ROS-2-package-with-bloom.html">发布带有bloom的ROS 2包 [待校准&#64;937]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Using-Python-Packages.html">将Python包与ROS 2结合使用 [待校准&#64;1011]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/RQt-Port-Plugin-Windows.html">将RQt插件移植到Windows [待校准&#64;862]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Run-2-nodes-in-single-or-separate-docker-containers.html">在Docker中运行ROS 2节点 [社区-贡献] [待校准&#64;959]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Package-maintainer-guide.html">ROS 2包维护者指南 [待校准&#64;785]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Building-a-Custom-Debian-Package.html">构建自定义Debian包 [待校准&#64;371]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Topics-Services-Actions.html">话题vs服务vsAction [待校准&#64;997]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Using-Variants.html">使用变体 [待校准&#64;1031]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Using-ros2-param.html">使用 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span></code> 命令行工具 [待校准&#64;1046]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/RQt-Source-Install.html">从源文件构建RQt [待校准&#64;883]</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../How-To-Guides/RQt-Source-Install-MacOS.html">在macOS上从源文件构建RQt [待校准&#64;908]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../How-To-Guides/RQt-Source-Install-Windows10.html">在Windows 10上从源文件构建RQt [待校准&#64;916]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../How-To-Guides.html">操作指南 [待校准&#64;5755]</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Installation-Troubleshooting.html">安装故障诊断工具 [待校准&#64;6086]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Developing-a-ROS-2-Package.html">开发ROS 2包 [待校准&#64;6065]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Ament-CMake-Documentation.html">[需手动修复的语法]ament _ cmake用户文档 [待校准&#64;5759]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Ament-CMake-Python-Documentation.html">[需手动修复的语法]ament _ cmake_python用户文档 [待校准&#64;5911]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Launch-files-migration-guide.html">迁移launch文件ROS 1ROS 2 [待校准&#64;6189]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Launch-file-different-formats.html">对ROS 2Launch文件使用Python、XML和YAML [待校准&#64;6162]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Launching-composable-nodes.html">使用ROS 2launch到launch可组合节点 [待校准&#64;6284]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Parameters-YAML-files-migration-guide.html">将YAML参数文件从ROS 1迁移到ROS 2 [待校准&#64;6401]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Node-arguments.html">通过命令行将ROS参数传递给节点 [待校准&#64;6297]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Sync-Vs-Async.html">同步与异步服务客户端 [待校准&#64;6523]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/DDS-tuning.html">DDS调谐信息 [待校准&#64;6021]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Overriding-QoS-Policies-For-Recording-And-Playback.html">rosbag2: 重载QoS策略 [待校准&#64;6323]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Working-with-multiple-RMW-implementations.html">使用多个ROS 2中间件实现 [待校准&#64;6619]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Cross-compilation.html">交叉编译 [待校准&#64;5934]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Releasing-a-ROS-2-package-with-bloom.html">发布带有bloom的ROS 2包 [待校准&#64;6488]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Using-Python-Packages.html">将Python包与ROS 2结合使用 [待校准&#64;6562]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/RQt-Port-Plugin-Windows.html">将RQt插件移植到Windows [待校准&#64;6413]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Run-2-nodes-in-single-or-separate-docker-containers.html">在Docker中运行ROS 2节点 [社区-贡献] [待校准&#64;6510]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Package-maintainer-guide.html">ROS 2包维护者指南 [待校准&#64;6336]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Building-a-Custom-Debian-Package.html">构建自定义Debian包 [待校准&#64;5922]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Topics-Services-Actions.html">话题vs服务vsAction [待校准&#64;6548]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Using-Variants.html">使用变体 [待校准&#64;6582]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Using-ros2-param.html">使用 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span></code> 命令行工具 [待校准&#64;6597]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/RQt-Source-Install.html">从源文件构建RQt [待校准&#64;6434]</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../How-To-Guides/RQt-Source-Install-MacOS.html">在macOS上从源文件构建RQt [待校准&#64;6459]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../How-To-Guides/RQt-Source-Install-Windows10.html">在Windows 10上从源文件构建RQt [待校准&#64;6467]</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../Concepts.html">概念 [待校准&#64;4938]</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Domain-ID.html">ROS_DOMAIN_ID [待校准&#64;5194]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Different-Middleware-Vendors.html">关于不同的ROS 2 DDS/RTPS供应商 [待校准&#64;5153]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Logging.html">关于日志和日志记录器配置 [待校准&#64;5325]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Quality-of-Service-Settings.html">关于服务质量设置 [待校准&#64;5369]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-ROS-2-Client-Libraries.html">关于ROS 2客户端库 [待校准&#64;5459]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-ROS-Interfaces.html">关于ROS 2接口 [待校准&#64;5526]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-ROS-2-Parameters.html">关于ROS 2中的参数 [待校准&#64;5490]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Executors.html">执行器 [待校准&#64;5227]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Topic-Statistics.html">关于话题统计 [待校准&#64;5671]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Command-Line-Tools.html">使用命令行工具进行自检 [待校准&#64;5091]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-RQt.html">RQt的概述和使用 [待校准&#64;5625]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Composition.html">关于组件 [待校准&#64;5119]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Catment.html">[需手动修复的语法]ament和catkin的混合研究 [待校准&#64;5019]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Cross-Compilation.html">关于交叉编译 [待校准&#64;5141]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Tf2.html">关于tf2 [待校准&#64;5653]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Build-System.html">关于构建系统 [待校准&#64;4969]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Internal-Interfaces.html">关于内部ROS 2接口 [待校准&#64;5265]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Middleware-Implementations.html">关于ROS 2中间件实现 [待校准&#64;5347]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Client-Interfaces.html">ROS 2客户端接口 (客户端库) [待校准&#64;5079]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Concepts.html">概念 [待校准&#64;9514]</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Domain-ID.html">ROS_DOMAIN_ID [待校准&#64;9770]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Different-Middleware-Vendors.html">关于不同的ROS 2 DDS/RTPS供应商 [待校准&#64;9729]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Logging.html">关于日志和日志记录器配置 [待校准&#64;9901]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Quality-of-Service-Settings.html">关于服务质量设置 [待校准&#64;9945]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-ROS-2-Client-Libraries.html">关于ROS 2客户端库 [待校准&#64;10035]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-ROS-Interfaces.html">关于ROS 2接口 [待校准&#64;10102]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-ROS-2-Parameters.html">关于ROS 2中的参数 [待校准&#64;10066]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Executors.html">执行器 [待校准&#64;9803]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Topic-Statistics.html">关于话题统计 [待校准&#64;10247]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Command-Line-Tools.html">使用命令行工具进行自检 [待校准&#64;9667]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-RQt.html">RQt的概述和使用 [待校准&#64;10201]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Composition.html">关于组件 [待校准&#64;9695]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Catment.html">[需手动修复的语法]ament和catkin的混合研究 [待校准&#64;9595]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Cross-Compilation.html">关于交叉编译 [待校准&#64;9717]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Tf2.html">关于tf2 [待校准&#64;10229]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Build-System.html">关于构建系统 [待校准&#64;9545]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Internal-Interfaces.html">关于内部ROS 2接口 [待校准&#64;9841]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Middleware-Implementations.html">关于ROS 2中间件实现 [待校准&#64;9923]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Client-Interfaces.html">ROS 2客户端接口 (客户端库) [待校准&#64;9655]</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../Contributing.html">贡献 [待校准&#64;9128]</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Contributing/Developer-Guide.html">ROS 2开发人员指南 [待校准&#64;9430]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Contributing/Code-Style-Language-Versions.html">代码样式和语言版本 [待校准&#64;9212]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Contributing/Quality-Guide.html">质量指南: 确保代码质量 [待校准&#64;10012]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Contributing/Migration-Guide.html">从ROS 1迁移指南 [待校准&#64;9780]</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Contributing/Migration-Guide-Python.html">来自ROS 1的Python迁移指南 [待校准&#64;10003]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Contributing.html">贡献 [待校准&#64;147]</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Contributing/Developer-Guide.html">ROS 2开发人员指南 [待校准&#64;449]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Contributing/Code-Style-Language-Versions.html">代码样式和语言版本 [待校准&#64;231]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Contributing/Quality-Guide.html">质量指南: 确保代码质量 [待校准&#64;1031]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Contributing/Migration-Guide.html">从ROS 1迁移指南 [待校准&#64;799]</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Contributing/Migration-Guide-Python.html">来自ROS 1的Python迁移指南 [待校准&#64;1022]</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../Contributing/Build-Farms.html">ROS Build Farms [待校准&#64;9167]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Contributing/Windows-Tips-and-Tricks.html">Windows提示和技巧 [待校准&#64;10105]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Contributing/Contributing-To-ROS-2-Documentation.html">为ROS 2文档做出贡献 [待校准&#64;9366]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Contributing/Build-Farms.html">ROS Build Farms [待校准&#64;186]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Contributing/Windows-Tips-and-Tricks.html">Windows提示和技巧 [待校准&#64;1124]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Contributing/Contributing-To-ROS-2-Documentation.html">为ROS 2文档做出贡献 [待校准&#64;385]</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../Contact.html">联系人 [待校准&#64;6167]</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../ROSCon-Content.html">ROSCon内容 [待校准&#64;105]</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Releases.html">发行版 [待校准&#64;1233]</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Releases/Alpha-Overview.html">ROS 2 α 发行版本 (2015年8月-2016年10月) [待校准&#64;1306]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Releases/Beta1-Overview.html">贝塔1 (代号'Asphalt'; 2016年12月) [待校准&#64;1386]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Releases/Beta2-Overview.html">贝塔2 (代号'r2b2'; 2017年7月) [待校准&#64;1420]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Releases/Beta3-Overview.html">贝塔3 (代号'r2b3'; 2017年9月) [待校准&#64;1451]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Ardent-Apalone.html">ROS 2Ardent阿帕隆 (代号'ardent'; 2017年12月) [待校准&#64;4089]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Bouncy-Bolson.html">ROS 2 Bouncy Bolson (代号'bouncy'; 2018年6月) [待校准&#64;4130]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Crystal-Clemmys.html">ROS 2Crystal Clemmys (代号'crystal'; 2018年12月) [待校准&#64;4158]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Dashing-Diademata.html">ROS 2DashingDiademata (代号'dashing'; 2019年5月31日) [待校准&#64;4237]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Eloquent-Elusor.html">ROS 2EloquentElusor (代号'eloquent'; 2019年11月22日) [待校准&#64;4427]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Foxy-Fitzroy.html">ROS 2FoxyFitzroy (代号'foxy'; 2020年6月5日) [待校准&#64;4503]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Galactic-Geochelone.html">ROS 2GalacticGeochelone (代号'galactic'; 2021年5月) [待校准&#64;4649]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Releases/Galactic-Geochelone-Complete-Changelog.html">ROS 2GalacticGeochelone完整变更日志 [待校准&#64;1470]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Humble-Hawksbill.html">ROS 2Humble Hawksbill (代号'humble'; 2022年5月) [待校准&#64;4845]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Rolling-Ridley.html">ROS 2Rolling Ridley (代号'rolling'; 2020年6月) [待校准&#64;4929]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Contact.html">联系人 [待校准&#64;17]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ROSCon-Content.html">ROSCon内容 [待校准&#64;10266]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Releases.html">发行版 [待校准&#64;1454]</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Alpha-Overview.html">ROS 2 α 发行版本 (2015年8月-2016年10月) [待校准&#64;1527]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Beta1-Overview.html">贝塔1 (代号'Asphalt'; 2016年12月) [待校准&#64;1607]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Beta2-Overview.html">贝塔2 (代号'r2b2'; 2017年7月) [待校准&#64;1641]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Beta3-Overview.html">贝塔3 (代号'r2b3'; 2017年9月) [待校准&#64;1672]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Ardent-Apalone.html">ROS 2Ardent阿帕隆 (代号'ardent'; 2017年12月) [待校准&#64;4310]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Bouncy-Bolson.html">ROS 2 Bouncy Bolson (代号'bouncy'; 2018年6月) [待校准&#64;4351]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Crystal-Clemmys.html">ROS 2Crystal Clemmys (代号'crystal'; 2018年12月) [待校准&#64;4379]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Dashing-Diademata.html">ROS 2DashingDiademata (代号'dashing'; 2019年5月31日) [待校准&#64;4458]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Eloquent-Elusor.html">ROS 2EloquentElusor (代号'eloquent'; 2019年11月22日) [待校准&#64;4648]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Foxy-Fitzroy.html">ROS 2FoxyFitzroy (代号'foxy'; 2020年6月5日) [待校准&#64;4724]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Galactic-Geochelone.html">ROS 2GalacticGeochelone (代号'galactic'; 2021年5月) [待校准&#64;4870]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Galactic-Geochelone-Complete-Changelog.html">ROS 2GalacticGeochelone完整变更日志 [待校准&#64;1691]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Humble-Hawksbill.html">ROS 2Humble Hawksbill (代号'humble'; 2022年5月) [待校准&#64;5066]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Rolling-Ridley.html">ROS 2Rolling Ridley (代号'rolling'; 2020年6月) [待校准&#64;5150]</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../Features.html">功能状态 [待校准&#64;9074]</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Roadmap.html">路线图 [待校准&#64;45]</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Feature-Ideas.html">特色创意 [待校准&#64;1123]</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Governance.html">项目管理 [待校准&#64;10131]</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Governance/ROS2-TSC-Charter.html">ROS 2技术指导委员会章程 [待校准&#64;10280]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Governance/ROS2-TSC-Intake-process.html">ROS 2 TSC申请人摄入流程 [待校准&#64;10368]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Governance/How-To-Start-A-Community-Working-Group.html">如何成立社区工作组 [待校准&#64;10253]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Features.html">功能状态 [待校准&#64;10365]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Roadmap.html">路线图 [待校准&#64;87]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Feature-Ideas.html">特色创意 [待校准&#64;5184]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Governance.html">项目管理 [待校准&#64;1150]</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Governance/ROS2-TSC-Charter.html">ROS 2技术指导委员会章程 [待校准&#64;1299]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Governance/ROS2-TSC-Intake-process.html">ROS 2 TSC申请人摄入流程 [待校准&#64;1387]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Governance/How-To-Start-A-Community-Working-Group.html">如何成立社区工作组 [待校准&#64;1272]</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../Marketing.html">营销材料 [待校准&#64;6193]</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Related-Projects.html">相关项目 [待校准&#64;6209]</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Related-Projects/Intel-ROS2-Projects.html">[需手动修复的语法]IntelROS 2项目 [待校准&#64;6210]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Related-Projects/Nvidia-ROS2-Projects.html">[需手动修复的语法]NVIDIAROS 2项目 [待校准&#64;6228]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Marketing.html">营销材料 [待校准&#64;1438]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Related-Projects.html">相关项目 [待校准&#64;6649]</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Related-Projects/Intel-ROS2-Projects.html">[需手动修复的语法]IntelROS 2项目 [待校准&#64;6650]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Related-Projects/Nvidia-ROS2-Projects.html">[需手动修复的语法]NVIDIAROS 2项目 [待校准&#64;6668]</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../Glossary.html">术语表 [待校准&#64;1217]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Glossary.html">相关术语 `[小鱼&#64;1] http://dev.ros2.fishros.com/calibpage/#/home?msgid=1&gt;`_</a></li>
 </ul>
 
         </div>
@@ -266,8 +266,8 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../Tutorials.html">教程 [待校准&#64;6242]</a> &raquo;</li>
-      <li>创建自定义ROS 2 msg 和 srv 文件 [待校准&#64;6739]</li>
+          <li><a href="../Tutorials.html">教程 [待校准&#64;6682]</a> &raquo;</li>
+      <li>创建自定义ROS 2 msg 和 srv 文件 [待校准&#64;7179]</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/ros2/ros2_documentation/blob/foxy/source/Tutorials/Custom-ROS2-Interfaces.rst" class="fa fa-github"> 在 GitHub 上修改</a>
       </li>
@@ -280,51 +280,51 @@
 
 
   <div class="section" id="creating-custom-ros-2-msg-and-srv-files">
-<span id="custominterfaces"></span><h1>创建自定义ROS 2 msg 和 srv 文件 <a class="reference external" href="http://localhost:3000/#/home?msgid=6739">[待校准&#64;6739]</a><a class="headerlink" href="#creating-custom-ros-2-msg-and-srv-files" title="永久链接至标题"></a></h1>
-<p>Goal目标: Define定义自定义接口文件 ( <code class="docutils literal notranslate"><span class="pre">.msg</span></code> 和 <code class="docutils literal notranslate"><span class="pre">.srv</span></code> )，并将其与Python和c nodes节点一起使用。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6740">[待校准&#64;6740]</a></p>
-<p>Tutorial教程级别: Beginner初学者 <a class="reference external" href="http://localhost:3000/#/home?msgid=6648">[待校准&#64;6648]</a></p>
-<p>Time时间: 20 20分钟 <a class="reference external" href="http://localhost:3000/#/home?msgid=6741">[待校准&#64;6741]</a></p>
+<span id="custominterfaces"></span><h1>创建自定义ROS 2 msg 和 srv 文件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7179">[待校准&#64;7179]</a><a class="headerlink" href="#creating-custom-ros-2-msg-and-srv-files" title="永久链接至标题"></a></h1>
+<p>Goal目标: Define定义自定义接口文件 ( <code class="docutils literal notranslate"><span class="pre">.msg</span></code> 和 <code class="docutils literal notranslate"><span class="pre">.srv</span></code> )，并将其与Python和c nodes节点一起使用。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7180">[待校准&#64;7180]</a></p>
+<p>Tutorial教程级别: Beginner初学者 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7088">[待校准&#64;7088]</a></p>
+<p>Time时间: 20 20分钟 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7181">[待校准&#64;7181]</a></p>
 <div class="contents local topic" id="contents">
-<p class="topic-title">内容 <a class="reference external" href="http://localhost:3000/#/home?msgid=6275">[待校准&#64;6275]</a></p>
+<p class="topic-title">内容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6715">[待校准&#64;6715]</a></p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#background" id="id1">背景 [待校准&#64;6276]</a></p></li>
-<li><p><a class="reference internal" href="#prerequisites" id="id2">先决条件 [待校准&#64;6278]</a></p></li>
-<li><p><a class="reference internal" href="#tasks" id="id3">任务 [待校准&#64;6285]</a></p>
+<li><p><a class="reference internal" href="#background" id="id1">背景 [待校准&#64;6716]</a></p></li>
+<li><p><a class="reference internal" href="#prerequisites" id="id2">先决条件 [待校准&#64;6718]</a></p></li>
+<li><p><a class="reference internal" href="#tasks" id="id3">任务 [待校准&#64;6725]</a></p>
 <ul>
-<li><p><a class="reference internal" href="#create-a-new-package" id="id4">1创建一个新包 [待校准&#64;6746]</a></p></li>
-<li><p><a class="reference internal" href="#create-custom-definitions" id="id5">2创建自定义 [待校准&#64;6751]</a></p></li>
-<li><p><a class="reference internal" href="#cmakelists-txt" id="id6">3  <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code>  [待校准&#64;6758]</a></p></li>
-<li><p><a class="reference internal" href="#package-xml" id="id7">4  <code class="docutils literal notranslate"><span class="pre">package.xml</span></code>  [待校准&#64;6760]</a></p></li>
-<li><p><a class="reference internal" href="#build-the-tutorial-interfaces-package" id="id8">5构建 <code class="docutils literal notranslate"><span class="pre">tutorial_interfaces</span></code> 包 [待校准&#64;6762]</a></p></li>
-<li><p><a class="reference internal" href="#confirm-msg-and-srv-creation" id="id9">6确认 msg 和 srv 的创造 [待校准&#64;6765]</a></p></li>
-<li><p><a class="reference internal" href="#test-the-new-interfaces" id="id10">7测试新界面 [待校准&#64;6770]</a></p></li>
+<li><p><a class="reference internal" href="#create-a-new-package" id="id4">1创建一个新包 [待校准&#64;7186]</a></p></li>
+<li><p><a class="reference internal" href="#create-custom-definitions" id="id5">2创建自定义 [待校准&#64;7191]</a></p></li>
+<li><p><a class="reference internal" href="#cmakelists-txt" id="id6">3  <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code>  [待校准&#64;7198]</a></p></li>
+<li><p><a class="reference internal" href="#package-xml" id="id7">4  <code class="docutils literal notranslate"><span class="pre">package.xml</span></code>  [待校准&#64;7200]</a></p></li>
+<li><p><a class="reference internal" href="#build-the-tutorial-interfaces-package" id="id8">5构建 <code class="docutils literal notranslate"><span class="pre">tutorial_interfaces</span></code> 包 [待校准&#64;7202]</a></p></li>
+<li><p><a class="reference internal" href="#confirm-msg-and-srv-creation" id="id9">6确认 msg 和 srv 的创造 [待校准&#64;7205]</a></p></li>
+<li><p><a class="reference internal" href="#test-the-new-interfaces" id="id10">7测试新界面 [待校准&#64;7210]</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#summary" id="id11">总结 [待校准&#64;6307]</a></p></li>
-<li><p><a class="reference internal" href="#next-steps" id="id12">下一步 [待校准&#64;6309]</a></p></li>
+<li><p><a class="reference internal" href="#summary" id="id11">总结 [待校准&#64;6747]</a></p></li>
+<li><p><a class="reference internal" href="#next-steps" id="id12">下一步 [待校准&#64;6749]</a></p></li>
 </ul>
 </div>
 <div class="section" id="background">
-<h2>背景 <a class="reference external" href="http://localhost:3000/#/home?msgid=6276">[待校准&#64;6276]</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
-<p>在之前的教程中，您利用消息和服务接口来了解 <a class="reference internal" href="Topics/Understanding-ROS2-Topics.html"><span class="doc">topics</span></a>, <a class="reference internal" href="Services/Understanding-ROS2-Services.html"><span class="doc">services</span></a>, and simple publisher/subscriber (<a class="reference internal" href="Writing-A-Simple-Cpp-Publisher-And-Subscriber.html"><span class="doc">C++</span></a>/<a class="reference internal" href="Writing-A-Simple-Py-Publisher-And-Subscriber.html"><span class="doc">Python</span></a>) and service/client (<a class="reference internal" href="Writing-A-Simple-Cpp-Service-And-Client.html"><span class="doc">C++</span></a>/<a class="reference internal" href="Writing-A-Simple-Py-Service-And-Client.html"><span class="doc">Python</span></a> 节点。在这些情况下，您使用的接口是预定义的。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6742">[待校准&#64;6742]</a></p>
-<p>虽然使用预定义的接口定义是一个很好的做法，但有时您可能还需要定义自己的消息和服务。本教程将向您介绍创建自定义界面定义的最简单方法。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6743">[待校准&#64;6743]</a></p>
+<h2>背景 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6716">[待校准&#64;6716]</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
+<p>在之前的教程中，您利用消息和服务接口来了解 <a class="reference internal" href="Topics/Understanding-ROS2-Topics.html"><span class="doc">topics</span></a>, <a class="reference internal" href="Services/Understanding-ROS2-Services.html"><span class="doc">services</span></a>, and simple publisher/subscriber (<a class="reference internal" href="Writing-A-Simple-Cpp-Publisher-And-Subscriber.html"><span class="doc">C++</span></a>/<a class="reference internal" href="Writing-A-Simple-Py-Publisher-And-Subscriber.html"><span class="doc">Python</span></a>) and service/client (<a class="reference internal" href="Writing-A-Simple-Cpp-Service-And-Client.html"><span class="doc">C++</span></a>/<a class="reference internal" href="Writing-A-Simple-Py-Service-And-Client.html"><span class="doc">Python</span></a> 节点。在这些情况下，您使用的接口是预定义的。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7182">[待校准&#64;7182]</a></p>
+<p>虽然使用预定义的接口定义是一个很好的做法，但有时您可能还需要定义自己的消息和服务。本教程将向您介绍创建自定义界面定义的最简单方法。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7183">[待校准&#64;7183]</a></p>
 </div>
 <div class="section" id="prerequisites">
-<h2>先决条件 <a class="reference external" href="http://localhost:3000/#/home?msgid=6278">[待校准&#64;6278]</a><a class="headerlink" href="#prerequisites" title="永久链接至标题"></a></h2>
-<p>你应该有一个 <a class="reference internal" href="Workspace/Creating-A-Workspace.html"><span class="doc">ROS 2 workspace</span></a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6744">[待校准&#64;6744]</a></p>
-<p>本教程还使用发布者/订阅者 ( <a class="reference internal" href="Writing-A-Simple-Cpp-Publisher-And-Subscriber.html"><span class="doc">C++</span></a> and <a class="reference internal" href="Writing-A-Simple-Py-Publisher-And-Subscriber.html"><span class="doc">Python</span></a>) and service/client  (<a class="reference internal" href="Writing-A-Simple-Cpp-Service-And-Client.html"><span class="doc">C++</span></a> and <a class="reference internal" href="Writing-A-Simple-Py-Service-And-Client.html"><span class="doc">Python</span></a> ) 教程中创建的包来试用新的自定义消息。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6745">[待校准&#64;6745]</a></p>
+<h2>先决条件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6718">[待校准&#64;6718]</a><a class="headerlink" href="#prerequisites" title="永久链接至标题"></a></h2>
+<p>你应该有一个 <a class="reference internal" href="Workspace/Creating-A-Workspace.html"><span class="doc">ROS 2 workspace</span></a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7184">[待校准&#64;7184]</a></p>
+<p>本教程还使用发布者/订阅者 ( <a class="reference internal" href="Writing-A-Simple-Cpp-Publisher-And-Subscriber.html"><span class="doc">C++</span></a> and <a class="reference internal" href="Writing-A-Simple-Py-Publisher-And-Subscriber.html"><span class="doc">Python</span></a>) and service/client  (<a class="reference internal" href="Writing-A-Simple-Cpp-Service-And-Client.html"><span class="doc">C++</span></a> and <a class="reference internal" href="Writing-A-Simple-Py-Service-And-Client.html"><span class="doc">Python</span></a> ) 教程中创建的包来试用新的自定义消息。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7185">[待校准&#64;7185]</a></p>
 </div>
 <div class="section" id="tasks">
-<h2>任务 <a class="reference external" href="http://localhost:3000/#/home?msgid=6285">[待校准&#64;6285]</a><a class="headerlink" href="#tasks" title="永久链接至标题"></a></h2>
+<h2>任务 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6725">[待校准&#64;6725]</a><a class="headerlink" href="#tasks" title="永久链接至标题"></a></h2>
 <div class="section" id="create-a-new-package">
-<h3>1创建一个新包 <a class="reference external" href="http://localhost:3000/#/home?msgid=6746">[待校准&#64;6746]</a><a class="headerlink" href="#create-a-new-package" title="永久链接至标题"></a></h3>
-<p>在本教程中，您将在自己的包中创建自定义 <code class="docutils literal notranslate"><span class="pre">.msg</span></code> 和 <code class="docutils literal notranslate"><span class="pre">.srv</span></code> 文件，然后在单独的包中使用它们。两个包应位于同一工作区中。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6747">[待校准&#64;6747]</a></p>
-<p>由于我们将使用在早期教程中创建的发布/订阅和服务/客户端包，请确保您与这些包 ( <code class="docutils literal notranslate"><span class="pre">dev_ws/src</span></code> ) 位于同一工作区，然后运行以下命令以创建新包: <a class="reference external" href="http://localhost:3000/#/home?msgid=6748">[待校准&#64;6748]</a></p>
+<h3>1创建一个新包 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7186">[待校准&#64;7186]</a><a class="headerlink" href="#create-a-new-package" title="永久链接至标题"></a></h3>
+<p>在本教程中，您将在自己的包中创建自定义 <code class="docutils literal notranslate"><span class="pre">.msg</span></code> 和 <code class="docutils literal notranslate"><span class="pre">.srv</span></code> 文件，然后在单独的包中使用它们。两个包应位于同一工作区中。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7187">[待校准&#64;7187]</a></p>
+<p>由于我们将使用在早期教程中创建的发布/订阅和服务/客户端包，请确保您与这些包 ( <code class="docutils literal notranslate"><span class="pre">dev_ws/src</span></code> ) 位于同一工作区，然后运行以下命令以创建新包: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7188">[待校准&#64;7188]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 pkg create --build-type ament_cmake tutorial_interfaces</span>
 </pre></div>
 </div>
-<p>纯蟒蛇皮包装的``tutorial_interfaces`` is the name of the new package. Note that it is a CMake package; there currently isn’t a way to generate a <code class="docutils literal notranslate"><span class="pre">.msg</span></code> or <code class="docutils literal notranslate"><span class="pre">.srv</span></code> file。您可以在CMake包中创建一个自定义接口，然后在Python节点中使用它，这将在最后一节中介绍。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6749">[待校准&#64;6749]</a></p>
-<p>最好将 <code class="docutils literal notranslate"><span class="pre">.msg</span></code> 和 <code class="docutils literal notranslate"><span class="pre">.srv</span></code> 文件保存在包中自己的目录中。在 <code class="docutils literal notranslate"><span class="pre">dev_ws/src/tutorial_interfaces</span></code> 中创建目录: <a class="reference external" href="http://localhost:3000/#/home?msgid=6750">[待校准&#64;6750]</a></p>
+<p>纯蟒蛇皮包装的``tutorial_interfaces`` is the name of the new package. Note that it is a CMake package; there currently isn’t a way to generate a <code class="docutils literal notranslate"><span class="pre">.msg</span></code> or <code class="docutils literal notranslate"><span class="pre">.srv</span></code> file。您可以在CMake包中创建一个自定义接口，然后在Python节点中使用它，这将在最后一节中介绍。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7189">[待校准&#64;7189]</a></p>
+<p>最好将 <code class="docutils literal notranslate"><span class="pre">.msg</span></code> 和 <code class="docutils literal notranslate"><span class="pre">.srv</span></code> 文件保存在包中自己的目录中。在 <code class="docutils literal notranslate"><span class="pre">dev_ws/src/tutorial_interfaces</span></code> 中创建目录: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7190">[待校准&#64;7190]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">mkdir msg</span>
 
 <span class="go">mkdir srv</span>
@@ -332,18 +332,18 @@
 </div>
 </div>
 <div class="section" id="create-custom-definitions">
-<h3>2创建自定义 <a class="reference external" href="http://localhost:3000/#/home?msgid=6751">[待校准&#64;6751]</a><a class="headerlink" href="#create-custom-definitions" title="永久链接至标题"></a></h3>
+<h3>2创建自定义 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7191">[待校准&#64;7191]</a><a class="headerlink" href="#create-custom-definitions" title="永久链接至标题"></a></h3>
 <div class="section" id="msg-definition">
-<h4>2.1 msg 定义 <a class="reference external" href="http://localhost:3000/#/home?msgid=6752">[待校准&#64;6752]</a><a class="headerlink" href="#msg-definition" title="永久链接至标题"></a></h4>
-<p>在您刚刚创建的 <code class="docutils literal notranslate"><span class="pre">tutorial_interfaces/msg</span></code> 目录中，创建一个调用ed <code class="docutils literal notranslate"><span class="pre">Num.msg</span></code> 的新文件，其中一行代码声明其数据结构: <a class="reference external" href="http://localhost:3000/#/home?msgid=6753">[待校准&#64;6753]</a></p>
+<h4>2.1 msg 定义 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7192">[待校准&#64;7192]</a><a class="headerlink" href="#msg-definition" title="永久链接至标题"></a></h4>
+<p>在您刚刚创建的 <code class="docutils literal notranslate"><span class="pre">tutorial_interfaces/msg</span></code> 目录中，创建一个调用ed <code class="docutils literal notranslate"><span class="pre">Num.msg</span></code> 的新文件，其中一行代码声明其数据结构: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7193">[待校准&#64;7193]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">int64 num</span>
 </pre></div>
 </div>
-<p>这是您的自定义消息，用于传输调用ed <code class="docutils literal notranslate"><span class="pre">num</span></code> 的单个64位整数。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6754">[待校准&#64;6754]</a></p>
+<p>这是您的自定义消息，用于传输调用ed <code class="docutils literal notranslate"><span class="pre">num</span></code> 的单个64位整数。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7194">[待校准&#64;7194]</a></p>
 </div>
 <div class="section" id="srv-definition">
-<h4>2.2 srv 定义 <a class="reference external" href="http://localhost:3000/#/home?msgid=6755">[待校准&#64;6755]</a><a class="headerlink" href="#srv-definition" title="永久链接至标题"></a></h4>
-<p>回到您刚刚创建的 <code class="docutils literal notranslate"><span class="pre">tutorial_interfaces/srv</span></code> 目录，创建一个具有以下请求和响应结构的调用 <code class="docutils literal notranslate"><span class="pre">AddThreeInts.srv</span></code> 的新文件: <a class="reference external" href="http://localhost:3000/#/home?msgid=6756">[待校准&#64;6756]</a></p>
+<h4>2.2 srv 定义 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7195">[待校准&#64;7195]</a><a class="headerlink" href="#srv-definition" title="永久链接至标题"></a></h4>
+<p>回到您刚刚创建的 <code class="docutils literal notranslate"><span class="pre">tutorial_interfaces/srv</span></code> 目录，创建一个具有以下请求和响应结构的调用 <code class="docutils literal notranslate"><span class="pre">AddThreeInts.srv</span></code> 的新文件: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7196">[待校准&#64;7196]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">int64 a</span>
 <span class="go">int64 b</span>
 <span class="go">int64 c</span>
@@ -351,12 +351,12 @@
 <span class="go">int64 sum</span>
 </pre></div>
 </div>
-<p>这是您的自定义服务，它请求三个整数，分别名为 <code class="docutils literal notranslate"><span class="pre">a</span></code> 、 <code class="docutils literal notranslate"><span class="pre">b</span></code> 和 <code class="docutils literal notranslate"><span class="pre">c</span></code> ，并以整数调用ed <code class="docutils literal notranslate"><span class="pre">sum</span></code> 作为响应。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6757">[待校准&#64;6757]</a></p>
+<p>这是您的自定义服务，它请求三个整数，分别名为 <code class="docutils literal notranslate"><span class="pre">a</span></code> 、 <code class="docutils literal notranslate"><span class="pre">b</span></code> 和 <code class="docutils literal notranslate"><span class="pre">c</span></code> ，并以整数调用ed <code class="docutils literal notranslate"><span class="pre">sum</span></code> 作为响应。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7197">[待校准&#64;7197]</a></p>
 </div>
 </div>
 <div class="section" id="cmakelists-txt">
-<h3>3  <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code>  <a class="reference external" href="http://localhost:3000/#/home?msgid=6758">[待校准&#64;6758]</a><a class="headerlink" href="#cmakelists-txt" title="永久链接至标题"></a></h3>
-<p>要将您定义的接口转换为特定于语言的代码 (如C++ 和Python)，以便它们可以在这些语言中使用，请在 <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> 中添加以下行: <a class="reference external" href="http://localhost:3000/#/home?msgid=6759">[待校准&#64;6759]</a></p>
+<h3>3  <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code>  <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7198">[待校准&#64;7198]</a><a class="headerlink" href="#cmakelists-txt" title="永久链接至标题"></a></h3>
+<p>要将您定义的接口转换为特定于语言的代码 (如C++ 和Python)，以便它们可以在这些语言中使用，请在 <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> 中添加以下行: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7199">[待校准&#64;7199]</a></p>
 <div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">find_package</span><span class="p">(</span><span class="s">rosidl_default_generators</span> <span class="s">REQUIRED</span><span class="p">)</span>
 
 <span class="nb">rosidl_generate_interfaces</span><span class="p">(</span><span class="o">${</span><span class="nv">PROJECT_NAME</span><span class="o">}</span>
@@ -367,8 +367,8 @@
 </div>
 </div>
 <div class="section" id="package-xml">
-<h3>4  <code class="docutils literal notranslate"><span class="pre">package.xml</span></code>  <a class="reference external" href="http://localhost:3000/#/home?msgid=6760">[待校准&#64;6760]</a><a class="headerlink" href="#package-xml" title="永久链接至标题"></a></h3>
-<p>因为接口依赖于 <code class="docutils literal notranslate"><span class="pre">rosidl_default_generators</span></code> 来生成特定于语言的代码，所以您需要声明对它的依赖。将以下几行添加到 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code>  <a class="reference external" href="http://localhost:3000/#/home?msgid=6761">[待校准&#64;6761]</a></p>
+<h3>4  <code class="docutils literal notranslate"><span class="pre">package.xml</span></code>  <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7200">[待校准&#64;7200]</a><a class="headerlink" href="#package-xml" title="永久链接至标题"></a></h3>
+<p>因为接口依赖于 <code class="docutils literal notranslate"><span class="pre">rosidl_default_generators</span></code> 来生成特定于语言的代码，所以您需要声明对它的依赖。将以下几行添加到 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code>  <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7201">[待校准&#64;7201]</a></p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;build_depend&gt;</span>rosidl_default_generators<span class="nt">&lt;/build_depend&gt;</span>
 
 <span class="nt">&lt;exec_depend&gt;</span>rosidl_default_runtime<span class="nt">&lt;/exec_depend&gt;</span>
@@ -378,8 +378,8 @@
 </div>
 </div>
 <div class="section" id="build-the-tutorial-interfaces-package">
-<h3>5构建 <code class="docutils literal notranslate"><span class="pre">tutorial_interfaces</span></code> 包 <a class="reference external" href="http://localhost:3000/#/home?msgid=6762">[待校准&#64;6762]</a><a class="headerlink" href="#build-the-tutorial-interfaces-package" title="永久链接至标题"></a></h3>
-<p>现在，自定义接口包的所有部分都已就位，您可以构建包了。在工作区 (''〜/dev_ws '') 的根目录中，运行以下命令: <a class="reference external" href="http://localhost:3000/#/home?msgid=6763">[待校准&#64;6763]</a></p>
+<h3>5构建 <code class="docutils literal notranslate"><span class="pre">tutorial_interfaces</span></code> 包 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7202">[待校准&#64;7202]</a><a class="headerlink" href="#build-the-tutorial-interfaces-package" title="永久链接至标题"></a></h3>
+<p>现在，自定义接口包的所有部分都已就位，您可以构建包了。在工作区 (''〜/dev_ws '') 的根目录中，运行以下命令: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7203">[待校准&#64;7203]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-0-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-0-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-0-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-0-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-0-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">colcon build --packages-select tutorial_interfaces</span>
 </pre></div>
@@ -391,11 +391,11 @@
 </pre></div>
 </div>
 </div></div>
-<p>现在这些接口将被其他ROS 2包发现。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6764">[待校准&#64;6764]</a></p>
+<p>现在这些接口将被其他ROS 2包发现。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7204">[待校准&#64;7204]</a></p>
 </div>
 <div class="section" id="confirm-msg-and-srv-creation">
-<h3>6确认 msg 和 srv 的创造 <a class="reference external" href="http://localhost:3000/#/home?msgid=6765">[待校准&#64;6765]</a><a class="headerlink" href="#confirm-msg-and-srv-creation" title="永久链接至标题"></a></h3>
-<p>在新终端中，从工作区 ( <code class="docutils literal notranslate"><span class="pre">dev_ws</span></code> ) 中运行以下命令以对其进行源文件: <a class="reference external" href="http://localhost:3000/#/home?msgid=6766">[待校准&#64;6766]</a></p>
+<h3>6确认 msg 和 srv 的创造 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7205">[待校准&#64;7205]</a><a class="headerlink" href="#confirm-msg-and-srv-creation" title="永久链接至标题"></a></h3>
+<p>在新终端中，从工作区 ( <code class="docutils literal notranslate"><span class="pre">dev_ws</span></code> ) 中运行以下命令以对其进行源文件: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7206">[待校准&#64;7206]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-1-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-1-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-1-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-1-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-1-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-1-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">. install/setup.bash</span>
 </pre></div>
@@ -407,19 +407,19 @@
 </pre></div>
 </div>
 </div></div>
-<p>现在，您可以通过使用 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">interface</span> <span class="pre">show</span></code> 命令确认您的接口创建有效: <a class="reference external" href="http://localhost:3000/#/home?msgid=6767">[待校准&#64;6767]</a></p>
+<p>现在，您可以通过使用 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">interface</span> <span class="pre">show</span></code> 命令确认您的接口创建有效: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7207">[待校准&#64;7207]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 interface show tutorial_interfaces/msg/Num</span>
 </pre></div>
 </div>
-<p>应返回: <a class="reference external" href="http://localhost:3000/#/home?msgid=6768">[待校准&#64;6768]</a></p>
+<p>应返回: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7208">[待校准&#64;7208]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">int64 num</span>
 </pre></div>
 </div>
-<p>和 <a class="reference external" href="http://localhost:3000/#/home?msgid=6769">[待校准&#64;6769]</a></p>
+<p>和 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7209">[待校准&#64;7209]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 interface show tutorial_interfaces/srv/AddThreeInts</span>
 </pre></div>
 </div>
-<p>应返回: <a class="reference external" href="http://localhost:3000/#/home?msgid=6768">[待校准&#64;6768]</a></p>
+<p>应返回: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7208">[待校准&#64;7208]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">int64 a</span>
 <span class="go">int64 b</span>
 <span class="go">int64 c</span>
@@ -429,12 +429,12 @@
 </div>
 </div>
 <div class="section" id="test-the-new-interfaces">
-<h3>7测试新界面 <a class="reference external" href="http://localhost:3000/#/home?msgid=6770">[待校准&#64;6770]</a><a class="headerlink" href="#test-the-new-interfaces" title="永久链接至标题"></a></h3>
-<p>对于此步骤，您可以使用在以前的教程中创建的包。对节点、 <code class="docutils literal notranslate"><span class="pre">CMakeLists</span></code> 和 <code class="docutils literal notranslate"><span class="pre">package</span></code> 文件的一些简单修改将允许你使用你的新界面。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6771">[待校准&#64;6771]</a></p>
+<h3>7测试新界面 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7210">[待校准&#64;7210]</a><a class="headerlink" href="#test-the-new-interfaces" title="永久链接至标题"></a></h3>
+<p>对于此步骤，您可以使用在以前的教程中创建的包。对节点、 <code class="docutils literal notranslate"><span class="pre">CMakeLists</span></code> 和 <code class="docutils literal notranslate"><span class="pre">package</span></code> 文件的一些简单修改将允许你使用你的新界面。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7211">[待校准&#64;7211]</a></p>
 <div class="section" id="testing-num-msg-with-pub-sub">
-<h4>7.1用酒吧/潜水艇测试 <code class="docutils literal notranslate"><span class="pre">Num.msg</span></code>  <a class="reference external" href="http://localhost:3000/#/home?msgid=6772">[待校准&#64;6772]</a><a class="headerlink" href="#testing-num-msg-with-pub-sub" title="永久链接至标题"></a></h4>
-<p>通过对上一教程 ( <a class="reference internal" href="Writing-A-Simple-Cpp-Publisher-And-Subscriber.html"><span class="doc">C++</span></a> or <a class="reference internal" href="Writing-A-Simple-Py-Publisher-And-Subscriber.html"><span class="doc">Python</span></a> ) 中创建的发布者/订阅者包进行一些细微的修改，您可以在动作中看到 <code class="docutils literal notranslate"><span class="pre">Num.msg</span></code> 。由于您将把标准string msg 改为数字，输出将略有不同。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6773">[待校准&#64;6773]</a></p>
-<p>出版商: <a class="reference external" href="http://localhost:3000/#/home?msgid=6774">[待校准&#64;6774]</a></p>
+<h4>7.1用酒吧/潜水艇测试 <code class="docutils literal notranslate"><span class="pre">Num.msg</span></code>  <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7212">[待校准&#64;7212]</a><a class="headerlink" href="#testing-num-msg-with-pub-sub" title="永久链接至标题"></a></h4>
+<p>通过对上一教程 ( <a class="reference internal" href="Writing-A-Simple-Cpp-Publisher-And-Subscriber.html"><span class="doc">C++</span></a> or <a class="reference internal" href="Writing-A-Simple-Py-Publisher-And-Subscriber.html"><span class="doc">Python</span></a> ) 中创建的发布者/订阅者包进行一些细微的修改，您可以在动作中看到 <code class="docutils literal notranslate"><span class="pre">Num.msg</span></code> 。由于您将把标准string msg 改为数字，输出将略有不同。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7213">[待校准&#64;7213]</a></p>
+<p>出版商: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7214">[待校准&#64;7214]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-2-Qysr" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-2-Qysr" name="Qysr" role="tab" tabindex="0">C++</button><button aria-controls="panel-2-UHl0aG9u" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-2-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="-1">Python</button></div><div aria-labelledby="tab-2-Qysr" class="sphinx-tabs-panel group-tab" id="panel-2-Qysr" name="Qysr" role="tabpanel" tabindex="0"><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;chrono&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;memory&gt;</span><span class="cp"></span>
@@ -516,7 +516,7 @@
 </pre></div>
 </div>
 </div></div>
-<p>订户: <a class="reference external" href="http://localhost:3000/#/home?msgid=6776">[待校准&#64;6776]</a></p>
+<p>订户: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7216">[待校准&#64;7216]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-3-Qysr" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-3-Qysr" name="Qysr" role="tab" tabindex="0">C++</button><button aria-controls="panel-3-UHl0aG9u" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-3-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="-1">Python</button></div><div aria-labelledby="tab-3-Qysr" class="sphinx-tabs-panel group-tab" id="panel-3-Qysr" name="Qysr" role="tabpanel" tabindex="0"><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;memory&gt;</span><span class="cp"></span>
 
@@ -588,8 +588,8 @@
 </pre></div>
 </div>
 </div></div>
-<p>CMakeLists.txt: <a class="reference external" href="http://localhost:3000/#/home?msgid=6777">[待校准&#64;6777]</a></p>
-<p>添加以下行 (仅conly): <a class="reference external" href="http://localhost:3000/#/home?msgid=6778">[待校准&#64;6778]</a></p>
+<p>CMakeLists.txt: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7217">[待校准&#64;7217]</a></p>
+<p>添加以下行 (仅conly): <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7218">[待校准&#64;7218]</a></p>
 <div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="c">#...</span>
 
 <span class="nb">find_package</span><span class="p">(</span><span class="s">ament_cmake</span> <span class="s">REQUIRED</span><span class="p">)</span>
@@ -610,8 +610,8 @@
 <span class="nb">ament_package</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>package.xml: <a class="reference external" href="http://localhost:3000/#/home?msgid=6779">[待校准&#64;6779]</a></p>
-<p>添加以下行: <a class="reference external" href="http://localhost:3000/#/home?msgid=6780">[待校准&#64;6780]</a></p>
+<p>package.xml: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7219">[待校准&#64;7219]</a></p>
+<p>添加以下行: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7220">[待校准&#64;7220]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-4-Qysr" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-4-Qysr" name="Qysr" role="tab" tabindex="0">C++</button><button aria-controls="panel-4-UHl0aG9u" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-4-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="-1">Python</button></div><div aria-labelledby="tab-4-Qysr" class="sphinx-tabs-panel group-tab" id="panel-4-Qysr" name="Qysr" role="tabpanel" tabindex="0"><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">depend</span><span class="o">&gt;</span><span class="n">tutorial_interfaces</span><span class="o">&lt;/</span><span class="n">depend</span><span class="o">&gt;</span>
 </pre></div>
@@ -620,24 +620,24 @@
 </pre></div>
 </div>
 </div></div>
-<p>完成上述编辑并保存所有更改后，构建包: <a class="reference external" href="http://localhost:3000/#/home?msgid=6781">[待校准&#64;6781]</a></p>
+<p>完成上述编辑并保存所有更改后，构建包: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7221">[待校准&#64;7221]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-5-Qysr" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-5-Qysr" name="Qysr" role="tab" tabindex="0">C++</button><button aria-controls="panel-5-UHl0aG9u" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-5-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="-1">Python</button></div><div aria-labelledby="tab-5-Qysr" class="sphinx-tabs-panel group-tab" id="panel-5-Qysr" name="Qysr" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">colcon build --packages-select cpp_pubsub</span>
 </pre></div>
 </div>
-<p>在Windows上: <a class="reference external" href="http://localhost:3000/#/home?msgid=6782">[待校准&#64;6782]</a></p>
+<p>在Windows上: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7222">[待校准&#64;7222]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">colcon build --merge-install --packages-select cpp_pubsub</span>
 </pre></div>
 </div>
 </div><div aria-labelledby="tab-5-UHl0aG9u" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-5-UHl0aG9u" name="UHl0aG9u" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">colcon build --packages-select py_pubsub</span>
 </pre></div>
 </div>
-<p>在Windows上: <a class="reference external" href="http://localhost:3000/#/home?msgid=6782">[待校准&#64;6782]</a></p>
+<p>在Windows上: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7222">[待校准&#64;7222]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">colcon build --merge-install --packages-select py_pubsub</span>
 </pre></div>
 </div>
 </div></div>
-<p>然后打开两个新的终端，每个终端都有源文件 <code class="docutils literal notranslate"><span class="pre">dev_ws</span></code> ，然后运行: <a class="reference external" href="http://localhost:3000/#/home?msgid=6783">[待校准&#64;6783]</a></p>
+<p>然后打开两个新的终端，每个终端都有源文件 <code class="docutils literal notranslate"><span class="pre">dev_ws</span></code> ，然后运行: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7223">[待校准&#64;7223]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-6-Qysr" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-6-Qysr" name="Qysr" role="tab" tabindex="0">C++</button><button aria-controls="panel-6-UHl0aG9u" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-6-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="-1">Python</button></div><div aria-labelledby="tab-6-Qysr" class="sphinx-tabs-panel group-tab" id="panel-6-Qysr" name="Qysr" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run cpp_pubsub talker</span>
 </pre></div>
@@ -652,7 +652,7 @@
 </pre></div>
 </div>
 </div></div>
-<p>由于 <code class="docutils literal notranslate"><span class="pre">Num.msg</span></code> 只中继一个整数，谈话者应该只发布整数值，而不是它之前发布的string: <a class="reference external" href="http://localhost:3000/#/home?msgid=6784">[待校准&#64;6784]</a></p>
+<p>由于 <code class="docutils literal notranslate"><span class="pre">Num.msg</span></code> 只中继一个整数，谈话者应该只发布整数值，而不是它之前发布的string: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7224">[待校准&#64;7224]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">[INFO] [minimal_publisher]: Publishing: &#39;0&#39;</span>
 <span class="go">[INFO] [minimal_publisher]: Publishing: &#39;1&#39;</span>
 <span class="go">[INFO] [minimal_publisher]: Publishing: &#39;2&#39;</span>
@@ -660,9 +660,9 @@
 </div>
 </div>
 <div class="section" id="testing-addthreeints-srv-with-service-client">
-<h4>7.2与服务/客户一起测试 <code class="docutils literal notranslate"><span class="pre">AddThreeInts.srv</span></code>  <a class="reference external" href="http://localhost:3000/#/home?msgid=6785">[待校准&#64;6785]</a><a class="headerlink" href="#testing-addthreeints-srv-with-service-client" title="永久链接至标题"></a></h4>
-<p>通过对上一教程 ( <a class="reference internal" href="Writing-A-Simple-Cpp-Service-And-Client.html"><span class="doc">C++</span></a> or <a class="reference internal" href="Writing-A-Simple-Py-Service-And-Client.html"><span class="doc">Python</span></a> ) 中创建的服务/客户端包进行一些轻微的修改，您可以在动作中看到 <code class="docutils literal notranslate"><span class="pre">AddThreeInts.srv</span></code> 。由于您将把原来的两个整数请求 srv 改为三个整数请求srv，输出将略有不同。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6786">[待校准&#64;6786]</a></p>
-<p>服务: <a class="reference external" href="http://localhost:3000/#/home?msgid=6787">[待校准&#64;6787]</a></p>
+<h4>7.2与服务/客户一起测试 <code class="docutils literal notranslate"><span class="pre">AddThreeInts.srv</span></code>  <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7225">[待校准&#64;7225]</a><a class="headerlink" href="#testing-addthreeints-srv-with-service-client" title="永久链接至标题"></a></h4>
+<p>通过对上一教程 ( <a class="reference internal" href="Writing-A-Simple-Cpp-Service-And-Client.html"><span class="doc">C++</span></a> or <a class="reference internal" href="Writing-A-Simple-Py-Service-And-Client.html"><span class="doc">Python</span></a> ) 中创建的服务/客户端包进行一些轻微的修改，您可以在动作中看到 <code class="docutils literal notranslate"><span class="pre">AddThreeInts.srv</span></code> 。由于您将把原来的两个整数请求 srv 改为三个整数请求srv，输出将略有不同。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7226">[待校准&#64;7226]</a></p>
+<p>服务: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7227">[待校准&#64;7227]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-7-Qysr" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-7-Qysr" name="Qysr" role="tab" tabindex="0">C++</button><button aria-controls="panel-7-UHl0aG9u" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-7-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="-1">Python</button></div><div aria-labelledby="tab-7-Qysr" class="sphinx-tabs-panel group-tab" id="panel-7-Qysr" name="Qysr" role="tabpanel" tabindex="0"><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;rclcpp/rclcpp.hpp&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;tutorial_interfaces/srv/add_three_ints.hpp&quot;     // CHANGE</span><span class="cp"></span>
@@ -726,7 +726,7 @@
 </pre></div>
 </div>
 </div></div>
-<p>客户: <a class="reference external" href="http://localhost:3000/#/home?msgid=6788">[待校准&#64;6788]</a></p>
+<p>客户: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7228">[待校准&#64;7228]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-8-Qysr" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-8-Qysr" name="Qysr" role="tab" tabindex="0">C++</button><button aria-controls="panel-8-UHl0aG9u" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-8-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="-1">Python</button></div><div aria-labelledby="tab-8-Qysr" class="sphinx-tabs-panel group-tab" id="panel-8-Qysr" name="Qysr" role="tabpanel" tabindex="0"><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;rclcpp/rclcpp.hpp&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;tutorial_interfaces/srv/add_three_ints.hpp&quot;        // CHANGE</span><span class="cp"></span>
@@ -829,8 +829,8 @@
 </pre></div>
 </div>
 </div></div>
-<p>CMakeLists.txt: <a class="reference external" href="http://localhost:3000/#/home?msgid=6777">[待校准&#64;6777]</a></p>
-<p>添加以下行 (仅conly): <a class="reference external" href="http://localhost:3000/#/home?msgid=6778">[待校准&#64;6778]</a></p>
+<p>CMakeLists.txt: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7217">[待校准&#64;7217]</a></p>
+<p>添加以下行 (仅conly): <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7218">[待校准&#64;7218]</a></p>
 <div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="c">#...</span>
 
 <span class="nb">find_package</span><span class="p">(</span><span class="s">ament_cmake</span> <span class="s">REQUIRED</span><span class="p">)</span>
@@ -853,8 +853,8 @@
 <span class="nb">ament_package</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>package.xml: <a class="reference external" href="http://localhost:3000/#/home?msgid=6779">[待校准&#64;6779]</a></p>
-<p>添加以下行: <a class="reference external" href="http://localhost:3000/#/home?msgid=6780">[待校准&#64;6780]</a></p>
+<p>package.xml: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7219">[待校准&#64;7219]</a></p>
+<p>添加以下行: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7220">[待校准&#64;7220]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-9-Qysr" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-9-Qysr" name="Qysr" role="tab" tabindex="0">C++</button><button aria-controls="panel-9-UHl0aG9u" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-9-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="-1">Python</button></div><div aria-labelledby="tab-9-Qysr" class="sphinx-tabs-panel group-tab" id="panel-9-Qysr" name="Qysr" role="tabpanel" tabindex="0"><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">depend</span><span class="o">&gt;</span><span class="n">tutorial_interfaces</span><span class="o">&lt;/</span><span class="n">depend</span><span class="o">&gt;</span>
 </pre></div>
@@ -863,24 +863,24 @@
 </pre></div>
 </div>
 </div></div>
-<p>完成上述编辑并保存所有更改后，构建包: <a class="reference external" href="http://localhost:3000/#/home?msgid=6781">[待校准&#64;6781]</a></p>
+<p>完成上述编辑并保存所有更改后，构建包: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7221">[待校准&#64;7221]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-10-Qysr" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-10-Qysr" name="Qysr" role="tab" tabindex="0">C++</button><button aria-controls="panel-10-UHl0aG9u" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-10-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="-1">Python</button></div><div aria-labelledby="tab-10-Qysr" class="sphinx-tabs-panel group-tab" id="panel-10-Qysr" name="Qysr" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">colcon build --packages-select cpp_srvcli</span>
 </pre></div>
 </div>
-<p>在Windows上: <a class="reference external" href="http://localhost:3000/#/home?msgid=6782">[待校准&#64;6782]</a></p>
+<p>在Windows上: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7222">[待校准&#64;7222]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">colcon build --merge-install --packages-select cpp_srvcli</span>
 </pre></div>
 </div>
 </div><div aria-labelledby="tab-10-UHl0aG9u" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-10-UHl0aG9u" name="UHl0aG9u" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">colcon build --packages-select py_srvcli</span>
 </pre></div>
 </div>
-<p>在Windows上: <a class="reference external" href="http://localhost:3000/#/home?msgid=6782">[待校准&#64;6782]</a></p>
+<p>在Windows上: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7222">[待校准&#64;7222]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">colcon build --merge-install --packages-select py_srvcli</span>
 </pre></div>
 </div>
 </div></div>
-<p>然后打开两个新的终端，每个终端都有源文件 <code class="docutils literal notranslate"><span class="pre">dev_ws</span></code> ，然后运行: <a class="reference external" href="http://localhost:3000/#/home?msgid=6783">[待校准&#64;6783]</a></p>
+<p>然后打开两个新的终端，每个终端都有源文件 <code class="docutils literal notranslate"><span class="pre">dev_ws</span></code> ，然后运行: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7223">[待校准&#64;7223]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-11-Qysr" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-11-Qysr" name="Qysr" role="tab" tabindex="0">C++</button><button aria-controls="panel-11-UHl0aG9u" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-11-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="-1">Python</button></div><div aria-labelledby="tab-11-Qysr" class="sphinx-tabs-panel group-tab" id="panel-11-Qysr" name="Qysr" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run cpp_srvcli server</span>
 </pre></div>
@@ -899,13 +899,13 @@
 </div>
 </div>
 <div class="section" id="summary">
-<h2>总结 <a class="reference external" href="http://localhost:3000/#/home?msgid=6307">[待校准&#64;6307]</a><a class="headerlink" href="#summary" title="永久链接至标题"></a></h2>
-<p>在本教程中，您学习了如何在自己的包中创建自定义接口，以及如何在其他包中利用这些接口。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6789">[待校准&#64;6789]</a></p>
-<p>这是一个简单的接口创建和利用方法。你可以了解更多关于接口 <a class="reference internal" href="../Concepts/About-ROS-Interfaces.html"><span class="doc">here</span></a> 的信息。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6790">[待校准&#64;6790]</a></p>
+<h2>总结 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6747">[待校准&#64;6747]</a><a class="headerlink" href="#summary" title="永久链接至标题"></a></h2>
+<p>在本教程中，您学习了如何在自己的包中创建自定义接口，以及如何在其他包中利用这些接口。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7229">[待校准&#64;7229]</a></p>
+<p>这是一个简单的接口创建和利用方法。你可以了解更多关于接口 <a class="reference internal" href="../Concepts/About-ROS-Interfaces.html"><span class="doc">here</span></a> 的信息。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7230">[待校准&#64;7230]</a></p>
 </div>
 <div class="section" id="next-steps">
-<h2>下一步 <a class="reference external" href="http://localhost:3000/#/home?msgid=6309">[待校准&#64;6309]</a><a class="headerlink" href="#next-steps" title="永久链接至标题"></a></h2>
-<p>[需手动修复的语法] <a class="reference internal" href="Single-Package-Define-And-Use-Interface.html"><span class="doc">next tutorial</span></a> 涵盖了在ROS 2中使用接口的更多方法。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6791">[待校准&#64;6791]</a></p>
+<h2>下一步 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6749">[待校准&#64;6749]</a><a class="headerlink" href="#next-steps" title="永久链接至标题"></a></h2>
+<p>[需手动修复的语法] <a class="reference internal" href="Single-Package-Define-And-Use-Interface.html"><span class="doc">next tutorial</span></a> 涵盖了在ROS 2中使用接口的更多方法。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7231">[待校准&#64;7231]</a></p>
 </div>
 </div>
 
@@ -914,8 +914,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="Writing-A-Simple-Py-Service-And-Client.html" class="btn btn-neutral float-left" title="编写简单的服务和客户端 (Python) [待校准@9028]" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
-        <a href="Single-Package-Define-And-Use-Interface.html" class="btn btn-neutral float-right" title="在ROS 2接口上扩展 [待校准@7844]" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="Writing-A-Simple-Py-Service-And-Client.html" class="btn btn-neutral float-left" title="编写简单的服务和客户端 (Python) [待校准@9468]" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="Single-Package-Define-And-Use-Interface.html" class="btn btn-neutral float-right" title="在ROS 2接口上扩展 [待校准@8284]" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
