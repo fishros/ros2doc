@@ -279,10 +279,10 @@
 
 
   <div class="section" id="building-a-custom-debian-package">
-<h1>构建自定义Debian包 <a class="reference external" href="http://localhost:3000/#/home?msgid=5922">[待校准&#64;5922]</a><a class="headerlink" href="#building-a-custom-debian-package" title="永久链接至标题"></a></h1>
-<p>许多Ubuntu用户通过安装 <a class="reference internal" href="../Installation/Ubuntu-Install-Debians.html"><span class="doc">debian packages</span></a> 在他们的系统上安装ROS 2。本指南给出了一组构建本地自定义Debian包的简短说明。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5923">[待校准&#64;5923]</a></p>
+<h1>构建自定义Debian包 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5922">[待校准&#64;5922]</a><a class="headerlink" href="#building-a-custom-debian-package" title="永久链接至标题"></a></h1>
+<p>许多Ubuntu用户通过安装 <a class="reference internal" href="../Installation/Ubuntu-Install-Debians.html"><span class="doc">debian packages</span></a> 在他们的系统上安装ROS 2。本指南给出了一组构建本地自定义Debian包的简短说明。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5923">[待校准&#64;5923]</a></p>
 <div class="contents local topic" id="table-of-contents">
-<p class="topic-title">目录 <a class="reference external" href="http://localhost:3000/#/home?msgid=5761">[待校准&#64;5761]</a></p>
+<p class="topic-title">目录 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5761">[待校准&#64;5761]</a></p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#prerequisites" id="id1">先决条件 [待校准&#64;5924]</a></p></li>
 <li><p><a class="reference internal" href="#install-dependencies" id="id2">安装依赖项 [待校准&#64;5926]</a></p></li>
@@ -291,34 +291,34 @@
 </ul>
 </div>
 <div class="section" id="prerequisites">
-<h2>先决条件 <a class="reference external" href="http://localhost:3000/#/home?msgid=5924">[待校准&#64;5924]</a><a class="headerlink" href="#prerequisites" title="永久链接至标题"></a></h2>
-<p>要成功构建自定义包，必须在调用y或rosdep时提供要构建的包的所有依赖项。此外，包的所有依赖项应在包的 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 文件中正确声明。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5925">[待校准&#64;5925]</a></p>
+<h2>先决条件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5924">[待校准&#64;5924]</a><a class="headerlink" href="#prerequisites" title="永久链接至标题"></a></h2>
+<p>要成功构建自定义包，必须在调用y或rosdep时提供要构建的包的所有依赖项。此外，包的所有依赖项应在包的 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 文件中正确声明。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5925">[待校准&#64;5925]</a></p>
 </div>
 <div class="section" id="install-dependencies">
-<h2>安装依赖项 <a class="reference external" href="http://localhost:3000/#/home?msgid=5926">[待校准&#64;5926]</a><a class="headerlink" href="#install-dependencies" title="永久链接至标题"></a></h2>
-<p>运行以下命令以安装构建所需的实用程序: <a class="reference external" href="http://localhost:3000/#/home?msgid=5927">[待校准&#64;5927]</a></p>
+<h2>安装依赖项 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5926">[待校准&#64;5926]</a><a class="headerlink" href="#install-dependencies" title="永久链接至标题"></a></h2>
+<p>运行以下命令以安装构建所需的实用程序: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5927">[待校准&#64;5927]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo apt install python3-bloom python3-rosdep fakeroot
 </pre></div>
 </div>
 </div>
 <div class="section" id="initialize-rosdep">
-<h2>初始化rosdep <a class="reference external" href="http://localhost:3000/#/home?msgid=5928">[待校准&#64;5928]</a><a class="headerlink" href="#initialize-rosdep" title="永久链接至标题"></a></h2>
-<p>通过调用以下命令初始化rosdep数据库: <a class="reference external" href="http://localhost:3000/#/home?msgid=5929">[待校准&#64;5929]</a></p>
+<h2>初始化rosdep <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5928">[待校准&#64;5928]</a><a class="headerlink" href="#initialize-rosdep" title="永久链接至标题"></a></h2>
+<p>通过调用以下命令初始化rosdep数据库: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5929">[待校准&#64;5929]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo rosdep init
 $ rosdep update
 </pre></div>
 </div>
-<p>请注意，如果 <code class="docutils literal notranslate"><span class="pre">rosdep</span> <span class="pre">init</span></code> 命令过去已经初始化，则可能会失败; 可以放心地忽略这一点。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5930">[待校准&#64;5930]</a></p>
+<p>请注意，如果 <code class="docutils literal notranslate"><span class="pre">rosdep</span> <span class="pre">init</span></code> 命令过去已经初始化，则可能会失败; 可以放心地忽略这一点。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5930">[待校准&#64;5930]</a></p>
 </div>
 <div class="section" id="build-the-debian-from-the-package">
-<h2>从包中构建debian <a class="reference external" href="http://localhost:3000/#/home?msgid=5931">[待校准&#64;5931]</a><a class="headerlink" href="#build-the-debian-from-the-package" title="永久链接至标题"></a></h2>
-<p>运行以下命令来构建debian: <a class="reference external" href="http://localhost:3000/#/home?msgid=5932">[待校准&#64;5932]</a></p>
+<h2>从包中构建debian <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5931">[待校准&#64;5931]</a><a class="headerlink" href="#build-the-debian-from-the-package" title="永久链接至标题"></a></h2>
+<p>运行以下命令来构建debian: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5932">[待校准&#64;5932]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> /path/to/pkg_source  <span class="c1"># this should be the directory that contains the package.xml</span>
 $ bloom-generate rosdebian
 $ fakeroot debian/rules binary
 </pre></div>
 </div>
-<p>假设所有必需的依赖项都可用，并且编译成功，则新包将在此目录的父目录中可用。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5933">[待校准&#64;5933]</a></p>
+<p>假设所有必需的依赖项都可用，并且编译成功，则新包将在此目录的父目录中可用。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5933">[待校准&#64;5933]</a></p>
 </div>
 </div>
 

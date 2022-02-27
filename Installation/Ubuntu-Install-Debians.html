@@ -279,9 +279,9 @@
 
 
   <div class="section" id="installing-ros-2-via-debian-packages">
-<h1>通过Debian包安装ROS 2 <a class="reference external" href="http://localhost:3000/#/home?msgid=5547">[待校准&#64;5547]</a><a class="headerlink" href="#installing-ros-2-via-debian-packages" title="永久链接至标题"></a></h1>
+<h1>通过Debian包安装ROS 2 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5547">[待校准&#64;5547]</a><a class="headerlink" href="#installing-ros-2-via-debian-packages" title="永久链接至标题"></a></h1>
 <div class="contents local topic" id="table-of-contents">
-<p class="topic-title">目录 <a class="reference external" href="http://localhost:3000/#/home?msgid=5475">[待校准&#64;5475]</a></p>
+<p class="topic-title">目录 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5475">[待校准&#64;5475]</a></p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#resources" id="id1">源文件 [待校准&#64;5549]</a></p></li>
 <li><p><a class="reference internal" href="#set-locale" id="id2">设置区域设置 [待校准&#64;5485]</a></p></li>
@@ -300,13 +300,13 @@
 <li><p><a class="reference internal" href="#uninstall" id="id12">卸载 [待校准&#64;5522]</a></p></li>
 </ul>
 </div>
-<p>用于ROS 2FoxyFitzroy的Debian包目前可用于Ubuntu焦点。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5548">[待校准&#64;5548]</a></p>
+<p>用于ROS 2FoxyFitzroy的Debian包目前可用于Ubuntu焦点。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5548">[待校准&#64;5548]</a></p>
 <div class="section" id="resources">
-<h2>源文件 <a class="reference external" href="http://localhost:3000/#/home?msgid=5549">[待校准&#64;5549]</a><a class="headerlink" href="#resources" title="永久链接至标题"></a></h2>
+<h2>源文件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5549">[待校准&#64;5549]</a><a class="headerlink" href="#resources" title="永久链接至标题"></a></h2>
 <ul class="simple">
-<li><p>状态页面: <a class="reference external" href="http://localhost:3000/#/home?msgid=5550">[待校准&#64;5550]</a></p>
+<li><p>状态页面: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5550">[待校准&#64;5550]</a></p>
 <ul>
-<li><p>ROS 2Foxy (乌班图焦点):  <a class="reference external" href="http://repo.ros2.org/status_page/ros_foxy_default.html">amd64</a>, <a class="reference external" href="http://repo.ros2.org/status_page/ros_foxy_ufv8.html">arm64</a>  <a class="reference external" href="http://localhost:3000/#/home?msgid=5551">[待校准&#64;5551]</a></p></li>
+<li><p>ROS 2Foxy (乌班图焦点):  <a class="reference external" href="http://repo.ros2.org/status_page/ros_foxy_default.html">amd64</a>, <a class="reference external" href="http://repo.ros2.org/status_page/ros_foxy_ufv8.html">arm64</a>  <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5551">[待校准&#64;5551]</a></p></li>
 </ul>
 </li>
 <li><p><a class="reference external" href="http://build.ros2.org/">Jenkins Instance</a></p></li>
@@ -314,8 +314,8 @@
 </ul>
 </div>
 <div class="section" id="set-locale">
-<h2>设置区域设置 <a class="reference external" href="http://localhost:3000/#/home?msgid=5485">[待校准&#64;5485]</a><a class="headerlink" href="#set-locale" title="永久链接至标题"></a></h2>
-<p>确保你有一个支持 <code class="docutils literal notranslate"><span class="pre">UTF-8</span></code> 的区域。如果您处于最小环境中 (例如docker容器)，则区域设置可能是最小的，例如 <code class="docutils literal notranslate"><span class="pre">POSIX</span></code> 。我们使用以下设置进行测试。但是，如果您使用不同的UTF-8支持的区域设置，应该没问题。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5486">[待校准&#64;5486]</a></p>
+<h2>设置区域设置 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5485">[待校准&#64;5485]</a><a class="headerlink" href="#set-locale" title="永久链接至标题"></a></h2>
+<p>确保你有一个支持 <code class="docutils literal notranslate"><span class="pre">UTF-8</span></code> 的区域。如果您处于最小环境中 (例如docker容器)，则区域设置可能是最小的，例如 <code class="docutils literal notranslate"><span class="pre">POSIX</span></code> 。我们使用以下设置进行测试。但是，如果您使用不同的UTF-8支持的区域设置，应该没问题。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5486">[待校准&#64;5486]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>locale  <span class="c1"># check for UTF-8</span>
 
 sudo apt update <span class="o">&amp;&amp;</span> sudo apt install locales
@@ -328,76 +328,76 @@ locale  <span class="c1"># verify settings</span>
 </div>
 </div>
 <div class="section" id="setup-sources">
-<span id="linux-install-debians-setup-sources"></span><h2>设置源 <a class="reference external" href="http://localhost:3000/#/home?msgid=5554">[待校准&#64;5554]</a><a class="headerlink" href="#setup-sources" title="永久链接至标题"></a></h2>
-<p>您需要将ROS 2 apt仓库添加到您的系统中。为此，首先使用如下apt授权我们的GPG密钥: <a class="reference external" href="http://localhost:3000/#/home?msgid=5488">[待校准&#64;5488]</a></p>
+<span id="linux-install-debians-setup-sources"></span><h2>设置源 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5554">[待校准&#64;5554]</a><a class="headerlink" href="#setup-sources" title="永久链接至标题"></a></h2>
+<p>您需要将ROS 2 apt仓库添加到您的系统中。为此，首先使用如下apt授权我们的GPG密钥: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5488">[待校准&#64;5488]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt update <span class="o">&amp;&amp;</span> sudo apt install curl gnupg2 lsb-release
 sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key  -o /usr/share/keyrings/ros-archive-keyring.gpg
 </pre></div>
 </div>
-<p>然后将仓库添加到源文件列表中: <a class="reference external" href="http://localhost:3000/#/home?msgid=5489">[待校准&#64;5489]</a></p>
+<p>然后将仓库添加到源文件列表中: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5489">[待校准&#64;5489]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="s2">&quot;deb [arch=</span><span class="k">$(</span>dpkg --print-architecture<span class="k">)</span><span class="s2"> signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu </span><span class="k">$(</span><span class="nb">source</span> /etc/os-release <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="nv">$UBUNTU_CODENAME</span><span class="k">)</span><span class="s2"> main&quot;</span> <span class="p">|</span> sudo tee /etc/apt/sources.list.d/ros2.list &gt; /dev/null
 </pre></div>
 </div>
 </div>
 <div class="section" id="install-ros-2-packages">
-<span id="linux-install-debians-install-ros-2-packages"></span><h2>安装ROS 2包 <a class="reference external" href="http://localhost:3000/#/home?msgid=5555">[待校准&#64;5555]</a><a class="headerlink" href="#install-ros-2-packages" title="永久链接至标题"></a></h2>
-<p>设置好仓库后，更新您的apt仓库缓存。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5556">[待校准&#64;5556]</a></p>
+<span id="linux-install-debians-install-ros-2-packages"></span><h2>安装ROS 2包 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5555">[待校准&#64;5555]</a><a class="headerlink" href="#install-ros-2-packages" title="永久链接至标题"></a></h2>
+<p>设置好仓库后，更新您的apt仓库缓存。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5556">[待校准&#64;5556]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt update
 </pre></div>
 </div>
-<p>桌面安装 (推荐): ROS、RViz、例程、教程。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5557">[待校准&#64;5557]</a></p>
+<p>桌面安装 (推荐): ROS、RViz、例程、教程。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5557">[待校准&#64;5557]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt install ros-foxy-desktop
 </pre></div>
 </div>
-<p>基于ROS的安装 (裸骨): 通信库、消息包、命令行工具。没有GUI工具。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5558">[待校准&#64;5558]</a></p>
+<p>基于ROS的安装 (裸骨): 通信库、消息包、命令行工具。没有GUI工具。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5558">[待校准&#64;5558]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt install ros-foxy-ros-base
 </pre></div>
 </div>
 </div>
 <div class="section" id="environment-setup">
-<h2>环境设置 <a class="reference external" href="http://localhost:3000/#/home?msgid=5501">[待校准&#64;5501]</a><a class="headerlink" href="#environment-setup" title="永久链接至标题"></a></h2>
+<h2>环境设置 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5501">[待校准&#64;5501]</a><a class="headerlink" href="#environment-setup" title="永久链接至标题"></a></h2>
 <div class="section" id="sourcing-the-setup-script">
-<h3>采购安装脚本 <a class="reference external" href="http://localhost:3000/#/home?msgid=5543">[待校准&#64;5543]</a><a class="headerlink" href="#sourcing-the-setup-script" title="永久链接至标题"></a></h3>
-<p>通过采购以下文件来设置您的环境。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5503">[待校准&#64;5503]</a></p>
+<h3>采购安装脚本 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5543">[待校准&#64;5543]</a><a class="headerlink" href="#sourcing-the-setup-script" title="永久链接至标题"></a></h3>
+<p>通过采购以下文件来设置您的环境。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5503">[待校准&#64;5503]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> /opt/ros/foxy/setup.bash
 </pre></div>
 </div>
 </div>
 </div>
 <div class="section" id="try-some-examples">
-<h2>尝试一些例子 <a class="reference external" href="http://localhost:3000/#/home?msgid=5504">[待校准&#64;5504]</a><a class="headerlink" href="#try-some-examples" title="永久链接至标题"></a></h2>
-<p>如果你安装了上面的 <code class="docutils literal notranslate"><span class="pre">ros-foxy-desktop</span></code> ，你可以尝试一些例子。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5559">[待校准&#64;5559]</a></p>
-<p>在一个终端中，源文件安装文件，然后运行c <code class="docutils literal notranslate"><span class="pre">talker</span></code>  : <a class="reference external" href="http://localhost:3000/#/home?msgid=5505">[待校准&#64;5505]</a></p>
+<h2>尝试一些例子 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5504">[待校准&#64;5504]</a><a class="headerlink" href="#try-some-examples" title="永久链接至标题"></a></h2>
+<p>如果你安装了上面的 <code class="docutils literal notranslate"><span class="pre">ros-foxy-desktop</span></code> ，你可以尝试一些例子。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5559">[待校准&#64;5559]</a></p>
+<p>在一个终端中，源文件安装文件，然后运行c <code class="docutils literal notranslate"><span class="pre">talker</span></code>  : <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5505">[待校准&#64;5505]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> /opt/ros/foxy/setup.bash
 ros2 run demo_nodes_cpp talker
 </pre></div>
 </div>
-<p>在另一个终端源文件中，安装文件，然后运行Python <code class="docutils literal notranslate"><span class="pre">listener</span></code>  : <a class="reference external" href="http://localhost:3000/#/home?msgid=5506">[待校准&#64;5506]</a></p>
+<p>在另一个终端源文件中，安装文件，然后运行Python <code class="docutils literal notranslate"><span class="pre">listener</span></code>  : <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5506">[待校准&#64;5506]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> /opt/ros/foxy/setup.bash
 ros2 run demo_nodes_py listener
 </pre></div>
 </div>
-<p>你应该看到 <code class="docutils literal notranslate"><span class="pre">talker</span></code> 说这是 <code class="docutils literal notranslate"><span class="pre">Publishing</span></code> 消息 <code class="docutils literal notranslate"><span class="pre">listener</span></code> 说 <code class="docutils literal notranslate"><span class="pre">I</span> <span class="pre">heard</span></code> 这些消息。这将验证capis和Python api是否正常工作。万岁! <a class="reference external" href="http://localhost:3000/#/home?msgid=5507">[待校准&#64;5507]</a></p>
+<p>你应该看到 <code class="docutils literal notranslate"><span class="pre">talker</span></code> 说这是 <code class="docutils literal notranslate"><span class="pre">Publishing</span></code> 消息 <code class="docutils literal notranslate"><span class="pre">listener</span></code> 说 <code class="docutils literal notranslate"><span class="pre">I</span> <span class="pre">heard</span></code> 这些消息。这将验证capis和Python api是否正常工作。万岁! <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5507">[待校准&#64;5507]</a></p>
 </div>
 <div class="section" id="next-steps-after-installing">
-<h2>安装后的下一步 <a class="reference external" href="http://localhost:3000/#/home?msgid=5508">[待校准&#64;5508]</a><a class="headerlink" href="#next-steps-after-installing" title="永久链接至标题"></a></h2>
-<p>继续使用 <a class="reference internal" href="../Tutorials.html"><span class="doc">tutorials and demos</span></a> 来配置您的环境，创建您自己的工作区和包，并学习ROS 2核心概念。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5509">[待校准&#64;5509]</a></p>
+<h2>安装后的下一步 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5508">[待校准&#64;5508]</a><a class="headerlink" href="#next-steps-after-installing" title="永久链接至标题"></a></h2>
+<p>继续使用 <a class="reference internal" href="../Tutorials.html"><span class="doc">tutorials and demos</span></a> 来配置您的环境，创建您自己的工作区和包，并学习ROS 2核心概念。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5509">[待校准&#64;5509]</a></p>
 </div>
 <div class="section" id="using-the-ros-1-bridge">
-<h2>使用ROS 1bridge <a class="reference external" href="http://localhost:3000/#/home?msgid=5510">[待校准&#64;5510]</a><a class="headerlink" href="#using-the-ros-1-bridge" title="永久链接至标题"></a></h2>
-<p>[需手动修复的语法]ROS 1bridge可以连接从[需手动修复的语法]ROS 1到ROS 2的话题，反之亦然。看到专用 <a class="reference external" href="https://github.com/ros2/ros1_bridge/blob/master/README.md">documentation</a> 如何构建和使用[需手动修复的语法]ROS 1bridge。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5511">[待校准&#64;5511]</a></p>
+<h2>使用ROS 1bridge <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5510">[待校准&#64;5510]</a><a class="headerlink" href="#using-the-ros-1-bridge" title="永久链接至标题"></a></h2>
+<p>[需手动修复的语法]ROS 1bridge可以连接从[需手动修复的语法]ROS 1到ROS 2的话题，反之亦然。看到专用 <a class="reference external" href="https://github.com/ros2/ros1_bridge/blob/master/README.md">documentation</a> 如何构建和使用[需手动修复的语法]ROS 1bridge。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5511">[待校准&#64;5511]</a></p>
 </div>
 <div class="section" id="additional-rmw-implementations-optional">
-<h2>附加RMW实现 (可选) <a class="reference external" href="http://localhost:3000/#/home?msgid=5512">[待校准&#64;5512]</a><a class="headerlink" href="#additional-rmw-implementations-optional" title="永久链接至标题"></a></h2>
-<p>ROS 2使用的默认中间件是 <code class="docutils literal notranslate"><span class="pre">Fast-RTPS</span></code> ，但中间件 (RMW) 可以在运行时替换。查看关于如何使用多个RMWs的 <a class="reference internal" href="../How-To-Guides/Working-with-multiple-RMW-implementations.html"><span class="doc">guide</span></a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5513">[待校准&#64;5513]</a></p>
+<h2>附加RMW实现 (可选) <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5512">[待校准&#64;5512]</a><a class="headerlink" href="#additional-rmw-implementations-optional" title="永久链接至标题"></a></h2>
+<p>ROS 2使用的默认中间件是 <code class="docutils literal notranslate"><span class="pre">Fast-RTPS</span></code> ，但中间件 (RMW) 可以在运行时替换。查看关于如何使用多个RMWs的 <a class="reference internal" href="../How-To-Guides/Working-with-multiple-RMW-implementations.html"><span class="doc">guide</span></a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5513">[待校准&#64;5513]</a></p>
 </div>
 <div class="section" id="troubleshooting">
-<h2>故障排除 <a class="reference external" href="http://localhost:3000/#/home?msgid=5520">[待校准&#64;5520]</a><a class="headerlink" href="#troubleshooting" title="永久链接至标题"></a></h2>
-<p>故障排除技术可以找到 <a class="reference internal" href="../How-To-Guides/Installation-Troubleshooting.html"><span class="doc">here</span></a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=5546">[待校准&#64;5546]</a></p>
+<h2>故障排除 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5520">[待校准&#64;5520]</a><a class="headerlink" href="#troubleshooting" title="永久链接至标题"></a></h2>
+<p>故障排除技术可以找到 <a class="reference internal" href="../How-To-Guides/Installation-Troubleshooting.html"><span class="doc">here</span></a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5546">[待校准&#64;5546]</a></p>
 </div>
 <div class="section" id="uninstall">
-<h2>卸载 <a class="reference external" href="http://localhost:3000/#/home?msgid=5522">[待校准&#64;5522]</a><a class="headerlink" href="#uninstall" title="永久链接至标题"></a></h2>
-<p>如果您需要卸载ROS 2或在从二进制文件安装后切换到基于源文件的安装，请运行以下命令: <a class="reference external" href="http://localhost:3000/#/home?msgid=5560">[待校准&#64;5560]</a></p>
+<h2>卸载 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5522">[待校准&#64;5522]</a><a class="headerlink" href="#uninstall" title="永久链接至标题"></a></h2>
+<p>如果您需要卸载ROS 2或在从二进制文件安装后切换到基于源文件的安装，请运行以下命令: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5560">[待校准&#64;5560]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt remove ~nros-foxy-* <span class="o">&amp;&amp;</span> sudo apt autoremove
 </pre></div>
 </div>

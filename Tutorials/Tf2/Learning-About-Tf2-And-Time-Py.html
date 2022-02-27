@@ -280,12 +280,12 @@
 
 
   <div class="section" id="learning-about-tf2-and-time-python">
-<span id="learningabouttf2andtimepy"></span><h1>学习tf2和时间 (Python) <a class="reference external" href="http://localhost:3000/#/home?msgid=8480">[待校准&#64;8480]</a><a class="headerlink" href="#learning-about-tf2-and-time-python" title="永久链接至标题"></a></h1>
+<span id="learningabouttf2andtimepy"></span><h1>学习tf2和时间 (Python) <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8480">[待校准&#64;8480]</a><a class="headerlink" href="#learning-about-tf2-and-time-python" title="永久链接至标题"></a></h1>
 <p><strong>Goal:</strong> Learn to use the <code class="docutils literal notranslate"><span class="pre">timeout</span></code> in <code class="docutils literal notranslate"><span class="pre">lookup_transform</span></code> function to wait for a transform to be available on the tf2 tree.</p>
-<p>Tutorial教程级别: Intermediate中级 <a class="reference external" href="http://localhost:3000/#/home?msgid=6713">[待校准&#64;6713]</a></p>
-<p>Time时间: 10 10分钟 <a class="reference external" href="http://localhost:3000/#/home?msgid=7452">[待校准&#64;7452]</a></p>
+<p>Tutorial教程级别: Intermediate中级 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6713">[待校准&#64;6713]</a></p>
+<p>Time时间: 10 10分钟 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7452">[待校准&#64;7452]</a></p>
 <div class="contents local topic" id="contents">
-<p class="topic-title">内容 <a class="reference external" href="http://localhost:3000/#/home?msgid=6715">[待校准&#64;6715]</a></p>
+<p class="topic-title">内容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6715">[待校准&#64;6715]</a></p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#background" id="id1">背景 [待校准&#64;6716]</a></p></li>
 <li><p><a class="reference internal" href="#tasks" id="id2">任务 [待校准&#64;6725]</a></p>
@@ -298,39 +298,39 @@
 </ul>
 </div>
 <div class="section" id="background">
-<h2>背景 <a class="reference external" href="http://localhost:3000/#/home?msgid=6716">[待校准&#64;6716]</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
-<p>在之前的教程中，我们通过编写 <a class="reference internal" href="Writing-A-Tf2-Broadcaster-Py.html"><span class="doc">tf2 broadcaster</span></a> and a <a class="reference internal" href="Writing-A-Tf2-Listener-Py.html"><span class="doc">tf2 listener</span></a>. We also learned how to <a class="reference internal" href="Adding-A-Frame-Py.html"><span class="doc">add a new frame to the transformation tree</span></a> 重新创建了海龟例程。现在我们将了解更多关于 <code class="docutils literal notranslate"><span class="pre">timeout</span></code> 的参数，它使 <code class="docutils literal notranslate"><span class="pre">lookup_transform</span></code> 在引发异常之前等待指定的转换直到指定的持续时间。该工具对于侦听以不同速率发布的转换或网络不可靠且延迟不可忽略的传入源文件非常有用。本教程将教您如何使用 <code class="docutils literal notranslate"><span class="pre">lookup_transform</span></code> 函数中的超时来等待转换在tf2树上可用。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8482">[待校准&#64;8482]</a></p>
+<h2>背景 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6716">[待校准&#64;6716]</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
+<p>在之前的教程中，我们通过编写 <a class="reference internal" href="Writing-A-Tf2-Broadcaster-Py.html"><span class="doc">tf2 broadcaster</span></a> and a <a class="reference internal" href="Writing-A-Tf2-Listener-Py.html"><span class="doc">tf2 listener</span></a>. We also learned how to <a class="reference internal" href="Adding-A-Frame-Py.html"><span class="doc">add a new frame to the transformation tree</span></a> 重新创建了海龟例程。现在我们将了解更多关于 <code class="docutils literal notranslate"><span class="pre">timeout</span></code> 的参数，它使 <code class="docutils literal notranslate"><span class="pre">lookup_transform</span></code> 在引发异常之前等待指定的转换直到指定的持续时间。该工具对于侦听以不同速率发布的转换或网络不可靠且延迟不可忽略的传入源文件非常有用。本教程将教您如何使用 <code class="docutils literal notranslate"><span class="pre">lookup_transform</span></code> 函数中的超时来等待转换在tf2树上可用。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8482">[待校准&#64;8482]</a></p>
 </div>
 <div class="section" id="tasks">
-<h2>任务 <a class="reference external" href="http://localhost:3000/#/home?msgid=6725">[待校准&#64;6725]</a><a class="headerlink" href="#tasks" title="永久链接至标题"></a></h2>
+<h2>任务 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6725">[待校准&#64;6725]</a><a class="headerlink" href="#tasks" title="永久链接至标题"></a></h2>
 <div class="section" id="update-the-listener-node">
-<h3>1更新监听节点 <a class="reference external" href="http://localhost:3000/#/home?msgid=8483">[待校准&#64;8483]</a><a class="headerlink" href="#update-the-listener-node" title="永久链接至标题"></a></h3>
-<p>编辑 <code class="docutils literal notranslate"><span class="pre">turtle_tf2_listener.py</span></code> ，并删除传递给第76行的 <code class="docutils literal notranslate"><span class="pre">lookup_transform()</span></code> 调用的 <code class="docutils literal notranslate"><span class="pre">timeout=Duration(seconds=1.0)</span></code> 参数。它应该如下所示: <a class="reference external" href="http://localhost:3000/#/home?msgid=8484">[待校准&#64;8484]</a></p>
+<h3>1更新监听节点 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8483">[待校准&#64;8483]</a><a class="headerlink" href="#update-the-listener-node" title="永久链接至标题"></a></h3>
+<p>编辑 <code class="docutils literal notranslate"><span class="pre">turtle_tf2_listener.py</span></code> ，并删除传递给第76行的 <code class="docutils literal notranslate"><span class="pre">lookup_transform()</span></code> 调用的 <code class="docutils literal notranslate"><span class="pre">timeout=Duration(seconds=1.0)</span></code> 参数。它应该如下所示: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8484">[待校准&#64;8484]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">trans</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_tf_buffer</span><span class="o">.</span><span class="n">lookup_transform</span><span class="p">(</span>
    <span class="n">to_frame_rel</span><span class="p">,</span>
    <span class="n">from_frame_rel</span><span class="p">,</span>
    <span class="n">now</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>此外，导入我们将在文件开始时处理的其他异常: <a class="reference external" href="http://localhost:3000/#/home?msgid=8485">[待校准&#64;8485]</a></p>
+<p>此外，导入我们将在文件开始时处理的其他异常: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8485">[待校准&#64;8485]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tf2_ros</span> <span class="kn">import</span> <span class="n">LookupException</span><span class="p">,</span> <span class="n">ConnectivityException</span><span class="p">,</span> <span class="n">ExtrapolationException</span>
 </pre></div>
 </div>
-<p>通过添加新导入的异常和 <code class="docutils literal notranslate"><span class="pre">raise</span></code> 语句来编辑第81行的异常处理，以查看异常: <a class="reference external" href="http://localhost:3000/#/home?msgid=8486">[待校准&#64;8486]</a></p>
+<p>通过添加新导入的异常和 <code class="docutils literal notranslate"><span class="pre">raise</span></code> 语句来编辑第81行的异常处理，以查看异常: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8486">[待校准&#64;8486]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">except</span> <span class="p">(</span><span class="n">LookupException</span><span class="p">,</span> <span class="n">ConnectivityException</span><span class="p">,</span> <span class="n">ExtrapolationException</span><span class="p">):</span>
    <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;transform not ready&#39;</span><span class="p">)</span>
    <span class="k">raise</span>
    <span class="k">return</span>
 </pre></div>
 </div>
-<p>如果您现在尝试运行launch文件，您会注意到它失败了: <a class="reference external" href="http://localhost:3000/#/home?msgid=8487">[待校准&#64;8487]</a></p>
+<p>如果您现在尝试运行launch文件，您会注意到它失败了: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8487">[待校准&#64;8487]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 launch learning_tf2_py turtle_tf2_demo.launch.py</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="fix-the-listener-node">
-<h3>2修复监听节点 <a class="reference external" href="http://localhost:3000/#/home?msgid=8488">[待校准&#64;8488]</a><a class="headerlink" href="#fix-the-listener-node" title="永久链接至标题"></a></h3>
-<p>你现在应该注意到 <code class="docutils literal notranslate"><span class="pre">lookup_transform()</span></code> 正在失效。它告诉你帧不存在或者数据在将来。要解决此问题，请在第76行编辑代码，如下所示 (返回 <code class="docutils literal notranslate"><span class="pre">timeout</span></code> 参数): <a class="reference external" href="http://localhost:3000/#/home?msgid=8489">[待校准&#64;8489]</a></p>
+<h3>2修复监听节点 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8488">[待校准&#64;8488]</a><a class="headerlink" href="#fix-the-listener-node" title="永久链接至标题"></a></h3>
+<p>你现在应该注意到 <code class="docutils literal notranslate"><span class="pre">lookup_transform()</span></code> 正在失效。它告诉你帧不存在或者数据在将来。要解决此问题，请在第76行编辑代码，如下所示 (返回 <code class="docutils literal notranslate"><span class="pre">timeout</span></code> 参数): <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8489">[待校准&#64;8489]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">trans</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_tf_buffer</span><span class="o">.</span><span class="n">lookup_transform</span><span class="p">(</span>
    <span class="n">to_frame_rel</span><span class="p">,</span>
    <span class="n">from_frame_rel</span><span class="p">,</span>
@@ -338,21 +338,21 @@
    <span class="n">timeout</span><span class="o">=</span><span class="n">Duration</span><span class="p">(</span><span class="n">seconds</span><span class="o">=</span><span class="mf">1.0</span><span class="p">))</span>
 </pre></div>
 </div>
-<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">lookup_transform</span></code> 可以接受四个参数，其中最后一个是可选的超时。它将阻塞长达该持续时间，等待其超时。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8490">[待校准&#64;8490]</a></p>
+<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">lookup_transform</span></code> 可以接受四个参数，其中最后一个是可选的超时。它将阻塞长达该持续时间，等待其超时。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8490">[待校准&#64;8490]</a></p>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
-<p>一旦更改，删除 <code class="docutils literal notranslate"><span class="pre">raise</span></code> 线从 <code class="docutils literal notranslate"><span class="pre">except()</span></code> 块添加的或代码将继续失败。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8491">[待校准&#64;8491]</a></p>
+<p>一旦更改，删除 <code class="docutils literal notranslate"><span class="pre">raise</span></code> 线从 <code class="docutils literal notranslate"><span class="pre">except()</span></code> 块添加的或代码将继续失败。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8491">[待校准&#64;8491]</a></p>
 </div>
-<p>您现在可以运行launch文件。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8477">[待校准&#64;8477]</a></p>
+<p>您现在可以运行launch文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8477">[待校准&#64;8477]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 launch learning_tf2_py turtle_tf2_demo.launch.py</span>
 </pre></div>
 </div>
-<p>你应该注意到 <code class="docutils literal notranslate"><span class="pre">lookup_transform()</span></code> 实际上会阻塞，直到两只海龟之间的转变变得可用 (这通常需要几毫秒)。一旦达到超时时间 (在这种情况下为一秒钟)，仅当转换仍然不可用时才会引发异常。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8492">[待校准&#64;8492]</a></p>
+<p>你应该注意到 <code class="docutils literal notranslate"><span class="pre">lookup_transform()</span></code> 实际上会阻塞，直到两只海龟之间的转变变得可用 (这通常需要几毫秒)。一旦达到超时时间 (在这种情况下为一秒钟)，仅当转换仍然不可用时才会引发异常。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8492">[待校准&#64;8492]</a></p>
 </div>
 </div>
 <div class="section" id="summary">
-<h2>总结 <a class="reference external" href="http://localhost:3000/#/home?msgid=6747">[待校准&#64;6747]</a><a class="headerlink" href="#summary" title="永久链接至标题"></a></h2>
-<p>在本教程中，您将了解更多关于 <code class="docutils literal notranslate"><span class="pre">lookup_transform</span></code> 函数及其超时功能的信息。您还学习了如何捕获和处理tf2可能引发的其他异常。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8493">[待校准&#64;8493]</a></p>
+<h2>总结 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6747">[待校准&#64;6747]</a><a class="headerlink" href="#summary" title="永久链接至标题"></a></h2>
+<p>在本教程中，您将了解更多关于 <code class="docutils literal notranslate"><span class="pre">lookup_transform</span></code> 函数及其超时功能的信息。您还学习了如何捕获和处理tf2可能引发的其他异常。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8493">[待校准&#64;8493]</a></p>
 </div>
 </div>
 

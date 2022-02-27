@@ -279,10 +279,10 @@
 
 
   <div class="section" id="installation-troubleshooting">
-<h1>安装故障诊断工具 <a class="reference external" href="http://localhost:3000/#/home?msgid=6086">[待校准&#64;6086]</a><a class="headerlink" href="#installation-troubleshooting" title="永久链接至标题"></a></h1>
-<p>安装故障排除技术按其适用的平台排序。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6087">[待校准&#64;6087]</a></p>
+<h1>安装故障诊断工具 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6086">[待校准&#64;6086]</a><a class="headerlink" href="#installation-troubleshooting" title="永久链接至标题"></a></h1>
+<p>安装故障排除技术按其适用的平台排序。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6087">[待校准&#64;6087]</a></p>
 <div class="contents local topic" id="platforms">
-<p class="topic-title">平台 <a class="reference external" href="http://localhost:3000/#/home?msgid=6088">[待校准&#64;6088]</a></p>
+<p class="topic-title">平台 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6088">[待校准&#64;6088]</a></p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#general" id="id1">综述 [待校准&#64;6089]</a></p></li>
 <li><p><a class="reference internal" href="#linux" id="id2">Linux [待校准&#64;6101]</a></p></li>
@@ -291,57 +291,57 @@
 </ul>
 </div>
 <div class="section" id="general">
-<h2>综述 <a class="reference external" href="http://localhost:3000/#/home?msgid=6089">[待校准&#64;6089]</a><a class="headerlink" href="#general" title="永久链接至标题"></a></h2>
-<p>通用故障诊断工具技术适用于所有平台。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6090">[待校准&#64;6090]</a></p>
+<h2>综述 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6089">[待校准&#64;6089]</a><a class="headerlink" href="#general" title="永久链接至标题"></a></h2>
+<p>通用故障诊断工具技术适用于所有平台。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6090">[待校准&#64;6090]</a></p>
 <div class="section" id="enable-multicast">
-<h3>启用多播 <a class="reference external" href="http://localhost:3000/#/home?msgid=6091">[待校准&#64;6091]</a><a class="headerlink" href="#enable-multicast" title="永久链接至标题"></a></h3>
-<p>为了通过DDS成功通信，使用的网络接口必须启用多播。我们在过去的经验中已经看到，使用回送适配器时，默认情况下 (在Ubuntu或OSX上) 不一定启用此功能。见 <a class="reference external" href="https://github.com/ros2/ros2/issues/552">original issue</a> or a <a class="reference external" href="https://answers.ros.org/question/300370/ros2-talker-cannot-communicate-with-listener/">conversation on ros-answers</a> 。您可以使用ROS 2工具验证当前设置是否允许多播: <a class="reference external" href="http://localhost:3000/#/home?msgid=6092">[待校准&#64;6092]</a></p>
-<p>在1号航站楼: <a class="reference external" href="http://localhost:3000/#/home?msgid=6093">[待校准&#64;6093]</a></p>
+<h3>启用多播 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6091">[待校准&#64;6091]</a><a class="headerlink" href="#enable-multicast" title="永久链接至标题"></a></h3>
+<p>为了通过DDS成功通信，使用的网络接口必须启用多播。我们在过去的经验中已经看到，使用回送适配器时，默认情况下 (在Ubuntu或OSX上) 不一定启用此功能。见 <a class="reference external" href="https://github.com/ros2/ros2/issues/552">original issue</a> or a <a class="reference external" href="https://answers.ros.org/question/300370/ros2-talker-cannot-communicate-with-listener/">conversation on ros-answers</a> 。您可以使用ROS 2工具验证当前设置是否允许多播: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6092">[待校准&#64;6092]</a></p>
+<p>在1号航站楼: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6093">[待校准&#64;6093]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 multicast receive
 </pre></div>
 </div>
-<p>在2号航站楼: <a class="reference external" href="http://localhost:3000/#/home?msgid=6094">[待校准&#64;6094]</a></p>
+<p>在2号航站楼: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6094">[待校准&#64;6094]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 multicast send
 </pre></div>
 </div>
-<p>如果第一个命令未返回类似于以下内容的响应: <a class="reference external" href="http://localhost:3000/#/home?msgid=6095">[待校准&#64;6095]</a></p>
+<p>如果第一个命令未返回类似于以下内容的响应: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6095">[待校准&#64;6095]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Received from xx.xxx.xxx.xx:43751: <span class="s1">&#39;Hello World!&#39;</span>
 </pre></div>
 </div>
-<p>然后，您需要更新防火墙配置，以允许使用 <a class="reference external" href="https://help.ubuntu.com/community/UFW">ufw</a> 进行多播。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6096">[待校准&#64;6096]</a></p>
+<p>然后，您需要更新防火墙配置，以允许使用 <a class="reference external" href="https://help.ubuntu.com/community/UFW">ufw</a> 进行多播。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6096">[待校准&#64;6096]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo ufw allow in proto udp to <span class="m">224</span>.0.0.0/4
 sudo ufw allow in proto udp from <span class="m">224</span>.0.0.0/4
 </pre></div>
 </div>
-<p>您可以使用: 代码:  <code class="xref any docutils literal notranslate"><span class="pre">ifconfig</span></code> 工具检查是否为您的网络接口启用了多播标志，并在标志部分查找: 代码:  <code class="xref any docutils literal notranslate"><span class="pre">MULITCAST</span></code> : <a class="reference external" href="http://localhost:3000/#/home?msgid=6097">[待校准&#64;6097]</a></p>
+<p>您可以使用: 代码:  <code class="xref any docutils literal notranslate"><span class="pre">ifconfig</span></code> 工具检查是否为您的网络接口启用了多播标志，并在标志部分查找: 代码:  <code class="xref any docutils literal notranslate"><span class="pre">MULITCAST</span></code> : <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6097">[待校准&#64;6097]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>eno1: <span class="nv">flags</span><span class="o">=</span><span class="m">4163</span>&lt;...,MULTICAST&gt;
    ...
 </pre></div>
 </div>
 </div>
 <div class="section" id="import-failing-without-library-present-on-the-system">
-<h3>导入失败，系统上没有库 <a class="reference external" href="http://localhost:3000/#/home?msgid=6098">[待校准&#64;6098]</a><a class="headerlink" href="#import-failing-without-library-present-on-the-system" title="永久链接至标题"></a></h3>
-<p>有时无法导入 <code class="docutils literal notranslate"><span class="pre">rclpy</span></code> ，因为找不到预期的C扩展库。如果是这样，请将目录中存在的库与错误消息中提到的库进行比较。假设存在一个名称相似的文件 (前缀与 <code class="docutils literal notranslate"><span class="pre">_rclpy.</span></code> 相同，后缀与 <code class="docutils literal notranslate"><span class="pre">.so</span></code> 相同，但Python版本/体系结构不同) 您使用的Python解释器与用于构建C扩展的Python解释器不同。确保使用与构建二进制文件相同的Python解释器。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6099">[待校准&#64;6099]</a></p>
-<p>例如，这种不匹配可能会在操作系统更新后出现。然后，重建工作区可以解决此问题。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6100">[待校准&#64;6100]</a></p>
+<h3>导入失败，系统上没有库 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6098">[待校准&#64;6098]</a><a class="headerlink" href="#import-failing-without-library-present-on-the-system" title="永久链接至标题"></a></h3>
+<p>有时无法导入 <code class="docutils literal notranslate"><span class="pre">rclpy</span></code> ，因为找不到预期的C扩展库。如果是这样，请将目录中存在的库与错误消息中提到的库进行比较。假设存在一个名称相似的文件 (前缀与 <code class="docutils literal notranslate"><span class="pre">_rclpy.</span></code> 相同，后缀与 <code class="docutils literal notranslate"><span class="pre">.so</span></code> 相同，但Python版本/体系结构不同) 您使用的Python解释器与用于构建C扩展的Python解释器不同。确保使用与构建二进制文件相同的Python解释器。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6099">[待校准&#64;6099]</a></p>
+<p>例如，这种不匹配可能会在操作系统更新后出现。然后，重建工作区可以解决此问题。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6100">[待校准&#64;6100]</a></p>
 </div>
 </div>
 <div class="section" id="linux">
-<span id="linux-troubleshooting"></span><h2>Linux <a class="reference external" href="http://localhost:3000/#/home?msgid=6101">[待校准&#64;6101]</a><a class="headerlink" href="#linux" title="永久链接至标题"></a></h2>
+<span id="linux-troubleshooting"></span><h2>Linux <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6101">[待校准&#64;6101]</a><a class="headerlink" href="#linux" title="永久链接至标题"></a></h2>
 <div class="section" id="internal-compiler-error">
-<h3>内部编译器错误 <a class="reference external" href="http://localhost:3000/#/home?msgid=6102">[待校准&#64;6102]</a><a class="headerlink" href="#internal-compiler-error" title="永久链接至标题"></a></h3>
-<p>如果您在尝试在内存受限的平台 (如树莓派形式发票) 上进行com形式发票时遇到ICE，您可能希望构建单线程 (在构建调用前加上 <code class="docutils literal notranslate"><span class="pre">MAKEFLAGS=-j1</span></code> )。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6103">[待校准&#64;6103]</a></p>
+<h3>内部编译器错误 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6102">[待校准&#64;6102]</a><a class="headerlink" href="#internal-compiler-error" title="永久链接至标题"></a></h3>
+<p>如果您在尝试在内存受限的平台 (如树莓派形式发票) 上进行com形式发票时遇到ICE，您可能希望构建单线程 (在构建调用前加上 <code class="docutils literal notranslate"><span class="pre">MAKEFLAGS=-j1</span></code> )。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6103">[待校准&#64;6103]</a></p>
 </div>
 <div class="section" id="out-of-memory">
-<h3>内存不足 <a class="reference external" href="http://localhost:3000/#/home?msgid=6104">[待校准&#64;6104]</a><a class="headerlink" href="#out-of-memory" title="永久链接至标题"></a></h3>
-<p>当前形式的 <code class="docutils literal notranslate"><span class="pre">ros1_bridge</span></code> 需要4Gb的可用内存来编译。如果你't have that amount of RAM available it's建议使用 <code class="docutils literal notranslate"><span class="pre">COLCON_IGNORE</span></code> 文件夹中跳过汇编。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6105">[待校准&#64;6105]</a></p>
+<h3>内存不足 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6104">[待校准&#64;6104]</a><a class="headerlink" href="#out-of-memory" title="永久链接至标题"></a></h3>
+<p>当前形式的 <code class="docutils literal notranslate"><span class="pre">ros1_bridge</span></code> 需要4Gb的可用内存来编译。如果你't have that amount of RAM available it's建议使用 <code class="docutils literal notranslate"><span class="pre">COLCON_IGNORE</span></code> 文件夹中跳过汇编。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6105">[待校准&#64;6105]</a></p>
 </div>
 <div class="section" id="multiple-host-interference">
-<h3>多主机干扰 <a class="reference external" href="http://localhost:3000/#/home?msgid=6106">[待校准&#64;6106]</a><a class="headerlink" href="#multiple-host-interference" title="永久链接至标题"></a></h3>
-<p>如果您在同一网络上运行多个实例，则可能会受到干扰。为避免这种情况，您可以将环境变量 <code class="docutils literal notranslate"><span class="pre">ROS_DOMAIN_ID</span></code> 设置为不同的整数，默认值为零。这将为您的系统定义DDS域账号。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6107">[待校准&#64;6107]</a></p>
+<h3>多主机干扰 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6106">[待校准&#64;6106]</a><a class="headerlink" href="#multiple-host-interference" title="永久链接至标题"></a></h3>
+<p>如果您在同一网络上运行多个实例，则可能会受到干扰。为避免这种情况，您可以将环境变量 <code class="docutils literal notranslate"><span class="pre">ROS_DOMAIN_ID</span></code> 设置为不同的整数，默认值为零。这将为您的系统定义DDS域账号。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6107">[待校准&#64;6107]</a></p>
 </div>
 <div class="section" id="exception-sourcing-setup-bash">
-<h3>异常采购设置.bash <a class="reference external" href="http://localhost:3000/#/home?msgid=6108">[待校准&#64;6108]</a><a class="headerlink" href="#exception-sourcing-setup-bash" title="永久链接至标题"></a></h3>
-<p>如果遇到异常时源文件环境后从源文件，尝试升级 <code class="docutils literal notranslate"><span class="pre">colcon</span></code> 相关包使用 <a class="reference external" href="http://localhost:3000/#/home?msgid=6109">[待校准&#64;6109]</a></p>
+<h3>异常采购设置.bash <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6108">[待校准&#64;6108]</a><a class="headerlink" href="#exception-sourcing-setup-bash" title="永久链接至标题"></a></h3>
+<p>如果遇到异常时源文件环境后从源文件，尝试升级 <code class="docutils literal notranslate"><span class="pre">colcon</span></code> 相关包使用 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6109">[待校准&#64;6109]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>colcon version-check  <span class="c1"># check if newer versions available</span>
 sudo apt install python3-colcon* --only-upgrade  <span class="c1"># upgrade installed colcon packages to latest version</span>
 </pre></div>
@@ -349,25 +349,25 @@ sudo apt install python3-colcon* --only-upgrade  <span class="c1"># upgrade inst
 </div>
 </div>
 <div class="section" id="macos">
-<span id="macos-troubleshooting"></span><h2>macOS <a class="reference external" href="http://localhost:3000/#/home?msgid=6110">[待校准&#64;6110]</a><a class="headerlink" href="#macos" title="永久链接至标题"></a></h2>
+<span id="macos-troubleshooting"></span><h2>macOS <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6110">[待校准&#64;6110]</a><a class="headerlink" href="#macos" title="永久链接至标题"></a></h2>
 <div class="section" id="segmentation-fault-when-using-pyenv">
-<h3>使用 <code class="docutils literal notranslate"><span class="pre">pyenv</span></code> 时的分段错误 <a class="reference external" href="http://localhost:3000/#/home?msgid=6111">[待校准&#64;6111]</a><a class="headerlink" href="#segmentation-fault-when-using-pyenv" title="永久链接至标题"></a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">pyenv</span></code> seems to default to building Python with <code class="docutils literal notranslate"><span class="pre">.a</span></code> files, but that causes issues with <code class="docutils literal notranslate"><span class="pre">rclpy</span></code>, so it's recommended to build Python with Frameworks enabled on macOS when using <code class="docutils literal notranslate"><span class="pre">pyenv</span></code>: <a class="reference external" href="http://localhost:3000/#/home?msgid=6112">[待校准&#64;6112]</a></p>
-<p><a class="reference external" href="https://github.com/pyenv/pyenv">https://github.com/pyenv/pyenv</a>/wiki# 如何在os-x上构建带有帧支持的cpython <a class="reference external" href="http://localhost:3000/#/home?msgid=6113">[待校准&#64;6113]</a></p>
+<h3>使用 <code class="docutils literal notranslate"><span class="pre">pyenv</span></code> 时的分段错误 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6111">[待校准&#64;6111]</a><a class="headerlink" href="#segmentation-fault-when-using-pyenv" title="永久链接至标题"></a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">pyenv</span></code> seems to default to building Python with <code class="docutils literal notranslate"><span class="pre">.a</span></code> files, but that causes issues with <code class="docutils literal notranslate"><span class="pre">rclpy</span></code>, so it's recommended to build Python with Frameworks enabled on macOS when using <code class="docutils literal notranslate"><span class="pre">pyenv</span></code>: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6112">[待校准&#64;6112]</a></p>
+<p><a class="reference external" href="https://github.com/pyenv/pyenv">https://github.com/pyenv/pyenv</a>/wiki# 如何在os-x上构建带有帧支持的cpython <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6113">[待校准&#64;6113]</a></p>
 </div>
 <div class="section" id="library-not-loaded-image-not-found">
-<h3>未加载库; 未找到图像 <a class="reference external" href="http://localhost:3000/#/home?msgid=6114">[待校准&#64;6114]</a><a class="headerlink" href="#library-not-loaded-image-not-found" title="永久链接至标题"></a></h3>
-<p>如果您在运行时 (运行测试或运行节点) 看到库加载问题，例如: <a class="reference external" href="http://localhost:3000/#/home?msgid=6115">[待校准&#64;6115]</a></p>
+<h3>未加载库; 未找到图像 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6114">[待校准&#64;6114]</a><a class="headerlink" href="#library-not-loaded-image-not-found" title="永久链接至标题"></a></h3>
+<p>如果您在运行时 (运行测试或运行节点) 看到库加载问题，例如: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6115">[待校准&#64;6115]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ImportError: dlopen<span class="o">(</span>.../ros2_&lt;distro&gt;/ros2-osx/lib/python3.7/site-packages/rclpy/_rclpy.cpython-37m-darwin.so, <span class="m">2</span><span class="o">)</span>: Library not loaded: @rpath/librcl_interfaces__rosidl_typesupport_c.dylib
   Referenced from: .../ros2_&lt;distro&gt;/ros2-osx/lib/python3.7/site-packages/rclpy/_rclpy.cpython-37m-darwin.so
   Reason: image not found
 </pre></div>
 </div>
-<p>然后，您可能启用了系统完整性保护。按照 <a class="reference external" href="https://developer.apple.com/library/content/documentation/Security/Conceptual/System_Integrity_Protection_Guide/ConfiguringSystemIntegrityProtection/ConfiguringSystemIntegrityProtection.html">these instructions</a>  _ 禁用系统完整性保护 (SIP)。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6116">[待校准&#64;6116]</a></p>
+<p>然后，您可能启用了系统完整性保护。按照 <a class="reference external" href="https://developer.apple.com/library/content/documentation/Security/Conceptual/System_Integrity_Protection_Guide/ConfiguringSystemIntegrityProtection/ConfiguringSystemIntegrityProtection.html">these instructions</a>  _ 禁用系统完整性保护 (SIP)。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6116">[待校准&#64;6116]</a></p>
 </div>
 <div class="section" id="qt-build-error-unknown-type-name-q-enum">
-<h3>Qt构建错误: “未知类型名称'Q_ENUM'” <a class="reference external" href="http://localhost:3000/#/home?msgid=6117">[待校准&#64;6117]</a><a class="headerlink" href="#qt-build-error-unknown-type-name-q-enum" title="永久链接至标题"></a></h3>
-<p>如果您看到与Qt相关的构建错误，例如: <a class="reference external" href="http://localhost:3000/#/home?msgid=6118">[待校准&#64;6118]</a></p>
+<h3>Qt构建错误: “未知类型名称'Q_ENUM'” <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6117">[待校准&#64;6117]</a><a class="headerlink" href="#qt-build-error-unknown-type-name-q-enum" title="永久链接至标题"></a></h3>
+<p>如果您看到与Qt相关的构建错误，例如: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6118">[待校准&#64;6118]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>In file included from /usr/local/opt/qt/lib/QtGui.framework/Headers/qguiapplication.h:46:
 /usr/local/opt/qt/lib/QtGui.framework/Headers/qinputmethod.h:87:5: error:
       unknown <span class="nb">type</span> name <span class="s1">&#39;Q_ENUM&#39;</span>
@@ -375,11 +375,11 @@ sudo apt install python3-colcon* --only-upgrade  <span class="c1"># upgrade inst
     ^
 </pre></div>
 </div>
-<p>你可能使用qt4而不是qt5: 看到https://github.com/ros2/问题/441 <a class="reference external" href="http://localhost:3000/#/home?msgid=6119">[待校准&#64;6119]</a></p>
+<p>你可能使用qt4而不是qt5: 看到https://github.com/ros2/问题/441 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6119">[待校准&#64;6119]</a></p>
 </div>
 <div class="section" id="missing-symbol-when-opencv-and-therefore-libjpeg-libtiff-and-libpng-are-installed-with-homebrew">
-<h3>在使用自制软件安装tcl (以及libjpeg、libtiff和libpng) 时缺少符号 <a class="reference external" href="http://localhost:3000/#/home?msgid=6120">[待校准&#64;6120]</a><a class="headerlink" href="#missing-symbol-when-opencv-and-therefore-libjpeg-libtiff-and-libpng-are-installed-with-homebrew" title="永久链接至标题"></a></h3>
-<p>如果您安装了opencv，则可能会得到以下信息: <a class="reference external" href="http://localhost:3000/#/home?msgid=6121">[待校准&#64;6121]</a></p>
+<h3>在使用自制软件安装tcl (以及libjpeg、libtiff和libpng) 时缺少符号 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6120">[待校准&#64;6120]</a><a class="headerlink" href="#missing-symbol-when-opencv-and-therefore-libjpeg-libtiff-and-libpng-are-installed-with-homebrew" title="永久链接至标题"></a></h3>
+<p>如果您安装了opencv，则可能会得到以下信息: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6121">[待校准&#64;6121]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>dyld: Symbol not found: __cg_jpeg_resync_to_restart
   Referenced from: /System/Library/Frameworks/ImageIO.framework/Versions/A/ImageIO
   Expected in: /usr/local/lib/libJPEG.dylib
@@ -387,50 +387,50 @@ sudo apt install python3-colcon* --only-upgrade  <span class="c1"># upgrade inst
 /bin/sh: line <span class="m">1</span>: <span class="m">25274</span> Trace/BPT trap: <span class="m">5</span>       /usr/local/bin/cmake
 </pre></div>
 </div>
-<p>如果是这样，要构建，您必须执行以下操作: <a class="reference external" href="http://localhost:3000/#/home?msgid=6122">[待校准&#64;6122]</a></p>
+<p>如果是这样，要构建，您必须执行以下操作: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6122">[待校准&#64;6122]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ brew unlink libpng libtiff libjpeg
 </pre></div>
 </div>
-<p>但这将破坏opencv，因此您还需要对其进行更新以继续工作: <a class="reference external" href="http://localhost:3000/#/home?msgid=6123">[待校准&#64;6123]</a></p>
+<p>但这将破坏opencv，因此您还需要对其进行更新以继续工作: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6123">[待校准&#64;6123]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo install_name_tool -change /usr/local/lib/libjpeg.8.dylib /usr/local/opt/jpeg/lib/libjpeg.8.dylib /usr/local/lib/libopencv_highgui.2.4.dylib
 $ sudo install_name_tool -change /usr/local/lib/libpng16.16.dylib /usr/local/opt/libpng/lib/libpng16.16.dylib /usr/local/lib/libopencv_highgui.2.4.dylib
 $ sudo install_name_tool -change /usr/local/lib/libtiff.5.dylib /usr/local/opt/libtiff/lib/libtiff.5.dylib /usr/local/lib/libopencv_highgui.2.4.dylib
 $ sudo install_name_tool -change /usr/local/lib/libjpeg.8.dylib /usr/local/opt/jpeg/lib/libjpeg.8.dylib /usr/local/Cellar/libtiff/4.0.4/lib/libtiff.5.dylib
 </pre></div>
 </div>
-<p>第一个命令是必要的，以避免在/usr/local/lib中获取版本而针对系统libjpeg (等) 构建的内容。其他人正在更新自制软件构建的东西，这样他们就可以找到libjpeg的版本 (等等)，而不用在/usr/local/lib中找到它们。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6124">[待校准&#64;6124]</a></p>
+<p>第一个命令是必要的，以避免在/usr/local/lib中获取版本而针对系统libjpeg (等) 构建的内容。其他人正在更新自制软件构建的东西，这样他们就可以找到libjpeg的版本 (等等)，而不用在/usr/local/lib中找到它们。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6124">[待校准&#64;6124]</a></p>
 </div>
 <div class="section" id="xcode-select-error-tool-xcodebuild-requires-xcode-but-active-developer-directory-is-a-command-line-instance">
-<h3>Unix-select错误: 工具 <code class="docutils literal notranslate"><span class="pre">xcodebuild</span></code> 需要unix，但活动开发人员目录是一个命令行实例 <a class="reference external" href="http://localhost:3000/#/home?msgid=6125">[待校准&#64;6125]</a><a class="headerlink" href="#xcode-select-error-tool-xcodebuild-requires-xcode-but-active-developer-directory-is-a-command-line-instance" title="永久链接至标题"></a></h3>
-<p>如果您最近安装了Xcode，则可能会遇到以下错误: <a class="reference external" href="http://localhost:3000/#/home?msgid=6126">[待校准&#64;6126]</a></p>
+<h3>Unix-select错误: 工具 <code class="docutils literal notranslate"><span class="pre">xcodebuild</span></code> 需要unix，但活动开发人员目录是一个命令行实例 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6125">[待校准&#64;6125]</a><a class="headerlink" href="#xcode-select-error-tool-xcodebuild-requires-xcode-but-active-developer-directory-is-a-command-line-instance" title="永久链接至标题"></a></h3>
+<p>如果您最近安装了Xcode，则可能会遇到以下错误: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6126">[待校准&#64;6126]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Xcode: xcode-select: error: tool <span class="s1">&#39;xcodebuild&#39;</span> requires Xcode,
 but active developer directory <span class="s1">&#39;/Library/Developer/CommandLineTools&#39;</span> is a <span class="nb">command</span> line tools instance
 </pre></div>
 </div>
-<p>要解决此错误，您需要: <a class="reference external" href="http://localhost:3000/#/home?msgid=6127">[待校准&#64;6127]</a></p>
+<p>要解决此错误，您需要: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6127">[待校准&#64;6127]</a></p>
 <ol class="arabic simple">
-<li><p>仔细检查您是否已安装命令行工具: <a class="reference external" href="http://localhost:3000/#/home?msgid=6128">[待校准&#64;6128]</a></p></li>
+<li><p>仔细检查您是否已安装命令行工具: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6128">[待校准&#64;6128]</a></p></li>
 </ol>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ xcode-select --install
 </pre></div>
 </div>
 <ol class="arabic simple" start="2">
-<li><p>通过在终端中输入: <a class="reference external" href="http://localhost:3000/#/home?msgid=6129">[待校准&#64;6129]</a></p></li>
+<li><p>通过在终端中输入: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6129">[待校准&#64;6129]</a></p></li>
 </ol>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo xcodebuild -license accept
 </pre></div>
 </div>
 <ol class="arabic simple" start="3">
-<li><p>确保Xcode应用程序位于 <code class="docutils literal notranslate"><span class="pre">/Applications</span></code> 目录中 (不是 “/Users/{user}/applications'”) <a class="reference external" href="http://localhost:3000/#/home?msgid=6130">[待校准&#64;6130]</a></p></li>
-<li><p>使用以下命令将 <code class="docutils literal notranslate"><span class="pre">xcode-select</span></code> 指向Xcode app开发者目录: <a class="reference external" href="http://localhost:3000/#/home?msgid=6131">[待校准&#64;6131]</a></p></li>
+<li><p>确保Xcode应用程序位于 <code class="docutils literal notranslate"><span class="pre">/Applications</span></code> 目录中 (不是 “/Users/{user}/applications'”) <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6130">[待校准&#64;6130]</a></p></li>
+<li><p>使用以下命令将 <code class="docutils literal notranslate"><span class="pre">xcode-select</span></code> 指向Xcode app开发者目录: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6131">[待校准&#64;6131]</a></p></li>
 </ol>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
 </pre></div>
 </div>
 </div>
 <div class="section" id="qt-gui-cpp-error-sip-binding-generator-not-available">
-<h3>qt_gui_cpp错误: SIP绑定生成器不可用 <a class="reference external" href="http://localhost:3000/#/home?msgid=6132">[待校准&#64;6132]</a><a class="headerlink" href="#qt-gui-cpp-error-sip-binding-generator-not-available" title="永久链接至标题"></a></h3>
-<p>构建qt_gui_cpp时，可能会出现如下错误: <a class="reference external" href="http://localhost:3000/#/home?msgid=6133">[待校准&#64;6133]</a></p>
+<h3>qt_gui_cpp错误: SIP绑定生成器不可用 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6132">[待校准&#64;6132]</a><a class="headerlink" href="#qt-gui-cpp-error-sip-binding-generator-not-available" title="永久链接至标题"></a></h3>
+<p>构建qt_gui_cpp时，可能会出现如下错误: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6133">[待校准&#64;6133]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>--- stderr: qt_gui_cpp
 
 CMake Error at src/CMakeLists.txt:10 <span class="o">(</span>message<span class="o">)</span>:
@@ -440,11 +440,11 @@ CMake Error at src/CMakeLists.txt:10 <span class="o">(</span>message<span class=
 Failed   <span class="o">&lt;&lt;&lt;</span> qt_gui_cpp <span class="o">[</span> Exited with code <span class="m">1</span> <span class="o">]</span>
 </pre></div>
 </div>
-<p>要解决此问题，请按照 <a class="reference internal" href="RQt-Source-Install-MacOS.html"><span class="doc">these steps</span></a> 安装RQt的依赖项。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6134">[待校准&#64;6134]</a></p>
+<p>要解决此问题，请按照 <a class="reference internal" href="RQt-Source-Install-MacOS.html"><span class="doc">these steps</span></a> 安装RQt的依赖项。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6134">[待校准&#64;6134]</a></p>
 </div>
 <div class="section" id="rosdep-install-error-homebrew-failed-to-detect-successful-installation-of-qt5">
-<h3>rosdep安装错误 “自制软件: 无法检测到 [qt5] 的成功安装” <a class="reference external" href="http://localhost:3000/#/home?msgid=6135">[待校准&#64;6135]</a><a class="headerlink" href="#rosdep-install-error-homebrew-failed-to-detect-successful-installation-of-qt5" title="永久链接至标题"></a></h3>
-<p>在遵循 <a class="reference internal" href="../Tutorials/Workspace/Creating-A-Workspace.html"><span class="doc">Creating a workspace</span></a> 教程时，您可能会遇到以下错误，说明 <code class="docutils literal notranslate"><span class="pre">rosdep</span></code> 安装qt5失败。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6136">[待校准&#64;6136]</a></p>
+<h3>rosdep安装错误 “自制软件: 无法检测到 [qt5] 的成功安装” <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6135">[待校准&#64;6135]</a><a class="headerlink" href="#rosdep-install-error-homebrew-failed-to-detect-successful-installation-of-qt5" title="永久链接至标题"></a></h3>
+<p>在遵循 <a class="reference internal" href="../Tutorials/Workspace/Creating-A-Workspace.html"><span class="doc">Creating a workspace</span></a> 教程时，您可能会遇到以下错误，说明 <code class="docutils literal notranslate"><span class="pre">rosdep</span></code> 安装qt5失败。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6136">[待校准&#64;6136]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ rosdep install -i --from-path src --rosdistro foxy -y
 executing <span class="nb">command</span> <span class="o">[</span>brew install qt5<span class="o">]</span>
 Warning: qt <span class="m">5</span>.15.0 is already installed and up-to-date
@@ -453,12 +453,12 @@ ERROR: the following rosdeps failed to install
   homebrew: Failed to detect successful installation of <span class="o">[</span>qt5<span class="o">]</span>
 </pre></div>
 </div>
-<p>此错误似乎源于 <a class="reference external" href="https://github.com/ros-infrastructure/rosdep/issues/490#issuecomment-334959426">linking issue</a> ，可以通过运行以下命令来解决。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6137">[待校准&#64;6137]</a></p>
+<p>此错误似乎源于 <a class="reference external" href="https://github.com/ros-infrastructure/rosdep/issues/490#issuecomment-334959426">linking issue</a> ，可以通过运行以下命令来解决。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6137">[待校准&#64;6137]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> /usr/local/Cellar
 $ sudo ln -s qt qt5
 </pre></div>
 </div>
-<p>运行 <code class="docutils literal notranslate"><span class="pre">rosdep</span></code> 命令现在应该正常执行: <a class="reference external" href="http://localhost:3000/#/home?msgid=6138">[待校准&#64;6138]</a></p>
+<p>运行 <code class="docutils literal notranslate"><span class="pre">rosdep</span></code> 命令现在应该正常执行: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6138">[待校准&#64;6138]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ rosdep install -i --from-path src --rosdistro foxy -y
 <span class="c1">#All required rosdeps installed successfully</span>
 </pre></div>
@@ -466,49 +466,49 @@ $ sudo ln -s qt qt5
 </div>
 </div>
 <div class="section" id="windows">
-<span id="windows-troubleshooting"></span><h2>Windows <a class="reference external" href="http://localhost:3000/#/home?msgid=6139">[待校准&#64;6139]</a><a class="headerlink" href="#windows" title="永久链接至标题"></a></h2>
+<span id="windows-troubleshooting"></span><h2>Windows <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6139">[待校准&#64;6139]</a><a class="headerlink" href="#windows" title="永久链接至标题"></a></h2>
 <div class="section" id="import-failing-even-with-library-present-on-the-system">
-<h3>即使系统上存在库，导入也失败 <a class="reference external" href="http://localhost:3000/#/home?msgid=6140">[待校准&#64;6140]</a><a class="headerlink" href="#import-failing-even-with-library-present-on-the-system" title="永久链接至标题"></a></h3>
-<p>有时，由于系统中缺少一些dll，因此无法导入 <code class="docutils literal notranslate"><span class="pre">rclpy</span></code> 。如果，确保安装所有依赖项所列  &quot;Installing prerequisites&quot; 的 <a class="reference internal" href="../Installation/Windows-Install-Binary.html#windows-install-binary-installing-prerequisites"><span class="std std-ref">installation instructions</span></a> )。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6141">[待校准&#64;6141]</a></p>
-<p>如果从二进制文件安装，则可能需要更新依赖项: 它们必须与用于构建二进制文件的版本相同。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6142">[待校准&#64;6142]</a></p>
-<p>如果您仍然有问题，您可以使用 <a class="reference external" href="https://github.com/lucasg/Dependencies">Dependencies</a> 工具来确定您的系统中缺少哪些依赖项。使用工具加载相应的 <code class="docutils literal notranslate"><span class="pre">.pyd</span></code> 文件，它应该报告不可用的 <code class="docutils literal notranslate"><span class="pre">DLL</span></code> 模块。在执行该工具之前，请确保当前工作区为源文件d，否则将存在未解析的ROS DLL文件。使用此信息可安装其他依赖项或根据需要调整路径。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6143">[待校准&#64;6143]</a></p>
+<h3>即使系统上存在库，导入也失败 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6140">[待校准&#64;6140]</a><a class="headerlink" href="#import-failing-even-with-library-present-on-the-system" title="永久链接至标题"></a></h3>
+<p>有时，由于系统中缺少一些dll，因此无法导入 <code class="docutils literal notranslate"><span class="pre">rclpy</span></code> 。如果，确保安装所有依赖项所列  &quot;Installing prerequisites&quot; 的 <a class="reference internal" href="../Installation/Windows-Install-Binary.html#windows-install-binary-installing-prerequisites"><span class="std std-ref">installation instructions</span></a> )。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6141">[待校准&#64;6141]</a></p>
+<p>如果从二进制文件安装，则可能需要更新依赖项: 它们必须与用于构建二进制文件的版本相同。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6142">[待校准&#64;6142]</a></p>
+<p>如果您仍然有问题，您可以使用 <a class="reference external" href="https://github.com/lucasg/Dependencies">Dependencies</a> 工具来确定您的系统中缺少哪些依赖项。使用工具加载相应的 <code class="docutils literal notranslate"><span class="pre">.pyd</span></code> 文件，它应该报告不可用的 <code class="docutils literal notranslate"><span class="pre">DLL</span></code> 模块。在执行该工具之前，请确保当前工作区为源文件d，否则将存在未解析的ROS DLL文件。使用此信息可安装其他依赖项或根据需要调整路径。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6143">[待校准&#64;6143]</a></p>
 </div>
 <div class="section" id="cmake-error-setting-modification-time">
-<h3>CMake错误设置修改时间 <a class="reference external" href="http://localhost:3000/#/home?msgid=6144">[待校准&#64;6144]</a><a class="headerlink" href="#cmake-error-setting-modification-time" title="永久链接至标题"></a></h3>
-<p>如果你遇到CMake错误 <code class="docutils literal notranslate"><span class="pre">file</span> <span class="pre">INSTALL</span> <span class="pre">cannot</span> <span class="pre">set</span> <span class="pre">modification</span> <span class="pre">time</span> <span class="pre">on</span> <span class="pre">...</span></code> 安装文件可能是防病毒软件或Windows Defender干扰生成。例如，对于Windows卫士，您可以列出要排除的工作区位置，以防止其扫描这些文件。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6145">[待校准&#64;6145]</a></p>
+<h3>CMake错误设置修改时间 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6144">[待校准&#64;6144]</a><a class="headerlink" href="#cmake-error-setting-modification-time" title="永久链接至标题"></a></h3>
+<p>如果你遇到CMake错误 <code class="docutils literal notranslate"><span class="pre">file</span> <span class="pre">INSTALL</span> <span class="pre">cannot</span> <span class="pre">set</span> <span class="pre">modification</span> <span class="pre">time</span> <span class="pre">on</span> <span class="pre">...</span></code> 安装文件可能是防病毒软件或Windows Defender干扰生成。例如，对于Windows卫士，您可以列出要排除的工作区位置，以防止其扫描这些文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6145">[待校准&#64;6145]</a></p>
 </div>
 <div class="section" id="character-path-limit">
-<h3>260字符路径限制 <a class="reference external" href="http://localhost:3000/#/home?msgid=6146">[待校准&#64;6146]</a><a class="headerlink" href="#character-path-limit" title="永久链接至标题"></a></h3>
+<h3>260字符路径限制 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6146">[待校准&#64;6146]</a><a class="headerlink" href="#character-path-limit" title="永久链接至标题"></a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>The input line is too long.
 The syntax of the <span class="nb">command</span> is incorrect.
 </pre></div>
 </div>
-<p>根据您的目录层次结构，从源文件或您自己的库构建ROS 2时，您可能会看到路径长度限制错误。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6147">[待校准&#64;6147]</a></p>
-<p>允许更深的路径长度: <a class="reference external" href="http://localhost:3000/#/home?msgid=6148">[待校准&#64;6148]</a></p>
-<p>运行 <code class="docutils literal notranslate"><span class="pre">regedit.exe</span></code> ，导航到 “计算机 HKEY_LOCAL_MACHINE 系统 当前控制集 控制 文件系统”，并将 <code class="docutils literal notranslate"><span class="pre">LongPathsEnabled</span></code> 设置为0x00000001 (1)。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6149">[待校准&#64;6149]</a></p>
-<p>点击窗口键，键入 <code class="docutils literal notranslate"><span class="pre">Edit</span> <span class="pre">Group</span> <span class="pre">Policy</span></code> 。导航到本地计算机策略&gt; 计算机配置&gt; 管理模板&gt; 系统&gt; 文件系统。右击 <code class="docutils literal notranslate"><span class="pre">Enable</span> <span class="pre">Win32</span> <span class="pre">long</span> <span class="pre">paths</span></code> ，点击编辑。在对话框中，选择Enabled，然后单击OK。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6150">[待校准&#64;6150]</a></p>
-<p>关闭并打开终端以重置环境，然后再次尝试构建。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6151">[待校准&#64;6151]</a></p>
+<p>根据您的目录层次结构，从源文件或您自己的库构建ROS 2时，您可能会看到路径长度限制错误。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6147">[待校准&#64;6147]</a></p>
+<p>允许更深的路径长度: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6148">[待校准&#64;6148]</a></p>
+<p>运行 <code class="docutils literal notranslate"><span class="pre">regedit.exe</span></code> ，导航到 “计算机 HKEY_LOCAL_MACHINE 系统 当前控制集 控制 文件系统”，并将 <code class="docutils literal notranslate"><span class="pre">LongPathsEnabled</span></code> 设置为0x00000001 (1)。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6149">[待校准&#64;6149]</a></p>
+<p>点击窗口键，键入 <code class="docutils literal notranslate"><span class="pre">Edit</span> <span class="pre">Group</span> <span class="pre">Policy</span></code> 。导航到本地计算机策略&gt; 计算机配置&gt; 管理模板&gt; 系统&gt; 文件系统。右击 <code class="docutils literal notranslate"><span class="pre">Enable</span> <span class="pre">Win32</span> <span class="pre">long</span> <span class="pre">paths</span></code> ，点击编辑。在对话框中，选择Enabled，然后单击OK。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6150">[待校准&#64;6150]</a></p>
+<p>关闭并打开终端以重置环境，然后再次尝试构建。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6151">[待校准&#64;6151]</a></p>
 </div>
 <div class="section" id="cmake-packages-unable-to-find-asio-tinyxml2-tinyxml-eigen-or-log4cxx">
-<h3>CMake包找不到asio、tinyxml2、tinyxml、eigen或log4cxx <a class="reference external" href="http://localhost:3000/#/home?msgid=6152">[待校准&#64;6152]</a><a class="headerlink" href="#cmake-packages-unable-to-find-asio-tinyxml2-tinyxml-eigen-or-log4cxx" title="永久链接至标题"></a></h3>
-<p>我们已经看到，有时用于 <code class="docutils literal notranslate"><span class="pre">asio</span></code> 、 <code class="docutils literal notranslate"><span class="pre">tinyxml2</span></code> 等的巧克力包不会添加重要的注册表项，CMake在构建ROS 2时将无法找到它们。我们还不能确定根本原因，但是卸载巧克力包 (如果第一次卸载失败，用 <code class="docutils literal notranslate"><span class="pre">-n</span></code> )，然后重新安装它们将解决问题。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6153">[待校准&#64;6153]</a></p>
+<h3>CMake包找不到asio、tinyxml2、tinyxml、eigen或log4cxx <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6152">[待校准&#64;6152]</a><a class="headerlink" href="#cmake-packages-unable-to-find-asio-tinyxml2-tinyxml-eigen-or-log4cxx" title="永久链接至标题"></a></h3>
+<p>我们已经看到，有时用于 <code class="docutils literal notranslate"><span class="pre">asio</span></code> 、 <code class="docutils literal notranslate"><span class="pre">tinyxml2</span></code> 等的巧克力包不会添加重要的注册表项，CMake在构建ROS 2时将无法找到它们。我们还不能确定根本原因，但是卸载巧克力包 (如果第一次卸载失败，用 <code class="docutils literal notranslate"><span class="pre">-n</span></code> )，然后重新安装它们将解决问题。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6153">[待校准&#64;6153]</a></p>
 </div>
 <div class="section" id="patch-exe-opens-a-new-command-window-and-asks-for-administrator">
-<h3>patch.exe打开一个新的命令窗口并要求管理员 <a class="reference external" href="http://localhost:3000/#/home?msgid=6154">[待校准&#64;6154]</a><a class="headerlink" href="#patch-exe-opens-a-new-command-window-and-asks-for-administrator" title="永久链接至标题"></a></h3>
-<p>这也将导致需要使用补丁的包的构建失败，即使您允许它使用管理员权限。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6155">[待校准&#64;6155]</a></p>
+<h3>patch.exe打开一个新的命令窗口并要求管理员 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6154">[待校准&#64;6154]</a><a class="headerlink" href="#patch-exe-opens-a-new-command-window-and-asks-for-administrator" title="永久链接至标题"></a></h3>
+<p>这也将导致需要使用补丁的包的构建失败，即使您允许它使用管理员权限。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6155">[待校准&#64;6155]</a></p>
 <ul class="simple">
-<li><p>[需手动修复的语法]``choco uninstall patch; colcon build --cmake-clean-cache``  -- 这是 <a class="reference external" href="https://chocolatey.org/packages/patch">GNU Patch For Windows package</a> 中的一只虫子。如果未安装此包，则构建过程将使用随git分发的补丁版本。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6156">[待校准&#64;6156]</a></p></li>
+<li><p>[需手动修复的语法]``choco uninstall patch; colcon build --cmake-clean-cache``  -- 这是 <a class="reference external" href="https://chocolatey.org/packages/patch">GNU Patch For Windows package</a> 中的一只虫子。如果未安装此包，则构建过程将使用随git分发的补丁版本。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6156">[待校准&#64;6156]</a></p></li>
 </ul>
 </div>
 <div class="section" id="failed-to-load-fast-rtps-shared-library">
-<h3>无法加载快速RTPS共享库 <a class="reference external" href="http://localhost:3000/#/home?msgid=6157">[待校准&#64;6157]</a><a class="headerlink" href="#failed-to-load-fast-rtps-shared-library" title="永久链接至标题"></a></h3>
-<p>快速RTPS需要 <code class="docutils literal notranslate"><span class="pre">msvcr20.dll</span></code> ，它是 “Visual Studio 2013的Visual c re可再发行包” 的一部分。尽管它通常默认安装在Windows 10中，但我们知道某些类似Windows 10的版本默认情况下没有安装它 (例如: Windows Server 2019)。如果你没有安装它，你可以从 <a class="reference external" href="https://www.microsoft.com/en-us/download/details.aspx?id=40784">here</a> 下载。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6158">[待校准&#64;6158]</a></p>
+<h3>无法加载快速RTPS共享库 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6157">[待校准&#64;6157]</a><a class="headerlink" href="#failed-to-load-fast-rtps-shared-library" title="永久链接至标题"></a></h3>
+<p>快速RTPS需要 <code class="docutils literal notranslate"><span class="pre">msvcr20.dll</span></code> ，它是 “Visual Studio 2013的Visual c re可再发行包” 的一部分。尽管它通常默认安装在Windows 10中，但我们知道某些类似Windows 10的版本默认情况下没有安装它 (例如: Windows Server 2019)。如果你没有安装它，你可以从 <a class="reference external" href="https://www.microsoft.com/en-us/download/details.aspx?id=40784">here</a> 下载。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6158">[待校准&#64;6158]</a></p>
 </div>
 <div class="section" id="binary-installation-specific">
-<h3>特定于二进制安装 <a class="reference external" href="http://localhost:3000/#/home?msgid=6159">[待校准&#64;6159]</a><a class="headerlink" href="#binary-installation-specific" title="永久链接至标题"></a></h3>
+<h3>特定于二进制安装 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6159">[待校准&#64;6159]</a><a class="headerlink" href="#binary-installation-specific" title="永久链接至标题"></a></h3>
 <ul class="simple">
-<li><p>如果您的示例由于缺少dll而没有启动，请验证来自外部依赖项 (如OpenCV) 的所有库都位于您的 <code class="docutils literal notranslate"><span class="pre">PATH</span></code> 变量内。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6160">[待校准&#64;6160]</a></p></li>
-<li><p>如果您忘记从终端调用 <code class="docutils literal notranslate"><span class="pre">local_setup.bat</span></code> 文件，例程程序很可能会立即崩溃。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6161">[待校准&#64;6161]</a></p></li>
+<li><p>如果您的示例由于缺少dll而没有启动，请验证来自外部依赖项 (如OpenCV) 的所有库都位于您的 <code class="docutils literal notranslate"><span class="pre">PATH</span></code> 变量内。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6160">[待校准&#64;6160]</a></p></li>
+<li><p>如果您忘记从终端调用 <code class="docutils literal notranslate"><span class="pre">local_setup.bat</span></code> 文件，例程程序很可能会立即崩溃。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6161">[待校准&#64;6161]</a></p></li>
 </ul>
 </div>
 </div>

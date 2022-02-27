@@ -280,12 +280,12 @@
 
 
   <div class="section" id="writing-a-simple-publisher-and-subscriber-c">
-<span id="cpppubsub"></span><h1>编写简单的发布者和订阅者 (c ++) <a class="reference external" href="http://localhost:3000/#/home?msgid=9345">[待校准&#64;9345]</a><a class="headerlink" href="#writing-a-simple-publisher-and-subscriber-c" title="永久链接至标题"></a></h1>
-<p>Goal目标: using使用C++ 创建并运行发布者和订阅者节点。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9346">[待校准&#64;9346]</a></p>
-<p>Tutorial教程级别: Beginner初学者 <a class="reference external" href="http://localhost:3000/#/home?msgid=7088">[待校准&#64;7088]</a></p>
-<p>Time时间: 20 20分钟 <a class="reference external" href="http://localhost:3000/#/home?msgid=7181">[待校准&#64;7181]</a></p>
+<span id="cpppubsub"></span><h1>编写简单的发布者和订阅者 (c ++) <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9345">[待校准&#64;9345]</a><a class="headerlink" href="#writing-a-simple-publisher-and-subscriber-c" title="永久链接至标题"></a></h1>
+<p>Goal目标: using使用C++ 创建并运行发布者和订阅者节点。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9346">[待校准&#64;9346]</a></p>
+<p>Tutorial教程级别: Beginner初学者 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7088">[待校准&#64;7088]</a></p>
+<p>Time时间: 20 20分钟 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7181">[待校准&#64;7181]</a></p>
 <div class="contents local topic" id="contents">
-<p class="topic-title">内容 <a class="reference external" href="http://localhost:3000/#/home?msgid=6715">[待校准&#64;6715]</a></p>
+<p class="topic-title">内容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6715">[待校准&#64;6715]</a></p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#background" id="id3">背景 [待校准&#64;6716]</a></p></li>
 <li><p><a class="reference internal" href="#prerequisites" id="id4">先决条件 [待校准&#64;6718]</a></p></li>
@@ -303,30 +303,30 @@
 </ul>
 </div>
 <div class="section" id="background">
-<h2>背景 <a class="reference external" href="http://localhost:3000/#/home?msgid=6716">[待校准&#64;6716]</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
-<p>[需手动修复的语法] <a class="reference internal" href="Understanding-ROS2-Nodes.html"><span class="doc">Nodes</span></a> 是通过ROS图进行通信的可执行进程。在本教程中，节点将以string消息的形式通过 <a class="reference internal" href="Topics/Understanding-ROS2-Topics.html"><span class="doc">topic</span></a> 相互传递信息。这里使用的例子是一个简单的 “说话者” 和 “听众” 系统; 一个节点发布数据，另一个节点订阅话题，这样它就可以接收数据。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9347">[待校准&#64;9347]</a></p>
-<p>这些例子中使用的代码可以找到 <a class="reference external" href="https://github.com/ros2/examples/tree/foxy/rclcpp/topics">here</a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9348">[待校准&#64;9348]</a></p>
+<h2>背景 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6716">[待校准&#64;6716]</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
+<p>[需手动修复的语法] <a class="reference internal" href="Understanding-ROS2-Nodes.html"><span class="doc">Nodes</span></a> 是通过ROS图进行通信的可执行进程。在本教程中，节点将以string消息的形式通过 <a class="reference internal" href="Topics/Understanding-ROS2-Topics.html"><span class="doc">topic</span></a> 相互传递信息。这里使用的例子是一个简单的 “说话者” 和 “听众” 系统; 一个节点发布数据，另一个节点订阅话题，这样它就可以接收数据。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9347">[待校准&#64;9347]</a></p>
+<p>这些例子中使用的代码可以找到 <a class="reference external" href="https://github.com/ros2/examples/tree/foxy/rclcpp/topics">here</a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9348">[待校准&#64;9348]</a></p>
 </div>
 <div class="section" id="prerequisites">
-<h2>先决条件 <a class="reference external" href="http://localhost:3000/#/home?msgid=6718">[待校准&#64;6718]</a><a class="headerlink" href="#prerequisites" title="永久链接至标题"></a></h2>
-<p>在之前的教程中，你学习了如何 <a class="reference internal" href="Workspace/Creating-A-Workspace.html"><span class="doc">create a workspace</span></a> and <a class="reference internal" href="Creating-Your-First-ROS2-Package.html"><span class="doc">create a package</span></a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9349">[待校准&#64;9349]</a></p>
+<h2>先决条件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6718">[待校准&#64;6718]</a><a class="headerlink" href="#prerequisites" title="永久链接至标题"></a></h2>
+<p>在之前的教程中，你学习了如何 <a class="reference internal" href="Workspace/Creating-A-Workspace.html"><span class="doc">create a workspace</span></a> and <a class="reference internal" href="Creating-Your-First-ROS2-Package.html"><span class="doc">create a package</span></a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9349">[待校准&#64;9349]</a></p>
 </div>
 <div class="section" id="tasks">
-<h2>任务 <a class="reference external" href="http://localhost:3000/#/home?msgid=6725">[待校准&#64;6725]</a><a class="headerlink" href="#tasks" title="永久链接至标题"></a></h2>
+<h2>任务 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6725">[待校准&#64;6725]</a><a class="headerlink" href="#tasks" title="永久链接至标题"></a></h2>
 <div class="section" id="create-a-package">
-<h3>1创建包 <a class="reference external" href="http://localhost:3000/#/home?msgid=7137">[待校准&#64;7137]</a><a class="headerlink" href="#create-a-package" title="永久链接至标题"></a></h3>
-<p>打开一个新的终端和 <a class="reference internal" href="Configuring-ROS2-Environment.html"><span class="doc">source your ROS 2 installation</span></a> ，这样 <code class="docutils literal notranslate"><span class="pre">ros2</span></code> 命令就可以工作了。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9214">[待校准&#64;9214]</a></p>
-<p>导航到 <code class="docutils literal notranslate"><span class="pre">dev_ws</span></code> 目录创建 <a class="reference internal" href="Workspace/Creating-A-Workspace.html#new-directory"><span class="std std-ref">previous tutorial</span></a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9215">[待校准&#64;9215]</a></p>
-<p>重新调用应该在 <code class="docutils literal notranslate"><span class="pre">src</span></code> 目录中创建的包，而不是工作区的根目录。因此，导航到 <code class="docutils literal notranslate"><span class="pre">dev_ws/src</span></code> ，并运行包创建命令: <a class="reference external" href="http://localhost:3000/#/home?msgid=9350">[待校准&#64;9350]</a></p>
+<h3>1创建包 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7137">[待校准&#64;7137]</a><a class="headerlink" href="#create-a-package" title="永久链接至标题"></a></h3>
+<p>打开一个新的终端和 <a class="reference internal" href="Configuring-ROS2-Environment.html"><span class="doc">source your ROS 2 installation</span></a> ，这样 <code class="docutils literal notranslate"><span class="pre">ros2</span></code> 命令就可以工作了。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9214">[待校准&#64;9214]</a></p>
+<p>导航到 <code class="docutils literal notranslate"><span class="pre">dev_ws</span></code> 目录创建 <a class="reference internal" href="Workspace/Creating-A-Workspace.html#new-directory"><span class="std std-ref">previous tutorial</span></a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9215">[待校准&#64;9215]</a></p>
+<p>重新调用应该在 <code class="docutils literal notranslate"><span class="pre">src</span></code> 目录中创建的包，而不是工作区的根目录。因此，导航到 <code class="docutils literal notranslate"><span class="pre">dev_ws/src</span></code> ，并运行包创建命令: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9350">[待校准&#64;9350]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 pkg create --build-type ament_cmake cpp_pubsub</span>
 </pre></div>
 </div>
-<p>您的终端将返回一条消息，验证您的包 <code class="docutils literal notranslate"><span class="pre">cpp_pubsub</span></code> 及其所有必要的文件和文件夹的创建。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9351">[待校准&#64;9351]</a></p>
-<p>导航到 <code class="docutils literal notranslate"><span class="pre">dev_ws/src/cpp_pubsub/src</span></code> 。重新调用这是包含可执行文件的源文件所属的任何CMake包中的目录。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9352">[待校准&#64;9352]</a></p>
+<p>您的终端将返回一条消息，验证您的包 <code class="docutils literal notranslate"><span class="pre">cpp_pubsub</span></code> 及其所有必要的文件和文件夹的创建。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9351">[待校准&#64;9351]</a></p>
+<p>导航到 <code class="docutils literal notranslate"><span class="pre">dev_ws/src/cpp_pubsub/src</span></code> 。重新调用这是包含可执行文件的源文件所属的任何CMake包中的目录。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9352">[待校准&#64;9352]</a></p>
 </div>
 <div class="section" id="write-the-publisher-node">
-<h3>2写入发布者节点 <a class="reference external" href="http://localhost:3000/#/home?msgid=9353">[待校准&#64;9353]</a><a class="headerlink" href="#write-the-publisher-node" title="永久链接至标题"></a></h3>
-<p>通过输入以下命令下载示例talker代码: <a class="reference external" href="http://localhost:3000/#/home?msgid=9354">[待校准&#64;9354]</a></p>
+<h3>2写入发布者节点 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9353">[待校准&#64;9353]</a><a class="headerlink" href="#write-the-publisher-node" title="永久链接至标题"></a></h3>
+<p>通过输入以下命令下载示例talker代码: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9354">[待校准&#64;9354]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-0-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-0-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-0-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-0-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-0-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">wget -O publisher_member_function.cpp https://raw.githubusercontent.com/ros2/examples/foxy/rclcpp/topics/minimal_publisher/member_function.cpp</span>
 </pre></div>
@@ -334,16 +334,16 @@
 </div><div aria-labelledby="tab-0-bWFjT1M=" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-bWFjT1M=" name="bWFjT1M=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">wget -O publisher_member_function.cpp https://raw.githubusercontent.com/ros2/examples/foxy/rclcpp/topics/minimal_publisher/member_function.cpp</span>
 </pre></div>
 </div>
-</div><div aria-labelledby="tab-0-V2luZG93cw==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-V2luZG93cw==" name="V2luZG93cw==" role="tabpanel" tabindex="0"><p>在Windows命令行提示符下: <a class="reference external" href="http://localhost:3000/#/home?msgid=8363">[待校准&#64;8363]</a></p>
+</div><div aria-labelledby="tab-0-V2luZG93cw==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-V2luZG93cw==" name="V2luZG93cw==" role="tabpanel" tabindex="0"><p>在Windows命令行提示符下: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8363">[待校准&#64;8363]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">curl -sk https://raw.githubusercontent.com/ros2/examples/foxy/rclcpp/topics/minimal_publisher/member_function.cpp -o publisher_member_function.cpp</span>
 </pre></div>
 </div>
-<p>或者在powershell中: <a class="reference external" href="http://localhost:3000/#/home?msgid=8364">[待校准&#64;8364]</a></p>
+<p>或者在powershell中: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8364">[待校准&#64;8364]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">curl https://raw.githubusercontent.com/ros2/examples/foxy/rclcpp/topics/minimal_publisher/member_function.cpp -o publisher_member_function.cpp</span>
 </pre></div>
 </div>
 </div></div>
-<p>现在将会有一个名为 <code class="docutils literal notranslate"><span class="pre">publisher_member_function.cpp</span></code> 的新文件。使用您喜欢的文本编辑器打开文件。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9355">[待校准&#64;9355]</a></p>
+<p>现在将会有一个名为 <code class="docutils literal notranslate"><span class="pre">publisher_member_function.cpp</span></code> 的新文件。使用您喜欢的文本编辑器打开文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9355">[待校准&#64;9355]</a></p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;chrono&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;functional&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;memory&gt;</span><span class="cp"></span>
@@ -391,9 +391,9 @@
 </pre></div>
 </div>
 <div class="section" id="examine-the-code">
-<h4>2.1检查代码 <a class="reference external" href="http://localhost:3000/#/home?msgid=8007">[待校准&#64;8007]</a><a class="headerlink" href="#examine-the-code" title="永久链接至标题"></a></h4>
-<p>代码的顶部包括您将使用的标准C++ 标头。在标准的cheaders标头之后是 <code class="docutils literal notranslate"><span class="pre">rclcpp/rclcpp.hpp</span></code> ，它允许您使用ROS 2系统中最常见的部分。最后是 <code class="docutils literal notranslate"><span class="pre">std_msgs/msg/string.hpp</span></code> ，它包括将用于发布数据的内置消息类型。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9356">[待校准&#64;9356]</a></p>
-<p>这些行表示节点的依赖关系。重新调用必须将依赖项添加到 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 和 <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> 中，您将在下一节中执行此操作。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9357">[待校准&#64;9357]</a></p>
+<h4>2.1检查代码 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8007">[待校准&#64;8007]</a><a class="headerlink" href="#examine-the-code" title="永久链接至标题"></a></h4>
+<p>代码的顶部包括您将使用的标准C++ 标头。在标准的cheaders标头之后是 <code class="docutils literal notranslate"><span class="pre">rclcpp/rclcpp.hpp</span></code> ，它允许您使用ROS 2系统中最常见的部分。最后是 <code class="docutils literal notranslate"><span class="pre">std_msgs/msg/string.hpp</span></code> ，它包括将用于发布数据的内置消息类型。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9356">[待校准&#64;9356]</a></p>
+<p>这些行表示节点的依赖关系。重新调用必须将依赖项添加到 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 和 <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> 中，您将在下一节中执行此操作。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9357">[待校准&#64;9357]</a></p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;chrono&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;functional&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;memory&gt;</span><span class="cp"></span>
@@ -405,11 +405,11 @@
 <span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="o">::</span><span class="n">chrono_literals</span><span class="p">;</span>
 </pre></div>
 </div>
-<p>下一行通过继承 “rclcpp:: node” 来创建节点类 <code class="docutils literal notranslate"><span class="pre">MinimalPublisher</span></code> 。代码中的每一个 <code class="docutils literal notranslate"><span class="pre">this</span></code> 都指的是节点。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9358">[待校准&#64;9358]</a></p>
+<p>下一行通过继承 “rclcpp:: node” 来创建节点类 <code class="docutils literal notranslate"><span class="pre">MinimalPublisher</span></code> 。代码中的每一个 <code class="docutils literal notranslate"><span class="pre">this</span></code> 都指的是节点。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9358">[待校准&#64;9358]</a></p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MinimalPublisher</span> <span class="o">:</span> <span class="k">public</span> <span class="n">rclcpp</span><span class="o">::</span><span class="n">Node</span>
 </pre></div>
 </div>
-<p>公共构造函数命名节点 <code class="docutils literal notranslate"><span class="pre">minimal_publisher</span></code> ，并将 <code class="docutils literal notranslate"><span class="pre">count_</span></code> 初始化为0。在构造函数中，发布者使用 <code class="docutils literal notranslate"><span class="pre">String</span></code> 消息类型、话题名称 <code class="docutils literal notranslate"><span class="pre">topic</span></code> 以及在备份时限制消息所需的队列大小进行初始化。接下来，初始化 <code class="docutils literal notranslate"><span class="pre">timer_</span></code> ，这将导致 <code class="docutils literal notranslate"><span class="pre">timer_callback</span></code> 函数每秒执行两次。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9359">[待校准&#64;9359]</a></p>
+<p>公共构造函数命名节点 <code class="docutils literal notranslate"><span class="pre">minimal_publisher</span></code> ，并将 <code class="docutils literal notranslate"><span class="pre">count_</span></code> 初始化为0。在构造函数中，发布者使用 <code class="docutils literal notranslate"><span class="pre">String</span></code> 消息类型、话题名称 <code class="docutils literal notranslate"><span class="pre">topic</span></code> 以及在备份时限制消息所需的队列大小进行初始化。接下来，初始化 <code class="docutils literal notranslate"><span class="pre">timer_</span></code> ，这将导致 <code class="docutils literal notranslate"><span class="pre">timer_callback</span></code> 函数每秒执行两次。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9359">[待校准&#64;9359]</a></p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">public</span><span class="o">:</span>
   <span class="n">MinimalPublisher</span><span class="p">()</span>
   <span class="o">:</span> <span class="n">Node</span><span class="p">(</span><span class="s">&quot;minimal_publisher&quot;</span><span class="p">),</span> <span class="n">count_</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
@@ -420,7 +420,7 @@
   <span class="p">}</span>
 </pre></div>
 </div>
-<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">timer_callback</span></code> 函数是设置消息数据并实际发布消息的位置。 <code class="docutils literal notranslate"><span class="pre">RCLCPP_INFO</span></code> 宏可确保将每条发布的消息打印到控制台。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9360">[待校准&#64;9360]</a></p>
+<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">timer_callback</span></code> 函数是设置消息数据并实际发布消息的位置。 <code class="docutils literal notranslate"><span class="pre">RCLCPP_INFO</span></code> 宏可确保将每条发布的消息打印到控制台。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9360">[待校准&#64;9360]</a></p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">private</span><span class="o">:</span>
   <span class="kt">void</span> <span class="n">timer_callback</span><span class="p">()</span>
   <span class="p">{</span>
@@ -431,13 +431,13 @@
   <span class="p">}</span>
 </pre></div>
 </div>
-<p>最后是计时器、发布者和计数器字段的声明。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9361">[待校准&#64;9361]</a></p>
+<p>最后是计时器、发布者和计数器字段的声明。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9361">[待校准&#64;9361]</a></p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">rclcpp</span><span class="o">::</span><span class="n">TimerBase</span><span class="o">::</span><span class="n">SharedPtr</span> <span class="n">timer_</span><span class="p">;</span>
 <span class="n">rclcpp</span><span class="o">::</span><span class="n">Publisher</span><span class="o">&lt;</span><span class="n">std_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">String</span><span class="o">&gt;::</span><span class="n">SharedPtr</span> <span class="n">publisher_</span><span class="p">;</span>
 <span class="kt">size_t</span> <span class="n">count_</span><span class="p">;</span>
 </pre></div>
 </div>
-<p>追踪 <code class="docutils literal notranslate"><span class="pre">MinimalPublisher</span></code> 类是 <code class="docutils literal notranslate"><span class="pre">main</span></code> ，在这里节点实际执行。“Rclcpp::init” 初始化ROS 2，“rclcpp:: spin” 开始处理来自节点的数据，包括从计时器调用的数据。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9362">[待校准&#64;9362]</a></p>
+<p>追踪 <code class="docutils literal notranslate"><span class="pre">MinimalPublisher</span></code> 类是 <code class="docutils literal notranslate"><span class="pre">main</span></code> ，在这里节点实际执行。“Rclcpp::init” 初始化ROS 2，“rclcpp:: spin” 开始处理来自节点的数据，包括从计时器调用的数据。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9362">[待校准&#64;9362]</a></p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span> <span class="n">argv</span><span class="p">[])</span>
 <span class="p">{</span>
   <span class="n">rclcpp</span><span class="o">::</span><span class="n">init</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span> <span class="n">argv</span><span class="p">);</span>
@@ -449,42 +449,42 @@
 </div>
 </div>
 <div class="section" id="add-dependencies">
-<h4>2.2添加依赖项 <a class="reference external" href="http://localhost:3000/#/home?msgid=8644">[待校准&#64;8644]</a><a class="headerlink" href="#add-dependencies" title="永久链接至标题"></a></h4>
-<p>导航到 <code class="docutils literal notranslate"><span class="pre">dev_ws/src/cpp_pubsub</span></code> 目录，在那里已经为您创建了 <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> 和 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 文件。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9363">[待校准&#64;9363]</a></p>
-<p>用文本编辑器打开 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8719">[待校准&#64;8719]</a></p>
-<p>如 <a class="reference internal" href="Creating-Your-First-ROS2-Package.html"><span class="doc">previous tutorial</span></a>, make sure to fill in the <code class="docutils literal notranslate"><span class="pre">&lt;description&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;maintainer&gt;</span></code> and <a href="#id1"><span class="problematic" id="id2">``</span></a>&lt;license&gt;` 标签中所述: <a class="reference external" href="http://localhost:3000/#/home?msgid=9364">[待校准&#64;9364]</a></p>
+<h4>2.2添加依赖项 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8644">[待校准&#64;8644]</a><a class="headerlink" href="#add-dependencies" title="永久链接至标题"></a></h4>
+<p>导航到 <code class="docutils literal notranslate"><span class="pre">dev_ws/src/cpp_pubsub</span></code> 目录，在那里已经为您创建了 <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> 和 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9363">[待校准&#64;9363]</a></p>
+<p>用文本编辑器打开 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8719">[待校准&#64;8719]</a></p>
+<p>如 <a class="reference internal" href="Creating-Your-First-ROS2-Package.html"><span class="doc">previous tutorial</span></a>, make sure to fill in the <code class="docutils literal notranslate"><span class="pre">&lt;description&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;maintainer&gt;</span></code> and <a href="#id1"><span class="problematic" id="id2">``</span></a>&lt;license&gt;` 标签中所述: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9364">[待校准&#64;9364]</a></p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;description&gt;</span>Examples of minimal publisher/subscriber using rclcpp<span class="nt">&lt;/description&gt;</span>
 <span class="nt">&lt;maintainer</span> <span class="na">email=</span><span class="s">&quot;you@email.com&quot;</span><span class="nt">&gt;</span>Your Name<span class="nt">&lt;/maintainer&gt;</span>
 <span class="nt">&lt;license&gt;</span>Apache License 2.0<span class="nt">&lt;/license&gt;</span>
 </pre></div>
 </div>
-<p>添加新行后 <code class="docutils literal notranslate"><span class="pre">ament_cmake</span></code> buildtool依赖并粘贴以下依赖对应节点的include语句: <a class="reference external" href="http://localhost:3000/#/home?msgid=9365">[待校准&#64;9365]</a></p>
+<p>添加新行后 <code class="docutils literal notranslate"><span class="pre">ament_cmake</span></code> buildtool依赖并粘贴以下依赖对应节点的include语句: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9365">[待校准&#64;9365]</a></p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;depend&gt;</span>rclcpp<span class="nt">&lt;/depend&gt;</span>
 <span class="nt">&lt;depend&gt;</span>std_msgs<span class="nt">&lt;/depend&gt;</span>
 </pre></div>
 </div>
-<p>这表明当执行其代码时，包需要 <code class="docutils literal notranslate"><span class="pre">rclcpp</span></code> 和 <code class="docutils literal notranslate"><span class="pre">std_msgs</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9366">[待校准&#64;9366]</a></p>
-<p>确保保存文件。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8647">[待校准&#64;8647]</a></p>
+<p>这表明当执行其代码时，包需要 <code class="docutils literal notranslate"><span class="pre">rclcpp</span></code> 和 <code class="docutils literal notranslate"><span class="pre">std_msgs</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9366">[待校准&#64;9366]</a></p>
+<p>确保保存文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8647">[待校准&#64;8647]</a></p>
 </div>
 <div class="section" id="cmakelists-txt">
-<h4>2.3 CMakeLists.txt <a class="reference external" href="http://localhost:3000/#/home?msgid=8648">[待校准&#64;8648]</a><a class="headerlink" href="#cmakelists-txt" title="永久链接至标题"></a></h4>
-<p>现在打开 <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> 文件。在现有的依存性 <code class="docutils literal notranslate"><span class="pre">find_package(ament_cmake</span> <span class="pre">REQUIRED)</span></code> 下，添加以下几行: <a class="reference external" href="http://localhost:3000/#/home?msgid=9367">[待校准&#64;9367]</a></p>
+<h4>2.3 CMakeLists.txt <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8648">[待校准&#64;8648]</a><a class="headerlink" href="#cmakelists-txt" title="永久链接至标题"></a></h4>
+<p>现在打开 <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> 文件。在现有的依存性 <code class="docutils literal notranslate"><span class="pre">find_package(ament_cmake</span> <span class="pre">REQUIRED)</span></code> 下，添加以下几行: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9367">[待校准&#64;9367]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">find_package(rclcpp REQUIRED)</span>
 <span class="go">find_package(std_msgs REQUIRED)</span>
 </pre></div>
 </div>
-<p>之后，添加可执行文件并将其命名为 <code class="docutils literal notranslate"><span class="pre">talker</span></code> ，以便您可以使用 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">run</span></code> 运行节点: <a class="reference external" href="http://localhost:3000/#/home?msgid=9368">[待校准&#64;9368]</a></p>
+<p>之后，添加可执行文件并将其命名为 <code class="docutils literal notranslate"><span class="pre">talker</span></code> ，以便您可以使用 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">run</span></code> 运行节点: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9368">[待校准&#64;9368]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">add_executable(talker src/publisher_member_function.cpp)</span>
 <span class="go">ament_target_dependencies(talker rclcpp std_msgs)</span>
 </pre></div>
 </div>
-<p>最后，添加 “安装 (目标……) `` section so `` ros2运行” 可以找到您的可执行文件: <a class="reference external" href="http://localhost:3000/#/home?msgid=8640">[待校准&#64;8640]</a></p>
+<p>最后，添加 “安装 (目标……) `` section so `` ros2运行” 可以找到您的可执行文件: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8640">[待校准&#64;8640]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">install(TARGETS</span>
 <span class="go">  talker</span>
 <span class="go">  DESTINATION lib/${PROJECT_NAME})</span>
 </pre></div>
 </div>
-<p>你可以通过删除一些不必要的部分和评论来清理你的 <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> ，所以它看起来像这样: <a class="reference external" href="http://localhost:3000/#/home?msgid=9369">[待校准&#64;9369]</a></p>
+<p>你可以通过删除一些不必要的部分和评论来清理你的 <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> ，所以它看起来像这样: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9369">[待校准&#64;9369]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cmake_minimum_required(VERSION 3.5)</span>
 <span class="go">project(cpp_pubsub)</span>
 
@@ -511,12 +511,12 @@
 <span class="go">ament_package()</span>
 </pre></div>
 </div>
-<p>您现在可以构建包，源文件本地安装文件，并运行它，但是让我们先创建订阅节点，这样您就可以看到整个系统都在工作。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9370">[待校准&#64;9370]</a></p>
+<p>您现在可以构建包，源文件本地安装文件，并运行它，但是让我们先创建订阅节点，这样您就可以看到整个系统都在工作。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9370">[待校准&#64;9370]</a></p>
 </div>
 </div>
 <div class="section" id="write-the-subscriber-node">
-<h3>3写入订户节点 <a class="reference external" href="http://localhost:3000/#/home?msgid=9371">[待校准&#64;9371]</a><a class="headerlink" href="#write-the-subscriber-node" title="永久链接至标题"></a></h3>
-<p>返回 <code class="docutils literal notranslate"><span class="pre">dev_ws/src/cpp_pubsub/src</span></code> 创建下一个节点。在终端中输入以下代码: <a class="reference external" href="http://localhost:3000/#/home?msgid=9372">[待校准&#64;9372]</a></p>
+<h3>3写入订户节点 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9371">[待校准&#64;9371]</a><a class="headerlink" href="#write-the-subscriber-node" title="永久链接至标题"></a></h3>
+<p>返回 <code class="docutils literal notranslate"><span class="pre">dev_ws/src/cpp_pubsub/src</span></code> 创建下一个节点。在终端中输入以下代码: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9372">[待校准&#64;9372]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-1-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-1-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-1-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-1-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-1-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-1-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">wget -O subscriber_member_function.cpp https://raw.githubusercontent.com/ros2/examples/foxy/rclcpp/topics/minimal_subscriber/member_function.cpp</span>
 </pre></div>
@@ -524,20 +524,20 @@
 </div><div aria-labelledby="tab-1-bWFjT1M=" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-1-bWFjT1M=" name="bWFjT1M=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">wget -O subscriber_member_function.cpp https://raw.githubusercontent.com/ros2/examples/foxy/rclcpp/topics/minimal_subscriber/member_function.cpp</span>
 </pre></div>
 </div>
-</div><div aria-labelledby="tab-1-V2luZG93cw==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-1-V2luZG93cw==" name="V2luZG93cw==" role="tabpanel" tabindex="0"><p>在Windows命令行提示符下: <a class="reference external" href="http://localhost:3000/#/home?msgid=8363">[待校准&#64;8363]</a></p>
+</div><div aria-labelledby="tab-1-V2luZG93cw==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-1-V2luZG93cw==" name="V2luZG93cw==" role="tabpanel" tabindex="0"><p>在Windows命令行提示符下: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8363">[待校准&#64;8363]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">curl -sk https://raw.githubusercontent.com/ros2/examples/foxy/rclcpp/topics/minimal_subscriber/member_function.cpp -o subscriber_member_function.cpp</span>
 </pre></div>
 </div>
-<p>或者在powershell中: <a class="reference external" href="http://localhost:3000/#/home?msgid=8364">[待校准&#64;8364]</a></p>
+<p>或者在powershell中: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8364">[待校准&#64;8364]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">curl https://raw.githubusercontent.com/ros2/examples/foxy/rclcpp/topics/minimal_subscriber/member_function.cpp -o subscriber_member_function.cpp</span>
 </pre></div>
 </div>
 </div></div>
-<p>现在在控制台中输入 <code class="docutils literal notranslate"><span class="pre">ls</span></code> 将返回: <a class="reference external" href="http://localhost:3000/#/home?msgid=9373">[待校准&#64;9373]</a></p>
+<p>现在在控制台中输入 <code class="docutils literal notranslate"><span class="pre">ls</span></code> 将返回: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9373">[待校准&#64;9373]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">publisher_member_function.cpp  subscriber_member_function.cpp</span>
 </pre></div>
 </div>
-<p>使用文本编辑器打开 <code class="docutils literal notranslate"><span class="pre">subscriber_member_function.cpp</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9374">[待校准&#64;9374]</a></p>
+<p>使用文本编辑器打开 <code class="docutils literal notranslate"><span class="pre">subscriber_member_function.cpp</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9374">[待校准&#64;9374]</a></p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;memory&gt;</span><span class="cp"></span>
 
 <span class="cp">#include</span> <span class="cpf">&quot;rclcpp/rclcpp.hpp&quot;</span><span class="cp"></span>
@@ -572,9 +572,9 @@
 </pre></div>
 </div>
 <div class="section" id="id1">
-<h4>3.1检查代码 <a class="reference external" href="http://localhost:3000/#/home?msgid=9375">[待校准&#64;9375]</a><a class="headerlink" href="#id1" title="永久链接至标题"></a></h4>
-<p>订阅节点的代码与发布者的代码几乎相同。现在节点被命名为 <code class="docutils literal notranslate"><span class="pre">minimal_subscriber</span></code> ，构造函数使用节点的 <code class="docutils literal notranslate"><span class="pre">create_subscription</span></code> 类来执行调用。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9376">[待校准&#64;9376]</a></p>
-<p>没有计时器，因为只要数据发布到 <code class="docutils literal notranslate"><span class="pre">topic</span></code> 话题，用户就会简单地做出反应。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9377">[待校准&#64;9377]</a></p>
+<h4>3.1检查代码 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9375">[待校准&#64;9375]</a><a class="headerlink" href="#id1" title="永久链接至标题"></a></h4>
+<p>订阅节点的代码与发布者的代码几乎相同。现在节点被命名为 <code class="docutils literal notranslate"><span class="pre">minimal_subscriber</span></code> ，构造函数使用节点的 <code class="docutils literal notranslate"><span class="pre">create_subscription</span></code> 类来执行调用。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9376">[待校准&#64;9376]</a></p>
+<p>没有计时器，因为只要数据发布到 <code class="docutils literal notranslate"><span class="pre">topic</span></code> 话题，用户就会简单地做出反应。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9377">[待校准&#64;9377]</a></p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">public</span><span class="o">:</span>
   <span class="n">MinimalSubscriber</span><span class="p">()</span>
   <span class="o">:</span> <span class="n">Node</span><span class="p">(</span><span class="s">&quot;minimal_subscriber&quot;</span><span class="p">)</span>
@@ -584,9 +584,9 @@
   <span class="p">}</span>
 </pre></div>
 </div>
-<p>从 <a class="reference internal" href="Topics/Understanding-ROS2-Topics.html"><span class="doc">topic tutorial</span></a> 中重新调用，发布者和订阅者使用的话题名称和消息类型必须匹配以允许他们进行交流。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9378">[待校准&#64;9378]</a></p>
-<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">topic_callback</span></code> 函数接收在该话题上发布的string消息数据，并使用 <code class="docutils literal notranslate"><span class="pre">RCLCPP_INFO</span></code> 宏将其简单地写入控制台。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9379">[待校准&#64;9379]</a></p>
-<p>此类中唯一的字段声明是订阅。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9380">[待校准&#64;9380]</a></p>
+<p>从 <a class="reference internal" href="Topics/Understanding-ROS2-Topics.html"><span class="doc">topic tutorial</span></a> 中重新调用，发布者和订阅者使用的话题名称和消息类型必须匹配以允许他们进行交流。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9378">[待校准&#64;9378]</a></p>
+<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">topic_callback</span></code> 函数接收在该话题上发布的string消息数据，并使用 <code class="docutils literal notranslate"><span class="pre">RCLCPP_INFO</span></code> 宏将其简单地写入控制台。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9379">[待校准&#64;9379]</a></p>
+<p>此类中唯一的字段声明是订阅。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9380">[待校准&#64;9380]</a></p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">private</span><span class="o">:</span>
   <span class="kt">void</span> <span class="n">topic_callback</span><span class="p">(</span><span class="k">const</span> <span class="n">std_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">String</span><span class="o">::</span><span class="n">SharedPtr</span> <span class="n">msg</span><span class="p">)</span> <span class="k">const</span>
   <span class="p">{</span>
@@ -595,12 +595,12 @@
   <span class="n">rclcpp</span><span class="o">::</span><span class="n">Subscription</span><span class="o">&lt;</span><span class="n">std_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">String</span><span class="o">&gt;::</span><span class="n">SharedPtr</span> <span class="n">subscription_</span><span class="p">;</span>
 </pre></div>
 </div>
-<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">main</span></code> 函数完全一样，除了现在它旋转 <code class="docutils literal notranslate"><span class="pre">MinimalSubscriber</span></code> 节点。对于发布者节点来说，旋转意味着启动计时器，但对于订阅者来说，这仅仅意味着准备在消息来的时候接收消息。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9381">[待校准&#64;9381]</a></p>
-<p>由于此节点与发布节点具有相同的依赖关系，因此没有新的内容要添加到 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9382">[待校准&#64;9382]</a></p>
+<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">main</span></code> 函数完全一样，除了现在它旋转 <code class="docutils literal notranslate"><span class="pre">MinimalSubscriber</span></code> 节点。对于发布者节点来说，旋转意味着启动计时器，但对于订阅者来说，这仅仅意味着准备在消息来的时候接收消息。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9381">[待校准&#64;9381]</a></p>
+<p>由于此节点与发布节点具有相同的依赖关系，因此没有新的内容要添加到 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9382">[待校准&#64;9382]</a></p>
 </div>
 <div class="section" id="id2">
-<h4>3.2 CMakeLists.txt <a class="reference external" href="http://localhost:3000/#/home?msgid=9383">[待校准&#64;9383]</a><a class="headerlink" href="#id2" title="永久链接至标题"></a></h4>
-<p>重新打开 <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> ，并在发布者条目下方添加订户节点的可执行文件和目标。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9384">[待校准&#64;9384]</a></p>
+<h4>3.2 CMakeLists.txt <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9383">[待校准&#64;9383]</a><a class="headerlink" href="#id2" title="永久链接至标题"></a></h4>
+<p>重新打开 <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> ，并在发布者条目下方添加订户节点的可执行文件和目标。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9384">[待校准&#64;9384]</a></p>
 <div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">add_executable</span><span class="p">(</span><span class="s">listener</span> <span class="s">src/subscriber_member_function.cpp</span><span class="p">)</span>
 <span class="nb">ament_target_dependencies</span><span class="p">(</span><span class="s">listener</span> <span class="s">rclcpp</span> <span class="s">std_msgs</span><span class="p">)</span>
 
@@ -610,20 +610,20 @@
   <span class="s">DESTINATION</span> <span class="s">lib/</span><span class="o">${</span><span class="nv">PROJECT_NAME</span><span class="o">}</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>确保保存文件，然后您的发布/子系统应该可以使用了。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9385">[待校准&#64;9385]</a></p>
+<p>确保保存文件，然后您的发布/子系统应该可以使用了。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9385">[待校准&#64;9385]</a></p>
 </div>
 </div>
 <div class="section" id="build-and-run">
-<span id="cpppubsub-build-and-run"></span><h3>4构建和运行 <a class="reference external" href="http://localhost:3000/#/home?msgid=7896">[待校准&#64;7896]</a><a class="headerlink" href="#build-and-run" title="永久链接至标题"></a></h3>
-<p>您可能已经将 <code class="docutils literal notranslate"><span class="pre">rclcpp</span></code> 和 <code class="docutils literal notranslate"><span class="pre">std_msgs</span></code> 包安装为ROS 2系统的一部分。在构建之前，最好在工作区 ( <code class="docutils literal notranslate"><span class="pre">dev_ws</span></code> ) 的根目录下运行 <code class="docutils literal notranslate"><span class="pre">rosdep</span></code> ，以检查是否缺少依赖项: <a class="reference external" href="http://localhost:3000/#/home?msgid=9386">[待校准&#64;9386]</a></p>
+<span id="cpppubsub-build-and-run"></span><h3>4构建和运行 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7896">[待校准&#64;7896]</a><a class="headerlink" href="#build-and-run" title="永久链接至标题"></a></h3>
+<p>您可能已经将 <code class="docutils literal notranslate"><span class="pre">rclcpp</span></code> 和 <code class="docutils literal notranslate"><span class="pre">std_msgs</span></code> 包安装为ROS 2系统的一部分。在构建之前，最好在工作区 ( <code class="docutils literal notranslate"><span class="pre">dev_ws</span></code> ) 的根目录下运行 <code class="docutils literal notranslate"><span class="pre">rosdep</span></code> ，以检查是否缺少依赖项: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9386">[待校准&#64;9386]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-2-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-2-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-2-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-2-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-2-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-2-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-2-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-2-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">rosdep install -i --from-path src --rosdistro foxy -y</span>
 </pre></div>
 </div>
-</div><div aria-labelledby="tab-2-bWFjT1M=" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-2-bWFjT1M=" name="bWFjT1M=" role="tabpanel" tabindex="0"><p>rosdep仅在Linux上运行，因此您可以跳到下一步。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9229">[待校准&#64;9229]</a></p>
-</div><div aria-labelledby="tab-2-V2luZG93cw==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-2-V2luZG93cw==" name="V2luZG93cw==" role="tabpanel" tabindex="0"><p>rosdep仅在Linux上运行，因此您可以跳到下一步。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9229">[待校准&#64;9229]</a></p>
+</div><div aria-labelledby="tab-2-bWFjT1M=" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-2-bWFjT1M=" name="bWFjT1M=" role="tabpanel" tabindex="0"><p>rosdep仅在Linux上运行，因此您可以跳到下一步。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9229">[待校准&#64;9229]</a></p>
+</div><div aria-labelledby="tab-2-V2luZG93cw==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-2-V2luZG93cw==" name="V2luZG93cw==" role="tabpanel" tabindex="0"><p>rosdep仅在Linux上运行，因此您可以跳到下一步。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9229">[待校准&#64;9229]</a></p>
 </div></div>
-<p>仍然在你的工作空间的根， <code class="docutils literal notranslate"><span class="pre">dev_ws</span></code> ，建立你的新的包: <a class="reference external" href="http://localhost:3000/#/home?msgid=9387">[待校准&#64;9387]</a></p>
+<p>仍然在你的工作空间的根， <code class="docutils literal notranslate"><span class="pre">dev_ws</span></code> ，建立你的新的包: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9387">[待校准&#64;9387]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-3-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-3-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-3-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-3-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-3-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-3-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-3-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-3-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">colcon build --packages-select cpp_pubsub</span>
 </pre></div>
@@ -635,7 +635,7 @@
 </pre></div>
 </div>
 </div></div>
-<p>打开一个新的终端，导航到 <code class="docutils literal notranslate"><span class="pre">dev_ws</span></code> ，源文件安装文件: <a class="reference external" href="http://localhost:3000/#/home?msgid=9231">[待校准&#64;9231]</a></p>
+<p>打开一个新的终端，导航到 <code class="docutils literal notranslate"><span class="pre">dev_ws</span></code> ，源文件安装文件: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9231">[待校准&#64;9231]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-4-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-4-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-4-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-4-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-4-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-4-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-4-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-4-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">. install/setup.bash</span>
 </pre></div>
@@ -647,11 +647,11 @@
 </pre></div>
 </div>
 </div></div>
-<p>现在运行talker节点: <a class="reference external" href="http://localhost:3000/#/home?msgid=8780">[待校准&#64;8780]</a></p>
+<p>现在运行talker节点: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8780">[待校准&#64;8780]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run cpp_pubsub talker</span>
 </pre></div>
 </div>
-<p>终端应每0.5秒开始发布信息消息，如下所示: <a class="reference external" href="http://localhost:3000/#/home?msgid=8781">[待校准&#64;8781]</a></p>
+<p>终端应每0.5秒开始发布信息消息，如下所示: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8781">[待校准&#64;8781]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">[INFO] [minimal_publisher]: Publishing: &quot;Hello World: 0&quot;</span>
 <span class="go">[INFO] [minimal_publisher]: Publishing: &quot;Hello World: 1&quot;</span>
 <span class="go">[INFO] [minimal_publisher]: Publishing: &quot;Hello World: 2&quot;</span>
@@ -659,11 +659,11 @@
 <span class="go">[INFO] [minimal_publisher]: Publishing: &quot;Hello World: 4&quot;</span>
 </pre></div>
 </div>
-<p>打开另一个终端，再次从 <code class="docutils literal notranslate"><span class="pre">dev_ws</span></code> 内部源文件，然后启动监听节点: <a class="reference external" href="http://localhost:3000/#/home?msgid=9388">[待校准&#64;9388]</a></p>
+<p>打开另一个终端，再次从 <code class="docutils literal notranslate"><span class="pre">dev_ws</span></code> 内部源文件，然后启动监听节点: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9388">[待校准&#64;9388]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run cpp_pubsub listener</span>
 </pre></div>
 </div>
-<p>侦听器将开始将消息打印到控制台，从发布者当时打开的任何消息计数开始，如下所示: <a class="reference external" href="http://localhost:3000/#/home?msgid=8782">[待校准&#64;8782]</a></p>
+<p>侦听器将开始将消息打印到控制台，从发布者当时打开的任何消息计数开始，如下所示: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8782">[待校准&#64;8782]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">[INFO] [minimal_subscriber]: I heard: &quot;Hello World: 10&quot;</span>
 <span class="go">[INFO] [minimal_subscriber]: I heard: &quot;Hello World: 11&quot;</span>
 <span class="go">[INFO] [minimal_subscriber]: I heard: &quot;Hello World: 12&quot;</span>
@@ -671,20 +671,20 @@
 <span class="go">[INFO] [minimal_subscriber]: I heard: &quot;Hello World: 14&quot;</span>
 </pre></div>
 </div>
-<p>在每个终端中输入 “ctrl + c” 以停止节点旋转。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9389">[待校准&#64;9389]</a></p>
+<p>在每个终端中输入 “ctrl + c” 以停止节点旋转。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9389">[待校准&#64;9389]</a></p>
 </div>
 </div>
 <div class="section" id="summary">
-<h2>总结 <a class="reference external" href="http://localhost:3000/#/home?msgid=6747">[待校准&#64;6747]</a><a class="headerlink" href="#summary" title="永久链接至标题"></a></h2>
-<p>您创建了两个节点来发布和订阅一个话题上的数据。在编译和运行它们之前，您已将它们的依赖项和可执行文件添加到包配置文件中。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9390">[待校准&#64;9390]</a></p>
+<h2>总结 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6747">[待校准&#64;6747]</a><a class="headerlink" href="#summary" title="永久链接至标题"></a></h2>
+<p>您创建了两个节点来发布和订阅一个话题上的数据。在编译和运行它们之前，您已将它们的依赖项和可执行文件添加到包配置文件中。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9390">[待校准&#64;9390]</a></p>
 </div>
 <div class="section" id="next-steps">
-<h2>下一步 <a class="reference external" href="http://localhost:3000/#/home?msgid=6749">[待校准&#64;6749]</a><a class="headerlink" href="#next-steps" title="永久链接至标题"></a></h2>
-<p>接下来，您将使用服务/客户端模型创建另一个简单的ROS 2包。同样，你可以选择用 <a class="reference internal" href="Writing-A-Simple-Cpp-Service-And-Client.html"><span class="doc">C++</span></a> or <a class="reference internal" href="Writing-A-Simple-Py-Service-And-Client.html"><span class="doc">Python</span></a> 写。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9391">[待校准&#64;9391]</a></p>
+<h2>下一步 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6749">[待校准&#64;6749]</a><a class="headerlink" href="#next-steps" title="永久链接至标题"></a></h2>
+<p>接下来，您将使用服务/客户端模型创建另一个简单的ROS 2包。同样，你可以选择用 <a class="reference internal" href="Writing-A-Simple-Cpp-Service-And-Client.html"><span class="doc">C++</span></a> or <a class="reference internal" href="Writing-A-Simple-Py-Service-And-Client.html"><span class="doc">Python</span></a> 写。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9391">[待校准&#64;9391]</a></p>
 </div>
 <div class="section" id="related-content">
-<h2>相关内容 <a class="reference external" href="http://localhost:3000/#/home?msgid=6751">[待校准&#64;6751]</a><a class="headerlink" href="#related-content" title="永久链接至标题"></a></h2>
-<p>有几种方法可以用c + + 编写出版商和订阅者; 查看 <code class="docutils literal notranslate"><span class="pre">minimal_publisher</span></code> 和 <code class="docutils literal notranslate"><span class="pre">minimal_subscriber</span></code> 包中的 <a class="reference external" href="https://github.com/ros2/examples/tree/foxy/rclcpp/topics">ros2/examples</a> 回购。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9392">[待校准&#64;9392]</a></p>
+<h2>相关内容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6751">[待校准&#64;6751]</a><a class="headerlink" href="#related-content" title="永久链接至标题"></a></h2>
+<p>有几种方法可以用c + + 编写出版商和订阅者; 查看 <code class="docutils literal notranslate"><span class="pre">minimal_publisher</span></code> 和 <code class="docutils literal notranslate"><span class="pre">minimal_subscriber</span></code> 包中的 <a class="reference external" href="https://github.com/ros2/examples/tree/foxy/rclcpp/topics">ros2/examples</a> 回购。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9392">[待校准&#64;9392]</a></p>
 </div>
 </div>
 

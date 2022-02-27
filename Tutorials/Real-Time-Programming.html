@@ -279,9 +279,9 @@
 
 
   <div class="section" id="real-time-programming-in-ros-2">
-<h1>ROS 2中的实时编程 <a class="reference external" href="http://localhost:3000/#/home?msgid=7931">[待校准&#64;7931]</a><a class="headerlink" href="#real-time-programming-in-ros-2" title="永久链接至标题"></a></h1>
+<h1>ROS 2中的实时编程 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7931">[待校准&#64;7931]</a><a class="headerlink" href="#real-time-programming-in-ros-2" title="永久链接至标题"></a></h1>
 <div class="contents local topic" id="table-of-contents">
-<p class="topic-title">目录 <a class="reference external" href="http://localhost:3000/#/home?msgid=6886">[待校准&#64;6886]</a></p>
+<p class="topic-title">目录 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6886">[待校准&#64;6886]</a></p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#background" id="id1">背景 [待校准&#64;6716]</a></p></li>
 <li><p><a class="reference internal" href="#install-and-run-the-demo" id="id2">安装并运行例程 [待校准&#64;7937]</a></p>
@@ -298,67 +298,67 @@
 </ul>
 </div>
 <div class="section" id="background">
-<h2>背景 <a class="reference external" href="http://localhost:3000/#/home?msgid=6716">[待校准&#64;6716]</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
-<p>实时计算是许多机器人系统的关键特征，尤其是安全和关键任务应用，如自动驾驶汽车、宇宙飞船和工业制造。我们在设计和制作ROS 2时考虑到了实时性能限制，因为这是在ROS 1的早期阶段没有考虑的要求，现在很难将ROS 1重构为实时友好。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7932">[待校准&#64;7932]</a></p>
-<p>[需手动修复的语法] <a class="reference external" href="https://design.ros2.org/articles/realtime_background.html">This document</a> 概述了软件工程师对实时计算的要求和最佳实践。简而言之: <a class="reference external" href="http://localhost:3000/#/home?msgid=7933">[待校准&#64;7933]</a></p>
-<p>为了制作实时计算机系统，我们的实时循环必须更新周期调用y以满足截止日期。我们只能容忍这些截止日期上的微小误差 (我们允许的最大抖动)。为此，我们必须避免执行路径中的非确定性操作，例如: 页面错误事件、动态内存分配/解除分配以及无限期阻塞的同步原语。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7934">[待校准&#64;7934]</a></p>
-<p>通常通过实时计算解决的控制问题的一个典型例子是平衡 <a class="reference external" href="https://en.wikipedia.org/wiki/Inverted_pendulum">inverted pendulum</a> 。如果控制器意外地阻塞了很长时间，钟摆会掉落或变得不稳定。但是如果控制器可靠地以比控制钟摆的电机运行速度更快的速度更新，钟摆将成功地适应传感器数据以平衡钟摆。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7935">[待校准&#64;7935]</a></p>
-<p>既然你已经了解了实时计算的一切，让我们试试例程吧! <a class="reference external" href="http://localhost:3000/#/home?msgid=7936">[待校准&#64;7936]</a></p>
+<h2>背景 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6716">[待校准&#64;6716]</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
+<p>实时计算是许多机器人系统的关键特征，尤其是安全和关键任务应用，如自动驾驶汽车、宇宙飞船和工业制造。我们在设计和制作ROS 2时考虑到了实时性能限制，因为这是在ROS 1的早期阶段没有考虑的要求，现在很难将ROS 1重构为实时友好。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7932">[待校准&#64;7932]</a></p>
+<p>[需手动修复的语法] <a class="reference external" href="https://design.ros2.org/articles/realtime_background.html">This document</a> 概述了软件工程师对实时计算的要求和最佳实践。简而言之: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7933">[待校准&#64;7933]</a></p>
+<p>为了制作实时计算机系统，我们的实时循环必须更新周期调用y以满足截止日期。我们只能容忍这些截止日期上的微小误差 (我们允许的最大抖动)。为此，我们必须避免执行路径中的非确定性操作，例如: 页面错误事件、动态内存分配/解除分配以及无限期阻塞的同步原语。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7934">[待校准&#64;7934]</a></p>
+<p>通常通过实时计算解决的控制问题的一个典型例子是平衡 <a class="reference external" href="https://en.wikipedia.org/wiki/Inverted_pendulum">inverted pendulum</a> 。如果控制器意外地阻塞了很长时间，钟摆会掉落或变得不稳定。但是如果控制器可靠地以比控制钟摆的电机运行速度更快的速度更新，钟摆将成功地适应传感器数据以平衡钟摆。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7935">[待校准&#64;7935]</a></p>
+<p>既然你已经了解了实时计算的一切，让我们试试例程吧! <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7936">[待校准&#64;7936]</a></p>
 </div>
 <div class="section" id="install-and-run-the-demo">
-<h2>安装并运行例程 <a class="reference external" href="http://localhost:3000/#/home?msgid=7937">[待校准&#64;7937]</a><a class="headerlink" href="#install-and-run-the-demo" title="永久链接至标题"></a></h2>
-<p>实时例程的编写考虑到了Linux操作系统，因为许多进行实时计算的ROS社区成员使用Xenomai或RT_PREEMPT作为他们的实时解决方案。由于例程中执行的许多操作都是为了优化性能或特定于操作系统，因此例程仅在Linux系统上构建和运行。So因此，如果您是OSX或Windows用户，请不要尝试此部分!** <a class="reference external" href="http://localhost:3000/#/home?msgid=7938">[待校准&#64;7938]</a></p>
-<p>此外，这必须使用静态DDS API从源文件构建。目前唯一支持的实现是Connext。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7939">[待校准&#64;7939]</a></p>
-<p>首先，按照说明使用Connext DDS作为中间件来构建ROS 2 <a class="reference internal" href="../Installation/Ubuntu-Development-Setup.html"><span class="doc">from source</span></a>  。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7940">[待校准&#64;7940]</a></p>
+<h2>安装并运行例程 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7937">[待校准&#64;7937]</a><a class="headerlink" href="#install-and-run-the-demo" title="永久链接至标题"></a></h2>
+<p>实时例程的编写考虑到了Linux操作系统，因为许多进行实时计算的ROS社区成员使用Xenomai或RT_PREEMPT作为他们的实时解决方案。由于例程中执行的许多操作都是为了优化性能或特定于操作系统，因此例程仅在Linux系统上构建和运行。So因此，如果您是OSX或Windows用户，请不要尝试此部分!** <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7938">[待校准&#64;7938]</a></p>
+<p>此外，这必须使用静态DDS API从源文件构建。目前唯一支持的实现是Connext。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7939">[待校准&#64;7939]</a></p>
+<p>首先，按照说明使用Connext DDS作为中间件来构建ROS 2 <a class="reference internal" href="../Installation/Ubuntu-Development-Setup.html"><span class="doc">from source</span></a>  。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7940">[待校准&#64;7940]</a></p>
 <div class="section" id="run-the-tests">
-<h3>运行测试 <a class="reference external" href="http://localhost:3000/#/home?msgid=7941">[待校准&#64;7941]</a><a class="headerlink" href="#run-the-tests" title="永久链接至标题"></a></h3>
-<p>run在运行之前，请确保您至少有8Gb的可用内存。由于内存锁定，交换将不再起作用。** <a class="reference external" href="http://localhost:3000/#/home?msgid=7942">[待校准&#64;7942]</a></p>
-<p>获取您的ROS 2设置.bash。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7943">[待校准&#64;7943]</a></p>
-<p>运行二进制例程，并重定向输出。如果出现权限错误，您可能需要使用 <code class="docutils literal notranslate"><span class="pre">sudo</span></code> : <a class="reference external" href="http://localhost:3000/#/home?msgid=7944">[待校准&#64;7944]</a></p>
+<h3>运行测试 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7941">[待校准&#64;7941]</a><a class="headerlink" href="#run-the-tests" title="永久链接至标题"></a></h3>
+<p>run在运行之前，请确保您至少有8Gb的可用内存。由于内存锁定，交换将不再起作用。** <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7942">[待校准&#64;7942]</a></p>
+<p>获取您的ROS 2设置.bash。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7943">[待校准&#64;7943]</a></p>
+<p>运行二进制例程，并重定向输出。如果出现权限错误，您可能需要使用 <code class="docutils literal notranslate"><span class="pre">sudo</span></code> : <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7944">[待校准&#64;7944]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pendulum_demo &gt; output.txt
 </pre></div>
 </div>
 </div>
 <div class="section" id="what-the-heck-just-happened">
-<h3>刚才到底发生了什么？ <a class="reference external" href="http://localhost:3000/#/home?msgid=7945">[待校准&#64;7945]</a><a class="headerlink" href="#what-the-heck-just-happened" title="永久链接至标题"></a></h3>
-<p>首先，即使您重定向了stdout，您也会看到一些输出到控制台 (从stderr): <a class="reference external" href="http://localhost:3000/#/home?msgid=7946">[待校准&#64;7946]</a></p>
+<h3>刚才到底发生了什么？ <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7945">[待校准&#64;7945]</a><a class="headerlink" href="#what-the-heck-just-happened" title="永久链接至标题"></a></h3>
+<p>首先，即使您重定向了stdout，您也会看到一些输出到控制台 (从stderr): <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7946">[待校准&#64;7946]</a></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mlockall</span> <span class="n">failed</span><span class="p">:</span> <span class="n">Cannot</span> <span class="n">allocate</span> <span class="n">memory</span>
 <span class="n">Couldn</span><span class="s1">&#39;t lock all cached virtual memory.</span>
 <span class="n">Pagefaults</span> <span class="kn">from</span> <span class="nn">reading</span> <span class="n">pages</span> <span class="ow">not</span> <span class="n">yet</span> <span class="n">mapped</span> <span class="n">into</span> <span class="n">RAM</span> <span class="n">will</span> <span class="n">be</span> <span class="n">recorded</span><span class="o">.</span>
 </pre></div>
 </div>
-<p>在例程prog内存的初始化阶段之后，它将尝试将所有缓存的内存锁定到内存中，并防止将来使用 <code class="docutils literal notranslate"><span class="pre">mlockall</span></code> 进行动态内存分配。这是为了防止页面错误将大量新内存加载到内存中。(更多信息见 <a class="reference external" href="https://design.ros2.org/articles/realtime_background.html#memory-management">the realtime design article</a> 。) <a class="reference external" href="http://localhost:3000/#/home?msgid=7947">[待校准&#64;7947]</a></p>
-<p>发生这种情况时，例程将照常继续。在例程生成的output.txt文件的底部，您将看到执行过程中遇到的页面错误数量: <a class="reference external" href="http://localhost:3000/#/home?msgid=7948">[待校准&#64;7948]</a></p>
+<p>在例程prog内存的初始化阶段之后，它将尝试将所有缓存的内存锁定到内存中，并防止将来使用 <code class="docutils literal notranslate"><span class="pre">mlockall</span></code> 进行动态内存分配。这是为了防止页面错误将大量新内存加载到内存中。(更多信息见 <a class="reference external" href="https://design.ros2.org/articles/realtime_background.html#memory-management">the realtime design article</a> 。) <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7947">[待校准&#64;7947]</a></p>
+<p>发生这种情况时，例程将照常继续。在例程生成的output.txt文件的底部，您将看到执行过程中遇到的页面错误数量: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7948">[待校准&#64;7948]</a></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rttest</span> <span class="n">statistics</span><span class="p">:</span>
   <span class="o">-</span> <span class="n">Minor</span> <span class="n">pagefaults</span><span class="p">:</span> <span class="mi">20</span>
   <span class="o">-</span> <span class="n">Major</span> <span class="n">pagefaults</span><span class="p">:</span> <span class="mi">0</span>
 </pre></div>
 </div>
-<p>如果我们想让那些页面错误消失，我们必须... <a class="reference external" href="http://localhost:3000/#/home?msgid=7949">[待校准&#64;7949]</a></p>
+<p>如果我们想让那些页面错误消失，我们必须... <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7949">[待校准&#64;7949]</a></p>
 </div>
 <div class="section" id="adjust-permissions-for-memory-locking">
-<h3>调整内存锁定权限 <a class="reference external" href="http://localhost:3000/#/home?msgid=7950">[待校准&#64;7950]</a><a class="headerlink" href="#adjust-permissions-for-memory-locking" title="永久链接至标题"></a></h3>
-<p>添加到 <code class="docutils literal notranslate"><span class="pre">/etc/security/limits.conf</span></code>  (作为sudo): <a class="reference external" href="http://localhost:3000/#/home?msgid=7951">[待校准&#64;7951]</a></p>
+<h3>调整内存锁定权限 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7950">[待校准&#64;7950]</a><a class="headerlink" href="#adjust-permissions-for-memory-locking" title="永久链接至标题"></a></h3>
+<p>添加到 <code class="docutils literal notranslate"><span class="pre">/etc/security/limits.conf</span></code>  (作为sudo): <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7951">[待校准&#64;7951]</a></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">your</span> <span class="n">username</span><span class="o">&gt;</span>    <span class="o">-</span>   <span class="n">memlock</span>   <span class="o">&lt;</span><span class="n">limit</span> <span class="ow">in</span> <span class="n">kB</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">-1</span></code> 的限制是无限的。如果你选择这个，你可能需要在编辑文件后与 <code class="docutils literal notranslate"><span class="pre">ulimit</span> <span class="pre">-l</span> <span class="pre">unlimited</span></code> 一起。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7952">[待校准&#64;7952]</a></p>
-<p>保存文件后，注销并重新登录。然后重新运行 <code class="docutils literal notranslate"><span class="pre">pendulum_demo</span></code> 调用。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7953">[待校准&#64;7953]</a></p>
-<p>您将在输出文件中看到零页面错误，或者看到一个错误，说明捕获了bad_alloc异常。如果发生这种情况，您没有足够的可用内存将分配给进程的内存锁定到内存中。您需要在计算机中安装更多内存才能看到零页面错误! <a class="reference external" href="http://localhost:3000/#/home?msgid=7954">[待校准&#64;7954]</a></p>
+<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">-1</span></code> 的限制是无限的。如果你选择这个，你可能需要在编辑文件后与 <code class="docutils literal notranslate"><span class="pre">ulimit</span> <span class="pre">-l</span> <span class="pre">unlimited</span></code> 一起。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7952">[待校准&#64;7952]</a></p>
+<p>保存文件后，注销并重新登录。然后重新运行 <code class="docutils literal notranslate"><span class="pre">pendulum_demo</span></code> 调用。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7953">[待校准&#64;7953]</a></p>
+<p>您将在输出文件中看到零页面错误，或者看到一个错误，说明捕获了bad_alloc异常。如果发生这种情况，您没有足够的可用内存将分配给进程的内存锁定到内存中。您需要在计算机中安装更多内存才能看到零页面错误! <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7954">[待校准&#64;7954]</a></p>
 </div>
 <div class="section" id="output-overview">
-<h3>输出概述 <a class="reference external" href="http://localhost:3000/#/home?msgid=7955">[待校准&#64;7955]</a><a class="headerlink" href="#output-overview" title="永久链接至标题"></a></h3>
-<p>要查看更多输出，我们必须运行 <code class="docutils literal notranslate"><span class="pre">pendulum_logger</span></code> 节点。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7956">[待校准&#64;7956]</a></p>
-<p>在带有 <code class="docutils literal notranslate"><span class="pre">install/setup.bash</span></code> 源文件d的一个外壳中，调用: <a class="reference external" href="http://localhost:3000/#/home?msgid=7957">[待校准&#64;7957]</a></p>
+<h3>输出概述 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7955">[待校准&#64;7955]</a><a class="headerlink" href="#output-overview" title="永久链接至标题"></a></h3>
+<p>要查看更多输出，我们必须运行 <code class="docutils literal notranslate"><span class="pre">pendulum_logger</span></code> 节点。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7956">[待校准&#64;7956]</a></p>
+<p>在带有 <code class="docutils literal notranslate"><span class="pre">install/setup.bash</span></code> 源文件d的一个外壳中，调用: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7957">[待校准&#64;7957]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pendulum_logger
 </pre></div>
 </div>
-<p>您应该会看到输出消息: <a class="reference external" href="http://localhost:3000/#/home?msgid=7958">[待校准&#64;7958]</a></p>
+<p>您应该会看到输出消息: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7958">[待校准&#64;7958]</a></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Logger</span> <span class="n">node</span> <span class="n">initialized</span><span class="o">.</span>
 </pre></div>
 </div>
-<p>在另一个带有setup.bash源文件d的外壳中，再次调用 <code class="docutils literal notranslate"><span class="pre">pendulum_demo</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7959">[待校准&#64;7959]</a></p>
-<p>此可执行文件启动后，您应该会看到另一个shell不断打印输出: <a class="reference external" href="http://localhost:3000/#/home?msgid=7960">[待校准&#64;7960]</a></p>
+<p>在另一个带有setup.bash源文件d的外壳中，再次调用 <code class="docutils literal notranslate"><span class="pre">pendulum_demo</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7959">[待校准&#64;7959]</a></p>
+<p>此可执行文件启动后，您应该会看到另一个shell不断打印输出: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7960">[待校准&#64;7960]</a></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Commanded</span> <span class="n">motor</span> <span class="n">angle</span><span class="p">:</span> <span class="mf">1.570796</span>
 <span class="n">Actual</span> <span class="n">motor</span> <span class="n">angle</span><span class="p">:</span> <span class="mf">1.570796</span>
 <span class="n">Mean</span> <span class="n">latency</span><span class="p">:</span> <span class="mf">210144.000000</span> <span class="n">ns</span>
@@ -368,13 +368,13 @@
 <span class="n">Major</span> <span class="n">pagefaults</span> <span class="n">during</span> <span class="n">execution</span><span class="p">:</span> <span class="mi">0</span>
 </pre></div>
 </div>
-<p>该例程控制着一个非常简单的倒立摆仿真。摆锤仿真计算其在自己螺纹中的位置。ROS节点模拟钟摆的电机编码器传感器并发布其位置。另一个ROS节点充当简单的PID控制器，并计算下一个命令消息。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7961">[待校准&#64;7961]</a></p>
-<p>日志记录器节点周期调用y打印出钟摆的状态和例程在其执行阶段的运行时性能统计信息。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7962">[待校准&#64;7962]</a></p>
-<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">pendulum_demo</span></code> 完成后，您必须按CTRL-C退出日志记录器节点才能退出。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7963">[待校准&#64;7963]</a></p>
+<p>该例程控制着一个非常简单的倒立摆仿真。摆锤仿真计算其在自己螺纹中的位置。ROS节点模拟钟摆的电机编码器传感器并发布其位置。另一个ROS节点充当简单的PID控制器，并计算下一个命令消息。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7961">[待校准&#64;7961]</a></p>
+<p>日志记录器节点周期调用y打印出钟摆的状态和例程在其执行阶段的运行时性能统计信息。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7962">[待校准&#64;7962]</a></p>
+<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">pendulum_demo</span></code> 完成后，您必须按CTRL-C退出日志记录器节点才能退出。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7963">[待校准&#64;7963]</a></p>
 </div>
 <div class="section" id="latency">
-<h3>延迟 <a class="reference external" href="http://localhost:3000/#/home?msgid=7964">[待校准&#64;7964]</a><a class="headerlink" href="#latency" title="永久链接至标题"></a></h3>
-<p>在执行 <code class="docutils literal notranslate"><span class="pre">pendulum_demo</span></code> 时，您将看到为例程收集的最终统计信息: <a class="reference external" href="http://localhost:3000/#/home?msgid=7965">[待校准&#64;7965]</a></p>
+<h3>延迟 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7964">[待校准&#64;7964]</a><a class="headerlink" href="#latency" title="永久链接至标题"></a></h3>
+<p>在执行 <code class="docutils literal notranslate"><span class="pre">pendulum_demo</span></code> 时，您将看到为例程收集的最终统计信息: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7965">[待校准&#64;7965]</a></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rttest</span> <span class="n">statistics</span><span class="p">:</span>
   <span class="o">-</span> <span class="n">Minor</span> <span class="n">pagefaults</span><span class="p">:</span> <span class="mi">0</span>
   <span class="o">-</span> <span class="n">Major</span> <span class="n">pagefaults</span><span class="p">:</span> <span class="mi">0</span>
@@ -388,25 +388,25 @@
 <span class="n">PendulumController</span> <span class="n">received</span> <span class="mi">987</span> <span class="n">messages</span>
 </pre></div>
 </div>
-<p>延迟字段以纳秒为单位显示更新循环的最小、最大和平均延迟。这里，延迟是指预期发生更新后的时间量。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7966">[待校准&#64;7966]</a></p>
-<p>实时系统的要求取决于应用程序，但是假设在这个例程中我们有一个1kHz (1毫秒) 的更新环路，我们的目标是更新周期的最大允许延迟为5%。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7967">[待校准&#64;7967]</a></p>
-<p>因此，我们的平均延迟在这次运行中确实很好，但是最大延迟是不可接受的，因为它实际上超过了我们的更新循环!发生什么事了？ <a class="reference external" href="http://localhost:3000/#/home?msgid=7968">[待校准&#64;7968]</a></p>
-<p>我们可能正遭受一个不确定的调度器。如果你're running a vanilla Linux system and you don't有RT_PREEMPT内核安装，你可能无法满足实时目标我们自己，因为Linux调度程序不允许您在用户级别任意抢占线程。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7969">[待校准&#64;7969]</a></p>
-<p>有关更多信息，请参见 <a class="reference external" href="https://design.ros2.org/articles/realtime_background.html#multithreaded-programming-and-synchronization">realtime design article</a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7970">[待校准&#64;7970]</a></p>
-<p>例程尝试将例程的调度程序和线程优先级设置为适合实时性能。如果此操作失败，您将看到一条错误消息: “无法设置调度优先级和策略: 不允许操作”。按照下一节中的说明，您可以获得更好的性能: <a class="reference external" href="http://localhost:3000/#/home?msgid=7971">[待校准&#64;7971]</a></p>
+<p>延迟字段以纳秒为单位显示更新循环的最小、最大和平均延迟。这里，延迟是指预期发生更新后的时间量。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7966">[待校准&#64;7966]</a></p>
+<p>实时系统的要求取决于应用程序，但是假设在这个例程中我们有一个1kHz (1毫秒) 的更新环路，我们的目标是更新周期的最大允许延迟为5%。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7967">[待校准&#64;7967]</a></p>
+<p>因此，我们的平均延迟在这次运行中确实很好，但是最大延迟是不可接受的，因为它实际上超过了我们的更新循环!发生什么事了？ <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7968">[待校准&#64;7968]</a></p>
+<p>我们可能正遭受一个不确定的调度器。如果你're running a vanilla Linux system and you don't有RT_PREEMPT内核安装，你可能无法满足实时目标我们自己，因为Linux调度程序不允许您在用户级别任意抢占线程。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7969">[待校准&#64;7969]</a></p>
+<p>有关更多信息，请参见 <a class="reference external" href="https://design.ros2.org/articles/realtime_background.html#multithreaded-programming-and-synchronization">realtime design article</a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7970">[待校准&#64;7970]</a></p>
+<p>例程尝试将例程的调度程序和线程优先级设置为适合实时性能。如果此操作失败，您将看到一条错误消息: “无法设置调度优先级和策略: 不允许操作”。按照下一节中的说明，您可以获得更好的性能: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7971">[待校准&#64;7971]</a></p>
 </div>
 <div class="section" id="setting-permissions-for-the-scheduler">
-<h3>设置调度程序的权限 <a class="reference external" href="http://localhost:3000/#/home?msgid=7972">[待校准&#64;7972]</a><a class="headerlink" href="#setting-permissions-for-the-scheduler" title="永久链接至标题"></a></h3>
-<p>添加到 <code class="docutils literal notranslate"><span class="pre">/etc/security/limits.conf</span></code>  (作为sudo): <a class="reference external" href="http://localhost:3000/#/home?msgid=7951">[待校准&#64;7951]</a></p>
+<h3>设置调度程序的权限 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7972">[待校准&#64;7972]</a><a class="headerlink" href="#setting-permissions-for-the-scheduler" title="永久链接至标题"></a></h3>
+<p>添加到 <code class="docutils literal notranslate"><span class="pre">/etc/security/limits.conf</span></code>  (作为sudo): <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7951">[待校准&#64;7951]</a></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">your</span> <span class="n">username</span><span class="o">&gt;</span>    <span class="o">-</span>   <span class="n">rtprio</span>   <span class="mi">98</span>
 </pre></div>
 </div>
-<p>rtprio (实时优先级) 字段的范围是0-99。但是，不要将限制设置为99，因为这样您的进程可能会干扰以最高优先级运行的重要系统进程 (例如，看门狗)。此例程将尝试以优先级98运行控制循环。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7973">[待校准&#64;7973]</a></p>
+<p>rtprio (实时优先级) 字段的范围是0-99。但是，不要将限制设置为99，因为这样您的进程可能会干扰以最高优先级运行的重要系统进程 (例如，看门狗)。此例程将尝试以优先级98运行控制循环。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7973">[待校准&#64;7973]</a></p>
 </div>
 <div class="section" id="plotting-results">
-<h3>绘制结果 <a class="reference external" href="http://localhost:3000/#/home?msgid=7974">[待校准&#64;7974]</a><a class="headerlink" href="#plotting-results" title="永久链接至标题"></a></h3>
-<p>您可以绘制例程运行后在此例程中收集的延迟和页面错误统计信息。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7975">[待校准&#64;7975]</a></p>
-<p>因为代码是用 <a class="reference external" href="https://github.com/ros2/rttest">rttest</a> 检测的，所以有有用的命令行参数可用: <a class="reference external" href="http://localhost:3000/#/home?msgid=7976">[待校准&#64;7976]</a></p>
+<h3>绘制结果 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7974">[待校准&#64;7974]</a><a class="headerlink" href="#plotting-results" title="永久链接至标题"></a></h3>
+<p>您可以绘制例程运行后在此例程中收集的延迟和页面错误统计信息。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7975">[待校准&#64;7975]</a></p>
+<p>因为代码是用 <a class="reference external" href="https://github.com/ros2/rttest">rttest</a> 检测的，所以有有用的命令行参数可用: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7976">[待校准&#64;7976]</a></p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 10%" />
@@ -414,42 +414,42 @@
 <col style="width: 16%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p>命令 <a class="reference external" href="http://localhost:3000/#/home?msgid=7977">[待校准&#64;7977]</a></p></td>
-<td><p>描述 <a class="reference external" href="http://localhost:3000/#/home?msgid=7978">[待校准&#64;7978]</a></p></td>
-<td><p>默认值 <a class="reference external" href="http://localhost:3000/#/home?msgid=7979">[待校准&#64;7979]</a></p></td>
+<tr class="row-odd"><td><p>命令 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7977">[待校准&#64;7977]</a></p></td>
+<td><p>描述 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7978">[待校准&#64;7978]</a></p></td>
+<td><p>默认值 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7979">[待校准&#64;7979]</a></p></td>
 </tr>
-<tr class="row-even"><td><p>-我 <a class="reference external" href="http://localhost:3000/#/home?msgid=7980">[待校准&#64;7980]</a></p></td>
-<td><p>指定运行实时循环的迭代次数 <a class="reference external" href="http://localhost:3000/#/home?msgid=7981">[待校准&#64;7981]</a></p></td>
-<td><p>1000 <a class="reference external" href="http://localhost:3000/#/home?msgid=7982">[待校准&#64;7982]</a></p></td>
+<tr class="row-even"><td><p>-我 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7980">[待校准&#64;7980]</a></p></td>
+<td><p>指定运行实时循环的迭代次数 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7981">[待校准&#64;7981]</a></p></td>
+<td><p>1000 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7982">[待校准&#64;7982]</a></p></td>
 </tr>
-<tr class="row-odd"><td><p>-u <a class="reference external" href="http://localhost:3000/#/home?msgid=7983">[待校准&#64;7983]</a></p></td>
-<td><p>指定更新周期，默认单位为微秒。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7984">[待校准&#64;7984]</a></p>
-<p>使用后缀  &quot;s&quot; 几秒钟，  &quot;ms&quot; 几毫秒， <a class="reference external" href="http://localhost:3000/#/home?msgid=7985">[待校准&#64;7985]</a></p>
-<p>[需手动修复的语法]  &quot;us&quot; 微秒，  &quot;ns&quot; 纳秒。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7986">[待校准&#64;7986]</a></p>
+<tr class="row-odd"><td><p>-u <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7983">[待校准&#64;7983]</a></p></td>
+<td><p>指定更新周期，默认单位为微秒。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7984">[待校准&#64;7984]</a></p>
+<p>使用后缀  &quot;s&quot; 几秒钟，  &quot;ms&quot; 几毫秒， <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7985">[待校准&#64;7985]</a></p>
+<p>[需手动修复的语法]  &quot;us&quot; 微秒，  &quot;ns&quot; 纳秒。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7986">[待校准&#64;7986]</a></p>
 </td>
-<td><p>1毫秒 <a class="reference external" href="http://localhost:3000/#/home?msgid=7987">[待校准&#64;7987]</a></p></td>
+<td><p>1毫秒 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7987">[待校准&#64;7987]</a></p></td>
 </tr>
-<tr class="row-even"><td><p>-f <a class="reference external" href="http://localhost:3000/#/home?msgid=7988">[待校准&#64;7988]</a></p></td>
-<td><p>指定用于写入收集的数据的文件的名称。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7989">[待校准&#64;7989]</a></p></td>
+<tr class="row-even"><td><p>-f <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7988">[待校准&#64;7988]</a></p></td>
+<td><p>指定用于写入收集的数据的文件的名称。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7989">[待校准&#64;7989]</a></p></td>
 <td></td>
 </tr>
 </tbody>
 </table>
-<p>使用文件名再次运行该例程以保存结果: <a class="reference external" href="http://localhost:3000/#/home?msgid=7990">[待校准&#64;7990]</a></p>
+<p>使用文件名再次运行该例程以保存结果: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7990">[待校准&#64;7990]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pendulum_demo -f pendulum_demo_results
 </pre></div>
 </div>
-<p>然后对生成的文件运行 <code class="docutils literal notranslate"><span class="pre">rttest_plot</span></code> 脚本: <a class="reference external" href="http://localhost:3000/#/home?msgid=7991">[待校准&#64;7991]</a></p>
+<p>然后对生成的文件运行 <code class="docutils literal notranslate"><span class="pre">rttest_plot</span></code> 脚本: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7991">[待校准&#64;7991]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rttest_plot pendulum_demo_results
 </pre></div>
 </div>
-<p>此脚本将生成三个文件: <a class="reference external" href="http://localhost:3000/#/home?msgid=7992">[待校准&#64;7992]</a></p>
+<p>此脚本将生成三个文件: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7992">[待校准&#64;7992]</a></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pendulum_demo_results_plot_latency</span><span class="o">.</span><span class="n">svg</span>
 <span class="n">pendulum_demo_results_plot_majflts</span><span class="o">.</span><span class="n">svg</span>
 <span class="n">pendulum_demo_results_plot_minflts</span><span class="o">.</span><span class="n">svg</span>
 </pre></div>
 </div>
-<p>您可以在您选择的图像查看器中查看这些绘图。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7993">[待校准&#64;7993]</a></p>
+<p>您可以在您选择的图像查看器中查看这些绘图。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7993">[待校准&#64;7993]</a></p>
 </div>
 </div>
 </div>

@@ -280,12 +280,12 @@
 
 
   <div class="section" id="using-event-handlers-in-launch-files">
-<h1>在launch文件中使用事件处理程序 <a class="reference external" href="http://localhost:3000/#/home?msgid=7641">[待校准&#64;7641]</a><a class="headerlink" href="#using-event-handlers-in-launch-files" title="永久链接至标题"></a></h1>
-<p>Goal目标: Learn了解ROS 2launch文件中的事件处理程序 <a class="reference external" href="http://localhost:3000/#/home?msgid=7642">[待校准&#64;7642]</a></p>
-<p>Tutorial教程级别: Advanced高级 <a class="reference external" href="http://localhost:3000/#/home?msgid=7643">[待校准&#64;7643]</a></p>
-<p>Time时间: 15 15分钟 <a class="reference external" href="http://localhost:3000/#/home?msgid=6755">[待校准&#64;6755]</a></p>
+<h1>在launch文件中使用事件处理程序 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7641">[待校准&#64;7641]</a><a class="headerlink" href="#using-event-handlers-in-launch-files" title="永久链接至标题"></a></h1>
+<p>Goal目标: Learn了解ROS 2launch文件中的事件处理程序 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7642">[待校准&#64;7642]</a></p>
+<p>Tutorial教程级别: Advanced高级 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7643">[待校准&#64;7643]</a></p>
+<p>Time时间: 15 15分钟 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6755">[待校准&#64;6755]</a></p>
 <div class="contents local topic" id="table-of-contents">
-<p class="topic-title">目录 <a class="reference external" href="http://localhost:3000/#/home?msgid=6886">[待校准&#64;6886]</a></p>
+<p class="topic-title">目录 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6886">[待校准&#64;6886]</a></p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#background" id="id1">背景 [待校准&#64;6716]</a></p></li>
 <li><p><a class="reference internal" href="#prerequisites" id="id2">先决条件 [待校准&#64;6718]</a></p></li>
@@ -296,20 +296,20 @@
 </ul>
 </div>
 <div class="section" id="background">
-<h2>背景 <a class="reference external" href="http://localhost:3000/#/home?msgid=6716">[待校准&#64;6716]</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
-<p>ROS 2中的Launch是执行和管理用户定义进程的系统。负责监控进程的状态它launched以及报告和反应变化的这些进程。这些更改是调用事件，可以通过向launch系统注册事件处理程序来处理。可以为特定事件注册事件处理程序，并且可以用于监视进程的状态。此外，它们可用于定义一组复杂的规则，这些规则可用于动态调用y修改launch文件。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7644">[待校准&#64;7644]</a></p>
-<p>本教程展示了ROS 2launch文件中事件处理程序的使用示例。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7645">[待校准&#64;7645]</a></p>
+<h2>背景 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6716">[待校准&#64;6716]</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
+<p>ROS 2中的Launch是执行和管理用户定义进程的系统。负责监控进程的状态它launched以及报告和反应变化的这些进程。这些更改是调用事件，可以通过向launch系统注册事件处理程序来处理。可以为特定事件注册事件处理程序，并且可以用于监视进程的状态。此外，它们可用于定义一组复杂的规则，这些规则可用于动态调用y修改launch文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7644">[待校准&#64;7644]</a></p>
+<p>本教程展示了ROS 2launch文件中事件处理程序的使用示例。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7645">[待校准&#64;7645]</a></p>
 </div>
 <div class="section" id="prerequisites">
-<h2>先决条件 <a class="reference external" href="http://localhost:3000/#/home?msgid=6718">[待校准&#64;6718]</a><a class="headerlink" href="#prerequisites" title="永久链接至标题"></a></h2>
-<p>本教程使用 <a class="reference internal" href="../Turtlesim/Introducing-Turtlesim.html"><span class="doc">turtlesim</span></a> package. This tutorial also assumes you have <a class="reference internal" href="../Creating-Your-First-ROS2-Package.html"><span class="doc">created a new package</span></a> 构建类型 <code class="docutils literal notranslate"><span class="pre">ament_python</span></code> 调用ed <code class="docutils literal notranslate"><span class="pre">launch_tutorial</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7646">[待校准&#64;7646]</a></p>
-<p>本教程扩展了 <a class="reference internal" href="Using-Substitutions.html"><span class="doc">Using substitutions in launch files</span></a> 教程中显示的代码。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7647">[待校准&#64;7647]</a></p>
+<h2>先决条件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6718">[待校准&#64;6718]</a><a class="headerlink" href="#prerequisites" title="永久链接至标题"></a></h2>
+<p>本教程使用 <a class="reference internal" href="../Turtlesim/Introducing-Turtlesim.html"><span class="doc">turtlesim</span></a> package. This tutorial also assumes you have <a class="reference internal" href="../Creating-Your-First-ROS2-Package.html"><span class="doc">created a new package</span></a> 构建类型 <code class="docutils literal notranslate"><span class="pre">ament_python</span></code> 调用ed <code class="docutils literal notranslate"><span class="pre">launch_tutorial</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7646">[待校准&#64;7646]</a></p>
+<p>本教程扩展了 <a class="reference internal" href="Using-Substitutions.html"><span class="doc">Using substitutions in launch files</span></a> 教程中显示的代码。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7647">[待校准&#64;7647]</a></p>
 </div>
 <div class="section" id="using-event-handlers">
-<h2>使用事件处理程序 <a class="reference external" href="http://localhost:3000/#/home?msgid=7648">[待校准&#64;7648]</a><a class="headerlink" href="#using-event-handlers" title="永久链接至标题"></a></h2>
+<h2>使用事件处理程序 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7648">[待校准&#64;7648]</a><a class="headerlink" href="#using-event-handlers" title="永久链接至标题"></a></h2>
 <div class="section" id="event-handlers-example-launch-file">
-<h3>1事件处理程序示例launch文件 <a class="reference external" href="http://localhost:3000/#/home?msgid=7649">[待校准&#64;7649]</a><a class="headerlink" href="#event-handlers-example-launch-file" title="永久链接至标题"></a></h3>
-<p>在 <code class="docutils literal notranslate"><span class="pre">launch_tutorial</span></code> 包的 <code class="docutils literal notranslate"><span class="pre">/launch</span></code> 文件夹中创建一个调用 <code class="docutils literal notranslate"><span class="pre">example_event_handlers.launch.py</span></code> 文件的新文件。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7650">[待校准&#64;7650]</a></p>
+<h3>1事件处理程序示例launch文件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7649">[待校准&#64;7649]</a><a class="headerlink" href="#event-handlers-example-launch-file" title="永久链接至标题"></a></h3>
+<p>在 <code class="docutils literal notranslate"><span class="pre">launch_tutorial</span></code> 包的 <code class="docutils literal notranslate"><span class="pre">/launch</span></code> 文件夹中创建一个调用 <code class="docutils literal notranslate"><span class="pre">example_event_handlers.launch.py</span></code> 文件的新文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7650">[待校准&#64;7650]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">launch_ros.actions</span> <span class="kn">import</span> <span class="n">Node</span>
 
 <span class="kn">from</span> <span class="nn">launch</span> <span class="kn">import</span> <span class="n">LaunchDescription</span>
@@ -446,8 +446,8 @@
     <span class="p">])</span>
 </pre></div>
 </div>
-<p>[需手动修复的语法]``RegisterEventHandler`` actions for the <code class="docutils literal notranslate"><span class="pre">OnProcessStart</span></code>, <code class="docutils literal notranslate"><span class="pre">OnProcessIO</span></code>, <code class="docutils literal notranslate"><span class="pre">OnExecutionComplete</span></code>, <code class="docutils literal notranslate"><span class="pre">OnProcessExit</span></code>, and <code class="docutils literal notranslate"><span class="pre">OnShutdown</span></code> events在launch的描述中被定义。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7651">[待校准&#64;7651]</a></p>
-<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">OnProcessStart</span></code> 事件处理程序用于注册在turtlesim节点启动时执行的调用函数。它将一条消息记录到控制台，并在turtlesim节点启动时执行 <code class="docutils literal notranslate"><span class="pre">spawn_turtle</span></code> 动作。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7652">[待校准&#64;7652]</a></p>
+<p>[需手动修复的语法]``RegisterEventHandler`` actions for the <code class="docutils literal notranslate"><span class="pre">OnProcessStart</span></code>, <code class="docutils literal notranslate"><span class="pre">OnProcessIO</span></code>, <code class="docutils literal notranslate"><span class="pre">OnExecutionComplete</span></code>, <code class="docutils literal notranslate"><span class="pre">OnProcessExit</span></code>, and <code class="docutils literal notranslate"><span class="pre">OnShutdown</span></code> events在launch的描述中被定义。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7651">[待校准&#64;7651]</a></p>
+<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">OnProcessStart</span></code> 事件处理程序用于注册在turtlesim节点启动时执行的调用函数。它将一条消息记录到控制台，并在turtlesim节点启动时执行 <code class="docutils literal notranslate"><span class="pre">spawn_turtle</span></code> 动作。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7652">[待校准&#64;7652]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">RegisterEventHandler</span><span class="p">(</span>
     <span class="n">OnProcessStart</span><span class="p">(</span>
         <span class="n">target_action</span><span class="o">=</span><span class="n">turtlesim_node</span><span class="p">,</span>
@@ -459,7 +459,7 @@
 <span class="p">),</span>
 </pre></div>
 </div>
-<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">OnProcessIO</span></code> 事件处理程序用于注册一个调用函数，该函数在 <code class="docutils literal notranslate"><span class="pre">spawn_turtle</span></code> 动作写入其标准输出时执行。它记录生成请求的结果。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7653">[待校准&#64;7653]</a></p>
+<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">OnProcessIO</span></code> 事件处理程序用于注册一个调用函数，该函数在 <code class="docutils literal notranslate"><span class="pre">spawn_turtle</span></code> 动作写入其标准输出时执行。它记录生成请求的结果。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7653">[待校准&#64;7653]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">RegisterEventHandler</span><span class="p">(</span>
     <span class="n">OnProcessIO</span><span class="p">(</span>
         <span class="n">target_action</span><span class="o">=</span><span class="n">spawn_turtle</span><span class="p">,</span>
@@ -471,7 +471,7 @@
 <span class="p">),</span>
 </pre></div>
 </div>
-<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">OnExecutionComplete</span></code> 事件处理程序用于注册在 <code class="docutils literal notranslate"><span class="pre">spawn_turtle</span></code> 动作完成时执行的调用函数。它将一条消息记录到控制台，并在生成动作完成时执行 <code class="docutils literal notranslate"><span class="pre">change_background_r</span></code> 和 <code class="docutils literal notranslate"><span class="pre">change_background_r_conditioned</span></code> 动作。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7654">[待校准&#64;7654]</a></p>
+<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">OnExecutionComplete</span></code> 事件处理程序用于注册在 <code class="docutils literal notranslate"><span class="pre">spawn_turtle</span></code> 动作完成时执行的调用函数。它将一条消息记录到控制台，并在生成动作完成时执行 <code class="docutils literal notranslate"><span class="pre">change_background_r</span></code> 和 <code class="docutils literal notranslate"><span class="pre">change_background_r_conditioned</span></code> 动作。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7654">[待校准&#64;7654]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">RegisterEventHandler</span><span class="p">(</span>
     <span class="n">OnExecutionComplete</span><span class="p">(</span>
         <span class="n">target_action</span><span class="o">=</span><span class="n">spawn_turtle</span><span class="p">,</span>
@@ -487,7 +487,7 @@
 <span class="p">),</span>
 </pre></div>
 </div>
-<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">OnProcessExit</span></code> 事件处理程序用于注册在turtlesim节点退出时执行的调用函数。它将一条消息记录到控制台，并在turtlesim节点退出时执行 <code class="docutils literal notranslate"><span class="pre">EmitEvent</span></code> 动作以发出 <code class="docutils literal notranslate"><span class="pre">Shutdown</span></code> 事件。这意味着当turtlesim窗口关闭时，launch进程将关闭。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7655">[待校准&#64;7655]</a></p>
+<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">OnProcessExit</span></code> 事件处理程序用于注册在turtlesim节点退出时执行的调用函数。它将一条消息记录到控制台，并在turtlesim节点退出时执行 <code class="docutils literal notranslate"><span class="pre">EmitEvent</span></code> 动作以发出 <code class="docutils literal notranslate"><span class="pre">Shutdown</span></code> 事件。这意味着当turtlesim窗口关闭时，launch进程将关闭。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7655">[待校准&#64;7655]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">RegisterEventHandler</span><span class="p">(</span>
     <span class="n">OnProcessExit</span><span class="p">(</span>
         <span class="n">target_action</span><span class="o">=</span><span class="n">turtlesim_node</span><span class="p">,</span>
@@ -501,7 +501,7 @@
 <span class="p">),</span>
 </pre></div>
 </div>
-<p>最后， <code class="docutils literal notranslate"><span class="pre">OnShutdown</span></code> 事件处理程序用于注册在要求关闭launch文件时执行的调用函数。它会向控制台记录一条消息，说明为什么要求关闭launch文件。它会记录带有关闭原因的消息，例如关闭turtlesim窗口或用户发出的 <code class="docutils literal notranslate"><span class="pre">ctrl-c</span></code> 信号。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7656">[待校准&#64;7656]</a></p>
+<p>最后， <code class="docutils literal notranslate"><span class="pre">OnShutdown</span></code> 事件处理程序用于注册在要求关闭launch文件时执行的调用函数。它会向控制台记录一条消息，说明为什么要求关闭launch文件。它会记录带有关闭原因的消息，例如关闭turtlesim窗口或用户发出的 <code class="docutils literal notranslate"><span class="pre">ctrl-c</span></code> 信号。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7656">[待校准&#64;7656]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">RegisterEventHandler</span><span class="p">(</span>
     <span class="n">OnShutdown</span><span class="p">(</span>
         <span class="n">on_shutdown</span><span class="o">=</span><span class="p">[</span><span class="n">LogInfo</span><span class="p">(</span>
@@ -515,36 +515,36 @@
 </div>
 </div>
 <div class="section" id="launching-example">
-<h2>Launch示例 <a class="reference external" href="http://localhost:3000/#/home?msgid=7657">[待校准&#64;7657]</a><a class="headerlink" href="#launching-example" title="永久链接至标题"></a></h2>
-<p>现在你可以launch的 <code class="docutils literal notranslate"><span class="pre">example_event_handlers.launch.py</span></code> 文件 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">launch</span></code> 命令。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7658">[待校准&#64;7658]</a></p>
+<h2>Launch示例 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7657">[待校准&#64;7657]</a><a class="headerlink" href="#launching-example" title="永久链接至标题"></a></h2>
+<p>现在你可以launch的 <code class="docutils literal notranslate"><span class="pre">example_event_handlers.launch.py</span></code> 文件 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">launch</span></code> 命令。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7658">[待校准&#64;7658]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 launch launch_tutorial example_event_handlers.launch.py turtlesim_ns:=&#39;turtlesim3&#39; use_provided_red:=&#39;True&#39; new_background_r:=200</span>
 </pre></div>
 </div>
-<p>这将执行以下操作: <a class="reference external" href="http://localhost:3000/#/home?msgid=7659">[待校准&#64;7659]</a></p>
+<p>这将执行以下操作: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7659">[待校准&#64;7659]</a></p>
 <ol class="arabic simple">
-<li><p>启动蓝色背景的turtlesim节点 <a class="reference external" href="http://localhost:3000/#/home?msgid=7660">[待校准&#64;7660]</a></p></li>
-<li><p>产卵第二只乌龟 <a class="reference external" href="http://localhost:3000/#/home?msgid=7661">[待校准&#64;7661]</a></p></li>
-<li><p>将颜色更改为紫色 <a class="reference external" href="http://localhost:3000/#/home?msgid=7662">[待校准&#64;7662]</a></p></li>
-<li><p>如果提供的 <code class="docutils literal notranslate"><span class="pre">background_r</span></code> 参数是 <code class="docutils literal notranslate"><span class="pre">200</span></code> ， <code class="docutils literal notranslate"><span class="pre">use_provided_red</span></code> 参数是 <code class="docutils literal notranslate"><span class="pre">True</span></code> ，则在两秒后将颜色更改为粉红色。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7663">[待校准&#64;7663]</a></p></li>
-<li><p>关闭turtlesim窗口时关闭launch文件 <a class="reference external" href="http://localhost:3000/#/home?msgid=7664">[待校准&#64;7664]</a></p></li>
+<li><p>启动蓝色背景的turtlesim节点 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7660">[待校准&#64;7660]</a></p></li>
+<li><p>产卵第二只乌龟 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7661">[待校准&#64;7661]</a></p></li>
+<li><p>将颜色更改为紫色 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7662">[待校准&#64;7662]</a></p></li>
+<li><p>如果提供的 <code class="docutils literal notranslate"><span class="pre">background_r</span></code> 参数是 <code class="docutils literal notranslate"><span class="pre">200</span></code> ， <code class="docutils literal notranslate"><span class="pre">use_provided_red</span></code> 参数是 <code class="docutils literal notranslate"><span class="pre">True</span></code> ，则在两秒后将颜色更改为粉红色。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7663">[待校准&#64;7663]</a></p></li>
+<li><p>关闭turtlesim窗口时关闭launch文件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7664">[待校准&#64;7664]</a></p></li>
 </ol>
-<p>此外，它将在以下情况下将消息记录到控制台: <a class="reference external" href="http://localhost:3000/#/home?msgid=7665">[待校准&#64;7665]</a></p>
+<p>此外，它将在以下情况下将消息记录到控制台: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7665">[待校准&#64;7665]</a></p>
 <ol class="arabic simple">
-<li><p>turtlesim节点启动 <a class="reference external" href="http://localhost:3000/#/home?msgid=7666">[待校准&#64;7666]</a></p></li>
-<li><p>执行生成动作 <a class="reference external" href="http://localhost:3000/#/home?msgid=7667">[待校准&#64;7667]</a></p></li>
-<li><p>执行 <code class="docutils literal notranslate"><span class="pre">change_background_r</span></code> 动作 <a class="reference external" href="http://localhost:3000/#/home?msgid=7668">[待校准&#64;7668]</a></p></li>
-<li><p>执行 <code class="docutils literal notranslate"><span class="pre">change_background_r_conditioned</span></code> 动作 <a class="reference external" href="http://localhost:3000/#/home?msgid=7669">[待校准&#64;7669]</a></p></li>
-<li><p>turtlesim节点退出 <a class="reference external" href="http://localhost:3000/#/home?msgid=7670">[待校准&#64;7670]</a></p></li>
-<li><p>要求launch工艺关闭。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7671">[待校准&#64;7671]</a></p></li>
+<li><p>turtlesim节点启动 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7666">[待校准&#64;7666]</a></p></li>
+<li><p>执行生成动作 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7667">[待校准&#64;7667]</a></p></li>
+<li><p>执行 <code class="docutils literal notranslate"><span class="pre">change_background_r</span></code> 动作 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7668">[待校准&#64;7668]</a></p></li>
+<li><p>执行 <code class="docutils literal notranslate"><span class="pre">change_background_r_conditioned</span></code> 动作 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7669">[待校准&#64;7669]</a></p></li>
+<li><p>turtlesim节点退出 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7670">[待校准&#64;7670]</a></p></li>
+<li><p>要求launch工艺关闭。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7671">[待校准&#64;7671]</a></p></li>
 </ol>
 </div>
 <div class="section" id="documentation">
-<h2>文档 <a class="reference external" href="http://localhost:3000/#/home?msgid=7638">[待校准&#64;7638]</a><a class="headerlink" href="#documentation" title="永久链接至标题"></a></h2>
-<p>[需手动修复的语法] <a class="reference external" href="https://github.com/ros2/launch/blob/master/launch/doc/source/architecture.rst">The launch documentation</a> 提供有关可用事件处理程序的详细信息。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7672">[待校准&#64;7672]</a></p>
+<h2>文档 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7638">[待校准&#64;7638]</a><a class="headerlink" href="#documentation" title="永久链接至标题"></a></h2>
+<p>[需手动修复的语法] <a class="reference external" href="https://github.com/ros2/launch/blob/master/launch/doc/source/architecture.rst">The launch documentation</a> 提供有关可用事件处理程序的详细信息。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7672">[待校准&#64;7672]</a></p>
 </div>
 <div class="section" id="summary">
-<h2>总结 <a class="reference external" href="http://localhost:3000/#/home?msgid=6747">[待校准&#64;6747]</a><a class="headerlink" href="#summary" title="永久链接至标题"></a></h2>
-<p>在本教程中，您学习了在launch文件中使用事件处理程序。您了解了它们的语法和用法示例，以定义一组复杂的规则来动态调用y修改launch文件。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7673">[待校准&#64;7673]</a></p>
+<h2>总结 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6747">[待校准&#64;6747]</a><a class="headerlink" href="#summary" title="永久链接至标题"></a></h2>
+<p>在本教程中，您学习了在launch文件中使用事件处理程序。您了解了它们的语法和用法示例，以定义一组复杂的规则来动态调用y修改launch文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7673">[待校准&#64;7673]</a></p>
 </div>
 </div>
 

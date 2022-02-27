@@ -280,9 +280,9 @@
 
 
   <div class="section" id="using-ros-2-launch-to-launch-composable-nodes">
-<h1>使用ROS 2launch到launch可组合节点 <a class="reference external" href="http://localhost:3000/#/home?msgid=6284">[待校准&#64;6284]</a><a class="headerlink" href="#using-ros-2-launch-to-launch-composable-nodes" title="永久链接至标题"></a></h1>
+<h1>使用ROS 2launch到launch可组合节点 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6284">[待校准&#64;6284]</a><a class="headerlink" href="#using-ros-2-launch-to-launch-composable-nodes" title="永久链接至标题"></a></h1>
 <div class="contents local topic" id="table-of-contents">
-<p class="topic-title">目录 <a class="reference external" href="http://localhost:3000/#/home?msgid=5761">[待校准&#64;5761]</a></p>
+<p class="topic-title">目录 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5761">[待校准&#64;5761]</a></p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#setup" id="id1">设置 [待校准&#64;6287]</a></p></li>
 <li><p><a class="reference internal" href="#launch-file-examples" id="id2">Launch文件示例 [待校准&#64;6164]</a></p></li>
@@ -290,19 +290,19 @@
 <li><p><a class="reference internal" href="#intra-process-communications" id="id4">进程内通讯 [待校准&#64;6295]</a></p></li>
 </ul>
 </div>
-<p>在 <a class="reference internal" href="../Tutorials/Composition.html"><span class="doc">Composition tutorial</span></a>, you learned about composable nodes and how to use them from the command-line. In the <a class="reference internal" href="../Tutorials/Launch/Launch-Main.html"><span class="doc">Launch tutorials</span></a> 中，您学习了launch文件以及如何使用它们来管理多个节点。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6285">[待校准&#64;6285]</a></p>
-<p>本指南将结合以上两个话题，并教您如何为可组合节点编写launch文件。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6286">[待校准&#64;6286]</a></p>
+<p>在 <a class="reference internal" href="../Tutorials/Composition.html"><span class="doc">Composition tutorial</span></a>, you learned about composable nodes and how to use them from the command-line. In the <a class="reference internal" href="../Tutorials/Launch/Launch-Main.html"><span class="doc">Launch tutorials</span></a> 中，您学习了launch文件以及如何使用它们来管理多个节点。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6285">[待校准&#64;6285]</a></p>
+<p>本指南将结合以上两个话题，并教您如何为可组合节点编写launch文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6286">[待校准&#64;6286]</a></p>
 <div class="section" id="setup">
-<h2>设置 <a class="reference external" href="http://localhost:3000/#/home?msgid=6287">[待校准&#64;6287]</a><a class="headerlink" href="#setup" title="永久链接至标题"></a></h2>
-<p>有关安装ROS 2的详细信息，请参见 <a class="reference internal" href="../Installation.html"><span class="doc">installation instructions</span></a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6288">[待校准&#64;6288]</a></p>
-<p>如果您已经从包中安装了ROS 2，请确保您已经安装了 <code class="docutils literal notranslate"><span class="pre">ros-foxy-image-tools</span></code> 。如果您从源文件下载了archive或构建的ROS 2，它将已经是安装的一部分。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6289">[待校准&#64;6289]</a></p>
+<h2>设置 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6287">[待校准&#64;6287]</a><a class="headerlink" href="#setup" title="永久链接至标题"></a></h2>
+<p>有关安装ROS 2的详细信息，请参见 <a class="reference internal" href="../Installation.html"><span class="doc">installation instructions</span></a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6288">[待校准&#64;6288]</a></p>
+<p>如果您已经从包中安装了ROS 2，请确保您已经安装了 <code class="docutils literal notranslate"><span class="pre">ros-foxy-image-tools</span></code> 。如果您从源文件下载了archive或构建的ROS 2，它将已经是安装的一部分。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6289">[待校准&#64;6289]</a></p>
 </div>
 <div class="section" id="launch-file-examples">
-<h2>Launch文件示例 <a class="reference external" href="http://localhost:3000/#/home?msgid=6164">[待校准&#64;6164]</a><a class="headerlink" href="#launch-file-examples" title="永久链接至标题"></a></h2>
-<p>以下是launch文件launches组合节点Python、XML和YAML。launch文件都执行以下操作: <a class="reference external" href="http://localhost:3000/#/home?msgid=6290">[待校准&#64;6290]</a></p>
+<h2>Launch文件示例 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6164">[待校准&#64;6164]</a><a class="headerlink" href="#launch-file-examples" title="永久链接至标题"></a></h2>
+<p>以下是launch文件launches组合节点Python、XML和YAML。launch文件都执行以下操作: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6290">[待校准&#64;6290]</a></p>
 <ul class="simple">
-<li><p>使用重映射、自定义参数和额外参数实例化cam2image可组合节点 <a class="reference external" href="http://localhost:3000/#/home?msgid=6291">[待校准&#64;6291]</a></p></li>
-<li><p>使用重映射、自定义参数和额外参数实例化showimage可组合节点 <a class="reference external" href="http://localhost:3000/#/home?msgid=6292">[待校准&#64;6292]</a></p></li>
+<li><p>使用重映射、自定义参数和额外参数实例化cam2image可组合节点 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6291">[待校准&#64;6291]</a></p></li>
+<li><p>使用重映射、自定义参数和额外参数实例化showimage可组合节点 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6292">[待校准&#64;6292]</a></p></li>
 </ul>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-UHl0aG9u" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-0-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="0">Python</button></div><div aria-labelledby="tab-0-UHl0aG9u" class="sphinx-tabs-panel group-tab" id="panel-0-UHl0aG9u" name="UHl0aG9u" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">launch</span>
@@ -342,15 +342,15 @@
 </div></div>
 </div>
 <div class="section" id="using-the-launch-files-from-the-command-line">
-<h2>使用命令行中的Launch文件 <a class="reference external" href="http://localhost:3000/#/home?msgid=6293">[待校准&#64;6293]</a><a class="headerlink" href="#using-the-launch-files-from-the-command-line" title="永久链接至标题"></a></h2>
-<p>上述任何launch文件都可以与 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">launch</span></code> 一起运行。将数据复制到本地文件中，然后运行: <a class="reference external" href="http://localhost:3000/#/home?msgid=6294">[待校准&#64;6294]</a></p>
+<h2>使用命令行中的Launch文件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6293">[待校准&#64;6293]</a><a class="headerlink" href="#using-the-launch-files-from-the-command-line" title="永久链接至标题"></a></h2>
+<p>上述任何launch文件都可以与 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">launch</span></code> 一起运行。将数据复制到本地文件中，然后运行: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6294">[待校准&#64;6294]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 launch &lt;path_to_launch_file&gt;</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="intra-process-communications">
-<h2>进程内通讯 <a class="reference external" href="http://localhost:3000/#/home?msgid=6295">[待校准&#64;6295]</a><a class="headerlink" href="#intra-process-communications" title="永久链接至标题"></a></h2>
-<p>以上所有示例都使用额外的参数来设置节点之间的进程内通讯。有关什么是进程内通讯的更多信息，请参见 <a class="reference internal" href="../Tutorials/Intra-Process-Communication.html"><span class="doc">intra-process comms tutorial</span></a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6296">[待校准&#64;6296]</a></p>
+<h2>进程内通讯 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6295">[待校准&#64;6295]</a><a class="headerlink" href="#intra-process-communications" title="永久链接至标题"></a></h2>
+<p>以上所有示例都使用额外的参数来设置节点之间的进程内通讯。有关什么是进程内通讯的更多信息，请参见 <a class="reference internal" href="../Tutorials/Intra-Process-Communication.html"><span class="doc">intra-process comms tutorial</span></a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6296">[待校准&#64;6296]</a></p>
 </div>
 </div>
 

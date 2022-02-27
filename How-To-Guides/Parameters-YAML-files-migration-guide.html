@@ -279,20 +279,20 @@
 
 
   <div class="section" id="migrating-yaml-parameter-files-from-ros-1-to-ros-2">
-<span id="yaml-ros1-ros2"></span><h1>将YAML参数文件从ROS 1迁移到ROS 2 <a class="reference external" href="http://localhost:3000/#/home?msgid=6401">[待校准&#64;6401]</a><a class="headerlink" href="#migrating-yaml-parameter-files-from-ros-1-to-ros-2" title="永久链接至标题"></a></h1>
-<p>本指南介绍了如何适应ROS 2的ROS 1参数文件。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6402">[待校准&#64;6402]</a></p>
+<span id="yaml-ros1-ros2"></span><h1>将YAML参数文件从ROS 1迁移到ROS 2 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6401">[待校准&#64;6401]</a><a class="headerlink" href="#migrating-yaml-parameter-files-from-ros-1-to-ros-2" title="永久链接至标题"></a></h1>
+<p>本指南介绍了如何适应ROS 2的ROS 1参数文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6402">[待校准&#64;6402]</a></p>
 <div class="section" id="yaml-file-example">
-<h2>YAML文件示例 <a class="reference external" href="http://localhost:3000/#/home?msgid=6403">[待校准&#64;6403]</a><a class="headerlink" href="#yaml-file-example" title="永久链接至标题"></a></h2>
-<p>YAML用于写入ROS 1和ROS 2中的参数文件。ROS 2的主要区别在于必须使用节点名称来寻址参数。除了完全限定的节点名称之外，我们还使用键  &quot;ros__parameters&quot; 来表示节点参数的开始。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6404">[待校准&#64;6404]</a></p>
-<p>例如，这里有一个ROS 1的参数文件: <a class="reference external" href="http://localhost:3000/#/home?msgid=6405">[待校准&#64;6405]</a></p>
+<h2>YAML文件示例 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6403">[待校准&#64;6403]</a><a class="headerlink" href="#yaml-file-example" title="永久链接至标题"></a></h2>
+<p>YAML用于写入ROS 1和ROS 2中的参数文件。ROS 2的主要区别在于必须使用节点名称来寻址参数。除了完全限定的节点名称之外，我们还使用键  &quot;ros__parameters&quot; 来表示节点参数的开始。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6404">[待校准&#64;6404]</a></p>
+<p>例如，这里有一个ROS 1的参数文件: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6405">[待校准&#64;6405]</a></p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">lidar_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">foo</span>
 <span class="nt">lidar_id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">10</span>
 <span class="nt">ports</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">11312</span><span class="p p-Indicator">,</span> <span class="nv">11311</span><span class="p p-Indicator">,</span> <span class="nv">21311</span><span class="p p-Indicator">]</span>
 <span class="nt">debug</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
 </pre></div>
 </div>
-<p>假设前两个参数用于一个名为 <code class="docutils literal notranslate"><span class="pre">/lidar_ns/lidar_node_name</span></code> 的节点，第二个参数用于一个名为 <code class="docutils literal notranslate"><span class="pre">/imu</span></code> 的节点，最后一个参数我们要在两个节点上设置。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6406">[待校准&#64;6406]</a></p>
-<p>我们将构建ROS 2参数文件，如下所示: <a class="reference external" href="http://localhost:3000/#/home?msgid=6407">[待校准&#64;6407]</a></p>
+<p>假设前两个参数用于一个名为 <code class="docutils literal notranslate"><span class="pre">/lidar_ns/lidar_node_name</span></code> 的节点，第二个参数用于一个名为 <code class="docutils literal notranslate"><span class="pre">/imu</span></code> 的节点，最后一个参数我们要在两个节点上设置。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6406">[待校准&#64;6406]</a></p>
+<p>我们将构建ROS 2参数文件，如下所示: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6407">[待校准&#64;6407]</a></p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">/lidar_ns</span><span class="p">:</span>
   <span class="nt">lidar_node_name</span><span class="p">:</span>
     <span class="nt">ros__parameters</span><span class="p">:</span>
@@ -306,14 +306,14 @@
     <span class="nt">debug</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
 </pre></div>
 </div>
-<p>请注意通配符 ( <code class="docutils literal notranslate"><span class="pre">/**</span></code> ) 的使用，以指示应在任何命名空间中的任何节点上设置参数 <code class="docutils literal notranslate"><span class="pre">debug</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6408">[待校准&#64;6408]</a></p>
+<p>请注意通配符 ( <code class="docutils literal notranslate"><span class="pre">/**</span></code> ) 的使用，以指示应在任何命名空间中的任何节点上设置参数 <code class="docutils literal notranslate"><span class="pre">debug</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6408">[待校准&#64;6408]</a></p>
 </div>
 <div class="section" id="feature-parity">
-<h2>特征奇偶校验 <a class="reference external" href="http://localhost:3000/#/home?msgid=6409">[待校准&#64;6409]</a><a class="headerlink" href="#feature-parity" title="永久链接至标题"></a></h2>
-<p>ROS 2中不存在ROS 1参数文件的某些功能: <a class="reference external" href="http://localhost:3000/#/home?msgid=6410">[待校准&#64;6410]</a></p>
+<h2>特征奇偶校验 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6409">[待校准&#64;6409]</a><a class="headerlink" href="#feature-parity" title="永久链接至标题"></a></h2>
+<p>ROS 2中不存在ROS 1参数文件的某些功能: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6410">[待校准&#64;6410]</a></p>
 <ul class="simple">
-<li><p>尚不支持列表中的混合类型 ( <a class="reference external" href="https://github.com/ros2/rcl/issues/463">related issue</a> ) <a class="reference external" href="http://localhost:3000/#/home?msgid=6411">[待校准&#64;6411]</a></p></li>
-<li><p>不支持``deg`` and <code class="docutils literal notranslate"><span class="pre">rad</span></code> substitutions <a class="reference external" href="http://localhost:3000/#/home?msgid=6412">[待校准&#64;6412]</a></p></li>
+<li><p>尚不支持列表中的混合类型 ( <a class="reference external" href="https://github.com/ros2/rcl/issues/463">related issue</a> ) <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6411">[待校准&#64;6411]</a></p></li>
+<li><p>不支持``deg`` and <code class="docutils literal notranslate"><span class="pre">rad</span></code> substitutions <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6412">[待校准&#64;6412]</a></p></li>
 </ul>
 </div>
 </div>

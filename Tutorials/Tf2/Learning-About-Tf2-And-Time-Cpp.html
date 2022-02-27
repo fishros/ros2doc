@@ -280,12 +280,12 @@
 
 
   <div class="section" id="learning-about-tf2-and-time-c">
-<span id="learningabouttf2andtimecpp"></span><h1>学习tf2和时间 (c ++) <a class="reference external" href="http://localhost:3000/#/home?msgid=8463">[待校准&#64;8463]</a><a class="headerlink" href="#learning-about-tf2-and-time-c" title="永久链接至标题"></a></h1>
-<p>Goal目标: Learn学习如何在特定时间进行转换，并使用 <code class="docutils literal notranslate"><span class="pre">lookupTransform()</span></code> 函数等待转换在tf2树上可用。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8464">[待校准&#64;8464]</a></p>
-<p>Tutorial教程级别: Intermediate中级 <a class="reference external" href="http://localhost:3000/#/home?msgid=6713">[待校准&#64;6713]</a></p>
-<p>Time时间: 10 10分钟 <a class="reference external" href="http://localhost:3000/#/home?msgid=7452">[待校准&#64;7452]</a></p>
+<span id="learningabouttf2andtimecpp"></span><h1>学习tf2和时间 (c ++) <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8463">[待校准&#64;8463]</a><a class="headerlink" href="#learning-about-tf2-and-time-c" title="永久链接至标题"></a></h1>
+<p>Goal目标: Learn学习如何在特定时间进行转换，并使用 <code class="docutils literal notranslate"><span class="pre">lookupTransform()</span></code> 函数等待转换在tf2树上可用。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8464">[待校准&#64;8464]</a></p>
+<p>Tutorial教程级别: Intermediate中级 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6713">[待校准&#64;6713]</a></p>
+<p>Time时间: 10 10分钟 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7452">[待校准&#64;7452]</a></p>
 <div class="contents local topic" id="contents">
-<p class="topic-title">内容 <a class="reference external" href="http://localhost:3000/#/home?msgid=6715">[待校准&#64;6715]</a></p>
+<p class="topic-title">内容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6715">[待校准&#64;6715]</a></p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#background" id="id1">背景 [待校准&#64;6716]</a></p></li>
 <li><p><a class="reference internal" href="#tasks" id="id2">任务 [待校准&#64;6725]</a></p>
@@ -299,21 +299,21 @@
 </ul>
 </div>
 <div class="section" id="background">
-<h2>背景 <a class="reference external" href="http://localhost:3000/#/home?msgid=6716">[待校准&#64;6716]</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
-<p>在之前的教程中，我们通过编写 <a class="reference internal" href="Writing-A-Tf2-Broadcaster-Cpp.html"><span class="doc">tf2 broadcaster</span></a> and a <a class="reference internal" href="Writing-A-Tf2-Listener-Cpp.html"><span class="doc">tf2 listener</span></a>. We also learned how to <a class="reference internal" href="Adding-A-Frame-Cpp.html"><span class="doc">add a new frame to the transformation tree</span></a> 重新创建了turtle例程，并学习了tf2如何跟踪坐标帧树。此树随时间变化，tf2为每次转换存储时间快照 (默认情况下最多10秒)。到目前为止，我们使用 <code class="docutils literal notranslate"><span class="pre">lookupTransform()</span></code> 函数来访问tf2树中的最新可用变换，而不知道该变换是在什么时候记录的。本教程将教您如何在特定时间进行转换。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8465">[待校准&#64;8465]</a></p>
+<h2>背景 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6716">[待校准&#64;6716]</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
+<p>在之前的教程中，我们通过编写 <a class="reference internal" href="Writing-A-Tf2-Broadcaster-Cpp.html"><span class="doc">tf2 broadcaster</span></a> and a <a class="reference internal" href="Writing-A-Tf2-Listener-Cpp.html"><span class="doc">tf2 listener</span></a>. We also learned how to <a class="reference internal" href="Adding-A-Frame-Cpp.html"><span class="doc">add a new frame to the transformation tree</span></a> 重新创建了turtle例程，并学习了tf2如何跟踪坐标帧树。此树随时间变化，tf2为每次转换存储时间快照 (默认情况下最多10秒)。到目前为止，我们使用 <code class="docutils literal notranslate"><span class="pre">lookupTransform()</span></code> 函数来访问tf2树中的最新可用变换，而不知道该变换是在什么时候记录的。本教程将教您如何在特定时间进行转换。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8465">[待校准&#64;8465]</a></p>
 </div>
 <div class="section" id="tasks">
-<h2>任务 <a class="reference external" href="http://localhost:3000/#/home?msgid=6725">[待校准&#64;6725]</a><a class="headerlink" href="#tasks" title="永久链接至标题"></a></h2>
+<h2>任务 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6725">[待校准&#64;6725]</a><a class="headerlink" href="#tasks" title="永久链接至标题"></a></h2>
 <div class="section" id="tf2-and-time">
-<h3>1 tf2和时间 <a class="reference external" href="http://localhost:3000/#/home?msgid=8466">[待校准&#64;8466]</a><a class="headerlink" href="#tf2-and-time" title="永久链接至标题"></a></h3>
-<p>所以让我们回到我们在 <a class="reference internal" href="Adding-A-Frame-Cpp.html"><span class="doc">adding a frame tutorial</span></a> 结束的地方。前往 <code class="docutils literal notranslate"><span class="pre">learning_tf2_cpp</span></code> 包裹。打开 <code class="docutils literal notranslate"><span class="pre">turtle_tf2_listener.cpp</span></code> ，看看 <code class="docutils literal notranslate"><span class="pre">lookupTransform()</span></code> 调用: <a class="reference external" href="http://localhost:3000/#/home?msgid=8467">[待校准&#64;8467]</a></p>
+<h3>1 tf2和时间 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8466">[待校准&#64;8466]</a><a class="headerlink" href="#tf2-and-time" title="永久链接至标题"></a></h3>
+<p>所以让我们回到我们在 <a class="reference internal" href="Adding-A-Frame-Cpp.html"><span class="doc">adding a frame tutorial</span></a> 结束的地方。前往 <code class="docutils literal notranslate"><span class="pre">learning_tf2_cpp</span></code> 包裹。打开 <code class="docutils literal notranslate"><span class="pre">turtle_tf2_listener.cpp</span></code> ，看看 <code class="docutils literal notranslate"><span class="pre">lookupTransform()</span></code> 调用: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8467">[待校准&#64;8467]</a></p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">transformStamped</span> <span class="o">=</span> <span class="n">tf_buffer_</span><span class="o">-&gt;</span><span class="n">lookupTransform</span><span class="p">(</span>
    <span class="n">toFrameRel</span><span class="p">,</span>
    <span class="n">fromFrameRel</span><span class="p">,</span>
    <span class="n">tf2</span><span class="o">::</span><span class="n">TimePointZero</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>您可以看到，我们通过调用 “tf2:: timepointzero” 指定了等于0的时间。对于tf2，时间0表示缓冲区中的  &quot;the latest available&quot; 变换。现在，更改此行以获得当前时间的转换， <code class="docutils literal notranslate"><span class="pre">this-&gt;get_clock()-&gt;now()</span></code> : <a class="reference external" href="http://localhost:3000/#/home?msgid=8468">[待校准&#64;8468]</a></p>
+<p>您可以看到，我们通过调用 “tf2:: timepointzero” 指定了等于0的时间。对于tf2，时间0表示缓冲区中的  &quot;the latest available&quot; 变换。现在，更改此行以获得当前时间的转换， <code class="docutils literal notranslate"><span class="pre">this-&gt;get_clock()-&gt;now()</span></code> : <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8468">[待校准&#64;8468]</a></p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">rclcpp</span><span class="o">::</span><span class="n">Time</span> <span class="n">now</span> <span class="o">=</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">get_clock</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">now</span><span class="p">();</span>
 <span class="n">transformStamped</span> <span class="o">=</span> <span class="n">tf_buffer_</span><span class="o">-&gt;</span><span class="n">lookupTransform</span><span class="p">(</span>
    <span class="n">toFrameRel</span><span class="p">,</span>
@@ -321,22 +321,22 @@
    <span class="n">now</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>现在尝试运行launch文件。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8469">[待校准&#64;8469]</a></p>
+<p>现在尝试运行launch文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8469">[待校准&#64;8469]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 launch learning_tf2_cpp turtle_tf2_demo.launch.py</span>
 </pre></div>
 </div>
-<p>您将注意到它失败并输出类似的内容: <a class="reference external" href="http://localhost:3000/#/home?msgid=8470">[待校准&#64;8470]</a></p>
+<p>您将注意到它失败并输出类似的内容: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8470">[待校准&#64;8470]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">[INFO] [1629873136.345688064] [listener]: Could not transform turtle1 to turtle2: Lookup would</span>
 <span class="go">require extrapolation into the future.  Requested time 1629873136.345539 but the latest data</span>
 <span class="go">is at time 1629873136.338804, when looking up transform from frame [turtle1] to frame [turtle2]</span>
 </pre></div>
 </div>
-<p>它告诉你帧不存在或者数据在将来。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8471">[待校准&#64;8471]</a></p>
-<p>为了理解为什么会发生这种情况，我们需要了解缓冲区是如何工作的。首先，每个侦听器都有一个缓冲区，用于存储来自不同tf2广播器的所有坐标变换。其次，当广播器发出变换时，该变换需要一些时间才能进入缓冲区 (通常为几毫秒)。因此，当您在时间  &quot;now&quot; 请求帧变换时，您应该等待几毫秒以使该信息到达。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8472">[待校准&#64;8472]</a></p>
+<p>它告诉你帧不存在或者数据在将来。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8471">[待校准&#64;8471]</a></p>
+<p>为了理解为什么会发生这种情况，我们需要了解缓冲区是如何工作的。首先，每个侦听器都有一个缓冲区，用于存储来自不同tf2广播器的所有坐标变换。其次，当广播器发出变换时，该变换需要一些时间才能进入缓冲区 (通常为几毫秒)。因此，当您在时间  &quot;now&quot; 请求帧变换时，您应该等待几毫秒以使该信息到达。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8472">[待校准&#64;8472]</a></p>
 </div>
 <div class="section" id="wait-for-transforms">
-<h3>2等待转换 <a class="reference external" href="http://localhost:3000/#/home?msgid=8473">[待校准&#64;8473]</a><a class="headerlink" href="#wait-for-transforms" title="永久链接至标题"></a></h3>
-<p>tf2提供了一个很好的工具，可以等到转换可用。您可以通过向 <code class="docutils literal notranslate"><span class="pre">lookupTransform()</span></code> 添加超时参数来使用它。要解决此问题，请如下所示编辑代码 (添加最后一个超时参数): <a class="reference external" href="http://localhost:3000/#/home?msgid=8474">[待校准&#64;8474]</a></p>
+<h3>2等待转换 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8473">[待校准&#64;8473]</a><a class="headerlink" href="#wait-for-transforms" title="永久链接至标题"></a></h3>
+<p>tf2提供了一个很好的工具，可以等到转换可用。您可以通过向 <code class="docutils literal notranslate"><span class="pre">lookupTransform()</span></code> 添加超时参数来使用它。要解决此问题，请如下所示编辑代码 (添加最后一个超时参数): <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8474">[待校准&#64;8474]</a></p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">rclcpp</span><span class="o">::</span><span class="n">Time</span> <span class="n">now</span> <span class="o">=</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">get_clock</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">now</span><span class="p">();</span>
 <span class="n">transformStamped</span> <span class="o">=</span> <span class="n">tf_buffer_</span><span class="o">-&gt;</span><span class="n">lookupTransform</span><span class="p">(</span>
    <span class="n">toFrameRel</span><span class="p">,</span>
@@ -345,20 +345,20 @@
    <span class="mi">50</span><span class="n">ms</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">lookupTransform()</span></code> 可以接受四个参数，其中最后一个是可选的超时。它将阻塞长达该持续时间，等待其超时。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8475">[待校准&#64;8475]</a></p>
+<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">lookupTransform()</span></code> 可以接受四个参数，其中最后一个是可选的超时。它将阻塞长达该持续时间，等待其超时。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8475">[待校准&#64;8475]</a></p>
 </div>
 <div class="section" id="checking-the-results">
-<h3>3检查结果 <a class="reference external" href="http://localhost:3000/#/home?msgid=8476">[待校准&#64;8476]</a><a class="headerlink" href="#checking-the-results" title="永久链接至标题"></a></h3>
-<p>您现在可以运行launch文件。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8477">[待校准&#64;8477]</a></p>
+<h3>3检查结果 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8476">[待校准&#64;8476]</a><a class="headerlink" href="#checking-the-results" title="永久链接至标题"></a></h3>
+<p>您现在可以运行launch文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8477">[待校准&#64;8477]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 launch learning_tf2_cpp turtle_tf2_demo.launch.py</span>
 </pre></div>
 </div>
-<p>你应该注意到 <code class="docutils literal notranslate"><span class="pre">lookupTransform()</span></code> 实际上会阻塞，直到两只海龟之间的转变变得可用 (这通常需要几毫秒)。一旦达到超时时间 (在这种情况下为50毫秒)，仅当转换仍然不可用时才会引发异常。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8478">[待校准&#64;8478]</a></p>
+<p>你应该注意到 <code class="docutils literal notranslate"><span class="pre">lookupTransform()</span></code> 实际上会阻塞，直到两只海龟之间的转变变得可用 (这通常需要几毫秒)。一旦达到超时时间 (在这种情况下为50毫秒)，仅当转换仍然不可用时才会引发异常。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8478">[待校准&#64;8478]</a></p>
 </div>
 </div>
 <div class="section" id="summary">
-<h2>总结 <a class="reference external" href="http://localhost:3000/#/home?msgid=6747">[待校准&#64;6747]</a><a class="headerlink" href="#summary" title="永久链接至标题"></a></h2>
-<p>在本教程中，您学习了如何在特定时间戳获取转换，以及如何在使用 <code class="docutils literal notranslate"><span class="pre">lookupTransform()</span></code> 函数时等待转换在tf2树上可用。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8479">[待校准&#64;8479]</a></p>
+<h2>总结 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6747">[待校准&#64;6747]</a><a class="headerlink" href="#summary" title="永久链接至标题"></a></h2>
+<p>在本教程中，您学习了如何在特定时间戳获取转换，以及如何在使用 <code class="docutils literal notranslate"><span class="pre">lookupTransform()</span></code> 函数时等待转换在tf2树上可用。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8479">[待校准&#64;8479]</a></p>
 </div>
 </div>
 

@@ -280,12 +280,12 @@
 
 
   <div class="section" id="creating-a-workspace">
-<span id="ros2workspace"></span><h1>创建工作空间 <a class="reference external" href="http://localhost:3000/#/home?msgid=9276">[待校准&#64;9276]</a><a class="headerlink" href="#creating-a-workspace" title="永久链接至标题"></a></h1>
-<p>Goal目标: Create创建工作区并学习如何为开发版本和测试设置覆盖。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9277">[待校准&#64;9277]</a></p>
-<p>Tutorial教程级别: Beginner初学者 <a class="reference external" href="http://localhost:3000/#/home?msgid=7088">[待校准&#64;7088]</a></p>
-<p>Time时间: 20 20分钟 <a class="reference external" href="http://localhost:3000/#/home?msgid=7181">[待校准&#64;7181]</a></p>
+<span id="ros2workspace"></span><h1>创建工作空间 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9276">[待校准&#64;9276]</a><a class="headerlink" href="#creating-a-workspace" title="永久链接至标题"></a></h1>
+<p>Goal目标: Create创建工作区并学习如何为开发版本和测试设置覆盖。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9277">[待校准&#64;9277]</a></p>
+<p>Tutorial教程级别: Beginner初学者 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7088">[待校准&#64;7088]</a></p>
+<p>Time时间: 20 20分钟 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7181">[待校准&#64;7181]</a></p>
 <div class="contents local topic" id="contents">
-<p class="topic-title">内容 <a class="reference external" href="http://localhost:3000/#/home?msgid=6715">[待校准&#64;6715]</a></p>
+<p class="topic-title">内容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6715">[待校准&#64;6715]</a></p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#background" id="id1">背景 [待校准&#64;6716]</a></p></li>
 <li><p><a class="reference internal" href="#prerequisites" id="id2">先决条件 [待校准&#64;6718]</a></p></li>
@@ -305,28 +305,28 @@
 </ul>
 </div>
 <div class="section" id="background">
-<h2>背景 <a class="reference external" href="http://localhost:3000/#/home?msgid=6716">[待校准&#64;6716]</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
-<p>工作区是包含ROS 2包的目录。在使用ROS 2之前，有必要在您计划使用的终端中源文件ROS 2安装工作区。这使得ROS 2的包可供您在该终端中使用。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9278">[待校准&#64;9278]</a></p>
-<p>您还可以选择采购一个 “覆盖” -- 一个辅助工作区，您可以在其中添加新包，而不会干扰您正在扩展的现有ROS 2工作区或 “参考”。您的衬底必须包含叠加层中所有包的依赖项。覆盖中的包将覆盖衬底中的包。也有可能有几层衬垫和覆盖层，每个连续的覆盖层使用其父衬垫包。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9279">[待校准&#64;9279]</a></p>
+<h2>背景 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6716">[待校准&#64;6716]</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
+<p>工作区是包含ROS 2包的目录。在使用ROS 2之前，有必要在您计划使用的终端中源文件ROS 2安装工作区。这使得ROS 2的包可供您在该终端中使用。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9278">[待校准&#64;9278]</a></p>
+<p>您还可以选择采购一个 “覆盖” -- 一个辅助工作区，您可以在其中添加新包，而不会干扰您正在扩展的现有ROS 2工作区或 “参考”。您的衬底必须包含叠加层中所有包的依赖项。覆盖中的包将覆盖衬底中的包。也有可能有几层衬垫和覆盖层，每个连续的覆盖层使用其父衬垫包。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9279">[待校准&#64;9279]</a></p>
 </div>
 <div class="section" id="prerequisites">
-<h2>先决条件 <a class="reference external" href="http://localhost:3000/#/home?msgid=6718">[待校准&#64;6718]</a><a class="headerlink" href="#prerequisites" title="永久链接至标题"></a></h2>
+<h2>先决条件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6718">[待校准&#64;6718]</a><a class="headerlink" href="#prerequisites" title="永久链接至标题"></a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="../../Installation.html"><span class="doc">ROS 2 installation</span></a></p></li>
 <li><p><a class="reference internal" href="../Colcon-Tutorial.html"><span class="doc">colcon installation</span></a></p></li>
 <li><p><a class="reference external" href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">git installation</a></p></li>
 <li><p><a class="reference internal" href="../Turtlesim/Introducing-Turtlesim.html"><span class="doc">turtlesim installation</span></a></p></li>
-<li><p>有 <a class="reference external" href="https://wiki.ros.org/rosdep#Installing_rosdep">rosdep installed</a>  <a class="reference external" href="http://localhost:3000/#/home?msgid=9284">[待校准&#64;9284]</a></p></li>
-<li><p>基本终端命令的理解 ( <a class="reference external" href="http://www.ee.surrey.ac.uk/Teaching/Unix/">here’s a guide for Linux</a> ) <a class="reference external" href="http://localhost:3000/#/home?msgid=9285">[待校准&#64;9285]</a></p></li>
-<li><p>您选择的文本编辑器 <a class="reference external" href="http://localhost:3000/#/home?msgid=9286">[待校准&#64;9286]</a></p></li>
+<li><p>有 <a class="reference external" href="https://wiki.ros.org/rosdep#Installing_rosdep">rosdep installed</a>  <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9284">[待校准&#64;9284]</a></p></li>
+<li><p>基本终端命令的理解 ( <a class="reference external" href="http://www.ee.surrey.ac.uk/Teaching/Unix/">here’s a guide for Linux</a> ) <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9285">[待校准&#64;9285]</a></p></li>
+<li><p>您选择的文本编辑器 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9286">[待校准&#64;9286]</a></p></li>
 </ul>
 </div>
 <div class="section" id="tasks">
-<h2>任务 <a class="reference external" href="http://localhost:3000/#/home?msgid=6725">[待校准&#64;6725]</a><a class="headerlink" href="#tasks" title="永久链接至标题"></a></h2>
+<h2>任务 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6725">[待校准&#64;6725]</a><a class="headerlink" href="#tasks" title="永久链接至标题"></a></h2>
 <div class="section" id="source-ros-2-environment">
-<h3>1源ROS 2环境 <a class="reference external" href="http://localhost:3000/#/home?msgid=9287">[待校准&#64;9287]</a><a class="headerlink" href="#source-ros-2-environment" title="永久链接至标题"></a></h3>
-<p>您的主ROS 2安装将是本教程的参考底图。(请记住，衬底不一定必须是主要的ROS 2安装。) <a class="reference external" href="http://localhost:3000/#/home?msgid=9288">[待校准&#64;9288]</a></p>
-<p>根据您安装ROS 2的方式 (从源文件或二进制文件) 以及您所在的平台，您的确切源文件命令将有所不同: <a class="reference external" href="http://localhost:3000/#/home?msgid=9289">[待校准&#64;9289]</a></p>
+<h3>1源ROS 2环境 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9287">[待校准&#64;9287]</a><a class="headerlink" href="#source-ros-2-environment" title="永久链接至标题"></a></h3>
+<p>您的主ROS 2安装将是本教程的参考底图。(请记住，衬底不一定必须是主要的ROS 2安装。) <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9288">[待校准&#64;9288]</a></p>
+<p>根据您安装ROS 2的方式 (从源文件或二进制文件) 以及您所在的平台，您的确切源文件命令将有所不同: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9289">[待校准&#64;9289]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-0-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-0-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-0-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-0-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-0-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">source /opt/ros/foxy/setup.bash</span>
 </pre></div>
@@ -334,16 +334,16 @@
 </div><div aria-labelledby="tab-0-bWFjT1M=" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-bWFjT1M=" name="bWFjT1M=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">. ~/ros2_install/ros2-osx/setup.bash</span>
 </pre></div>
 </div>
-</div><div aria-labelledby="tab-0-V2luZG93cw==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-V2luZG93cw==" name="V2luZG93cw==" role="tabpanel" tabindex="0"><p>请记住使用 <code class="docutils literal notranslate"><span class="pre">x64</span> <span class="pre">Native</span> <span class="pre">Tools</span> <span class="pre">Command</span> <span class="pre">Prompt</span> <span class="pre">for</span> <span class="pre">VS</span> <span class="pre">2019</span></code> 执行以下命令，因为我们将构建工作区。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9290">[待校准&#64;9290]</a></p>
+</div><div aria-labelledby="tab-0-V2luZG93cw==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-V2luZG93cw==" name="V2luZG93cw==" role="tabpanel" tabindex="0"><p>请记住使用 <code class="docutils literal notranslate"><span class="pre">x64</span> <span class="pre">Native</span> <span class="pre">Tools</span> <span class="pre">Command</span> <span class="pre">Prompt</span> <span class="pre">for</span> <span class="pre">VS</span> <span class="pre">2019</span></code> 执行以下命令，因为我们将构建工作区。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9290">[待校准&#64;9290]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">call C:\dev\ros2\local_setup.bat</span>
 </pre></div>
 </div>
 </div></div>
-<p>如果这些命令对你不起作用，请咨询你遵循的 <a class="reference internal" href="../../Installation.html"><span class="doc">installation guide</span></a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9291">[待校准&#64;9291]</a></p>
+<p>如果这些命令对你不起作用，请咨询你遵循的 <a class="reference internal" href="../../Installation.html"><span class="doc">installation guide</span></a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9291">[待校准&#64;9291]</a></p>
 </div>
 <div class="section" id="create-a-new-directory">
-<span id="new-directory"></span><h3>2创建新目录 <a class="reference external" href="http://localhost:3000/#/home?msgid=9292">[待校准&#64;9292]</a><a class="headerlink" href="#create-a-new-directory" title="永久链接至标题"></a></h3>
-<p>最佳实践是为每个新工作区创建一个新目录。名称并不重要，但让它指明工作区的用途是有帮助的。让我们为 “开发版本工作区” 选择目录名称 <code class="docutils literal notranslate"><span class="pre">dev_ws</span></code> : <a class="reference external" href="http://localhost:3000/#/home?msgid=9293">[待校准&#64;9293]</a></p>
+<span id="new-directory"></span><h3>2创建新目录 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9292">[待校准&#64;9292]</a><a class="headerlink" href="#create-a-new-directory" title="永久链接至标题"></a></h3>
+<p>最佳实践是为每个新工作区创建一个新目录。名称并不重要，但让它指明工作区的用途是有帮助的。让我们为 “开发版本工作区” 选择目录名称 <code class="docutils literal notranslate"><span class="pre">dev_ws</span></code> : <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9293">[待校准&#64;9293]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-1-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-1-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-1-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-1-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-1-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-1-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">mkdir -p ~/dev_ws/src</span>
 <span class="go">cd ~/dev_ws/src</span>
@@ -358,45 +358,45 @@
 </pre></div>
 </div>
 </div></div>
-<p>另一个最佳实践是将工作区中的任何包放入 <code class="docutils literal notranslate"><span class="pre">src</span></code> 目录中。上述代码创建一个 <code class="docutils literal notranslate"><span class="pre">src</span></code> 目录内 <code class="docutils literal notranslate"><span class="pre">dev_ws</span></code> 然后导航到它。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9294">[待校准&#64;9294]</a></p>
+<p>另一个最佳实践是将工作区中的任何包放入 <code class="docutils literal notranslate"><span class="pre">src</span></code> 目录中。上述代码创建一个 <code class="docutils literal notranslate"><span class="pre">src</span></code> 目录内 <code class="docutils literal notranslate"><span class="pre">dev_ws</span></code> 然后导航到它。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9294">[待校准&#64;9294]</a></p>
 </div>
 <div class="section" id="clone-a-sample-repo">
-<h3>3克隆样本存储库 <a class="reference external" href="http://localhost:3000/#/home?msgid=9295">[待校准&#64;9295]</a><a class="headerlink" href="#clone-a-sample-repo" title="永久链接至标题"></a></h3>
-<p>在克隆之前，请确保您仍在 <code class="docutils literal notranslate"><span class="pre">dev_ws/src</span></code> 目录中。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9296">[待校准&#64;9296]</a></p>
-<p>在其余的初级开发人员教程中，您将创建自己的包，但现在您将练习使用现有包将工作区放在一起。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9297">[待校准&#64;9297]</a></p>
-<p>您将使用的现有包来自 <code class="docutils literal notranslate"><span class="pre">ros_tutorials</span></code> 仓库 (repo)。如果你浏览了  &quot;Beginner: CLI Tools&quot; 教程，你会熟悉 <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> ，这个回购中的一个包。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9298">[待校准&#64;9298]</a></p>
-<p>你可以看到回购 <a class="reference external" href="https://github.com/ros/ros_tutorials/">on GitHub</a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9299">[待校准&#64;9299]</a></p>
-<p>请注意目录列表左侧的 “分支” 下拉列表。克隆此存储库时，请添加 <code class="docutils literal notranslate"><span class="pre">-b</span></code> 参数，后跟与ROS 2发行版相对应的分支。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9300">[待校准&#64;9300]</a></p>
-<p>在 <code class="docutils literal notranslate"><span class="pre">dev_ws/src</span></code> 目录中，为您正在使用的发行版运行以下命令: <a class="reference external" href="http://localhost:3000/#/home?msgid=9301">[待校准&#64;9301]</a></p>
+<h3>3克隆样本存储库 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9295">[待校准&#64;9295]</a><a class="headerlink" href="#clone-a-sample-repo" title="永久链接至标题"></a></h3>
+<p>在克隆之前，请确保您仍在 <code class="docutils literal notranslate"><span class="pre">dev_ws/src</span></code> 目录中。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9296">[待校准&#64;9296]</a></p>
+<p>在其余的初级开发人员教程中，您将创建自己的包，但现在您将练习使用现有包将工作区放在一起。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9297">[待校准&#64;9297]</a></p>
+<p>您将使用的现有包来自 <code class="docutils literal notranslate"><span class="pre">ros_tutorials</span></code> 仓库 (repo)。如果你浏览了  &quot;Beginner: CLI Tools&quot; 教程，你会熟悉 <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> ，这个回购中的一个包。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9298">[待校准&#64;9298]</a></p>
+<p>你可以看到回购 <a class="reference external" href="https://github.com/ros/ros_tutorials/">on GitHub</a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9299">[待校准&#64;9299]</a></p>
+<p>请注意目录列表左侧的 “分支” 下拉列表。克隆此存储库时，请添加 <code class="docutils literal notranslate"><span class="pre">-b</span></code> 参数，后跟与ROS 2发行版相对应的分支。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9300">[待校准&#64;9300]</a></p>
+<p>在 <code class="docutils literal notranslate"><span class="pre">dev_ws/src</span></code> 目录中，为您正在使用的发行版运行以下命令: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9301">[待校准&#64;9301]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git clone https://github.com/ros/ros_tutorials.git -b foxy-devel</span>
 </pre></div>
 </div>
-<p>现在在您的工作区中克隆了 <code class="docutils literal notranslate"><span class="pre">ros_tutorials</span></code> 。 <code class="docutils literal notranslate"><span class="pre">ros_tutorials</span></code> 仓库包含 <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> 包，我们将在本教程的其余部分使用。这个仓库里的其他包没有被建造，因为它们包含一个 <code class="docutils literal notranslate"><span class="pre">COLCON_IGNORE</span></code> 文件。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9302">[待校准&#64;9302]</a></p>
-<p>现在，您已经使用示例包填充了工作区，但它还不是一个功能齐全的工作区。您需要先解析依赖项并构建工作区。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9303">[待校准&#64;9303]</a></p>
+<p>现在在您的工作区中克隆了 <code class="docutils literal notranslate"><span class="pre">ros_tutorials</span></code> 。 <code class="docutils literal notranslate"><span class="pre">ros_tutorials</span></code> 仓库包含 <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> 包，我们将在本教程的其余部分使用。这个仓库里的其他包没有被建造，因为它们包含一个 <code class="docutils literal notranslate"><span class="pre">COLCON_IGNORE</span></code> 文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9302">[待校准&#64;9302]</a></p>
+<p>现在，您已经使用示例包填充了工作区，但它还不是一个功能齐全的工作区。您需要先解析依赖项并构建工作区。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9303">[待校准&#64;9303]</a></p>
 </div>
 <div class="section" id="resolve-dependencies">
-<h3>4解决依赖关系 <a class="reference external" href="http://localhost:3000/#/home?msgid=9304">[待校准&#64;9304]</a><a class="headerlink" href="#resolve-dependencies" title="永久链接至标题"></a></h3>
-<p>在构建工作区之前，您需要解决包依赖关系。您可能已经拥有了所有依赖项，但最佳实践是在每次克隆时检查依赖项。您不希望构建在长时间等待后因缺少依赖项而失败。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9305">[待校准&#64;9305]</a></p>
-<p>在工作区 ( <code class="docutils literal notranslate"><span class="pre">dev_ws</span></code> ) 的根目录下，运行以下命令: <a class="reference external" href="http://localhost:3000/#/home?msgid=9306">[待校准&#64;9306]</a></p>
+<h3>4解决依赖关系 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9304">[待校准&#64;9304]</a><a class="headerlink" href="#resolve-dependencies" title="永久链接至标题"></a></h3>
+<p>在构建工作区之前，您需要解决包依赖关系。您可能已经拥有了所有依赖项，但最佳实践是在每次克隆时检查依赖项。您不希望构建在长时间等待后因缺少依赖项而失败。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9305">[待校准&#64;9305]</a></p>
+<p>在工作区 ( <code class="docutils literal notranslate"><span class="pre">dev_ws</span></code> ) 的根目录下，运行以下命令: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9306">[待校准&#64;9306]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-2-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-2-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-2-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-2-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-2-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-2-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-2-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-2-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># cd if you&#39;re still in the ``src`` directory with the ``ros_tutorials`` clone</span>
 <span class="nb">cd</span> ..
 rosdep install -i --from-path src --rosdistro foxy -y
 </pre></div>
 </div>
-</div><div aria-labelledby="tab-2-bWFjT1M=" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-2-bWFjT1M=" name="bWFjT1M=" role="tabpanel" tabindex="0"><p>rosdep只在Linux上运行，所以你可以跳到  &quot;5 Build the workspace with colcon&quot; 部分。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9307">[待校准&#64;9307]</a></p>
-</div><div aria-labelledby="tab-2-V2luZG93cw==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-2-V2luZG93cw==" name="V2luZG93cw==" role="tabpanel" tabindex="0"><p>rosdep只在Linux上运行，所以你可以跳到  &quot;5 Build the workspace with colcon&quot; 部分。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9307">[待校准&#64;9307]</a></p>
+</div><div aria-labelledby="tab-2-bWFjT1M=" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-2-bWFjT1M=" name="bWFjT1M=" role="tabpanel" tabindex="0"><p>rosdep只在Linux上运行，所以你可以跳到  &quot;5 Build the workspace with colcon&quot; 部分。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9307">[待校准&#64;9307]</a></p>
+</div><div aria-labelledby="tab-2-V2luZG93cw==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-2-V2luZG93cw==" name="V2luZG93cw==" role="tabpanel" tabindex="0"><p>rosdep只在Linux上运行，所以你可以跳到  &quot;5 Build the workspace with colcon&quot; 部分。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9307">[待校准&#64;9307]</a></p>
 </div></div>
-<p>如果您从源文件或  &quot;fat&quot; archive在Linux上安装了ROS 2，则需要使用其安装说明中的rosdep命令。这是 <a class="reference internal" href="../../Installation/Ubuntu-Development-Setup.html#linux-development-setup-install-dependencies-using-rosdep"><span class="std std-ref">from-source rosdep section</span></a> 和 <a class="reference internal" href="../../Installation/Ubuntu-Install-Binary.html#linux-install-binary-install-missing-dependencies"><span class="std std-ref">&quot;fat&quot; archive rosdep section</span></a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9308">[待校准&#64;9308]</a></p>
-<p>如果您已经拥有所有依赖项，则控制台将返回: <a class="reference external" href="http://localhost:3000/#/home?msgid=9309">[待校准&#64;9309]</a></p>
+<p>如果您从源文件或  &quot;fat&quot; archive在Linux上安装了ROS 2，则需要使用其安装说明中的rosdep命令。这是 <a class="reference internal" href="../../Installation/Ubuntu-Development-Setup.html#linux-development-setup-install-dependencies-using-rosdep"><span class="std std-ref">from-source rosdep section</span></a> 和 <a class="reference internal" href="../../Installation/Ubuntu-Install-Binary.html#linux-install-binary-install-missing-dependencies"><span class="std std-ref">&quot;fat&quot; archive rosdep section</span></a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9308">[待校准&#64;9308]</a></p>
+<p>如果您已经拥有所有依赖项，则控制台将返回: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9309">[待校准&#64;9309]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">#</span>All required rosdeps installed successfully
 </pre></div>
 </div>
-<p>包在package.xml文件中声明其依赖关系 (您将在下一个教程中了解有关包的更多信息)。此命令遍历这些声明并安装丢失的声明。您可以在另一个教程 (即将推出) 中了解更多关于 <code class="docutils literal notranslate"><span class="pre">rosdep</span></code> 的信息。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9310">[待校准&#64;9310]</a></p>
+<p>包在package.xml文件中声明其依赖关系 (您将在下一个教程中了解有关包的更多信息)。此命令遍历这些声明并安装丢失的声明。您可以在另一个教程 (即将推出) 中了解更多关于 <code class="docutils literal notranslate"><span class="pre">rosdep</span></code> 的信息。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9310">[待校准&#64;9310]</a></p>
 </div>
 <div class="section" id="build-the-workspace-with-colcon">
-<h3>5使用colcon构建工作区 <a class="reference external" href="http://localhost:3000/#/home?msgid=9311">[待校准&#64;9311]</a><a class="headerlink" href="#build-the-workspace-with-colcon" title="永久链接至标题"></a></h3>
-<p>从工作区 ( <code class="docutils literal notranslate"><span class="pre">dev_ws</span></code> ) 的根目录，您现在可以使用以下命令构建包: <a class="reference external" href="http://localhost:3000/#/home?msgid=9312">[待校准&#64;9312]</a></p>
+<h3>5使用colcon构建工作区 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9311">[待校准&#64;9311]</a><a class="headerlink" href="#build-the-workspace-with-colcon" title="永久链接至标题"></a></h3>
+<p>从工作区 ( <code class="docutils literal notranslate"><span class="pre">dev_ws</span></code> ) 的根目录，您现在可以使用以下命令构建包: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9312">[待校准&#64;9312]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-3-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-3-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-3-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-3-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-3-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-3-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-3-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-3-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">colcon build</span>
 </pre></div>
@@ -407,9 +407,9 @@ rosdep install -i --from-path src --rosdistro foxy -y
 </div><div aria-labelledby="tab-3-V2luZG93cw==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-3-V2luZG93cw==" name="V2luZG93cw==" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">colcon build --merge-install</span>
 </pre></div>
 </div>
-<p>Windows不允许长路径，因此 <code class="docutils literal notranslate"><span class="pre">merge-install</span></code> 会将所有路径合并到 <code class="docutils literal notranslate"><span class="pre">install</span></code> 目录中。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7003">[待校准&#64;7003]</a></p>
+<p>Windows不允许长路径，因此 <code class="docutils literal notranslate"><span class="pre">merge-install</span></code> 会将所有路径合并到 <code class="docutils literal notranslate"><span class="pre">install</span></code> 目录中。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7003">[待校准&#64;7003]</a></p>
 </div></div>
-<p>控制台将返回以下消息: <a class="reference external" href="http://localhost:3000/#/home?msgid=9313">[待校准&#64;9313]</a></p>
+<p>控制台将返回以下消息: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9313">[待校准&#64;9313]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Starting &gt;&gt;&gt; turtlesim</span>
 <span class="go">Finished &lt;&lt;&lt; turtlesim [5.49s]</span>
 
@@ -418,23 +418,23 @@ rosdep install -i --from-path src --rosdistro foxy -y
 </div>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
-<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">colcon</span> <span class="pre">build</span></code> 的其他有用论据: <a class="reference external" href="http://localhost:3000/#/home?msgid=9314">[待校准&#64;9314]</a></p>
+<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">colcon</span> <span class="pre">build</span></code> 的其他有用论据: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9314">[待校准&#64;9314]</a></p>
 <ul class="simple">
-<li><p>[需手动修复的语法]``--packages-up-to`` builds你想要的包，加上它所有的依赖，但不是整个工作空间 (节省时间) <a class="reference external" href="http://localhost:3000/#/home?msgid=9315">[待校准&#64;9315]</a></p></li>
-<li><p>[需手动修复的语法]``--symlink-install`` saves你不必重建每次调整python脚本 <a class="reference external" href="http://localhost:3000/#/home?msgid=9316">[待校准&#64;9316]</a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">--event-handlers</span> <span class="pre">console_direct+</span></code> shows console output while building (can otherwise be found in the <code class="docutils literal notranslate"><span class="pre">log</span></code> directory) <a class="reference external" href="http://localhost:3000/#/home?msgid=9317">[待校准&#64;9317]</a></p></li>
+<li><p>[需手动修复的语法]``--packages-up-to`` builds你想要的包，加上它所有的依赖，但不是整个工作空间 (节省时间) <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9315">[待校准&#64;9315]</a></p></li>
+<li><p>[需手动修复的语法]``--symlink-install`` saves你不必重建每次调整python脚本 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9316">[待校准&#64;9316]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--event-handlers</span> <span class="pre">console_direct+</span></code> shows console output while building (can otherwise be found in the <code class="docutils literal notranslate"><span class="pre">log</span></code> directory) <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9317">[待校准&#64;9317]</a></p></li>
 </ul>
 </div>
-<p>构建完成后，在工作区根目录 (“~/dev_ws”) 中输入 <code class="docutils literal notranslate"><span class="pre">ls</span></code> ，您将看到colcon创建了新目录: <a class="reference external" href="http://localhost:3000/#/home?msgid=9318">[待校准&#64;9318]</a></p>
+<p>构建完成后，在工作区根目录 (“~/dev_ws”) 中输入 <code class="docutils literal notranslate"><span class="pre">ls</span></code> ，您将看到colcon创建了新目录: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9318">[待校准&#64;9318]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">build  install  log  src</span>
 </pre></div>
 </div>
-<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">install</span></code> 目录是工作区的设置文件所在的位置，您可以使用它来源文件覆盖图。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9319">[待校准&#64;9319]</a></p>
+<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">install</span></code> 目录是工作区的设置文件所在的位置，您可以使用它来源文件覆盖图。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9319">[待校准&#64;9319]</a></p>
 </div>
 <div class="section" id="source-the-overlay">
-<h3>6来源覆盖 <a class="reference external" href="http://localhost:3000/#/home?msgid=9320">[待校准&#64;9320]</a><a class="headerlink" href="#source-the-overlay" title="永久链接至标题"></a></h3>
-<p>在采购覆盖层之前，打开一个新的终端非常重要，该终端与构建工作区的终端分开。在您构建的同一个终端中采购一个覆盖图，或者在源文件中构建一个覆盖图，可能会产生复杂的问题。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9321">[待校准&#64;9321]</a></p>
-<p>在新终端中，将您的主ROS 2环境作为 “衬底” 源文件，这样您就可以在其 “顶部” 构建覆盖: <a class="reference external" href="http://localhost:3000/#/home?msgid=9322">[待校准&#64;9322]</a></p>
+<h3>6来源覆盖 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9320">[待校准&#64;9320]</a><a class="headerlink" href="#source-the-overlay" title="永久链接至标题"></a></h3>
+<p>在采购覆盖层之前，打开一个新的终端非常重要，该终端与构建工作区的终端分开。在您构建的同一个终端中采购一个覆盖图，或者在源文件中构建一个覆盖图，可能会产生复杂的问题。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9321">[待校准&#64;9321]</a></p>
+<p>在新终端中，将您的主ROS 2环境作为 “衬底” 源文件，这样您就可以在其 “顶部” 构建覆盖: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9322">[待校准&#64;9322]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-4-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-4-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-4-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-4-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-4-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-4-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-4-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-4-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">source /opt/ros/foxy/setup.bash</span>
 </pre></div>
@@ -442,12 +442,12 @@ rosdep install -i --from-path src --rosdistro foxy -y
 </div><div aria-labelledby="tab-4-bWFjT1M=" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-4-bWFjT1M=" name="bWFjT1M=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">. ~/ros2_install/ros2-osx/setup.bash</span>
 </pre></div>
 </div>
-</div><div aria-labelledby="tab-4-V2luZG93cw==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-4-V2luZG93cw==" name="V2luZG93cw==" role="tabpanel" tabindex="0"><p>在这种情况下，您可以使用普通的命令提示符，因为我们不会在此终端中构建任何工作区。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9323">[待校准&#64;9323]</a></p>
+</div><div aria-labelledby="tab-4-V2luZG93cw==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-4-V2luZG93cw==" name="V2luZG93cw==" role="tabpanel" tabindex="0"><p>在这种情况下，您可以使用普通的命令提示符，因为我们不会在此终端中构建任何工作区。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9323">[待校准&#64;9323]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">call C:\dev\ros2\local_setup.bat</span>
 </pre></div>
 </div>
 </div></div>
-<p>进入工作区的根目录: <a class="reference external" href="http://localhost:3000/#/home?msgid=9324">[待校准&#64;9324]</a></p>
+<p>进入工作区的根目录: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9324">[待校准&#64;9324]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-5-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-5-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-5-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-5-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-5-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-5-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-5-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-5-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd ~/dev_ws</span>
 </pre></div>
@@ -459,7 +459,7 @@ rosdep install -i --from-path src --rosdistro foxy -y
 </pre></div>
 </div>
 </div></div>
-<p>在根目录中，源文件覆盖: <a class="reference external" href="http://localhost:3000/#/home?msgid=9325">[待校准&#64;9325]</a></p>
+<p>在根目录中，源文件覆盖: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9325">[待校准&#64;9325]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-6-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-6-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-6-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-6-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-6-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-6-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-6-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-6-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">. install/local_setup.bash</span>
 </pre></div>
@@ -473,48 +473,48 @@ rosdep install -i --from-path src --rosdistro foxy -y
 </div></div>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
-<p>采购覆盖层的 <code class="docutils literal notranslate"><span class="pre">local_setup</span></code> 只会将覆盖层中可用的包添加到您的环境中。 <code class="docutils literal notranslate"><span class="pre">setup</span></code> 源文件的覆盖图及其创建的衬底，允许您利用两个工作区。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9326">[待校准&#64;9326]</a></p>
-<p>所以，采购主要ROS安装的 <code class="docutils literal notranslate"><span class="pre">setup</span></code> 然后 <code class="docutils literal notranslate"><span class="pre">dev_ws</span></code> 覆盖的 <code class="docutils literal notranslate"><span class="pre">local_setup</span></code> ，像你刚才相同只是采购 <code class="docutils literal notranslate"><span class="pre">dev_ws</span></code> 的 <code class="docutils literal notranslate"><span class="pre">setup</span></code> ，因为这包括它被创造出来的底层环境。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9327">[待校准&#64;9327]</a></p>
+<p>采购覆盖层的 <code class="docutils literal notranslate"><span class="pre">local_setup</span></code> 只会将覆盖层中可用的包添加到您的环境中。 <code class="docutils literal notranslate"><span class="pre">setup</span></code> 源文件的覆盖图及其创建的衬底，允许您利用两个工作区。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9326">[待校准&#64;9326]</a></p>
+<p>所以，采购主要ROS安装的 <code class="docutils literal notranslate"><span class="pre">setup</span></code> 然后 <code class="docutils literal notranslate"><span class="pre">dev_ws</span></code> 覆盖的 <code class="docutils literal notranslate"><span class="pre">local_setup</span></code> ，像你刚才相同只是采购 <code class="docutils literal notranslate"><span class="pre">dev_ws</span></code> 的 <code class="docutils literal notranslate"><span class="pre">setup</span></code> ，因为这包括它被创造出来的底层环境。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9327">[待校准&#64;9327]</a></p>
 </div>
-<p>现在，您可以从叠加层运行 <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> 包: <a class="reference external" href="http://localhost:3000/#/home?msgid=9328">[待校准&#64;9328]</a></p>
+<p>现在，您可以从叠加层运行 <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> 包: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9328">[待校准&#64;9328]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run turtlesim turtlesim_node</span>
 </pre></div>
 </div>
-<p>但是你怎么知道这是正在运行的覆盖turtlesim，而不是你的主安装的turtlesim？ <a class="reference external" href="http://localhost:3000/#/home?msgid=9329">[待校准&#64;9329]</a></p>
-<p>让我们在叠加层中修改turtlesim，以便您可以看到效果: <a class="reference external" href="http://localhost:3000/#/home?msgid=9330">[待校准&#64;9330]</a></p>
+<p>但是你怎么知道这是正在运行的覆盖turtlesim，而不是你的主安装的turtlesim？ <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9329">[待校准&#64;9329]</a></p>
+<p>让我们在叠加层中修改turtlesim，以便您可以看到效果: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9330">[待校准&#64;9330]</a></p>
 <ul class="simple">
-<li><p>您可以单独修改和重建覆盖层中的包。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9331">[待校准&#64;9331]</a></p></li>
-<li><p>覆盖层优先于衬底。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9332">[待校准&#64;9332]</a></p></li>
+<li><p>您可以单独修改和重建覆盖层中的包。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9331">[待校准&#64;9331]</a></p></li>
+<li><p>覆盖层优先于衬底。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9332">[待校准&#64;9332]</a></p></li>
 </ul>
 </div>
 <div class="section" id="modify-the-overlay">
-<h3>7修改覆盖 <a class="reference external" href="http://localhost:3000/#/home?msgid=9333">[待校准&#64;9333]</a><a class="headerlink" href="#modify-the-overlay" title="永久链接至标题"></a></h3>
-<p>您可以通过编辑turtlesim窗口上的标题栏来修改叠加层中的 <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> 。为此，请在 “~/dev_ws/src/ros_tutorials/turtlesim/src” 中找到 <code class="docutils literal notranslate"><span class="pre">turtle_frame.cpp</span></code> 文件。使用您喜欢的文本编辑器打开 <code class="docutils literal notranslate"><span class="pre">turtle_frame.cpp</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9334">[待校准&#64;9334]</a></p>
-<p>在第52行，您将看到函数 “setwindowtitle (  &quot;TurtleSim&quot; ); <a href="#id1"><span class="problematic" id="id2">``</span></a>. Change the value `` ” TurtleSim “ `` to `` ” MyTurtleSim “”，并保存文件。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9335">[待校准&#64;9335]</a></p>
-<p>回到你之前运行 <code class="docutils literal notranslate"><span class="pre">colcon</span> <span class="pre">build</span></code> 的第一个终端，然后再次运行它。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9336">[待校准&#64;9336]</a></p>
-<p>返回到第二个终端 (其中覆盖是源文件d)，然后再次运行turtlesim: <a class="reference external" href="http://localhost:3000/#/home?msgid=9337">[待校准&#64;9337]</a></p>
+<h3>7修改覆盖 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9333">[待校准&#64;9333]</a><a class="headerlink" href="#modify-the-overlay" title="永久链接至标题"></a></h3>
+<p>您可以通过编辑turtlesim窗口上的标题栏来修改叠加层中的 <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> 。为此，请在 “~/dev_ws/src/ros_tutorials/turtlesim/src” 中找到 <code class="docutils literal notranslate"><span class="pre">turtle_frame.cpp</span></code> 文件。使用您喜欢的文本编辑器打开 <code class="docutils literal notranslate"><span class="pre">turtle_frame.cpp</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9334">[待校准&#64;9334]</a></p>
+<p>在第52行，您将看到函数 “setwindowtitle (  &quot;TurtleSim&quot; ); <a href="#id1"><span class="problematic" id="id2">``</span></a>. Change the value `` ” TurtleSim “ `` to `` ” MyTurtleSim “”，并保存文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9335">[待校准&#64;9335]</a></p>
+<p>回到你之前运行 <code class="docutils literal notranslate"><span class="pre">colcon</span> <span class="pre">build</span></code> 的第一个终端，然后再次运行它。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9336">[待校准&#64;9336]</a></p>
+<p>返回到第二个终端 (其中覆盖是源文件d)，然后再次运行turtlesim: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9337">[待校准&#64;9337]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run turtlesim turtlesim_node</span>
 </pre></div>
 </div>
-<p>你会在turtlesim窗口上看到标题栏，上面写着 “MyTurtleSim”。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9338">[待校准&#64;9338]</a></p>
+<p>你会在turtlesim窗口上看到标题栏，上面写着 “MyTurtleSim”。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9338">[待校准&#64;9338]</a></p>
 <img alt="../../_images/overlay.png" src="../../_images/overlay.png" />
-<p>即使您的主ROS 2环境早些时候在此终端中是源文件，您的 <code class="docutils literal notranslate"><span class="pre">dev_ws</span></code> 环境的覆盖优先于衬底的内容。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9339">[待校准&#64;9339]</a></p>
-<p>要确保您的衬底仍然完好无损，请打开一个全新的终端，只为您的ROS 2安装提供源文件。再次运行turtlesim: <a class="reference external" href="http://localhost:3000/#/home?msgid=9340">[待校准&#64;9340]</a></p>
+<p>即使您的主ROS 2环境早些时候在此终端中是源文件，您的 <code class="docutils literal notranslate"><span class="pre">dev_ws</span></code> 环境的覆盖优先于衬底的内容。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9339">[待校准&#64;9339]</a></p>
+<p>要确保您的衬底仍然完好无损，请打开一个全新的终端，只为您的ROS 2安装提供源文件。再次运行turtlesim: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9340">[待校准&#64;9340]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run turtlesim turtlesim_node</span>
 </pre></div>
 </div>
 <img alt="../../_images/underlay.png" src="../../_images/underlay.png" />
-<p>您可以看到覆盖层中的修改实际上并没有影响衬底中的任何内容。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9341">[待校准&#64;9341]</a></p>
+<p>您可以看到覆盖层中的修改实际上并没有影响衬底中的任何内容。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9341">[待校准&#64;9341]</a></p>
 </div>
 </div>
 <div class="section" id="summary">
-<h2>总结 <a class="reference external" href="http://localhost:3000/#/home?msgid=6747">[待校准&#64;6747]</a><a class="headerlink" href="#summary" title="永久链接至标题"></a></h2>
-<p>在本教程中，您将主ROS 2发行版安装源文件作为参考底图，并通过在新工作区中克隆和构建包来创建覆盖图。覆盖物被放在路径的前面，并且优先于衬底，就像你用你的改良turtlesim看到的那样。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9342">[待校准&#64;9342]</a></p>
-<p>建议在处理少量包时使用覆盖，因此您不必将所有内容放在同一个工作区中，也不必在每次迭代时重建一个巨大的工作区。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9343">[待校准&#64;9343]</a></p>
+<h2>总结 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6747">[待校准&#64;6747]</a><a class="headerlink" href="#summary" title="永久链接至标题"></a></h2>
+<p>在本教程中，您将主ROS 2发行版安装源文件作为参考底图，并通过在新工作区中克隆和构建包来创建覆盖图。覆盖物被放在路径的前面，并且优先于衬底，就像你用你的改良turtlesim看到的那样。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9342">[待校准&#64;9342]</a></p>
+<p>建议在处理少量包时使用覆盖，因此您不必将所有内容放在同一个工作区中，也不必在每次迭代时重建一个巨大的工作区。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9343">[待校准&#64;9343]</a></p>
 </div>
 <div class="section" id="next-steps">
-<h2>下一步 <a class="reference external" href="http://localhost:3000/#/home?msgid=6749">[待校准&#64;6749]</a><a class="headerlink" href="#next-steps" title="永久链接至标题"></a></h2>
-<p>既然你已经了解了创建、构建和采购自己的工作区背后的细节，你就可以学习如何 <a class="reference internal" href="../Creating-Your-First-ROS2-Package.html"><span class="doc">create your own packages</span></a> 了。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9344">[待校准&#64;9344]</a></p>
+<h2>下一步 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6749">[待校准&#64;6749]</a><a class="headerlink" href="#next-steps" title="永久链接至标题"></a></h2>
+<p>既然你已经了解了创建、构建和采购自己的工作区背后的细节，你就可以学习如何 <a class="reference internal" href="../Creating-Your-First-ROS2-Package.html"><span class="doc">create your own packages</span></a> 了。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9344">[待校准&#64;9344]</a></p>
 </div>
 </div>
 

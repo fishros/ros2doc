@@ -280,9 +280,9 @@
 
 
   <div class="section" id="using-colcon-to-build-packages">
-<span id="colcon"></span><h1>使用colcon构建包 <a class="reference external" href="http://localhost:3000/#/home?msgid=6975">[待校准&#64;6975]</a><a class="headerlink" href="#using-colcon-to-build-packages" title="永久链接至标题"></a></h1>
+<span id="colcon"></span><h1>使用colcon构建包 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6975">[待校准&#64;6975]</a><a class="headerlink" href="#using-colcon-to-build-packages" title="永久链接至标题"></a></h1>
 <div class="contents local topic" id="table-of-contents">
-<p class="topic-title">目录 <a class="reference external" href="http://localhost:3000/#/home?msgid=6886">[待校准&#64;6886]</a></p>
+<p class="topic-title">目录 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6886">[待校准&#64;6886]</a></p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#background" id="id1">背景 [待校准&#64;6716]</a></p></li>
 <li><p><a class="reference internal" href="#prerequisites" id="id2">先决条件 [待校准&#64;6718]</a></p>
@@ -308,16 +308,16 @@
 <li><p><a class="reference internal" href="#tips" id="id16">提示 [待校准&#64;7030]</a></p></li>
 </ul>
 </div>
-<p>这是一个关于如何使用 <code class="docutils literal notranslate"><span class="pre">colcon</span></code> 创建和构建ROS 2工作区的简要教程。这是一个实用的教程，并非旨在取代核心文档。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6976">[待校准&#64;6976]</a></p>
+<p>这是一个关于如何使用 <code class="docutils literal notranslate"><span class="pre">colcon</span></code> 创建和构建ROS 2工作区的简要教程。这是一个实用的教程，并非旨在取代核心文档。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6976">[待校准&#64;6976]</a></p>
 <div class="section" id="background">
-<h2>背景 <a class="reference external" href="http://localhost:3000/#/home?msgid=6716">[待校准&#64;6716]</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
-<p>[需手动修复的语法]``colcon`` is an iteration on the ROS build tools <code class="docutils literal notranslate"><span class="pre">catkin_make</span></code>, <code class="docutils literal notranslate"><span class="pre">catkin_make_isolated</span></code>, <code class="docutils literal notranslate"><span class="pre">catkin_tools</span></code> and <code class="docutils literal notranslate"><span class="pre">ament_tools</span></code>.信息设计colcon看到 <a class="reference external" href="https://design.ros2.org/articles/build_tool.html">this document</a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6977">[待校准&#64;6977]</a></p>
-<p>源文件可以在 <a class="reference external" href="https://github.com/colcon">colcon GitHub organization</a> 中找到。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6978">[待校准&#64;6978]</a></p>
+<h2>背景 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6716">[待校准&#64;6716]</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
+<p>[需手动修复的语法]``colcon`` is an iteration on the ROS build tools <code class="docutils literal notranslate"><span class="pre">catkin_make</span></code>, <code class="docutils literal notranslate"><span class="pre">catkin_make_isolated</span></code>, <code class="docutils literal notranslate"><span class="pre">catkin_tools</span></code> and <code class="docutils literal notranslate"><span class="pre">ament_tools</span></code>.信息设计colcon看到 <a class="reference external" href="https://design.ros2.org/articles/build_tool.html">this document</a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6977">[待校准&#64;6977]</a></p>
+<p>源文件可以在 <a class="reference external" href="https://github.com/colcon">colcon GitHub organization</a> 中找到。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6978">[待校准&#64;6978]</a></p>
 </div>
 <div class="section" id="prerequisites">
-<h2>先决条件 <a class="reference external" href="http://localhost:3000/#/home?msgid=6718">[待校准&#64;6718]</a><a class="headerlink" href="#prerequisites" title="永久链接至标题"></a></h2>
+<h2>先决条件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6718">[待校准&#64;6718]</a><a class="headerlink" href="#prerequisites" title="永久链接至标题"></a></h2>
 <div class="section" id="install-colcon">
-<h3>安装colcon <a class="reference external" href="http://localhost:3000/#/home?msgid=6979">[待校准&#64;6979]</a><a class="headerlink" href="#install-colcon" title="永久链接至标题"></a></h3>
+<h3>安装colcon <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6979">[待校准&#64;6979]</a><a class="headerlink" href="#install-colcon" title="永久链接至标题"></a></h3>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-0-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-0-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-0-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-0-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-0-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt install python3-colcon-common-extensions
 </pre></div>
@@ -331,31 +331,31 @@
 </div></div>
 </div>
 <div class="section" id="install-ros-2">
-<h3>安装ROS 2 <a class="reference external" href="http://localhost:3000/#/home?msgid=6980">[待校准&#64;6980]</a><a class="headerlink" href="#install-ros-2" title="永久链接至标题"></a></h3>
-<p>要构建示例，您需要安装ROS 2。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6981">[待校准&#64;6981]</a></p>
-<p>跟随 <a class="reference internal" href="../Installation.html"><span class="doc">installation instructions</span></a>.  <a class="reference external" href="http://localhost:3000/#/home?msgid=6982">[待校准&#64;6982]</a></p>
+<h3>安装ROS 2 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6980">[待校准&#64;6980]</a><a class="headerlink" href="#install-ros-2" title="永久链接至标题"></a></h3>
+<p>要构建示例，您需要安装ROS 2。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6981">[待校准&#64;6981]</a></p>
+<p>跟随 <a class="reference internal" href="../Installation.html"><span class="doc">installation instructions</span></a>.  <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6982">[待校准&#64;6982]</a></p>
 <div class="admonition attention">
 <p class="admonition-title">注意</p>
-<p>如果从Debian包安装，本教程需要 <a class="reference internal" href="../Installation/Ubuntu-Install-Debians.html#linux-install-debians-install-ros-2-packages"><span class="std std-ref">desktop installation</span></a>.  <a class="reference external" href="http://localhost:3000/#/home?msgid=6983">[待校准&#64;6983]</a></p>
+<p>如果从Debian包安装，本教程需要 <a class="reference internal" href="../Installation/Ubuntu-Install-Debians.html#linux-install-debians-install-ros-2-packages"><span class="std std-ref">desktop installation</span></a>.  <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6983">[待校准&#64;6983]</a></p>
 </div>
 </div>
 </div>
 <div class="section" id="basics">
-<h2>基础知识 <a class="reference external" href="http://localhost:3000/#/home?msgid=6984">[待校准&#64;6984]</a><a class="headerlink" href="#basics" title="永久链接至标题"></a></h2>
-<p>ROS工作区是具有特定结构的目录。通常有一个 <code class="docutils literal notranslate"><span class="pre">src</span></code> 子目录。在该子目录中是ROS包的源文件的位置。典型调用y，否则目录开始为空。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6985">[待校准&#64;6985]</a></p>
-<p>colcon不使用源文件。默认情况下，它将创建以下目录作为 <code class="docutils literal notranslate"><span class="pre">src</span></code> 目录的对等方: <a class="reference external" href="http://localhost:3000/#/home?msgid=6986">[待校准&#64;6986]</a></p>
+<h2>基础知识 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6984">[待校准&#64;6984]</a><a class="headerlink" href="#basics" title="永久链接至标题"></a></h2>
+<p>ROS工作区是具有特定结构的目录。通常有一个 <code class="docutils literal notranslate"><span class="pre">src</span></code> 子目录。在该子目录中是ROS包的源文件的位置。典型调用y，否则目录开始为空。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6985">[待校准&#64;6985]</a></p>
+<p>colcon不使用源文件。默认情况下，它将创建以下目录作为 <code class="docutils literal notranslate"><span class="pre">src</span></code> 目录的对等方: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6986">[待校准&#64;6986]</a></p>
 <ul class="simple">
-<li><p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">build</span></code> 目录将是中间文件的存储位置。对于每个包，将创建一个子文件夹，在其中调用例如CMake。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6987">[待校准&#64;6987]</a></p></li>
-<li><p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">install</span></code> 目录是每个软件包将安装到的位置。默认情况下，每个包都将安装到单独的子目录中。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6988">[待校准&#64;6988]</a></p></li>
-<li><p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">log</span></code> 目录包含有关每个colcon调用的各种日志信息。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6989">[待校准&#64;6989]</a></p></li>
+<li><p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">build</span></code> 目录将是中间文件的存储位置。对于每个包，将创建一个子文件夹，在其中调用例如CMake。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6987">[待校准&#64;6987]</a></p></li>
+<li><p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">install</span></code> 目录是每个软件包将安装到的位置。默认情况下，每个包都将安装到单独的子目录中。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6988">[待校准&#64;6988]</a></p></li>
+<li><p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">log</span></code> 目录包含有关每个colcon调用的各种日志信息。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6989">[待校准&#64;6989]</a></p></li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
-<p>与catkin相比，没有 <code class="docutils literal notranslate"><span class="pre">devel</span></code> 目录。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6990">[待校准&#64;6990]</a></p>
+<p>与catkin相比，没有 <code class="docutils literal notranslate"><span class="pre">devel</span></code> 目录。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6990">[待校准&#64;6990]</a></p>
 </div>
 <div class="section" id="create-a-workspace">
-<h3>创建工作空间 <a class="reference external" href="http://localhost:3000/#/home?msgid=6991">[待校准&#64;6991]</a><a class="headerlink" href="#create-a-workspace" title="永久链接至标题"></a></h3>
-<p>首先，创建一个目录 ( <code class="docutils literal notranslate"><span class="pre">ros2_example_ws</span></code> ) 来包含我们的工作区: <a class="reference external" href="http://localhost:3000/#/home?msgid=6992">[待校准&#64;6992]</a></p>
+<h3>创建工作空间 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6991">[待校准&#64;6991]</a><a class="headerlink" href="#create-a-workspace" title="永久链接至标题"></a></h3>
+<p>首先，创建一个目录 ( <code class="docutils literal notranslate"><span class="pre">ros2_example_ws</span></code> ) 来包含我们的工作区: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6992">[待校准&#64;6992]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-1-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-1-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-1-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-1-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-1-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-1-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir -p ~/ros2_example_ws/src
 <span class="nb">cd</span> ~/ros2_example_ws
@@ -370,7 +370,7 @@
 </pre></div>
 </div>
 </div></div>
-<p>此时，工作区包含一个空目录 <code class="docutils literal notranslate"><span class="pre">src</span></code> : <a class="reference external" href="http://localhost:3000/#/home?msgid=6993">[待校准&#64;6993]</a></p>
+<p>此时，工作区包含一个空目录 <code class="docutils literal notranslate"><span class="pre">src</span></code> : <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6993">[待校准&#64;6993]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>.
 └── src
 
@@ -379,12 +379,12 @@
 </div>
 </div>
 <div class="section" id="add-some-sources">
-<h3>添加一些源文件 <a class="reference external" href="http://localhost:3000/#/home?msgid=6994">[待校准&#64;6994]</a><a class="headerlink" href="#add-some-sources" title="永久链接至标题"></a></h3>
-<p>让我们将 <a class="reference external" href="https://github.com/ros2/examples">examples</a> 仓库克隆到工作区的 <code class="docutils literal notranslate"><span class="pre">src</span></code> 目录中: <a class="reference external" href="http://localhost:3000/#/home?msgid=6995">[待校准&#64;6995]</a></p>
+<h3>添加一些源文件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6994">[待校准&#64;6994]</a><a class="headerlink" href="#add-some-sources" title="永久链接至标题"></a></h3>
+<p>让我们将 <a class="reference external" href="https://github.com/ros2/examples">examples</a> 仓库克隆到工作区的 <code class="docutils literal notranslate"><span class="pre">src</span></code> 目录中: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6995">[待校准&#64;6995]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/ros2/examples src/examples -b foxy
 </pre></div>
 </div>
-<p>现在工作区应该源文件代码ROS 2例子: <a class="reference external" href="http://localhost:3000/#/home?msgid=6996">[待校准&#64;6996]</a></p>
+<p>现在工作区应该源文件代码ROS 2例子: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6996">[待校准&#64;6996]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>.
 └── src
     └── examples
@@ -399,17 +399,17 @@
 </div>
 </div>
 <div class="section" id="source-an-underlay">
-<h3>采购衬底 <a class="reference external" href="http://localhost:3000/#/home?msgid=6997">[待校准&#64;6997]</a><a class="headerlink" href="#source-an-underlay" title="永久链接至标题"></a></h3>
-<p>重要的是，我们拥有现有ROS 2安装的源文件环境，这将为我们的工作区提供示例包的必要构建依赖项。这是通过采购二进制安装或源文件安装提供的安装脚本来实现的。另一个colcon工作区 (见 <a class="reference internal" href="../Installation.html"><span class="doc">Installation</span></a>) 。我们调用环境参考底图。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6998">[待校准&#64;6998]</a></p>
-<p>我们的工作区 <code class="docutils literal notranslate"><span class="pre">ros2_examples_ws</span></code> 将覆盖现有ROS 2安装。一般来说，当您计划迭代少量包时，建议使用覆盖，而不是将所有包放入同一个工作区。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6999">[待校准&#64;6999]</a></p>
+<h3>采购衬底 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6997">[待校准&#64;6997]</a><a class="headerlink" href="#source-an-underlay" title="永久链接至标题"></a></h3>
+<p>重要的是，我们拥有现有ROS 2安装的源文件环境，这将为我们的工作区提供示例包的必要构建依赖项。这是通过采购二进制安装或源文件安装提供的安装脚本来实现的。另一个colcon工作区 (见 <a class="reference internal" href="../Installation.html"><span class="doc">Installation</span></a>) 。我们调用环境参考底图。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6998">[待校准&#64;6998]</a></p>
+<p>我们的工作区 <code class="docutils literal notranslate"><span class="pre">ros2_examples_ws</span></code> 将覆盖现有ROS 2安装。一般来说，当您计划迭代少量包时，建议使用覆盖，而不是将所有包放入同一个工作区。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6999">[待校准&#64;6999]</a></p>
 </div>
 <div class="section" id="build-the-workspace">
-<h3>构建工作空间 <a class="reference external" href="http://localhost:3000/#/home?msgid=7000">[待校准&#64;7000]</a><a class="headerlink" href="#build-the-workspace" title="永久链接至标题"></a></h3>
+<h3>构建工作空间 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7000">[待校准&#64;7000]</a><a class="headerlink" href="#build-the-workspace" title="永久链接至标题"></a></h3>
 <div class="admonition attention">
 <p class="admonition-title">注意</p>
-<p>构建包Windows你需要在Visual Studio环境，看到 <a class="reference internal" href="../Installation/Windows-Development-Setup.html#windows-dev-build-ros2"><span class="std std-ref">Building the ROS 2 Code</span></a>  详情。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7001">[待校准&#64;7001]</a></p>
+<p>构建包Windows你需要在Visual Studio环境，看到 <a class="reference internal" href="../Installation/Windows-Development-Setup.html#windows-dev-build-ros2"><span class="std std-ref">Building the ROS 2 Code</span></a>  详情。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7001">[待校准&#64;7001]</a></p>
 </div>
-<p>在工作区的根目录下，运行 <code class="docutils literal notranslate"><span class="pre">colcon</span> <span class="pre">build</span></code> 。由于建造类型如 <code class="docutils literal notranslate"><span class="pre">ament_cmake</span></code> 不支持 <code class="docutils literal notranslate"><span class="pre">devel</span></code> 空间的概念，需要安装软件包，colcon支持 <code class="docutils literal notranslate"><span class="pre">--symlink-install</span></code> 选项。这使得安装文件通过改变文件 <code class="docutils literal notranslate"><span class="pre">source</span></code> 空间 (例如Python文件或其他不编译重新源文件d) 更快的迭代。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7002">[待校准&#64;7002]</a></p>
+<p>在工作区的根目录下，运行 <code class="docutils literal notranslate"><span class="pre">colcon</span> <span class="pre">build</span></code> 。由于建造类型如 <code class="docutils literal notranslate"><span class="pre">ament_cmake</span></code> 不支持 <code class="docutils literal notranslate"><span class="pre">devel</span></code> 空间的概念，需要安装软件包，colcon支持 <code class="docutils literal notranslate"><span class="pre">--symlink-install</span></code> 选项。这使得安装文件通过改变文件 <code class="docutils literal notranslate"><span class="pre">source</span></code> 空间 (例如Python文件或其他不编译重新源文件d) 更快的迭代。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7002">[待校准&#64;7002]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-2-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-2-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-2-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-2-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-2-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-2-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-2-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-2-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">colcon build --symlink-install</span>
 </pre></div>
@@ -420,9 +420,9 @@
 </div><div aria-labelledby="tab-2-V2luZG93cw==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-2-V2luZG93cw==" name="V2luZG93cw==" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">colcon build --symlink-install --merge-install</span>
 </pre></div>
 </div>
-<p>Windows不允许长路径，因此 <code class="docutils literal notranslate"><span class="pre">merge-install</span></code> 会将所有路径合并到 <code class="docutils literal notranslate"><span class="pre">install</span></code> 目录中。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7003">[待校准&#64;7003]</a></p>
+<p>Windows不允许长路径，因此 <code class="docutils literal notranslate"><span class="pre">merge-install</span></code> 会将所有路径合并到 <code class="docutils literal notranslate"><span class="pre">install</span></code> 目录中。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7003">[待校准&#64;7003]</a></p>
 </div></div>
-<p>构建完成后，我们应该会看到 <code class="docutils literal notranslate"><span class="pre">build</span></code> 、 <code class="docutils literal notranslate"><span class="pre">install</span></code> 和 <code class="docutils literal notranslate"><span class="pre">log</span></code> 目录: <a class="reference external" href="http://localhost:3000/#/home?msgid=7004">[待校准&#64;7004]</a></p>
+<p>构建完成后，我们应该会看到 <code class="docutils literal notranslate"><span class="pre">build</span></code> 、 <code class="docutils literal notranslate"><span class="pre">install</span></code> 和 <code class="docutils literal notranslate"><span class="pre">log</span></code> 目录: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7004">[待校准&#64;7004]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>.
 ├── build
 ├── install
@@ -434,8 +434,8 @@
 </div>
 </div>
 <div class="section" id="run-tests">
-<span id="colcon-run-the-tests"></span><h3>运行测试 <a class="reference external" href="http://localhost:3000/#/home?msgid=7005">[待校准&#64;7005]</a><a class="headerlink" href="#run-tests" title="永久链接至标题"></a></h3>
-<p>要对我们刚刚构建的包运行测试，请运行以下命令: <a class="reference external" href="http://localhost:3000/#/home?msgid=7006">[待校准&#64;7006]</a></p>
+<span id="colcon-run-the-tests"></span><h3>运行测试 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7005">[待校准&#64;7005]</a><a class="headerlink" href="#run-tests" title="永久链接至标题"></a></h3>
+<p>要对我们刚刚构建的包运行测试，请运行以下命令: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7006">[待校准&#64;7006]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-3-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-3-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-3-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-3-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-3-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-3-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-3-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-3-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">colcon test</span>
 </pre></div>
@@ -443,16 +443,16 @@
 </div><div aria-labelledby="tab-3-bWFjT1M=" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-3-bWFjT1M=" name="bWFjT1M=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">colcon test</span>
 </pre></div>
 </div>
-</div><div aria-labelledby="tab-3-V2luZG93cw==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-3-V2luZG93cw==" name="V2luZG93cw==" role="tabpanel" tabindex="0"><p>请记住使用 <code class="docutils literal notranslate"><span class="pre">x64</span> <span class="pre">Native</span> <span class="pre">Tools</span> <span class="pre">Command</span> <span class="pre">Prompt</span> <span class="pre">for</span> <span class="pre">VS</span> <span class="pre">2019</span></code> 执行以下命令，因为我们将构建工作区。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7007">[待校准&#64;7007]</a></p>
+</div><div aria-labelledby="tab-3-V2luZG93cw==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-3-V2luZG93cw==" name="V2luZG93cw==" role="tabpanel" tabindex="0"><p>请记住使用 <code class="docutils literal notranslate"><span class="pre">x64</span> <span class="pre">Native</span> <span class="pre">Tools</span> <span class="pre">Command</span> <span class="pre">Prompt</span> <span class="pre">for</span> <span class="pre">VS</span> <span class="pre">2019</span></code> 执行以下命令，因为我们将构建工作区。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7007">[待校准&#64;7007]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">colcon test --merge-install</span>
 </pre></div>
 </div>
-<p>你还需要在这里指定 <code class="docutils literal notranslate"><span class="pre">--merge-install</span></code> ，因为我们在上面使用它。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7008">[待校准&#64;7008]</a></p>
+<p>你还需要在这里指定 <code class="docutils literal notranslate"><span class="pre">--merge-install</span></code> ，因为我们在上面使用它。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7008">[待校准&#64;7008]</a></p>
 </div></div>
 </div>
 <div class="section" id="source-the-environment">
-<h3>来源环境 <a class="reference external" href="http://localhost:3000/#/home?msgid=7009">[待校准&#64;7009]</a><a class="headerlink" href="#source-the-environment" title="永久链接至标题"></a></h3>
-<p>当colcon成功完成构建后，输出将在 <code class="docutils literal notranslate"><span class="pre">install</span></code> 目录中。在使用任何已安装的可执行文件或库之前，需要将它们添加到路径和库路径中。colcon将在 <code class="docutils literal notranslate"><span class="pre">install</span></code> 目录中生成bash/bat文件，以帮助设置环境。这些文件将向您的路径和库路径添加所有必需的元素，并提供包导出的任何bash或shell命令。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7010">[待校准&#64;7010]</a></p>
+<h3>来源环境 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7009">[待校准&#64;7009]</a><a class="headerlink" href="#source-the-environment" title="永久链接至标题"></a></h3>
+<p>当colcon成功完成构建后，输出将在 <code class="docutils literal notranslate"><span class="pre">install</span></code> 目录中。在使用任何已安装的可执行文件或库之前，需要将它们添加到路径和库路径中。colcon将在 <code class="docutils literal notranslate"><span class="pre">install</span></code> 目录中生成bash/bat文件，以帮助设置环境。这些文件将向您的路径和库路径添加所有必需的元素，并提供包导出的任何bash或shell命令。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7010">[待校准&#64;7010]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-4-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-4-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-4-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-4-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-4-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-4-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-4-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-4-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>. install/setup.bash
 </pre></div>
@@ -463,40 +463,40 @@
 </div><div aria-labelledby="tab-4-V2luZG93cw==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-4-V2luZG93cw==" name="V2luZG93cw==" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>call install<span class="se">\s</span>etup.bat
 </pre></div>
 </div>
-<p>或者使用Powershell: <a class="reference external" href="http://localhost:3000/#/home?msgid=7011">[待校准&#64;7011]</a></p>
+<p>或者使用Powershell: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7011">[待校准&#64;7011]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>install<span class="se">\s</span>etup.ps1
 </pre></div>
 </div>
 </div></div>
 </div>
 <div class="section" id="try-a-demo">
-<h3>尝试一个例程 <a class="reference external" href="http://localhost:3000/#/home?msgid=7012">[待校准&#64;7012]</a><a class="headerlink" href="#try-a-demo" title="永久链接至标题"></a></h3>
-<p>使用环境源文件d，我们可以运行colcon构建的可执行文件。让我们从示例中运行一个订阅服务器节点: <a class="reference external" href="http://localhost:3000/#/home?msgid=7013">[待校准&#64;7013]</a></p>
+<h3>尝试一个例程 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7012">[待校准&#64;7012]</a><a class="headerlink" href="#try-a-demo" title="永久链接至标题"></a></h3>
+<p>使用环境源文件d，我们可以运行colcon构建的可执行文件。让我们从示例中运行一个订阅服务器节点: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7013">[待校准&#64;7013]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 run examples_rclcpp_minimal_subscriber subscriber_member_function
 </pre></div>
 </div>
-<p>在另一个终端中，让我们运行一个发布程序节点 (不要忘记为安装脚本提供源文件): <a class="reference external" href="http://localhost:3000/#/home?msgid=7014">[待校准&#64;7014]</a></p>
+<p>在另一个终端中，让我们运行一个发布程序节点 (不要忘记为安装脚本提供源文件): <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7014">[待校准&#64;7014]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 run examples_rclcpp_minimal_publisher publisher_member_function
 </pre></div>
 </div>
-<p>您应该会看到来自发布者和订阅者的消息，其中数字递增。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7015">[待校准&#64;7015]</a></p>
+<p>您应该会看到来自发布者和订阅者的消息，其中数字递增。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7015">[待校准&#64;7015]</a></p>
 </div>
 </div>
 <div class="section" id="create-your-own-package">
-<h2>创建您自己的包 <a class="reference external" href="http://localhost:3000/#/home?msgid=7016">[待校准&#64;7016]</a><a class="headerlink" href="#create-your-own-package" title="永久链接至标题"></a></h2>
-<p>colcon使用 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 规范定义在 <a class="reference external" href="https://www.ros.org/reps/rep-0149.html">REP 149</a> (<a class="reference external" href="https://www.ros.org/reps/rep-0140.html">format 2</a> 也被支持)。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7017">[待校准&#64;7017]</a></p>
-<p>colcon支持多种构建类型。推荐的建造类型是 <code class="docutils literal notranslate"><span class="pre">ament_cmake</span></code> 和 <code class="docutils literal notranslate"><span class="pre">ament_python</span></code> 。还支持纯 <code class="docutils literal notranslate"><span class="pre">cmake</span></code> 包。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7018">[待校准&#64;7018]</a></p>
-<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">ament_python</span></code> 建筑的一个例子是 <a class="reference external" href="https://github.com/ament/ament_index/tree/foxy/ament_index_python">ament_index_python package</a> ，其中setup.py是建筑的主要入口。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7019">[待校准&#64;7019]</a></p>
-<p>像 <a class="reference external" href="https://github.com/ros2/demos/tree/foxy/demo_nodes_cpp">demo_nodes_cpp</a> 这样的包使用 <code class="docutils literal notranslate"><span class="pre">ament_cmake</span></code> 构建类型，并使用CMake作为构建工具。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7020">[待校准&#64;7020]</a></p>
-<p>为方便起见，您可以使用工具 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">pkg</span> <span class="pre">create</span></code> 基于模板创建新的包。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7021">[待校准&#64;7021]</a></p>
+<h2>创建您自己的包 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7016">[待校准&#64;7016]</a><a class="headerlink" href="#create-your-own-package" title="永久链接至标题"></a></h2>
+<p>colcon使用 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 规范定义在 <a class="reference external" href="https://www.ros.org/reps/rep-0149.html">REP 149</a> (<a class="reference external" href="https://www.ros.org/reps/rep-0140.html">format 2</a> 也被支持)。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7017">[待校准&#64;7017]</a></p>
+<p>colcon支持多种构建类型。推荐的建造类型是 <code class="docutils literal notranslate"><span class="pre">ament_cmake</span></code> 和 <code class="docutils literal notranslate"><span class="pre">ament_python</span></code> 。还支持纯 <code class="docutils literal notranslate"><span class="pre">cmake</span></code> 包。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7018">[待校准&#64;7018]</a></p>
+<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">ament_python</span></code> 建筑的一个例子是 <a class="reference external" href="https://github.com/ament/ament_index/tree/foxy/ament_index_python">ament_index_python package</a> ，其中setup.py是建筑的主要入口。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7019">[待校准&#64;7019]</a></p>
+<p>像 <a class="reference external" href="https://github.com/ros2/demos/tree/foxy/demo_nodes_cpp">demo_nodes_cpp</a> 这样的包使用 <code class="docutils literal notranslate"><span class="pre">ament_cmake</span></code> 构建类型，并使用CMake作为构建工具。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7020">[待校准&#64;7020]</a></p>
+<p>为方便起见，您可以使用工具 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">pkg</span> <span class="pre">create</span></code> 基于模板创建新的包。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7021">[待校准&#64;7021]</a></p>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
-<p>对于 <code class="docutils literal notranslate"><span class="pre">catkin</span></code> 使用者，这相当于 <code class="docutils literal notranslate"><span class="pre">catkin_create_package</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7022">[待校准&#64;7022]</a></p>
+<p>对于 <code class="docutils literal notranslate"><span class="pre">catkin</span></code> 使用者，这相当于 <code class="docutils literal notranslate"><span class="pre">catkin_create_package</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7022">[待校准&#64;7022]</a></p>
 </div>
 </div>
 <div class="section" id="setup-colcon-cd">
-<h2>设置 <code class="docutils literal notranslate"><span class="pre">colcon_cd</span></code>  <a class="reference external" href="http://localhost:3000/#/home?msgid=7023">[待校准&#64;7023]</a><a class="headerlink" href="#setup-colcon-cd" title="永久链接至标题"></a></h2>
-<p>通过命令 <code class="docutils literal notranslate"><span class="pre">colcon_cd</span></code> ，您可以快速将shell的当前工作目录更改为包的目录。例如， <code class="docutils literal notranslate"><span class="pre">colcon_cd</span> <span class="pre">some_ros_package</span></code> 会很快将您带到目录 “~/ros2_install/src/some _ ros_package”。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7024">[待校准&#64;7024]</a></p>
+<h2>设置 <code class="docutils literal notranslate"><span class="pre">colcon_cd</span></code>  <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7023">[待校准&#64;7023]</a><a class="headerlink" href="#setup-colcon-cd" title="永久链接至标题"></a></h2>
+<p>通过命令 <code class="docutils literal notranslate"><span class="pre">colcon_cd</span></code> ，您可以快速将shell的当前工作目录更改为包的目录。例如， <code class="docutils literal notranslate"><span class="pre">colcon_cd</span> <span class="pre">some_ros_package</span></code> 会很快将您带到目录 “~/ros2_install/src/some _ ros_package”。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7024">[待校准&#64;7024]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-5-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-5-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-5-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-5-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-5-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-5-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-5-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-5-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">echo &quot;source /usr/share/colcon_cd/function/colcon_cd.sh&quot; &gt;&gt; ~/.bashrc</span>
 <span class="go">echo &quot;export _colcon_cd_root=/opt/ros/foxy/&quot; &gt;&gt; ~/.bashrc</span>
@@ -506,13 +506,13 @@
 <span class="go">echo &quot;export _colcon_cd_root=~/ros2_install&quot; &gt;&gt; ~/.bashrc</span>
 </pre></div>
 </div>
-</div><div aria-labelledby="tab-5-V2luZG93cw==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-5-V2luZG93cw==" name="V2luZG93cw==" role="tabpanel" tabindex="0"><p>尚不可用 <a class="reference external" href="http://localhost:3000/#/home?msgid=7025">[待校准&#64;7025]</a></p>
+</div><div aria-labelledby="tab-5-V2luZG93cw==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-5-V2luZG93cw==" name="V2luZG93cw==" role="tabpanel" tabindex="0"><p>尚不可用 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7025">[待校准&#64;7025]</a></p>
 </div></div>
-<p>根据您安装 <code class="docutils literal notranslate"><span class="pre">colcon_cd</span></code> 的方式和工作区的位置，上述说明可能会有所不同，详情请参考 <a class="reference external" href="https://colcon.readthedocs.io/en/released/user/installation.html#quick-directory-changes">the documentation</a> 。要在Linux和macOS中撤消此操作，请找到系统的shell启动脚本，并删除附加的源文件和导出命令。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7026">[待校准&#64;7026]</a></p>
+<p>根据您安装 <code class="docutils literal notranslate"><span class="pre">colcon_cd</span></code> 的方式和工作区的位置，上述说明可能会有所不同，详情请参考 <a class="reference external" href="https://colcon.readthedocs.io/en/released/user/installation.html#quick-directory-changes">the documentation</a> 。要在Linux和macOS中撤消此操作，请找到系统的shell启动脚本，并删除附加的源文件和导出命令。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7026">[待校准&#64;7026]</a></p>
 </div>
 <div class="section" id="setup-colcon-tab-completion">
-<h2>设置 <code class="docutils literal notranslate"><span class="pre">colcon</span></code> 标签完成 <a class="reference external" href="http://localhost:3000/#/home?msgid=7027">[待校准&#64;7027]</a><a class="headerlink" href="#setup-colcon-tab-completion" title="永久链接至标题"></a></h2>
-<p>命令 <code class="docutils literal notranslate"><span class="pre">colcon</span></code>  <a class="reference external" href="https://colcon.readthedocs.io/en/released/user/installation.html#enable-completion">supports command completion</a> bash和bash类似贝壳如果 <code class="docutils literal notranslate"><span class="pre">colcon-argcomplete</span></code> 包安装。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7028">[待校准&#64;7028]</a></p>
+<h2>设置 <code class="docutils literal notranslate"><span class="pre">colcon</span></code> 标签完成 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7027">[待校准&#64;7027]</a><a class="headerlink" href="#setup-colcon-tab-completion" title="永久链接至标题"></a></h2>
+<p>命令 <code class="docutils literal notranslate"><span class="pre">colcon</span></code>  <a class="reference external" href="https://colcon.readthedocs.io/en/released/user/installation.html#enable-completion">supports command completion</a> bash和bash类似贝壳如果 <code class="docutils literal notranslate"><span class="pre">colcon-argcomplete</span></code> 包安装。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7028">[待校准&#64;7028]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-6-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-6-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-6-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-6-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-6-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-6-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-6-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-6-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">echo &quot;source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash&quot; &gt;&gt; ~/.bashrc</span>
 </pre></div>
@@ -520,16 +520,16 @@
 </div><div aria-labelledby="tab-6-bWFjT1M=" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-6-bWFjT1M=" name="bWFjT1M=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">echo &quot;source $HOME/.local/share/colcon_argcomplete/hook/colcon-argcomplete.bash&quot; &gt;&gt; ~/.bash_profile</span>
 </pre></div>
 </div>
-</div><div aria-labelledby="tab-6-V2luZG93cw==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-6-V2luZG93cw==" name="V2luZG93cw==" role="tabpanel" tabindex="0"><p>尚不可用 <a class="reference external" href="http://localhost:3000/#/home?msgid=7025">[待校准&#64;7025]</a></p>
+</div><div aria-labelledby="tab-6-V2luZG93cw==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-6-V2luZG93cw==" name="V2luZG93cw==" role="tabpanel" tabindex="0"><p>尚不可用 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7025">[待校准&#64;7025]</a></p>
 </div></div>
-<p>根据您安装 <code class="docutils literal notranslate"><span class="pre">colcon</span></code> 的方式和工作区的位置，上述说明可能会有所不同，详情请参考 <a class="reference external" href="https://colcon.readthedocs.io/en/released/user/installation.html">the documentation</a> 。要在Linux和macOS中撤消此操作，请找到系统的shell启动脚本并删除附加的源文件命令。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7029">[待校准&#64;7029]</a></p>
+<p>根据您安装 <code class="docutils literal notranslate"><span class="pre">colcon</span></code> 的方式和工作区的位置，上述说明可能会有所不同，详情请参考 <a class="reference external" href="https://colcon.readthedocs.io/en/released/user/installation.html">the documentation</a> 。要在Linux和macOS中撤消此操作，请找到系统的shell启动脚本并删除附加的源文件命令。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7029">[待校准&#64;7029]</a></p>
 </div>
 <div class="section" id="tips">
-<h2>提示 <a class="reference external" href="http://localhost:3000/#/home?msgid=7030">[待校准&#64;7030]</a><a class="headerlink" href="#tips" title="永久链接至标题"></a></h2>
+<h2>提示 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7030">[待校准&#64;7030]</a><a class="headerlink" href="#tips" title="永久链接至标题"></a></h2>
 <ul>
-<li><p>如果您不想构建特定的包，请在目录中放置一个名为 <code class="docutils literal notranslate"><span class="pre">COLCON_IGNORE</span></code> 的空文件，它将不会被索引。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7031">[待校准&#64;7031]</a></p></li>
-<li><p>如果你想避免在CMake包中配置和构建测试，你可以通过:  <code class="docutils literal notranslate"><span class="pre">--cmake-args</span> <span class="pre">-DBUILD_TESTING=0</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7032">[待校准&#64;7032]</a></p></li>
-<li><p>如果要从包中运行单个特定测试: <a class="reference external" href="http://localhost:3000/#/home?msgid=7033">[待校准&#64;7033]</a></p>
+<li><p>如果您不想构建特定的包，请在目录中放置一个名为 <code class="docutils literal notranslate"><span class="pre">COLCON_IGNORE</span></code> 的空文件，它将不会被索引。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7031">[待校准&#64;7031]</a></p></li>
+<li><p>如果你想避免在CMake包中配置和构建测试，你可以通过:  <code class="docutils literal notranslate"><span class="pre">--cmake-args</span> <span class="pre">-DBUILD_TESTING=0</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7032">[待校准&#64;7032]</a></p></li>
+<li><p>如果要从包中运行单个特定测试: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7033">[待校准&#64;7033]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>colcon <span class="nb">test</span> --packages-select YOUR_PKG_NAME --ctest-args -R YOUR_TEST_IN_PKG
 </pre></div>
 </div>

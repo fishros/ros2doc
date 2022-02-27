@@ -279,61 +279,61 @@
 
 
   <div class="section" id="building-realtime-linux-for-ros-2-community-contributed">
-<h1>为ROS 2构建实时Linux [社区-贡献] <a class="reference external" href="http://localhost:3000/#/home?msgid=6954">[待校准&#64;6954]</a><a class="headerlink" href="#building-realtime-linux-for-ros-2-community-contributed" title="永久链接至标题"></a></h1>
-<p>本教程从在Intelx86_64上全新安装Ubuntu 20.04.1开始。实际内核为5.4.0-54-通用，但我们将安装最新的稳定RT_PREEMPT版本。要构建内核，您需要至少30GB的可用磁盘空间。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6955">[待校准&#64;6955]</a></p>
-<p>检查https://wiki.linuxfoundation.org/realtime/start最新稳定版本，在编写本是 “最新稳定版本5.4 rt ”。如果我们点击 <a class="reference external" href="http://cdn.kernel.org/pub/linux/kernel/projects/rt/5.4/">link</a> ，我们会得到准确的版本。目前是patch-5.4.78-rt44.patch.gz。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6956">[待校准&#64;6956]</a></p>
-<a class="reference external image-reference" href="https://i.imgur.com/hu4Q04b.png"><img alt="eclipse-1 `[待校准&#64;6957] &lt;http://localhost:3000/#/home?msgid=6957&gt;`_ " src="https://i.imgur.com/hu4Q04b.png" /></a>
-<p>我们在主目录中创建一个目录 <a class="reference external" href="http://localhost:3000/#/home?msgid=6958">[待校准&#64;6958]</a></p>
+<h1>为ROS 2构建实时Linux [社区-贡献] <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6954">[待校准&#64;6954]</a><a class="headerlink" href="#building-realtime-linux-for-ros-2-community-contributed" title="永久链接至标题"></a></h1>
+<p>本教程从在Intelx86_64上全新安装Ubuntu 20.04.1开始。实际内核为5.4.0-54-通用，但我们将安装最新的稳定RT_PREEMPT版本。要构建内核，您需要至少30GB的可用磁盘空间。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6955">[待校准&#64;6955]</a></p>
+<p>检查https://wiki.linuxfoundation.org/realtime/start最新稳定版本，在编写本是 “最新稳定版本5.4 rt ”。如果我们点击 <a class="reference external" href="http://cdn.kernel.org/pub/linux/kernel/projects/rt/5.4/">link</a> ，我们会得到准确的版本。目前是patch-5.4.78-rt44.patch.gz。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6956">[待校准&#64;6956]</a></p>
+<a class="reference external image-reference" href="https://i.imgur.com/hu4Q04b.png"><img alt="eclipse-1 `[待校准&#64;6957] &lt;http://dev.ros2.fishros.com/calibpage/#/home?msgid=6957&gt;`_ " src="https://i.imgur.com/hu4Q04b.png" /></a>
+<p>我们在主目录中创建一个目录 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6958">[待校准&#64;6958]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir ~/kernel
 </pre></div>
 </div>
-<p>然后切换到它 <a class="reference external" href="http://localhost:3000/#/home?msgid=6959">[待校准&#64;6959]</a></p>
+<p>然后切换到它 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6959">[待校准&#64;6959]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/kernel
 </pre></div>
 </div>
-<p>我们可以使用浏览器https://mirrors.edge.kernel.org/pub/linux/kernel/ v5.x/，看看版本是否存在。您可以从站点下载它，并手动将其从/下载移动到/内核文件夹，或者通过使用  &quot;copy link location&quot; 右键单击链接，使用wget下载它。示例: <a class="reference external" href="http://localhost:3000/#/home?msgid=6960">[待校准&#64;6960]</a></p>
+<p>我们可以使用浏览器https://mirrors.edge.kernel.org/pub/linux/kernel/ v5.x/，看看版本是否存在。您可以从站点下载它，并手动将其从/下载移动到/内核文件夹，或者通过使用  &quot;copy link location&quot; 右键单击链接，使用wget下载它。示例: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6960">[待校准&#64;6960]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget https://mirrors.edge.kernel.org/pub/linux/kernel/v5.x/linux-5.4.78.tar.gz
 </pre></div>
 </div>
-<p>打开包装 <a class="reference external" href="http://localhost:3000/#/home?msgid=6961">[待校准&#64;6961]</a></p>
+<p>打开包装 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6961">[待校准&#64;6961]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tar -xzf linux-5.4.78.tar.gz
 </pre></div>
 </div>
-<p>下载与我们刚刚在http://cdn.kernel.org/pub/linux/kernel/projects/rt/ 5.4/下载的内核版本相匹配的rt_preempt补丁 <a class="reference external" href="http://localhost:3000/#/home?msgid=6962">[待校准&#64;6962]</a></p>
+<p>下载与我们刚刚在http://cdn.kernel.org/pub/linux/kernel/projects/rt/ 5.4/下载的内核版本相匹配的rt_preempt补丁 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6962">[待校准&#64;6962]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget http://cdn.kernel.org/pub/linux/kernel/projects/rt/5.4/older/patch-5.4.78-rt44.patch.gz
 </pre></div>
 </div>
-<p>打开包装 <a class="reference external" href="http://localhost:3000/#/home?msgid=6961">[待校准&#64;6961]</a></p>
+<p>打开包装 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6961">[待校准&#64;6961]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gunzip patch-5.4.78-rt44.patch.gz
 </pre></div>
 </div>
-<p>然后切换到linux目录 <a class="reference external" href="http://localhost:3000/#/home?msgid=6963">[待校准&#64;6963]</a></p>
+<p>然后切换到linux目录 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6963">[待校准&#64;6963]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> linux-5.4.78/
 </pre></div>
 </div>
-<p>用实时补丁修补内核 <a class="reference external" href="http://localhost:3000/#/home?msgid=6964">[待校准&#64;6964]</a></p>
+<p>用实时补丁修补内核 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6964">[待校准&#64;6964]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>patch -p1 &lt; ../patch-5.4.78-rt44.patch
 </pre></div>
 </div>
-<p>我们只想使用Ubuntu安装的配置，因此我们使用 <a class="reference external" href="http://localhost:3000/#/home?msgid=6965">[待校准&#64;6965]</a></p>
+<p>我们只想使用Ubuntu安装的配置，因此我们使用 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6965">[待校准&#64;6965]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cp /boot/config-5.4.0-54-generic .config
 </pre></div>
 </div>
-<p>打开软件和更新。在Ubuntu软件菜单中勾选'Source code'框 <a class="reference external" href="http://localhost:3000/#/home?msgid=6966">[待校准&#64;6966]</a></p>
-<p>我们需要一些工具来构建内核，安装它们 <a class="reference external" href="http://localhost:3000/#/home?msgid=6967">[待校准&#64;6967]</a></p>
+<p>打开软件和更新。在Ubuntu软件菜单中勾选'Source code'框 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6966">[待校准&#64;6966]</a></p>
+<p>我们需要一些工具来构建内核，安装它们 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6967">[待校准&#64;6967]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt-get build-dep linux
 sudo apt-get install libncurses-dev flex bison openssl libssl-dev dkms libelf-dev libudev-dev libpci-dev libiberty-dev autoconf fakeroot
 </pre></div>
 </div>
-<p>要启用所有Ubuntu配置，我们只需使用 <a class="reference external" href="http://localhost:3000/#/home?msgid=6968">[待校准&#64;6968]</a></p>
+<p>要启用所有Ubuntu配置，我们只需使用 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6968">[待校准&#64;6968]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>yes <span class="s1">&#39;&#39;</span> <span class="p">|</span> make oldconfig
 </pre></div>
 </div>
-<p>然后，我们需要在内核中启用rt_preempt。我们调用 <a class="reference external" href="http://localhost:3000/#/home?msgid=6969">[待校准&#64;6969]</a></p>
+<p>然后，我们需要在内核中启用rt_preempt。我们调用 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6969">[待校准&#64;6969]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make menuconfig
 </pre></div>
 </div>
-<p>并设置以下内容 <a class="reference external" href="http://localhost:3000/#/home?msgid=6970">[待校准&#64;6970]</a></p>
+<p>并设置以下内容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6970">[待校准&#64;6970]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Enable CONFIG_PREEMPT_RT</span>
  -&gt; General Setup
   -&gt; Preemption Model <span class="o">(</span>Fully Preemptible Kernel <span class="o">(</span>Real-Time<span class="o">))</span>
@@ -363,21 +363,21 @@ sudo apt-get install libncurses-dev flex bison openssl libssl-dev dkms libelf-de
      <span class="o">(</span>X<span class="o">)</span> performance
 </pre></div>
 </div>
-<p>保存并退出menuconfig。现在我们将构建内核，这将需要相当长的时间。(在现代中央处理器上10-30分钟) <a class="reference external" href="http://localhost:3000/#/home?msgid=6971">[待校准&#64;6971]</a></p>
+<p>保存并退出menuconfig。现在我们将构建内核，这将需要相当长的时间。(在现代中央处理器上10-30分钟) <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6971">[待校准&#64;6971]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make -j <span class="sb">`</span>nproc<span class="sb">`</span> deb-pkg
 </pre></div>
 </div>
-<p>构建完成后，检查debian包 <a class="reference external" href="http://localhost:3000/#/home?msgid=6972">[待校准&#64;6972]</a></p>
+<p>构建完成后，检查debian包 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6972">[待校准&#64;6972]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls ../*deb
 ../linux-headers-5.4.78-rt41_5.4.78-rt44-1_amd64.deb  ../linux-image-5.4.78-rt44-dbg_5.4.78-rt44-1_amd64.deb
 ../linux-image-5.4.78-rt41_5.4.78-rt44-1_amd64.deb    ../linux-libc-dev_5.4.78-rt44-1_amd64.deb
 </pre></div>
 </div>
-<p>然后我们安装所有内核debian包 <a class="reference external" href="http://localhost:3000/#/home?msgid=6973">[待校准&#64;6973]</a></p>
+<p>然后我们安装所有内核debian包 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6973">[待校准&#64;6973]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo dpkg -i ../*.deb
 </pre></div>
 </div>
-<p>现在应该安装实时内核。重新启动系统并检查新的内核版本 <a class="reference external" href="http://localhost:3000/#/home?msgid=6974">[待校准&#64;6974]</a></p>
+<p>现在应该安装实时内核。重新启动系统并检查新的内核版本 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6974">[待校准&#64;6974]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo reboot
 uname -a
 Linux ros2host <span class="m">5</span>.4.78-rt44 <span class="c1">#1 SMP PREEMPT_RT Fri Nov 6 10:37:59 CET 2020 x86_64 xx</span>

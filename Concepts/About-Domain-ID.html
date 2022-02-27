@@ -280,53 +280,53 @@
 
 
   <div class="section" id="the-ros-domain-id">
-<h1>ROS_DOMAIN_ID <a class="reference external" href="http://localhost:3000/#/home?msgid=9770">[待校准&#64;9770]</a><a class="headerlink" href="#the-ros-domain-id" title="永久链接至标题"></a></h1>
+<h1>ROS_DOMAIN_ID <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9770">[待校准&#64;9770]</a><a class="headerlink" href="#the-ros-domain-id" title="永久链接至标题"></a></h1>
 <div class="section" id="overview">
-<h2>概述 <a class="reference external" href="http://localhost:3000/#/home?msgid=9718">[待校准&#64;9718]</a><a class="headerlink" href="#overview" title="永久链接至标题"></a></h2>
-<p>如其他地方所解释的，ROS 2用于通讯的默认中间件是DDS。在DDS中，不同逻辑网络共享物理网络的主要机制称为域账号。同一域上的ROS 2节点可以自由地相互发现并发送消息，而不同域上的ROS 2节点则不能。所有ROS 2节点默认使用域账号0。为了在同一网络上运行ROS 2的不同计算机组之间进行avo账号干扰，应为每组设置不同的域账号。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9771">[待校准&#64;9771]</a></p>
+<h2>概述 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9718">[待校准&#64;9718]</a><a class="headerlink" href="#overview" title="永久链接至标题"></a></h2>
+<p>如其他地方所解释的，ROS 2用于通讯的默认中间件是DDS。在DDS中，不同逻辑网络共享物理网络的主要机制称为域账号。同一域上的ROS 2节点可以自由地相互发现并发送消息，而不同域上的ROS 2节点则不能。所有ROS 2节点默认使用域账号0。为了在同一网络上运行ROS 2的不同计算机组之间进行avo账号干扰，应为每组设置不同的域账号。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9771">[待校准&#64;9771]</a></p>
 </div>
 <div class="section" id="choosing-a-domain-id-short-version">
-<h2>选择域名账号 (简称) <a class="reference external" href="http://localhost:3000/#/home?msgid=9772">[待校准&#64;9772]</a><a class="headerlink" href="#choosing-a-domain-id-short-version" title="永久链接至标题"></a></h2>
-<p>下面的文本解释了应该在ROS 2中使用的域账号范围的推导。要跳过该背景，只需选择一个安全号码，只需选择一个介于0和101之间的域账号 (包括0和)。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9773">[待校准&#64;9773]</a></p>
+<h2>选择域名账号 (简称) <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9772">[待校准&#64;9772]</a><a class="headerlink" href="#choosing-a-domain-id-short-version" title="永久链接至标题"></a></h2>
+<p>下面的文本解释了应该在ROS 2中使用的域账号范围的推导。要跳过该背景，只需选择一个安全号码，只需选择一个介于0和101之间的域账号 (包括0和)。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9773">[待校准&#64;9773]</a></p>
 </div>
 <div class="section" id="choosing-a-domain-id-long-version">
-<h2>选择域账号 (长版本) <a class="reference external" href="http://localhost:3000/#/home?msgid=9774">[待校准&#64;9774]</a><a class="headerlink" href="#choosing-a-domain-id-long-version" title="永久链接至标题"></a></h2>
-<p>DDS使用域账号计算将用于发现和通讯的UDP端口。有关如何计算端口的详细信息，请参见 <a class="reference external" href="https://community.rti.com/content/forum-topic/statically-configure-firewall-let-omg-dds-traffic-through">this article</a> 。记住我们的基本网络，UDP端口是 <a class="reference external" href="https://en.wikipedia.org/wiki/User_Datagram_Protocol#Ports">unsigned 16-bit integer</a> 。因此，可以分配的最高端口号是65535。用上面文章中的公式计算一下，这意味着可以分配的最高域账号是232，而可以分配的最低域账号是0。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9775">[待校准&#64;9775]</a></p>
+<h2>选择域账号 (长版本) <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9774">[待校准&#64;9774]</a><a class="headerlink" href="#choosing-a-domain-id-long-version" title="永久链接至标题"></a></h2>
+<p>DDS使用域账号计算将用于发现和通讯的UDP端口。有关如何计算端口的详细信息，请参见 <a class="reference external" href="https://community.rti.com/content/forum-topic/statically-configure-firewall-let-omg-dds-traffic-through">this article</a> 。记住我们的基本网络，UDP端口是 <a class="reference external" href="https://en.wikipedia.org/wiki/User_Datagram_Protocol#Ports">unsigned 16-bit integer</a> 。因此，可以分配的最高端口号是65535。用上面文章中的公式计算一下，这意味着可以分配的最高域账号是232，而可以分配的最低域账号是0。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9775">[待校准&#64;9775]</a></p>
 <div class="section" id="platform-specific-constraints">
-<h3>特定于平台的约束 <a class="reference external" href="http://localhost:3000/#/home?msgid=9776">[待校准&#64;9776]</a><a class="headerlink" href="#platform-specific-constraints" title="永久链接至标题"></a></h3>
-<p>为了实现最大的兼容性，在选择域账号时应遵循一些特定于平台的附加约束。特别是，最好避免在操作系统的 <a class="reference external" href="https://en.wikipedia.org/wiki/Ephemeral_port">ephemeral port range</a> 中分配域id。这避免了ROS 2节点使用的端口与计算机上的其他网络服务之间可能的冲突。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9777">[待校准&#64;9777]</a></p>
-<p>以下是一些关于临时端口的平台特定注释。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9778">[待校准&#64;9778]</a></p>
+<h3>特定于平台的约束 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9776">[待校准&#64;9776]</a><a class="headerlink" href="#platform-specific-constraints" title="永久链接至标题"></a></h3>
+<p>为了实现最大的兼容性，在选择域账号时应遵循一些特定于平台的附加约束。特别是，最好避免在操作系统的 <a class="reference external" href="https://en.wikipedia.org/wiki/Ephemeral_port">ephemeral port range</a> 中分配域id。这避免了ROS 2节点使用的端口与计算机上的其他网络服务之间可能的冲突。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9777">[待校准&#64;9777]</a></p>
+<p>以下是一些关于临时端口的平台特定注释。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9778">[待校准&#64;9778]</a></p>
 <div class="sphinx-tabs docutils container">
-<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-0-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-0-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-0-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-0-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-0-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><p>默认情况下，linux内核使用端口32768-60999作为临时端口。这意味着域id 0-101和215-232可以安全使用，而不会与临时端口发生冲突。临时端口范围可在Linux中通过在 <code class="docutils literal notranslate"><span class="pre">/proc/sys/net/ipv4/ip_local_port_range</span></code> 中设置自定义值进行配置。如果使用自定义临时端口范围，则可能需要相应地调整上述数字。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9780">[待校准&#64;9780]</a></p>
-</div><div aria-labelledby="tab-0-bWFjT1M=" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-bWFjT1M=" name="bWFjT1M=" role="tabpanel" tabindex="0"><p>默认情况下，macOS上的临时端口范围为49152-65535。这意味着域id 0-166可以安全使用，而不会与临时端口发生冲突。通过为 <code class="docutils literal notranslate"><span class="pre">net.inet.ip.portrange.first</span></code> 和 <code class="docutils literal notranslate"><span class="pre">net.inet.ip.portrange.last</span></code> 设置自定义sysctl值，临时端口范围可在macOS中配置。如果使用自定义临时端口范围，则可能需要相应地调整上述数字。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9782">[待校准&#64;9782]</a></p>
-</div><div aria-labelledby="tab-0-V2luZG93cw==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-V2luZG93cw==" name="V2luZG93cw==" role="tabpanel" tabindex="0"><p>默认情况下，Windows上的临时端口范围为49152-65535。这意味着域id 0-166可以安全使用，而不会与临时端口发生冲突。短暂的端口范围可通过 <a class="reference external" href="https://docs.microsoft.com/en-us/troubleshoot/windows-server/networking/default-dynamic-port-range-tcpip-chang">using netsh</a> 在窗口中配置。如果使用自定义临时端口范围，则可能需要相应地调整上述数字。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9784">[待校准&#64;9784]</a></p>
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-0-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-0-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-0-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-0-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-0-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><p>默认情况下，linux内核使用端口32768-60999作为临时端口。这意味着域id 0-101和215-232可以安全使用，而不会与临时端口发生冲突。临时端口范围可在Linux中通过在 <code class="docutils literal notranslate"><span class="pre">/proc/sys/net/ipv4/ip_local_port_range</span></code> 中设置自定义值进行配置。如果使用自定义临时端口范围，则可能需要相应地调整上述数字。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9780">[待校准&#64;9780]</a></p>
+</div><div aria-labelledby="tab-0-bWFjT1M=" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-bWFjT1M=" name="bWFjT1M=" role="tabpanel" tabindex="0"><p>默认情况下，macOS上的临时端口范围为49152-65535。这意味着域id 0-166可以安全使用，而不会与临时端口发生冲突。通过为 <code class="docutils literal notranslate"><span class="pre">net.inet.ip.portrange.first</span></code> 和 <code class="docutils literal notranslate"><span class="pre">net.inet.ip.portrange.last</span></code> 设置自定义sysctl值，临时端口范围可在macOS中配置。如果使用自定义临时端口范围，则可能需要相应地调整上述数字。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9782">[待校准&#64;9782]</a></p>
+</div><div aria-labelledby="tab-0-V2luZG93cw==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-V2luZG93cw==" name="V2luZG93cw==" role="tabpanel" tabindex="0"><p>默认情况下，Windows上的临时端口范围为49152-65535。这意味着域id 0-166可以安全使用，而不会与临时端口发生冲突。短暂的端口范围可通过 <a class="reference external" href="https://docs.microsoft.com/en-us/troubleshoot/windows-server/networking/default-dynamic-port-range-tcpip-chang">using netsh</a> 在窗口中配置。如果使用自定义临时端口范围，则可能需要相应地调整上述数字。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9784">[待校准&#64;9784]</a></p>
 </div></div>
 </div>
 <div class="section" id="participant-constraints">
-<h3>参与者约束 <a class="reference external" href="http://localhost:3000/#/home?msgid=9785">[待校准&#64;9785]</a><a class="headerlink" href="#participant-constraints" title="永久链接至标题"></a></h3>
-<p>对于计算机上运行的每个ROS 2进程，将创建一个DDS  &quot;participant&quot; 。由于每个DDS参与者占用计算机上的两个端口，因此在一台计算机上运行120个以上的ROS 2进程可能会溢出到其他域id或临时端口。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9786">[待校准&#64;9786]</a></p>
-<p>要了解原因，请考虑域id 1和2。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9787">[待校准&#64;9787]</a></p>
+<h3>参与者约束 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9785">[待校准&#64;9785]</a><a class="headerlink" href="#participant-constraints" title="永久链接至标题"></a></h3>
+<p>对于计算机上运行的每个ROS 2进程，将创建一个DDS  &quot;participant&quot; 。由于每个DDS参与者占用计算机上的两个端口，因此在一台计算机上运行120个以上的ROS 2进程可能会溢出到其他域id或临时端口。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9786">[待校准&#64;9786]</a></p>
+<p>要了解原因，请考虑域id 1和2。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9787">[待校准&#64;9787]</a></p>
 <ul class="simple">
-<li><p>域账号1使用端口7650和7651进行多播。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9788">[待校准&#64;9788]</a></p></li>
-<li><p>域账号2使用端口7900和7901进行多播。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9789">[待校准&#64;9789]</a></p></li>
-<li><p>在域账号1中创建第一个进程 (第0个参与者) 时，端口7660和7661用于单播。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9790">[待校准&#64;9790]</a></p></li>
-<li><p>在域账号1中创建第120个进程 (第119个参与者) 时，端口7898和7899用于单播。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9791">[待校准&#64;9791]</a></p></li>
-<li><p>在域账号1中创建第121个进程 (第120个参与者) 时，端口7900和7901用于单播，并与域账号2重叠。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9792">[待校准&#64;9792]</a></p></li>
+<li><p>域账号1使用端口7650和7651进行多播。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9788">[待校准&#64;9788]</a></p></li>
+<li><p>域账号2使用端口7900和7901进行多播。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9789">[待校准&#64;9789]</a></p></li>
+<li><p>在域账号1中创建第一个进程 (第0个参与者) 时，端口7660和7661用于单播。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9790">[待校准&#64;9790]</a></p></li>
+<li><p>在域账号1中创建第120个进程 (第119个参与者) 时，端口7898和7899用于单播。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9791">[待校准&#64;9791]</a></p></li>
+<li><p>在域账号1中创建第121个进程 (第120个参与者) 时，端口7900和7901用于单播，并与域账号2重叠。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9792">[待校准&#64;9792]</a></p></li>
 </ul>
-<p>如果已知计算机一次只能在一个域账号上，并且域账号足够低，那么创建比这更多的ROS 2进程是安全的。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9793">[待校准&#64;9793]</a></p>
-<p>选择域账号靠近顶部的平台特定域账号s，额外约束应缺点账号ered。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9794">[待校准&#64;9794]</a></p>
-<p>例如，假设一台域账号为101的Linux计算机: <a class="reference external" href="http://localhost:3000/#/home?msgid=9795">[待校准&#64;9795]</a></p>
+<p>如果已知计算机一次只能在一个域账号上，并且域账号足够低，那么创建比这更多的ROS 2进程是安全的。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9793">[待校准&#64;9793]</a></p>
+<p>选择域账号靠近顶部的平台特定域账号s，额外约束应缺点账号ered。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9794">[待校准&#64;9794]</a></p>
+<p>例如，假设一台域账号为101的Linux计算机: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9795">[待校准&#64;9795]</a></p>
 <ul class="simple">
-<li><p>计算机上的zerth th ROS 2进程将连接到端口32650、32651、32660和32661。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9796">[待校准&#64;9796]</a></p></li>
-<li><p>计算机上的第一个ROS 2进程将连接到端口32650、32651、32662和32663。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9797">[待校准&#64;9797]</a></p></li>
-<li><p>计算机上的第53个ROS 2进程将连接到端口32650、32651、32766和32767。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9798">[待校准&#64;9798]</a></p></li>
-<li><p>计算机上的第54个ROS 2进程将连接到端口32650、32651、32768和32769，运行在临时端口范围内。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9799">[待校准&#64;9799]</a></p></li>
+<li><p>计算机上的zerth th ROS 2进程将连接到端口32650、32651、32660和32661。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9796">[待校准&#64;9796]</a></p></li>
+<li><p>计算机上的第一个ROS 2进程将连接到端口32650、32651、32662和32663。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9797">[待校准&#64;9797]</a></p></li>
+<li><p>计算机上的第53个ROS 2进程将连接到端口32650、32651、32766和32767。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9798">[待校准&#64;9798]</a></p></li>
+<li><p>计算机上的第54个ROS 2进程将连接到端口32650、32651、32768和32769，运行在临时端口范围内。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9799">[待校准&#64;9799]</a></p></li>
 </ul>
-<p>因此，在Linux上使用域账号101时应创建的最大进程数为54。同样，在Linux上使用域账号232时应创建的最大进程数为63，因为最大端口号为65535。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9800">[待校准&#64;9800]</a></p>
-<p>macOS和Windows的情况相似，尽管数字不同。在macOS和Windows上，当选择166 (范围顶部) 的域账号时，运行到临时端口范围之前，可以在计算机上创建的ROS 2进程的最大数量为120。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9801">[待校准&#64;9801]</a></p>
+<p>因此，在Linux上使用域账号101时应创建的最大进程数为54。同样，在Linux上使用域账号232时应创建的最大进程数为63，因为最大端口号为65535。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9800">[待校准&#64;9800]</a></p>
+<p>macOS和Windows的情况相似，尽管数字不同。在macOS和Windows上，当选择166 (范围顶部) 的域账号时，运行到临时端口范围之前，可以在计算机上创建的ROS 2进程的最大数量为120。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9801">[待校准&#64;9801]</a></p>
 </div>
 <div class="section" id="domain-id-to-udp-port-calculator">
-<h3>域账号到UDP端口计算器 <a class="reference external" href="http://localhost:3000/#/home?msgid=9802">[待校准&#64;9802]</a><a class="headerlink" href="#domain-id-to-udp-port-calculator" title="永久链接至标题"></a></h3>
+<h3>域账号到UDP端口计算器 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9802">[待校准&#64;9802]</a><a class="headerlink" href="#domain-id-to-udp-port-calculator" title="永久链接至标题"></a></h3>
 <table>
   <tr>
     <td style="text-align: right; vertical-align: middle;"><label>Domain ID:</label></td>

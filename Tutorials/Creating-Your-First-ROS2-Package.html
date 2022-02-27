@@ -280,12 +280,12 @@
 
 
   <div class="section" id="creating-your-first-ros-2-package">
-<span id="createpkg"></span><h1>创建您的第一个ROS 2包 <a class="reference external" href="http://localhost:3000/#/home?msgid=7117">[待校准&#64;7117]</a><a class="headerlink" href="#creating-your-first-ros-2-package" title="永久链接至标题"></a></h1>
-<p>Goal目标: using使用CMake或Python创建一个新包，并运行其可执行文件。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7118">[待校准&#64;7118]</a></p>
-<p>Tutorial教程级别: Beginner初学者 <a class="reference external" href="http://localhost:3000/#/home?msgid=7088">[待校准&#64;7088]</a></p>
-<p>Time时间: 15 15分钟 <a class="reference external" href="http://localhost:3000/#/home?msgid=6755">[待校准&#64;6755]</a></p>
+<span id="createpkg"></span><h1>创建您的第一个ROS 2包 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7117">[待校准&#64;7117]</a><a class="headerlink" href="#creating-your-first-ros-2-package" title="永久链接至标题"></a></h1>
+<p>Goal目标: using使用CMake或Python创建一个新包，并运行其可执行文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7118">[待校准&#64;7118]</a></p>
+<p>Tutorial教程级别: Beginner初学者 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7088">[待校准&#64;7088]</a></p>
+<p>Time时间: 15 15分钟 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6755">[待校准&#64;6755]</a></p>
 <div class="contents local topic" id="contents">
-<p class="topic-title">内容 <a class="reference external" href="http://localhost:3000/#/home?msgid=6715">[待校准&#64;6715]</a></p>
+<p class="topic-title">内容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6715">[待校准&#64;6715]</a></p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#background" id="id1">背景 [待校准&#64;6716]</a></p>
 <ul>
@@ -310,28 +310,28 @@
 </ul>
 </div>
 <div class="section" id="background">
-<h2>背景 <a class="reference external" href="http://localhost:3000/#/home?msgid=6716">[待校准&#64;6716]</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
+<h2>背景 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6716">[待校准&#64;6716]</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
 <div class="section" id="what-is-a-ros-2-package">
-<h3>1什么是ROS 2包？ <a class="reference external" href="http://localhost:3000/#/home?msgid=7119">[待校准&#64;7119]</a><a class="headerlink" href="#what-is-a-ros-2-package" title="永久链接至标题"></a></h3>
-<p>包可以被视为ROS 2代码的容器。如果你想安装你的代码或者与其他人共享，那么你需要把它组织成一个包。有了包，你可以释放你的ROS 2工作，并允许其他人轻松构建和使用它。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7120">[待校准&#64;7120]</a></p>
-<p>ROS 2中的包创建使用ament作为其构建系统，colcon作为其构建工具。您可以使用官方支持的CMake或Python创建包，尽管确实存在其他构建类型。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7121">[待校准&#64;7121]</a></p>
+<h3>1什么是ROS 2包？ <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7119">[待校准&#64;7119]</a><a class="headerlink" href="#what-is-a-ros-2-package" title="永久链接至标题"></a></h3>
+<p>包可以被视为ROS 2代码的容器。如果你想安装你的代码或者与其他人共享，那么你需要把它组织成一个包。有了包，你可以释放你的ROS 2工作，并允许其他人轻松构建和使用它。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7120">[待校准&#64;7120]</a></p>
+<p>ROS 2中的包创建使用ament作为其构建系统，colcon作为其构建工具。您可以使用官方支持的CMake或Python创建包，尽管确实存在其他构建类型。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7121">[待校准&#64;7121]</a></p>
 </div>
 <div class="section" id="what-makes-up-a-ros-2-package">
-<h3>2什么构成了ROS 2包？ <a class="reference external" href="http://localhost:3000/#/home?msgid=7122">[待校准&#64;7122]</a><a class="headerlink" href="#what-makes-up-a-ros-2-package" title="永久链接至标题"></a></h3>
-<p>ROS 2 Python和CMake包各有各自的最低要求内容: <a class="reference external" href="http://localhost:3000/#/home?msgid=7123">[待校准&#64;7123]</a></p>
+<h3>2什么构成了ROS 2包？ <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7122">[待校准&#64;7122]</a><a class="headerlink" href="#what-makes-up-a-ros-2-package" title="永久链接至标题"></a></h3>
+<p>ROS 2 Python和CMake包各有各自的最低要求内容: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7123">[待校准&#64;7123]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-Q01ha2U=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-0-Q01ha2U=" name="Q01ha2U=" role="tab" tabindex="0">CMake</button><button aria-controls="panel-0-UHl0aG9u" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="-1">Python</button></div><div aria-labelledby="tab-0-Q01ha2U=" class="sphinx-tabs-panel group-tab" id="panel-0-Q01ha2U=" name="Q01ha2U=" role="tabpanel" tabindex="0"><ul class="simple">
-<li><p>包含包裹元信息的``package.xml`` file <a class="reference external" href="http://localhost:3000/#/home?msgid=7125">[待校准&#64;7125]</a></p></li>
-<li><p>描述如何在包中构建代码的``CMakeLists.txt`` file <a class="reference external" href="http://localhost:3000/#/home?msgid=7126">[待校准&#64;7126]</a></p></li>
+<li><p>包含包裹元信息的``package.xml`` file <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7125">[待校准&#64;7125]</a></p></li>
+<li><p>描述如何在包中构建代码的``CMakeLists.txt`` file <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7126">[待校准&#64;7126]</a></p></li>
 </ul>
 </div><div aria-labelledby="tab-0-UHl0aG9u" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-UHl0aG9u" name="UHl0aG9u" role="tabpanel" tabindex="0"><ul class="simple">
-<li><p>包含包裹元信息的``package.xml`` file <a class="reference external" href="http://localhost:3000/#/home?msgid=7125">[待校准&#64;7125]</a></p></li>
-<li><p>[需手动修复的语法]``setup.py`` containing如何安装包装的说明 <a class="reference external" href="http://localhost:3000/#/home?msgid=7128">[待校准&#64;7128]</a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">setup.cfg</span></code> is required when a package has executables, so <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">run</span></code> can找到他们 <a class="reference external" href="http://localhost:3000/#/home?msgid=7129">[待校准&#64;7129]</a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">/&lt;package_name&gt;</span></code> - a directory with the same name as your package, used by ROS 2 tools to find your package, contains <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code> <a class="reference external" href="http://localhost:3000/#/home?msgid=7130">[待校准&#64;7130]</a></p></li>
+<li><p>包含包裹元信息的``package.xml`` file <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7125">[待校准&#64;7125]</a></p></li>
+<li><p>[需手动修复的语法]``setup.py`` containing如何安装包装的说明 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7128">[待校准&#64;7128]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">setup.cfg</span></code> is required when a package has executables, so <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">run</span></code> can找到他们 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7129">[待校准&#64;7129]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">/&lt;package_name&gt;</span></code> - a directory with the same name as your package, used by ROS 2 tools to find your package, contains <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code> <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7130">[待校准&#64;7130]</a></p></li>
 </ul>
 </div></div>
-<p>最简单的包可能具有如下所示的文件结构: <a class="reference external" href="http://localhost:3000/#/home?msgid=7131">[待校准&#64;7131]</a></p>
+<p>最简单的包可能具有如下所示的文件结构: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7131">[待校准&#64;7131]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-1-Q01ha2U=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-1-Q01ha2U=" name="Q01ha2U=" role="tab" tabindex="0">CMake</button><button aria-controls="panel-1-UHl0aG9u" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="-1">Python</button></div><div aria-labelledby="tab-1-Q01ha2U=" class="sphinx-tabs-panel group-tab" id="panel-1-Q01ha2U=" name="Q01ha2U=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">my_package/</span>
 <span class="go">     CMakeLists.txt</span>
@@ -347,10 +347,10 @@
 </div></div>
 </div>
 <div class="section" id="packages-in-a-workspace">
-<h3>工作区中的3个包 <a class="reference external" href="http://localhost:3000/#/home?msgid=7132">[待校准&#64;7132]</a><a class="headerlink" href="#packages-in-a-workspace" title="永久链接至标题"></a></h3>
-<p>单个工作区可以包含任意数量的包，每个包都在自己的文件夹中。您还可以在一个工作区 (CMake、Python等) 中拥有不同构建类型的包。您不能有嵌套包。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7133">[待校准&#64;7133]</a></p>
-<p>最佳实践是在你的工作空间里有一个 <code class="docutils literal notranslate"><span class="pre">src</span></code> 文件夹，并在那里创建你的包。这使工作区的顶层保持 “干净”。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7134">[待校准&#64;7134]</a></p>
-<p>琐碎的工作区可能如下所示: <a class="reference external" href="http://localhost:3000/#/home?msgid=7135">[待校准&#64;7135]</a></p>
+<h3>工作区中的3个包 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7132">[待校准&#64;7132]</a><a class="headerlink" href="#packages-in-a-workspace" title="永久链接至标题"></a></h3>
+<p>单个工作区可以包含任意数量的包，每个包都在自己的文件夹中。您还可以在一个工作区 (CMake、Python等) 中拥有不同构建类型的包。您不能有嵌套包。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7133">[待校准&#64;7133]</a></p>
+<p>最佳实践是在你的工作空间里有一个 <code class="docutils literal notranslate"><span class="pre">src</span></code> 文件夹，并在那里创建你的包。这使工作区的顶层保持 “干净”。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7134">[待校准&#64;7134]</a></p>
+<p>琐碎的工作区可能如下所示: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7135">[待校准&#64;7135]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">workspace_folder/</span>
 <span class="go">    src/</span>
 <span class="go">      package_1/</span>
@@ -370,16 +370,16 @@
 </div>
 </div>
 <div class="section" id="prerequisites">
-<h2>先决条件 <a class="reference external" href="http://localhost:3000/#/home?msgid=6718">[待校准&#64;6718]</a><a class="headerlink" href="#prerequisites" title="永久链接至标题"></a></h2>
-<p>按照 <a class="reference internal" href="Workspace/Creating-A-Workspace.html"><span class="doc">previous tutorial</span></a> 中的说明操作后，您应该有一个ROS 2工作区。您将在此工作区中创建包。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7136">[待校准&#64;7136]</a></p>
+<h2>先决条件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6718">[待校准&#64;6718]</a><a class="headerlink" href="#prerequisites" title="永久链接至标题"></a></h2>
+<p>按照 <a class="reference internal" href="Workspace/Creating-A-Workspace.html"><span class="doc">previous tutorial</span></a> 中的说明操作后，您应该有一个ROS 2工作区。您将在此工作区中创建包。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7136">[待校准&#64;7136]</a></p>
 </div>
 <div class="section" id="tasks">
-<h2>任务 <a class="reference external" href="http://localhost:3000/#/home?msgid=6725">[待校准&#64;6725]</a><a class="headerlink" href="#tasks" title="永久链接至标题"></a></h2>
+<h2>任务 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6725">[待校准&#64;6725]</a><a class="headerlink" href="#tasks" title="永久链接至标题"></a></h2>
 <div class="section" id="create-a-package">
-<h3>1创建包 <a class="reference external" href="http://localhost:3000/#/home?msgid=7137">[待校准&#64;7137]</a><a class="headerlink" href="#create-a-package" title="永久链接至标题"></a></h3>
-<p>首先， <a class="reference internal" href="Configuring-ROS2-Environment.html"><span class="doc">source your ROS 2 installation</span></a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7138">[待校准&#64;7138]</a></p>
-<p>让我们为您的新包使用您在 <a class="reference internal" href="Workspace/Creating-A-Workspace.html#new-directory"><span class="std std-ref">previous tutorial</span></a>, `` dev_ws ”中创建的工作区。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7139">[待校准&#64;7139]</a></p>
-<p>在运行包创建命令之前，请确保您位于 <code class="docutils literal notranslate"><span class="pre">src</span></code> 文件夹中。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7140">[待校准&#64;7140]</a></p>
+<h3>1创建包 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7137">[待校准&#64;7137]</a><a class="headerlink" href="#create-a-package" title="永久链接至标题"></a></h3>
+<p>首先， <a class="reference internal" href="Configuring-ROS2-Environment.html"><span class="doc">source your ROS 2 installation</span></a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7138">[待校准&#64;7138]</a></p>
+<p>让我们为您的新包使用您在 <a class="reference internal" href="Workspace/Creating-A-Workspace.html#new-directory"><span class="std std-ref">previous tutorial</span></a>, `` dev_ws ”中创建的工作区。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7139">[待校准&#64;7139]</a></p>
+<p>在运行包创建命令之前，请确保您位于 <code class="docutils literal notranslate"><span class="pre">src</span></code> 文件夹中。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7140">[待校准&#64;7140]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-2-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-2-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-2-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-2-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-2-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-2-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-2-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-2-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd ~/dev_ws/src</span>
 </pre></div>
@@ -391,7 +391,7 @@
 </pre></div>
 </div>
 </div></div>
-<p>在ROS 2中创建新包的命令语法是: <a class="reference external" href="http://localhost:3000/#/home?msgid=7141">[待校准&#64;7141]</a></p>
+<p>在ROS 2中创建新包的命令语法是: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7141">[待校准&#64;7141]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-3-Q01ha2U=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-3-Q01ha2U=" name="Q01ha2U=" role="tab" tabindex="0">CMake</button><button aria-controls="panel-3-UHl0aG9u" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-3-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="-1">Python</button></div><div aria-labelledby="tab-3-Q01ha2U=" class="sphinx-tabs-panel group-tab" id="panel-3-Q01ha2U=" name="Q01ha2U=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 pkg create --build-type ament_cmake &lt;package_name&gt;</span>
 </pre></div>
@@ -400,8 +400,8 @@
 </pre></div>
 </div>
 </div></div>
-<p>在本教程中，您将使用可选参数 <code class="docutils literal notranslate"><span class="pre">--node-name</span></code> ，它在包中创建一个简单的Hello World类型可执行文件。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7142">[待校准&#64;7142]</a></p>
-<p>在终端中输入以下命令: <a class="reference external" href="http://localhost:3000/#/home?msgid=7143">[待校准&#64;7143]</a></p>
+<p>在本教程中，您将使用可选参数 <code class="docutils literal notranslate"><span class="pre">--node-name</span></code> ，它在包中创建一个简单的Hello World类型可执行文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7142">[待校准&#64;7142]</a></p>
+<p>在终端中输入以下命令: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7143">[待校准&#64;7143]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-4-Q01ha2U=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-4-Q01ha2U=" name="Q01ha2U=" role="tab" tabindex="0">CMake</button><button aria-controls="panel-4-UHl0aG9u" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-4-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="-1">Python</button></div><div aria-labelledby="tab-4-Q01ha2U=" class="sphinx-tabs-panel group-tab" id="panel-4-Q01ha2U=" name="Q01ha2U=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 pkg create --build-type ament_cmake --node-name my_node my_package</span>
 </pre></div>
@@ -410,8 +410,8 @@
 </pre></div>
 </div>
 </div></div>
-<p>现在，您将在工作区的 <code class="docutils literal notranslate"><span class="pre">src</span></code> 目录中有一个新文件夹，调用ed <code class="docutils literal notranslate"><span class="pre">my_package</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7144">[待校准&#64;7144]</a></p>
-<p>运行命令后，终端将返回以下消息: <a class="reference external" href="http://localhost:3000/#/home?msgid=7145">[待校准&#64;7145]</a></p>
+<p>现在，您将在工作区的 <code class="docutils literal notranslate"><span class="pre">src</span></code> 目录中有一个新文件夹，调用ed <code class="docutils literal notranslate"><span class="pre">my_package</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7144">[待校准&#64;7144]</a></p>
+<p>运行命令后，终端将返回以下消息: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7145">[待校准&#64;7145]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-5-Q01ha2U=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-5-Q01ha2U=" name="Q01ha2U=" role="tab" tabindex="0">CMake</button><button aria-controls="panel-5-UHl0aG9u" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-5-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="-1">Python</button></div><div aria-labelledby="tab-5-Q01ha2U=" class="sphinx-tabs-panel group-tab" id="panel-5-Q01ha2U=" name="Q01ha2U=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">going to create a new package</span>
 <span class="go">package name: my_package</span>
@@ -461,12 +461,12 @@
 </pre></div>
 </div>
 </div></div>
-<p>您可以看到为新包自动调用y生成的文件。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7146">[待校准&#64;7146]</a></p>
+<p>您可以看到为新包自动调用y生成的文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7146">[待校准&#64;7146]</a></p>
 </div>
 <div class="section" id="build-a-package">
-<h3>2构建一个包 <a class="reference external" href="http://localhost:3000/#/home?msgid=7147">[待校准&#64;7147]</a><a class="headerlink" href="#build-a-package" title="永久链接至标题"></a></h3>
-<p>将包放入工作区特别有价值，因为您可以通过在工作区根目录下运行 <code class="docutils literal notranslate"><span class="pre">colcon</span> <span class="pre">build</span></code> 来同时构建多个包。否则，您将必须单独构建每个包。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7148">[待校准&#64;7148]</a></p>
-<p>返回工作区的根目录: <a class="reference external" href="http://localhost:3000/#/home?msgid=7149">[待校准&#64;7149]</a></p>
+<h3>2构建一个包 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7147">[待校准&#64;7147]</a><a class="headerlink" href="#build-a-package" title="永久链接至标题"></a></h3>
+<p>将包放入工作区特别有价值，因为您可以通过在工作区根目录下运行 <code class="docutils literal notranslate"><span class="pre">colcon</span> <span class="pre">build</span></code> 来同时构建多个包。否则，您将必须单独构建每个包。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7148">[待校准&#64;7148]</a></p>
+<p>返回工作区的根目录: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7149">[待校准&#64;7149]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-6-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-6-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-6-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-6-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-6-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-6-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-6-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-6-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd ~/dev_ws</span>
 </pre></div>
@@ -478,7 +478,7 @@
 </pre></div>
 </div>
 </div></div>
-<p>现在，您可以构建您的包: <a class="reference external" href="http://localhost:3000/#/home?msgid=7150">[待校准&#64;7150]</a></p>
+<p>现在，您可以构建您的包: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7150">[待校准&#64;7150]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-7-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-7-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-7-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-7-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-7-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-7-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-7-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-7-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">colcon build</span>
 </pre></div>
@@ -489,18 +489,18 @@
 </div><div aria-labelledby="tab-7-V2luZG93cw==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-7-V2luZG93cw==" name="V2luZG93cw==" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">colcon build --merge-install</span>
 </pre></div>
 </div>
-<p>Windows不允许长路径，因此 <code class="docutils literal notranslate"><span class="pre">merge-install</span></code> 会将所有路径合并到 <code class="docutils literal notranslate"><span class="pre">install</span></code> 目录中。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7003">[待校准&#64;7003]</a></p>
+<p>Windows不允许长路径，因此 <code class="docutils literal notranslate"><span class="pre">merge-install</span></code> 会将所有路径合并到 <code class="docutils literal notranslate"><span class="pre">install</span></code> 目录中。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7003">[待校准&#64;7003]</a></p>
 </div></div>
-<p>从上一个教程重新调用，你的 <code class="docutils literal notranslate"><span class="pre">ros_tutorials</span></code> 包也在你的 <code class="docutils literal notranslate"><span class="pre">dev_ws</span></code> 。你可能已经注意到运行 <code class="docutils literal notranslate"><span class="pre">colcon</span> <span class="pre">build</span></code> 也建立了 <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> 包。当你的工作空间里只有几个包的时候没关系，但是当有很多包的时候， <code class="docutils literal notranslate"><span class="pre">colcon</span> <span class="pre">build</span></code> 可能需要很长时间。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7151">[待校准&#64;7151]</a></p>
-<p>要下次只构建 <code class="docutils literal notranslate"><span class="pre">my_package</span></code> 包，您可以运行: <a class="reference external" href="http://localhost:3000/#/home?msgid=7152">[待校准&#64;7152]</a></p>
+<p>从上一个教程重新调用，你的 <code class="docutils literal notranslate"><span class="pre">ros_tutorials</span></code> 包也在你的 <code class="docutils literal notranslate"><span class="pre">dev_ws</span></code> 。你可能已经注意到运行 <code class="docutils literal notranslate"><span class="pre">colcon</span> <span class="pre">build</span></code> 也建立了 <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> 包。当你的工作空间里只有几个包的时候没关系，但是当有很多包的时候， <code class="docutils literal notranslate"><span class="pre">colcon</span> <span class="pre">build</span></code> 可能需要很长时间。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7151">[待校准&#64;7151]</a></p>
+<p>要下次只构建 <code class="docutils literal notranslate"><span class="pre">my_package</span></code> 包，您可以运行: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7152">[待校准&#64;7152]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">colcon build --packages-select my_package</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="source-the-setup-file">
-<h3>3电源安装文件 <a class="reference external" href="http://localhost:3000/#/home?msgid=7153">[待校准&#64;7153]</a><a class="headerlink" href="#source-the-setup-file" title="永久链接至标题"></a></h3>
-<p>要使用新的包和可执行文件，请首先打开一个新的终端，并为主ROS 2安装源文件。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7154">[待校准&#64;7154]</a></p>
-<p>然后，在 <code class="docutils literal notranslate"><span class="pre">dev_ws</span></code> 目录中，运行以下命令来为您的工作区提供源文件: <a class="reference external" href="http://localhost:3000/#/home?msgid=7155">[待校准&#64;7155]</a></p>
+<h3>3电源安装文件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7153">[待校准&#64;7153]</a><a class="headerlink" href="#source-the-setup-file" title="永久链接至标题"></a></h3>
+<p>要使用新的包和可执行文件，请首先打开一个新的终端，并为主ROS 2安装源文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7154">[待校准&#64;7154]</a></p>
+<p>然后，在 <code class="docutils literal notranslate"><span class="pre">dev_ws</span></code> 目录中，运行以下命令来为您的工作区提供源文件: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7155">[待校准&#64;7155]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-8-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-8-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-8-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-8-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-8-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-8-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-8-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-8-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">. install/setup.bash</span>
 </pre></div>
@@ -512,15 +512,15 @@
 </pre></div>
 </div>
 </div></div>
-<p>既然您的工作区已添加到路径中，您将能够使用新包的可执行文件。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7156">[待校准&#64;7156]</a></p>
+<p>既然您的工作区已添加到路径中，您将能够使用新包的可执行文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7156">[待校准&#64;7156]</a></p>
 </div>
 <div class="section" id="use-the-package">
-<h3>4使用包装 <a class="reference external" href="http://localhost:3000/#/home?msgid=7157">[待校准&#64;7157]</a><a class="headerlink" href="#use-the-package" title="永久链接至标题"></a></h3>
-<p>要运行您在包创建期间使用 <code class="docutils literal notranslate"><span class="pre">--node-name</span></code> 参数创建的可执行文件，请输入以下命令: <a class="reference external" href="http://localhost:3000/#/home?msgid=7158">[待校准&#64;7158]</a></p>
+<h3>4使用包装 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7157">[待校准&#64;7157]</a><a class="headerlink" href="#use-the-package" title="永久链接至标题"></a></h3>
+<p>要运行您在包创建期间使用 <code class="docutils literal notranslate"><span class="pre">--node-name</span></code> 参数创建的可执行文件，请输入以下命令: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7158">[待校准&#64;7158]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run my_package my_node</span>
 </pre></div>
 </div>
-<p>它将向您的终端返回一条消息: <a class="reference external" href="http://localhost:3000/#/home?msgid=7159">[待校准&#64;7159]</a></p>
+<p>它将向您的终端返回一条消息: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7159">[待校准&#64;7159]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-9-Q01ha2U=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-9-Q01ha2U=" name="Q01ha2U=" role="tab" tabindex="0">CMake</button><button aria-controls="panel-9-UHl0aG9u" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-9-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="-1">Python</button></div><div aria-labelledby="tab-9-Q01ha2U=" class="sphinx-tabs-panel group-tab" id="panel-9-Q01ha2U=" name="Q01ha2U=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">hello world my_package package</span>
 </pre></div>
@@ -531,23 +531,23 @@
 </div></div>
 </div>
 <div class="section" id="examine-package-contents">
-<h3>5检查包装内容 <a class="reference external" href="http://localhost:3000/#/home?msgid=7160">[待校准&#64;7160]</a><a class="headerlink" href="#examine-package-contents" title="永久链接至标题"></a></h3>
-<p>在 <code class="docutils literal notranslate"><span class="pre">dev_ws/src/my_package</span></code> 内部，您将看到 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">pkg</span> <span class="pre">create</span></code> 自动调用y生成的文件和文件夹: <a class="reference external" href="http://localhost:3000/#/home?msgid=7161">[待校准&#64;7161]</a></p>
+<h3>5检查包装内容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7160">[待校准&#64;7160]</a><a class="headerlink" href="#examine-package-contents" title="永久链接至标题"></a></h3>
+<p>在 <code class="docutils literal notranslate"><span class="pre">dev_ws/src/my_package</span></code> 内部，您将看到 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">pkg</span> <span class="pre">create</span></code> 自动调用y生成的文件和文件夹: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7161">[待校准&#64;7161]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-10-Q01ha2U=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-10-Q01ha2U=" name="Q01ha2U=" role="tab" tabindex="0">CMake</button><button aria-controls="panel-10-UHl0aG9u" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-10-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="-1">Python</button></div><div aria-labelledby="tab-10-Q01ha2U=" class="sphinx-tabs-panel group-tab" id="panel-10-Q01ha2U=" name="Q01ha2U=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">CMakeLists.txt  include  package.xml  src</span>
 </pre></div>
 </div>
-<p>[需手动修复的语法]``my_node.cpp`` is inside the <code class="docutils literal notranslate"><span class="pre">src</span></code> directory。这就是你所有的自定义c + + 节点在未来的去向。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7162">[待校准&#64;7162]</a></p>
+<p>[需手动修复的语法]``my_node.cpp`` is inside the <code class="docutils literal notranslate"><span class="pre">src</span></code> directory。这就是你所有的自定义c + + 节点在未来的去向。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7162">[待校准&#64;7162]</a></p>
 </div><div aria-labelledby="tab-10-UHl0aG9u" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-10-UHl0aG9u" name="UHl0aG9u" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">my_package  package.xml  resource  setup.cfg  setup.py  test</span>
 </pre></div>
 </div>
-<p>[需手动修复的语法]``my_node.py`` is inside the <code class="docutils literal notranslate"><span class="pre">my_package</span></code> directory。这就是将来所有自定义Python节点的去向。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7163">[待校准&#64;7163]</a></p>
+<p>[需手动修复的语法]``my_node.py`` is inside the <code class="docutils literal notranslate"><span class="pre">my_package</span></code> directory。这就是将来所有自定义Python节点的去向。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7163">[待校准&#64;7163]</a></p>
 </div></div>
 </div>
 <div class="section" id="customize-package-xml">
-<h3>6自定义包.xml <a class="reference external" href="http://localhost:3000/#/home?msgid=7164">[待校准&#64;7164]</a><a class="headerlink" href="#customize-package-xml" title="永久链接至标题"></a></h3>
-<p>创建包裹后，您可能已经在回复信息中注意到 <code class="docutils literal notranslate"><span class="pre">description</span></code> 和 <code class="docutils literal notranslate"><span class="pre">license</span></code> 字段包含 <code class="docutils literal notranslate"><span class="pre">TODO</span></code> 注释。这是因为包描述和许可证声明不是自动调用y集，但如果您想释放包，则是必需的。 <code class="docutils literal notranslate"><span class="pre">maintainer</span></code> 田地也可能需要填写。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7165">[待校准&#64;7165]</a></p>
-<p>从 <code class="docutils literal notranslate"><span class="pre">dev_ws/src/my_package</span></code> ，使用您喜欢的文本编辑器打开 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> : <a class="reference external" href="http://localhost:3000/#/home?msgid=7166">[待校准&#64;7166]</a></p>
+<h3>6自定义包.xml <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7164">[待校准&#64;7164]</a><a class="headerlink" href="#customize-package-xml" title="永久链接至标题"></a></h3>
+<p>创建包裹后，您可能已经在回复信息中注意到 <code class="docutils literal notranslate"><span class="pre">description</span></code> 和 <code class="docutils literal notranslate"><span class="pre">license</span></code> 字段包含 <code class="docutils literal notranslate"><span class="pre">TODO</span></code> 注释。这是因为包描述和许可证声明不是自动调用y集，但如果您想释放包，则是必需的。 <code class="docutils literal notranslate"><span class="pre">maintainer</span></code> 田地也可能需要填写。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7165">[待校准&#64;7165]</a></p>
+<p>从 <code class="docutils literal notranslate"><span class="pre">dev_ws/src/my_package</span></code> ，使用您喜欢的文本编辑器打开 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> : <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7166">[待校准&#64;7166]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-11-Q01ha2U=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-11-Q01ha2U=" name="Q01ha2U=" role="tab" tabindex="0">CMake</button><button aria-controls="panel-11-UHl0aG9u" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-11-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="-1">Python</button></div><div aria-labelledby="tab-11-Q01ha2U=" class="sphinx-tabs-panel group-tab" id="panel-11-Q01ha2U=" name="Q01ha2U=" role="tabpanel" tabindex="0"><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot;?&gt;</span>
 <span class="cp">&lt;?xml-model</span>
@@ -594,20 +594,20 @@
 </pre></div>
 </div>
 </div></div>
-<p>如果您没有自动调用 <code class="docutils literal notranslate"><span class="pre">maintainer</span></code> ，请在 <code class="docutils literal notranslate"><span class="pre">maintainer</span></code> 线上输入您的姓名和电子邮件。然后，编辑 <code class="docutils literal notranslate"><span class="pre">description</span></code> 行来总结包: <a class="reference external" href="http://localhost:3000/#/home?msgid=7167">[待校准&#64;7167]</a></p>
+<p>如果您没有自动调用 <code class="docutils literal notranslate"><span class="pre">maintainer</span></code> ，请在 <code class="docutils literal notranslate"><span class="pre">maintainer</span></code> 线上输入您的姓名和电子邮件。然后，编辑 <code class="docutils literal notranslate"><span class="pre">description</span></code> 行来总结包: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7167">[待校准&#64;7167]</a></p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;description&gt;</span>Beginner client libraries tutorials practice package<span class="nt">&lt;/description&gt;</span>
 </pre></div>
 </div>
-<p>然后更新 <code class="docutils literal notranslate"><span class="pre">license</span></code> 线。你可以阅读更多关于开放源文件许可证 <a class="reference external" href="https://opensource.org/licenses/alphabetical">here</a> 的信息。由于此软件包仅用于实践，因此使用任何许可证都是安全的。我们使用 <code class="docutils literal notranslate"><span class="pre">Apache</span> <span class="pre">License</span> <span class="pre">2.0</span></code> : <a class="reference external" href="http://localhost:3000/#/home?msgid=7168">[待校准&#64;7168]</a></p>
+<p>然后更新 <code class="docutils literal notranslate"><span class="pre">license</span></code> 线。你可以阅读更多关于开放源文件许可证 <a class="reference external" href="https://opensource.org/licenses/alphabetical">here</a> 的信息。由于此软件包仅用于实践，因此使用任何许可证都是安全的。我们使用 <code class="docutils literal notranslate"><span class="pre">Apache</span> <span class="pre">License</span> <span class="pre">2.0</span></code> : <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7168">[待校准&#64;7168]</a></p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;license&gt;</span>Apache License 2.0<span class="nt">&lt;/license&gt;</span>
 </pre></div>
 </div>
-<p>完成编辑后，不要忘记保存。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7169">[待校准&#64;7169]</a></p>
-<p>在许可证标签下面，你会看到一些以 <code class="docutils literal notranslate"><span class="pre">_depend</span></code> 结尾的标签名称。这是你的 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 列出它对其他包的依赖的地方，供colcon搜索。 <code class="docutils literal notranslate"><span class="pre">my_package</span></code> 很简单，没有任何依赖关系，但是你会在即将到来的教程中看到这个空间。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7170">[待校准&#64;7170]</a></p>
+<p>完成编辑后，不要忘记保存。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7169">[待校准&#64;7169]</a></p>
+<p>在许可证标签下面，你会看到一些以 <code class="docutils literal notranslate"><span class="pre">_depend</span></code> 结尾的标签名称。这是你的 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 列出它对其他包的依赖的地方，供colcon搜索。 <code class="docutils literal notranslate"><span class="pre">my_package</span></code> 很简单，没有任何依赖关系，但是你会在即将到来的教程中看到这个空间。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7170">[待校准&#64;7170]</a></p>
 <div class="sphinx-tabs docutils container">
-<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-12-Q01ha2U=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-12-Q01ha2U=" name="Q01ha2U=" role="tab" tabindex="0">CMake</button><button aria-controls="panel-12-UHl0aG9u" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-12-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="-1">Python</button></div><div aria-labelledby="tab-12-Q01ha2U=" class="sphinx-tabs-panel group-tab" id="panel-12-Q01ha2U=" name="Q01ha2U=" role="tabpanel" tabindex="0"><p>你们现在都完了! <a class="reference external" href="http://localhost:3000/#/home?msgid=7171">[待校准&#64;7171]</a></p>
-</div><div aria-labelledby="tab-12-UHl0aG9u" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-12-UHl0aG9u" name="UHl0aG9u" role="tabpanel" tabindex="0"><p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> 文件包含与 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 相同的描述、维护者和许可字段，因此您也需要设置它们。它们需要在两个文件中完全匹配。版本和名称 ( <code class="docutils literal notranslate"><span class="pre">package_name</span></code> ) 也需要精确匹配，并且应该自动调用y填充在两个文件中。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7172">[待校准&#64;7172]</a></p>
-<p>使用您喜欢的文本编辑器打开 <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7173">[待校准&#64;7173]</a></p>
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-12-Q01ha2U=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-12-Q01ha2U=" name="Q01ha2U=" role="tab" tabindex="0">CMake</button><button aria-controls="panel-12-UHl0aG9u" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-12-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="-1">Python</button></div><div aria-labelledby="tab-12-Q01ha2U=" class="sphinx-tabs-panel group-tab" id="panel-12-Q01ha2U=" name="Q01ha2U=" role="tabpanel" tabindex="0"><p>你们现在都完了! <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7171">[待校准&#64;7171]</a></p>
+</div><div aria-labelledby="tab-12-UHl0aG9u" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-12-UHl0aG9u" name="UHl0aG9u" role="tabpanel" tabindex="0"><p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> 文件包含与 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 相同的描述、维护者和许可字段，因此您也需要设置它们。它们需要在两个文件中完全匹配。版本和名称 ( <code class="docutils literal notranslate"><span class="pre">package_name</span></code> ) 也需要精确匹配，并且应该自动调用y填充在两个文件中。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7172">[待校准&#64;7172]</a></p>
+<p>使用您喜欢的文本编辑器打开 <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7173">[待校准&#64;7173]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">setuptools</span> <span class="kn">import</span> <span class="n">setup</span>
 
 <span class="n">package_name</span> <span class="o">=</span> <span class="s1">&#39;my_py_pkg&#39;</span>
@@ -636,19 +636,19 @@
 <span class="p">)</span>
 </pre></div>
 </div>
-<p>编辑 <code class="docutils literal notranslate"><span class="pre">maintainer</span></code> 、 <code class="docutils literal notranslate"><span class="pre">maintainer_email</span></code> 和 <code class="docutils literal notranslate"><span class="pre">description</span></code> 线以匹配 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7174">[待校准&#64;7174]</a></p>
-<p>不要忘记保存文件。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7175">[待校准&#64;7175]</a></p>
+<p>编辑 <code class="docutils literal notranslate"><span class="pre">maintainer</span></code> 、 <code class="docutils literal notranslate"><span class="pre">maintainer_email</span></code> 和 <code class="docutils literal notranslate"><span class="pre">description</span></code> 线以匹配 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7174">[待校准&#64;7174]</a></p>
+<p>不要忘记保存文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7175">[待校准&#64;7175]</a></p>
 </div></div>
 </div>
 </div>
 <div class="section" id="summary">
-<h2>总结 <a class="reference external" href="http://localhost:3000/#/home?msgid=6747">[待校准&#64;6747]</a><a class="headerlink" href="#summary" title="永久链接至标题"></a></h2>
-<p>您已经创建了一个包来组织您的代码，并使其易于他人使用。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7176">[待校准&#64;7176]</a></p>
-<p>您的包被自动调用y填充了必要的文件，然后您使用colcon构建它，以便您可以在本地环境中使用其可执行文件。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7177">[待校准&#64;7177]</a></p>
+<h2>总结 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6747">[待校准&#64;6747]</a><a class="headerlink" href="#summary" title="永久链接至标题"></a></h2>
+<p>您已经创建了一个包来组织您的代码，并使其易于他人使用。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7176">[待校准&#64;7176]</a></p>
+<p>您的包被自动调用y填充了必要的文件，然后您使用colcon构建它，以便您可以在本地环境中使用其可执行文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7177">[待校准&#64;7177]</a></p>
 </div>
 <div class="section" id="next-steps">
-<h2>下一步 <a class="reference external" href="http://localhost:3000/#/home?msgid=6749">[待校准&#64;6749]</a><a class="headerlink" href="#next-steps" title="永久链接至标题"></a></h2>
-<p>接下来，让我们向包中添加一些有意义的内容。你将从一个简单的出版商/订阅者系统开始，你可以选择用 <a class="reference internal" href="Writing-A-Simple-Cpp-Publisher-And-Subscriber.html"><span class="doc">C++</span></a> or <a class="reference internal" href="Writing-A-Simple-Py-Publisher-And-Subscriber.html"><span class="doc">Python</span></a> 写。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7178">[待校准&#64;7178]</a></p>
+<h2>下一步 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6749">[待校准&#64;6749]</a><a class="headerlink" href="#next-steps" title="永久链接至标题"></a></h2>
+<p>接下来，让我们向包中添加一些有意义的内容。你将从一个简单的出版商/订阅者系统开始，你可以选择用 <a class="reference internal" href="Writing-A-Simple-Cpp-Publisher-And-Subscriber.html"><span class="doc">C++</span></a> or <a class="reference internal" href="Writing-A-Simple-Py-Publisher-And-Subscriber.html"><span class="doc">Python</span></a> 写。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7178">[待校准&#64;7178]</a></p>
 </div>
 </div>
 

@@ -279,17 +279,17 @@
 
 
   <div class="section" id="trying-the-dummy-robot-demo">
-<h1>尝试dummy robot例程 <a class="reference external" href="http://localhost:3000/#/home?msgid=9496">[待校准&#64;9496]</a><a class="headerlink" href="#trying-the-dummy-robot-demo" title="永久链接至标题"></a></h1>
-<p>在这个例程中，我们展示了一个简单的机器人例程，它包含从发布联合状态到发布假激光数据到在RViz地图上可视化机器人模型的所有组件。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9497">[待校准&#64;9497]</a></p>
+<h1>尝试dummy robot例程 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9496">[待校准&#64;9496]</a><a class="headerlink" href="#trying-the-dummy-robot-demo" title="永久链接至标题"></a></h1>
+<p>在这个例程中，我们展示了一个简单的机器人例程，它包含从发布联合状态到发布假激光数据到在RViz地图上可视化机器人模型的所有组件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9497">[待校准&#64;9497]</a></p>
 <div class="section" id="launching-the-demo">
-<h2>Launch的例程 <a class="reference external" href="http://localhost:3000/#/home?msgid=9498">[待校准&#64;9498]</a><a class="headerlink" href="#launching-the-demo" title="永久链接至标题"></a></h2>
-<p>我们假设您的ROS 2安装目录为 “~/ros2_ws”。请根据您的平台更改目录。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9499">[待校准&#64;9499]</a></p>
-<p>为了启动例程，我们执行bringuplaunch文件的例程，我们将在下一节中详细解释。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9500">[待校准&#64;9500]</a></p>
+<h2>Launch的例程 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9498">[待校准&#64;9498]</a><a class="headerlink" href="#launching-the-demo" title="永久链接至标题"></a></h2>
+<p>我们假设您的ROS 2安装目录为 “~/ros2_ws”。请根据您的平台更改目录。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9499">[待校准&#64;9499]</a></p>
+<p>为了启动例程，我们执行bringuplaunch文件的例程，我们将在下一节中详细解释。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9500">[待校准&#64;9500]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> ~/ros2_ws/install/setup.bash
 ros2 launch dummy_robot_bringup dummy_robot_bringup.launch.py
 </pre></div>
 </div>
-<p>您应该会在终端内看到一些类似以下内容的照片: <a class="reference external" href="http://localhost:3000/#/home?msgid=9501">[待校准&#64;9501]</a></p>
+<p>您应该会在终端内看到一些类似以下内容的照片: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9501">[待校准&#64;9501]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span>INFO<span class="o">]</span> <span class="o">[</span>launch<span class="o">]</span>: process<span class="o">[</span>dummy_map_server-1<span class="o">]</span>: started with pid <span class="o">[</span><span class="m">25812</span><span class="o">]</span>
 <span class="o">[</span>INFO<span class="o">]</span> <span class="o">[</span>launch<span class="o">]</span>: process<span class="o">[</span>robot_state_publisher-2<span class="o">]</span>: started with pid <span class="o">[</span><span class="m">25813</span><span class="o">]</span>
 <span class="o">[</span>INFO<span class="o">]</span> <span class="o">[</span>launch<span class="o">]</span>: process<span class="o">[</span>dummy_joint_states-3<span class="o">]</span>: started with pid <span class="o">[</span><span class="m">25814</span><span class="o">]</span>
@@ -317,26 +317,26 @@ Adding fixed segment from single_rrbot_link3 to single_rrbot_camera_link
 Adding fixed segment from single_rrbot_link3 to single_rrbot_hokuyo_link
 </pre></div>
 </div>
-<p>如果你现在在下一个终端打开你的RViz，你会看到你的机器人。🎉 <a class="reference external" href="http://localhost:3000/#/home?msgid=9502">[待校准&#64;9502]</a></p>
+<p>如果你现在在下一个终端打开你的RViz，你会看到你的机器人。🎉 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9502">[待校准&#64;9502]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">source</span> &lt;ROS2_INSTALL_FOLDER&gt;/setup.bash
 $ rviz2
 </pre></div>
 </div>
-<p>这开启了RViz2。假设您的dummy_robot_bringup仍然是launch，您现在可以添加TF显示插件并将全局帧配置为 <code class="docutils literal notranslate"><span class="pre">world</span></code> 。完成此操作后，您应该会看到类似的图片: <a class="reference external" href="http://localhost:3000/#/home?msgid=9503">[待校准&#64;9503]</a></p>
+<p>这开启了RViz2。假设您的dummy_robot_bringup仍然是launch，您现在可以添加TF显示插件并将全局帧配置为 <code class="docutils literal notranslate"><span class="pre">world</span></code> 。完成此操作后，您应该会看到类似的图片: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9503">[待校准&#64;9503]</a></p>
 <a class="reference external image-reference" href="https://i.imgur.com/pCFDTCv.png"><img alt="" src="https://i.imgur.com/pCFDTCv.png" /></a>
 <div class="section" id="what-s-happening">
-<h3>发生什么事了？ <a class="reference external" href="http://localhost:3000/#/home?msgid=9504">[待校准&#64;9504]</a><a class="headerlink" href="#what-s-happening" title="永久链接至标题"></a></h3>
-<p>如果你仔细看看launch文件，我们会同时启动几个节点。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9505">[待校准&#64;9505]</a></p>
+<h3>发生什么事了？ <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9504">[待校准&#64;9504]</a><a class="headerlink" href="#what-s-happening" title="永久链接至标题"></a></h3>
+<p>如果你仔细看看launch文件，我们会同时启动几个节点。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9505">[待校准&#64;9505]</a></p>
 <ul class="simple">
-<li><p>dummy_map_server <a class="reference external" href="http://localhost:3000/#/home?msgid=9506">[待校准&#64;9506]</a></p></li>
-<li><p>虚拟激光 <a class="reference external" href="http://localhost:3000/#/home?msgid=9507">[待校准&#64;9507]</a></p></li>
-<li><p>dummy_joint_states <a class="reference external" href="http://localhost:3000/#/home?msgid=9508">[待校准&#64;9508]</a></p></li>
-<li><p>Robot_state_发布者 <a class="reference external" href="http://localhost:3000/#/home?msgid=9509">[待校准&#64;9509]</a></p></li>
+<li><p>dummy_map_server <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9506">[待校准&#64;9506]</a></p></li>
+<li><p>虚拟激光 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9507">[待校准&#64;9507]</a></p></li>
+<li><p>dummy_joint_states <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9508">[待校准&#64;9508]</a></p></li>
+<li><p>Robot_state_发布者 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9509">[待校准&#64;9509]</a></p></li>
 </ul>
-<p>前两个包相对简单。 <code class="docutils literal notranslate"><span class="pre">dummy_map_server</span></code> 不断发布带有定期更新的空地图。 <code class="docutils literal notranslate"><span class="pre">dummy_laser</span></code> 也会调用y; 发布虚拟的假激光扫描。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9510">[待校准&#64;9510]</a></p>
-<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">dummy_joint_states</span></code> 节点正在发布虚假的联合状态数据。当我们发布只有两个关节的简单RRbot时，此节点会发布这两个关节的关节状态值。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9511">[待校准&#64;9511]</a></p>
-<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">robot_state_publisher</span></code> 正在做真正有趣的工作。它解析给定的URDF文件，提取机器人模型并侦听传入的联合状态。有了这些信息，它发布了我们机器人的TF值，我们在RViz可视化。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9512">[待校准&#64;9512]</a></p>
-<p>万岁! <a class="reference external" href="http://localhost:3000/#/home?msgid=9513">[待校准&#64;9513]</a></p>
+<p>前两个包相对简单。 <code class="docutils literal notranslate"><span class="pre">dummy_map_server</span></code> 不断发布带有定期更新的空地图。 <code class="docutils literal notranslate"><span class="pre">dummy_laser</span></code> 也会调用y; 发布虚拟的假激光扫描。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9510">[待校准&#64;9510]</a></p>
+<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">dummy_joint_states</span></code> 节点正在发布虚假的联合状态数据。当我们发布只有两个关节的简单RRbot时，此节点会发布这两个关节的关节状态值。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9511">[待校准&#64;9511]</a></p>
+<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">robot_state_publisher</span></code> 正在做真正有趣的工作。它解析给定的URDF文件，提取机器人模型并侦听传入的联合状态。有了这些信息，它发布了我们机器人的TF值，我们在RViz可视化。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9512">[待校准&#64;9512]</a></p>
+<p>万岁! <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9513">[待校准&#64;9513]</a></p>
 </div>
 </div>
 </div>

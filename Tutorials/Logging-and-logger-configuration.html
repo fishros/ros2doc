@@ -280,22 +280,22 @@
 
 
   <div class="section" id="logging-and-logger-configuration-demo">
-<h1>日志和日志记录器配置例程 <a class="reference external" href="http://localhost:3000/#/home?msgid=7762">[待校准&#64;7762]</a><a class="headerlink" href="#logging-and-logger-configuration-demo" title="永久链接至标题"></a></h1>
-<p>有关可用功能的详细信息，请参见 <a class="reference internal" href="../Concepts/About-Logging.html"><span class="doc">the logging page</span></a>  。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7763">[待校准&#64;7763]</a></p>
-<p>本例程，不同类型的日志调用s显示和严重水平不同日志记录器s配置lo调用y和外部。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7764">[待校准&#64;7764]</a></p>
-<p>使用以下命令启动例程: <a class="reference external" href="http://localhost:3000/#/home?msgid=7765">[待校准&#64;7765]</a></p>
+<h1>日志和日志记录器配置例程 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7762">[待校准&#64;7762]</a><a class="headerlink" href="#logging-and-logger-configuration-demo" title="永久链接至标题"></a></h1>
+<p>有关可用功能的详细信息，请参见 <a class="reference internal" href="../Concepts/About-Logging.html"><span class="doc">the logging page</span></a>  。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7763">[待校准&#64;7763]</a></p>
+<p>本例程，不同类型的日志调用s显示和严重水平不同日志记录器s配置lo调用y和外部。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7764">[待校准&#64;7764]</a></p>
+<p>使用以下命令启动例程: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7765">[待校准&#64;7765]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 run logging_demo logging_demo_main
 </pre></div>
 </div>
-<p>随着时间的推移，您将看到具有不同属性的各种日志调用的输出。首先，您将只看到严重程度为 <code class="docutils literal notranslate"><span class="pre">INFO</span></code> 及以上 ( <code class="docutils literal notranslate"><span class="pre">WARN</span></code> 、 <code class="docutils literal notranslate"><span class="pre">ERROR</span></code> 、 <code class="docutils literal notranslate"><span class="pre">FATAL</span></code> ) 的日志调用的输出。请注意，第一条消息只会被记录一次，尽管每次迭代都到达该行，因为这是用于该消息的日志调用的属性。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7766">[待校准&#64;7766]</a></p>
+<p>随着时间的推移，您将看到具有不同属性的各种日志调用的输出。首先，您将只看到严重程度为 <code class="docutils literal notranslate"><span class="pre">INFO</span></code> 及以上 ( <code class="docutils literal notranslate"><span class="pre">WARN</span></code> 、 <code class="docutils literal notranslate"><span class="pre">ERROR</span></code> 、 <code class="docutils literal notranslate"><span class="pre">FATAL</span></code> ) 的日志调用的输出。请注意，第一条消息只会被记录一次，尽管每次迭代都到达该行，因为这是用于该消息的日志调用的属性。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7766">[待校准&#64;7766]</a></p>
 <div class="section" id="logging-directory-configuration">
-<h2>日志目录配置 <a class="reference external" href="http://localhost:3000/#/home?msgid=7767">[待校准&#64;7767]</a><a class="headerlink" href="#logging-directory-configuration" title="永久链接至标题"></a></h2>
-<p>日志目录可以通过两个环境变量进行配置:  <code class="docutils literal notranslate"><span class="pre">ROS_LOG_DIR</span></code> 和 <code class="docutils literal notranslate"><span class="pre">ROS_HOME</span></code> 。逻辑如下: <a class="reference external" href="http://localhost:3000/#/home?msgid=7768">[待校准&#64;7768]</a></p>
+<h2>日志目录配置 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7767">[待校准&#64;7767]</a><a class="headerlink" href="#logging-directory-configuration" title="永久链接至标题"></a></h2>
+<p>日志目录可以通过两个环境变量进行配置:  <code class="docutils literal notranslate"><span class="pre">ROS_LOG_DIR</span></code> 和 <code class="docutils literal notranslate"><span class="pre">ROS_HOME</span></code> 。逻辑如下: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7768">[待校准&#64;7768]</a></p>
 <ul class="simple">
-<li><p>如果 <code class="docutils literal notranslate"><span class="pre">ROS_LOG_DIR</span></code> 设置为非空，则使用 “$ ROS_LOG_DIR”。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7769">[待校准&#64;7769]</a></p></li>
-<li><p>否则，使用 “$ ROS_HOME/log”，如果未设置或为空，则使用“ ~/.Ros'” 表示 <code class="docutils literal notranslate"><span class="pre">ROS_HOME</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7770">[待校准&#64;7770]</a></p></li>
+<li><p>如果 <code class="docutils literal notranslate"><span class="pre">ROS_LOG_DIR</span></code> 设置为非空，则使用 “$ ROS_LOG_DIR”。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7769">[待校准&#64;7769]</a></p></li>
+<li><p>否则，使用 “$ ROS_HOME/log”，如果未设置或为空，则使用“ ~/.Ros'” 表示 <code class="docutils literal notranslate"><span class="pre">ROS_HOME</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7770">[待校准&#64;7770]</a></p></li>
 </ul>
-<p>例如，要将日志目录设置为 “~/my_logs”: <a class="reference external" href="http://localhost:3000/#/home?msgid=7771">[待校准&#64;7771]</a></p>
+<p>例如，要将日志目录设置为 “~/my_logs”: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7771">[待校准&#64;7771]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-0-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-0-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-0-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-0-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-0-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">ROS_LOG_DIR</span><span class="o">=</span>~/my_logs
 ros2 run logging_demo logging_demo_main
@@ -310,8 +310,8 @@ ros2 run logging_demo logging_demo_main
 </pre></div>
 </div>
 </div></div>
-<p>然后，您将在 “~/my_logs/” 下找到日志。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7772">[待校准&#64;7772]</a></p>
-<p>或者，您可以设置 <code class="docutils literal notranslate"><span class="pre">ROS_HOME</span></code> ，日志目录将与其相关 (“$ ROS_HOME/log”)。 <code class="docutils literal notranslate"><span class="pre">ROS_HOME</span></code> 旨在供任何需要基本目录的人使用。请注意， <code class="docutils literal notranslate"><span class="pre">ROS_LOG_DIR</span></code> 必须是未设置的或空的。例如，将 <code class="docutils literal notranslate"><span class="pre">ROS_HOME</span></code> 设置为 “~/my_ros_home”: <a class="reference external" href="http://localhost:3000/#/home?msgid=7773">[待校准&#64;7773]</a></p>
+<p>然后，您将在 “~/my_logs/” 下找到日志。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7772">[待校准&#64;7772]</a></p>
+<p>或者，您可以设置 <code class="docutils literal notranslate"><span class="pre">ROS_HOME</span></code> ，日志目录将与其相关 (“$ ROS_HOME/log”)。 <code class="docutils literal notranslate"><span class="pre">ROS_HOME</span></code> 旨在供任何需要基本目录的人使用。请注意， <code class="docutils literal notranslate"><span class="pre">ROS_LOG_DIR</span></code> 必须是未设置的或空的。例如，将 <code class="docutils literal notranslate"><span class="pre">ROS_HOME</span></code> 设置为 “~/my_ros_home”: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7773">[待校准&#64;7773]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-1-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-1-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-1-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-1-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-1-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-1-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">ROS_HOME</span><span class="o">=</span>~/my_ros_home
 ros2 run logging_demo logging_demo_main
@@ -326,66 +326,66 @@ ros2 run logging_demo logging_demo_main
 </pre></div>
 </div>
 </div></div>
-<p>然后，您将在 “~/my_ros_home/log/” 下找到日志。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7774">[待校准&#64;7774]</a></p>
+<p>然后，您将在 “~/my_ros_home/log/” 下找到日志。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7774">[待校准&#64;7774]</a></p>
 </div>
 <div class="section" id="logger-level-configuration-programmatically">
-<h2>日志记录器级别配置: 编程调用y <a class="reference external" href="http://localhost:3000/#/home?msgid=7775">[待校准&#64;7775]</a><a class="headerlink" href="#logger-level-configuration-programmatically" title="永久链接至标题"></a></h2>
-<p>10次迭代后，日志记录器的级别将被设置为 <code class="docutils literal notranslate"><span class="pre">DEBUG</span></code> ，这将导致记录额外的消息。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7776">[待校准&#64;7776]</a></p>
-<p>其中一些调试消息导致计算附加函数/表达式，这些函数/表达式之前在未启用 <code class="docutils literal notranslate"><span class="pre">DEBUG</span></code> 日志调用时被跳过。有关所使用调用的进一步说明，请参阅例程的 <a class="reference external" href="https://github.com/ros2/demos/blob/foxy/logging_demo/src/logger_usage_component.cpp">the source code</a> ，有关支持的日志调用的完整列表，请参阅rclcpp日志文档。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7777">[待校准&#64;7777]</a></p>
+<h2>日志记录器级别配置: 编程调用y <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7775">[待校准&#64;7775]</a><a class="headerlink" href="#logger-level-configuration-programmatically" title="永久链接至标题"></a></h2>
+<p>10次迭代后，日志记录器的级别将被设置为 <code class="docutils literal notranslate"><span class="pre">DEBUG</span></code> ，这将导致记录额外的消息。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7776">[待校准&#64;7776]</a></p>
+<p>其中一些调试消息导致计算附加函数/表达式，这些函数/表达式之前在未启用 <code class="docutils literal notranslate"><span class="pre">DEBUG</span></code> 日志调用时被跳过。有关所使用调用的进一步说明，请参阅例程的 <a class="reference external" href="https://github.com/ros2/demos/blob/foxy/logging_demo/src/logger_usage_component.cpp">the source code</a> ，有关支持的日志调用的完整列表，请参阅rclcpp日志文档。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7777">[待校准&#64;7777]</a></p>
 </div>
 <div class="section" id="logger-level-configuration-externally">
-<h2>日志记录器级别配置: 外部 <a class="reference external" href="http://localhost:3000/#/home?msgid=7778">[待校准&#64;7778]</a><a class="headerlink" href="#logger-level-configuration-externally" title="永久链接至标题"></a></h2>
-<p>在未来会有广义方法外部配置日志记录器s在运行时 (类似于 <a class="reference external" href="https://wiki.ros.org/rqt_logger_level">rqt_logger_level</a> 在ROS 1允许日志记录器配置通过远程程序调用)。这一概念尚未在ROS 2中得到官方支持。同时，此例程提供了一个示例服务，可以从外部调用该服务，以请求为过程中已知的日志记录器名称配置日志记录器级别。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7779">[待校准&#64;7779]</a></p>
-<p>先前启动的例程已经在运行此示例服务。要将例程的日志记录器级别设置回 <code class="docutils literal notranslate"><span class="pre">INFO</span></code>  ，请使用以下命令调用服务: <a class="reference external" href="http://localhost:3000/#/home?msgid=7780">[待校准&#64;7780]</a></p>
+<h2>日志记录器级别配置: 外部 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7778">[待校准&#64;7778]</a><a class="headerlink" href="#logger-level-configuration-externally" title="永久链接至标题"></a></h2>
+<p>在未来会有广义方法外部配置日志记录器s在运行时 (类似于 <a class="reference external" href="https://wiki.ros.org/rqt_logger_level">rqt_logger_level</a> 在ROS 1允许日志记录器配置通过远程程序调用)。这一概念尚未在ROS 2中得到官方支持。同时，此例程提供了一个示例服务，可以从外部调用该服务，以请求为过程中已知的日志记录器名称配置日志记录器级别。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7779">[待校准&#64;7779]</a></p>
+<p>先前启动的例程已经在运行此示例服务。要将例程的日志记录器级别设置回 <code class="docutils literal notranslate"><span class="pre">INFO</span></code>  ，请使用以下命令调用服务: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7780">[待校准&#64;7780]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 service call /config_logger logging_demo/srv/ConfigLogger <span class="s2">&quot;{logger_name: &#39;logger_usage_demo&#39;, level: INFO}&quot;</span>
 </pre></div>
 </div>
-<p>只要您知道其名称，此服务调用将适用于进程中运行的任何日志记录器。这包括ROS 2核心中的日志记录器，例如 <code class="docutils literal notranslate"><span class="pre">rcl</span></code>  (通用客户端库包)。要为 <code class="docutils literal notranslate"><span class="pre">rcl</span></code> 启用调试日志，请调用: <a class="reference external" href="http://localhost:3000/#/home?msgid=7781">[待校准&#64;7781]</a></p>
+<p>只要您知道其名称，此服务调用将适用于进程中运行的任何日志记录器。这包括ROS 2核心中的日志记录器，例如 <code class="docutils literal notranslate"><span class="pre">rcl</span></code>  (通用客户端库包)。要为 <code class="docutils literal notranslate"><span class="pre">rcl</span></code> 启用调试日志，请调用: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7781">[待校准&#64;7781]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 service call /config_logger logging_demo/srv/ConfigLogger <span class="s2">&quot;{logger_name: &#39;rcl&#39;, level: DEBUG}&quot;</span>
 </pre></div>
 </div>
-<p>您应该会看到从 <code class="docutils literal notranslate"><span class="pre">rcl</span></code> 开始显示的调试输出。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7782">[待校准&#64;7782]</a></p>
+<p>您应该会看到从 <code class="docutils literal notranslate"><span class="pre">rcl</span></code> 开始显示的调试输出。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7782">[待校准&#64;7782]</a></p>
 <div class="section" id="using-the-logger-config-component">
-<h3>使用日志记录器配置组件 <a class="reference external" href="http://localhost:3000/#/home?msgid=7783">[待校准&#64;7783]</a><a class="headerlink" href="#using-the-logger-config-component" title="永久链接至标题"></a></h3>
-<p>响应日志记录器配置请求的服务器已被开发为组件，以便可以将其添加到现有的基于组合的系统中。例如，如果您使用 <a class="reference internal" href="Composition.html"><span class="doc">a container to run your nodes</span></a>, 来配置日志记录器，您只需要请求它额外将 “日志 _ 例程::日志记录器配置” 组件加载到容器中。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7784">[待校准&#64;7784]</a></p>
-<p>例如，如果要调试 “合成:: talker” 例程，则可以使用以下命令正常启动talker: <a class="reference external" href="http://localhost:3000/#/home?msgid=7785">[待校准&#64;7785]</a></p>
-<p>外壳1: <a class="reference external" href="http://localhost:3000/#/home?msgid=7786">[待校准&#64;7786]</a></p>
+<h3>使用日志记录器配置组件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7783">[待校准&#64;7783]</a><a class="headerlink" href="#using-the-logger-config-component" title="永久链接至标题"></a></h3>
+<p>响应日志记录器配置请求的服务器已被开发为组件，以便可以将其添加到现有的基于组合的系统中。例如，如果您使用 <a class="reference internal" href="Composition.html"><span class="doc">a container to run your nodes</span></a>, 来配置日志记录器，您只需要请求它额外将 “日志 _ 例程::日志记录器配置” 组件加载到容器中。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7784">[待校准&#64;7784]</a></p>
+<p>例如，如果要调试 “合成:: talker” 例程，则可以使用以下命令正常启动talker: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7785">[待校准&#64;7785]</a></p>
+<p>外壳1: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7786">[待校准&#64;7786]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 run rclcpp_components component_container
 </pre></div>
 </div>
-<p>外壳2: <a class="reference external" href="http://localhost:3000/#/home?msgid=7787">[待校准&#64;7787]</a></p>
+<p>外壳2: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7787">[待校准&#64;7787]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 component load /ComponentManager composition composition::Talker
 </pre></div>
 </div>
-<p>然后，当您想要启用调试日志时，使用以下命令加载 <code class="docutils literal notranslate"><span class="pre">LoggerConfig</span></code> 组件: <a class="reference external" href="http://localhost:3000/#/home?msgid=7788">[待校准&#64;7788]</a></p>
-<p>外壳2 <a class="reference external" href="http://localhost:3000/#/home?msgid=7789">[待校准&#64;7789]</a></p>
+<p>然后，当您想要启用调试日志时，使用以下命令加载 <code class="docutils literal notranslate"><span class="pre">LoggerConfig</span></code> 组件: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7788">[待校准&#64;7788]</a></p>
+<p>外壳2 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7789">[待校准&#64;7789]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 component load /ComponentManager logging_demo logging_demo::LoggerConfig
 </pre></div>
 </div>
-<p>最后，通过寻址空命名的日志记录器，将所有未设置的日志记录器配置为调试严重性。请注意，已指定调用为使用特定严重性的日志记录器将不受此调用的影响。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7790">[待校准&#64;7790]</a></p>
-<p>外壳2: <a class="reference external" href="http://localhost:3000/#/home?msgid=7787">[待校准&#64;7787]</a></p>
+<p>最后，通过寻址空命名的日志记录器，将所有未设置的日志记录器配置为调试严重性。请注意，已指定调用为使用特定严重性的日志记录器将不受此调用的影响。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7790">[待校准&#64;7790]</a></p>
+<p>外壳2: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7787">[待校准&#64;7787]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 service call /config_logger logging_demo/srv/ConfigLogger <span class="s2">&quot;{logger_name: &#39;&#39;, level: DEBUG}&quot;</span>
 </pre></div>
 </div>
-<p>您应该会看到进程中任何先前未设置的日志记录器的调试输出开始出现，包括ROS 2核心。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7791">[待校准&#64;7791]</a></p>
+<p>您应该会看到进程中任何先前未设置的日志记录器的调试输出开始出现，包括ROS 2核心。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7791">[待校准&#64;7791]</a></p>
 </div>
 </div>
 <div class="section" id="logger-level-configuration-command-line">
-<h2>日志记录器级别配置: 命令行 <a class="reference external" href="http://localhost:3000/#/home?msgid=7792">[待校准&#64;7792]</a><a class="headerlink" href="#logger-level-configuration-command-line" title="永久链接至标题"></a></h2>
-<p>从Bouncy ROS 2版本开始，可以从命令行配置尚未明确设置其严重性的日志记录器的严重性级别。重新启动包含以下命令行参数的例程: <a class="reference external" href="http://localhost:3000/#/home?msgid=7793">[待校准&#64;7793]</a></p>
+<h2>日志记录器级别配置: 命令行 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7792">[待校准&#64;7792]</a><a class="headerlink" href="#logger-level-configuration-command-line" title="永久链接至标题"></a></h2>
+<p>从Bouncy ROS 2版本开始，可以从命令行配置尚未明确设置其严重性的日志记录器的严重性级别。重新启动包含以下命令行参数的例程: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7793">[待校准&#64;7793]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 run logging_demo logging_demo_main --ros-args --log-level debug
 </pre></div>
 </div>
-<p>这会将任何未设置的日志记录器的默认严重性配置为调试严重性级别。您应该可以从例程本身和ROS 2核心看到日志记录器的调试输出。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7794">[待校准&#64;7794]</a></p>
-<p>从GalacticROS 2发布开始，可以从命令行配置单个日志记录器的严重性级别。重新启动包含以下命令行参数的例程: <a class="reference external" href="http://localhost:3000/#/home?msgid=7795">[待校准&#64;7795]</a></p>
+<p>这会将任何未设置的日志记录器的默认严重性配置为调试严重性级别。您应该可以从例程本身和ROS 2核心看到日志记录器的调试输出。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7794">[待校准&#64;7794]</a></p>
+<p>从GalacticROS 2发布开始，可以从命令行配置单个日志记录器的严重性级别。重新启动包含以下命令行参数的例程: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7795">[待校准&#64;7795]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-2-R2FsYWN0aWMgYW5kIG5ld2Vy" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-2-R2FsYWN0aWMgYW5kIG5ld2Vy" name="R2FsYWN0aWMgYW5kIG5ld2Vy" role="tab" tabindex="0">Galactic and newer</button></div><div aria-labelledby="tab-2-R2FsYWN0aWMgYW5kIG5ld2Vy" class="sphinx-tabs-panel group-tab" id="panel-2-R2FsYWN0aWMgYW5kIG5ld2Vy" name="R2FsYWN0aWMgYW5kIG5ld2Vy" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 run logging_demo logging_demo_main --ros-args --log-level logger_usage_demo:<span class="o">=</span>debug
 </pre></div>
 </div>
 </div></div>
 <div class="section" id="console-output-formatting">
-<h3>控制台输出格式 <a class="reference external" href="http://localhost:3000/#/home?msgid=7797">[待校准&#64;7797]</a><a class="headerlink" href="#console-output-formatting" title="永久链接至标题"></a></h3>
-<p>如果您想要或多或少的详细格式，可以使用RCUTILS_CONSOLE_OUTPUT_FORMAT环境变量。例如，要另外获取日志调用的时间戳和位置，请停止例程，然后使用环境变量集重新启动它: <a class="reference external" href="http://localhost:3000/#/home?msgid=7798">[待校准&#64;7798]</a></p>
+<h3>控制台输出格式 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7797">[待校准&#64;7797]</a><a class="headerlink" href="#console-output-formatting" title="永久链接至标题"></a></h3>
+<p>如果您想要或多或少的详细格式，可以使用RCUTILS_CONSOLE_OUTPUT_FORMAT环境变量。例如，要另外获取日志调用的时间戳和位置，请停止例程，然后使用环境变量集重新启动它: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7798">[待校准&#64;7798]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-3-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-3-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-3-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-3-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-3-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-3-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-3-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-3-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">RCUTILS_CONSOLE_OUTPUT_FORMAT</span><span class="o">=</span><span class="s2">&quot;[{severity} {time}] [{name}]: {message} ({function_name}() at {file_name}:{line_number})&quot;</span>
 </pre></div>
@@ -398,11 +398,11 @@ ros2 run logging_demo logging_demo_main
 </pre></div>
 </div>
 </div></div>
-<p>您应该会看到以秒为单位的时间戳，以及随每条消息另外打印的函数名称、文件名和行号。* 只有在ROS 2弹性版本时才支持 <code class="docutils literal notranslate"><span class="pre">time</span></code> 选项。* <a class="reference external" href="http://localhost:3000/#/home?msgid=7799">[待校准&#64;7799]</a></p>
+<p>您应该会看到以秒为单位的时间戳，以及随每条消息另外打印的函数名称、文件名和行号。* 只有在ROS 2弹性版本时才支持 <code class="docutils literal notranslate"><span class="pre">time</span></code> 选项。* <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7799">[待校准&#64;7799]</a></p>
 </div>
 <div class="section" id="console-output-colorizing">
-<h3>控制台输出着色 <a class="reference external" href="http://localhost:3000/#/home?msgid=7800">[待校准&#64;7800]</a><a class="headerlink" href="#console-output-colorizing" title="永久链接至标题"></a></h3>
-<p>默认情况下，当输出瞄准终端时，它会着色。如果要强制启用或禁用它，可以使用 <code class="docutils literal notranslate"><span class="pre">RCUTILS_COLORIZED_OUTPUT</span></code> 环境变量。例如: <a class="reference external" href="http://localhost:3000/#/home?msgid=7801">[待校准&#64;7801]</a></p>
+<h3>控制台输出着色 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7800">[待校准&#64;7800]</a><a class="headerlink" href="#console-output-colorizing" title="永久链接至标题"></a></h3>
+<p>默认情况下，当输出瞄准终端时，它会着色。如果要强制启用或禁用它，可以使用 <code class="docutils literal notranslate"><span class="pre">RCUTILS_COLORIZED_OUTPUT</span></code> 环境变量。例如: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7801">[待校准&#64;7801]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-4-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-4-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-4-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-4-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-4-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-4-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-4-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-4-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">RCUTILS_COLORIZED_OUTPUT</span><span class="o">=</span><span class="m">0</span>  <span class="c1"># 1 for forcing it</span>
 </pre></div>
@@ -415,15 +415,15 @@ ros2 run logging_demo logging_demo_main
 </pre></div>
 </div>
 </div></div>
-<p>您应该看到调试、警告、错误和致命日志现在没有着色。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7802">[待校准&#64;7802]</a></p>
+<p>您应该看到调试、警告、错误和致命日志现在没有着色。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7802">[待校准&#64;7802]</a></p>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
-<p>在Linux和MacOS中，强制彩色输出意味着如果将输出重定向到文件，则会出现ansi转义颜色代码。在windows中，着色方法依赖于控制台api。如果是被迫的，你会得到一个新的警告，说着色失败。默认行为已经检查输出是否是控制台，因此不建议强制着色。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7803">[待校准&#64;7803]</a></p>
+<p>在Linux和MacOS中，强制彩色输出意味着如果将输出重定向到文件，则会出现ansi转义颜色代码。在windows中，着色方法依赖于控制台api。如果是被迫的，你会得到一个新的警告，说着色失败。默认行为已经检查输出是否是控制台，因此不建议强制着色。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7803">[待校准&#64;7803]</a></p>
 </div>
 </div>
 <div class="section" id="default-stream-for-console-output">
-<h3>控制台输出的默认流 <a class="reference external" href="http://localhost:3000/#/home?msgid=7804">[待校准&#64;7804]</a><a class="headerlink" href="#default-stream-for-console-output" title="永久链接至标题"></a></h3>
-<p>在Foxy及更高版本中，默认情况下，所有调试级别的输出都将转到stderr。通过将 <code class="docutils literal notranslate"><span class="pre">RCUTILS_LOGGING_USE_STDOUT</span></code> 环境变量设置为 <code class="docutils literal notranslate"><span class="pre">1</span></code> ，可以强制所有输出转到标准输出。例如: <a class="reference external" href="http://localhost:3000/#/home?msgid=7805">[待校准&#64;7805]</a></p>
+<h3>控制台输出的默认流 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7804">[待校准&#64;7804]</a><a class="headerlink" href="#default-stream-for-console-output" title="永久链接至标题"></a></h3>
+<p>在Foxy及更高版本中，默认情况下，所有调试级别的输出都将转到stderr。通过将 <code class="docutils literal notranslate"><span class="pre">RCUTILS_LOGGING_USE_STDOUT</span></code> 环境变量设置为 <code class="docutils literal notranslate"><span class="pre">1</span></code> ，可以强制所有输出转到标准输出。例如: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7805">[待校准&#64;7805]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-5-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-5-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-5-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-5-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-5-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-5-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-5-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-5-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">RCUTILS_LOGGING_USE_STDOUT</span><span class="o">=</span><span class="m">1</span>
 </pre></div>
@@ -437,8 +437,8 @@ ros2 run logging_demo logging_demo_main
 </div></div>
 </div>
 <div class="section" id="line-buffered-console-output">
-<h3>线路缓冲控制台输出 <a class="reference external" href="http://localhost:3000/#/home?msgid=7806">[待校准&#64;7806]</a><a class="headerlink" href="#line-buffered-console-output" title="永久链接至标题"></a></h3>
-<p>默认情况下，所有日志输出都是无缓冲的。您可以通过将 <code class="docutils literal notranslate"><span class="pre">RCUTILS_LOGGING_BUFFERED_STREAM</span></code> 环境变量设置为1来强制对其进行缓冲。例如: <a class="reference external" href="http://localhost:3000/#/home?msgid=7807">[待校准&#64;7807]</a></p>
+<h3>线路缓冲控制台输出 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7806">[待校准&#64;7806]</a><a class="headerlink" href="#line-buffered-console-output" title="永久链接至标题"></a></h3>
+<p>默认情况下，所有日志输出都是无缓冲的。您可以通过将 <code class="docutils literal notranslate"><span class="pre">RCUTILS_LOGGING_BUFFERED_STREAM</span></code> 环境变量设置为1来强制对其进行缓冲。例如: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7807">[待校准&#64;7807]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-6-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-6-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-6-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-6-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-6-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-6-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-6-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-6-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">RCUTILS_LOGGING_BUFFERED_STREAM</span><span class="o">=</span><span class="m">1</span>
 </pre></div>
@@ -450,7 +450,7 @@ ros2 run logging_demo logging_demo_main
 </pre></div>
 </div>
 </div></div>
-<p>然后运行: <a class="reference external" href="http://localhost:3000/#/home?msgid=7808">[待校准&#64;7808]</a></p>
+<p>然后运行: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7808">[待校准&#64;7808]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 run logging_demo logging_demo_main
 </pre></div>
 </div>

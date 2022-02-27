@@ -280,12 +280,12 @@
 
 
   <div class="section" id="time-travel-with-tf2-python">
-<span id="timetravelwithtf2py"></span><h1>时间穿梭tf2 (Python) <a class="reference external" href="http://localhost:3000/#/home?msgid=8570">[待校准&#64;8570]</a><a class="headerlink" href="#time-travel-with-tf2-python" title="永久链接至标题"></a></h1>
-<p>Goal目标: Learn了解tf2的高级时间穿梭功能。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8546">[待校准&#64;8546]</a></p>
-<p>Tutorial教程级别: Advanced高级 <a class="reference external" href="http://localhost:3000/#/home?msgid=7643">[待校准&#64;7643]</a></p>
-<p>Time时间: 10 10分钟 <a class="reference external" href="http://localhost:3000/#/home?msgid=7452">[待校准&#64;7452]</a></p>
+<span id="timetravelwithtf2py"></span><h1>时间穿梭tf2 (Python) <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8570">[待校准&#64;8570]</a><a class="headerlink" href="#time-travel-with-tf2-python" title="永久链接至标题"></a></h1>
+<p>Goal目标: Learn了解tf2的高级时间穿梭功能。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8546">[待校准&#64;8546]</a></p>
+<p>Tutorial教程级别: Advanced高级 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7643">[待校准&#64;7643]</a></p>
+<p>Time时间: 10 10分钟 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7452">[待校准&#64;7452]</a></p>
 <div class="contents local topic" id="contents">
-<p class="topic-title">内容 <a class="reference external" href="http://localhost:3000/#/home?msgid=6715">[待校准&#64;6715]</a></p>
+<p class="topic-title">内容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6715">[待校准&#64;6715]</a></p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#background" id="id1">背景 [待校准&#64;6716]</a></p></li>
 <li><p><a class="reference internal" href="#time-travel" id="id2">时间穿梭 [待校准&#64;8549]</a></p></li>
@@ -295,14 +295,14 @@
 </ul>
 </div>
 <div class="section" id="background">
-<h2>背景 <a class="reference external" href="http://localhost:3000/#/home?msgid=6716">[待校准&#64;6716]</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
-<p>在之前的教程中，我们讨论了 <a class="reference internal" href="Learning-About-Tf2-And-Time-Py.html"><span class="doc">basics of tf2 and time</span></a> 。本教程将带我们更进一步，展示一个强大的tf2技巧: 时间穿梭。简而言之，tf2库的关键特征之一是它能够在时间和空间上转换数据。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8571">[待校准&#64;8571]</a></p>
-<p>tf2时间穿梭功能可用于各种任务，如长时间监控机器人的姿势或构建跟随领导者  &quot;steps&quot; 的追随者机器人。我们将使用时间穿梭功能查找时间的转换，并将 <code class="docutils literal notranslate"><span class="pre">turtle2</span></code> 编程为在 <code class="docutils literal notranslate"><span class="pre">carrot1</span></code> 后5秒。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8548">[待校准&#64;8548]</a></p>
+<h2>背景 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6716">[待校准&#64;6716]</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
+<p>在之前的教程中，我们讨论了 <a class="reference internal" href="Learning-About-Tf2-And-Time-Py.html"><span class="doc">basics of tf2 and time</span></a> 。本教程将带我们更进一步，展示一个强大的tf2技巧: 时间穿梭。简而言之，tf2库的关键特征之一是它能够在时间和空间上转换数据。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8571">[待校准&#64;8571]</a></p>
+<p>tf2时间穿梭功能可用于各种任务，如长时间监控机器人的姿势或构建跟随领导者  &quot;steps&quot; 的追随者机器人。我们将使用时间穿梭功能查找时间的转换，并将 <code class="docutils literal notranslate"><span class="pre">turtle2</span></code> 编程为在 <code class="docutils literal notranslate"><span class="pre">carrot1</span></code> 后5秒。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8548">[待校准&#64;8548]</a></p>
 </div>
 <div class="section" id="time-travel">
-<h2>时间穿梭 <a class="reference external" href="http://localhost:3000/#/home?msgid=8549">[待校准&#64;8549]</a><a class="headerlink" href="#time-travel" title="永久链接至标题"></a></h2>
-<p>首先，让我们回到上一教程 <a class="reference internal" href="Learning-About-Tf2-And-Time-Py.html"><span class="doc">Learning about tf2 and time</span></a> 的结尾。去你的 <code class="docutils literal notranslate"><span class="pre">learning_tf2_py</span></code> 包裹。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8572">[待校准&#64;8572]</a></p>
-<p>现在，我们将让第二只乌龟去5秒前第一只胡萝卜的地方，而不是让第二只乌龟去胡萝卜现在所在的地方。编辑 <code class="docutils literal notranslate"><span class="pre">lookup_transform()</span></code> 调用在 <code class="docutils literal notranslate"><span class="pre">turtle_tf2_listener.py</span></code> 文件 <a class="reference external" href="http://localhost:3000/#/home?msgid=8573">[待校准&#64;8573]</a></p>
+<h2>时间穿梭 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8549">[待校准&#64;8549]</a><a class="headerlink" href="#time-travel" title="永久链接至标题"></a></h2>
+<p>首先，让我们回到上一教程 <a class="reference internal" href="Learning-About-Tf2-And-Time-Py.html"><span class="doc">Learning about tf2 and time</span></a> 的结尾。去你的 <code class="docutils literal notranslate"><span class="pre">learning_tf2_py</span></code> 包裹。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8572">[待校准&#64;8572]</a></p>
+<p>现在，我们将让第二只乌龟去5秒前第一只胡萝卜的地方，而不是让第二只乌龟去胡萝卜现在所在的地方。编辑 <code class="docutils literal notranslate"><span class="pre">lookup_transform()</span></code> 调用在 <code class="docutils literal notranslate"><span class="pre">turtle_tf2_listener.py</span></code> 文件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8573">[待校准&#64;8573]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">when</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_clock</span><span class="p">()</span><span class="o">.</span><span class="n">now</span><span class="p">()</span> <span class="o">-</span> <span class="n">rclpy</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">Duration</span><span class="p">(</span><span class="n">seconds</span><span class="o">=</span><span class="mf">5.0</span><span class="p">)</span>
 <span class="n">trans</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_tf_buffer</span><span class="o">.</span><span class="n">lookup_transform</span><span class="p">(</span>
     <span class="n">to_frame_rel</span><span class="p">,</span>
@@ -311,20 +311,20 @@
     <span class="n">timeout</span><span class="o">=</span><span class="n">Duration</span><span class="p">(</span><span class="n">seconds</span><span class="o">=</span><span class="mf">0.05</span><span class="p">))</span>
 </pre></div>
 </div>
-<p>如果你运行这个，在最初的5秒内，第二只乌龟不知道去哪里，因为我们还没有5秒的胡萝卜姿势的历史。但是这5秒后会发生什么呢？让我们试一试: <a class="reference external" href="http://localhost:3000/#/home?msgid=8552">[待校准&#64;8552]</a></p>
+<p>如果你运行这个，在最初的5秒内，第二只乌龟不知道去哪里，因为我们还没有5秒的胡萝卜姿势的历史。但是这5秒后会发生什么呢？让我们试一试: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8552">[待校准&#64;8552]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 launch learning_tf2_py turtle_tf2_fixed_frame_demo.launch.py</span>
 </pre></div>
 </div>
 <img alt="../../_images/turtlesim_delay1.png" src="../../_images/turtlesim_delay1.png" />
-<p>你现在应该注意到你的乌龟正在不受控制地四处走动，就像这张截图中那样。让我们试着理解这种行为背后的原因。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8553">[待校准&#64;8553]</a></p>
+<p>你现在应该注意到你的乌龟正在不受控制地四处走动，就像这张截图中那样。让我们试着理解这种行为背后的原因。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8553">[待校准&#64;8553]</a></p>
 <ol class="arabic simple">
-<li><p>在我们的代码中，我们问了tf2以下问题: “5秒前 <code class="docutils literal notranslate"><span class="pre">carrot1</span></code> 相对于5秒前 <code class="docutils literal notranslate"><span class="pre">turtle2</span></code> 的姿势是什么？”。这意味着我们根据5秒前的位置以及5秒前的第一个胡萝卜位置来控制第二个乌龟。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8554">[待校准&#64;8554]</a></p></li>
-<li><p>然而，我们真正想问的是: “5秒前 <code class="docutils literal notranslate"><span class="pre">carrot1</span></code> 相对于 <code class="docutils literal notranslate"><span class="pre">turtle2</span></code> 目前的位置是什么姿势？”。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8555">[待校准&#64;8555]</a></p></li>
+<li><p>在我们的代码中，我们问了tf2以下问题: “5秒前 <code class="docutils literal notranslate"><span class="pre">carrot1</span></code> 相对于5秒前 <code class="docutils literal notranslate"><span class="pre">turtle2</span></code> 的姿势是什么？”。这意味着我们根据5秒前的位置以及5秒前的第一个胡萝卜位置来控制第二个乌龟。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8554">[待校准&#64;8554]</a></p></li>
+<li><p>然而，我们真正想问的是: “5秒前 <code class="docutils literal notranslate"><span class="pre">carrot1</span></code> 相对于 <code class="docutils literal notranslate"><span class="pre">turtle2</span></code> 目前的位置是什么姿势？”。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8555">[待校准&#64;8555]</a></p></li>
 </ol>
 </div>
 <div class="section" id="advanced-api-for-lookup-transform">
-<h2>用于lookup_transform的高级API () <a class="reference external" href="http://localhost:3000/#/home?msgid=8574">[待校准&#64;8574]</a><a class="headerlink" href="#advanced-api-for-lookup-transform" title="永久链接至标题"></a></h2>
-<p>要向tf2提出该特定问题，我们将使用高级API，该API使我们能够明确说明何时获取指定的转换。这是通过调用带有附加参数的 <code class="docutils literal notranslate"><span class="pre">lookup_transform_full()</span></code> 方法来完成的。您的代码现在如下所示: <a class="reference external" href="http://localhost:3000/#/home?msgid=8575">[待校准&#64;8575]</a></p>
+<h2>用于lookup_transform的高级API () <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8574">[待校准&#64;8574]</a><a class="headerlink" href="#advanced-api-for-lookup-transform" title="永久链接至标题"></a></h2>
+<p>要向tf2提出该特定问题，我们将使用高级API，该API使我们能够明确说明何时获取指定的转换。这是通过调用带有附加参数的 <code class="docutils literal notranslate"><span class="pre">lookup_transform_full()</span></code> 方法来完成的。您的代码现在如下所示: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8575">[待校准&#64;8575]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">when</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_clock</span><span class="p">()</span><span class="o">.</span><span class="n">now</span><span class="p">()</span> <span class="o">-</span> <span class="n">rclpy</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">Duration</span><span class="p">(</span><span class="n">seconds</span><span class="o">=</span><span class="mf">5.0</span><span class="p">)</span>
 <span class="n">trans</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_tf_buffer</span><span class="o">.</span><span class="n">lookup_transform_full</span><span class="p">(</span>
         <span class="n">target_frame</span><span class="o">=</span><span class="n">to_frame_rel</span><span class="p">,</span>
@@ -335,29 +335,29 @@
         <span class="n">timeout</span><span class="o">=</span><span class="n">Duration</span><span class="p">(</span><span class="n">seconds</span><span class="o">=</span><span class="mf">0.05</span><span class="p">))</span>
 </pre></div>
 </div>
-<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">lookup_transform_full()</span></code> 的高级API采用六个参数: <a class="reference external" href="http://localhost:3000/#/home?msgid=8576">[待校准&#64;8576]</a></p>
+<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">lookup_transform_full()</span></code> 的高级API采用六个参数: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8576">[待校准&#64;8576]</a></p>
 <ol class="arabic simple">
-<li><p>目标帧 <a class="reference external" href="http://localhost:3000/#/home?msgid=8559">[待校准&#64;8559]</a></p></li>
-<li><p>转换为 <a class="reference external" href="http://localhost:3000/#/home?msgid=8560">[待校准&#64;8560]</a></p></li>
-<li><p>源帧 <a class="reference external" href="http://localhost:3000/#/home?msgid=8561">[待校准&#64;8561]</a></p></li>
-<li><p>评估源文件帧的时间 <a class="reference external" href="http://localhost:3000/#/home?msgid=8562">[待校准&#64;8562]</a></p></li>
-<li><p>不会随时间变化的帧，在这种情况下为 <code class="docutils literal notranslate"><span class="pre">world</span></code> 帧 <a class="reference external" href="http://localhost:3000/#/home?msgid=8563">[待校准&#64;8563]</a></p></li>
-<li><p>等待目标帧可用的时间 <a class="reference external" href="http://localhost:3000/#/home?msgid=8564">[待校准&#64;8564]</a></p></li>
+<li><p>目标帧 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8559">[待校准&#64;8559]</a></p></li>
+<li><p>转换为 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8560">[待校准&#64;8560]</a></p></li>
+<li><p>源帧 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8561">[待校准&#64;8561]</a></p></li>
+<li><p>评估源文件帧的时间 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8562">[待校准&#64;8562]</a></p></li>
+<li><p>不会随时间变化的帧，在这种情况下为 <code class="docutils literal notranslate"><span class="pre">world</span></code> 帧 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8563">[待校准&#64;8563]</a></p></li>
+<li><p>等待目标帧可用的时间 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8564">[待校准&#64;8564]</a></p></li>
 </ol>
-<p>总而言之，tf2在后台执行以下操作。在过去，它计算从 <code class="docutils literal notranslate"><span class="pre">carrot1</span></code> 到 <code class="docutils literal notranslate"><span class="pre">world</span></code> 的转换。在 <code class="docutils literal notranslate"><span class="pre">world</span></code> 帧中，tf2时间穿梭从过去到现在。目前，tf2计算了从 <code class="docutils literal notranslate"><span class="pre">world</span></code> 到 <code class="docutils literal notranslate"><span class="pre">turtle2</span></code> 的变换。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8565">[待校准&#64;8565]</a></p>
+<p>总而言之，tf2在后台执行以下操作。在过去，它计算从 <code class="docutils literal notranslate"><span class="pre">carrot1</span></code> 到 <code class="docutils literal notranslate"><span class="pre">world</span></code> 的转换。在 <code class="docutils literal notranslate"><span class="pre">world</span></code> 帧中，tf2时间穿梭从过去到现在。目前，tf2计算了从 <code class="docutils literal notranslate"><span class="pre">world</span></code> 到 <code class="docutils literal notranslate"><span class="pre">turtle2</span></code> 的变换。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8565">[待校准&#64;8565]</a></p>
 </div>
 <div class="section" id="checking-the-results">
-<h2>检查结果 <a class="reference external" href="http://localhost:3000/#/home?msgid=8566">[待校准&#64;8566]</a><a class="headerlink" href="#checking-the-results" title="永久链接至标题"></a></h2>
-<p>让我们再次运行仿真，这次使用高级时间穿梭API: <a class="reference external" href="http://localhost:3000/#/home?msgid=8567">[待校准&#64;8567]</a></p>
+<h2>检查结果 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8566">[待校准&#64;8566]</a><a class="headerlink" href="#checking-the-results" title="永久链接至标题"></a></h2>
+<p>让我们再次运行仿真，这次使用高级时间穿梭API: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8567">[待校准&#64;8567]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 launch learning_tf2_py turtle_tf2_fixed_frame_demo.launch.py</span>
 </pre></div>
 </div>
 <img alt="../../_images/turtlesim_delay2.png" src="../../_images/turtlesim_delay2.png" />
-<p>是的，第二只乌龟被引导到5秒前第一根胡萝卜所在的地方! <a class="reference external" href="http://localhost:3000/#/home?msgid=8568">[待校准&#64;8568]</a></p>
+<p>是的，第二只乌龟被引导到5秒前第一根胡萝卜所在的地方! <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8568">[待校准&#64;8568]</a></p>
 </div>
 <div class="section" id="summary">
-<h2>总结 <a class="reference external" href="http://localhost:3000/#/home?msgid=6747">[待校准&#64;6747]</a><a class="headerlink" href="#summary" title="永久链接至标题"></a></h2>
-<p>在本教程中，您已经看到了tf2的高级功能之一。您了解到tf2可以及时转换数据，并通过turtlesim示例了解了如何做到这一点。tf2允许你回到过去，通过使用先进的 <code class="docutils literal notranslate"><span class="pre">lookup_transform_full()</span></code> API在海龟的旧姿势和当前姿势之间进行帧转换。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8577">[待校准&#64;8577]</a></p>
+<h2>总结 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6747">[待校准&#64;6747]</a><a class="headerlink" href="#summary" title="永久链接至标题"></a></h2>
+<p>在本教程中，您已经看到了tf2的高级功能之一。您了解到tf2可以及时转换数据，并通过turtlesim示例了解了如何做到这一点。tf2允许你回到过去，通过使用先进的 <code class="docutils literal notranslate"><span class="pre">lookup_transform_full()</span></code> API在海龟的旧姿势和当前姿势之间进行帧转换。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8577">[待校准&#64;8577]</a></p>
 </div>
 </div>
 

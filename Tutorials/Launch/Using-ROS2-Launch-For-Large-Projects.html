@@ -280,12 +280,12 @@
 
 
   <div class="section" id="using-ros-2-launch-for-large-projects">
-<span id="usingros2launchforlargeprojects"></span><h1>在大型项目中使用ROS 2launch <a class="reference external" href="http://localhost:3000/#/home?msgid=7674">[待校准&#64;7674]</a><a class="headerlink" href="#using-ros-2-launch-for-large-projects" title="永久链接至标题"></a></h1>
-<p>Goal目标: Learn学习使用ROS 2launch文件管理大型项目的最佳实践 <a class="reference external" href="http://localhost:3000/#/home?msgid=7675">[待校准&#64;7675]</a></p>
-<p>Tutorial教程级别: Intermediate中级 <a class="reference external" href="http://localhost:3000/#/home?msgid=6713">[待校准&#64;6713]</a></p>
-<p>Time时间: 20 20分钟 <a class="reference external" href="http://localhost:3000/#/home?msgid=7181">[待校准&#64;7181]</a></p>
+<span id="usingros2launchforlargeprojects"></span><h1>在大型项目中使用ROS 2launch <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7674">[待校准&#64;7674]</a><a class="headerlink" href="#using-ros-2-launch-for-large-projects" title="永久链接至标题"></a></h1>
+<p>Goal目标: Learn学习使用ROS 2launch文件管理大型项目的最佳实践 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7675">[待校准&#64;7675]</a></p>
+<p>Tutorial教程级别: Intermediate中级 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6713">[待校准&#64;6713]</a></p>
+<p>Time时间: 20 20分钟 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7181">[待校准&#64;7181]</a></p>
 <div class="contents local topic" id="contents">
-<p class="topic-title">内容 <a class="reference external" href="http://localhost:3000/#/home?msgid=6715">[待校准&#64;6715]</a></p>
+<p class="topic-title">内容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6715">[待校准&#64;6715]</a></p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#background" id="id1">背景 [待校准&#64;6716]</a></p></li>
 <li><p><a class="reference internal" href="#prerequisites" id="id2">先决条件 [待校准&#64;6718]</a></p></li>
@@ -318,23 +318,23 @@
 </ul>
 </div>
 <div class="section" id="background">
-<h2>背景 <a class="reference external" href="http://localhost:3000/#/home?msgid=6716">[待校准&#64;6716]</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
-<p>本教程介绍了为大型项目编写launch文件的一些技巧。重点是如何构建launch文件，以便在不同情况下尽可能多地重复使用。此外，它还涵盖了不同ROS 2launch工具的使用示例，如参数、YAML文件、重映射、命名空间、默认参数和RViz配置。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7612">[待校准&#64;7612]</a></p>
+<h2>背景 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6716">[待校准&#64;6716]</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
+<p>本教程介绍了为大型项目编写launch文件的一些技巧。重点是如何构建launch文件，以便在不同情况下尽可能多地重复使用。此外，它还涵盖了不同ROS 2launch工具的使用示例，如参数、YAML文件、重映射、命名空间、默认参数和RViz配置。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7612">[待校准&#64;7612]</a></p>
 </div>
 <div class="section" id="prerequisites">
-<h2>先决条件 <a class="reference external" href="http://localhost:3000/#/home?msgid=6718">[待校准&#64;6718]</a><a class="headerlink" href="#prerequisites" title="永久链接至标题"></a></h2>
-<p>本教程使用 <a class="reference internal" href="../Turtlesim/Introducing-Turtlesim.html"><span class="doc">turtlesim</span></a> and <a class="reference internal" href="../Tf2/Introduction-To-Tf2.html"><span class="doc">turtle_tf2_py</span></a> packages. This tutorial also assumes you have <a class="reference internal" href="../Creating-Your-First-ROS2-Package.html"><span class="doc">created a new package</span></a> 构建类型 <code class="docutils literal notranslate"><span class="pre">ament_python</span></code> 调用ed <code class="docutils literal notranslate"><span class="pre">launch_tutorial</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7676">[待校准&#64;7676]</a></p>
+<h2>先决条件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6718">[待校准&#64;6718]</a><a class="headerlink" href="#prerequisites" title="永久链接至标题"></a></h2>
+<p>本教程使用 <a class="reference internal" href="../Turtlesim/Introducing-Turtlesim.html"><span class="doc">turtlesim</span></a> and <a class="reference internal" href="../Tf2/Introduction-To-Tf2.html"><span class="doc">turtle_tf2_py</span></a> packages. This tutorial also assumes you have <a class="reference internal" href="../Creating-Your-First-ROS2-Package.html"><span class="doc">created a new package</span></a> 构建类型 <code class="docutils literal notranslate"><span class="pre">ament_python</span></code> 调用ed <code class="docutils literal notranslate"><span class="pre">launch_tutorial</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7676">[待校准&#64;7676]</a></p>
 </div>
 <div class="section" id="introduction">
-<h2>简介 <a class="reference external" href="http://localhost:3000/#/home?msgid=7677">[待校准&#64;7677]</a><a class="headerlink" href="#introduction" title="永久链接至标题"></a></h2>
-<p>典型调用y机器人上的大型应用程序涉及几个互连节点，每个节点可以有许多参数。海龟模拟器中多只海龟的仿真可以作为一个很好的例子。turtle仿真由多个turtle节点、world配置以及TF广播器和监听节点组成。在所有节点之间，有大量的ROS参数会影响这些节点的行为和外观。ROS 2launch文件允许我们启动所有节点并在一个地方设置相应的参数。在教程结束时，您将在 <code class="docutils literal notranslate"><span class="pre">launch_tutorial</span></code> 包中构建 <code class="docutils literal notranslate"><span class="pre">launch_turtlesim.launch.py</span></code> launch文件。这launch文件将带来不同节点负责仿真两turtlesim仿真，启动TF广播器s和听众，加载参数，launch成为RViz配置。在本教程中，我们将介绍这个launch文件和所有使用的相关功能。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7678">[待校准&#64;7678]</a></p>
+<h2>简介 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7677">[待校准&#64;7677]</a><a class="headerlink" href="#introduction" title="永久链接至标题"></a></h2>
+<p>典型调用y机器人上的大型应用程序涉及几个互连节点，每个节点可以有许多参数。海龟模拟器中多只海龟的仿真可以作为一个很好的例子。turtle仿真由多个turtle节点、world配置以及TF广播器和监听节点组成。在所有节点之间，有大量的ROS参数会影响这些节点的行为和外观。ROS 2launch文件允许我们启动所有节点并在一个地方设置相应的参数。在教程结束时，您将在 <code class="docutils literal notranslate"><span class="pre">launch_tutorial</span></code> 包中构建 <code class="docutils literal notranslate"><span class="pre">launch_turtlesim.launch.py</span></code> launch文件。这launch文件将带来不同节点负责仿真两turtlesim仿真，启动TF广播器s和听众，加载参数，launch成为RViz配置。在本教程中，我们将介绍这个launch文件和所有使用的相关功能。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7678">[待校准&#64;7678]</a></p>
 </div>
 <div class="section" id="writing-launch-files">
-<h2>编写launch文件 <a class="reference external" href="http://localhost:3000/#/home?msgid=7679">[待校准&#64;7679]</a><a class="headerlink" href="#writing-launch-files" title="永久链接至标题"></a></h2>
+<h2>编写launch文件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7679">[待校准&#64;7679]</a><a class="headerlink" href="#writing-launch-files" title="永久链接至标题"></a></h2>
 <div class="section" id="top-level-organization">
-<h3>1顶级组织 <a class="reference external" href="http://localhost:3000/#/home?msgid=7680">[待校准&#64;7680]</a><a class="headerlink" href="#top-level-organization" title="永久链接至标题"></a></h3>
-<p>编写launch文件的目的之一应该是使它们尽可能可重用。这可以通过将相关节点和配置聚类到单独的launch文件中来实现。之后，可以编写专用于特定配置的顶级launch文件。这将允许在完全相同的机器人之间移动，而不需要改变launch文件。即使是改变，比如从真正的机器人移动到模拟机器人，也只需做一些改变。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7681">[待校准&#64;7681]</a></p>
-<p>我们现在将讨论使这成为可能的顶级launch文件结构。首先，我们将创建一个launch文件，该文件将调用单独的launch文件。为此，让我们在 <code class="docutils literal notranslate"><span class="pre">launch_tutorial</span></code> 包的 <code class="docutils literal notranslate"><span class="pre">/launch</span></code> 文件夹中创建一个 <code class="docutils literal notranslate"><span class="pre">launch_turtlesim.launch.py</span></code> 文件。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7682">[待校准&#64;7682]</a></p>
+<h3>1顶级组织 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7680">[待校准&#64;7680]</a><a class="headerlink" href="#top-level-organization" title="永久链接至标题"></a></h3>
+<p>编写launch文件的目的之一应该是使它们尽可能可重用。这可以通过将相关节点和配置聚类到单独的launch文件中来实现。之后，可以编写专用于特定配置的顶级launch文件。这将允许在完全相同的机器人之间移动，而不需要改变launch文件。即使是改变，比如从真正的机器人移动到模拟机器人，也只需做一些改变。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7681">[待校准&#64;7681]</a></p>
+<p>我们现在将讨论使这成为可能的顶级launch文件结构。首先，我们将创建一个launch文件，该文件将调用单独的launch文件。为此，让我们在 <code class="docutils literal notranslate"><span class="pre">launch_tutorial</span></code> 包的 <code class="docutils literal notranslate"><span class="pre">/launch</span></code> 文件夹中创建一个 <code class="docutils literal notranslate"><span class="pre">launch_turtlesim.launch.py</span></code> 文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7682">[待校准&#64;7682]</a></p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 
 <span class="kn">from</span> <span class="nn">ament_index_python.packages</span> <span class="kn">import</span> <span class="n">get_package_share_directory</span>
@@ -387,22 +387,22 @@
    <span class="p">])</span>
 </pre></div>
 </div>
-<p>这个launch文件包括一组其他launch文件。每个包含的launch文件都包含节点、参数和可能的嵌套包含，它们属于系统的一部分。准确，我们launch两个turtlesim仿真世界，TF广播器，TF监听器，模仿，固定帧广播器，RViz节点。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7683">[待校准&#64;7683]</a></p>
+<p>这个launch文件包括一组其他launch文件。每个包含的launch文件都包含节点、参数和可能的嵌套包含，它们属于系统的一部分。准确，我们launch两个turtlesim仿真世界，TF广播器，TF监听器，模仿，固定帧广播器，RViz节点。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7683">[待校准&#64;7683]</a></p>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
-<p>设计提示: 顶级launch文件应简短，包括与应用程序子组件相对应的其他文件，以及通常更改的参数。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7684">[待校准&#64;7684]</a></p>
+<p>设计提示: 顶级launch文件应简短，包括与应用程序子组件相对应的其他文件，以及通常更改的参数。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7684">[待校准&#64;7684]</a></p>
 </div>
-<p>按照以下方式编写launch文件可以很容易地换出系统的一部分，我们将在后面看到。然而，有些情况下，由于性能和使用的原因，一些节点或launch文件必须分别被launch。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7685">[待校准&#64;7685]</a></p>
+<p>按照以下方式编写launch文件可以很容易地换出系统的一部分，我们将在后面看到。然而，有些情况下，由于性能和使用的原因，一些节点或launch文件必须分别被launch。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7685">[待校准&#64;7685]</a></p>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
-<p>设计提示: 在决定你的应用程序需要多少顶级launch文件时，要注意权衡。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7686">[待校准&#64;7686]</a></p>
+<p>设计提示: 在决定你的应用程序需要多少顶级launch文件时，要注意权衡。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7686">[待校准&#64;7686]</a></p>
 </div>
 </div>
 <div class="section" id="parameters">
-<h3>2参数 <a class="reference external" href="http://localhost:3000/#/home?msgid=7687">[待校准&#64;7687]</a><a class="headerlink" href="#parameters" title="永久链接至标题"></a></h3>
+<h3>2参数 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7687">[待校准&#64;7687]</a><a class="headerlink" href="#parameters" title="永久链接至标题"></a></h3>
 <div class="section" id="setting-parameters-in-the-launch-file">
-<h4>2.1launch文件中的设置参数 <a class="reference external" href="http://localhost:3000/#/home?msgid=7688">[待校准&#64;7688]</a><a class="headerlink" href="#setting-parameters-in-the-launch-file" title="永久链接至标题"></a></h4>
-<p>我们将从编写一个launch文件开始，该文件将开始我们的第一个turtlesim仿真。首先，创建一个调用ed <code class="docutils literal notranslate"><span class="pre">turtlesim_world_1.launch.py</span></code> 的新文件。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7689">[待校准&#64;7689]</a></p>
+<h4>2.1launch文件中的设置参数 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7688">[待校准&#64;7688]</a><a class="headerlink" href="#setting-parameters-in-the-launch-file" title="永久链接至标题"></a></h4>
+<p>我们将从编写一个launch文件开始，该文件将开始我们的第一个turtlesim仿真。首先，创建一个调用ed <code class="docutils literal notranslate"><span class="pre">turtlesim_world_1.launch.py</span></code> 的新文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7689">[待校准&#64;7689]</a></p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">launch</span> <span class="kn">import</span> <span class="n">LaunchDescription</span>
 <span class="kn">from</span> <span class="nn">launch.actions</span> <span class="kn">import</span> <span class="n">DeclareLaunchArgument</span>
 <span class="kn">from</span> <span class="nn">launch.substitutions</span> <span class="kn">import</span> <span class="n">LaunchConfiguration</span><span class="p">,</span> <span class="n">TextSubstitution</span>
@@ -438,11 +438,11 @@
    <span class="p">])</span>
 </pre></div>
 </div>
-<p>这个launch文件启动 <code class="docutils literal notranslate"><span class="pre">turtlesim_node</span></code> 节点，它启动turtlesim仿真，仿真配置参数被定义并传递给节点。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7690">[待校准&#64;7690]</a></p>
+<p>这个launch文件启动 <code class="docutils literal notranslate"><span class="pre">turtlesim_node</span></code> 节点，它启动turtlesim仿真，仿真配置参数被定义并传递给节点。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7690">[待校准&#64;7690]</a></p>
 </div>
 <div class="section" id="loading-parameters-from-yaml-file">
-<h4>2.2从YAML文件加载参数 <a class="reference external" href="http://localhost:3000/#/home?msgid=7691">[待校准&#64;7691]</a><a class="headerlink" href="#loading-parameters-from-yaml-file" title="永久链接至标题"></a></h4>
-<p>在第二个launch中，我们将使用不同的配置开始第二个turtlesim仿真。现在创建一个 <code class="docutils literal notranslate"><span class="pre">turtlesim_world_2.launch.py</span></code> 文件。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7692">[待校准&#64;7692]</a></p>
+<h4>2.2从YAML文件加载参数 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7691">[待校准&#64;7691]</a><a class="headerlink" href="#loading-parameters-from-yaml-file" title="永久链接至标题"></a></h4>
+<p>在第二个launch中，我们将使用不同的配置开始第二个turtlesim仿真。现在创建一个 <code class="docutils literal notranslate"><span class="pre">turtlesim_world_2.launch.py</span></code> 文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7692">[待校准&#64;7692]</a></p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 
 <span class="kn">from</span> <span class="nn">ament_index_python.packages</span> <span class="kn">import</span> <span class="n">get_package_share_directory</span>
@@ -469,8 +469,8 @@
    <span class="p">])</span>
 </pre></div>
 </div>
-<p>这launch文件将launch相同 <code class="docutils literal notranslate"><span class="pre">turtlesim_node</span></code> 参数值直接加载从YAML配置文件。在YAML文件中定义参数和参数使存储和加载大量变量变得容易。此外，YAML文件可以很容易地从当前的 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span></code> 列表中导出。要了解如何做到这一点，请参考 <a class="reference internal" href="../Parameters/Understanding-ROS2-Parameters.html"><span class="doc">Understanding ROS 2 parameters</span></a> 教程。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7693">[待校准&#64;7693]</a></p>
-<p>现在让我们在我们包的 <code class="docutils literal notranslate"><span class="pre">/config</span></code> 文件夹中创建一个配置文件， <code class="docutils literal notranslate"><span class="pre">turtlesim.yaml</span></code> ，它将由我们的launch文件加载。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7694">[待校准&#64;7694]</a></p>
+<p>这launch文件将launch相同 <code class="docutils literal notranslate"><span class="pre">turtlesim_node</span></code> 参数值直接加载从YAML配置文件。在YAML文件中定义参数和参数使存储和加载大量变量变得容易。此外，YAML文件可以很容易地从当前的 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span></code> 列表中导出。要了解如何做到这一点，请参考 <a class="reference internal" href="../Parameters/Understanding-ROS2-Parameters.html"><span class="doc">Understanding ROS 2 parameters</span></a> 教程。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7693">[待校准&#64;7693]</a></p>
+<p>现在让我们在我们包的 <code class="docutils literal notranslate"><span class="pre">/config</span></code> 文件夹中创建一个配置文件， <code class="docutils literal notranslate"><span class="pre">turtlesim.yaml</span></code> ，它将由我们的launch文件加载。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7694">[待校准&#64;7694]</a></p>
 <div class="highlight-YAML notranslate"><div class="highlight"><pre><span></span><span class="nt">/turtlesim2/sim</span><span class="p">:</span>
    <span class="nt">ros__parameters</span><span class="p">:</span>
       <span class="nt">background_b</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">255</span>
@@ -478,13 +478,13 @@
       <span class="nt">background_r</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">150</span>
 </pre></div>
 </div>
-<p>如果我们现在启动 <code class="docutils literal notranslate"><span class="pre">turtlesim_world_2.launch.py</span></code> launch文件，我们将使用预先配置的背景色启动 <code class="docutils literal notranslate"><span class="pre">turtlesim_node</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7695">[待校准&#64;7695]</a></p>
-<p>要了解有关使用参数和使用YAML文件的更多信息，请查看 <a class="reference internal" href="../Parameters/Understanding-ROS2-Parameters.html"><span class="doc">Understanding ROS 2 parameters</span></a> 教程。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7696">[待校准&#64;7696]</a></p>
+<p>如果我们现在启动 <code class="docutils literal notranslate"><span class="pre">turtlesim_world_2.launch.py</span></code> launch文件，我们将使用预先配置的背景色启动 <code class="docutils literal notranslate"><span class="pre">turtlesim_node</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7695">[待校准&#64;7695]</a></p>
+<p>要了解有关使用参数和使用YAML文件的更多信息，请查看 <a class="reference internal" href="../Parameters/Understanding-ROS2-Parameters.html"><span class="doc">Understanding ROS 2 parameters</span></a> 教程。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7696">[待校准&#64;7696]</a></p>
 </div>
 <div class="section" id="using-wildcards-in-yaml-files">
-<h4>2.3在YAML文件中使用通配符 <a class="reference external" href="http://localhost:3000/#/home?msgid=7697">[待校准&#64;7697]</a><a class="headerlink" href="#using-wildcards-in-yaml-files" title="永久链接至标题"></a></h4>
-<p>在某些情况下，我们希望在多个节点中设置相同的参数。这些节点可以具有不同的命名空间或名称，但仍具有相同的参数。定义明确定义命名空间和节点名称的单独YAML文件效率不高。一种解决方案是使用通配符作为文本值中未知字符的替换，将参数应用于几个不同的节点。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7698">[待校准&#64;7698]</a></p>
-<p>现在让我们创建一个新 <code class="docutils literal notranslate"><span class="pre">turtlesim_world_3.launch.py</span></code> 文件类似 <code class="docutils literal notranslate"><span class="pre">turtlesim_world_2.launch.py</span></code> 包括一个 <code class="docutils literal notranslate"><span class="pre">turtlesim_node</span></code> 节点。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7699">[待校准&#64;7699]</a></p>
+<h4>2.3在YAML文件中使用通配符 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7697">[待校准&#64;7697]</a><a class="headerlink" href="#using-wildcards-in-yaml-files" title="永久链接至标题"></a></h4>
+<p>在某些情况下，我们希望在多个节点中设置相同的参数。这些节点可以具有不同的命名空间或名称，但仍具有相同的参数。定义明确定义命名空间和节点名称的单独YAML文件效率不高。一种解决方案是使用通配符作为文本值中未知字符的替换，将参数应用于几个不同的节点。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7698">[待校准&#64;7698]</a></p>
+<p>现在让我们创建一个新 <code class="docutils literal notranslate"><span class="pre">turtlesim_world_3.launch.py</span></code> 文件类似 <code class="docutils literal notranslate"><span class="pre">turtlesim_world_2.launch.py</span></code> 包括一个 <code class="docutils literal notranslate"><span class="pre">turtlesim_node</span></code> 节点。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7699">[待校准&#64;7699]</a></p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
 <span class="n">Node</span><span class="p">(</span>
    <span class="n">package</span><span class="o">=</span><span class="s1">&#39;turtlesim&#39;</span><span class="p">,</span>
@@ -495,15 +495,15 @@
 <span class="p">)</span>
 </pre></div>
 </div>
-<p>但是，加载相同的YAML文件不会影响第三个turtlesim世界的外观。原因是其参数存储在另一个命名空间下，如下所示: <a class="reference external" href="http://localhost:3000/#/home?msgid=7700">[待校准&#64;7700]</a></p>
+<p>但是，加载相同的YAML文件不会影响第三个turtlesim世界的外观。原因是其参数存储在另一个命名空间下，如下所示: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7700">[待校准&#64;7700]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">/turtlesim3/sim:</span>
 <span class="go">   background_b</span>
 <span class="go">   background_g</span>
 <span class="go">   background_r</span>
 </pre></div>
 </div>
-<p>因此，我们可以使用通配符语法，而不是为使用相同参数的同一节点创建新配置。尽管节点名称和命名空间不同，但 <code class="docutils literal notranslate"><span class="pre">/**</span></code> 将分配每个节点中的所有参数。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7701">[待校准&#64;7701]</a></p>
-<p>我们现在将更新 <code class="docutils literal notranslate"><span class="pre">turtlesim.yaml</span></code> ， <code class="docutils literal notranslate"><span class="pre">/config</span></code> 文件夹在以下方式: <a class="reference external" href="http://localhost:3000/#/home?msgid=7702">[待校准&#64;7702]</a></p>
+<p>因此，我们可以使用通配符语法，而不是为使用相同参数的同一节点创建新配置。尽管节点名称和命名空间不同，但 <code class="docutils literal notranslate"><span class="pre">/**</span></code> 将分配每个节点中的所有参数。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7701">[待校准&#64;7701]</a></p>
+<p>我们现在将更新 <code class="docutils literal notranslate"><span class="pre">turtlesim.yaml</span></code> ， <code class="docutils literal notranslate"><span class="pre">/config</span></code> 文件夹在以下方式: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7702">[待校准&#64;7702]</a></p>
 <div class="highlight-YAML notranslate"><div class="highlight"><pre><span></span><span class="nt">/**</span><span class="p">:</span>
    <span class="nt">ros__parameters</span><span class="p">:</span>
       <span class="nt">background_b</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">255</span>
@@ -511,17 +511,17 @@
       <span class="nt">background_r</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">150</span>
 </pre></div>
 </div>
-<p>现在包括 <code class="docutils literal notranslate"><span class="pre">turtlesim_world_3.launch.py</span></code> launch描述我们主要launch文件。使用配置文件在我们launch描述将分配 <code class="docutils literal notranslate"><span class="pre">background_b</span></code> ， <code class="docutils literal notranslate"><span class="pre">background_g</span></code> ， <code class="docutils literal notranslate"><span class="pre">background_r</span></code> 参数指定值 <code class="docutils literal notranslate"><span class="pre">turtlesim3/sim</span></code> 和 <code class="docutils literal notranslate"><span class="pre">turtlesim2/sim</span></code> 节点。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7703">[待校准&#64;7703]</a></p>
+<p>现在包括 <code class="docutils literal notranslate"><span class="pre">turtlesim_world_3.launch.py</span></code> launch描述我们主要launch文件。使用配置文件在我们launch描述将分配 <code class="docutils literal notranslate"><span class="pre">background_b</span></code> ， <code class="docutils literal notranslate"><span class="pre">background_g</span></code> ， <code class="docutils literal notranslate"><span class="pre">background_r</span></code> 参数指定值 <code class="docutils literal notranslate"><span class="pre">turtlesim3/sim</span></code> 和 <code class="docutils literal notranslate"><span class="pre">turtlesim2/sim</span></code> 节点。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7703">[待校准&#64;7703]</a></p>
 </div>
 </div>
 <div class="section" id="namespaces">
-<h3>3命名空间 <a class="reference external" href="http://localhost:3000/#/home?msgid=7704">[待校准&#64;7704]</a><a class="headerlink" href="#namespaces" title="永久链接至标题"></a></h3>
-<p>您可能已经注意到，我们已经在 <code class="docutils literal notranslate"><span class="pre">turtlesim_world_2.launch.py</span></code> 文件中定义了turlesim世界的命名空间。唯一命名空间允许系统启动两个相似的节点，而没有节点名称或话题名称冲突。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7705">[待校准&#64;7705]</a></p>
+<h3>3命名空间 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7704">[待校准&#64;7704]</a><a class="headerlink" href="#namespaces" title="永久链接至标题"></a></h3>
+<p>您可能已经注意到，我们已经在 <code class="docutils literal notranslate"><span class="pre">turtlesim_world_2.launch.py</span></code> 文件中定义了turlesim世界的命名空间。唯一命名空间允许系统启动两个相似的节点，而没有节点名称或话题名称冲突。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7705">[待校准&#64;7705]</a></p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">namespace</span><span class="o">=</span><span class="s1">&#39;turtlesim2&#39;</span><span class="p">,</span>
 </pre></div>
 </div>
-<p>但是，如果launch文件包含大量节点，则为每个节点定义命名空间可能会变得乏味。为了解决这个问题，可以使用 <code class="docutils literal notranslate"><span class="pre">PushRosNamespace</span></code> 动作为每个launch文件描述定义全局命名空间。每个嵌套节点将继承该命名空间自动调用y。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7706">[待校准&#64;7706]</a></p>
-<p>为此，首先，我们需要从 <code class="docutils literal notranslate"><span class="pre">turtlesim_world_2.launch.py</span></code> 文件中删除 “命名空间 = 'turtlesim2'” 行。之后，我们需要更新 <code class="docutils literal notranslate"><span class="pre">launch_turtlesim.launch.py</span></code> 以包括以下几行: <a class="reference external" href="http://localhost:3000/#/home?msgid=7707">[待校准&#64;7707]</a></p>
+<p>但是，如果launch文件包含大量节点，则为每个节点定义命名空间可能会变得乏味。为了解决这个问题，可以使用 <code class="docutils literal notranslate"><span class="pre">PushRosNamespace</span></code> 动作为每个launch文件描述定义全局命名空间。每个嵌套节点将继承该命名空间自动调用y。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7706">[待校准&#64;7706]</a></p>
+<p>为此，首先，我们需要从 <code class="docutils literal notranslate"><span class="pre">turtlesim_world_2.launch.py</span></code> 文件中删除 “命名空间 = 'turtlesim2'” 行。之后，我们需要更新 <code class="docutils literal notranslate"><span class="pre">launch_turtlesim.launch.py</span></code> 以包括以下几行: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7707">[待校准&#64;7707]</a></p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">launch.actions</span> <span class="kn">import</span> <span class="n">GroupAction</span>
 <span class="kn">from</span> <span class="nn">launch_ros.actions</span> <span class="kn">import</span> <span class="n">PushRosNamespace</span>
 
@@ -539,11 +539,11 @@
    <span class="p">)</span>
 </pre></div>
 </div>
-<p>最后，我们在 <code class="docutils literal notranslate"><span class="pre">return</span> <span class="pre">LaunchDescription</span></code> 的声明中将 <code class="docutils literal notranslate"><span class="pre">turtlesim_world_2</span></code> 改为 <code class="docutils literal notranslate"><span class="pre">turtlesim_world_2_with_namespace</span></code> 。因此， <code class="docutils literal notranslate"><span class="pre">turtlesim_world_2.launch.py</span></code> launch描述中的每个节点都将有一个 <code class="docutils literal notranslate"><span class="pre">turtlesim2</span></code> 命名空间。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7708">[待校准&#64;7708]</a></p>
+<p>最后，我们在 <code class="docutils literal notranslate"><span class="pre">return</span> <span class="pre">LaunchDescription</span></code> 的声明中将 <code class="docutils literal notranslate"><span class="pre">turtlesim_world_2</span></code> 改为 <code class="docutils literal notranslate"><span class="pre">turtlesim_world_2_with_namespace</span></code> 。因此， <code class="docutils literal notranslate"><span class="pre">turtlesim_world_2.launch.py</span></code> launch描述中的每个节点都将有一个 <code class="docutils literal notranslate"><span class="pre">turtlesim2</span></code> 命名空间。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7708">[待校准&#64;7708]</a></p>
 </div>
 <div class="section" id="reusing-nodes">
-<h3>4重用节点 <a class="reference external" href="http://localhost:3000/#/home?msgid=7709">[待校准&#64;7709]</a><a class="headerlink" href="#reusing-nodes" title="永久链接至标题"></a></h3>
-<p>现在创建一个 <code class="docutils literal notranslate"><span class="pre">broadcaster_listener.launch.py</span></code> 文件。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7710">[待校准&#64;7710]</a></p>
+<h3>4重用节点 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7709">[待校准&#64;7709]</a><a class="headerlink" href="#reusing-nodes" title="永久链接至标题"></a></h3>
+<p>现在创建一个 <code class="docutils literal notranslate"><span class="pre">broadcaster_listener.launch.py</span></code> 文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7710">[待校准&#64;7710]</a></p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">launch</span> <span class="kn">import</span> <span class="n">LaunchDescription</span>
 <span class="kn">from</span> <span class="nn">launch.actions</span> <span class="kn">import</span> <span class="n">DeclareLaunchArgument</span>
 <span class="kn">from</span> <span class="nn">launch.substitutions</span> <span class="kn">import</span> <span class="n">LaunchConfiguration</span>
@@ -584,13 +584,13 @@
    <span class="p">])</span>
 </pre></div>
 </div>
-<p>在这个文件中，我们声明了 <code class="docutils literal notranslate"><span class="pre">target_frame</span></code> launch参数的默认值为 <code class="docutils literal notranslate"><span class="pre">turtle1</span></code> 。默认值意味着launch文件可以接收参数转发到其节点，或者如果没有提供参数，它将把默认值传递给其节点。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7711">[待校准&#64;7711]</a></p>
-<p>之后，我们在launch期间使用不同的名称和参数两次使用 <code class="docutils literal notranslate"><span class="pre">turtle_tf2_broadcaster</span></code> 节点。这允许我们复制同一个节点而没有冲突。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7712">[待校准&#64;7712]</a></p>
-<p>我们还启动了一个 <code class="docutils literal notranslate"><span class="pre">turtle_tf2_listener</span></code> 节点，并设置了我们在上面声明并获得的 <code class="docutils literal notranslate"><span class="pre">target_frame</span></code> 参数。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7713">[待校准&#64;7713]</a></p>
+<p>在这个文件中，我们声明了 <code class="docutils literal notranslate"><span class="pre">target_frame</span></code> launch参数的默认值为 <code class="docutils literal notranslate"><span class="pre">turtle1</span></code> 。默认值意味着launch文件可以接收参数转发到其节点，或者如果没有提供参数，它将把默认值传递给其节点。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7711">[待校准&#64;7711]</a></p>
+<p>之后，我们在launch期间使用不同的名称和参数两次使用 <code class="docutils literal notranslate"><span class="pre">turtle_tf2_broadcaster</span></code> 节点。这允许我们复制同一个节点而没有冲突。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7712">[待校准&#64;7712]</a></p>
+<p>我们还启动了一个 <code class="docutils literal notranslate"><span class="pre">turtle_tf2_listener</span></code> 节点，并设置了我们在上面声明并获得的 <code class="docutils literal notranslate"><span class="pre">target_frame</span></code> 参数。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7713">[待校准&#64;7713]</a></p>
 </div>
 <div class="section" id="parameter-overrides">
-<h3>5参数覆盖 <a class="reference external" href="http://localhost:3000/#/home?msgid=7714">[待校准&#64;7714]</a><a class="headerlink" href="#parameter-overrides" title="永久链接至标题"></a></h3>
-<p>重新调用我们调用了 <code class="docutils literal notranslate"><span class="pre">broadcaster_listener.launch.py</span></code> 文件我们级launch文件。除此之外，我们通过了 <code class="docutils literal notranslate"><span class="pre">target_frame</span></code> launch的论点，如下所示: <a class="reference external" href="http://localhost:3000/#/home?msgid=7715">[待校准&#64;7715]</a></p>
+<h3>5参数覆盖 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7714">[待校准&#64;7714]</a><a class="headerlink" href="#parameter-overrides" title="永久链接至标题"></a></h3>
+<p>重新调用我们调用了 <code class="docutils literal notranslate"><span class="pre">broadcaster_listener.launch.py</span></code> 文件我们级launch文件。除此之外，我们通过了 <code class="docutils literal notranslate"><span class="pre">target_frame</span></code> launch的论点，如下所示: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7715">[待校准&#64;7715]</a></p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">broadcaster_listener_nodes</span> <span class="o">=</span> <span class="n">IncludeLaunchDescription</span><span class="p">(</span>
    <span class="n">PythonLaunchDescriptionSource</span><span class="p">([</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
       <span class="n">get_package_share_directory</span><span class="p">(</span><span class="s1">&#39;launch_tutorial&#39;</span><span class="p">),</span> <span class="s1">&#39;launch&#39;</span><span class="p">),</span>
@@ -599,11 +599,11 @@
    <span class="p">)</span>
 </pre></div>
 </div>
-<p>这种语法允许我们将默认目标帧更改为 <code class="docutils literal notranslate"><span class="pre">carrot1</span></code> 。如果你想让 <code class="docutils literal notranslate"><span class="pre">turtle2</span></code> 遵循 <code class="docutils literal notranslate"><span class="pre">turtle1</span></code> 而不是 <code class="docutils literal notranslate"><span class="pre">carrot1</span></code> ，只需去掉定义 <code class="docutils literal notranslate"><span class="pre">launch_arguments</span></code> 的线。这将为 <code class="docutils literal notranslate"><span class="pre">target_frame</span></code> 分配其默认值，即 <code class="docutils literal notranslate"><span class="pre">turtle1</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7716">[待校准&#64;7716]</a></p>
+<p>这种语法允许我们将默认目标帧更改为 <code class="docutils literal notranslate"><span class="pre">carrot1</span></code> 。如果你想让 <code class="docutils literal notranslate"><span class="pre">turtle2</span></code> 遵循 <code class="docutils literal notranslate"><span class="pre">turtle1</span></code> 而不是 <code class="docutils literal notranslate"><span class="pre">carrot1</span></code> ，只需去掉定义 <code class="docutils literal notranslate"><span class="pre">launch_arguments</span></code> 的线。这将为 <code class="docutils literal notranslate"><span class="pre">target_frame</span></code> 分配其默认值，即 <code class="docutils literal notranslate"><span class="pre">turtle1</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7716">[待校准&#64;7716]</a></p>
 </div>
 <div class="section" id="remapping">
-<h3>6重新映射 <a class="reference external" href="http://localhost:3000/#/home?msgid=7717">[待校准&#64;7717]</a><a class="headerlink" href="#remapping" title="永久链接至标题"></a></h3>
-<p>现在创建一个 <code class="docutils literal notranslate"><span class="pre">mimic.launch.py</span></code> 文件。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7718">[待校准&#64;7718]</a></p>
+<h3>6重新映射 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7717">[待校准&#64;7717]</a><a class="headerlink" href="#remapping" title="永久链接至标题"></a></h3>
+<p>现在创建一个 <code class="docutils literal notranslate"><span class="pre">mimic.launch.py</span></code> 文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7718">[待校准&#64;7718]</a></p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">launch</span> <span class="kn">import</span> <span class="n">LaunchDescription</span>
 <span class="kn">from</span> <span class="nn">launch_ros.actions</span> <span class="kn">import</span> <span class="n">Node</span>
 
@@ -622,11 +622,11 @@
    <span class="p">])</span>
 </pre></div>
 </div>
-<p>该launch文件将启动 <code class="docutils literal notranslate"><span class="pre">mimic</span></code> 节点，该节点将向一个turtlesim发出命令以跟随另一个。节点被设计用来接收话题 <code class="docutils literal notranslate"><span class="pre">/input/pose</span></code> 上的目标姿势。在我们的案例中，我们想要从 <code class="docutils literal notranslate"><span class="pre">/turtle2/pose</span></code> 话题重新映射目标姿势。最后，我们将 <code class="docutils literal notranslate"><span class="pre">/output/cmd_vel</span></code> 话题重新映射到 <code class="docutils literal notranslate"><span class="pre">/turtlesim2/turtle1/cmd_vel</span></code> 。这样，我们 <code class="docutils literal notranslate"><span class="pre">turtlesim2</span></code> 仿真世界中的 <code class="docutils literal notranslate"><span class="pre">turtle1</span></code> 将在我们最初的turtlesim世界中跟随 <code class="docutils literal notranslate"><span class="pre">turtle2</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7719">[待校准&#64;7719]</a></p>
+<p>该launch文件将启动 <code class="docutils literal notranslate"><span class="pre">mimic</span></code> 节点，该节点将向一个turtlesim发出命令以跟随另一个。节点被设计用来接收话题 <code class="docutils literal notranslate"><span class="pre">/input/pose</span></code> 上的目标姿势。在我们的案例中，我们想要从 <code class="docutils literal notranslate"><span class="pre">/turtle2/pose</span></code> 话题重新映射目标姿势。最后，我们将 <code class="docutils literal notranslate"><span class="pre">/output/cmd_vel</span></code> 话题重新映射到 <code class="docutils literal notranslate"><span class="pre">/turtlesim2/turtle1/cmd_vel</span></code> 。这样，我们 <code class="docutils literal notranslate"><span class="pre">turtlesim2</span></code> 仿真世界中的 <code class="docutils literal notranslate"><span class="pre">turtle1</span></code> 将在我们最初的turtlesim世界中跟随 <code class="docutils literal notranslate"><span class="pre">turtle2</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7719">[待校准&#64;7719]</a></p>
 </div>
 <div class="section" id="config-files">
-<h3>7配置文件 <a class="reference external" href="http://localhost:3000/#/home?msgid=7720">[待校准&#64;7720]</a><a class="headerlink" href="#config-files" title="永久链接至标题"></a></h3>
-<p>现在让我们创建一个调用ed <code class="docutils literal notranslate"><span class="pre">turtlesim_rviz.launch.py</span></code> 的文件。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7721">[待校准&#64;7721]</a></p>
+<h3>7配置文件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7720">[待校准&#64;7720]</a><a class="headerlink" href="#config-files" title="永久链接至标题"></a></h3>
+<p>现在让我们创建一个调用ed <code class="docutils literal notranslate"><span class="pre">turtlesim_rviz.launch.py</span></code> 的文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7721">[待校准&#64;7721]</a></p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 
 <span class="kn">from</span> <span class="nn">ament_index_python.packages</span> <span class="kn">import</span> <span class="n">get_package_share_directory</span>
@@ -652,11 +652,11 @@
    <span class="p">])</span>
 </pre></div>
 </div>
-<p>这launch文件将启动RViz配置文件中定义的 <code class="docutils literal notranslate"><span class="pre">turtle_tf2_py</span></code> 包。此RViz配置将设置世界帧，启用TF可视化，并以自上而下的视图启动RViz。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7722">[待校准&#64;7722]</a></p>
+<p>这launch文件将启动RViz配置文件中定义的 <code class="docutils literal notranslate"><span class="pre">turtle_tf2_py</span></code> 包。此RViz配置将设置世界帧，启用TF可视化，并以自上而下的视图启动RViz。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7722">[待校准&#64;7722]</a></p>
 </div>
 <div class="section" id="environment-variables">
-<h3>8环境变量 <a class="reference external" href="http://localhost:3000/#/home?msgid=7723">[待校准&#64;7723]</a><a class="headerlink" href="#environment-variables" title="永久链接至标题"></a></h3>
-<p>现在，让我们在包中创建调用ed <code class="docutils literal notranslate"><span class="pre">fixed_broadcaster.launch.py</span></code> 的最后一个launch文件。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7724">[待校准&#64;7724]</a></p>
+<h3>8环境变量 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7723">[待校准&#64;7723]</a><a class="headerlink" href="#environment-variables" title="永久链接至标题"></a></h3>
+<p>现在，让我们在包中创建调用ed <code class="docutils literal notranslate"><span class="pre">fixed_broadcaster.launch.py</span></code> 的最后一个launch文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7724">[待校准&#64;7724]</a></p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">launch</span> <span class="kn">import</span> <span class="n">LaunchDescription</span>
 <span class="kn">from</span> <span class="nn">launch.actions</span> <span class="kn">import</span> <span class="n">DeclareLaunchArgument</span>
 <span class="kn">from</span> <span class="nn">launch.substitutions</span> <span class="kn">import</span> <span class="n">EnvironmentVariable</span><span class="p">,</span> <span class="n">LaunchConfiguration</span>
@@ -678,14 +678,14 @@
    <span class="p">])</span>
 </pre></div>
 </div>
-<p>这个launch文件显示了如何在launch文件中调用环境变量。环境变量可用于定义或推送命名空间，以区分不同计算机或机器人上的节点。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7725">[待校准&#64;7725]</a></p>
+<p>这个launch文件显示了如何在launch文件中调用环境变量。环境变量可用于定义或推送命名空间，以区分不同计算机或机器人上的节点。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7725">[待校准&#64;7725]</a></p>
 </div>
 </div>
 <div class="section" id="running-launch-files">
-<h2>运行launch文件 <a class="reference external" href="http://localhost:3000/#/home?msgid=7726">[待校准&#64;7726]</a><a class="headerlink" href="#running-launch-files" title="永久链接至标题"></a></h2>
+<h2>运行launch文件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7726">[待校准&#64;7726]</a><a class="headerlink" href="#running-launch-files" title="永久链接至标题"></a></h2>
 <div class="section" id="update-setup-py">
-<h3>1更新设置 <a class="reference external" href="http://localhost:3000/#/home?msgid=7727">[待校准&#64;7727]</a><a class="headerlink" href="#update-setup-py" title="永久链接至标题"></a></h3>
-<p>打开 <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> 并添加以下几行，以便安装 <code class="docutils literal notranslate"><span class="pre">launch/</span></code> 文件夹中的launch文件和 <code class="docutils literal notranslate"><span class="pre">config/</span></code> 文件夹中的配置文件。 <code class="docutils literal notranslate"><span class="pre">data_files</span></code> 田现在应该是这样的: <a class="reference external" href="http://localhost:3000/#/home?msgid=7728">[待校准&#64;7728]</a></p>
+<h3>1更新设置 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7727">[待校准&#64;7727]</a><a class="headerlink" href="#update-setup-py" title="永久链接至标题"></a></h3>
+<p>打开 <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> 并添加以下几行，以便安装 <code class="docutils literal notranslate"><span class="pre">launch/</span></code> 文件夹中的launch文件和 <code class="docutils literal notranslate"><span class="pre">config/</span></code> 文件夹中的配置文件。 <code class="docutils literal notranslate"><span class="pre">data_files</span></code> 田现在应该是这样的: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7728">[待校准&#64;7728]</a></p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">data_files</span><span class="o">=</span><span class="p">[</span>
       <span class="o">...</span>
       <span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;share&#39;</span><span class="p">,</span> <span class="n">package_name</span><span class="p">,</span> <span class="s1">&#39;launch&#39;</span><span class="p">),</span>
@@ -697,26 +697,26 @@
 </div>
 </div>
 <div class="section" id="build-and-run">
-<h3>2构建和运行 <a class="reference external" href="http://localhost:3000/#/home?msgid=7729">[待校准&#64;7729]</a><a class="headerlink" href="#build-and-run" title="永久链接至标题"></a></h3>
-<p>终于看到结果代码，构建软件包和launch顶级launch文件使用以下命令: <a class="reference external" href="http://localhost:3000/#/home?msgid=7730">[待校准&#64;7730]</a></p>
+<h3>2构建和运行 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7729">[待校准&#64;7729]</a><a class="headerlink" href="#build-and-run" title="永久链接至标题"></a></h3>
+<p>终于看到结果代码，构建软件包和launch顶级launch文件使用以下命令: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7730">[待校准&#64;7730]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 launch launch_tutorial launch_turtlesim.launch.py</span>
 </pre></div>
 </div>
-<p>现在，您将看到两个turtlesim仿真已启动。第一个有两只海龟，第二个有一只。在第一次仿真中， <code class="docutils literal notranslate"><span class="pre">turtle2</span></code> 在世界的左下角产生。它的目的是达到相对于 <code class="docutils literal notranslate"><span class="pre">turtle1</span></code> 帧在x轴上5米远的 <code class="docutils literal notranslate"><span class="pre">carrot1</span></code> 帧。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7731">[待校准&#64;7731]</a></p>
-<p>第二种中的 <code class="docutils literal notranslate"><span class="pre">turtlesim2/turtle1</span></code> 被设计成模仿 <code class="docutils literal notranslate"><span class="pre">turtle2</span></code> 的行为。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7732">[待校准&#64;7732]</a></p>
-<p>如果要控制 <code class="docutils literal notranslate"><span class="pre">turtle1</span></code> ，请运行teleop节点。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7733">[待校准&#64;7733]</a></p>
+<p>现在，您将看到两个turtlesim仿真已启动。第一个有两只海龟，第二个有一只。在第一次仿真中， <code class="docutils literal notranslate"><span class="pre">turtle2</span></code> 在世界的左下角产生。它的目的是达到相对于 <code class="docutils literal notranslate"><span class="pre">turtle1</span></code> 帧在x轴上5米远的 <code class="docutils literal notranslate"><span class="pre">carrot1</span></code> 帧。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7731">[待校准&#64;7731]</a></p>
+<p>第二种中的 <code class="docutils literal notranslate"><span class="pre">turtlesim2/turtle1</span></code> 被设计成模仿 <code class="docutils literal notranslate"><span class="pre">turtle2</span></code> 的行为。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7732">[待校准&#64;7732]</a></p>
+<p>如果要控制 <code class="docutils literal notranslate"><span class="pre">turtle1</span></code> ，请运行teleop节点。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7733">[待校准&#64;7733]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run turtlesim turtle_teleop_key</span>
 </pre></div>
 </div>
-<p>因此，您将看到类似的图片: <a class="reference external" href="http://localhost:3000/#/home?msgid=7734">[待校准&#64;7734]</a></p>
+<p>因此，您将看到类似的图片: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7734">[待校准&#64;7734]</a></p>
 <img alt="../../_images/turtlesim_worlds.png" src="../../_images/turtlesim_worlds.png" />
-<p>除此之外，RViz应该已经开始了。它将显示所有海龟帧相对于 <code class="docutils literal notranslate"><span class="pre">world</span></code> 帧，其原点在左下角。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7735">[待校准&#64;7735]</a></p>
+<p>除此之外，RViz应该已经开始了。它将显示所有海龟帧相对于 <code class="docutils literal notranslate"><span class="pre">world</span></code> 帧，其原点在左下角。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7735">[待校准&#64;7735]</a></p>
 <img alt="../../_images/turtlesim_rviz.png" src="../../_images/turtlesim_rviz.png" />
 </div>
 </div>
 <div class="section" id="summary">
-<h2>总结 <a class="reference external" href="http://localhost:3000/#/home?msgid=6747">[待校准&#64;6747]</a><a class="headerlink" href="#summary" title="永久链接至标题"></a></h2>
-<p>在本教程中，您学习了使用ROS 2launch文件管理大型项目的各种技巧和实践。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7736">[待校准&#64;7736]</a></p>
+<h2>总结 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6747">[待校准&#64;6747]</a><a class="headerlink" href="#summary" title="永久链接至标题"></a></h2>
+<p>在本教程中，您学习了使用ROS 2launch文件管理大型项目的各种技巧和实践。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7736">[待校准&#64;7736]</a></p>
 </div>
 </div>
 

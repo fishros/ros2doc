@@ -279,9 +279,9 @@
 
 
   <div class="section" id="migrating-launch-files-from-ros-1-to-ros-2">
-<span id="migratinglaunch"></span><h1>迁移launch文件ROS 1ROS 2 <a class="reference external" href="http://localhost:3000/#/home?msgid=6189">[待校准&#64;6189]</a><a class="headerlink" href="#migrating-launch-files-from-ros-1-to-ros-2" title="永久链接至标题"></a></h1>
+<span id="migratinglaunch"></span><h1>迁移launch文件ROS 1ROS 2 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6189">[待校准&#64;6189]</a><a class="headerlink" href="#migrating-launch-files-from-ros-1-to-ros-2" title="永久链接至标题"></a></h1>
 <div class="contents local topic" id="table-of-contents">
-<p class="topic-title">目录 <a class="reference external" href="http://localhost:3000/#/home?msgid=5761">[待校准&#64;5761]</a></p>
+<p class="topic-title">目录 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5761">[待校准&#64;5761]</a></p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#background" id="id9">背景 [待校准&#64;6191]</a></p></li>
 <li><p><a class="reference internal" href="#migrating-tags-from-ros-1-to-ros-2" id="id10">将标签从ROS 1迁移到ROS 2 [待校准&#64;6193]</a></p></li>
@@ -291,37 +291,37 @@
 <li><p><a class="reference internal" href="#id8" id="id14">类型推理规则 [待校准&#64;6209]</a></p></li>
 </ul>
 </div>
-<p>本指南介绍了如何编写XMLlaunch文件以便于从ROS 1迁移。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6190">[待校准&#64;6190]</a></p>
+<p>本指南介绍了如何编写XMLlaunch文件以便于从ROS 1迁移。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6190">[待校准&#64;6190]</a></p>
 <div class="section" id="background">
-<h2>背景 <a class="reference external" href="http://localhost:3000/#/home?msgid=6191">[待校准&#64;6191]</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
-<p>对ROS 2launch系统及其Python API的描述可以在 <a class="reference internal" href="../Tutorials/Launch/Launch-system.html"><span class="doc">Launch System tutorial</span></a> 中找到。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6192">[待校准&#64;6192]</a></p>
+<h2>背景 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6191">[待校准&#64;6191]</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
+<p>对ROS 2launch系统及其Python API的描述可以在 <a class="reference internal" href="../Tutorials/Launch/Launch-system.html"><span class="doc">Launch System tutorial</span></a> 中找到。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6192">[待校准&#64;6192]</a></p>
 </div>
 <div class="section" id="migrating-tags-from-ros-1-to-ros-2">
-<h2>将标签从ROS 1迁移到ROS 2 <a class="reference external" href="http://localhost:3000/#/home?msgid=6193">[待校准&#64;6193]</a><a class="headerlink" href="#migrating-tags-from-ros-1-to-ros-2" title="永久链接至标题"></a></h2>
+<h2>将标签从ROS 1迁移到ROS 2 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6193">[待校准&#64;6193]</a><a class="headerlink" href="#migrating-tags-from-ros-1-to-ros-2" title="永久链接至标题"></a></h2>
 <div class="section" id="launch">
-<h3>launch <a class="reference external" href="http://localhost:3000/#/home?msgid=6194">[待校准&#64;6194]</a><a class="headerlink" href="#launch" title="永久链接至标题"></a></h3>
+<h3>launch <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6194">[待校准&#64;6194]</a><a class="headerlink" href="#launch" title="永久链接至标题"></a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://wiki.ros.org/roslaunch/XML/launch">Available in ROS 1</a>.</p></li>
-<li><p>[需手动修复的语法]``launch`` is根元素任何ROS 2launchXML文件。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6196">[待校准&#64;6196]</a></p></li>
+<li><p>[需手动修复的语法]``launch`` is根元素任何ROS 2launchXML文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6196">[待校准&#64;6196]</a></p></li>
 </ul>
 </div>
 <div class="section" id="node">
-<h3>节点 <a class="reference external" href="http://localhost:3000/#/home?msgid=6197">[待校准&#64;6197]</a><a class="headerlink" href="#node" title="永久链接至标题"></a></h3>
+<h3>节点 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6197">[待校准&#64;6197]</a><a class="headerlink" href="#node" title="永久链接至标题"></a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://wiki.ros.org/roslaunch/XML/node">Available in ROS 1</a>.</p></li>
-<li><p>[需手动修复的语法]Launch是一个新节点。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6199">[待校准&#64;6199]</a></p></li>
+<li><p>[需手动修复的语法]Launch是一个新节点。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6199">[待校准&#64;6199]</a></p></li>
 <li><dl class="simple">
-<dt>与ROS 1的区别: <a class="reference external" href="http://localhost:3000/#/home?msgid=6200">[待校准&#64;6200]</a></dt><dd><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> attribute is now <code class="docutils literal notranslate"><span class="pre">exec</span></code>. <a class="reference external" href="http://localhost:3000/#/home?msgid=6201">[待校准&#64;6201]</a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ns</span></code> attribute is now <code class="docutils literal notranslate"><span class="pre">namespace</span></code>. <a class="reference external" href="http://localhost:3000/#/home?msgid=6202">[待校准&#64;6202]</a></p></li>
-<li><p>以下属性不可用:  <code class="docutils literal notranslate"><span class="pre">machine</span></code> 、 <code class="docutils literal notranslate"><span class="pre">respawn_delay</span></code> 、 <code class="docutils literal notranslate"><span class="pre">clear_params</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6203">[待校准&#64;6203]</a></p></li>
+<dt>与ROS 1的区别: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6200">[待校准&#64;6200]</a></dt><dd><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> attribute is now <code class="docutils literal notranslate"><span class="pre">exec</span></code>. <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6201">[待校准&#64;6201]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ns</span></code> attribute is now <code class="docutils literal notranslate"><span class="pre">namespace</span></code>. <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6202">[待校准&#64;6202]</a></p></li>
+<li><p>以下属性不可用:  <code class="docutils literal notranslate"><span class="pre">machine</span></code> 、 <code class="docutils literal notranslate"><span class="pre">respawn_delay</span></code> 、 <code class="docutils literal notranslate"><span class="pre">clear_params</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6203">[待校准&#64;6203]</a></p></li>
 </ul>
 </dd>
 </dl>
 </li>
 </ul>
 <div class="section" id="example">
-<h4>示例 <a class="reference external" href="http://localhost:3000/#/home?msgid=6204">[待校准&#64;6204]</a><a class="headerlink" href="#example" title="永久链接至标题"></a></h4>
+<h4>示例 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6204">[待校准&#64;6204]</a><a class="headerlink" href="#example" title="永久链接至标题"></a></h4>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;launch&gt;</span>
    <span class="nt">&lt;node</span> <span class="na">pkg=</span><span class="s">&quot;demo_nodes_cpp&quot;</span> <span class="na">exec=</span><span class="s">&quot;talker&quot;</span><span class="nt">/&gt;</span>
    <span class="nt">&lt;node</span> <span class="na">pkg=</span><span class="s">&quot;demo_nodes_cpp&quot;</span> <span class="na">exec=</span><span class="s">&quot;listener&quot;</span><span class="nt">/&gt;</span>
@@ -331,14 +331,14 @@
 </div>
 </div>
 <div class="section" id="param">
-<h3>参数 <a class="reference external" href="http://localhost:3000/#/home?msgid=6205">[待校准&#64;6205]</a><a class="headerlink" href="#param" title="永久链接至标题"></a></h3>
+<h3>参数 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6205">[待校准&#64;6205]</a><a class="headerlink" href="#param" title="永久链接至标题"></a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://wiki.ros.org/roslaunch/XML/param">Available in ROS 1</a>.</p></li>
-<li><p>用于将参数传递给节点。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6207">[待校准&#64;6207]</a></p></li>
-<li><p>ROS 2中没有全局参数概念。因此，它只能嵌套在 <code class="docutils literal notranslate"><span class="pre">node</span></code> 标签中使用。ROS 2不支持某些属性:  <code class="docutils literal notranslate"><span class="pre">type</span></code> 、 <code class="docutils literal notranslate"><span class="pre">textfile</span></code> 、 <code class="docutils literal notranslate"><span class="pre">binfile</span></code> 、 <code class="docutils literal notranslate"><span class="pre">executable</span></code> 、 <code class="docutils literal notranslate"><span class="pre">command</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6208">[待校准&#64;6208]</a></p></li>
+<li><p>用于将参数传递给节点。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6207">[待校准&#64;6207]</a></p></li>
+<li><p>ROS 2中没有全局参数概念。因此，它只能嵌套在 <code class="docutils literal notranslate"><span class="pre">node</span></code> 标签中使用。ROS 2不支持某些属性:  <code class="docutils literal notranslate"><span class="pre">type</span></code> 、 <code class="docutils literal notranslate"><span class="pre">textfile</span></code> 、 <code class="docutils literal notranslate"><span class="pre">binfile</span></code> 、 <code class="docutils literal notranslate"><span class="pre">executable</span></code> 、 <code class="docutils literal notranslate"><span class="pre">command</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6208">[待校准&#64;6208]</a></p></li>
 </ul>
 <div class="section" id="id1">
-<h4>示例 <a class="reference external" href="http://localhost:3000/#/home?msgid=6204">[待校准&#64;6204]</a><a class="headerlink" href="#id1" title="永久链接至标题"></a></h4>
+<h4>示例 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6204">[待校准&#64;6204]</a><a class="headerlink" href="#id1" title="永久链接至标题"></a></h4>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;launch&gt;</span>
    <span class="nt">&lt;node</span> <span class="na">pkg=</span><span class="s">&quot;demo_nodes_cpp&quot;</span> <span class="na">exec=</span><span class="s">&quot;parameter_event&quot;</span><span class="nt">&gt;</span>
       <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">&quot;foo&quot;</span> <span class="na">value=</span><span class="s">&quot;5&quot;</span><span class="nt">/&gt;</span>
@@ -348,8 +348,8 @@
 </div>
 </div>
 <div class="section" id="type-inference-rules">
-<h4>类型推理规则 <a class="reference external" href="http://localhost:3000/#/home?msgid=6209">[待校准&#64;6209]</a><a class="headerlink" href="#type-inference-rules" title="永久链接至标题"></a></h4>
-<p>以下是一些如何编写参数的示例: <a class="reference external" href="http://localhost:3000/#/home?msgid=6210">[待校准&#64;6210]</a></p>
+<h4>类型推理规则 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6209">[待校准&#64;6209]</a><a class="headerlink" href="#type-inference-rules" title="永久链接至标题"></a></h4>
+<p>以下是一些如何编写参数的示例: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6210">[待校准&#64;6210]</a></p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;node</span> <span class="na">pkg=</span><span class="s">&quot;my_package&quot;</span> <span class="na">exec=</span><span class="s">&quot;my_executable&quot;</span> <span class="na">name=</span><span class="s">&quot;my_node&quot;</span><span class="nt">&gt;</span>
    <span class="c">&lt;!--A string parameter with value &quot;1&quot;--&gt;</span>
    <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">&quot;a_string&quot;</span> <span class="na">value=</span><span class="s">&quot;&#39;1&#39;&quot;</span><span class="nt">/&gt;</span>
@@ -376,8 +376,8 @@
 </div>
 </div>
 <div class="section" id="parameter-grouping">
-<h4>参数分组 <a class="reference external" href="http://localhost:3000/#/home?msgid=6211">[待校准&#64;6211]</a><a class="headerlink" href="#parameter-grouping" title="永久链接至标题"></a></h4>
-<p>在ROS 2中，允许嵌入 <code class="docutils literal notranslate"><span class="pre">param</span></code> 标签。例如: <a class="reference external" href="http://localhost:3000/#/home?msgid=6212">[待校准&#64;6212]</a></p>
+<h4>参数分组 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6211">[待校准&#64;6211]</a><a class="headerlink" href="#parameter-grouping" title="永久链接至标题"></a></h4>
+<p>在ROS 2中，允许嵌入 <code class="docutils literal notranslate"><span class="pre">param</span></code> 标签。例如: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6212">[待校准&#64;6212]</a></p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;node</span> <span class="na">pkg=</span><span class="s">&quot;my_package&quot;</span> <span class="na">exec=</span><span class="s">&quot;my_executable&quot;</span> <span class="na">name=</span><span class="s">&quot;my_node&quot;</span> <span class="na">ns=</span><span class="s">&quot;/an_absoulute_ns&quot;</span><span class="nt">&gt;</span>
    <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">&quot;group1&quot;</span><span class="nt">&gt;</span>
       <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">&quot;group2&quot;</span><span class="nt">&gt;</span>
@@ -388,12 +388,12 @@
 <span class="nt">&lt;/node&gt;</span>
 </pre></div>
 </div>
-<p>这将创建两个参数: <a class="reference external" href="http://localhost:3000/#/home?msgid=6213">[待校准&#64;6213]</a></p>
+<p>这将创建两个参数: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6213">[待校准&#64;6213]</a></p>
 <ul class="simple">
-<li><p>A <code class="docutils literal notranslate"><span class="pre">group1.group2.my_param</span></code> 价值 <code class="docutils literal notranslate"><span class="pre">1</span></code> 主办节点 <code class="docutils literal notranslate"><span class="pre">/an_absolute_ns/my_node</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6214">[待校准&#64;6214]</a></p></li>
-<li><p>A <code class="docutils literal notranslate"><span class="pre">group1.another_param</span></code> 价值 <code class="docutils literal notranslate"><span class="pre">2</span></code> 主办节点 <code class="docutils literal notranslate"><span class="pre">/an_absolute_ns/my_node</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6215">[待校准&#64;6215]</a></p></li>
+<li><p>A <code class="docutils literal notranslate"><span class="pre">group1.group2.my_param</span></code> 价值 <code class="docutils literal notranslate"><span class="pre">1</span></code> 主办节点 <code class="docutils literal notranslate"><span class="pre">/an_absolute_ns/my_node</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6214">[待校准&#64;6214]</a></p></li>
+<li><p>A <code class="docutils literal notranslate"><span class="pre">group1.another_param</span></code> 价值 <code class="docutils literal notranslate"><span class="pre">2</span></code> 主办节点 <code class="docutils literal notranslate"><span class="pre">/an_absolute_ns/my_node</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6215">[待校准&#64;6215]</a></p></li>
 </ul>
-<p>也可以使用完整参数名称: <a class="reference external" href="http://localhost:3000/#/home?msgid=6216">[待校准&#64;6216]</a></p>
+<p>也可以使用完整参数名称: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6216">[待校准&#64;6216]</a></p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;node</span> <span class="na">pkg=</span><span class="s">&quot;my_package&quot;</span> <span class="na">exec=</span><span class="s">&quot;my_executable&quot;</span> <span class="na">name=</span><span class="s">&quot;my_node&quot;</span> <span class="na">ns=</span><span class="s">&quot;/an_absoulute_ns&quot;</span><span class="nt">&gt;</span>
    <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">&quot;group1.group2.my_param&quot;</span> <span class="na">value=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
    <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">&quot;group1.another_param&quot;</span> <span class="na">value=</span><span class="s">&quot;2&quot;</span><span class="nt">/&gt;</span>
@@ -403,14 +403,14 @@
 </div>
 </div>
 <div class="section" id="rosparam">
-<h3>rosparam <a class="reference external" href="http://localhost:3000/#/home?msgid=6217">[待校准&#64;6217]</a><a class="headerlink" href="#rosparam" title="永久链接至标题"></a></h3>
+<h3>rosparam <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6217">[待校准&#64;6217]</a><a class="headerlink" href="#rosparam" title="永久链接至标题"></a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://wiki.ros.org/roslaunch/XML/rosparam">Available in ROS 1</a>.</p></li>
-<li><p>从yaml文件加载参数。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6219">[待校准&#64;6219]</a></p></li>
-<li><p>已替换 <code class="docutils literal notranslate"><span class="pre">from</span></code> 属性 <code class="docutils literal notranslate"><span class="pre">param</span></code> 标签。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6220">[待校准&#64;6220]</a></p></li>
+<li><p>从yaml文件加载参数。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6219">[待校准&#64;6219]</a></p></li>
+<li><p>已替换 <code class="docutils literal notranslate"><span class="pre">from</span></code> 属性 <code class="docutils literal notranslate"><span class="pre">param</span></code> 标签。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6220">[待校准&#64;6220]</a></p></li>
 </ul>
 <div class="section" id="id2">
-<h4>示例 <a class="reference external" href="http://localhost:3000/#/home?msgid=6204">[待校准&#64;6204]</a><a class="headerlink" href="#id2" title="永久链接至标题"></a></h4>
+<h4>示例 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6204">[待校准&#64;6204]</a><a class="headerlink" href="#id2" title="永久链接至标题"></a></h4>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;node</span> <span class="na">pkg=</span><span class="s">&quot;my_package&quot;</span> <span class="na">exec=</span><span class="s">&quot;my_executable&quot;</span> <span class="na">name=</span><span class="s">&quot;my_node&quot;</span> <span class="na">ns=</span><span class="s">&quot;/an_absoulute_ns&quot;</span><span class="nt">&gt;</span>
    <span class="nt">&lt;param</span> <span class="na">from=</span><span class="s">&quot;/path/to/file&quot;</span><span class="nt">/&gt;</span>
 <span class="nt">&lt;/node&gt;</span>
@@ -419,14 +419,14 @@
 </div>
 </div>
 <div class="section" id="remap">
-<h3>重新映射 <a class="reference external" href="http://localhost:3000/#/home?msgid=6221">[待校准&#64;6221]</a><a class="headerlink" href="#remap" title="永久链接至标题"></a></h3>
+<h3>重新映射 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6221">[待校准&#64;6221]</a><a class="headerlink" href="#remap" title="永久链接至标题"></a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://wiki.ros.org/roslaunch/XML/remap">Available in ROS 1</a>.</p></li>
-<li><p>用于将重新映射规则传递给节点。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6223">[待校准&#64;6223]</a></p></li>
-<li><p>它只能在 <code class="docutils literal notranslate"><span class="pre">node</span></code> 标签内使用。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6224">[待校准&#64;6224]</a></p></li>
+<li><p>用于将重新映射规则传递给节点。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6223">[待校准&#64;6223]</a></p></li>
+<li><p>它只能在 <code class="docutils literal notranslate"><span class="pre">node</span></code> 标签内使用。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6224">[待校准&#64;6224]</a></p></li>
 </ul>
 <div class="section" id="id3">
-<h4>示例 <a class="reference external" href="http://localhost:3000/#/home?msgid=6204">[待校准&#64;6204]</a><a class="headerlink" href="#id3" title="永久链接至标题"></a></h4>
+<h4>示例 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6204">[待校准&#64;6204]</a><a class="headerlink" href="#id3" title="永久链接至标题"></a></h4>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;launch&gt;</span>
    <span class="nt">&lt;node</span> <span class="na">pkg=</span><span class="s">&quot;demo_nodes_cpp&quot;</span> <span class="na">exec=</span><span class="s">&quot;talker&quot;</span><span class="nt">&gt;</span>
       <span class="nt">&lt;remap</span> <span class="na">from=</span><span class="s">&quot;chatter&quot;</span> <span class="na">to=</span><span class="s">&quot;my_topic&quot;</span><span class="nt">/&gt;</span>
@@ -440,44 +440,44 @@
 </div>
 </div>
 <div class="section" id="include">
-<h3>包括 <a class="reference external" href="http://localhost:3000/#/home?msgid=6225">[待校准&#64;6225]</a><a class="headerlink" href="#include" title="永久链接至标题"></a></h3>
+<h3>包括 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6225">[待校准&#64;6225]</a><a class="headerlink" href="#include" title="永久链接至标题"></a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://wiki.ros.org/roslaunch/XML/include">Available in ROS 1</a>.</p></li>
-<li><p>允许包含另一个launch文件。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6227">[待校准&#64;6227]</a></p></li>
+<li><p>允许包含另一个launch文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6227">[待校准&#64;6227]</a></p></li>
 <li><dl class="simple">
-<dt>与ROS 1的区别: <a class="reference external" href="http://localhost:3000/#/home?msgid=6200">[待校准&#64;6200]</a></dt><dd><ul>
-<li><p>在ROS 1中可用，包含内容的范围。在ROS 2中，不是。Nest包括在 <code class="docutils literal notranslate"><span class="pre">group</span></code> 标签中，以确定它们的范围。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6228">[待校准&#64;6228]</a></p></li>
-<li><p>[需手动修复的语法]``ns`` attribute is not supported. See example of <code class="docutils literal notranslate"><span class="pre">push-ros-namespace</span></code> tag的变通方法。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6229">[待校准&#64;6229]</a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">arg</span></code> tags nested in an <code class="docutils literal notranslate"><span class="pre">include</span></code> tag don't support conditionals (<code class="docutils literal notranslate"><span class="pre">if</span></code> or <code class="docutils literal notranslate"><span class="pre">unless</span></code>). <a class="reference external" href="http://localhost:3000/#/home?msgid=6230">[待校准&#64;6230]</a></p></li>
-<li><p>不支持嵌套的 <code class="docutils literal notranslate"><span class="pre">env</span></code> 标签。可以用 <code class="docutils literal notranslate"><span class="pre">set_env</span></code> 和 <code class="docutils literal notranslate"><span class="pre">unset_env</span></code> 代替。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6231">[待校准&#64;6231]</a></p></li>
-<li><p>不支持 <code class="docutils literal notranslate"><span class="pre">clear_params</span></code> 和 <code class="docutils literal notranslate"><span class="pre">pass_all_args</span></code> 的属性。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6232">[待校准&#64;6232]</a></p></li>
+<dt>与ROS 1的区别: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6200">[待校准&#64;6200]</a></dt><dd><ul>
+<li><p>在ROS 1中可用，包含内容的范围。在ROS 2中，不是。Nest包括在 <code class="docutils literal notranslate"><span class="pre">group</span></code> 标签中，以确定它们的范围。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6228">[待校准&#64;6228]</a></p></li>
+<li><p>[需手动修复的语法]``ns`` attribute is not supported. See example of <code class="docutils literal notranslate"><span class="pre">push-ros-namespace</span></code> tag的变通方法。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6229">[待校准&#64;6229]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">arg</span></code> tags nested in an <code class="docutils literal notranslate"><span class="pre">include</span></code> tag don't support conditionals (<code class="docutils literal notranslate"><span class="pre">if</span></code> or <code class="docutils literal notranslate"><span class="pre">unless</span></code>). <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6230">[待校准&#64;6230]</a></p></li>
+<li><p>不支持嵌套的 <code class="docutils literal notranslate"><span class="pre">env</span></code> 标签。可以用 <code class="docutils literal notranslate"><span class="pre">set_env</span></code> 和 <code class="docutils literal notranslate"><span class="pre">unset_env</span></code> 代替。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6231">[待校准&#64;6231]</a></p></li>
+<li><p>不支持 <code class="docutils literal notranslate"><span class="pre">clear_params</span></code> 和 <code class="docutils literal notranslate"><span class="pre">pass_all_args</span></code> 的属性。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6232">[待校准&#64;6232]</a></p></li>
 </ul>
 </dd>
 </dl>
 </li>
 </ul>
 <div class="section" id="examples">
-<h4>示例 <a class="reference external" href="http://localhost:3000/#/home?msgid=6233">[待校准&#64;6233]</a><a class="headerlink" href="#examples" title="永久链接至标题"></a></h4>
-<p>见 <a class="reference internal" href="#replacing-an-include-tag">Replacing an include tag</a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6234">[待校准&#64;6234]</a></p>
+<h4>示例 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6233">[待校准&#64;6233]</a><a class="headerlink" href="#examples" title="永久链接至标题"></a></h4>
+<p>见 <a class="reference internal" href="#replacing-an-include-tag">Replacing an include tag</a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6234">[待校准&#64;6234]</a></p>
 </div>
 </div>
 <div class="section" id="arg">
-<h3>arg <a class="reference external" href="http://localhost:3000/#/home?msgid=6235">[待校准&#64;6235]</a><a class="headerlink" href="#arg" title="永久链接至标题"></a></h3>
+<h3>arg <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6235">[待校准&#64;6235]</a><a class="headerlink" href="#arg" title="永久链接至标题"></a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://wiki.ros.org/roslaunch/XML/arg">Available in ROS 1</a>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">arg</span></code> is used for declaring a launch argument, or to pass an argument when using <code class="docutils literal notranslate"><span class="pre">include</span></code> tags. <a class="reference external" href="http://localhost:3000/#/home?msgid=6237">[待校准&#64;6237]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">arg</span></code> is used for declaring a launch argument, or to pass an argument when using <code class="docutils literal notranslate"><span class="pre">include</span></code> tags. <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6237">[待校准&#64;6237]</a></p></li>
 <li><dl class="simple">
-<dt>与ROS 1的区别: <a class="reference external" href="http://localhost:3000/#/home?msgid=6200">[待校准&#64;6200]</a></dt><dd><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> attribute is not allowed. Use <code class="docutils literal notranslate"><span class="pre">let</span></code> tag。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6238">[待校准&#64;6238]</a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">doc</span></code> is now <code class="docutils literal notranslate"><span class="pre">description</span></code>. <a class="reference external" href="http://localhost:3000/#/home?msgid=6239">[待校准&#64;6239]</a></p></li>
-<li><p>当嵌套在 <code class="docutils literal notranslate"><span class="pre">include</span></code> 标签中时， <code class="docutils literal notranslate"><span class="pre">if</span></code> 和 <code class="docutils literal notranslate"><span class="pre">unless</span></code> 的属性是不允许的。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6240">[待校准&#64;6240]</a></p></li>
+<dt>与ROS 1的区别: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6200">[待校准&#64;6200]</a></dt><dd><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> attribute is not allowed. Use <code class="docutils literal notranslate"><span class="pre">let</span></code> tag。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6238">[待校准&#64;6238]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">doc</span></code> is now <code class="docutils literal notranslate"><span class="pre">description</span></code>. <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6239">[待校准&#64;6239]</a></p></li>
+<li><p>当嵌套在 <code class="docutils literal notranslate"><span class="pre">include</span></code> 标签中时， <code class="docutils literal notranslate"><span class="pre">if</span></code> 和 <code class="docutils literal notranslate"><span class="pre">unless</span></code> 的属性是不允许的。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6240">[待校准&#64;6240]</a></p></li>
 </ul>
 </dd>
 </dl>
 </li>
 </ul>
 <div class="section" id="id4">
-<h4>示例 <a class="reference external" href="http://localhost:3000/#/home?msgid=6204">[待校准&#64;6204]</a><a class="headerlink" href="#id4" title="永久链接至标题"></a></h4>
+<h4>示例 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6204">[待校准&#64;6204]</a><a class="headerlink" href="#id4" title="永久链接至标题"></a></h4>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;launch&gt;</span>
    <span class="nt">&lt;arg</span> <span class="na">name=</span><span class="s">&quot;topic_name&quot;</span> <span class="na">default=</span><span class="s">&quot;chatter&quot;</span><span class="nt">/&gt;</span>
    <span class="nt">&lt;node</span> <span class="na">pkg=</span><span class="s">&quot;demo_nodes_cpp&quot;</span> <span class="na">exec=</span><span class="s">&quot;talker&quot;</span><span class="nt">&gt;</span>
@@ -491,27 +491,27 @@
 </div>
 </div>
 <div class="section" id="passing-an-argument-via-the-command-line">
-<h4>通过命令行传递参数 <a class="reference external" href="http://localhost:3000/#/home?msgid=6241">[待校准&#64;6241]</a><a class="headerlink" href="#passing-an-argument-via-the-command-line" title="永久链接至标题"></a></h4>
-<p>见 <a class="reference internal" href="../Tutorials/Launch/Launch-system.html"><span class="doc">ROS 2 launch tutorial</span></a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6242">[待校准&#64;6242]</a></p>
+<h4>通过命令行传递参数 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6241">[待校准&#64;6241]</a><a class="headerlink" href="#passing-an-argument-via-the-command-line" title="永久链接至标题"></a></h4>
+<p>见 <a class="reference internal" href="../Tutorials/Launch/Launch-system.html"><span class="doc">ROS 2 launch tutorial</span></a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6242">[待校准&#64;6242]</a></p>
 </div>
 </div>
 <div class="section" id="env">
-<h3>环境 <a class="reference external" href="http://localhost:3000/#/home?msgid=6243">[待校准&#64;6243]</a><a class="headerlink" href="#env" title="永久链接至标题"></a></h3>
+<h3>环境 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6243">[待校准&#64;6243]</a><a class="headerlink" href="#env" title="永久链接至标题"></a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://wiki.ros.org/roslaunch/XML/env">Available in ROS 1</a>.</p></li>
-<li><p>设置环境变量。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6245">[待校准&#64;6245]</a></p></li>
+<li><p>设置环境变量。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6245">[待校准&#64;6245]</a></p></li>
 <li><dl class="simple">
-<dt>它已被 <code class="docutils literal notranslate"><span class="pre">env</span></code> 、 <code class="docutils literal notranslate"><span class="pre">set_env</span></code> 和 <code class="docutils literal notranslate"><span class="pre">unset_env</span></code> 取代: <a class="reference external" href="http://localhost:3000/#/home?msgid=6246">[待校准&#64;6246]</a></dt><dd><ul>
-<li><p>不支持``env`` can only be used nested in a <code class="docutils literal notranslate"><span class="pre">node</span></code> or <code class="docutils literal notranslate"><span class="pre">executable</span></code> tag. <code class="docutils literal notranslate"><span class="pre">if</span></code> and <code class="docutils literal notranslate"><span class="pre">unless</span></code> tags。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6247">[待校准&#64;6247]</a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">set_env</span></code> can be nested within the root tag <code class="docutils literal notranslate"><span class="pre">launch</span></code> or in <code class="docutils literal notranslate"><span class="pre">group</span></code> tags. It accepts the same attributes as <code class="docutils literal notranslate"><span class="pre">env</span></code>, and also <code class="docutils literal notranslate"><span class="pre">if</span></code> and <code class="docutils literal notranslate"><span class="pre">unless</span></code> tags. <a class="reference external" href="http://localhost:3000/#/home?msgid=6248">[待校准&#64;6248]</a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">unset_env</span></code> unsets an environment variable. It accepts a <code class="docutils literal notranslate"><span class="pre">name</span></code> attribute和条件句。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6249">[待校准&#64;6249]</a></p></li>
+<dt>它已被 <code class="docutils literal notranslate"><span class="pre">env</span></code> 、 <code class="docutils literal notranslate"><span class="pre">set_env</span></code> 和 <code class="docutils literal notranslate"><span class="pre">unset_env</span></code> 取代: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6246">[待校准&#64;6246]</a></dt><dd><ul>
+<li><p>不支持``env`` can only be used nested in a <code class="docutils literal notranslate"><span class="pre">node</span></code> or <code class="docutils literal notranslate"><span class="pre">executable</span></code> tag. <code class="docutils literal notranslate"><span class="pre">if</span></code> and <code class="docutils literal notranslate"><span class="pre">unless</span></code> tags。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6247">[待校准&#64;6247]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">set_env</span></code> can be nested within the root tag <code class="docutils literal notranslate"><span class="pre">launch</span></code> or in <code class="docutils literal notranslate"><span class="pre">group</span></code> tags. It accepts the same attributes as <code class="docutils literal notranslate"><span class="pre">env</span></code>, and also <code class="docutils literal notranslate"><span class="pre">if</span></code> and <code class="docutils literal notranslate"><span class="pre">unless</span></code> tags. <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6248">[待校准&#64;6248]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">unset_env</span></code> unsets an environment variable. It accepts a <code class="docutils literal notranslate"><span class="pre">name</span></code> attribute和条件句。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6249">[待校准&#64;6249]</a></p></li>
 </ul>
 </dd>
 </dl>
 </li>
 </ul>
 <div class="section" id="id5">
-<h4>示例 <a class="reference external" href="http://localhost:3000/#/home?msgid=6204">[待校准&#64;6204]</a><a class="headerlink" href="#id5" title="永久链接至标题"></a></h4>
+<h4>示例 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6204">[待校准&#64;6204]</a><a class="headerlink" href="#id5" title="永久链接至标题"></a></h4>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;launch&gt;</span>
    <span class="nt">&lt;set_env</span> <span class="na">name=</span><span class="s">&quot;MY_ENV_VAR&quot;</span> <span class="na">value=</span><span class="s">&quot;MY_VALUE&quot;</span> <span class="na">if=</span><span class="s">&quot;CONDITION_A&quot;</span><span class="nt">/&gt;</span>
    <span class="nt">&lt;set_env</span> <span class="na">name=</span><span class="s">&quot;ANOTHER_ENV_VAR&quot;</span> <span class="na">value=</span><span class="s">&quot;ANOTHER_VALUE&quot;</span> <span class="na">unless=</span><span class="s">&quot;CONDITION_B&quot;</span><span class="nt">/&gt;</span>
@@ -529,23 +529,23 @@
 </div>
 </div>
 <div class="section" id="group">
-<h3>组 <a class="reference external" href="http://localhost:3000/#/home?msgid=6250">[待校准&#64;6250]</a><a class="headerlink" href="#group" title="永久链接至标题"></a></h3>
+<h3>组 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6250">[待校准&#64;6250]</a><a class="headerlink" href="#group" title="永久链接至标题"></a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://wiki.ros.org/roslaunch/XML/group">Available in ROS 1</a>.</p></li>
-<li><p>允许限制launch配置的范围。通常与 <code class="docutils literal notranslate"><span class="pre">let</span></code> 、 <code class="docutils literal notranslate"><span class="pre">include</span></code> 和 <code class="docutils literal notranslate"><span class="pre">push-ros-namespace</span></code> 标签一起使用。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6252">[待校准&#64;6252]</a></p></li>
+<li><p>允许限制launch配置的范围。通常与 <code class="docutils literal notranslate"><span class="pre">let</span></code> 、 <code class="docutils literal notranslate"><span class="pre">include</span></code> 和 <code class="docutils literal notranslate"><span class="pre">push-ros-namespace</span></code> 标签一起使用。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6252">[待校准&#64;6252]</a></p></li>
 <li><dl class="simple">
-<dt>与ROS 1的区别: <a class="reference external" href="http://localhost:3000/#/home?msgid=6200">[待校准&#64;6200]</a></dt><dd><ul>
-<li><p>没有 <code class="docutils literal notranslate"><span class="pre">ns</span></code> 属性。请参阅新的 <code class="docutils literal notranslate"><span class="pre">push-ros-namespace</span></code> 标签作为解决方法。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6253">[待校准&#64;6253]</a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">clear_params</span></code> attribute不可用。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6254">[待校准&#64;6254]</a></p></li>
-<li><p>它不接受 <code class="docutils literal notranslate"><span class="pre">remap</span></code> 或 <code class="docutils literal notranslate"><span class="pre">param</span></code> 作为儿童的标签。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6255">[待校准&#64;6255]</a></p></li>
+<dt>与ROS 1的区别: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6200">[待校准&#64;6200]</a></dt><dd><ul>
+<li><p>没有 <code class="docutils literal notranslate"><span class="pre">ns</span></code> 属性。请参阅新的 <code class="docutils literal notranslate"><span class="pre">push-ros-namespace</span></code> 标签作为解决方法。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6253">[待校准&#64;6253]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clear_params</span></code> attribute不可用。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6254">[待校准&#64;6254]</a></p></li>
+<li><p>它不接受 <code class="docutils literal notranslate"><span class="pre">remap</span></code> 或 <code class="docutils literal notranslate"><span class="pre">param</span></code> 作为儿童的标签。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6255">[待校准&#64;6255]</a></p></li>
 </ul>
 </dd>
 </dl>
 </li>
 </ul>
 <div class="section" id="id6">
-<h4>示例 <a class="reference external" href="http://localhost:3000/#/home?msgid=6204">[待校准&#64;6204]</a><a class="headerlink" href="#id6" title="永久链接至标题"></a></h4>
-<p>[需手动修复的语法]``launch-prefix`` configuration affects both <code class="docutils literal notranslate"><span class="pre">executable</span></code> and <code class="docutils literal notranslate"><span class="pre">node</span></code> tags' actions. This example will use <code class="docutils literal notranslate"><span class="pre">time</span></code> as a prefix if <code class="docutils literal notranslate"><span class="pre">use_time_prefix_in_talker</span></code> argument is <code class="docutils literal notranslate"><span class="pre">1</span></code>,仅供健谈者使用。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6256">[待校准&#64;6256]</a></p>
+<h4>示例 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6204">[待校准&#64;6204]</a><a class="headerlink" href="#id6" title="永久链接至标题"></a></h4>
+<p>[需手动修复的语法]``launch-prefix`` configuration affects both <code class="docutils literal notranslate"><span class="pre">executable</span></code> and <code class="docutils literal notranslate"><span class="pre">node</span></code> tags' actions. This example will use <code class="docutils literal notranslate"><span class="pre">time</span></code> as a prefix if <code class="docutils literal notranslate"><span class="pre">use_time_prefix_in_talker</span></code> argument is <code class="docutils literal notranslate"><span class="pre">1</span></code>,仅供健谈者使用。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6256">[待校准&#64;6256]</a></p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;launch&gt;</span>
    <span class="nt">&lt;arg</span> <span class="na">name=</span><span class="s">&quot;use_time_prefix_in_talker&quot;</span> <span class="na">default=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
    <span class="nt">&lt;group&gt;</span>
@@ -559,23 +559,23 @@
 </div>
 </div>
 <div class="section" id="machine">
-<h3>机器 <a class="reference external" href="http://localhost:3000/#/home?msgid=6257">[待校准&#64;6257]</a><a class="headerlink" href="#machine" title="永久链接至标题"></a></h3>
-<p>目前不支持。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6258">[待校准&#64;6258]</a></p>
+<h3>机器 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6257">[待校准&#64;6257]</a><a class="headerlink" href="#machine" title="永久链接至标题"></a></h3>
+<p>目前不支持。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6258">[待校准&#64;6258]</a></p>
 </div>
 <div class="section" id="test">
-<h3>测试 <a class="reference external" href="http://localhost:3000/#/home?msgid=6259">[待校准&#64;6259]</a><a class="headerlink" href="#test" title="永久链接至标题"></a></h3>
-<p>目前不支持。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6258">[待校准&#64;6258]</a></p>
+<h3>测试 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6259">[待校准&#64;6259]</a><a class="headerlink" href="#test" title="永久链接至标题"></a></h3>
+<p>目前不支持。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6258">[待校准&#64;6258]</a></p>
 </div>
 </div>
 <div class="section" id="new-tags-in-ros-2">
-<h2>ROS 2中的新标签 <a class="reference external" href="http://localhost:3000/#/home?msgid=6260">[待校准&#64;6260]</a><a class="headerlink" href="#new-tags-in-ros-2" title="永久链接至标题"></a></h2>
+<h2>ROS 2中的新标签 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6260">[待校准&#64;6260]</a><a class="headerlink" href="#new-tags-in-ros-2" title="永久链接至标题"></a></h2>
 <div class="section" id="set-env-and-unset-env">
-<h3>set_env和unset_env <a class="reference external" href="http://localhost:3000/#/home?msgid=6261">[待校准&#64;6261]</a><a class="headerlink" href="#set-env-and-unset-env" title="永久链接至标题"></a></h3>
-<p>见 <a class="reference internal" href="#env">env</a> 标签说明。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6262">[待校准&#64;6262]</a></p>
+<h3>set_env和unset_env <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6261">[待校准&#64;6261]</a><a class="headerlink" href="#set-env-and-unset-env" title="永久链接至标题"></a></h3>
+<p>见 <a class="reference internal" href="#env">env</a> 标签说明。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6262">[待校准&#64;6262]</a></p>
 </div>
 <div class="section" id="push-ros-namespace">
-<h3>push-ros-namespace <a class="reference external" href="http://localhost:3000/#/home?msgid=6263">[待校准&#64;6263]</a><a class="headerlink" href="#push-ros-namespace" title="永久链接至标题"></a></h3>
-<p>[需手动修复的语法]``include`` and <code class="docutils literal notranslate"><span class="pre">group</span></code> tags don't accept an <code class="docutils literal notranslate"><span class="pre">ns</span></code> attribute。此动作可用作解决方法: <a class="reference external" href="http://localhost:3000/#/home?msgid=6264">[待校准&#64;6264]</a></p>
+<h3>push-ros-namespace <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6263">[待校准&#64;6263]</a><a class="headerlink" href="#push-ros-namespace" title="永久链接至标题"></a></h3>
+<p>[需手动修复的语法]``include`` and <code class="docutils literal notranslate"><span class="pre">group</span></code> tags don't accept an <code class="docutils literal notranslate"><span class="pre">ns</span></code> attribute。此动作可用作解决方法: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6264">[待校准&#64;6264]</a></p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;!-Other tags--&gt;</span>
 <span class="nt">&lt;group&gt;</span>
    <span class="nt">&lt;push-ros-namespace</span> <span class="na">namespace=</span><span class="s">&quot;my_ns&quot;</span><span class="nt">/&gt;</span>
@@ -595,17 +595,17 @@
 </div>
 </div>
 <div class="section" id="let">
-<h3>让 <a class="reference external" href="http://localhost:3000/#/home?msgid=6265">[待校准&#64;6265]</a><a class="headerlink" href="#let" title="永久链接至标题"></a></h3>
-<p>这是用值属性替换 <code class="docutils literal notranslate"><span class="pre">arg</span></code> 标签。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6266">[待校准&#64;6266]</a></p>
+<h3>让 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6265">[待校准&#64;6265]</a><a class="headerlink" href="#let" title="永久链接至标题"></a></h3>
+<p>这是用值属性替换 <code class="docutils literal notranslate"><span class="pre">arg</span></code> 标签。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6266">[待校准&#64;6266]</a></p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;let</span> <span class="na">var=</span><span class="s">&quot;foo&quot;</span> <span class="na">value=</span><span class="s">&quot;asd&quot;</span><span class="nt">/&gt;</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="executable">
-<h3>可执行文件 <a class="reference external" href="http://localhost:3000/#/home?msgid=6267">[待校准&#64;6267]</a><a class="headerlink" href="#executable" title="永久链接至标题"></a></h3>
-<p>它允许运行任何可执行文件。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6268">[待校准&#64;6268]</a></p>
+<h3>可执行文件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6267">[待校准&#64;6267]</a><a class="headerlink" href="#executable" title="永久链接至标题"></a></h3>
+<p>它允许运行任何可执行文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6268">[待校准&#64;6268]</a></p>
 <div class="section" id="id7">
-<h4>示例 <a class="reference external" href="http://localhost:3000/#/home?msgid=6204">[待校准&#64;6204]</a><a class="headerlink" href="#id7" title="永久链接至标题"></a></h4>
+<h4>示例 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6204">[待校准&#64;6204]</a><a class="headerlink" href="#id7" title="永久链接至标题"></a></h4>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;executable</span> <span class="na">cmd=</span><span class="s">&quot;ls -las&quot;</span> <span class="na">cwd=</span><span class="s">&quot;/var/log&quot;</span> <span class="na">name=</span><span class="s">&quot;my_exec&quot;</span> <span class="na">launch-prefix=</span><span class="s">&quot;something&quot;</span> <span class="na">output=</span><span class="s">&quot;screen&quot;</span> <span class="na">shell=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
    <span class="nt">&lt;env</span> <span class="na">name=</span><span class="s">&quot;LD_LIBRARY&quot;</span> <span class="na">value=</span><span class="s">&quot;/lib/some.so&quot;</span><span class="nt">/&gt;</span>
 <span class="nt">&lt;/executable&gt;</span>
@@ -615,38 +615,38 @@
 </div>
 </div>
 <div class="section" id="replacing-an-include-tag">
-<h2>替换包含标签 <a class="reference external" href="http://localhost:3000/#/home?msgid=6269">[待校准&#64;6269]</a><a class="headerlink" href="#replacing-an-include-tag" title="永久链接至标题"></a></h2>
-<p>为了将一个launch文件包含在一个命名空间下，如在ROS 1中，那么 <code class="docutils literal notranslate"><span class="pre">include</span></code> 标签必须嵌套在 <code class="docutils literal notranslate"><span class="pre">group</span></code> 标签中。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6270">[待校准&#64;6270]</a></p>
+<h2>替换包含标签 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6269">[待校准&#64;6269]</a><a class="headerlink" href="#replacing-an-include-tag" title="永久链接至标题"></a></h2>
+<p>为了将一个launch文件包含在一个命名空间下，如在ROS 1中，那么 <code class="docutils literal notranslate"><span class="pre">include</span></code> 标签必须嵌套在 <code class="docutils literal notranslate"><span class="pre">group</span></code> 标签中。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6270">[待校准&#64;6270]</a></p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;group&gt;</span>
    <span class="nt">&lt;include</span> <span class="na">file=</span><span class="s">&quot;another_launch_file&quot;</span><span class="nt">/&gt;</span>
 <span class="nt">&lt;/group&gt;</span>
 </pre></div>
 </div>
-<p>然后，添加 <code class="docutils literal notranslate"><span class="pre">push-ros-namespace</span></code> 动作标签以指定命名空间，而不是使用 <code class="docutils literal notranslate"><span class="pre">ns</span></code> 属性: <a class="reference external" href="http://localhost:3000/#/home?msgid=6271">[待校准&#64;6271]</a></p>
+<p>然后，添加 <code class="docutils literal notranslate"><span class="pre">push-ros-namespace</span></code> 动作标签以指定命名空间，而不是使用 <code class="docutils literal notranslate"><span class="pre">ns</span></code> 属性: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6271">[待校准&#64;6271]</a></p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;group&gt;</span>
    <span class="nt">&lt;push-ros-namespace</span> <span class="na">namespace=</span><span class="s">&quot;my_ns&quot;</span><span class="nt">/&gt;</span>
    <span class="nt">&lt;include</span> <span class="na">file=</span><span class="s">&quot;another_launch_file&quot;</span><span class="nt">/&gt;</span>
 <span class="nt">&lt;/group&gt;</span>
 </pre></div>
 </div>
-<p>套料 <code class="docutils literal notranslate"><span class="pre">include</span></code> 标签下 <code class="docutils literal notranslate"><span class="pre">group</span></code> 标签只需指定命名空间 <a class="reference external" href="http://localhost:3000/#/home?msgid=6272">[待校准&#64;6272]</a></p>
+<p>套料 <code class="docutils literal notranslate"><span class="pre">include</span></code> 标签下 <code class="docutils literal notranslate"><span class="pre">group</span></code> 标签只需指定命名空间 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6272">[待校准&#64;6272]</a></p>
 </div>
 <div class="section" id="substitutions">
-<h2>替换 <a class="reference external" href="http://localhost:3000/#/home?msgid=6273">[待校准&#64;6273]</a><a class="headerlink" href="#substitutions" title="永久链接至标题"></a></h2>
-<p>关于ROS 1取代的文件可以在 <a class="reference external" href="https://wiki.ros.org/roslaunch/XML">roslaunch XML wiki</a> 中找到。替换语法没有改变，即它仍然遵循 “$ (替换名称arg1 arg2 ...)” 模式。然而，w.r.t.有一些变化。ROS 1: <a class="reference external" href="http://localhost:3000/#/home?msgid=6274">[待校准&#64;6274]</a></p>
+<h2>替换 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6273">[待校准&#64;6273]</a><a class="headerlink" href="#substitutions" title="永久链接至标题"></a></h2>
+<p>关于ROS 1取代的文件可以在 <a class="reference external" href="https://wiki.ros.org/roslaunch/XML">roslaunch XML wiki</a> 中找到。替换语法没有改变，即它仍然遵循 “$ (替换名称arg1 arg2 ...)” 模式。然而，w.r.t.有一些变化。ROS 1: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6274">[待校准&#64;6274]</a></p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">env</span></code> and <code class="docutils literal notranslate"><span class="pre">optenv</span></code> tags have been replaced by the <code class="docutils literal notranslate"><span class="pre">env</span></code> tag. <code class="docutils literal notranslate"><span class="pre">$(env</span> <span class="pre">&lt;NAME&gt;)</span></code> will fail if the environment variable doesn't exist. <code class="docutils literal notranslate"><span class="pre">$(env</span> <span class="pre">&lt;NAME&gt;</span> <span class="pre">'')</span></code> does the same as ROS 1's <code class="docutils literal notranslate"><span class="pre">$(optenv</span> <span class="pre">&lt;NAME&gt;)</span></code>. <code class="docutils literal notranslate"><span class="pre">$(env</span> <span class="pre">&lt;NAME&gt;</span> <span class="pre">&lt;DEFAULT&gt;)</span></code> does the same as ROS 1's <code class="docutils literal notranslate"><span class="pre">$(env</span> <span class="pre">&lt;NAME&gt;</span> <span class="pre">&lt;DEFAULT&gt;)</span></code> or <code class="docutils literal notranslate"><span class="pre">$(optenv</span> <span class="pre">&lt;NAME&gt;</span> <span class="pre">&lt;DEFAULT&gt;)</span></code>. <a class="reference external" href="http://localhost:3000/#/home?msgid=6275">[待校准&#64;6275]</a></p></li>
-<li><p>[需手动修复的语法]``find`` has been replaced with <code class="docutils literal notranslate"><span class="pre">find-pkg-share</span></code> (substituting the share directory of an installed package). Alternatively <code class="docutils literal notranslate"><span class="pre">find-pkg-prefix</span></code> will返回已安装包的根目录。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6276">[待校准&#64;6276]</a></p></li>
-<li><p>有一种新的 <code class="docutils literal notranslate"><span class="pre">exec-in-pkg</span></code> 替代品。例如: “$ (执行pkg &lt;package_name&gt; &lt;exec_name&gt;)”。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6277">[待校准&#64;6277]</a></p></li>
-<li><p>有一种新的 <code class="docutils literal notranslate"><span class="pre">find-exec</span></code> 替代品。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6278">[待校准&#64;6278]</a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">arg</span></code> has been replaced with <code class="docutils literal notranslate"><span class="pre">var</span></code>. It looks at configurations defined either with <code class="docutils literal notranslate"><span class="pre">arg</span></code> or <code class="docutils literal notranslate"><span class="pre">let</span></code> tag. <a class="reference external" href="http://localhost:3000/#/home?msgid=6279">[待校准&#64;6279]</a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">eval</span></code> and <code class="docutils literal notranslate"><span class="pre">dirname</span></code> substitutions没变。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6280">[待校准&#64;6280]</a></p></li>
-<li><p>不支持``anon`` substitution。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6281">[待校准&#64;6281]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">env</span></code> and <code class="docutils literal notranslate"><span class="pre">optenv</span></code> tags have been replaced by the <code class="docutils literal notranslate"><span class="pre">env</span></code> tag. <code class="docutils literal notranslate"><span class="pre">$(env</span> <span class="pre">&lt;NAME&gt;)</span></code> will fail if the environment variable doesn't exist. <code class="docutils literal notranslate"><span class="pre">$(env</span> <span class="pre">&lt;NAME&gt;</span> <span class="pre">'')</span></code> does the same as ROS 1's <code class="docutils literal notranslate"><span class="pre">$(optenv</span> <span class="pre">&lt;NAME&gt;)</span></code>. <code class="docutils literal notranslate"><span class="pre">$(env</span> <span class="pre">&lt;NAME&gt;</span> <span class="pre">&lt;DEFAULT&gt;)</span></code> does the same as ROS 1's <code class="docutils literal notranslate"><span class="pre">$(env</span> <span class="pre">&lt;NAME&gt;</span> <span class="pre">&lt;DEFAULT&gt;)</span></code> or <code class="docutils literal notranslate"><span class="pre">$(optenv</span> <span class="pre">&lt;NAME&gt;</span> <span class="pre">&lt;DEFAULT&gt;)</span></code>. <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6275">[待校准&#64;6275]</a></p></li>
+<li><p>[需手动修复的语法]``find`` has been replaced with <code class="docutils literal notranslate"><span class="pre">find-pkg-share</span></code> (substituting the share directory of an installed package). Alternatively <code class="docutils literal notranslate"><span class="pre">find-pkg-prefix</span></code> will返回已安装包的根目录。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6276">[待校准&#64;6276]</a></p></li>
+<li><p>有一种新的 <code class="docutils literal notranslate"><span class="pre">exec-in-pkg</span></code> 替代品。例如: “$ (执行pkg &lt;package_name&gt; &lt;exec_name&gt;)”。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6277">[待校准&#64;6277]</a></p></li>
+<li><p>有一种新的 <code class="docutils literal notranslate"><span class="pre">find-exec</span></code> 替代品。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6278">[待校准&#64;6278]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">arg</span></code> has been replaced with <code class="docutils literal notranslate"><span class="pre">var</span></code>. It looks at configurations defined either with <code class="docutils literal notranslate"><span class="pre">arg</span></code> or <code class="docutils literal notranslate"><span class="pre">let</span></code> tag. <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6279">[待校准&#64;6279]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">eval</span></code> and <code class="docutils literal notranslate"><span class="pre">dirname</span></code> substitutions没变。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6280">[待校准&#64;6280]</a></p></li>
+<li><p>不支持``anon`` substitution。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6281">[待校准&#64;6281]</a></p></li>
 </ul>
 </div>
 <div class="section" id="id8">
-<h2>类型推理规则 <a class="reference external" href="http://localhost:3000/#/home?msgid=6209">[待校准&#64;6209]</a><a class="headerlink" href="#id8" title="永久链接至标题"></a></h2>
-<p>在 <code class="docutils literal notranslate"><span class="pre">param</span></code> 标签的 <code class="docutils literal notranslate"><span class="pre">Type</span> <span class="pre">inference</span> <span class="pre">rules</span></code> 小节中显示的规则适用于任何属性。例如: <a class="reference external" href="http://localhost:3000/#/home?msgid=6282">[待校准&#64;6282]</a></p>
+<h2>类型推理规则 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6209">[待校准&#64;6209]</a><a class="headerlink" href="#id8" title="永久链接至标题"></a></h2>
+<p>在 <code class="docutils literal notranslate"><span class="pre">param</span></code> 标签的 <code class="docutils literal notranslate"><span class="pre">Type</span> <span class="pre">inference</span> <span class="pre">rules</span></code> 小节中显示的规则适用于任何属性。例如: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6282">[待校准&#64;6282]</a></p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!--Setting a string value to an attribute expecting an int will raise an error.--&gt;</span>
 <span class="nt">&lt;tag1</span> <span class="na">attr-expecting-an-int=</span><span class="s">&quot;&#39;1&#39;&quot;</span><span class="nt">/&gt;</span>
 <span class="c">&lt;!--Correct version.--&gt;</span>
@@ -661,7 +661,7 @@
 <span class="nt">&lt;tag3</span> <span class="na">attr-expecting-a-str=</span><span class="s">&quot;don&#39;t use a separator&quot;</span><span class="nt">/&gt;</span>
 </pre></div>
 </div>
-<p>一些属性接受多个类型，例如 <code class="docutils literal notranslate"><span class="pre">value</span></code> 属性 <code class="docutils literal notranslate"><span class="pre">param</span></code> 标签。通常情况下， <code class="docutils literal notranslate"><span class="pre">int</span></code>  (或 <code class="docutils literal notranslate"><span class="pre">float</span></code> ) 类型的参数也接受 <code class="docutils literal notranslate"><span class="pre">str</span></code> ，稍后将被替换，并通过动作试图转换为 <code class="docutils literal notranslate"><span class="pre">int</span></code>  (或 <code class="docutils literal notranslate"><span class="pre">float</span></code> )。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6283">[待校准&#64;6283]</a></p>
+<p>一些属性接受多个类型，例如 <code class="docutils literal notranslate"><span class="pre">value</span></code> 属性 <code class="docutils literal notranslate"><span class="pre">param</span></code> 标签。通常情况下， <code class="docutils literal notranslate"><span class="pre">int</span></code>  (或 <code class="docutils literal notranslate"><span class="pre">float</span></code> ) 类型的参数也接受 <code class="docutils literal notranslate"><span class="pre">str</span></code> ，稍后将被替换，并通过动作试图转换为 <code class="docutils literal notranslate"><span class="pre">int</span></code>  (或 <code class="docutils literal notranslate"><span class="pre">float</span></code> )。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6283">[待校准&#64;6283]</a></p>
 </div>
 </div>
 

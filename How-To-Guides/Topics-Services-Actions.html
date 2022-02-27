@@ -279,38 +279,38 @@
 
 
   <div class="section" id="topics-vs-services-vs-actions">
-<span id="topicsservicesactions"></span><h1>话题vs服务vsAction <a class="reference external" href="http://localhost:3000/#/home?msgid=6548">[待校准&#64;6548]</a><a class="headerlink" href="#topics-vs-services-vs-actions" title="永久链接至标题"></a></h1>
+<span id="topicsservicesactions"></span><h1>话题vs服务vsAction <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6548">[待校准&#64;6548]</a><a class="headerlink" href="#topics-vs-services-vs-actions" title="永久链接至标题"></a></h1>
 <div class="contents local topic" id="contents">
-<p class="topic-title">内容 <a class="reference external" href="http://localhost:3000/#/home?msgid=6325">[待校准&#64;6325]</a></p>
+<p class="topic-title">内容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6325">[待校准&#64;6325]</a></p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#topics" id="id1">话题 [待校准&#64;6550]</a></p></li>
 <li><p><a class="reference internal" href="#services" id="id2">服务 [待校准&#64;6553]</a></p></li>
 <li><p><a class="reference internal" href="#actions" id="id3">Actions [待校准&#64;6556]</a></p></li>
 </ul>
 </div>
-<p>设计系统时，有三种主要的界面风格。内容的规格在 <a class="reference internal" href="../Concepts/About-ROS-Interfaces.html"><span class="doc">Interfaces Overview</span></a> 中。编写此文档的目的是为读者提供有关何时使用每种类型的界面的指南。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6549">[待校准&#64;6549]</a></p>
+<p>设计系统时，有三种主要的界面风格。内容的规格在 <a class="reference internal" href="../Concepts/About-ROS-Interfaces.html"><span class="doc">Interfaces Overview</span></a> 中。编写此文档的目的是为读者提供有关何时使用每种类型的界面的指南。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6549">[待校准&#64;6549]</a></p>
 <div class="section" id="topics">
-<h2>话题 <a class="reference external" href="http://localhost:3000/#/home?msgid=6550">[待校准&#64;6550]</a><a class="headerlink" href="#topics" title="永久链接至标题"></a></h2>
+<h2>话题 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6550">[待校准&#64;6550]</a><a class="headerlink" href="#topics" title="永久链接至标题"></a></h2>
 <ul class="simple">
-<li><p>应用于连续数据流 (传感器数据、机器人状态等)。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6551">[待校准&#64;6551]</a></p></li>
-<li><p>用于连续数据流。数据可以在任何时间独立于任何发送者/接收者发布和订阅。多对多连接。一旦数据可用，回调将接收数据。发布者决定何时发送数据。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6552">[待校准&#64;6552]</a></p></li>
+<li><p>应用于连续数据流 (传感器数据、机器人状态等)。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6551">[待校准&#64;6551]</a></p></li>
+<li><p>用于连续数据流。数据可以在任何时间独立于任何发送者/接收者发布和订阅。多对多连接。一旦数据可用，回调将接收数据。发布者决定何时发送数据。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6552">[待校准&#64;6552]</a></p></li>
 </ul>
 </div>
 <div class="section" id="services">
-<h2>服务 <a class="reference external" href="http://localhost:3000/#/home?msgid=6553">[待校准&#64;6553]</a><a class="headerlink" href="#services" title="永久链接至标题"></a></h2>
+<h2>服务 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6553">[待校准&#64;6553]</a><a class="headerlink" href="#services" title="永久链接至标题"></a></h2>
 <ul class="simple">
-<li><p>应该用于快速终止的远程过程调用，例如用于查询节点的状态或进行快速计算 (如IK)。它们不应该用于运行时间较长的进程，特别是，如果发生特殊情况，可能需要抢占的过程，并且它们永远不应改变或依赖于状态，以避免对其他节点产生不必要的副作用。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6554">[待校准&#64;6554]</a></p></li>
-<li><p>简单的阻塞调用。主要用于请求特定数据的速度相当快的任务。Semanti调用y来处理请求。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6555">[待校准&#64;6555]</a></p></li>
+<li><p>应该用于快速终止的远程过程调用，例如用于查询节点的状态或进行快速计算 (如IK)。它们不应该用于运行时间较长的进程，特别是，如果发生特殊情况，可能需要抢占的过程，并且它们永远不应改变或依赖于状态，以避免对其他节点产生不必要的副作用。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6554">[待校准&#64;6554]</a></p></li>
+<li><p>简单的阻塞调用。主要用于请求特定数据的速度相当快的任务。Semanti调用y来处理请求。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6555">[待校准&#64;6555]</a></p></li>
 </ul>
 </div>
 <div class="section" id="actions">
-<h2>Actions <a class="reference external" href="http://localhost:3000/#/home?msgid=6556">[待校准&#64;6556]</a><a class="headerlink" href="#actions" title="永久链接至标题"></a></h2>
+<h2>Actions <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6556">[待校准&#64;6556]</a><a class="headerlink" href="#actions" title="永久链接至标题"></a></h2>
 <ul class="simple">
-<li><p>应该用于移动机器人或运行更长时间但在执行过程中提供反馈的任何离散行为。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6557">[待校准&#64;6557]</a></p></li>
-<li><p>动作最重要的特性是它们可以被抢占，抢占应该始终由动作服务器干净地实现。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6558">[待校准&#64;6558]</a></p></li>
-<li><p>[需手动修复的语法]Action可以在目标的一生中保持状态，即如果执行两个动作目标并行同一服务器，每个客户端单独状态实例可以保持以来目标独特账号entified其账号。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6559">[待校准&#64;6559]</a></p></li>
-<li><p>需要几秒钟来终止或启动较低级别的控制模式的慢感知例程是动作的好用例。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6560">[待校准&#64;6560]</a></p></li>
-<li><p>更复杂的非阻塞后台处理。用于更长的任务，如执行机器人动作。Semanti为真实世界的动作调用y。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6561">[待校准&#64;6561]</a></p></li>
+<li><p>应该用于移动机器人或运行更长时间但在执行过程中提供反馈的任何离散行为。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6557">[待校准&#64;6557]</a></p></li>
+<li><p>动作最重要的特性是它们可以被抢占，抢占应该始终由动作服务器干净地实现。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6558">[待校准&#64;6558]</a></p></li>
+<li><p>[需手动修复的语法]Action可以在目标的一生中保持状态，即如果执行两个动作目标并行同一服务器，每个客户端单独状态实例可以保持以来目标独特账号entified其账号。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6559">[待校准&#64;6559]</a></p></li>
+<li><p>需要几秒钟来终止或启动较低级别的控制模式的慢感知例程是动作的好用例。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6560">[待校准&#64;6560]</a></p></li>
+<li><p>更复杂的非阻塞后台处理。用于更长的任务，如执行机器人动作。Semanti为真实世界的动作调用y。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6561">[待校准&#64;6561]</a></p></li>
 </ul>
 </div>
 </div>

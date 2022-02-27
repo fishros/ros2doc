@@ -279,34 +279,34 @@
 
 
   <div class="section" id="building-ros-2-package-with-eclipse-2021-06">
-<h1>使用eclipse 2021-06构建ROS 2包 <a class="reference external" href="http://localhost:3000/#/home?msgid=6926">[待校准&#64;6926]</a><a class="headerlink" href="#building-ros-2-package-with-eclipse-2021-06" title="永久链接至标题"></a></h1>
-<p>您不能使用eclipse创建ROS 2包，您需要使用命令行工具创建它。跟随 <a class="reference internal" href="Creating-Your-First-ROS2-Package.html"><span class="doc">Creating your first ROS 2 package tutorial</span></a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6927">[待校准&#64;6927]</a></p>
-<p>创建项目后，您可以编辑源文件并使用eclipse构建它。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6928">[待校准&#64;6928]</a></p>
-<p>我们启动eclipse并选择一个eclipse工作区。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6929">[待校准&#64;6929]</a></p>
-<a class="reference external image-reference" href="images/eclipse_work_dir.png"><img alt="eclipse_work_dir `[待校准&#64;6930] &lt;http://localhost:3000/#/home?msgid=6930&gt;`_ " src="../_images/eclipse_work_dir.png" /></a>
-<p>我们创建一个C++ 项目 <a class="reference external" href="http://localhost:3000/#/home?msgid=6931">[待校准&#64;6931]</a></p>
-<a class="reference external image-reference" href="images/eclipse_create_c++_project.png"><img alt="eclipse_create_c _ _ 项目 `[待校准&#64;6932] &lt;http://localhost:3000/#/home?msgid=6932&gt;`_ " src="../_images/eclipse_create_c++_project.png" /></a>
-<a class="reference external image-reference" href="images/eclipse_c++_project_select_type.png"><img alt="eclipse_c _ _ project_select_type `[待校准&#64;6933] &lt;http://localhost:3000/#/home?msgid=6933&gt;`_ " src="../_images/eclipse_c++_project_select_type.png" /></a>
-<p>我们看到我们有cincludes包含。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6934">[待校准&#64;6934]</a></p>
-<a class="reference external image-reference" href="images/eclipse_c++_project_includes.png"><img alt="eclipse_c _ _ 项目 _ 包括 `[待校准&#64;6935] &lt;http://localhost:3000/#/home?msgid=6935&gt;`_ " src="../_images/eclipse_c++_project_includes.png" /></a>
-<p>我们现在导入ROS 2项目。代码仍然在旧的地方。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6936">[待校准&#64;6936]</a></p>
-<a class="reference external image-reference" href="images/eclipse_import_project.png"><img alt="eclipse_import_project `[待校准&#64;6937] &lt;http://localhost:3000/#/home?msgid=6937&gt;`_ " src="../_images/eclipse_import_project.png" /></a>
-<a class="reference external image-reference" href="images/eclipse_import_filesystem.png"><img alt="Eclipse_import_file ystem `[待校准&#64;6938] &lt;http://localhost:3000/#/home?msgid=6938&gt;`_ " src="../_images/eclipse_import_filesystem.png" /></a>
-<a class="reference external image-reference" href="images/eclipse_import_select_my_package.png"><img alt="eclipse_import_select_my_package `[待校准&#64;6939] &lt;http://localhost:3000/#/home?msgid=6939&gt;`_ " src="../_images/eclipse_import_select_my_package.png" /></a>
-<p>我们在源文件中看到cincludes包含的已解析，但没有ROS 2。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6940">[待校准&#64;6940]</a></p>
-<a class="reference external image-reference" href="images/eclipse_c++_wo_ros_includes.png"><img alt="eclipse_c _ _ wo_ros_includes `[待校准&#64;6941] &lt;http://localhost:3000/#/home?msgid=6941&gt;`_ " src="../_images/eclipse_c++_wo_ros_includes.png" /></a>
-<a class="reference external image-reference" href="images/eclipse_c++_path_and_symbols.png"><img alt="eclipse_c _ _ 路径和符号 `[待校准&#64;6942] &lt;http://localhost:3000/#/home?msgid=6942&gt;`_ " src="../_images/eclipse_c++_path_and_symbols.png" /></a>
-<a class="reference external image-reference" href="images/eclipse_c++_add_directory_path.png"><img alt="eclipse_c _ _ add_directory_path `[待校准&#64;6943] &lt;http://localhost:3000/#/home?msgid=6943&gt;`_ " src="../_images/eclipse_c++_add_directory_path.png" /></a>
-<p>我们现在看到ROS 2也解决了。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6944">[待校准&#64;6944]</a></p>
-<a class="reference external image-reference" href="images/eclipse_c++_indexer_ok.png"><img alt="eclipse_c _ _ indexer_ok `[待校准&#64;6945] &lt;http://localhost:3000/#/home?msgid=6945&gt;`_ " src="../_images/eclipse_c++_indexer_ok.png" /></a>
-<p>添加Builder colcon，这样我们就可以通过右键单击项目和  &quot;Build project&quot; 来构建。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6946">[待校准&#64;6946]</a></p>
-<a class="reference external image-reference" href="images/eclipse_c++_properties_builders.png"><img alt="eclipse_c _ _ 属性 _ 构建器 `[待校准&#64;6947] &lt;http://localhost:3000/#/home?msgid=6947&gt;`_ " src="../_images/eclipse_c++_properties_builders.png" /></a>
-<a class="reference external image-reference" href="images/eclipse_c++_builder_main.png"><img alt="eclipse_c _ _ builder_main `[待校准&#64;6948] &lt;http://localhost:3000/#/home?msgid=6948&gt;`_ " src="../_images/eclipse_c++_builder_main.png" /></a>
-<p>使用python路径，您还可以构建python项目。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6949">[待校准&#64;6949]</a></p>
-<a class="reference external image-reference" href="images/eclipse_c++_builder_env.png"><img alt="eclipse_c _ _ builder_env `[待校准&#64;6950] &lt;http://localhost:3000/#/home?msgid=6950&gt;`_ " src="../_images/eclipse_c++_builder_env.png" /></a>
-<a class="reference external image-reference" href="images/eclipse_c++_properties_builders_with_colcon.png"><img alt="eclipse_c _ _ 属性 _ 构建器 _ with _ colcon `[待校准&#64;6951] &lt;http://localhost:3000/#/home?msgid=6951&gt;`_ " src="../_images/eclipse_c++_properties_builders_with_colcon.png" /></a>
-<p>右键单击该项目，然后选择  &quot;Build Project&quot; 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6952">[待校准&#64;6952]</a></p>
-<a class="reference external image-reference" href="images/eclipse_c++_build_project_with_colcon.png"><img alt="eclipse_c _ _ build_project_with_colcon `[待校准&#64;6953] &lt;http://localhost:3000/#/home?msgid=6953&gt;`_ " src="../_images/eclipse_c++_build_project_with_colcon.png" /></a>
+<h1>使用eclipse 2021-06构建ROS 2包 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6926">[待校准&#64;6926]</a><a class="headerlink" href="#building-ros-2-package-with-eclipse-2021-06" title="永久链接至标题"></a></h1>
+<p>您不能使用eclipse创建ROS 2包，您需要使用命令行工具创建它。跟随 <a class="reference internal" href="Creating-Your-First-ROS2-Package.html"><span class="doc">Creating your first ROS 2 package tutorial</span></a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6927">[待校准&#64;6927]</a></p>
+<p>创建项目后，您可以编辑源文件并使用eclipse构建它。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6928">[待校准&#64;6928]</a></p>
+<p>我们启动eclipse并选择一个eclipse工作区。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6929">[待校准&#64;6929]</a></p>
+<a class="reference external image-reference" href="images/eclipse_work_dir.png"><img alt="eclipse_work_dir `[待校准&#64;6930] &lt;http://dev.ros2.fishros.com/calibpage/#/home?msgid=6930&gt;`_ " src="../_images/eclipse_work_dir.png" /></a>
+<p>我们创建一个C++ 项目 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6931">[待校准&#64;6931]</a></p>
+<a class="reference external image-reference" href="images/eclipse_create_c++_project.png"><img alt="eclipse_create_c _ _ 项目 `[待校准&#64;6932] &lt;http://dev.ros2.fishros.com/calibpage/#/home?msgid=6932&gt;`_ " src="../_images/eclipse_create_c++_project.png" /></a>
+<a class="reference external image-reference" href="images/eclipse_c++_project_select_type.png"><img alt="eclipse_c _ _ project_select_type `[待校准&#64;6933] &lt;http://dev.ros2.fishros.com/calibpage/#/home?msgid=6933&gt;`_ " src="../_images/eclipse_c++_project_select_type.png" /></a>
+<p>我们看到我们有cincludes包含。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6934">[待校准&#64;6934]</a></p>
+<a class="reference external image-reference" href="images/eclipse_c++_project_includes.png"><img alt="eclipse_c _ _ 项目 _ 包括 `[待校准&#64;6935] &lt;http://dev.ros2.fishros.com/calibpage/#/home?msgid=6935&gt;`_ " src="../_images/eclipse_c++_project_includes.png" /></a>
+<p>我们现在导入ROS 2项目。代码仍然在旧的地方。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6936">[待校准&#64;6936]</a></p>
+<a class="reference external image-reference" href="images/eclipse_import_project.png"><img alt="eclipse_import_project `[待校准&#64;6937] &lt;http://dev.ros2.fishros.com/calibpage/#/home?msgid=6937&gt;`_ " src="../_images/eclipse_import_project.png" /></a>
+<a class="reference external image-reference" href="images/eclipse_import_filesystem.png"><img alt="Eclipse_import_file ystem `[待校准&#64;6938] &lt;http://dev.ros2.fishros.com/calibpage/#/home?msgid=6938&gt;`_ " src="../_images/eclipse_import_filesystem.png" /></a>
+<a class="reference external image-reference" href="images/eclipse_import_select_my_package.png"><img alt="eclipse_import_select_my_package `[待校准&#64;6939] &lt;http://dev.ros2.fishros.com/calibpage/#/home?msgid=6939&gt;`_ " src="../_images/eclipse_import_select_my_package.png" /></a>
+<p>我们在源文件中看到cincludes包含的已解析，但没有ROS 2。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6940">[待校准&#64;6940]</a></p>
+<a class="reference external image-reference" href="images/eclipse_c++_wo_ros_includes.png"><img alt="eclipse_c _ _ wo_ros_includes `[待校准&#64;6941] &lt;http://dev.ros2.fishros.com/calibpage/#/home?msgid=6941&gt;`_ " src="../_images/eclipse_c++_wo_ros_includes.png" /></a>
+<a class="reference external image-reference" href="images/eclipse_c++_path_and_symbols.png"><img alt="eclipse_c _ _ 路径和符号 `[待校准&#64;6942] &lt;http://dev.ros2.fishros.com/calibpage/#/home?msgid=6942&gt;`_ " src="../_images/eclipse_c++_path_and_symbols.png" /></a>
+<a class="reference external image-reference" href="images/eclipse_c++_add_directory_path.png"><img alt="eclipse_c _ _ add_directory_path `[待校准&#64;6943] &lt;http://dev.ros2.fishros.com/calibpage/#/home?msgid=6943&gt;`_ " src="../_images/eclipse_c++_add_directory_path.png" /></a>
+<p>我们现在看到ROS 2也解决了。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6944">[待校准&#64;6944]</a></p>
+<a class="reference external image-reference" href="images/eclipse_c++_indexer_ok.png"><img alt="eclipse_c _ _ indexer_ok `[待校准&#64;6945] &lt;http://dev.ros2.fishros.com/calibpage/#/home?msgid=6945&gt;`_ " src="../_images/eclipse_c++_indexer_ok.png" /></a>
+<p>添加Builder colcon，这样我们就可以通过右键单击项目和  &quot;Build project&quot; 来构建。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6946">[待校准&#64;6946]</a></p>
+<a class="reference external image-reference" href="images/eclipse_c++_properties_builders.png"><img alt="eclipse_c _ _ 属性 _ 构建器 `[待校准&#64;6947] &lt;http://dev.ros2.fishros.com/calibpage/#/home?msgid=6947&gt;`_ " src="../_images/eclipse_c++_properties_builders.png" /></a>
+<a class="reference external image-reference" href="images/eclipse_c++_builder_main.png"><img alt="eclipse_c _ _ builder_main `[待校准&#64;6948] &lt;http://dev.ros2.fishros.com/calibpage/#/home?msgid=6948&gt;`_ " src="../_images/eclipse_c++_builder_main.png" /></a>
+<p>使用python路径，您还可以构建python项目。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6949">[待校准&#64;6949]</a></p>
+<a class="reference external image-reference" href="images/eclipse_c++_builder_env.png"><img alt="eclipse_c _ _ builder_env `[待校准&#64;6950] &lt;http://dev.ros2.fishros.com/calibpage/#/home?msgid=6950&gt;`_ " src="../_images/eclipse_c++_builder_env.png" /></a>
+<a class="reference external image-reference" href="images/eclipse_c++_properties_builders_with_colcon.png"><img alt="eclipse_c _ _ 属性 _ 构建器 _ with _ colcon `[待校准&#64;6951] &lt;http://dev.ros2.fishros.com/calibpage/#/home?msgid=6951&gt;`_ " src="../_images/eclipse_c++_properties_builders_with_colcon.png" /></a>
+<p>右键单击该项目，然后选择  &quot;Build Project&quot; 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6952">[待校准&#64;6952]</a></p>
+<a class="reference external image-reference" href="images/eclipse_c++_build_project_with_colcon.png"><img alt="eclipse_c _ _ build_project_with_colcon `[待校准&#64;6953] &lt;http://dev.ros2.fishros.com/calibpage/#/home?msgid=6953&gt;`_ " src="../_images/eclipse_c++_build_project_with_colcon.png" /></a>
 </div>
 
 

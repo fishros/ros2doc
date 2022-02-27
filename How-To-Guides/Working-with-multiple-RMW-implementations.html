@@ -280,9 +280,9 @@
 
 
   <div class="section" id="working-with-multiple-ros-2-middleware-implementations">
-<h1>使用多个ROS 2中间件实现 <a class="reference external" href="http://localhost:3000/#/home?msgid=6619">[待校准&#64;6619]</a><a class="headerlink" href="#working-with-multiple-ros-2-middleware-implementations" title="永久链接至标题"></a></h1>
+<h1>使用多个ROS 2中间件实现 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6619">[待校准&#64;6619]</a><a class="headerlink" href="#working-with-multiple-ros-2-middleware-implementations" title="永久链接至标题"></a></h1>
 <div class="contents local topic" id="table-of-contents">
-<p class="topic-title">目录 <a class="reference external" href="http://localhost:3000/#/home?msgid=5761">[待校准&#64;5761]</a></p>
+<p class="topic-title">目录 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5761">[待校准&#64;5761]</a></p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#prerequisites" id="id1">先决条件 [待校准&#64;5924]</a></p></li>
 <li><p><a class="reference internal" href="#specifying-rmw-implementations" id="id2">指定RMW实现 [待校准&#64;6622]</a></p></li>
@@ -295,18 +295,18 @@
 </li>
 </ul>
 </div>
-<p>本页介绍默认RMW实现以及如何指定替代方案。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6620">[待校准&#64;6620]</a></p>
+<p>本页介绍默认RMW实现以及如何指定替代方案。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6620">[待校准&#64;6620]</a></p>
 <div class="section" id="prerequisites">
-<h2>先决条件 <a class="reference external" href="http://localhost:3000/#/home?msgid=5924">[待校准&#64;5924]</a><a class="headerlink" href="#prerequisites" title="永久链接至标题"></a></h2>
-<p>你应该已经读过 <a class="reference internal" href="../Concepts/About-Different-Middleware-Vendors.html"><span class="doc">DDS and ROS middleware implementations page</span></a> 了。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6621">[待校准&#64;6621]</a></p>
+<h2>先决条件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5924">[待校准&#64;5924]</a><a class="headerlink" href="#prerequisites" title="永久链接至标题"></a></h2>
+<p>你应该已经读过 <a class="reference internal" href="../Concepts/About-Different-Middleware-Vendors.html"><span class="doc">DDS and ROS middleware implementations page</span></a> 了。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6621">[待校准&#64;6621]</a></p>
 </div>
 <div class="section" id="specifying-rmw-implementations">
-<h2>指定RMW实现 <a class="reference external" href="http://localhost:3000/#/home?msgid=6622">[待校准&#64;6622]</a><a class="headerlink" href="#specifying-rmw-implementations" title="永久链接至标题"></a></h2>
-<p>要使用多个RMW实现，您必须已安装ROS 2二进制文件以及特定RMW实现的任何其他依赖项，或者从工作区中具有多个RMW实现的源文件构建ROS 2 (如果满足RMW的编译时依赖关系，则默认情况下，RMW实现包含在构建中)。见 <a class="reference internal" href="../Installation/DDS-Implementations.html"><span class="doc">Install DDS implementations</span></a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6623">[待校准&#64;6623]</a></p>
+<h2>指定RMW实现 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6622">[待校准&#64;6622]</a><a class="headerlink" href="#specifying-rmw-implementations" title="永久链接至标题"></a></h2>
+<p>要使用多个RMW实现，您必须已安装ROS 2二进制文件以及特定RMW实现的任何其他依赖项，或者从工作区中具有多个RMW实现的源文件构建ROS 2 (如果满足RMW的编译时依赖关系，则默认情况下，RMW实现包含在构建中)。见 <a class="reference internal" href="../Installation/DDS-Implementations.html"><span class="doc">Install DDS implementations</span></a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6623">[待校准&#64;6623]</a></p>
 <hr class="docutils" />
-<p>C nodes和Python节点都支持环境变量 <code class="docutils literal notranslate"><span class="pre">RMW_IMPLEMENTATION</span></code> ，允许用户选择运行ROS 2应用程序时使用的RMW实现。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6624">[待校准&#64;6624]</a></p>
-<p>用户可以将此变量设置为特定的实现标识符，例如 <code class="docutils literal notranslate"><span class="pre">rmw_cyclonedds_cpp</span></code> 、 <code class="docutils literal notranslate"><span class="pre">rmw_fastrtps_cpp</span></code> 、 <code class="docutils literal notranslate"><span class="pre">rmw_connextdds</span></code> 或 <code class="docutils literal notranslate"><span class="pre">rmw_gurumdds_cpp</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6625">[待校准&#64;6625]</a></p>
-<p>例如，要使用ctaltalker和Python侦听器以及Connext RMW实现来运行talker例程: <a class="reference external" href="http://localhost:3000/#/home?msgid=6626">[待校准&#64;6626]</a></p>
+<p>C nodes和Python节点都支持环境变量 <code class="docutils literal notranslate"><span class="pre">RMW_IMPLEMENTATION</span></code> ，允许用户选择运行ROS 2应用程序时使用的RMW实现。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6624">[待校准&#64;6624]</a></p>
+<p>用户可以将此变量设置为特定的实现标识符，例如 <code class="docutils literal notranslate"><span class="pre">rmw_cyclonedds_cpp</span></code> 、 <code class="docutils literal notranslate"><span class="pre">rmw_fastrtps_cpp</span></code> 、 <code class="docutils literal notranslate"><span class="pre">rmw_connextdds</span></code> 或 <code class="docutils literal notranslate"><span class="pre">rmw_gurumdds_cpp</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6625">[待校准&#64;6625]</a></p>
+<p>例如，要使用ctaltalker和Python侦听器以及Connext RMW实现来运行talker例程: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6626">[待校准&#64;6626]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-0-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-0-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-0-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-0-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-0-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">RMW_IMPLEMENTATION</span><span class="o">=</span>rmw_connext_cpp ros2 run demo_nodes_cpp talker
 
@@ -331,52 +331,52 @@ ros2 run demo_nodes_py listener
 </div></div>
 </div>
 <div class="section" id="adding-rmw-implementations-to-your-workspace">
-<h2>将RMW实现添加到您的工作区 <a class="reference external" href="http://localhost:3000/#/home?msgid=6627">[待校准&#64;6627]</a><a class="headerlink" href="#adding-rmw-implementations-to-your-workspace" title="永久链接至标题"></a></h2>
-<p>假设您已经构建了ROS 2工作区，只安装了快速RTPS，因此只构建了快速RTPS RMW实现。上次构建工作区时，任何其他RMW实现包，例如 <code class="docutils literal notranslate"><span class="pre">rmw_connext_cpp</span></code> ，都可能找不到相关DDS实现的安装。如果随后安装其他DDS实现 (例如Connext)，则需要重新触发对构建Connext RMW实现时发生的Connext安装的检查。您可以通过在下一个工作区构建中指定 <code class="docutils literal notranslate"><span class="pre">--cmake-force-configure</span></code> 标志来实现这一点，并且您应该看到RMW实现包随后为新安装的DDS实现构建。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6628">[待校准&#64;6628]</a></p>
-<p>可能遇到问题  &quot;rebuilding&quot; 工作区额外RMW实现使用 <code class="docutils literal notranslate"><span class="pre">--cmake-force-configure</span></code> 选项生成抱怨默认RMW实施更换。要解决此问题，您可以使用 <code class="docutils literal notranslate"><span class="pre">RMW_IMPLEMENTATION</span></code> CMake参数将默认实现设置为以前的实现，也可以删除投诉包的构建文件夹，然后继续使用 <code class="docutils literal notranslate"><span class="pre">--start-with</span> <span class="pre">&lt;package</span> <span class="pre">name&gt;</span></code> 进行构建。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6629">[待校准&#64;6629]</a></p>
+<h2>将RMW实现添加到您的工作区 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6627">[待校准&#64;6627]</a><a class="headerlink" href="#adding-rmw-implementations-to-your-workspace" title="永久链接至标题"></a></h2>
+<p>假设您已经构建了ROS 2工作区，只安装了快速RTPS，因此只构建了快速RTPS RMW实现。上次构建工作区时，任何其他RMW实现包，例如 <code class="docutils literal notranslate"><span class="pre">rmw_connext_cpp</span></code> ，都可能找不到相关DDS实现的安装。如果随后安装其他DDS实现 (例如Connext)，则需要重新触发对构建Connext RMW实现时发生的Connext安装的检查。您可以通过在下一个工作区构建中指定 <code class="docutils literal notranslate"><span class="pre">--cmake-force-configure</span></code> 标志来实现这一点，并且您应该看到RMW实现包随后为新安装的DDS实现构建。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6628">[待校准&#64;6628]</a></p>
+<p>可能遇到问题  &quot;rebuilding&quot; 工作区额外RMW实现使用 <code class="docutils literal notranslate"><span class="pre">--cmake-force-configure</span></code> 选项生成抱怨默认RMW实施更换。要解决此问题，您可以使用 <code class="docutils literal notranslate"><span class="pre">RMW_IMPLEMENTATION</span></code> CMake参数将默认实现设置为以前的实现，也可以删除投诉包的构建文件夹，然后继续使用 <code class="docutils literal notranslate"><span class="pre">--start-with</span> <span class="pre">&lt;package</span> <span class="pre">name&gt;</span></code> 进行构建。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6629">[待校准&#64;6629]</a></p>
 </div>
 <div class="section" id="troubleshooting">
-<h2>故障排除 <a class="reference external" href="http://localhost:3000/#/home?msgid=6630">[待校准&#64;6630]</a><a class="headerlink" href="#troubleshooting" title="永久链接至标题"></a></h2>
+<h2>故障排除 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6630">[待校准&#64;6630]</a><a class="headerlink" href="#troubleshooting" title="永久链接至标题"></a></h2>
 <div class="section" id="ensuring-use-of-a-particular-rmw-implementation">
-<h3>确保特定RMW实施的使用 <a class="reference external" href="http://localhost:3000/#/home?msgid=6631">[待校准&#64;6631]</a><a class="headerlink" href="#ensuring-use-of-a-particular-rmw-implementation" title="永久链接至标题"></a></h3>
-<p>如果 <code class="docutils literal notranslate"><span class="pre">RMW_IMPLEMENTATION</span></code> 环境变量设置为未安装支持的RMW实现，如果仅安装了一个实现，您将看到类似于以下内容的错误消息: <a class="reference external" href="http://localhost:3000/#/home?msgid=6632">[待校准&#64;6632]</a></p>
+<h3>确保特定RMW实施的使用 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6631">[待校准&#64;6631]</a><a class="headerlink" href="#ensuring-use-of-a-particular-rmw-implementation" title="永久链接至标题"></a></h3>
+<p>如果 <code class="docutils literal notranslate"><span class="pre">RMW_IMPLEMENTATION</span></code> 环境变量设置为未安装支持的RMW实现，如果仅安装了一个实现，您将看到类似于以下内容的错误消息: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6632">[待校准&#64;6632]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Expected RMW implementation identifier of <span class="s1">&#39;rmw_connext_cpp&#39;</span> but instead found <span class="s1">&#39;rmw_fastrtps_cpp&#39;</span>, exiting with <span class="m">102</span>.
 </pre></div>
 </div>
-<p>如果您支持安装多个RMW实现，并且请求使用未安装的实现，您将看到类似于以下内容: <a class="reference external" href="http://localhost:3000/#/home?msgid=6633">[待校准&#64;6633]</a></p>
+<p>如果您支持安装多个RMW实现，并且请求使用未安装的实现，您将看到类似于以下内容: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6633">[待校准&#64;6633]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Error getting RMW implementation identifier / RMW implementation not installed <span class="o">(</span>expected identifier of <span class="s1">&#39;rmw_connext_cpp&#39;</span><span class="o">)</span>, exiting with <span class="m">1</span>.
 </pre></div>
 </div>
-<p>如果这发生，double检查ROS安装包括支持RMW执行指定在 <code class="docutils literal notranslate"><span class="pre">RMW_IMPLEMENTATION</span></code> 环境变量。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6634">[待校准&#64;6634]</a></p>
-<p>如果要在RMW实现之间切换，请验证ROS 2守护进程未与先前的RMW实现一起运行，以避免节点和命令行工具 (如 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">node</span></code> ) 之间出现任何问题。例如，如果您运行: <a class="reference external" href="http://localhost:3000/#/home?msgid=6635">[待校准&#64;6635]</a></p>
+<p>如果这发生，double检查ROS安装包括支持RMW执行指定在 <code class="docutils literal notranslate"><span class="pre">RMW_IMPLEMENTATION</span></code> 环境变量。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6634">[待校准&#64;6634]</a></p>
+<p>如果要在RMW实现之间切换，请验证ROS 2守护进程未与先前的RMW实现一起运行，以避免节点和命令行工具 (如 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">node</span></code> ) 之间出现任何问题。例如，如果您运行: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6635">[待校准&#64;6635]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">RMW_IMPLEMENTATION</span><span class="o">=</span>rmw_connext_cpp ros2 run demo_nodes_cpp talker
 </pre></div>
 </div>
-<p>和 <a class="reference external" href="http://localhost:3000/#/home?msgid=6636">[待校准&#64;6636]</a></p>
+<p>和 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6636">[待校准&#64;6636]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 node list
 </pre></div>
 </div>
-<p>它将生成具有快速RTPS实现的守护程序: <a class="reference external" href="http://localhost:3000/#/home?msgid=6637">[待校准&#64;6637]</a></p>
+<p>它将生成具有快速RTPS实现的守护程序: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6637">[待校准&#64;6637]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="m">21318</span> <span class="m">22</span>.0  <span class="m">0</span>.6 <span class="m">535896</span> <span class="m">55044</span> pts/8    Sl   <span class="m">16</span>:14   <span class="m">0</span>:00 /usr/bin/python3 /opt/ros/foxy/bin/_ros2_daemon --rmw-implementation rmw_fastrtps_cpp --ros-domain-id <span class="m">22</span>
 </pre></div>
 </div>
-<p>即使您使用正确的RMW实现再次运行命令行工具，守护程序的RMW实现也不会改变，ROS 2命令行工具也会失败。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6638">[待校准&#64;6638]</a></p>
-<p>要解决此问题，只需停止守护进程: <a class="reference external" href="http://localhost:3000/#/home?msgid=6639">[待校准&#64;6639]</a></p>
+<p>即使您使用正确的RMW实现再次运行命令行工具，守护程序的RMW实现也不会改变，ROS 2命令行工具也会失败。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6638">[待校准&#64;6638]</a></p>
+<p>要解决此问题，只需停止守护进程: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6639">[待校准&#64;6639]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 daemon stop
 </pre></div>
 </div>
-<p>并使用正确的RMW实现重新运行ROS 2命令行工具。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6640">[待校准&#64;6640]</a></p>
+<p>并使用正确的RMW实现重新运行ROS 2命令行工具。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6640">[待校准&#64;6640]</a></p>
 </div>
 <div class="section" id="rti-connext-on-osx-failure-due-to-insufficient-shared-memory-kernel-settings">
-<h3>OSX上的RTI Connext: 由于共享内存内核设置不足而导致故障 <a class="reference external" href="http://localhost:3000/#/home?msgid=6641">[待校准&#64;6641]</a><a class="headerlink" href="#rti-connext-on-osx-failure-due-to-insufficient-shared-memory-kernel-settings" title="永久链接至标题"></a></h3>
-<p>如果在OSX上运行RTI Connext时收到类似以下的错误消息: <a class="reference external" href="http://localhost:3000/#/home?msgid=6642">[待校准&#64;6642]</a></p>
+<h3>OSX上的RTI Connext: 由于共享内存内核设置不足而导致故障 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6641">[待校准&#64;6641]</a><a class="headerlink" href="#rti-connext-on-osx-failure-due-to-insufficient-shared-memory-kernel-settings" title="永久链接至标题"></a></h3>
+<p>如果在OSX上运行RTI Connext时收到类似以下的错误消息: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6642">[待校准&#64;6642]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">[D0062|ENABLE]DDS_DomainParticipantPresentation_reserve_participant_index_entryports:!enable reserve participant index</span>
 <span class="go">[D0062|ENABLE]DDS_DomainParticipant_reserve_participant_index_entryports:Unusable shared memory transport. For a more in-   depth explanation of the possible problem and solution, please visit https://community.rti.com/kb/osx510.</span>
 </pre></div>
 </div>
-<p>此错误是由操作系统允许的共享内存段数量或大小不足引起的。结果， <code class="docutils literal notranslate"><span class="pre">DomainParticipant</span></code> 无法分配足够的re源文件并计算其导致错误的参与者索引。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6643">[待校准&#64;6643]</a></p>
-<p>您可以临时或永久增加计算机的共享内存源文件。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6644">[待校准&#64;6644]</a></p>
-<p>要临时增加设置，您可以以用户根用户身份运行以下命令: <a class="reference external" href="http://localhost:3000/#/home?msgid=6645">[待校准&#64;6645]</a></p>
+<p>此错误是由操作系统允许的共享内存段数量或大小不足引起的。结果， <code class="docutils literal notranslate"><span class="pre">DomainParticipant</span></code> 无法分配足够的re源文件并计算其导致错误的参与者索引。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6643">[待校准&#64;6643]</a></p>
+<p>您可以临时或永久增加计算机的共享内存源文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6644">[待校准&#64;6644]</a></p>
+<p>要临时增加设置，您可以以用户根用户身份运行以下命令: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6645">[待校准&#64;6645]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">/usr/sbin/sysctl -w kern.sysv.shmmax=419430400</span>
 <span class="go">/usr/sbin/sysctl -w kern.sysv.shmmin=1</span>
 <span class="go">/usr/sbin/sysctl -w kern.sysv.shmmni=128</span>
@@ -384,7 +384,7 @@ ros2 run demo_nodes_py listener
 <span class="go">/usr/sbin/sysctl -w kern.sysv.shmall=262144</span>
 </pre></div>
 </div>
-<p>要永久增加设置，您需要编辑或创建文件 <code class="docutils literal notranslate"><span class="pre">/etc/sysctl.conf</span></code> 。创建或编辑此文件将需要根权限。添加到您现有的 <code class="docutils literal notranslate"><span class="pre">etc/sysctl.conf</span></code> 文件或使用以下行创建 <code class="docutils literal notranslate"><span class="pre">/etc/sysctl.conf</span></code> : <a class="reference external" href="http://localhost:3000/#/home?msgid=6646">[待校准&#64;6646]</a></p>
+<p>要永久增加设置，您需要编辑或创建文件 <code class="docutils literal notranslate"><span class="pre">/etc/sysctl.conf</span></code> 。创建或编辑此文件将需要根权限。添加到您现有的 <code class="docutils literal notranslate"><span class="pre">etc/sysctl.conf</span></code> 文件或使用以下行创建 <code class="docutils literal notranslate"><span class="pre">/etc/sysctl.conf</span></code> : <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6646">[待校准&#64;6646]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">kern.sysv.shmmax=419430400</span>
 <span class="go">kern.sysv.shmmin=1</span>
 <span class="go">kern.sysv.shmmni=128</span>
@@ -392,8 +392,8 @@ ros2 run demo_nodes_py listener
 <span class="go">kern.sysv.shmall=262144</span>
 </pre></div>
 </div>
-<p>修改此文件后，您需要重新启动计算机才能使更改生效。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6647">[待校准&#64;6647]</a></p>
-<p>此解决方案由RTI Connext社区论坛编辑。更多详细解释见 <a class="reference external" href="https://community.rti.com/kb/osx510">original post</a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6648">[待校准&#64;6648]</a></p>
+<p>修改此文件后，您需要重新启动计算机才能使更改生效。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6647">[待校准&#64;6647]</a></p>
+<p>此解决方案由RTI Connext社区论坛编辑。更多详细解释见 <a class="reference external" href="https://community.rti.com/kb/osx510">original post</a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6648">[待校准&#64;6648]</a></p>
 </div>
 </div>
 </div>

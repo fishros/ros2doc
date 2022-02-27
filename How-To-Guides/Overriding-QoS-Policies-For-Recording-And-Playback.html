@@ -279,10 +279,10 @@
 
 
   <div class="section" id="rosbag2-overriding-qos-policies">
-<span id="ros2bag-qos-override"></span><h1>rosbag2: 重载QoS策略 <a class="reference external" href="http://localhost:3000/#/home?msgid=6323">[待校准&#64;6323]</a><a class="headerlink" href="#rosbag2-overriding-qos-policies" title="永久链接至标题"></a></h1>
-<p>Goal目标: Override覆盖用于记录和回放的Ros2Bag QoS配置文件设置。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6324">[待校准&#64;6324]</a></p>
+<span id="ros2bag-qos-override"></span><h1>rosbag2: 重载QoS策略 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6323">[待校准&#64;6323]</a><a class="headerlink" href="#rosbag2-overriding-qos-policies" title="永久链接至标题"></a></h1>
+<p>Goal目标: Override覆盖用于记录和回放的Ros2Bag QoS配置文件设置。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6324">[待校准&#64;6324]</a></p>
 <div class="contents local topic" id="contents">
-<p class="topic-title">内容 <a class="reference external" href="http://localhost:3000/#/home?msgid=6325">[待校准&#64;6325]</a></p>
+<p class="topic-title">内容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6325">[待校准&#64;6325]</a></p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#background" id="id1">背景 [待校准&#64;6191]</a></p></li>
 <li><p><a class="reference internal" href="#using-qos-overrides" id="id2">使用QoS覆盖 [待校准&#64;6328]</a></p></li>
@@ -290,13 +290,13 @@
 </ul>
 </div>
 <div class="section" id="background">
-<h2>背景 <a class="reference external" href="http://localhost:3000/#/home?msgid=6191">[待校准&#64;6191]</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
-<p>随着ROS 2中DDS的引入，在记录和回放数据时，需要考虑发布者/订户节点的服务质量 (QoS) 兼容性。关于服务质量如何工作的更多细节可以在 <a class="reference internal" href="../Concepts/About-Quality-of-Service-Settings.html"><span class="doc">here</span></a> 找到。就本指南而言，只要知道只有可靠性和耐用性政策会影响出版商/订阅者是否兼容以及是否可以从彼此那里接收数据，就足够了。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6326">[待校准&#64;6326]</a></p>
-<p>当记录/播放来自某个话题的数据时，Ros2Bag会调整其请求/提供的QoS配置文件，以防止信息丢失。在回放过程中，Ros2bag也试图保留话题最初提供的政策。某些情况可能需要指定明确的QoS配置文件设置，以便Ros2Bag可以记录/回放话题。这些QoS配置文件覆盖可以通过CLI使用 <code class="docutils literal notranslate"><span class="pre">--qos-profile-overrides-path</span></code> 标志指定。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6327">[待校准&#64;6327]</a></p>
+<h2>背景 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6191">[待校准&#64;6191]</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
+<p>随着ROS 2中DDS的引入，在记录和回放数据时，需要考虑发布者/订户节点的服务质量 (QoS) 兼容性。关于服务质量如何工作的更多细节可以在 <a class="reference internal" href="../Concepts/About-Quality-of-Service-Settings.html"><span class="doc">here</span></a> 找到。就本指南而言，只要知道只有可靠性和耐用性政策会影响出版商/订阅者是否兼容以及是否可以从彼此那里接收数据，就足够了。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6326">[待校准&#64;6326]</a></p>
+<p>当记录/播放来自某个话题的数据时，Ros2Bag会调整其请求/提供的QoS配置文件，以防止信息丢失。在回放过程中，Ros2bag也试图保留话题最初提供的政策。某些情况可能需要指定明确的QoS配置文件设置，以便Ros2Bag可以记录/回放话题。这些QoS配置文件覆盖可以通过CLI使用 <code class="docutils literal notranslate"><span class="pre">--qos-profile-overrides-path</span></code> 标志指定。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6327">[待校准&#64;6327]</a></p>
 </div>
 <div class="section" id="using-qos-overrides">
-<h2>使用QoS覆盖 <a class="reference external" href="http://localhost:3000/#/home?msgid=6328">[待校准&#64;6328]</a><a class="headerlink" href="#using-qos-overrides" title="永久链接至标题"></a></h2>
-<p>配置文件替代的YAML模式是针对每个QoS策略的具有键/值对的话题名称的字典: <a class="reference external" href="http://localhost:3000/#/home?msgid=6329">[待校准&#64;6329]</a></p>
+<h2>使用QoS覆盖 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6328">[待校准&#64;6328]</a><a class="headerlink" href="#using-qos-overrides" title="永久链接至标题"></a></h2>
+<p>配置文件替代的YAML模式是针对每个QoS策略的具有键/值对的话题名称的字典: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6329">[待校准&#64;6329]</a></p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">topic_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">str</span>
   <span class="l l-Scalar l-Scalar-Plain">qos_policy_name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">str</span>
   <span class="l l-Scalar l-Scalar-Plain">...</span>
@@ -305,7 +305,7 @@
     <span class="l l-Scalar l-Scalar-Plain">nsec</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">int</span>
 </pre></div>
 </div>
-<p>如果未指定策略值，该值将回退到Ros2Bag使用的默认值。如果指定基于持续时间的策略，例如 <code class="docutils literal notranslate"><span class="pre">deadline</span></code> 或 <code class="docutils literal notranslate"><span class="pre">lifespan</span></code> ，则需要同时指定秒和纳秒。策略值由策略的短键决定，可以用 <code class="docutils literal notranslate"><span class="pre">ros2topic</span></code> 动词如 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">topic</span> <span class="pre">pub</span> <span class="pre">--help</span></code> 找到。下面复制所有值以供参考。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6330">[待校准&#64;6330]</a></p>
+<p>如果未指定策略值，该值将回退到Ros2Bag使用的默认值。如果指定基于持续时间的策略，例如 <code class="docutils literal notranslate"><span class="pre">deadline</span></code> 或 <code class="docutils literal notranslate"><span class="pre">lifespan</span></code> ，则需要同时指定秒和纳秒。策略值由策略的短键决定，可以用 <code class="docutils literal notranslate"><span class="pre">ros2topic</span></code> 动词如 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">topic</span> <span class="pre">pub</span> <span class="pre">--help</span></code> 找到。下面复制所有值以供参考。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6330">[待校准&#64;6330]</a></p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">history</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">keep_all</span><span class="p p-Indicator">,</span> <span class="nv">keep_last</span><span class="p p-Indicator">]</span>
 <span class="nt">depth</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">int</span>
 <span class="nt">reliability</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">system_default</span><span class="p p-Indicator">,</span> <span class="nv">reliable</span><span class="p p-Indicator">,</span> <span class="nv">best_effort</span><span class="p p-Indicator">,</span> <span class="nv">unknown</span><span class="p p-Indicator">]</span>
@@ -325,34 +325,34 @@
 </div>
 </div>
 <div class="section" id="example">
-<h2>示例 <a class="reference external" href="http://localhost:3000/#/home?msgid=6204">[待校准&#64;6204]</a><a class="headerlink" href="#example" title="永久链接至标题"></a></h2>
-<p>考虑话题 <code class="docutils literal notranslate"><span class="pre">/talker</span></code> 提供 <code class="docutils literal notranslate"><span class="pre">transient_local</span></code> 耐久性政策。ROS2出版社默认要求 <code class="docutils literal notranslate"><span class="pre">volatile</span></code> 耐用性。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6331">[待校准&#64;6331]</a></p>
+<h2>示例 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6204">[待校准&#64;6204]</a><a class="headerlink" href="#example" title="永久链接至标题"></a></h2>
+<p>考虑话题 <code class="docutils literal notranslate"><span class="pre">/talker</span></code> 提供 <code class="docutils literal notranslate"><span class="pre">transient_local</span></code> 耐久性政策。ROS2出版社默认要求 <code class="docutils literal notranslate"><span class="pre">volatile</span></code> 耐用性。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6331">[待校准&#64;6331]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 topic pub -r 0.1 --qos-durability transient_local /talker std_msgs/String &quot;data: Hello World&quot;</span>
 </pre></div>
 </div>
-<p>为了使Ros2Bag记录数据，我们希望覆盖该特定话题的记录策略，如下所示: <a class="reference external" href="http://localhost:3000/#/home?msgid=6332">[待校准&#64;6332]</a></p>
+<p>为了使Ros2Bag记录数据，我们希望覆盖该特定话题的记录策略，如下所示: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6332">[待校准&#64;6332]</a></p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># durability_override.yaml</span>
 <span class="nt">/talker</span><span class="p">:</span>
   <span class="nt">durability</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">transient_local</span>
   <span class="nt">history</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">keep_all</span>
 </pre></div>
 </div>
-<p>并从CLI调用它: <a class="reference external" href="http://localhost:3000/#/home?msgid=6333">[待校准&#64;6333]</a></p>
+<p>并从CLI调用它: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6333">[待校准&#64;6333]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 bag record -a -o my_bag --qos-profile-overrides-path durability_override.yaml</span>
 </pre></div>
 </div>
-<p>如果我们想回放bag文件，但使用不同的可靠性策略，我们可以这样指定一个; <a class="reference external" href="http://localhost:3000/#/home?msgid=6334">[待校准&#64;6334]</a></p>
+<p>如果我们想回放bag文件，但使用不同的可靠性策略，我们可以这样指定一个; <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6334">[待校准&#64;6334]</a></p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># reliability_override.yaml</span>
 <span class="nt">/talker</span><span class="p">:</span>
   <span class="nt">reliability</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">best_effort</span>
   <span class="nt">history</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">keep_all</span>
 </pre></div>
 </div>
-<p>并从CLI调用它: <a class="reference external" href="http://localhost:3000/#/home?msgid=6333">[待校准&#64;6333]</a></p>
+<p>并从CLI调用它: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6333">[待校准&#64;6333]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 bag play --qos-profile-overrides-path reliability_override.yaml my_bag</span>
 </pre></div>
 </div>
-<p>我们可以看到 <code class="docutils literal notranslate"><span class="pre">ros2topic</span></code> 的结果 <a class="reference external" href="http://localhost:3000/#/home?msgid=6335">[待校准&#64;6335]</a></p>
+<p>我们可以看到 <code class="docutils literal notranslate"><span class="pre">ros2topic</span></code> 的结果 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6335">[待校准&#64;6335]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 topic echo --qos-reliability best_effort /talker std_msgs/String</span>
 </pre></div>
 </div>

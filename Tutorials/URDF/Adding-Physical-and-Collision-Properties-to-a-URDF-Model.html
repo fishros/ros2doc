@@ -280,12 +280,12 @@
 
 
   <div class="section" id="adding-physical-and-collision-properties-to-a-urdf-model">
-<span id="urdfproperties"></span><h1>向URDF模型添加物理和碰撞属性 <a class="reference external" href="http://localhost:3000/#/home?msgid=8927">[待校准&#64;8927]</a><a class="headerlink" href="#adding-physical-and-collision-properties-to-a-urdf-model" title="永久链接至标题"></a></h1>
-<p>Goal目标: Learn了解如何为链接添加碰撞和惯性特性，以及如何为关节添加关节动力学。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8928">[待校准&#64;8928]</a></p>
-<p>Tutorial教程级别: Beginner初学者 <a class="reference external" href="http://localhost:3000/#/home?msgid=7088">[待校准&#64;7088]</a></p>
-<p>在本教程中，我们将介绍如何向URDF模型添加一些基本物理属性，以及如何指定其碰撞属性。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8929">[待校准&#64;8929]</a></p>
+<span id="urdfproperties"></span><h1>向URDF模型添加物理和碰撞属性 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8927">[待校准&#64;8927]</a><a class="headerlink" href="#adding-physical-and-collision-properties-to-a-urdf-model" title="永久链接至标题"></a></h1>
+<p>Goal目标: Learn了解如何为链接添加碰撞和惯性特性，以及如何为关节添加关节动力学。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8928">[待校准&#64;8928]</a></p>
+<p>Tutorial教程级别: Beginner初学者 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7088">[待校准&#64;7088]</a></p>
+<p>在本教程中，我们将介绍如何向URDF模型添加一些基本物理属性，以及如何指定其碰撞属性。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8929">[待校准&#64;8929]</a></p>
 <div class="contents local topic" id="contents">
-<p class="topic-title">内容 <a class="reference external" href="http://localhost:3000/#/home?msgid=6715">[待校准&#64;6715]</a></p>
+<p class="topic-title">内容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6715">[待校准&#64;6715]</a></p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#collision" id="id1">碰撞 [待校准&#64;8930]</a></p></li>
 <li><p><a class="reference internal" href="#physical-properties" id="id2">物理性质 [待校准&#64;8939]</a></p>
@@ -300,9 +300,9 @@
 </ul>
 </div>
 <div class="section" id="collision">
-<h2>碰撞 <a class="reference external" href="http://localhost:3000/#/home?msgid=8930">[待校准&#64;8930]</a><a class="headerlink" href="#collision" title="永久链接至标题"></a></h2>
-<p>到目前为止，我们只指定了与单个子元素 <code class="docutils literal notranslate"><span class="pre">visual</span></code> 的链接， <code class="docutils literal notranslate"><span class="pre">visual</span></code> 定义了 (毫不奇怪) 机器人的样子。然而，为了让碰撞检测工作或模拟机器人，我们还需要定义一个 <code class="docutils literal notranslate"><span class="pre">collision</span></code> 元素。具有碰撞和物理性质的 <a class="reference external" href="https://raw.githubusercontent.com/ros/urdf_tutorial/master/urdf/07-physics.urdf">Here is the new urdf</a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8931">[待校准&#64;8931]</a></p>
-<p>这是我们新的基本链接的代码。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8932">[待校准&#64;8932]</a></p>
+<h2>碰撞 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8930">[待校准&#64;8930]</a><a class="headerlink" href="#collision" title="永久链接至标题"></a></h2>
+<p>到目前为止，我们只指定了与单个子元素 <code class="docutils literal notranslate"><span class="pre">visual</span></code> 的链接， <code class="docutils literal notranslate"><span class="pre">visual</span></code> 定义了 (毫不奇怪) 机器人的样子。然而，为了让碰撞检测工作或模拟机器人，我们还需要定义一个 <code class="docutils literal notranslate"><span class="pre">collision</span></code> 元素。具有碰撞和物理性质的 <a class="reference external" href="https://raw.githubusercontent.com/ros/urdf_tutorial/master/urdf/07-physics.urdf">Here is the new urdf</a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8931">[待校准&#64;8931]</a></p>
+<p>这是我们新的基本链接的代码。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8932">[待校准&#64;8932]</a></p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;link</span> <span class="na">name=</span><span class="s">&quot;base_link&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;visual&gt;</span>
       <span class="nt">&lt;geometry&gt;</span>
@@ -321,24 +321,24 @@
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>冲突元素是链接对象的直接子元素，与可视标记处于同一级别。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8933">[待校准&#64;8933]</a></p></li>
-<li><p>碰撞元素使用几何标签以与视觉元素相同的方式定义其形状。几何标签的格式与视觉上的格式完全相同。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8934">[待校准&#64;8934]</a></p></li>
-<li><p>您还可以以与碰撞标签的子元素相同的方式指定原点 (与视觉一样)。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8935">[待校准&#64;8935]</a></p></li>
+<li><p>冲突元素是链接对象的直接子元素，与可视标记处于同一级别。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8933">[待校准&#64;8933]</a></p></li>
+<li><p>碰撞元素使用几何标签以与视觉元素相同的方式定义其形状。几何标签的格式与视觉上的格式完全相同。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8934">[待校准&#64;8934]</a></p></li>
+<li><p>您还可以以与碰撞标签的子元素相同的方式指定原点 (与视觉一样)。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8935">[待校准&#64;8935]</a></p></li>
 </ul>
-<p>在许多情况下，您希望碰撞几何图形和原点与视觉几何图形和原点完全相同。然而，有两种主要情况下你不会: <a class="reference external" href="http://localhost:3000/#/home?msgid=8936">[待校准&#64;8936]</a></p>
+<p>在许多情况下，您希望碰撞几何图形和原点与视觉几何图形和原点完全相同。然而，有两种主要情况下你不会: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8936">[待校准&#64;8936]</a></p>
 <blockquote>
 <div><ul class="simple">
-<li><p>更快的处理。对两个网格进行碰撞检测比对两个简单的几何图形进行碰撞检测要复杂得多。因此，您可能希望用碰撞元素中更简单的几何图形替换网格。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8937">[待校准&#64;8937]</a></p></li>
-<li><p>安全区。你可能想要限制靠近敏感设备的移动。例如，如果我们不想让任何东西与R2D2的头部碰撞，我们可以将碰撞几何定义为围绕他头部的圆柱体，以防止任何东西离他的头部太近。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8938">[待校准&#64;8938]</a></p></li>
+<li><p>更快的处理。对两个网格进行碰撞检测比对两个简单的几何图形进行碰撞检测要复杂得多。因此，您可能希望用碰撞元素中更简单的几何图形替换网格。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8937">[待校准&#64;8937]</a></p></li>
+<li><p>安全区。你可能想要限制靠近敏感设备的移动。例如，如果我们不想让任何东西与R2D2的头部碰撞，我们可以将碰撞几何定义为围绕他头部的圆柱体，以防止任何东西离他的头部太近。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8938">[待校准&#64;8938]</a></p></li>
 </ul>
 </div></blockquote>
 </div>
 <div class="section" id="physical-properties">
-<h2>物理性质 <a class="reference external" href="http://localhost:3000/#/home?msgid=8939">[待校准&#64;8939]</a><a class="headerlink" href="#physical-properties" title="永久链接至标题"></a></h2>
-<p>为了使模型正确模拟，您需要定义机器人的几个物理属性，即像Gazebo这样的物理引擎所需要的特性。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8940">[待校准&#64;8940]</a></p>
+<h2>物理性质 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8939">[待校准&#64;8939]</a><a class="headerlink" href="#physical-properties" title="永久链接至标题"></a></h2>
+<p>为了使模型正确模拟，您需要定义机器人的几个物理属性，即像Gazebo这样的物理引擎所需要的特性。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8940">[待校准&#64;8940]</a></p>
 <div class="section" id="inertia">
-<h3>惯性 <a class="reference external" href="http://localhost:3000/#/home?msgid=8941">[待校准&#64;8941]</a><a class="headerlink" href="#inertia" title="永久链接至标题"></a></h3>
-<p>每个被模拟的连杆元件都需要一个惯性标签。这里有一个简单的。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8942">[待校准&#64;8942]</a></p>
+<h3>惯性 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8941">[待校准&#64;8941]</a><a class="headerlink" href="#inertia" title="永久链接至标题"></a></h3>
+<p>每个被模拟的连杆元件都需要一个惯性标签。这里有一个简单的。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8942">[待校准&#64;8942]</a></p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;link</span> <span class="na">name=</span><span class="s">&quot;base_link&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;visual&gt;</span>
     <span class="nt">&lt;geometry&gt;</span>
@@ -361,9 +361,9 @@
 </pre></div>
 </div>
 <ul>
-<li><p>此元素也是link对象的子元素。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8943">[待校准&#64;8943]</a></p></li>
-<li><p>质量定义为千克。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8944">[待校准&#64;8944]</a></p></li>
-<li><p>用惯性元件指定3x3旋转惯性矩阵。由于这是对称的，因此只能由6个元素表示。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8945">[待校准&#64;8945]</a></p>
+<li><p>此元素也是link对象的子元素。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8943">[待校准&#64;8943]</a></p></li>
+<li><p>质量定义为千克。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8944">[待校准&#64;8944]</a></p></li>
+<li><p>用惯性元件指定3x3旋转惯性矩阵。由于这是对称的，因此只能由6个元素表示。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8945">[待校准&#64;8945]</a></p>
 <blockquote>
 <div><table class="docutils align-default">
 <colgroup>
@@ -372,59 +372,59 @@
 <col style="width: 33%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p>ixx <a class="reference external" href="http://localhost:3000/#/home?msgid=8946">[待校准&#64;8946]</a></p></td>
-<td><p>ixy <a class="reference external" href="http://localhost:3000/#/home?msgid=8947">[待校准&#64;8947]</a></p></td>
-<td><p>ixz <a class="reference external" href="http://localhost:3000/#/home?msgid=8948">[待校准&#64;8948]</a></p></td>
+<tr class="row-odd"><td><p>ixx <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8946">[待校准&#64;8946]</a></p></td>
+<td><p>ixy <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8947">[待校准&#64;8947]</a></p></td>
+<td><p>ixz <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8948">[待校准&#64;8948]</a></p></td>
 </tr>
-<tr class="row-even"><td><p>ixy <a class="reference external" href="http://localhost:3000/#/home?msgid=8949">[待校准&#64;8949]</a></p></td>
-<td><p>iyy <a class="reference external" href="http://localhost:3000/#/home?msgid=8950">[待校准&#64;8950]</a></p></td>
-<td><p>iyz <a class="reference external" href="http://localhost:3000/#/home?msgid=8951">[待校准&#64;8951]</a></p></td>
+<tr class="row-even"><td><p>ixy <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8949">[待校准&#64;8949]</a></p></td>
+<td><p>iyy <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8950">[待校准&#64;8950]</a></p></td>
+<td><p>iyz <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8951">[待校准&#64;8951]</a></p></td>
 </tr>
-<tr class="row-odd"><td><p>ixz <a class="reference external" href="http://localhost:3000/#/home?msgid=8952">[待校准&#64;8952]</a></p></td>
-<td><p>iyz <a class="reference external" href="http://localhost:3000/#/home?msgid=8953">[待校准&#64;8953]</a></p></td>
-<td><p>伊兹 <a class="reference external" href="http://localhost:3000/#/home?msgid=8954">[待校准&#64;8954]</a></p></td>
+<tr class="row-odd"><td><p>ixz <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8952">[待校准&#64;8952]</a></p></td>
+<td><p>iyz <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8953">[待校准&#64;8953]</a></p></td>
+<td><p>伊兹 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8954">[待校准&#64;8954]</a></p></td>
 </tr>
 </tbody>
 </table>
 </div></blockquote>
 </li>
-<li><p>这些信息可以通过MeshLab等建模程序提供给您。几何原语 (圆柱体、盒子、球体) 的惯性可以使用维基百科的 <a class="reference external" href="https://en.wikipedia.org/wiki/List_of_moments_of_inertia#List_of_3D_inertia_tensors">list of moment of inertia tensors</a> 来计算 (在上面的例子中使用)。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8955">[待校准&#64;8955]</a></p></li>
-<li><p>惯性张量取决于物体的质量和质量分布。一个好的第一近似是假设质量在物体体积中的分布相等，并根据物体的形状计算惯性张量，如上所述。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8956">[待校准&#64;8956]</a></p></li>
-<li><p>如果不确定放什么，对于中等尺寸的链接，ixx/iyy/izz = 1e-3或更小的矩阵通常是合理的默认值 (它对应于一个边长0.1米、质量为0的盒子。6千克)。一致性矩阵是一个特别糟糕的选择，因为它通常太高了 (它相当于一个边长0.1米、质量为600千克的盒子!)。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8957">[待校准&#64;8957]</a></p></li>
-<li><p>您还可以指定原点标签以指定重心和惯性参考帧 (相对于链接的参考帧)。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8958">[待校准&#64;8958]</a></p></li>
-<li><p>当使用实时控制器时，零 (或几乎为零) 的惯性元素会导致机器人模型在没有警告的情况下折叠，并且所有链接将以它们的起源与世界起源一致出现。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8959">[待校准&#64;8959]</a></p></li>
+<li><p>这些信息可以通过MeshLab等建模程序提供给您。几何原语 (圆柱体、盒子、球体) 的惯性可以使用维基百科的 <a class="reference external" href="https://en.wikipedia.org/wiki/List_of_moments_of_inertia#List_of_3D_inertia_tensors">list of moment of inertia tensors</a> 来计算 (在上面的例子中使用)。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8955">[待校准&#64;8955]</a></p></li>
+<li><p>惯性张量取决于物体的质量和质量分布。一个好的第一近似是假设质量在物体体积中的分布相等，并根据物体的形状计算惯性张量，如上所述。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8956">[待校准&#64;8956]</a></p></li>
+<li><p>如果不确定放什么，对于中等尺寸的链接，ixx/iyy/izz = 1e-3或更小的矩阵通常是合理的默认值 (它对应于一个边长0.1米、质量为0的盒子。6千克)。一致性矩阵是一个特别糟糕的选择，因为它通常太高了 (它相当于一个边长0.1米、质量为600千克的盒子!)。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8957">[待校准&#64;8957]</a></p></li>
+<li><p>您还可以指定原点标签以指定重心和惯性参考帧 (相对于链接的参考帧)。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8958">[待校准&#64;8958]</a></p></li>
+<li><p>当使用实时控制器时，零 (或几乎为零) 的惯性元素会导致机器人模型在没有警告的情况下折叠，并且所有链接将以它们的起源与世界起源一致出现。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8959">[待校准&#64;8959]</a></p></li>
 </ul>
 </div>
 <div class="section" id="contact-coefficients">
-<h3>接触系数 <a class="reference external" href="http://localhost:3000/#/home?msgid=8960">[待校准&#64;8960]</a><a class="headerlink" href="#contact-coefficients" title="永久链接至标题"></a></h3>
-<p>您还可以定义链接相互接触时的行为。这是通过调用contact_coefficients的冲突标签的子元素完成的。有三个属性需要指定: <a class="reference external" href="http://localhost:3000/#/home?msgid=8961">[待校准&#64;8961]</a></p>
+<h3>接触系数 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8960">[待校准&#64;8960]</a><a class="headerlink" href="#contact-coefficients" title="永久链接至标题"></a></h3>
+<p>您还可以定义链接相互接触时的行为。这是通过调用contact_coefficients的冲突标签的子元素完成的。有三个属性需要指定: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8961">[待校准&#64;8961]</a></p>
 <blockquote>
 <div><ul class="simple">
-<li><p>mu -  <a class="reference external" href="https://simple.wikipedia.org/wiki/Coefficient_of_friction">Friction coefficient</a>  <a class="reference external" href="http://localhost:3000/#/home?msgid=8962">[待校准&#64;8962]</a></p></li>
-<li><p>kp -  <a class="reference external" href="https://en.wikipedia.org/wiki/Stiffness">Stiffness coefficient</a>  <a class="reference external" href="http://localhost:3000/#/home?msgid=8963">[待校准&#64;8963]</a></p></li>
-<li><p>kd -  <a class="reference external" href="https://en.wikipedia.org/wiki/Damping_ratio#Definition">Dampening coefficient</a>  <a class="reference external" href="http://localhost:3000/#/home?msgid=8964">[待校准&#64;8964]</a></p></li>
+<li><p>mu -  <a class="reference external" href="https://simple.wikipedia.org/wiki/Coefficient_of_friction">Friction coefficient</a>  <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8962">[待校准&#64;8962]</a></p></li>
+<li><p>kp -  <a class="reference external" href="https://en.wikipedia.org/wiki/Stiffness">Stiffness coefficient</a>  <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8963">[待校准&#64;8963]</a></p></li>
+<li><p>kd -  <a class="reference external" href="https://en.wikipedia.org/wiki/Damping_ratio#Definition">Dampening coefficient</a>  <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8964">[待校准&#64;8964]</a></p></li>
 </ul>
 </div></blockquote>
 </div>
 <div class="section" id="joint-dynamics">
-<h3>联合动力学 <a class="reference external" href="http://localhost:3000/#/home?msgid=8965">[待校准&#64;8965]</a><a class="headerlink" href="#joint-dynamics" title="永久链接至标题"></a></h3>
-<p>关节如何移动由关节的动力学标签定义。这里有两个属性: <a class="reference external" href="http://localhost:3000/#/home?msgid=8966">[待校准&#64;8966]</a></p>
+<h3>联合动力学 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8965">[待校准&#64;8965]</a><a class="headerlink" href="#joint-dynamics" title="永久链接至标题"></a></h3>
+<p>关节如何移动由关节的动力学标签定义。这里有两个属性: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8966">[待校准&#64;8966]</a></p>
 <blockquote>
 <div><ul class="simple">
-<li><p>[需手动修复的语法]``friction`` -物理静摩擦。对于棱柱形接头，单位为牛顿。对于旋转接头，单位为牛顿米。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8967">[待校准&#64;8967]</a></p></li>
-<li><p>[需手动修复的语法]``damping`` -物理阻尼值。对于棱柱形接头，单位为每米牛顿秒。对于旋转接头，每弧度牛顿米秒。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8968">[待校准&#64;8968]</a></p></li>
+<li><p>[需手动修复的语法]``friction`` -物理静摩擦。对于棱柱形接头，单位为牛顿。对于旋转接头，单位为牛顿米。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8967">[待校准&#64;8967]</a></p></li>
+<li><p>[需手动修复的语法]``damping`` -物理阻尼值。对于棱柱形接头，单位为每米牛顿秒。对于旋转接头，每弧度牛顿米秒。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8968">[待校准&#64;8968]</a></p></li>
 </ul>
 </div></blockquote>
-<p>如果未指定，则这些系数默认为零。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8969">[待校准&#64;8969]</a></p>
+<p>如果未指定，则这些系数默认为零。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8969">[待校准&#64;8969]</a></p>
 </div>
 </div>
 <div class="section" id="other-tags">
-<h2>其他标签 <a class="reference external" href="http://localhost:3000/#/home?msgid=8970">[待校准&#64;8970]</a><a class="headerlink" href="#other-tags" title="永久链接至标题"></a></h2>
-<p>在纯URDF领域 (即除Gazebo标签外)，还有两个标签可以帮助定义接头: 校准和安全控制器。查看 <a class="reference external" href="https://wiki.ros.org/urdf/XML/joint">spec</a> ，因为它们不包括在本教程中。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8971">[待校准&#64;8971]</a></p>
+<h2>其他标签 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8970">[待校准&#64;8970]</a><a class="headerlink" href="#other-tags" title="永久链接至标题"></a></h2>
+<p>在纯URDF领域 (即除Gazebo标签外)，还有两个标签可以帮助定义接头: 校准和安全控制器。查看 <a class="reference external" href="https://wiki.ros.org/urdf/XML/joint">spec</a> ，因为它们不包括在本教程中。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8971">[待校准&#64;8971]</a></p>
 </div>
 <div class="section" id="next-steps">
-<h2>下一步 <a class="reference external" href="http://localhost:3000/#/home?msgid=8972">[待校准&#64;8972]</a><a class="headerlink" href="#next-steps" title="永久链接至标题"></a></h2>
-<p>通过 <a class="reference internal" href="Using-Xacro-to-Clean-Up-a-URDF-File.html"><span class="doc">using xacro</span></a> 减少你必须做的代码和恼人的数学。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8973">[待校准&#64;8973]</a></p>
+<h2>下一步 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8972">[待校准&#64;8972]</a><a class="headerlink" href="#next-steps" title="永久链接至标题"></a></h2>
+<p>通过 <a class="reference internal" href="Using-Xacro-to-Clean-Up-a-URDF-File.html"><span class="doc">using xacro</span></a> 减少你必须做的代码和恼人的数学。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8973">[待校准&#64;8973]</a></p>
 </div>
 </div>
 

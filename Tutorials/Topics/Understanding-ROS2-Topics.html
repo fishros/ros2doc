@@ -279,12 +279,12 @@
 
 
   <div class="section" id="understanding-ros-2-topics">
-<span id="ros2topics"></span><h1>理解ROS 2话题 <a class="reference external" href="http://localhost:3000/#/home?msgid=8808">[待校准&#64;8808]</a><a class="headerlink" href="#understanding-ros-2-topics" title="永久链接至标题"></a></h1>
-<p>Goal目标: Use使用rqt_graph和命令行工具来反思ROS 2话题。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8809">[待校准&#64;8809]</a></p>
-<p>Tutorial教程级别: Beginner初学者 <a class="reference external" href="http://localhost:3000/#/home?msgid=7088">[待校准&#64;7088]</a></p>
-<p>Time时间: 20 20分钟 <a class="reference external" href="http://localhost:3000/#/home?msgid=7181">[待校准&#64;7181]</a></p>
+<span id="ros2topics"></span><h1>理解ROS 2话题 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8808">[待校准&#64;8808]</a><a class="headerlink" href="#understanding-ros-2-topics" title="永久链接至标题"></a></h1>
+<p>Goal目标: Use使用rqt_graph和命令行工具来反思ROS 2话题。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8809">[待校准&#64;8809]</a></p>
+<p>Tutorial教程级别: Beginner初学者 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7088">[待校准&#64;7088]</a></p>
+<p>Time时间: 20 20分钟 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7181">[待校准&#64;7181]</a></p>
 <div class="contents local topic" id="contents">
-<p class="topic-title">内容 <a class="reference external" href="http://localhost:3000/#/home?msgid=6715">[待校准&#64;6715]</a></p>
+<p class="topic-title">内容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6715">[待校准&#64;6715]</a></p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#background" id="id1">背景 [待校准&#64;6716]</a></p></li>
 <li><p><a class="reference internal" href="#prerequisites" id="id2">先决条件 [待校准&#64;6718]</a></p></li>
@@ -306,51 +306,51 @@
 </ul>
 </div>
 <div class="section" id="background">
-<h2>背景 <a class="reference external" href="http://localhost:3000/#/home?msgid=6716">[待校准&#64;6716]</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
-<p>ROS 2将复杂的系统分解成许多模块化节点。话题是ROS图中至关重要的元素，它充当节点交换消息的总线。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8810">[待校准&#64;8810]</a></p>
+<h2>背景 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6716">[待校准&#64;6716]</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
+<p>ROS 2将复杂的系统分解成许多模块化节点。话题是ROS图中至关重要的元素，它充当节点交换消息的总线。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8810">[待校准&#64;8810]</a></p>
 <img alt="../../_images/Topic-SinglePublisherandSingleSubscriber.gif" src="../../_images/Topic-SinglePublisherandSingleSubscriber.gif" />
-<p>节点可以将数据发布到任意数量的话题，同时订阅任意数量的话题。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8811">[待校准&#64;8811]</a></p>
+<p>节点可以将数据发布到任意数量的话题，同时订阅任意数量的话题。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8811">[待校准&#64;8811]</a></p>
 <img alt="../../_images/Topic-MultiplePublisherandMultipleSubscriber.gif" src="../../_images/Topic-MultiplePublisherandMultipleSubscriber.gif" />
-<p>话题是数据在节点之间移动，从而在系统的不同部分之间移动的主要方式之一。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8812">[待校准&#64;8812]</a></p>
+<p>话题是数据在节点之间移动，从而在系统的不同部分之间移动的主要方式之一。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8812">[待校准&#64;8812]</a></p>
 </div>
 <div class="section" id="prerequisites">
-<h2>先决条件 <a class="reference external" href="http://localhost:3000/#/home?msgid=6718">[待校准&#64;6718]</a><a class="headerlink" href="#prerequisites" title="永久链接至标题"></a></h2>
-<p>在这里建立的节点上， <a class="reference internal" href="../Understanding-ROS2-Nodes.html"><span class="doc">previous tutorial</span></a> 提供了一些有用的背景信息。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8813">[待校准&#64;8813]</a></p>
-<p>和往常一样，不要忘记在 <a class="reference internal" href="../Configuring-ROS2-Environment.html"><span class="doc">every new terminal you open</span></a> 中源文件ROS 2。 <a class="reference external" href="http://localhost:3000/#/home?msgid=7566">[待校准&#64;7566]</a></p>
+<h2>先决条件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6718">[待校准&#64;6718]</a><a class="headerlink" href="#prerequisites" title="永久链接至标题"></a></h2>
+<p>在这里建立的节点上， <a class="reference internal" href="../Understanding-ROS2-Nodes.html"><span class="doc">previous tutorial</span></a> 提供了一些有用的背景信息。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8813">[待校准&#64;8813]</a></p>
+<p>和往常一样，不要忘记在 <a class="reference internal" href="../Configuring-ROS2-Environment.html"><span class="doc">every new terminal you open</span></a> 中源文件ROS 2。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7566">[待校准&#64;7566]</a></p>
 </div>
 <div class="section" id="tasks">
-<h2>任务 <a class="reference external" href="http://localhost:3000/#/home?msgid=6725">[待校准&#64;6725]</a><a class="headerlink" href="#tasks" title="永久链接至标题"></a></h2>
+<h2>任务 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6725">[待校准&#64;6725]</a><a class="headerlink" href="#tasks" title="永久链接至标题"></a></h2>
 <div class="section" id="setup">
-<h3>1设置 <a class="reference external" href="http://localhost:3000/#/home?msgid=7567">[待校准&#64;7567]</a><a class="headerlink" href="#setup" title="永久链接至标题"></a></h3>
-<p>到目前为止，您应该可以轻松启动turtlesim。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8814">[待校准&#64;8814]</a></p>
-<p>打开新终端并运行: <a class="reference external" href="http://localhost:3000/#/home?msgid=7339">[待校准&#64;7339]</a></p>
+<h3>1设置 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7567">[待校准&#64;7567]</a><a class="headerlink" href="#setup" title="永久链接至标题"></a></h3>
+<p>到目前为止，您应该可以轻松启动turtlesim。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8814">[待校准&#64;8814]</a></p>
+<p>打开新终端并运行: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7339">[待校准&#64;7339]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run turtlesim turtlesim_node</span>
 </pre></div>
 </div>
-<p>打开另一个终端并运行: <a class="reference external" href="http://localhost:3000/#/home?msgid=7816">[待校准&#64;7816]</a></p>
+<p>打开另一个终端并运行: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7816">[待校准&#64;7816]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run turtlesim turtle_teleop_key</span>
 </pre></div>
 </div>
-<p>从 <a class="reference internal" href="../Understanding-ROS2-Nodes.html"><span class="doc">previous tutorial</span></a> 调用，默认情况下，这些节点的名称是 <code class="docutils literal notranslate"><span class="pre">/turtlesim</span></code> 和 <code class="docutils literal notranslate"><span class="pre">/teleop_turtle</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8815">[待校准&#64;8815]</a></p>
+<p>从 <a class="reference internal" href="../Understanding-ROS2-Nodes.html"><span class="doc">previous tutorial</span></a> 调用，默认情况下，这些节点的名称是 <code class="docutils literal notranslate"><span class="pre">/turtlesim</span></code> 和 <code class="docutils literal notranslate"><span class="pre">/teleop_turtle</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8815">[待校准&#64;8815]</a></p>
 </div>
 <div class="section" id="rqt-graph">
-<h3>2 rqt_graph <a class="reference external" href="http://localhost:3000/#/home?msgid=8816">[待校准&#64;8816]</a><a class="headerlink" href="#rqt-graph" title="永久链接至标题"></a></h3>
-<p>在本教程中，我们将使用 <code class="docutils literal notranslate"><span class="pre">rqt_graph</span></code> 可视化变化的节点和话题，以及它们之间的联系。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8817">[待校准&#64;8817]</a></p>
-<p>[需手动修复的语法] <a class="reference internal" href="../Turtlesim/Introducing-Turtlesim.html"><span class="doc">turtlesim tutorial</span></a> 告诉你如何安装rqt及其所有插件，包括 <code class="docutils literal notranslate"><span class="pre">rqt_graph</span></code>  <a class="reference external" href="http://localhost:3000/#/home?msgid=8818">[待校准&#64;8818]</a></p>
-<p>要运行rqt_graph，请打开新终端并输入以下命令: <a class="reference external" href="http://localhost:3000/#/home?msgid=8819">[待校准&#64;8819]</a></p>
+<h3>2 rqt_graph <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8816">[待校准&#64;8816]</a><a class="headerlink" href="#rqt-graph" title="永久链接至标题"></a></h3>
+<p>在本教程中，我们将使用 <code class="docutils literal notranslate"><span class="pre">rqt_graph</span></code> 可视化变化的节点和话题，以及它们之间的联系。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8817">[待校准&#64;8817]</a></p>
+<p>[需手动修复的语法] <a class="reference internal" href="../Turtlesim/Introducing-Turtlesim.html"><span class="doc">turtlesim tutorial</span></a> 告诉你如何安装rqt及其所有插件，包括 <code class="docutils literal notranslate"><span class="pre">rqt_graph</span></code>  <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8818">[待校准&#64;8818]</a></p>
+<p>要运行rqt_graph，请打开新终端并输入以下命令: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8819">[待校准&#64;8819]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">rqt_graph</span>
 </pre></div>
 </div>
-<p>您也可以通过打开 <code class="docutils literal notranslate"><span class="pre">rqt</span></code> 并选择插件&gt; 自检&gt; 节点图来打开rqt_graph。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8820">[待校准&#64;8820]</a></p>
+<p>您也可以通过打开 <code class="docutils literal notranslate"><span class="pre">rqt</span></code> 并选择插件&gt; 自检&gt; 节点图来打开rqt_graph。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8820">[待校准&#64;8820]</a></p>
 <img alt="../../_images/rqt_graph.png" src="../../_images/rqt_graph.png" />
-<p>你应该看到上面的节点和话题，以及围绕图表外围的两个动作 (现在让我们忽略这些)。如果将鼠标悬停在中间的话题上，您会看到颜色突出显示，如上图所示。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8821">[待校准&#64;8821]</a></p>
-<p>该图描述了 <code class="docutils literal notranslate"><span class="pre">/turtlesim</span></code> 节点和 <code class="docutils literal notranslate"><span class="pre">/teleop_turtle</span></code> 节点如何通过一个话题相互通信。的 <code class="docutils literal notranslate"><span class="pre">/teleop_turtle</span></code> 节点出版数据 (按键输入移动乌龟周围)  <code class="docutils literal notranslate"><span class="pre">/turtle1/cmd_vel</span></code> 话题， <code class="docutils literal notranslate"><span class="pre">/turtlesim</span></code> 节点订阅话题接收数据。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8822">[待校准&#64;8822]</a></p>
-<p>rqt_graph的突出功能在检查具有许多节点和以许多不同方式连接的话题的更复杂系统时非常有用。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8823">[待校准&#64;8823]</a></p>
-<p>rqt_graph是一个图形自省工具。现在我们来看看一些用于内省话题的命令行工具。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8824">[待校准&#64;8824]</a></p>
+<p>你应该看到上面的节点和话题，以及围绕图表外围的两个动作 (现在让我们忽略这些)。如果将鼠标悬停在中间的话题上，您会看到颜色突出显示，如上图所示。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8821">[待校准&#64;8821]</a></p>
+<p>该图描述了 <code class="docutils literal notranslate"><span class="pre">/turtlesim</span></code> 节点和 <code class="docutils literal notranslate"><span class="pre">/teleop_turtle</span></code> 节点如何通过一个话题相互通信。的 <code class="docutils literal notranslate"><span class="pre">/teleop_turtle</span></code> 节点出版数据 (按键输入移动乌龟周围)  <code class="docutils literal notranslate"><span class="pre">/turtle1/cmd_vel</span></code> 话题， <code class="docutils literal notranslate"><span class="pre">/turtlesim</span></code> 节点订阅话题接收数据。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8822">[待校准&#64;8822]</a></p>
+<p>rqt_graph的突出功能在检查具有许多节点和以许多不同方式连接的话题的更复杂系统时非常有用。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8823">[待校准&#64;8823]</a></p>
+<p>rqt_graph是一个图形自省工具。现在我们来看看一些用于内省话题的命令行工具。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8824">[待校准&#64;8824]</a></p>
 </div>
 <div class="section" id="ros2-topic-list">
-<h3>3 ros2话题列表 <a class="reference external" href="http://localhost:3000/#/home?msgid=8825">[待校准&#64;8825]</a><a class="headerlink" href="#ros2-topic-list" title="永久链接至标题"></a></h3>
-<p>在新终端中运行 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">topic</span> <span class="pre">list</span></code> 命令将返回系统中当前活动的所有话题的列表: <a class="reference external" href="http://localhost:3000/#/home?msgid=8826">[待校准&#64;8826]</a></p>
+<h3>3 ros2话题列表 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8825">[待校准&#64;8825]</a><a class="headerlink" href="#ros2-topic-list" title="永久链接至标题"></a></h3>
+<p>在新终端中运行 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">topic</span> <span class="pre">list</span></code> 命令将返回系统中当前活动的所有话题的列表: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8826">[待校准&#64;8826]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">/parameter_events</span>
 <span class="go">/rosout</span>
 <span class="go">/turtle1/cmd_vel</span>
@@ -358,7 +358,7 @@
 <span class="go">/turtle1/pose</span>
 </pre></div>
 </div>
-<p>[需手动修复的语法]``ros2 topic list -t`` will返回相同的话题列表，这次在括号中附加了话题类型: <a class="reference external" href="http://localhost:3000/#/home?msgid=8827">[待校准&#64;8827]</a></p>
+<p>[需手动修复的语法]``ros2 topic list -t`` will返回相同的话题列表，这次在括号中附加了话题类型: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8827">[待校准&#64;8827]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">/parameter_events [rcl_interfaces/msg/ParameterEvent]</span>
 <span class="go">/rosout [rcl_interfaces/msg/Log]</span>
 <span class="go">/turtle1/cmd_vel [geometry_msgs/msg/Twist]</span>
@@ -366,23 +366,23 @@
 <span class="go">/turtle1/pose [turtlesim/msg/Pose]</span>
 </pre></div>
 </div>
-<p>这些属性，尤其是类型，是节点如何知道它们在谈论与话题移动时相同的信息。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8828">[待校准&#64;8828]</a></p>
-<p>如果您想知道所有这些话题在rqt_graph中的位置，可以取消选中Hide隐藏: Hide下的所有框 <a class="reference external" href="http://localhost:3000/#/home?msgid=8829">[待校准&#64;8829]</a></p>
+<p>这些属性，尤其是类型，是节点如何知道它们在谈论与话题移动时相同的信息。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8828">[待校准&#64;8828]</a></p>
+<p>如果您想知道所有这些话题在rqt_graph中的位置，可以取消选中Hide隐藏: Hide下的所有框 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8829">[待校准&#64;8829]</a></p>
 <img alt="../../_images/unhide.png" src="../../_images/unhide.png" />
-<p>不过，现在，请检查这些选项以避免混淆。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8830">[待校准&#64;8830]</a></p>
+<p>不过，现在，请检查这些选项以避免混淆。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8830">[待校准&#64;8830]</a></p>
 </div>
 <div class="section" id="ros2-topic-echo">
-<h3>4 ros2话题回声 <a class="reference external" href="http://localhost:3000/#/home?msgid=8831">[待校准&#64;8831]</a><a class="headerlink" href="#ros2-topic-echo" title="永久链接至标题"></a></h3>
-<p>要查看正在发布的关于某个话题的数据，请使用: <a class="reference external" href="http://localhost:3000/#/home?msgid=8832">[待校准&#64;8832]</a></p>
+<h3>4 ros2话题回声 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8831">[待校准&#64;8831]</a><a class="headerlink" href="#ros2-topic-echo" title="永久链接至标题"></a></h3>
+<p>要查看正在发布的关于某个话题的数据，请使用: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8832">[待校准&#64;8832]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 topic echo &lt;topic_name&gt;</span>
 </pre></div>
 </div>
-<p>既然我们知道 <code class="docutils literal notranslate"><span class="pre">/teleop_turtle</span></code> 在 <code class="docutils literal notranslate"><span class="pre">/turtle1/cmd_vel</span></code> 话题上向 <code class="docutils literal notranslate"><span class="pre">/turtlesim</span></code> 公布了数据，让我们用 <code class="docutils literal notranslate"><span class="pre">echo</span></code> 来反思这个话题: <a class="reference external" href="http://localhost:3000/#/home?msgid=8833">[待校准&#64;8833]</a></p>
+<p>既然我们知道 <code class="docutils literal notranslate"><span class="pre">/teleop_turtle</span></code> 在 <code class="docutils literal notranslate"><span class="pre">/turtle1/cmd_vel</span></code> 话题上向 <code class="docutils literal notranslate"><span class="pre">/turtlesim</span></code> 公布了数据，让我们用 <code class="docutils literal notranslate"><span class="pre">echo</span></code> 来反思这个话题: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8833">[待校准&#64;8833]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 topic echo /turtle1/cmd_vel</span>
 </pre></div>
 </div>
-<p>首先，此命令不会返回任何数据。那是因为它在等待 <code class="docutils literal notranslate"><span class="pre">/teleop_turtle</span></code> 发表一些东西。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8834">[待校准&#64;8834]</a></p>
-<p>回到 <code class="docutils literal notranslate"><span class="pre">turtle_teleop_key</span></code> 运行的终端，用箭头移动海龟。观看你的 <code class="docutils literal notranslate"><span class="pre">echo</span></code> 同时运行的终端，你会看到你所做的每一个动作的位置数据被公布: <a class="reference external" href="http://localhost:3000/#/home?msgid=8835">[待校准&#64;8835]</a></p>
+<p>首先，此命令不会返回任何数据。那是因为它在等待 <code class="docutils literal notranslate"><span class="pre">/teleop_turtle</span></code> 发表一些东西。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8834">[待校准&#64;8834]</a></p>
+<p>回到 <code class="docutils literal notranslate"><span class="pre">turtle_teleop_key</span></code> 运行的终端，用箭头移动海龟。观看你的 <code class="docutils literal notranslate"><span class="pre">echo</span></code> 同时运行的终端，你会看到你所做的每一个动作的位置数据被公布: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8835">[待校准&#64;8835]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">linear:</span>
 <span class="go">  x: 2.0</span>
 <span class="go">  y: 0.0</span>
@@ -394,18 +394,18 @@
 <span class="go">  ---</span>
 </pre></div>
 </div>
-<p>现在返回rqt_graph并取消选中调试框。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8836">[待校准&#64;8836]</a></p>
+<p>现在返回rqt_graph并取消选中调试框。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8836">[待校准&#64;8836]</a></p>
 <img alt="../../_images/debug.png" src="../../_images/debug.png" />
-<p>[需手动修复的语法]``/_ros2cli_26646`` is the node created by the <code class="docutils literal notranslate"><span class="pre">echo</span></code> we just ran (the number might be different). Now you can see that the publisher is publishing data over the <code class="docutils literal notranslate"><span class="pre">cmd_vel</span></code> topic和两个订户已订阅。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8837">[待校准&#64;8837]</a></p>
+<p>[需手动修复的语法]``/_ros2cli_26646`` is the node created by the <code class="docutils literal notranslate"><span class="pre">echo</span></code> we just ran (the number might be different). Now you can see that the publisher is publishing data over the <code class="docutils literal notranslate"><span class="pre">cmd_vel</span></code> topic和两个订户已订阅。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8837">[待校准&#64;8837]</a></p>
 </div>
 <div class="section" id="ros2-topic-info">
-<h3>5 ros2话题信息 <a class="reference external" href="http://localhost:3000/#/home?msgid=8838">[待校准&#64;8838]</a><a class="headerlink" href="#ros2-topic-info" title="永久链接至标题"></a></h3>
-<p>话题不一定只是点对点通讯; 它可以是一对多、多对一或多对多。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8839">[待校准&#64;8839]</a></p>
-<p>另一种看待这个问题的方式是运行: <a class="reference external" href="http://localhost:3000/#/home?msgid=8840">[待校准&#64;8840]</a></p>
+<h3>5 ros2话题信息 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8838">[待校准&#64;8838]</a><a class="headerlink" href="#ros2-topic-info" title="永久链接至标题"></a></h3>
+<p>话题不一定只是点对点通讯; 它可以是一对多、多对一或多对多。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8839">[待校准&#64;8839]</a></p>
+<p>另一种看待这个问题的方式是运行: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8840">[待校准&#64;8840]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 topic info /turtle1/cmd_vel</span>
 </pre></div>
 </div>
-<p>它将返回: <a class="reference external" href="http://localhost:3000/#/home?msgid=8090">[待校准&#64;8090]</a></p>
+<p>它将返回: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8090">[待校准&#64;8090]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Type: geometry_msgs/msg/Twist</span>
 <span class="go">Publisher count: 1</span>
 <span class="go">Subscription count: 2</span>
@@ -413,25 +413,25 @@
 </div>
 </div>
 <div class="section" id="ros2-interface-show">
-<h3>6 ros2界面展示 <a class="reference external" href="http://localhost:3000/#/home?msgid=8841">[待校准&#64;8841]</a><a class="headerlink" href="#ros2-interface-show" title="永久链接至标题"></a></h3>
-<p>节点使用消息通过话题发送数据。发布者和订阅者必须发送和接收相同类型的消息才能进行通信。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8842">[待校准&#64;8842]</a></p>
-<p>我们之前在运行 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">topic</span> <span class="pre">list</span> <span class="pre">-t</span></code> 后看到的话题类型让我们知道每个话题使用了什么信息类型。重新调用 <code class="docutils literal notranslate"><span class="pre">cmd_vel</span></code> 话题的类型: <a class="reference external" href="http://localhost:3000/#/home?msgid=8843">[待校准&#64;8843]</a></p>
+<h3>6 ros2界面展示 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8841">[待校准&#64;8841]</a><a class="headerlink" href="#ros2-interface-show" title="永久链接至标题"></a></h3>
+<p>节点使用消息通过话题发送数据。发布者和订阅者必须发送和接收相同类型的消息才能进行通信。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8842">[待校准&#64;8842]</a></p>
+<p>我们之前在运行 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">topic</span> <span class="pre">list</span> <span class="pre">-t</span></code> 后看到的话题类型让我们知道每个话题使用了什么信息类型。重新调用 <code class="docutils literal notranslate"><span class="pre">cmd_vel</span></code> 话题的类型: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8843">[待校准&#64;8843]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">geometry_msgs/msg/Twist</span>
 </pre></div>
 </div>
-<p>这意味着在 <code class="docutils literal notranslate"><span class="pre">geometry_msgs</span></code> 包装中有一个 <code class="docutils literal notranslate"><span class="pre">msg</span></code> 调用 <code class="docutils literal notranslate"><span class="pre">Twist</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8844">[待校准&#64;8844]</a></p>
-<p>现在我们可以在这种类型上运行 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">interface</span> <span class="pre">show</span> <span class="pre">&lt;msg</span> <span class="pre">type&gt;</span></code> 来了解它的细节，特别是调用y，消息期望的数据结构。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8845">[待校准&#64;8845]</a></p>
+<p>这意味着在 <code class="docutils literal notranslate"><span class="pre">geometry_msgs</span></code> 包装中有一个 <code class="docutils literal notranslate"><span class="pre">msg</span></code> 调用 <code class="docutils literal notranslate"><span class="pre">Twist</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8844">[待校准&#64;8844]</a></p>
+<p>现在我们可以在这种类型上运行 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">interface</span> <span class="pre">show</span> <span class="pre">&lt;msg</span> <span class="pre">type&gt;</span></code> 来了解它的细节，特别是调用y，消息期望的数据结构。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8845">[待校准&#64;8845]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 interface show geometry_msgs/msg/Twist</span>
 </pre></div>
 </div>
-<p>对于上面的消息类型，它产生: <a class="reference external" href="http://localhost:3000/#/home?msgid=8846">[待校准&#64;8846]</a></p>
+<p>对于上面的消息类型，它产生: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8846">[待校准&#64;8846]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">#</span> This expresses velocity in free space broken into its linear and angular parts.
 
 <span class="go">    Vector3  linear</span>
 <span class="go">    Vector3  angular</span>
 </pre></div>
 </div>
-<p>这告诉你， <code class="docutils literal notranslate"><span class="pre">/turtlesim</span></code> 节点期望有两个向量的消息， <code class="docutils literal notranslate"><span class="pre">linear</span></code> 和 <code class="docutils literal notranslate"><span class="pre">angular</span></code> ，每个向量有三个元素。如果你重新调用数据，我们看到 <code class="docutils literal notranslate"><span class="pre">/teleop_turtle</span></code> 用 <code class="docutils literal notranslate"><span class="pre">echo</span></code> 命令传递给 <code class="docutils literal notranslate"><span class="pre">/turtlesim</span></code> ，它的结构是一样的: <a class="reference external" href="http://localhost:3000/#/home?msgid=8847">[待校准&#64;8847]</a></p>
+<p>这告诉你， <code class="docutils literal notranslate"><span class="pre">/turtlesim</span></code> 节点期望有两个向量的消息， <code class="docutils literal notranslate"><span class="pre">linear</span></code> 和 <code class="docutils literal notranslate"><span class="pre">angular</span></code> ，每个向量有三个元素。如果你重新调用数据，我们看到 <code class="docutils literal notranslate"><span class="pre">/teleop_turtle</span></code> 用 <code class="docutils literal notranslate"><span class="pre">echo</span></code> 命令传递给 <code class="docutils literal notranslate"><span class="pre">/turtlesim</span></code> ，它的结构是一样的: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8847">[待校准&#64;8847]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">linear:</span>
 <span class="go">  x: 2.0</span>
 <span class="go">  y: 0.0</span>
@@ -445,64 +445,64 @@
 </div>
 </div>
 <div class="section" id="ros2-topic-pub">
-<h3>7 ros2话题酒吧 <a class="reference external" href="http://localhost:3000/#/home?msgid=8848">[待校准&#64;8848]</a><a class="headerlink" href="#ros2-topic-pub" title="永久链接至标题"></a></h3>
-<p>现在有了消息结构，您可以使用以下命令直接从命令行将数据发布到话题上: <a class="reference external" href="http://localhost:3000/#/home?msgid=8849">[待校准&#64;8849]</a></p>
+<h3>7 ros2话题酒吧 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8848">[待校准&#64;8848]</a><a class="headerlink" href="#ros2-topic-pub" title="永久链接至标题"></a></h3>
+<p>现在有了消息结构，您可以使用以下命令直接从命令行将数据发布到话题上: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8849">[待校准&#64;8849]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 topic pub &lt;topic_name&gt; &lt;msg_type&gt; &#39;&lt;args&gt;&#39;</span>
 </pre></div>
 </div>
-<p>'''&lt;args&gt;''' 参数是您将传递给话题的实际数据，位于您在上一节中刚刚发现的结构中。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8850">[待校准&#64;8850]</a></p>
-<p>需要注意的是，此参数需要以YAML语法输入。输入完整命令，如下所示: <a class="reference external" href="http://localhost:3000/#/home?msgid=8851">[待校准&#64;8851]</a></p>
+<p>'''&lt;args&gt;''' 参数是您将传递给话题的实际数据，位于您在上一节中刚刚发现的结构中。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8850">[待校准&#64;8850]</a></p>
+<p>需要注意的是，此参数需要以YAML语法输入。输入完整命令，如下所示: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8851">[待校准&#64;8851]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 topic pub --once /turtle1/cmd_vel geometry_msgs/msg/Twist &quot;{linear: {x: 2.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 1.8}}&quot;</span>
 </pre></div>
 </div>
-<p>[需手动修复的语法]``--once`` is是一个可选参数，意思是 “发布一条消息然后退出”。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8852">[待校准&#64;8852]</a></p>
-<p>您将在终端中收到以下消息: <a class="reference external" href="http://localhost:3000/#/home?msgid=8853">[待校准&#64;8853]</a></p>
+<p>[需手动修复的语法]``--once`` is是一个可选参数，意思是 “发布一条消息然后退出”。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8852">[待校准&#64;8852]</a></p>
+<p>您将在终端中收到以下消息: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8853">[待校准&#64;8853]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">publisher: beginning loop</span>
 <span class="go">publishing #1: geometry_msgs.msg.Twist(linear=geometry_msgs.msg.Vector3(x=2.0, y=0.0, z=0.0), angular=geometry_msgs.msg.Vector3(x=0.0, y=0.0, z=1.8))</span>
 </pre></div>
 </div>
-<p>你会看到你的乌龟像这样移动: <a class="reference external" href="http://localhost:3000/#/home?msgid=8854">[待校准&#64;8854]</a></p>
+<p>你会看到你的乌龟像这样移动: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8854">[待校准&#64;8854]</a></p>
 <img alt="../../_images/pub_once.png" src="../../_images/pub_once.png" />
-<p>乌龟 (通常是用来模仿的真正机器人) 需要源源不断的命令来连续运行。所以，为了让乌龟继续移动，你可以跑: <a class="reference external" href="http://localhost:3000/#/home?msgid=8855">[待校准&#64;8855]</a></p>
+<p>乌龟 (通常是用来模仿的真正机器人) 需要源源不断的命令来连续运行。所以，为了让乌龟继续移动，你可以跑: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8855">[待校准&#64;8855]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 topic pub --rate 1 /turtle1/cmd_vel geometry_msgs/msg/Twist &quot;{linear: {x: 2.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 1.8}}&quot;</span>
 </pre></div>
 </div>
-<p>这里的不同之处在于移除了 <code class="docutils literal notranslate"><span class="pre">--once</span></code> 选项，并增加了 <code class="docutils literal notranslate"><span class="pre">--rate</span> <span class="pre">1</span></code> 选项，这告诉 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">topic</span> <span class="pre">pub</span></code> 以1赫兹的稳定流发布命令。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8856">[待校准&#64;8856]</a></p>
+<p>这里的不同之处在于移除了 <code class="docutils literal notranslate"><span class="pre">--once</span></code> 选项，并增加了 <code class="docutils literal notranslate"><span class="pre">--rate</span> <span class="pre">1</span></code> 选项，这告诉 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">topic</span> <span class="pre">pub</span></code> 以1赫兹的稳定流发布命令。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8856">[待校准&#64;8856]</a></p>
 <img alt="../../_images/pub_stream.png" src="../../_images/pub_stream.png" />
-<p>您可以刷新rqt_graph以查看graphi调用y时发生了什么。您将看到 <code class="docutils literal notranslate"><span class="pre">ros</span> <span class="pre">2</span> <span class="pre">topic</span> <span class="pre">pub</span> <span class="pre">...</span></code> 节点 ( <code class="docutils literal notranslate"><span class="pre">/_ros2cli_30358</span></code> ) 正在发布关于 <code class="docutils literal notranslate"><span class="pre">/turtle1/cmd_vel</span></code> 话题的内容，并且现在被 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">topic</span> <span class="pre">echo</span> <span class="pre">...</span></code> 节点 ( <code class="docutils literal notranslate"><span class="pre">/_ros2cli_26646</span></code> ) 和 <code class="docutils literal notranslate"><span class="pre">/turtlesim</span></code> 节点接收。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8857">[待校准&#64;8857]</a></p>
+<p>您可以刷新rqt_graph以查看graphi调用y时发生了什么。您将看到 <code class="docutils literal notranslate"><span class="pre">ros</span> <span class="pre">2</span> <span class="pre">topic</span> <span class="pre">pub</span> <span class="pre">...</span></code> 节点 ( <code class="docutils literal notranslate"><span class="pre">/_ros2cli_30358</span></code> ) 正在发布关于 <code class="docutils literal notranslate"><span class="pre">/turtle1/cmd_vel</span></code> 话题的内容，并且现在被 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">topic</span> <span class="pre">echo</span> <span class="pre">...</span></code> 节点 ( <code class="docutils literal notranslate"><span class="pre">/_ros2cli_26646</span></code> ) 和 <code class="docutils literal notranslate"><span class="pre">/turtlesim</span></code> 节点接收。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8857">[待校准&#64;8857]</a></p>
 <img alt="../../_images/rqt_graph2.png" src="../../_images/rqt_graph2.png" />
-<p>最后，您可以在 <code class="docutils literal notranslate"><span class="pre">pose</span></code> 话题上运行 <code class="docutils literal notranslate"><span class="pre">echo</span></code> ，并重新检查rqt_graph: <a class="reference external" href="http://localhost:3000/#/home?msgid=8858">[待校准&#64;8858]</a></p>
+<p>最后，您可以在 <code class="docutils literal notranslate"><span class="pre">pose</span></code> 话题上运行 <code class="docutils literal notranslate"><span class="pre">echo</span></code> ，并重新检查rqt_graph: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8858">[待校准&#64;8858]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 topic echo /turtle1/pose</span>
 </pre></div>
 </div>
 <img alt="../../_images/rqt_graph3.png" src="../../_images/rqt_graph3.png" />
-<p>你可以看到 <code class="docutils literal notranslate"><span class="pre">/turtlesim</span></code> 节点也在发布到 <code class="docutils literal notranslate"><span class="pre">pose</span></code> 话题，新的 <code class="docutils literal notranslate"><span class="pre">echo</span></code> 节点订阅了这个话题。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8859">[待校准&#64;8859]</a></p>
+<p>你可以看到 <code class="docutils literal notranslate"><span class="pre">/turtlesim</span></code> 节点也在发布到 <code class="docutils literal notranslate"><span class="pre">pose</span></code> 话题，新的 <code class="docutils literal notranslate"><span class="pre">echo</span></code> 节点订阅了这个话题。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8859">[待校准&#64;8859]</a></p>
 </div>
 <div class="section" id="ros2-topic-hz">
-<h3>8 ros2话题hz <a class="reference external" href="http://localhost:3000/#/home?msgid=8860">[待校准&#64;8860]</a><a class="headerlink" href="#ros2-topic-hz" title="永久链接至标题"></a></h3>
-<p>对于此过程的最后一次自省，您可以使用以下方法查看数据发布的速率: <a class="reference external" href="http://localhost:3000/#/home?msgid=8861">[待校准&#64;8861]</a></p>
+<h3>8 ros2话题hz <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8860">[待校准&#64;8860]</a><a class="headerlink" href="#ros2-topic-hz" title="永久链接至标题"></a></h3>
+<p>对于此过程的最后一次自省，您可以使用以下方法查看数据发布的速率: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8861">[待校准&#64;8861]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 topic hz /turtle1/pose</span>
 </pre></div>
 </div>
-<p>它将返回关于 <code class="docutils literal notranslate"><span class="pre">/turtlesim</span></code> 节点将数据发布到 <code class="docutils literal notranslate"><span class="pre">pose</span></code> 话题的速率的数据。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8862">[待校准&#64;8862]</a></p>
+<p>它将返回关于 <code class="docutils literal notranslate"><span class="pre">/turtlesim</span></code> 节点将数据发布到 <code class="docutils literal notranslate"><span class="pre">pose</span></code> 话题的速率的数据。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8862">[待校准&#64;8862]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">average rate: 59.354</span>
 <span class="go">  min: 0.005s max: 0.027s std dev: 0.00284s window: 58</span>
 </pre></div>
 </div>
-<p>重新调用您使用 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">topic</span> <span class="pre">pub</span> <span class="pre">--rate</span> <span class="pre">1</span></code> 将 <code class="docutils literal notranslate"><span class="pre">turtle1/cmd_vel</span></code> 的发布速率设置为稳定的1Hz。如果你用 <code class="docutils literal notranslate"><span class="pre">turtle1/cmd_vel</span></code> 而不是 <code class="docutils literal notranslate"><span class="pre">turtle1/pose</span></code> 运行上述命令，你会看到一个反映该速率的平均值。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8863">[待校准&#64;8863]</a></p>
+<p>重新调用您使用 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">topic</span> <span class="pre">pub</span> <span class="pre">--rate</span> <span class="pre">1</span></code> 将 <code class="docutils literal notranslate"><span class="pre">turtle1/cmd_vel</span></code> 的发布速率设置为稳定的1Hz。如果你用 <code class="docutils literal notranslate"><span class="pre">turtle1/cmd_vel</span></code> 而不是 <code class="docutils literal notranslate"><span class="pre">turtle1/pose</span></code> 运行上述命令，你会看到一个反映该速率的平均值。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8863">[待校准&#64;8863]</a></p>
 </div>
 <div class="section" id="clean-up">
-<h3>9清理 <a class="reference external" href="http://localhost:3000/#/home?msgid=8864">[待校准&#64;8864]</a><a class="headerlink" href="#clean-up" title="永久链接至标题"></a></h3>
-<p>此时，您将运行许多节点。不要忘记在每个终端输入 “ctrl + c” 来停止它们。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8865">[待校准&#64;8865]</a></p>
+<h3>9清理 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8864">[待校准&#64;8864]</a><a class="headerlink" href="#clean-up" title="永久链接至标题"></a></h3>
+<p>此时，您将运行许多节点。不要忘记在每个终端输入 “ctrl + c” 来停止它们。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8865">[待校准&#64;8865]</a></p>
 </div>
 </div>
 <div class="section" id="summary">
-<h2>总结 <a class="reference external" href="http://localhost:3000/#/home?msgid=6747">[待校准&#64;6747]</a><a class="headerlink" href="#summary" title="永久链接至标题"></a></h2>
-<p>节点通过话题发布信息，这允许任意数量的其他节点订阅和访问该信息。在本教程中，您使用rqt_graph和命令行工具检查了多个节点之间的话题连接。您现在应该对数据如何在ROS 2系统中移动有了一个很好的了解。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8866">[待校准&#64;8866]</a></p>
+<h2>总结 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6747">[待校准&#64;6747]</a><a class="headerlink" href="#summary" title="永久链接至标题"></a></h2>
+<p>节点通过话题发布信息，这允许任意数量的其他节点订阅和访问该信息。在本教程中，您使用rqt_graph和命令行工具检查了多个节点之间的话题连接。您现在应该对数据如何在ROS 2系统中移动有了一个很好的了解。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8866">[待校准&#64;8866]</a></p>
 </div>
 <div class="section" id="next-steps">
-<h2>下一步 <a class="reference external" href="http://localhost:3000/#/home?msgid=6749">[待校准&#64;6749]</a><a class="headerlink" href="#next-steps" title="永久链接至标题"></a></h2>
-<p>接下来，您将通过教程 <a class="reference internal" href="../Services/Understanding-ROS2-Services.html"><span class="doc">了解ROS 2服务 [待校准&#64;8182]</span></a> 在ROS图中了解另一种通讯类型。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8867">[待校准&#64;8867]</a></p>
+<h2>下一步 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6749">[待校准&#64;6749]</a><a class="headerlink" href="#next-steps" title="永久链接至标题"></a></h2>
+<p>接下来，您将通过教程 <a class="reference internal" href="../Services/Understanding-ROS2-Services.html"><span class="doc">了解ROS 2服务 [待校准&#64;8182]</span></a> 在ROS图中了解另一种通讯类型。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8867">[待校准&#64;8867]</a></p>
 </div>
 </div>
 

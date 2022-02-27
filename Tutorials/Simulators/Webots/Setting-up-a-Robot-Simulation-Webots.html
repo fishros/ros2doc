@@ -280,12 +280,12 @@
 
 
   <div class="section" id="setting-up-a-robot-simulation-webots">
-<span id="simulators"></span><h1>设置机器人仿真 (Webots) <a class="reference external" href="http://localhost:3000/#/home?msgid=8222">[待校准&#64;8222]</a><a class="headerlink" href="#setting-up-a-robot-simulation-webots" title="永久链接至标题"></a></h1>
-<p>Goal目标: Setup设置机器人仿真并从ROS 2进行控制。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8223">[待校准&#64;8223]</a></p>
-<p>Tutorial教程级别: Advanced高级 <a class="reference external" href="http://localhost:3000/#/home?msgid=7643">[待校准&#64;7643]</a></p>
-<p>Time时间: 20 20分钟 <a class="reference external" href="http://localhost:3000/#/home?msgid=7181">[待校准&#64;7181]</a></p>
+<span id="simulators"></span><h1>设置机器人仿真 (Webots) <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8222">[待校准&#64;8222]</a><a class="headerlink" href="#setting-up-a-robot-simulation-webots" title="永久链接至标题"></a></h1>
+<p>Goal目标: Setup设置机器人仿真并从ROS 2进行控制。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8223">[待校准&#64;8223]</a></p>
+<p>Tutorial教程级别: Advanced高级 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7643">[待校准&#64;7643]</a></p>
+<p>Time时间: 20 20分钟 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7181">[待校准&#64;7181]</a></p>
 <div class="contents local topic" id="contents">
-<p class="topic-title">内容 <a class="reference external" href="http://localhost:3000/#/home?msgid=6715">[待校准&#64;6715]</a></p>
+<p class="topic-title">内容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6715">[待校准&#64;6715]</a></p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#background" id="id1">背景 [待校准&#64;6716]</a></p></li>
 <li><p><a class="reference internal" href="#prerequisites" id="id2">先决条件 [待校准&#64;6718]</a></p></li>
@@ -309,13 +309,13 @@
 </ul>
 </div>
 <div class="section" id="background">
-<h2>背景 <a class="reference external" href="http://localhost:3000/#/home?msgid=6716">[待校准&#64;6716]</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
-<p>几个机器人模拟器可以与ROS 2一起使用，如Gazebo、点火、Webots等。与turtlesim不同，它们提供了相当现实的结果，依赖于机器人、传感器、致动器和物体的基于物理的模型。因此，您在仿真中观察到的与将ROS 2控制器转移到真正的机器人时将得到的非常接近。在本教程中，您将使用Webots机器人模拟器来设置和运行一个非常简单的ROS 2仿真场景。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8224">[待校准&#64;8224]</a></p>
-<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">webots_ros2</span></code> 包提供ROS 2和Webots之间的接口。它包括几个子包，但是在本教程中，您将只使用 <code class="docutils literal notranslate"><span class="pre">webots_ros2_driver</span></code> 子包来实现一个控制模拟机器人的Python插件。其他一些子包包含不同机器人的例程，如turtlebot3。它们记录在演示部分的 <a class="reference internal" href="../../../Tutorials.html"><span class="doc">教程 [待校准&#64;6682]</span></a> 页面上。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8225">[待校准&#64;8225]</a></p>
+<h2>背景 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6716">[待校准&#64;6716]</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
+<p>几个机器人模拟器可以与ROS 2一起使用，如Gazebo、点火、Webots等。与turtlesim不同，它们提供了相当现实的结果，依赖于机器人、传感器、致动器和物体的基于物理的模型。因此，您在仿真中观察到的与将ROS 2控制器转移到真正的机器人时将得到的非常接近。在本教程中，您将使用Webots机器人模拟器来设置和运行一个非常简单的ROS 2仿真场景。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8224">[待校准&#64;8224]</a></p>
+<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">webots_ros2</span></code> 包提供ROS 2和Webots之间的接口。它包括几个子包，但是在本教程中，您将只使用 <code class="docutils literal notranslate"><span class="pre">webots_ros2_driver</span></code> 子包来实现一个控制模拟机器人的Python插件。其他一些子包包含不同机器人的例程，如turtlebot3。它们记录在演示部分的 <a class="reference internal" href="../../../Tutorials.html"><span class="doc">教程 [待校准&#64;6682]</span></a> 页面上。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8225">[待校准&#64;8225]</a></p>
 </div>
 <div class="section" id="prerequisites">
-<h2>先决条件 <a class="reference external" href="http://localhost:3000/#/home?msgid=6718">[待校准&#64;6718]</a><a class="headerlink" href="#prerequisites" title="永久链接至标题"></a></h2>
-<p>建议理解初级 <a class="reference internal" href="../../../Tutorials.html"><span class="doc">教程 [待校准&#64;6682]</span></a> 所涵盖的基本ROS原理。特别是， <a class="reference internal" href="../../Turtlesim/Introducing-Turtlesim.html"><span class="doc">介绍turtlesim和rqt [待校准&#64;8868]</span></a> 、 <a class="reference internal" href="../../Topics/Understanding-ROS2-Topics.html"><span class="doc">理解ROS 2话题 [待校准&#64;8808]</span></a> 、 <a class="reference internal" href="../../Workspace/Creating-A-Workspace.html"><span class="doc">创建工作空间 [待校准&#64;9276]</span></a> 、 <a class="reference internal" href="../../Creating-Your-First-ROS2-Package.html"><span class="doc">创建您的第一个ROS 2包 [待校准&#64;7117]</span></a> 和 <a class="reference internal" href="../../Launch/Creating-Launch-Files.html"><span class="doc">创建launch文件 [待校准&#64;7562]</span></a> 是有用的先决条件。最后，您需要使用以下命令从终端安装 <code class="docutils literal notranslate"><span class="pre">webots_ros2_driver</span></code> : <a class="reference external" href="http://localhost:3000/#/home?msgid=8226">[待校准&#64;8226]</a></p>
+<h2>先决条件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6718">[待校准&#64;6718]</a><a class="headerlink" href="#prerequisites" title="永久链接至标题"></a></h2>
+<p>建议理解初级 <a class="reference internal" href="../../../Tutorials.html"><span class="doc">教程 [待校准&#64;6682]</span></a> 所涵盖的基本ROS原理。特别是， <a class="reference internal" href="../../Turtlesim/Introducing-Turtlesim.html"><span class="doc">介绍turtlesim和rqt [待校准&#64;8868]</span></a> 、 <a class="reference internal" href="../../Topics/Understanding-ROS2-Topics.html"><span class="doc">理解ROS 2话题 [待校准&#64;8808]</span></a> 、 <a class="reference internal" href="../../Workspace/Creating-A-Workspace.html"><span class="doc">创建工作空间 [待校准&#64;9276]</span></a> 、 <a class="reference internal" href="../../Creating-Your-First-ROS2-Package.html"><span class="doc">创建您的第一个ROS 2包 [待校准&#64;7117]</span></a> 和 <a class="reference internal" href="../../Launch/Creating-Launch-Files.html"><span class="doc">创建launch文件 [待校准&#64;7562]</span></a> 是有用的先决条件。最后，您需要使用以下命令从终端安装 <code class="docutils literal notranslate"><span class="pre">webots_ros2_driver</span></code> : <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8226">[待校准&#64;8226]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-0-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-0-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-0-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-0-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sudo apt update</span>
 <span class="go">sudo apt install ros-foxy-webots-ros2-driver</span>
@@ -337,24 +337,24 @@
 </div></div>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
-<p>如果你想安装整个 <code class="docutils literal notranslate"><span class="pre">webots_ros2</span></code> 包，请遵循以下 <a class="reference external" href="https://github.com/cyberbotics/webots_ros2/wiki/Getting-Started">instructions</a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8227">[待校准&#64;8227]</a></p>
+<p>如果你想安装整个 <code class="docutils literal notranslate"><span class="pre">webots_ros2</span></code> 包，请遵循以下 <a class="reference external" href="https://github.com/cyberbotics/webots_ros2/wiki/Getting-Started">instructions</a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8227">[待校准&#64;8227]</a></p>
 </div>
 </div>
 <div class="section" id="tasks">
-<h2>任务 <a class="reference external" href="http://localhost:3000/#/home?msgid=6725">[待校准&#64;6725]</a><a class="headerlink" href="#tasks" title="永久链接至标题"></a></h2>
+<h2>任务 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6725">[待校准&#64;6725]</a><a class="headerlink" href="#tasks" title="永久链接至标题"></a></h2>
 <div class="section" id="create-the-package-structure">
-<h3>1创建包结构 <a class="reference external" href="http://localhost:3000/#/home?msgid=8228">[待校准&#64;8228]</a><a class="headerlink" href="#create-the-package-structure" title="永久链接至标题"></a></h3>
-<p>让我们在自定义ROS 2包中组织代码。从ROS 2工作区的 <code class="docutils literal notranslate"><span class="pre">src</span></code> 文件夹中创建一个名为 <code class="docutils literal notranslate"><span class="pre">my_package</span></code> 的新包。将终端的当前目录更改为 <code class="docutils literal notranslate"><span class="pre">dev_ws/src</span></code> ，然后运行: <a class="reference external" href="http://localhost:3000/#/home?msgid=8229">[待校准&#64;8229]</a></p>
+<h3>1创建包结构 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8228">[待校准&#64;8228]</a><a class="headerlink" href="#create-the-package-structure" title="永久链接至标题"></a></h3>
+<p>让我们在自定义ROS 2包中组织代码。从ROS 2工作区的 <code class="docutils literal notranslate"><span class="pre">src</span></code> 文件夹中创建一个名为 <code class="docutils literal notranslate"><span class="pre">my_package</span></code> 的新包。将终端的当前目录更改为 <code class="docutils literal notranslate"><span class="pre">dev_ws/src</span></code> ，然后运行: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8229">[待校准&#64;8229]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 pkg create --build-type ament_python --node-name my_robot_driver my_package --dependencies rclpy geometry_msgs webots_ros2_driver</span>
 </pre></div>
 </div>
-<p>“ <code class="docutils literal notranslate"><span class="pre">--node-name</span> <span class="pre">my_robot_driver</span></code> ” 选项将在 “ <code class="docutils literal notranslate"><span class="pre">my_package</span></code> ” 子文件夹中创建一个 “ <code class="docutils literal notranslate"><span class="pre">my_robot_driver.py</span></code> ” 模板Python插件，您稍后将对其进行修改。 <code class="docutils literal notranslate"><span class="pre">--dependencies</span> <span class="pre">rclpy</span> <span class="pre">geometry_msgs</span> <span class="pre">webots_ros2_driver</span></code> 选项指定 <code class="docutils literal notranslate"><span class="pre">my_robot_driver.py</span></code> 插件在 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 文件中需要的包。让我们添加 <code class="docutils literal notranslate"><span class="pre">launch</span></code> 和 <code class="docutils literal notranslate"><span class="pre">worlds</span></code> 文件夹 <code class="docutils literal notranslate"><span class="pre">my_package</span></code> 文件夹。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8230">[待校准&#64;8230]</a></p>
+<p>“ <code class="docutils literal notranslate"><span class="pre">--node-name</span> <span class="pre">my_robot_driver</span></code> ” 选项将在 “ <code class="docutils literal notranslate"><span class="pre">my_package</span></code> ” 子文件夹中创建一个 “ <code class="docutils literal notranslate"><span class="pre">my_robot_driver.py</span></code> ” 模板Python插件，您稍后将对其进行修改。 <code class="docutils literal notranslate"><span class="pre">--dependencies</span> <span class="pre">rclpy</span> <span class="pre">geometry_msgs</span> <span class="pre">webots_ros2_driver</span></code> 选项指定 <code class="docutils literal notranslate"><span class="pre">my_robot_driver.py</span></code> 插件在 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 文件中需要的包。让我们添加 <code class="docutils literal notranslate"><span class="pre">launch</span></code> 和 <code class="docutils literal notranslate"><span class="pre">worlds</span></code> 文件夹 <code class="docutils literal notranslate"><span class="pre">my_package</span></code> 文件夹。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8230">[待校准&#64;8230]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd my_package</span>
 <span class="go">mkdir launch</span>
 <span class="go">mkdir worlds</span>
 </pre></div>
 </div>
-<p>您应该以以下文件夹结构结束: <a class="reference external" href="http://localhost:3000/#/home?msgid=8231">[待校准&#64;8231]</a></p>
+<p>您应该以以下文件夹结构结束: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8231">[待校准&#64;8231]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">src/</span>
 <span class="go">└── my_package/</span>
 <span class="go">    ├── launch/</span>
@@ -375,22 +375,22 @@
 </div>
 </div>
 <div class="section" id="setup-the-simulation-world">
-<h3>2设置仿真世界 <a class="reference external" href="http://localhost:3000/#/home?msgid=8232">[待校准&#64;8232]</a><a class="headerlink" href="#setup-the-simulation-world" title="永久链接至标题"></a></h3>
-<p>你将需要世界包含机器人launch你仿真: 下载:  <code class="xref any docutils literal notranslate"><span class="pre">Download</span> <span class="pre">this</span> <span class="pre">world</span> <span class="pre">file</span></code>  移动内 <code class="docutils literal notranslate"><span class="pre">my_package/worlds/</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8233">[待校准&#64;8233]</a></p>
-<p>这实际上是一个相当简单的文本文件，您可以在文本编辑器中可视化。一个简单的机器人已经包含在这个 <code class="docutils literal notranslate"><span class="pre">my_world.wbt</span></code> 世界文件中。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8234">[待校准&#64;8234]</a></p>
+<h3>2设置仿真世界 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8232">[待校准&#64;8232]</a><a class="headerlink" href="#setup-the-simulation-world" title="永久链接至标题"></a></h3>
+<p>你将需要世界包含机器人launch你仿真: 下载:  <code class="xref any docutils literal notranslate"><span class="pre">Download</span> <span class="pre">this</span> <span class="pre">world</span> <span class="pre">file</span></code>  移动内 <code class="docutils literal notranslate"><span class="pre">my_package/worlds/</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8233">[待校准&#64;8233]</a></p>
+<p>这实际上是一个相当简单的文本文件，您可以在文本编辑器中可视化。一个简单的机器人已经包含在这个 <code class="docutils literal notranslate"><span class="pre">my_world.wbt</span></code> 世界文件中。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8234">[待校准&#64;8234]</a></p>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
-<p>如果你想学习如何在Webots中创建自己的机器人模型，你可以查看这个 <a class="reference external" href="https://github.com/cyberbotics/webots_ros2/wiki/Tutorial-Create-Webots-Robot">tutorial</a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8235">[待校准&#64;8235]</a></p>
+<p>如果你想学习如何在Webots中创建自己的机器人模型，你可以查看这个 <a class="reference external" href="https://github.com/cyberbotics/webots_ros2/wiki/Tutorial-Create-Webots-Robot">tutorial</a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8235">[待校准&#64;8235]</a></p>
 </div>
 </div>
 <div class="section" id="change-the-my-robot-driver-py-file">
-<h3>3更改my_robot_driver.py文件 <a class="reference external" href="http://localhost:3000/#/home?msgid=8236">[待校准&#64;8236]</a><a class="headerlink" href="#change-the-my-robot-driver-py-file" title="永久链接至标题"></a></h3>
-<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">webots_ros2_driver</span></code> 子包自动调用y为大多数传感器创建ROS 2接口。在此任务中，您将通过更改 <code class="docutils literal notranslate"><span class="pre">my_robot_driver.py</span></code> 文件来扩展此接口。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8237">[待校准&#64;8237]</a></p>
+<h3>3更改my_robot_driver.py文件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8236">[待校准&#64;8236]</a><a class="headerlink" href="#change-the-my-robot-driver-py-file" title="永久链接至标题"></a></h3>
+<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">webots_ros2_driver</span></code> 子包自动调用y为大多数传感器创建ROS 2接口。在此任务中，您将通过更改 <code class="docutils literal notranslate"><span class="pre">my_robot_driver.py</span></code> 文件来扩展此接口。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8237">[待校准&#64;8237]</a></p>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
-<p>本教程的目的是展示具有最少依赖项数量的基本示例。然而，你可以避免使用Python插件使用另一个 <code class="docutils literal notranslate"><span class="pre">webots_ros2</span></code> 子包 <code class="docutils literal notranslate"><span class="pre">webots_ros2_control</span></code> ，引入新的依赖。另一个子包装创建了一个与 <code class="docutils literal notranslate"><span class="pre">ros2_control</span></code> 包装的接口，便于控制不同的轮式机器人。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8238">[待校准&#64;8238]</a></p>
+<p>本教程的目的是展示具有最少依赖项数量的基本示例。然而，你可以避免使用Python插件使用另一个 <code class="docutils literal notranslate"><span class="pre">webots_ros2</span></code> 子包 <code class="docutils literal notranslate"><span class="pre">webots_ros2_control</span></code> ，引入新的依赖。另一个子包装创建了一个与 <code class="docutils literal notranslate"><span class="pre">ros2_control</span></code> 包装的接口，便于控制不同的轮式机器人。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8238">[待校准&#64;8238]</a></p>
 </div>
-<p>在您最喜欢的编辑器中打开 <code class="docutils literal notranslate"><span class="pre">my_package/my_package/my_robot_driver.py</span></code> ，并将其内容替换为以下内容: <a class="reference external" href="http://localhost:3000/#/home?msgid=8239">[待校准&#64;8239]</a></p>
+<p>在您最喜欢的编辑器中打开 <code class="docutils literal notranslate"><span class="pre">my_package/my_package/my_robot_driver.py</span></code> ，并将其内容替换为以下内容: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8239">[待校准&#64;8239]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">rclpy</span>
 <span class="kn">from</span> <span class="nn">geometry_msgs.msg</span> <span class="kn">import</span> <span class="n">Twist</span>
 
@@ -432,8 +432,8 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">__right_motor</span><span class="o">.</span><span class="n">setVelocity</span><span class="p">(</span><span class="n">command_motor_right</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>如您所见， <code class="docutils literal notranslate"><span class="pre">MyRobotDriver</span></code> 类实现了三种方法。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8240">[待校准&#64;8240]</a></p>
-<p>第一个方法，命名为 “ <code class="docutils literal notranslate"><span class="pre">init(self,</span> <span class="pre">...)</span></code>, is actually the ROS node counterpart of the Python <code class="docutils literal notranslate"><span class="pre">_</span>&#160; <span class="pre">_</span> <span class="pre">初始化</span> <span class="pre">_</span> <span class="pre">_(self，...)”</span> <span class="pre">构造函数。它首先获取机器人实例仿真</span> <span class="pre">(可用于访问</span> <span class="pre">`Webots</span> <span class="pre">robot</span> <span class="pre">API</span> <span class="pre">&lt;https://cyberbotics.com/doc/reference/robot?tab-language=python&gt;`_</span> <span class="pre">)。然后，它获取两个电机实例，并用目标位置和目标速度初始化它们。最后，创建一个ROS节点，并为名为</span> <span class="pre">``/cmd_vel</span></code> 的ROS话题注册一个调用方法，该话题将处理 <code class="docutils literal notranslate"><span class="pre">Twist</span></code> 消息。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8241">[待校准&#64;8241]</a></p>
+<p>如您所见， <code class="docutils literal notranslate"><span class="pre">MyRobotDriver</span></code> 类实现了三种方法。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8240">[待校准&#64;8240]</a></p>
+<p>第一个方法，命名为 “ <code class="docutils literal notranslate"><span class="pre">init(self,</span> <span class="pre">...)</span></code>, is actually the ROS node counterpart of the Python <code class="docutils literal notranslate"><span class="pre">_</span>&#160; <span class="pre">_</span> <span class="pre">初始化</span> <span class="pre">_</span> <span class="pre">_(self，...)”</span> <span class="pre">构造函数。它首先获取机器人实例仿真</span> <span class="pre">(可用于访问</span> <span class="pre">`Webots</span> <span class="pre">robot</span> <span class="pre">API</span> <span class="pre">&lt;https://cyberbotics.com/doc/reference/robot?tab-language=python&gt;`_</span> <span class="pre">)。然后，它获取两个电机实例，并用目标位置和目标速度初始化它们。最后，创建一个ROS节点，并为名为</span> <span class="pre">``/cmd_vel</span></code> 的ROS话题注册一个调用方法，该话题将处理 <code class="docutils literal notranslate"><span class="pre">Twist</span></code> 消息。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8241">[待校准&#64;8241]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">init</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">webots_node</span><span class="p">,</span> <span class="n">properties</span><span class="p">):</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">__robot</span> <span class="o">=</span> <span class="n">webots_node</span><span class="o">.</span><span class="n">robot</span>
 
@@ -453,12 +453,12 @@
     <span class="bp">self</span><span class="o">.</span><span class="n">__node</span><span class="o">.</span><span class="n">create_subscription</span><span class="p">(</span><span class="n">Twist</span><span class="p">,</span> <span class="s1">&#39;cmd_vel&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">__cmd_vel_callback</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>然后是 “__cmd _ vel _ 调用” 的实现 (self，twist) ”调用私有方法，该方法将为在 <code class="docutils literal notranslate"><span class="pre">/cmd_vel</span></code> 话题上收到的每个 <code class="docutils literal notranslate"><span class="pre">Twist</span></code> 消息调用，并将其保存在 <code class="docutils literal notranslate"><span class="pre">self.__target_twist</span></code> 成员变量中。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8242">[待校准&#64;8242]</a></p>
+<p>然后是 “__cmd _ vel _ 调用” 的实现 (self，twist) ”调用私有方法，该方法将为在 <code class="docutils literal notranslate"><span class="pre">/cmd_vel</span></code> 话题上收到的每个 <code class="docutils literal notranslate"><span class="pre">Twist</span></code> 消息调用，并将其保存在 <code class="docutils literal notranslate"><span class="pre">self.__target_twist</span></code> 成员变量中。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8242">[待校准&#64;8242]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">__cmd_vel_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">twist</span><span class="p">):</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">__target_twist</span> <span class="o">=</span> <span class="n">twist</span>
 </pre></div>
 </div>
-<p>最后，在仿真的每个时间步骤调用 <code class="docutils literal notranslate"><span class="pre">step(self)</span></code> 方法。需要调用 <code class="docutils literal notranslate"><span class="pre">rclpy.spin_once()</span></code> 来保持ROS节点的平稳运行。在每个时间步骤，该方法将从 <code class="docutils literal notranslate"><span class="pre">self.__target_twist</span></code> 中回收所需的 <code class="docutils literal notranslate"><span class="pre">forward_speed</span></code> 和 <code class="docutils literal notranslate"><span class="pre">angular_speed</span></code> 。当电机用角速度控制时，该方法将把 <code class="docutils literal notranslate"><span class="pre">forward_speed</span></code> 和 <code class="docutils literal notranslate"><span class="pre">angular_speed</span></code> 转换成每个轮子的单独指令。这种转换取决于机器人的结构，更具体地调用轮子的半径和它们之间的距离。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8243">[待校准&#64;8243]</a></p>
+<p>最后，在仿真的每个时间步骤调用 <code class="docutils literal notranslate"><span class="pre">step(self)</span></code> 方法。需要调用 <code class="docutils literal notranslate"><span class="pre">rclpy.spin_once()</span></code> 来保持ROS节点的平稳运行。在每个时间步骤，该方法将从 <code class="docutils literal notranslate"><span class="pre">self.__target_twist</span></code> 中回收所需的 <code class="docutils literal notranslate"><span class="pre">forward_speed</span></code> 和 <code class="docutils literal notranslate"><span class="pre">angular_speed</span></code> 。当电机用角速度控制时，该方法将把 <code class="docutils literal notranslate"><span class="pre">forward_speed</span></code> 和 <code class="docutils literal notranslate"><span class="pre">angular_speed</span></code> 转换成每个轮子的单独指令。这种转换取决于机器人的结构，更具体地调用轮子的半径和它们之间的距离。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8243">[待校准&#64;8243]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">step</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="n">rclpy</span><span class="o">.</span><span class="n">spin_once</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__node</span><span class="p">,</span> <span class="n">timeout_sec</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 
@@ -474,9 +474,9 @@
 </div>
 </div>
 <div class="section" id="create-the-my-robot-urdf-file">
-<h3>4创建my_robot.urdf文件 <a class="reference external" href="http://localhost:3000/#/home?msgid=8244">[待校准&#64;8244]</a><a class="headerlink" href="#create-the-my-robot-urdf-file" title="永久链接至标题"></a></h3>
-<p>现在，您必须创建一个URDF文件来声明 <code class="docutils literal notranslate"><span class="pre">my_robot_driver.py</span></code> Python插件。这将允许 <code class="docutils literal notranslate"><span class="pre">webots_ros2_driver</span></code> ROS节点launch插件。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8245">[待校准&#64;8245]</a></p>
-<p>在 <code class="docutils literal notranslate"><span class="pre">my_package/resource</span></code> 文件夹中创建一个名为 <code class="docutils literal notranslate"><span class="pre">my_robot.urdf</span></code> 的文本文件，内容如下: <a class="reference external" href="http://localhost:3000/#/home?msgid=8246">[待校准&#64;8246]</a></p>
+<h3>4创建my_robot.urdf文件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8244">[待校准&#64;8244]</a><a class="headerlink" href="#create-the-my-robot-urdf-file" title="永久链接至标题"></a></h3>
+<p>现在，您必须创建一个URDF文件来声明 <code class="docutils literal notranslate"><span class="pre">my_robot_driver.py</span></code> Python插件。这将允许 <code class="docutils literal notranslate"><span class="pre">webots_ros2_driver</span></code> ROS节点launch插件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8245">[待校准&#64;8245]</a></p>
+<p>在 <code class="docutils literal notranslate"><span class="pre">my_package/resource</span></code> 文件夹中创建一个名为 <code class="docutils literal notranslate"><span class="pre">my_robot.urdf</span></code> 的文本文件，内容如下: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8246">[待校准&#64;8246]</a></p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; ?&gt;</span>
 <span class="nt">&lt;robot</span> <span class="na">name=</span><span class="s">&quot;My robot&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;webots&gt;</span>
@@ -487,12 +487,12 @@
 </div>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
-<p>这个简单的URDF文件不包含任何关于机器人的链接或联合信息，因为在本教程中不需要它。然而，URDF文件通常包含更多信息，如 <a class="reference internal" href="../../URDF/URDF-Main.html"><span class="doc">URDF教程 [待校准&#64;9047]</span></a> 中所解释的。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8247">[待校准&#64;8247]</a></p>
+<p>这个简单的URDF文件不包含任何关于机器人的链接或联合信息，因为在本教程中不需要它。然而，URDF文件通常包含更多信息，如 <a class="reference internal" href="../../URDF/URDF-Main.html"><span class="doc">URDF教程 [待校准&#64;9047]</span></a> 中所解释的。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8247">[待校准&#64;8247]</a></p>
 </div>
 </div>
 <div class="section" id="create-the-launch-file">
-<h3>5创建launch文件 <a class="reference external" href="http://localhost:3000/#/home?msgid=8248">[待校准&#64;8248]</a><a class="headerlink" href="#create-the-launch-file" title="永久链接至标题"></a></h3>
-<p>让创建现在launch文件简易launch的仿真ROS控制器单命令。在 <code class="docutils literal notranslate"><span class="pre">my_package/launch</span></code> 文件夹中创建一个名为 <code class="docutils literal notranslate"><span class="pre">robot_launch.py</span></code> 的新文本文件，代码如下: <a class="reference external" href="http://localhost:3000/#/home?msgid=8249">[待校准&#64;8249]</a></p>
+<h3>5创建launch文件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8248">[待校准&#64;8248]</a><a class="headerlink" href="#create-the-launch-file" title="永久链接至标题"></a></h3>
+<p>让创建现在launch文件简易launch的仿真ROS控制器单命令。在 <code class="docutils literal notranslate"><span class="pre">my_package/launch</span></code> 文件夹中创建一个名为 <code class="docutils literal notranslate"><span class="pre">robot_launch.py</span></code> 的新文本文件，代码如下: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8249">[待校准&#64;8249]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">pathlib</span>
 <span class="kn">import</span> <span class="nn">launch</span>
@@ -531,13 +531,13 @@
     <span class="p">])</span>
 </pre></div>
 </div>
-<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">WebotsLauncher</span></code> 对象是一个自定义动作，允许您启动Webots仿真实例。您必须在构造函数中指定模拟器将打开哪个世界文件。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8250">[待校准&#64;8250]</a></p>
+<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">WebotsLauncher</span></code> 对象是一个自定义动作，允许您启动Webots仿真实例。您必须在构造函数中指定模拟器将打开哪个世界文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8250">[待校准&#64;8250]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">webots</span> <span class="o">=</span> <span class="n">WebotsLauncher</span><span class="p">(</span>
     <span class="n">world</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">package_dir</span><span class="p">,</span> <span class="s1">&#39;worlds&#39;</span><span class="p">,</span> <span class="s1">&#39;my_world.wbt&#39;</span><span class="p">)</span>
 <span class="p">)</span>
 </pre></div>
 </div>
-<p>然后，创建与模拟机器人交互的ROS节点。这个名为 <code class="docutils literal notranslate"><span class="pre">driver</span></code> 的节点位于 <code class="docutils literal notranslate"><span class="pre">webots_ros2_driver</span></code> 包中。通过使用基于IPC和共享内存的自定义协议，节点将能够与模拟机器人通信。在您的情况下，您需要运行该节点的单个实例，因为仿真中只有一个机器人。但是，如果仿真中有更多的机器人，则每个机器人必须运行该节点的一个实例。的 <code class="docutils literal notranslate"><span class="pre">robot_description</span></code> 参数保存内容URDF文件指 <code class="docutils literal notranslate"><span class="pre">my_robot_driver.py</span></code> Python插件。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8251">[待校准&#64;8251]</a></p>
+<p>然后，创建与模拟机器人交互的ROS节点。这个名为 <code class="docutils literal notranslate"><span class="pre">driver</span></code> 的节点位于 <code class="docutils literal notranslate"><span class="pre">webots_ros2_driver</span></code> 包中。通过使用基于IPC和共享内存的自定义协议，节点将能够与模拟机器人通信。在您的情况下，您需要运行该节点的单个实例，因为仿真中只有一个机器人。但是，如果仿真中有更多的机器人，则每个机器人必须运行该节点的一个实例。的 <code class="docutils literal notranslate"><span class="pre">robot_description</span></code> 参数保存内容URDF文件指 <code class="docutils literal notranslate"><span class="pre">my_robot_driver.py</span></code> Python插件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8251">[待校准&#64;8251]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_robot_driver</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span>
     <span class="n">package</span><span class="o">=</span><span class="s1">&#39;webots_ros2_driver&#39;</span><span class="p">,</span>
     <span class="n">executable</span><span class="o">=</span><span class="s1">&#39;driver&#39;</span><span class="p">,</span>
@@ -548,13 +548,13 @@
 <span class="p">)</span>
 </pre></div>
 </div>
-<p>之后，在 <code class="docutils literal notranslate"><span class="pre">LaunchDescription</span></code> 构造函数中将这两个节点设置为launch: <a class="reference external" href="http://localhost:3000/#/home?msgid=8252">[待校准&#64;8252]</a></p>
+<p>之后，在 <code class="docutils literal notranslate"><span class="pre">LaunchDescription</span></code> 构造函数中将这两个节点设置为launch: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8252">[待校准&#64;8252]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">return</span> <span class="n">LaunchDescription</span><span class="p">([</span>
     <span class="n">webots</span><span class="p">,</span>
     <span class="n">my_robot_driver</span><span class="p">,</span>
 </pre></div>
 </div>
-<p>最后，添加了一个可选部分，以便在Webots终止后 (例如，当它从图形用户界面关闭时) 关闭所有节点。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8253">[待校准&#64;8253]</a></p>
+<p>最后，添加了一个可选部分，以便在Webots终止后 (例如，当它从图形用户界面关闭时) 关闭所有节点。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8253">[待校准&#64;8253]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">launch</span><span class="o">.</span><span class="n">actions</span><span class="o">.</span><span class="n">RegisterEventHandler</span><span class="p">(</span>
     <span class="n">event_handler</span><span class="o">=</span><span class="n">launch</span><span class="o">.</span><span class="n">event_handlers</span><span class="o">.</span><span class="n">OnProcessExit</span><span class="p">(</span>
         <span class="n">target_action</span><span class="o">=</span><span class="n">webots</span><span class="p">,</span>
@@ -565,8 +565,8 @@
 </div>
 </div>
 <div class="section" id="modify-the-setup-py-file">
-<h3>6修改setup.py文件 <a class="reference external" href="http://localhost:3000/#/home?msgid=8254">[待校准&#64;8254]</a><a class="headerlink" href="#modify-the-setup-py-file" title="永久链接至标题"></a></h3>
-<p>最后，在启动launch文件之前，您必须修改 <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> 文件以包括您添加的额外文件。打开 <code class="docutils literal notranslate"><span class="pre">my_package/setup.py</span></code> ，将其内容替换为: <a class="reference external" href="http://localhost:3000/#/home?msgid=8255">[待校准&#64;8255]</a></p>
+<h3>6修改setup.py文件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8254">[待校准&#64;8254]</a><a class="headerlink" href="#modify-the-setup-py-file" title="永久链接至标题"></a></h3>
+<p>最后，在启动launch文件之前，您必须修改 <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> 文件以包括您添加的额外文件。打开 <code class="docutils literal notranslate"><span class="pre">my_package/setup.py</span></code> ，将其内容替换为: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8255">[待校准&#64;8255]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">setuptools</span> <span class="kn">import</span> <span class="n">setup</span>
 
 <span class="n">package_name</span> <span class="o">=</span> <span class="s1">&#39;my_package&#39;</span>
@@ -597,11 +597,11 @@
 <span class="p">)</span>
 </pre></div>
 </div>
-<p>这建立了这个包，并在 <code class="docutils literal notranslate"><span class="pre">data_files</span></code> 变量中添加了新添加的文件:  <code class="docutils literal notranslate"><span class="pre">my_world.wbt</span></code> 、 <code class="docutils literal notranslate"><span class="pre">my_robot.urdf</span></code> 和 <code class="docutils literal notranslate"><span class="pre">robot_launch.py</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8256">[待校准&#64;8256]</a></p>
+<p>这建立了这个包，并在 <code class="docutils literal notranslate"><span class="pre">data_files</span></code> 变量中添加了新添加的文件:  <code class="docutils literal notranslate"><span class="pre">my_world.wbt</span></code> 、 <code class="docutils literal notranslate"><span class="pre">my_robot.urdf</span></code> 和 <code class="docutils literal notranslate"><span class="pre">robot_launch.py</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8256">[待校准&#64;8256]</a></p>
 </div>
 <div class="section" id="test-the-code">
-<h3>7测试代码 <a class="reference external" href="http://localhost:3000/#/home?msgid=8257">[待校准&#64;8257]</a><a class="headerlink" href="#test-the-code" title="永久链接至标题"></a></h3>
-<p>从ROS2工作区中的终端运行: <a class="reference external" href="http://localhost:3000/#/home?msgid=8258">[待校准&#64;8258]</a></p>
+<h3>7测试代码 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8257">[待校准&#64;8257]</a><a class="headerlink" href="#test-the-code" title="永久链接至标题"></a></h3>
+<p>从ROS2工作区中的终端运行: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8258">[待校准&#64;8258]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-1-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-1-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-1-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-1-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-1-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">colcon build</span>
 <span class="go">source install/local_setup.bash</span>
@@ -614,24 +614,24 @@
 </pre></div>
 </div>
 </div></div>
-<p>这将使仿真launch。Webots将在第一次运行时自动调用y，以防尚未安装。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8259">[待校准&#64;8259]</a></p>
+<p>这将使仿真launch。Webots将在第一次运行时自动调用y，以防尚未安装。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8259">[待校准&#64;8259]</a></p>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
-<p>如果你想手动安装Webots，你可以下载 <a class="reference external" href="https://github.com/cyberbotics/webots/releases/latest">here</a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8260">[待校准&#64;8260]</a></p>
+<p>如果你想手动安装Webots，你可以下载 <a class="reference external" href="https://github.com/cyberbotics/webots/releases/latest">here</a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8260">[待校准&#64;8260]</a></p>
 </div>
-<p>然后，打开第二个终端并发送以下命令: <a class="reference external" href="http://localhost:3000/#/home?msgid=8261">[待校准&#64;8261]</a></p>
+<p>然后，打开第二个终端并发送以下命令: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8261">[待校准&#64;8261]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 topic pub /cmd_vel geometry_msgs/Twist  &quot;linear: { x: 0.1 }&quot;</span>
 </pre></div>
 </div>
-<p>机器人正在向前移动。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8262">[待校准&#64;8262]</a></p>
+<p>机器人正在向前移动。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8262">[待校准&#64;8262]</a></p>
 <img alt="../../../_images/Robot_moving_forward.png" src="../../../_images/Robot_moving_forward.png" />
-<p>此时，机器人能够盲目地跟随你的马达命令。但是当你命令它前进时，它最终会撞到墙上。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8263">[待校准&#64;8263]</a></p>
+<p>此时，机器人能够盲目地跟随你的马达命令。但是当你命令它前进时，它最终会撞到墙上。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8263">[待校准&#64;8263]</a></p>
 <img alt="../../../_images/Robot_colliding_wall.png" src="../../../_images/Robot_colliding_wall.png" />
-<p>为了防止这种情况，让我们使用机器人的传感器来检测障碍物并避开它们。关闭Webots窗口，这也应该关闭从launcher开始的ROS节点。在第二个终端用 “ctrl + c” 关闭话题命令。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8264">[待校准&#64;8264]</a></p>
+<p>为了防止这种情况，让我们使用机器人的传感器来检测障碍物并避开它们。关闭Webots窗口，这也应该关闭从launcher开始的ROS节点。在第二个终端用 “ctrl + c” 关闭话题命令。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8264">[待校准&#64;8264]</a></p>
 </div>
 <div class="section" id="updating-my-robot-urdf">
-<h3>8更新my_robot.urdf <a class="reference external" href="http://localhost:3000/#/home?msgid=8265">[待校准&#64;8265]</a><a class="headerlink" href="#updating-my-robot-urdf" title="永久链接至标题"></a></h3>
-<p>您必须修改URDF文件以启用传感器。在 <code class="docutils literal notranslate"><span class="pre">my_robot.urdf</span></code> 中，将全部内容替换为: <a class="reference external" href="http://localhost:3000/#/home?msgid=8266">[待校准&#64;8266]</a></p>
+<h3>8更新my_robot.urdf <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8265">[待校准&#64;8265]</a><a class="headerlink" href="#updating-my-robot-urdf" title="永久链接至标题"></a></h3>
+<p>您必须修改URDF文件以启用传感器。在 <code class="docutils literal notranslate"><span class="pre">my_robot.urdf</span></code> 中，将全部内容替换为: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8266">[待校准&#64;8266]</a></p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; ?&gt;</span>
 <span class="nt">&lt;robot</span> <span class="na">name=</span><span class="s">&quot;My robot&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;webots&gt;</span>
@@ -652,11 +652,11 @@
 <span class="nt">&lt;/robot&gt;</span>
 </pre></div>
 </div>
-<p>ROS 2接口将解析参考距离传感器节点的 <code class="docutils literal notranslate"><span class="pre">&lt;device&gt;</span></code> 标签，并使用 <code class="docutils literal notranslate"><span class="pre">&lt;ros&gt;</span></code> 标签中的标准参数来启用传感器并命名它们的话题。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8267">[待校准&#64;8267]</a></p>
+<p>ROS 2接口将解析参考距离传感器节点的 <code class="docutils literal notranslate"><span class="pre">&lt;device&gt;</span></code> 标签，并使用 <code class="docutils literal notranslate"><span class="pre">&lt;ros&gt;</span></code> 标签中的标准参数来启用传感器并命名它们的话题。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8267">[待校准&#64;8267]</a></p>
 </div>
 <div class="section" id="creating-a-ros-node-to-avoid-obstacles">
-<h3>9创建ROS节点以避免障碍 <a class="reference external" href="http://localhost:3000/#/home?msgid=8268">[待校准&#64;8268]</a><a class="headerlink" href="#creating-a-ros-node-to-avoid-obstacles" title="永久链接至标题"></a></h3>
-<p>机器人将使用一个标准的ROS节点来检测墙壁，并发送电机命令来避免它。在 <code class="docutils literal notranslate"><span class="pre">my_package/my_package/</span></code> 文件夹中创建一个名为 <code class="docutils literal notranslate"><span class="pre">obstacle_avoider.py</span></code> 的文件，代码如下: <a class="reference external" href="http://localhost:3000/#/home?msgid=8269">[待校准&#64;8269]</a></p>
+<h3>9创建ROS节点以避免障碍 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8268">[待校准&#64;8268]</a><a class="headerlink" href="#creating-a-ros-node-to-avoid-obstacles" title="永久链接至标题"></a></h3>
+<p>机器人将使用一个标准的ROS节点来检测墙壁，并发送电机命令来避免它。在 <code class="docutils literal notranslate"><span class="pre">my_package/my_package/</span></code> 文件夹中创建一个名为 <code class="docutils literal notranslate"><span class="pre">obstacle_avoider.py</span></code> 的文件，代码如下: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8269">[待校准&#64;8269]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">rclpy</span>
 <span class="kn">from</span> <span class="nn">rclpy.node</span> <span class="kn">import</span> <span class="n">Node</span>
 <span class="kn">from</span> <span class="nn">sensor_msgs.msg</span> <span class="kn">import</span> <span class="n">Range</span>
@@ -706,19 +706,19 @@
     <span class="n">main</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>该节点将为该命令创建一个发布服务器，并在此订阅传感器话题: <a class="reference external" href="http://localhost:3000/#/home?msgid=8270">[待校准&#64;8270]</a></p>
+<p>该节点将为该命令创建一个发布服务器，并在此订阅传感器话题: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8270">[待校准&#64;8270]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="bp">self</span><span class="o">.</span><span class="n">__publisher</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_publisher</span><span class="p">(</span><span class="n">Twist</span><span class="p">,</span> <span class="s1">&#39;cmd_vel&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 
 <span class="bp">self</span><span class="o">.</span><span class="n">create_subscription</span><span class="p">(</span><span class="n">Range</span><span class="p">,</span> <span class="s1">&#39;left_sensor&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">__left_sensor_callback</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="bp">self</span><span class="o">.</span><span class="n">create_subscription</span><span class="p">(</span><span class="n">Range</span><span class="p">,</span> <span class="s1">&#39;right_sensor&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">__right_sensor_callback</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>当从左侧传感器接收到测量时，它将被复制到成员字段: <a class="reference external" href="http://localhost:3000/#/home?msgid=8271">[待校准&#64;8271]</a></p>
+<p>当从左侧传感器接收到测量时，它将被复制到成员字段: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8271">[待校准&#64;8271]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">__left_sensor_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message</span><span class="p">):</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">__left_sensor_value</span> <span class="o">=</span> <span class="n">message</span><span class="o">.</span><span class="n">range</span>
 </pre></div>
 </div>
-<p>最后，当接收到来自正确传感器的测量时，一条信息将被发送到 <code class="docutils literal notranslate"><span class="pre">/cmd_vel</span></code> 话题。在没有检测到障碍物时，为了使机器人移动， <code class="docutils literal notranslate"><span class="pre">command_message</span></code> 将记录至少一个 <code class="docutils literal notranslate"><span class="pre">linear.x</span></code> 前进速度。如果两个传感器中的任何一个检测到障碍物， <code class="docutils literal notranslate"><span class="pre">command_message</span></code> 也将在 <code class="docutils literal notranslate"><span class="pre">angular.z</span></code> 中记录转速，以使机器人右转。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8272">[待校准&#64;8272]</a></p>
+<p>最后，当接收到来自正确传感器的测量时，一条信息将被发送到 <code class="docutils literal notranslate"><span class="pre">/cmd_vel</span></code> 话题。在没有检测到障碍物时，为了使机器人移动， <code class="docutils literal notranslate"><span class="pre">command_message</span></code> 将记录至少一个 <code class="docutils literal notranslate"><span class="pre">linear.x</span></code> 前进速度。如果两个传感器中的任何一个检测到障碍物， <code class="docutils literal notranslate"><span class="pre">command_message</span></code> 也将在 <code class="docutils literal notranslate"><span class="pre">angular.z</span></code> 中记录转速，以使机器人右转。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8272">[待校准&#64;8272]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">__right_sensor_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message</span><span class="p">):</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">__right_sensor_value</span> <span class="o">=</span> <span class="n">message</span><span class="o">.</span><span class="n">range</span>
 
@@ -734,16 +734,16 @@
 </div>
 </div>
 <div class="section" id="updating-setup-py-and-robot-launch-py">
-<h3>10更新设置。py和机器人 _ launch。py <a class="reference external" href="http://localhost:3000/#/home?msgid=8273">[待校准&#64;8273]</a><a class="headerlink" href="#updating-setup-py-and-robot-launch-py" title="永久链接至标题"></a></h3>
-<p>您必须将这两个其他文件修改为您的新节点launch。编辑 <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> ，并将 “'console_scripts'” 替换为: <a class="reference external" href="http://localhost:3000/#/home?msgid=8274">[待校准&#64;8274]</a></p>
+<h3>10更新设置。py和机器人 _ launch。py <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8273">[待校准&#64;8273]</a><a class="headerlink" href="#updating-setup-py-and-robot-launch-py" title="永久链接至标题"></a></h3>
+<p>您必须将这两个其他文件修改为您的新节点launch。编辑 <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> ，并将 “'console_scripts'” 替换为: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8274">[待校准&#64;8274]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;console_scripts&#39;</span><span class="p">:</span> <span class="p">[</span>
     <span class="s1">&#39;my_robot_driver = my_package.my_robot_driver:main&#39;</span><span class="p">,</span>
     <span class="s1">&#39;obstacle_avoider = my_package.obstacle_avoider:main&#39;</span>
 <span class="p">],</span>
 </pre></div>
 </div>
-<p>这将为 <code class="docutils literal notranslate"><span class="pre">obstacle_avoider</span></code> 节点增加一个入口点。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8275">[待校准&#64;8275]</a></p>
-<p>转到文件 <code class="docutils literal notranslate"><span class="pre">robot_launch.py</span></code> ，并将 “def生成 _ launch _ 描述 ():” 替换为: <a class="reference external" href="http://localhost:3000/#/home?msgid=8276">[待校准&#64;8276]</a></p>
+<p>这将为 <code class="docutils literal notranslate"><span class="pre">obstacle_avoider</span></code> 节点增加一个入口点。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8275">[待校准&#64;8275]</a></p>
+<p>转到文件 <code class="docutils literal notranslate"><span class="pre">robot_launch.py</span></code> ，并将 “def生成 _ launch _ 描述 ():” 替换为: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8276">[待校准&#64;8276]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">generate_launch_description</span><span class="p">():</span>
     <span class="n">package_dir</span> <span class="o">=</span> <span class="n">get_package_share_directory</span><span class="p">(</span><span class="s1">&#39;my_package&#39;</span><span class="p">)</span>
     <span class="n">robot_description</span> <span class="o">=</span> <span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">package_dir</span><span class="p">,</span> <span class="s1">&#39;resource&#39;</span><span class="p">,</span> <span class="s1">&#39;my_robot.urdf&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">read_text</span><span class="p">()</span>
@@ -779,11 +779,11 @@
     <span class="p">])</span>
 </pre></div>
 </div>
-<p>这将创建一个 <code class="docutils literal notranslate"><span class="pre">obstacle_avoider</span></code> 节点，该节点将包含在 <code class="docutils literal notranslate"><span class="pre">LaunchDescription</span></code> 中。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8277">[待校准&#64;8277]</a></p>
+<p>这将创建一个 <code class="docutils literal notranslate"><span class="pre">obstacle_avoider</span></code> 节点，该节点将包含在 <code class="docutils literal notranslate"><span class="pre">LaunchDescription</span></code> 中。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8277">[待校准&#64;8277]</a></p>
 </div>
 <div class="section" id="test-the-obstacle-avoidance-code">
-<h3>11测试避障代码 <a class="reference external" href="http://localhost:3000/#/home?msgid=8278">[待校准&#64;8278]</a><a class="headerlink" href="#test-the-obstacle-avoidance-code" title="永久链接至标题"></a></h3>
-<p>作为任务 <code class="docutils literal notranslate"><span class="pre">7</span></code> ，launch的仿真终端的ROS 2工作区: <a class="reference external" href="http://localhost:3000/#/home?msgid=8279">[待校准&#64;8279]</a></p>
+<h3>11测试避障代码 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8278">[待校准&#64;8278]</a><a class="headerlink" href="#test-the-obstacle-avoidance-code" title="永久链接至标题"></a></h3>
+<p>作为任务 <code class="docutils literal notranslate"><span class="pre">7</span></code> ，launch的仿真终端的ROS 2工作区: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8279">[待校准&#64;8279]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-2-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-2-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-2-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-2-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-2-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-2-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">colcon build</span>
 <span class="go">source install/local_setup.bash</span>
@@ -796,17 +796,17 @@
 </pre></div>
 </div>
 </div></div>
-<p>你的机器人应该前进，在撞到墙上之前，它应该顺时针旋转。您可以在Webots中按 “ctrl + F10” 或转到 <code class="docutils literal notranslate"><span class="pre">View</span></code> 菜单， <code class="docutils literal notranslate"><span class="pre">Optional</span> <span class="pre">Rendering</span></code> 和 <code class="docutils literal notranslate"><span class="pre">Show</span> <span class="pre">DistanceSensor</span> <span class="pre">Rays</span></code> 显示机器人距离传感器的范围。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8280">[待校准&#64;8280]</a></p>
+<p>你的机器人应该前进，在撞到墙上之前，它应该顺时针旋转。您可以在Webots中按 “ctrl + F10” 或转到 <code class="docutils literal notranslate"><span class="pre">View</span></code> 菜单， <code class="docutils literal notranslate"><span class="pre">Optional</span> <span class="pre">Rendering</span></code> 和 <code class="docutils literal notranslate"><span class="pre">Show</span> <span class="pre">DistanceSensor</span> <span class="pre">Rays</span></code> 显示机器人距离传感器的范围。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8280">[待校准&#64;8280]</a></p>
 <img alt="../../../_images/Robot_turning_clockwise.png" src="../../../_images/Robot_turning_clockwise.png" />
 </div>
 </div>
 <div class="section" id="summary">
-<h2>总结 <a class="reference external" href="http://localhost:3000/#/home?msgid=6747">[待校准&#64;6747]</a><a class="headerlink" href="#summary" title="永久链接至标题"></a></h2>
-<p>在本教程中，您将使用Webots设置逼真的机器人仿真，实现Python插件以控制机器人的电机，并使用传感器实现ROS节点以避免障碍物。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8281">[待校准&#64;8281]</a></p>
+<h2>总结 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6747">[待校准&#64;6747]</a><a class="headerlink" href="#summary" title="永久链接至标题"></a></h2>
+<p>在本教程中，您将使用Webots设置逼真的机器人仿真，实现Python插件以控制机器人的电机，并使用传感器实现ROS节点以避免障碍物。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8281">[待校准&#64;8281]</a></p>
 </div>
 <div class="section" id="next-steps">
-<h2>下一步 <a class="reference external" href="http://localhost:3000/#/home?msgid=6749">[待校准&#64;6749]</a><a class="headerlink" href="#next-steps" title="永久链接至标题"></a></h2>
-<p>您可能想要改进插件或创建新节点来改变机器人的行为。从这些以前的教程中获得灵感可能是一个起点: <a class="reference external" href="http://localhost:3000/#/home?msgid=8282">[待校准&#64;8282]</a></p>
+<h2>下一步 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6749">[待校准&#64;6749]</a><a class="headerlink" href="#next-steps" title="永久链接至标题"></a></h2>
+<p>您可能想要改进插件或创建新节点来改变机器人的行为。从这些以前的教程中获得灵感可能是一个起点: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8282">[待校准&#64;8282]</a></p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../../Tf2/Tf2-Main.html"><span class="doc">tf2教程 [待校准&#64;8518]</span></a>.</p></li>
 </ul>

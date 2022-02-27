@@ -279,12 +279,12 @@
 
 
   <div class="section" id="understanding-ros-2-nodes">
-<span id="ros2nodes"></span><h1>了解ROS 2节点 <a class="reference external" href="http://localhost:3000/#/home?msgid=9173">[待校准&#64;9173]</a><a class="headerlink" href="#understanding-ros-2-nodes" title="永久链接至标题"></a></h1>
-<p>Goal目标: Learn了解ROS 2中节点的功能以及与它们交互的工具。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9174">[待校准&#64;9174]</a></p>
-<p>Tutorial教程级别: Beginner初学者 <a class="reference external" href="http://localhost:3000/#/home?msgid=7088">[待校准&#64;7088]</a></p>
-<p>Time时间: 10 10分钟 <a class="reference external" href="http://localhost:3000/#/home?msgid=7452">[待校准&#64;7452]</a></p>
+<span id="ros2nodes"></span><h1>了解ROS 2节点 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9173">[待校准&#64;9173]</a><a class="headerlink" href="#understanding-ros-2-nodes" title="永久链接至标题"></a></h1>
+<p>Goal目标: Learn了解ROS 2中节点的功能以及与它们交互的工具。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9174">[待校准&#64;9174]</a></p>
+<p>Tutorial教程级别: Beginner初学者 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7088">[待校准&#64;7088]</a></p>
+<p>Time时间: 10 10分钟 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7452">[待校准&#64;7452]</a></p>
 <div class="contents local topic" id="contents">
-<p class="topic-title">内容 <a class="reference external" href="http://localhost:3000/#/home?msgid=6715">[待校准&#64;6715]</a></p>
+<p class="topic-title">内容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6715">[待校准&#64;6715]</a></p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#background" id="id1">背景 [待校准&#64;6716]</a></p>
 <ul>
@@ -306,69 +306,69 @@
 </ul>
 </div>
 <div class="section" id="background">
-<h2>背景 <a class="reference external" href="http://localhost:3000/#/home?msgid=6716">[待校准&#64;6716]</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
+<h2>背景 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6716">[待校准&#64;6716]</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
 <div class="section" id="the-ros-2-graph">
-<h3>1 ROS 2图 <a class="reference external" href="http://localhost:3000/#/home?msgid=9175">[待校准&#64;9175]</a><a class="headerlink" href="#the-ros-2-graph" title="永久链接至标题"></a></h3>
-<p>在接下来的几个教程中，您将学习一系列核心ROS 2概念，这些概念构成了所谓的 “ROS (2) 图”。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9176">[待校准&#64;9176]</a></p>
-<p>ROS图是ROS 2元素同时处理数据的网络。它包含所有可执行文件以及它们之间的连接 (如果要将它们全部映射并可视化)。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9177">[待校准&#64;9177]</a></p>
+<h3>1 ROS 2图 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9175">[待校准&#64;9175]</a><a class="headerlink" href="#the-ros-2-graph" title="永久链接至标题"></a></h3>
+<p>在接下来的几个教程中，您将学习一系列核心ROS 2概念，这些概念构成了所谓的 “ROS (2) 图”。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9176">[待校准&#64;9176]</a></p>
+<p>ROS图是ROS 2元素同时处理数据的网络。它包含所有可执行文件以及它们之间的连接 (如果要将它们全部映射并可视化)。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9177">[待校准&#64;9177]</a></p>
 </div>
 <div class="section" id="nodes-in-ros-2">
-<h3>ROS 2中的2个节点 <a class="reference external" href="http://localhost:3000/#/home?msgid=9178">[待校准&#64;9178]</a><a class="headerlink" href="#nodes-in-ros-2" title="永久链接至标题"></a></h3>
-<p>ROS中的每个节点应负责单个模块目的 (例如，一个用于控制车轮电机的节点，一个用于控制激光测距仪的节点等)。每个节点可以通过话题、服务、动作或参数向其他节点发送和接收数据。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9179">[待校准&#64;9179]</a></p>
+<h3>ROS 2中的2个节点 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9178">[待校准&#64;9178]</a><a class="headerlink" href="#nodes-in-ros-2" title="永久链接至标题"></a></h3>
+<p>ROS中的每个节点应负责单个模块目的 (例如，一个用于控制车轮电机的节点，一个用于控制激光测距仪的节点等)。每个节点可以通过话题、服务、动作或参数向其他节点发送和接收数据。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9179">[待校准&#64;9179]</a></p>
 <img alt="../_images/Nodes-TopicandService.gif" src="../_images/Nodes-TopicandService.gif" />
-<p>一个完整的机器人系统由许多协同工作的节点组成。在ROS 2中，单个可执行文件 (cprogram程序、Python程序等) 可以包含一个或多个节点。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9180">[待校准&#64;9180]</a></p>
+<p>一个完整的机器人系统由许多协同工作的节点组成。在ROS 2中，单个可执行文件 (cprogram程序、Python程序等) 可以包含一个或多个节点。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9180">[待校准&#64;9180]</a></p>
 </div>
 </div>
 <div class="section" id="prerequisites">
-<h2>先决条件 <a class="reference external" href="http://localhost:3000/#/home?msgid=6718">[待校准&#64;6718]</a><a class="headerlink" href="#prerequisites" title="永久链接至标题"></a></h2>
-<p>[需手动修复的语法] <a class="reference internal" href="Turtlesim/Introducing-Turtlesim.html"><span class="doc">previous tutorial</span></a> 向您展示了如何安装此处使用的 <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> 包装。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9181">[待校准&#64;9181]</a></p>
-<p>和往常一样，不要忘记在 <a class="reference internal" href="Configuring-ROS2-Environment.html"><span class="doc">every new terminal you open</span></a> 中源文件ROS 2。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9131">[待校准&#64;9131]</a></p>
+<h2>先决条件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6718">[待校准&#64;6718]</a><a class="headerlink" href="#prerequisites" title="永久链接至标题"></a></h2>
+<p>[需手动修复的语法] <a class="reference internal" href="Turtlesim/Introducing-Turtlesim.html"><span class="doc">previous tutorial</span></a> 向您展示了如何安装此处使用的 <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> 包装。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9181">[待校准&#64;9181]</a></p>
+<p>和往常一样，不要忘记在 <a class="reference internal" href="Configuring-ROS2-Environment.html"><span class="doc">every new terminal you open</span></a> 中源文件ROS 2。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9131">[待校准&#64;9131]</a></p>
 </div>
 <div class="section" id="tasks">
-<h2>任务 <a class="reference external" href="http://localhost:3000/#/home?msgid=6725">[待校准&#64;6725]</a><a class="headerlink" href="#tasks" title="永久链接至标题"></a></h2>
+<h2>任务 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6725">[待校准&#64;6725]</a><a class="headerlink" href="#tasks" title="永久链接至标题"></a></h2>
 <div class="section" id="ros2-run">
-<h3>1 ros2运行 <a class="reference external" href="http://localhost:3000/#/home?msgid=9182">[待校准&#64;9182]</a><a class="headerlink" href="#ros2-run" title="永久链接至标题"></a></h3>
-<p>命令 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">run</span></code> launch是包中的可执行文件。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9183">[待校准&#64;9183]</a></p>
+<h3>1 ros2运行 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9182">[待校准&#64;9182]</a><a class="headerlink" href="#ros2-run" title="永久链接至标题"></a></h3>
+<p>命令 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">run</span></code> launch是包中的可执行文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9183">[待校准&#64;9183]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run &lt;package_name&gt; &lt;executable_name&gt;</span>
 </pre></div>
 </div>
-<p>要运行turtlesim，请打开一个新终端，然后输入以下命令: <a class="reference external" href="http://localhost:3000/#/home?msgid=9184">[待校准&#64;9184]</a></p>
+<p>要运行turtlesim，请打开一个新终端，然后输入以下命令: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9184">[待校准&#64;9184]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run turtlesim turtlesim_node</span>
 </pre></div>
 </div>
-<p>就像你在 <a class="reference internal" href="Turtlesim/Introducing-Turtlesim.html"><span class="doc">previous tutorial</span></a> 上看到的那样，斑驳窗将会打开。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9185">[待校准&#64;9185]</a></p>
-<p>这里，包名是 <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> ，可执行名称是 <code class="docutils literal notranslate"><span class="pre">turtlesim_node</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9186">[待校准&#64;9186]</a></p>
-<p>然而，我们仍然不知道节点名称。您可以使用 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">node</span> <span class="pre">list</span></code> 找到节点名称 <a class="reference external" href="http://localhost:3000/#/home?msgid=9187">[待校准&#64;9187]</a></p>
+<p>就像你在 <a class="reference internal" href="Turtlesim/Introducing-Turtlesim.html"><span class="doc">previous tutorial</span></a> 上看到的那样，斑驳窗将会打开。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9185">[待校准&#64;9185]</a></p>
+<p>这里，包名是 <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> ，可执行名称是 <code class="docutils literal notranslate"><span class="pre">turtlesim_node</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9186">[待校准&#64;9186]</a></p>
+<p>然而，我们仍然不知道节点名称。您可以使用 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">node</span> <span class="pre">list</span></code> 找到节点名称 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9187">[待校准&#64;9187]</a></p>
 </div>
 <div class="section" id="ros2-node-list">
-<h3>2 ros2节点列表 <a class="reference external" href="http://localhost:3000/#/home?msgid=9188">[待校准&#64;9188]</a><a class="headerlink" href="#ros2-node-list" title="永久链接至标题"></a></h3>
-<p>[需手动修复的语法]``ros2 node list`` will显示所有正在运行的节点的名称。当您想要与一个节点交互时，或者当您有一个系统运行许多节点并需要跟踪它们时，这尤其有用。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9189">[待校准&#64;9189]</a></p>
-<p>当turtlesim仍在另一个终端中运行时，打开一个新终端，然后输入以下命令: <a class="reference external" href="http://localhost:3000/#/home?msgid=9190">[待校准&#64;9190]</a></p>
+<h3>2 ros2节点列表 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9188">[待校准&#64;9188]</a><a class="headerlink" href="#ros2-node-list" title="永久链接至标题"></a></h3>
+<p>[需手动修复的语法]``ros2 node list`` will显示所有正在运行的节点的名称。当您想要与一个节点交互时，或者当您有一个系统运行许多节点并需要跟踪它们时，这尤其有用。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9189">[待校准&#64;9189]</a></p>
+<p>当turtlesim仍在另一个终端中运行时，打开一个新终端，然后输入以下命令: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9190">[待校准&#64;9190]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 node list</span>
 </pre></div>
 </div>
-<p>终端将返回节点名称: <a class="reference external" href="http://localhost:3000/#/home?msgid=9191">[待校准&#64;9191]</a></p>
+<p>终端将返回节点名称: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9191">[待校准&#64;9191]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">/turtlesim</span>
 </pre></div>
 </div>
-<p>打开另一个新终端，并使用以下命令启动teleop节点: <a class="reference external" href="http://localhost:3000/#/home?msgid=9192">[待校准&#64;9192]</a></p>
+<p>打开另一个新终端，并使用以下命令启动teleop节点: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9192">[待校准&#64;9192]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run turtlesim turtle_teleop_key</span>
 </pre></div>
 </div>
-<p>在这里，我们再次搜索 <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> 包，这次是为可执行文件命名为 <code class="docutils literal notranslate"><span class="pre">turtle_teleop_key</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9193">[待校准&#64;9193]</a></p>
-<p>回到你运行 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">node</span> <span class="pre">list</span></code> 的终端，然后再次运行它。现在，您将看到两个活动节点的名称: <a class="reference external" href="http://localhost:3000/#/home?msgid=9194">[待校准&#64;9194]</a></p>
+<p>在这里，我们再次搜索 <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> 包，这次是为可执行文件命名为 <code class="docutils literal notranslate"><span class="pre">turtle_teleop_key</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9193">[待校准&#64;9193]</a></p>
+<p>回到你运行 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">node</span> <span class="pre">list</span></code> 的终端，然后再次运行它。现在，您将看到两个活动节点的名称: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9194">[待校准&#64;9194]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">/turtlesim</span>
 <span class="go">/teleop_turtle</span>
 </pre></div>
 </div>
 <div class="section" id="remapping">
-<h4>2.1重新映射 <a class="reference external" href="http://localhost:3000/#/home?msgid=9195">[待校准&#64;9195]</a><a class="headerlink" href="#remapping" title="永久链接至标题"></a></h4>
-<p>[需手动修复的语法] <a class="reference external" href="https://design.ros2.org/articles/ros_command_line_arguments.html#name-remapping-rules">Remapping</a> 允许您将默认节点属性 (如节点名称、话题名称、服务名称等) 重新分配给自定义值。在上一个教程中，您使用 <code class="docutils literal notranslate"><span class="pre">turtle_teleop_key</span></code> 上的重新映射来更改被控制的默认海龟。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9196">[待校准&#64;9196]</a></p>
-<p>现在，让我们重新分配 <code class="docutils literal notranslate"><span class="pre">/turtlesim</span></code> 节点的名称。在新终端中，运行以下命令: <a class="reference external" href="http://localhost:3000/#/home?msgid=9197">[待校准&#64;9197]</a></p>
+<h4>2.1重新映射 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9195">[待校准&#64;9195]</a><a class="headerlink" href="#remapping" title="永久链接至标题"></a></h4>
+<p>[需手动修复的语法] <a class="reference external" href="https://design.ros2.org/articles/ros_command_line_arguments.html#name-remapping-rules">Remapping</a> 允许您将默认节点属性 (如节点名称、话题名称、服务名称等) 重新分配给自定义值。在上一个教程中，您使用 <code class="docutils literal notranslate"><span class="pre">turtle_teleop_key</span></code> 上的重新映射来更改被控制的默认海龟。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9196">[待校准&#64;9196]</a></p>
+<p>现在，让我们重新分配 <code class="docutils literal notranslate"><span class="pre">/turtlesim</span></code> 节点的名称。在新终端中，运行以下命令: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9197">[待校准&#64;9197]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run turtlesim turtlesim_node --ros-args --remap __node:=my_turtle</span>
 </pre></div>
 </div>
-<p>由于您再次在turtlesim上调用 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">run</span></code> ，另一个turtlesim窗口将打开。但是，现在如果您返回到运行 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">node</span> <span class="pre">list</span></code> 的终端，并再次运行它，您将看到三个节点名称: <a class="reference external" href="http://localhost:3000/#/home?msgid=9198">[待校准&#64;9198]</a></p>
+<p>由于您再次在turtlesim上调用 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">run</span></code> ，另一个turtlesim窗口将打开。但是，现在如果您返回到运行 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">node</span> <span class="pre">list</span></code> 的终端，并再次运行它，您将看到三个节点名称: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9198">[待校准&#64;9198]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">/turtlesim</span>
 <span class="go">/teleop_turtle</span>
 <span class="go">/my_turtle</span>
@@ -377,16 +377,16 @@
 </div>
 </div>
 <div class="section" id="ros2-node-info">
-<h3>3 ros2节点信息 <a class="reference external" href="http://localhost:3000/#/home?msgid=9142">[待校准&#64;9142]</a><a class="headerlink" href="#ros2-node-info" title="永久链接至标题"></a></h3>
-<p>现在您已经知道了节点的名称，可以通过以下方式访问有关它们的更多信息: <a class="reference external" href="http://localhost:3000/#/home?msgid=9199">[待校准&#64;9199]</a></p>
+<h3>3 ros2节点信息 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9142">[待校准&#64;9142]</a><a class="headerlink" href="#ros2-node-info" title="永久链接至标题"></a></h3>
+<p>现在您已经知道了节点的名称，可以通过以下方式访问有关它们的更多信息: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9199">[待校准&#64;9199]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 node info &lt;node_name&gt;</span>
 </pre></div>
 </div>
-<p>要检查您的最新节点 <code class="docutils literal notranslate"><span class="pre">my_turtle</span></code> ，请运行以下命令: <a class="reference external" href="http://localhost:3000/#/home?msgid=9200">[待校准&#64;9200]</a></p>
+<p>要检查您的最新节点 <code class="docutils literal notranslate"><span class="pre">my_turtle</span></code> ，请运行以下命令: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9200">[待校准&#64;9200]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 node info /my_turtle</span>
 </pre></div>
 </div>
-<p>[需手动修复的语法]``ros2 node info`` returns与该节点交互的订阅者、发布者、服务和动作 (ROS图连接) 的列表。输出应如下所示: <a class="reference external" href="http://localhost:3000/#/home?msgid=9201">[待校准&#64;9201]</a></p>
+<p>[需手动修复的语法]``ros2 node info`` returns与该节点交互的订阅者、发布者、服务和动作 (ROS图连接) 的列表。输出应如下所示: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9201">[待校准&#64;9201]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">/my_turtle</span>
 <span class="go">  Subscribers:</span>
 <span class="go">    /parameter_events: rcl_interfaces/msg/ParameterEvent</span>
@@ -415,23 +415,23 @@
 <span class="go">  Action Clients:</span>
 </pre></div>
 </div>
-<p>现在尝试在 <code class="docutils literal notranslate"><span class="pre">/teleop_turtle</span></code> 节点上运行相同的命令，看看它的连接与 <code class="docutils literal notranslate"><span class="pre">my_turtle</span></code> 有什么不同。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9202">[待校准&#64;9202]</a></p>
-<p>您将在即将到来的教程中了解更多关于ROS图连接概念的信息，包括消息类型。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9203">[待校准&#64;9203]</a></p>
+<p>现在尝试在 <code class="docutils literal notranslate"><span class="pre">/teleop_turtle</span></code> 节点上运行相同的命令，看看它的连接与 <code class="docutils literal notranslate"><span class="pre">my_turtle</span></code> 有什么不同。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9202">[待校准&#64;9202]</a></p>
+<p>您将在即将到来的教程中了解更多关于ROS图连接概念的信息，包括消息类型。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9203">[待校准&#64;9203]</a></p>
 </div>
 </div>
 <div class="section" id="summary">
-<h2>总结 <a class="reference external" href="http://localhost:3000/#/home?msgid=6747">[待校准&#64;6747]</a><a class="headerlink" href="#summary" title="永久链接至标题"></a></h2>
-<p>节点基金amental ROS 2起单一模块化目的机器人系统。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9204">[待校准&#64;9204]</a></p>
-<p>在本教程中，您通过运行可执行文件 <code class="docutils literal notranslate"><span class="pre">turtlesim_node</span></code> 和 <code class="docutils literal notranslate"><span class="pre">turtle_teleop_key</span></code> ，利用了从 <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> 包创建的节点。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9205">[待校准&#64;9205]</a></p>
-<p>您学习了如何使用 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">node</span> <span class="pre">list</span></code> 发现活动节点名称，并使用 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">node</span> <span class="pre">info</span></code> 在单个节点上进行反思。这些工具对于理解复杂的、真实世界的机器人系统中的数据流至关重要。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9206">[待校准&#64;9206]</a></p>
+<h2>总结 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6747">[待校准&#64;6747]</a><a class="headerlink" href="#summary" title="永久链接至标题"></a></h2>
+<p>节点基金amental ROS 2起单一模块化目的机器人系统。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9204">[待校准&#64;9204]</a></p>
+<p>在本教程中，您通过运行可执行文件 <code class="docutils literal notranslate"><span class="pre">turtlesim_node</span></code> 和 <code class="docutils literal notranslate"><span class="pre">turtle_teleop_key</span></code> ，利用了从 <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> 包创建的节点。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9205">[待校准&#64;9205]</a></p>
+<p>您学习了如何使用 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">node</span> <span class="pre">list</span></code> 发现活动节点名称，并使用 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">node</span> <span class="pre">info</span></code> 在单个节点上进行反思。这些工具对于理解复杂的、真实世界的机器人系统中的数据流至关重要。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9206">[待校准&#64;9206]</a></p>
 </div>
 <div class="section" id="next-steps">
-<h2>下一步 <a class="reference external" href="http://localhost:3000/#/home?msgid=6749">[待校准&#64;6749]</a><a class="headerlink" href="#next-steps" title="永久链接至标题"></a></h2>
-<p>既然您了解了ROS 2中的节点，您就可以继续研究 <a class="reference internal" href="Topics/Understanding-ROS2-Topics.html"><span class="doc">topics tutorial</span></a> 了。话题是连接节点的通讯类型之一。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9207">[待校准&#64;9207]</a></p>
+<h2>下一步 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6749">[待校准&#64;6749]</a><a class="headerlink" href="#next-steps" title="永久链接至标题"></a></h2>
+<p>既然您了解了ROS 2中的节点，您就可以继续研究 <a class="reference internal" href="Topics/Understanding-ROS2-Topics.html"><span class="doc">topics tutorial</span></a> 了。话题是连接节点的通讯类型之一。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9207">[待校准&#64;9207]</a></p>
 </div>
 <div class="section" id="related-content">
-<h2>相关内容 <a class="reference external" href="http://localhost:3000/#/home?msgid=6751">[待校准&#64;6751]</a><a class="headerlink" href="#related-content" title="永久链接至标题"></a></h2>
-<p>[需手动修复的语法] <a class="reference internal" href="../Concepts.html"><span class="doc">概念 [待校准&#64;9514]</span></a> 页面为节点的概念添加了更多细节。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9208">[待校准&#64;9208]</a></p>
+<h2>相关内容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6751">[待校准&#64;6751]</a><a class="headerlink" href="#related-content" title="永久链接至标题"></a></h2>
+<p>[需手动修复的语法] <a class="reference internal" href="../Concepts.html"><span class="doc">概念 [待校准&#64;9514]</span></a> 页面为节点的概念添加了更多细节。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9208">[待校准&#64;9208]</a></p>
 </div>
 </div>
 

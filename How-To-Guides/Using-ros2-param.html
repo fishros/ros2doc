@@ -279,9 +279,9 @@
 
 
   <div class="section" id="using-the-ros2-param-command-line-tool">
-<h1>使用 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span></code> 命令行工具 <a class="reference external" href="http://localhost:3000/#/home?msgid=6597">[待校准&#64;6597]</a><a class="headerlink" href="#using-the-ros2-param-command-line-tool" title="永久链接至标题"></a></h1>
+<h1>使用 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span></code> 命令行工具 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6597">[待校准&#64;6597]</a><a class="headerlink" href="#using-the-ros2-param-command-line-tool" title="永久链接至标题"></a></h1>
 <div class="contents local topic" id="table-of-contents">
-<p class="topic-title">目录 <a class="reference external" href="http://localhost:3000/#/home?msgid=5761">[待校准&#64;5761]</a></p>
+<p class="topic-title">目录 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5761">[待校准&#64;5761]</a></p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#ros2-param-list" id="id1"><code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span> <span class="pre">list</span></code> [待校准&#64;6599]</a></p></li>
 <li><p><a class="reference internal" href="#ros2-param-get" id="id2"><code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span> <span class="pre">get</span></code> [待校准&#64;6603]</a></p></li>
@@ -292,64 +292,64 @@
 <li><p><a class="reference internal" href="#ros2-param-load" id="id7"><code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span> <span class="pre">load</span></code> [待校准&#64;6617]</a></p></li>
 </ul>
 </div>
-<p>ROS 2中的参数可以通过一组服务获取、设置、列出和描述，如 <a class="reference internal" href="../Concepts/About-ROS-2-Parameters.html"><span class="doc">the concept document</span></a> 中所述。 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span></code> 命令行工具是围绕这些服务调用的包装，使从命令行操作参数变得容易。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6598">[待校准&#64;6598]</a></p>
+<p>ROS 2中的参数可以通过一组服务获取、设置、列出和描述，如 <a class="reference internal" href="../Concepts/About-ROS-2-Parameters.html"><span class="doc">the concept document</span></a> 中所述。 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span></code> 命令行工具是围绕这些服务调用的包装，使从命令行操作参数变得容易。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6598">[待校准&#64;6598]</a></p>
 <div class="section" id="ros2-param-list">
-<h2><code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span> <span class="pre">list</span></code> <a class="reference external" href="http://localhost:3000/#/home?msgid=6599">[待校准&#64;6599]</a><a class="headerlink" href="#ros2-param-list" title="永久链接至标题"></a></h2>
-<p>此命令将列出给定节点上的所有可用参数，如果未给出节点，则列出所有可发现节点上的所有可用参数。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6600">[待校准&#64;6600]</a></p>
-<p>获取给定节点上的所有参数: <a class="reference external" href="http://localhost:3000/#/home?msgid=6601">[待校准&#64;6601]</a></p>
+<h2><code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span> <span class="pre">list</span></code> <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6599">[待校准&#64;6599]</a><a class="headerlink" href="#ros2-param-list" title="永久链接至标题"></a></h2>
+<p>此命令将列出给定节点上的所有可用参数，如果未给出节点，则列出所有可发现节点上的所有可用参数。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6600">[待校准&#64;6600]</a></p>
+<p>获取给定节点上的所有参数: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6601">[待校准&#64;6601]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 param list /my_node</span>
 </pre></div>
 </div>
-<p>要获取系统中所有节点上的所有参数 (这在复杂的网络上可能需要很长时间): <a class="reference external" href="http://localhost:3000/#/home?msgid=6602">[待校准&#64;6602]</a></p>
+<p>要获取系统中所有节点上的所有参数 (这在复杂的网络上可能需要很长时间): <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6602">[待校准&#64;6602]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 param list</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="ros2-param-get">
-<h2><code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span> <span class="pre">get</span></code> <a class="reference external" href="http://localhost:3000/#/home?msgid=6603">[待校准&#64;6603]</a><a class="headerlink" href="#ros2-param-get" title="永久链接至标题"></a></h2>
-<p>此命令将获取特定节点上特定参数的值。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6604">[待校准&#64;6604]</a></p>
-<p>获取节点上参数的值: <a class="reference external" href="http://localhost:3000/#/home?msgid=6605">[待校准&#64;6605]</a></p>
+<h2><code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span> <span class="pre">get</span></code> <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6603">[待校准&#64;6603]</a><a class="headerlink" href="#ros2-param-get" title="永久链接至标题"></a></h2>
+<p>此命令将获取特定节点上特定参数的值。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6604">[待校准&#64;6604]</a></p>
+<p>获取节点上参数的值: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6605">[待校准&#64;6605]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros param get /my_node use_sim_time</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="ros2-param-set">
-<h2><code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span> <span class="pre">set</span></code> <a class="reference external" href="http://localhost:3000/#/home?msgid=6606">[待校准&#64;6606]</a><a class="headerlink" href="#ros2-param-set" title="永久链接至标题"></a></h2>
-<p>此命令将在特定节点上设置特定参数的值。对于大多数参数，新值的类型必须与现有类型相同。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6607">[待校准&#64;6607]</a></p>
-<p>设置节点上参数的值: <a class="reference external" href="http://localhost:3000/#/home?msgid=6608">[待校准&#64;6608]</a></p>
+<h2><code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span> <span class="pre">set</span></code> <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6606">[待校准&#64;6606]</a><a class="headerlink" href="#ros2-param-set" title="永久链接至标题"></a></h2>
+<p>此命令将在特定节点上设置特定参数的值。对于大多数参数，新值的类型必须与现有类型相同。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6607">[待校准&#64;6607]</a></p>
+<p>设置节点上参数的值: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6608">[待校准&#64;6608]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros param set /my_node use_sim_time false</span>
 </pre></div>
 </div>
-<p>在命令行中传递的值在YAML中，允许使用任意YAML表达式。然而，这也意味着某些表达将会被解释，而不是预期。例如，如果节点 <code class="docutils literal notranslate"><span class="pre">my_node</span></code> 上的参数 <code class="docutils literal notranslate"><span class="pre">my_string</span></code> 是string型，以下将不起作用: <a class="reference external" href="http://localhost:3000/#/home?msgid=6609">[待校准&#64;6609]</a></p>
+<p>在命令行中传递的值在YAML中，允许使用任意YAML表达式。然而，这也意味着某些表达将会被解释，而不是预期。例如，如果节点 <code class="docutils literal notranslate"><span class="pre">my_node</span></code> 上的参数 <code class="docutils literal notranslate"><span class="pre">my_string</span></code> 是string型，以下将不起作用: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6609">[待校准&#64;6609]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros param set /my_node my_string off</span>
 </pre></div>
 </div>
-<p>这是因为YAML将  &quot;off&quot; 解释为bool，而 <code class="docutils literal notranslate"><span class="pre">my_string</span></code> 是string。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6610">[待校准&#64;6610]</a></p>
+<p>这是因为YAML将  &quot;off&quot; 解释为bool，而 <code class="docutils literal notranslate"><span class="pre">my_string</span></code> 是string。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6610">[待校准&#64;6610]</a></p>
 </div>
 <div class="section" id="ros2-param-delete">
-<h2><code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span> <span class="pre">delete</span></code> <a class="reference external" href="http://localhost:3000/#/home?msgid=6611">[待校准&#64;6611]</a><a class="headerlink" href="#ros2-param-delete" title="永久链接至标题"></a></h2>
-<p>此命令将从特定节点中删除参数。但是，请注意，这只能删除动态参数 (未声明的参数)。有关更多信息，请参见 <a class="reference internal" href="../Concepts/About-ROS-2-Parameters.html"><span class="doc">the concept document</span></a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=6612">[待校准&#64;6612]</a></p>
+<h2><code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span> <span class="pre">delete</span></code> <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6611">[待校准&#64;6611]</a><a class="headerlink" href="#ros2-param-delete" title="永久链接至标题"></a></h2>
+<p>此命令将从特定节点中删除参数。但是，请注意，这只能删除动态参数 (未声明的参数)。有关更多信息，请参见 <a class="reference internal" href="../Concepts/About-ROS-2-Parameters.html"><span class="doc">the concept document</span></a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6612">[待校准&#64;6612]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros param delete /my_node my_string</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="ros2-param-describe">
-<h2><code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span> <span class="pre">describe</span></code> <a class="reference external" href="http://localhost:3000/#/home?msgid=6613">[待校准&#64;6613]</a><a class="headerlink" href="#ros2-param-describe" title="永久链接至标题"></a></h2>
-<p>此命令将提供特定节点上特定参数的文本描述: <a class="reference external" href="http://localhost:3000/#/home?msgid=6614">[待校准&#64;6614]</a></p>
+<h2><code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span> <span class="pre">describe</span></code> <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6613">[待校准&#64;6613]</a><a class="headerlink" href="#ros2-param-describe" title="永久链接至标题"></a></h2>
+<p>此命令将提供特定节点上特定参数的文本描述: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6614">[待校准&#64;6614]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros param describe /my_node use_sim_time</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="ros2-param-dump">
-<h2><code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span> <span class="pre">dump</span></code> <a class="reference external" href="http://localhost:3000/#/home?msgid=6615">[待校准&#64;6615]</a><a class="headerlink" href="#ros2-param-dump" title="永久链接至标题"></a></h2>
-<p>此命令将以YAML文件格式打印出特定节点上的所有参数。然后可以使用此命令的输出重新运行具有相同参数的节点: <a class="reference external" href="http://localhost:3000/#/home?msgid=6616">[待校准&#64;6616]</a></p>
+<h2><code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span> <span class="pre">dump</span></code> <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6615">[待校准&#64;6615]</a><a class="headerlink" href="#ros2-param-dump" title="永久链接至标题"></a></h2>
+<p>此命令将以YAML文件格式打印出特定节点上的所有参数。然后可以使用此命令的输出重新运行具有相同参数的节点: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6616">[待校准&#64;6616]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros param dump /my_node</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="ros2-param-load">
-<h2><code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span> <span class="pre">load</span></code> <a class="reference external" href="http://localhost:3000/#/home?msgid=6617">[待校准&#64;6617]</a><a class="headerlink" href="#ros2-param-load" title="永久链接至标题"></a></h2>
-<p>此命令会将参数的值从YAML文件加载到特定节点中。也就是说，此命令可以在运行时重新加载由 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span> <span class="pre">dump</span></code> 转储的值: <a class="reference external" href="http://localhost:3000/#/home?msgid=6618">[待校准&#64;6618]</a></p>
+<h2><code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span> <span class="pre">load</span></code> <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6617">[待校准&#64;6617]</a><a class="headerlink" href="#ros2-param-load" title="永久链接至标题"></a></h2>
+<p>此命令会将参数的值从YAML文件加载到特定节点中。也就是说，此命令可以在运行时重新加载由 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span> <span class="pre">dump</span></code> 转储的值: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6618">[待校准&#64;6618]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros param load /my_node my_node.yaml</span>
 </pre></div>
 </div>

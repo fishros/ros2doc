@@ -279,9 +279,9 @@
 
 
   <div class="section" id="migration-guide-from-ros-1">
-<h1>从ROS 1迁移指南 <a class="reference external" href="http://localhost:3000/#/home?msgid=799">[待校准&#64;799]</a><a class="headerlink" href="#migration-guide-from-ros-1" title="永久链接至标题"></a></h1>
+<h1>从ROS 1迁移指南 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=799">[待校准&#64;799]</a><a class="headerlink" href="#migration-guide-from-ros-1" title="永久链接至标题"></a></h1>
 <div class="contents local topic" id="table-of-contents">
-<p class="topic-title">目录 <a class="reference external" href="http://localhost:3000/#/home?msgid=148">[待校准&#64;148]</a></p>
+<p class="topic-title">目录 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=148">[待校准&#64;148]</a></p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#prerequisites" id="id1">先决条件 [待校准&#64;804]</a></p></li>
 <li><p><a class="reference internal" href="#migration-steps" id="id2">迁移步骤 [待校准&#64;806]</a></p>
@@ -310,18 +310,18 @@
 </li>
 </ul>
 </div>
-<p>有两种不同的包迁移: <a class="reference external" href="http://localhost:3000/#/home?msgid=800">[待校准&#64;800]</a></p>
+<p>有两种不同的包迁移: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=800">[待校准&#64;800]</a></p>
 <ul class="simple">
-<li><p>将现有包的源文件代码从ROS 1迁移到ROS 2，目的是使源文件代码的很大一部分保持不变或至少保持相似。这方面的一个例子可以是 <a class="reference external" href="https://github.com/ros/pluginlib">pluginlib</a> ，其中源文件代码保存在同一仓库的不同分支中，并且通常在必要时可以在这些分支之间移植补丁。 <a class="reference external" href="http://localhost:3000/#/home?msgid=801">[待校准&#64;801]</a></p></li>
-<li><p>为ROS 2实现ROS 1包的相同或相似功能，但假设源文件将有很大的不同。这方面的一个例子可能是ROS 2中的 <a class="reference external" href="https://github.com/ros/ros_comm/tree/melodic-devel/clients/roscpp">roscpp</a> in ROS 1 and <a class="reference external" href="https://github.com/ros2/rclcpp/tree/master/rclcpp">rclcpp</a> ，它是独立的仓库，不共享任何代码。 <a class="reference external" href="http://localhost:3000/#/home?msgid=802">[待校准&#64;802]</a></p></li>
+<li><p>将现有包的源文件代码从ROS 1迁移到ROS 2，目的是使源文件代码的很大一部分保持不变或至少保持相似。这方面的一个例子可以是 <a class="reference external" href="https://github.com/ros/pluginlib">pluginlib</a> ，其中源文件代码保存在同一仓库的不同分支中，并且通常在必要时可以在这些分支之间移植补丁。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=801">[待校准&#64;801]</a></p></li>
+<li><p>为ROS 2实现ROS 1包的相同或相似功能，但假设源文件将有很大的不同。这方面的一个例子可能是ROS 2中的 <a class="reference external" href="https://github.com/ros/ros_comm/tree/melodic-devel/clients/roscpp">roscpp</a> in ROS 1 and <a class="reference external" href="https://github.com/ros2/rclcpp/tree/master/rclcpp">rclcpp</a> ，它是独立的仓库，不共享任何代码。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=802">[待校准&#64;802]</a></p></li>
 </ul>
-<p>本文重点介绍前一种情况，并介绍将ROS 1包迁移到ROS 2的高级步骤。它的目标不是一步一步的迁移指令，也不被认为是最终的  &quot;solution&quot; 。未来的版本将旨在使迁移更加顺畅，减少工作量，从而为ROS 1和ROS 2维护来自同一分支的单个包。 <a class="reference external" href="http://localhost:3000/#/home?msgid=803">[待校准&#64;803]</a></p>
+<p>本文重点介绍前一种情况，并介绍将ROS 1包迁移到ROS 2的高级步骤。它的目标不是一步一步的迁移指令，也不被认为是最终的  &quot;solution&quot; 。未来的版本将旨在使迁移更加顺畅，减少工作量，从而为ROS 1和ROS 2维护来自同一分支的单个包。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=803">[待校准&#64;803]</a></p>
 <div class="section" id="prerequisites">
-<h2>先决条件 <a class="reference external" href="http://localhost:3000/#/home?msgid=804">[待校准&#64;804]</a><a class="headerlink" href="#prerequisites" title="永久链接至标题"></a></h2>
-<p>在能够将ROS 1包迁移到ROS 2之前，其所有依赖项必须在ROS 2中可用。 <a class="reference external" href="http://localhost:3000/#/home?msgid=805">[待校准&#64;805]</a></p>
+<h2>先决条件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=804">[待校准&#64;804]</a><a class="headerlink" href="#prerequisites" title="永久链接至标题"></a></h2>
+<p>在能够将ROS 1包迁移到ROS 2之前，其所有依赖项必须在ROS 2中可用。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=805">[待校准&#64;805]</a></p>
 </div>
 <div class="section" id="migration-steps">
-<h2>迁移步骤 <a class="reference external" href="http://localhost:3000/#/home?msgid=806">[待校准&#64;806]</a><a class="headerlink" href="#migration-steps" title="永久链接至标题"></a></h2>
+<h2>迁移步骤 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=806">[待校准&#64;806]</a><a class="headerlink" href="#migration-steps" title="永久链接至标题"></a></h2>
 <div class="contents local topic" id="contents">
 <ul class="simple">
 <li><p><a class="reference internal" href="#package-manifests" id="id17">包装清单 [待校准&#64;807]</a></p></li>
@@ -332,72 +332,72 @@
 </ul>
 </div>
 <div class="section" id="package-manifests">
-<h3>包装清单 <a class="reference external" href="http://localhost:3000/#/home?msgid=807">[待校准&#64;807]</a><a class="headerlink" href="#package-manifests" title="永久链接至标题"></a></h3>
-<p>ROS 2不支持包规格的格式1，只支持更新的格式版本 (2和更高版本)。因此，如果 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 文件使用格式1，它必须至少更新为格式2。因为ROS 1支持所有格式，所以在ROS 1包中执行转换是安全的。 <a class="reference external" href="http://localhost:3000/#/home?msgid=808">[待校准&#64;808]</a></p>
-<p>某些包在ROS 2中可能具有不同的名称，因此可能需要相应地更新依赖项。 <a class="reference external" href="http://localhost:3000/#/home?msgid=809">[待校准&#64;809]</a></p>
+<h3>包装清单 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=807">[待校准&#64;807]</a><a class="headerlink" href="#package-manifests" title="永久链接至标题"></a></h3>
+<p>ROS 2不支持包规格的格式1，只支持更新的格式版本 (2和更高版本)。因此，如果 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 文件使用格式1，它必须至少更新为格式2。因为ROS 1支持所有格式，所以在ROS 1包中执行转换是安全的。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=808">[待校准&#64;808]</a></p>
+<p>某些包在ROS 2中可能具有不同的名称，因此可能需要相应地更新依赖项。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=809">[待校准&#64;809]</a></p>
 </div>
 <div class="section" id="metapackages">
-<h3>元包 <a class="reference external" href="http://localhost:3000/#/home?msgid=810">[待校准&#64;810]</a><a class="headerlink" href="#metapackages" title="永久链接至标题"></a></h3>
-<p>ROS 2没有元包的特殊包类型。元包仍然可以作为仅包含运行时依赖项的常规包存在。从ROS 1迁移元包时，只需删除包清单中的 <code class="docutils literal notranslate"><span class="pre">&lt;metapackage</span> <span class="pre">/&gt;</span></code> 标签。 <a class="reference external" href="http://localhost:3000/#/home?msgid=811">[待校准&#64;811]</a></p>
+<h3>元包 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=810">[待校准&#64;810]</a><a class="headerlink" href="#metapackages" title="永久链接至标题"></a></h3>
+<p>ROS 2没有元包的特殊包类型。元包仍然可以作为仅包含运行时依赖项的常规包存在。从ROS 1迁移元包时，只需删除包清单中的 <code class="docutils literal notranslate"><span class="pre">&lt;metapackage</span> <span class="pre">/&gt;</span></code> 标签。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=811">[待校准&#64;811]</a></p>
 </div>
 <div class="section" id="message-service-and-action-definitions">
-<h3>消息、服务和动作定义 <a class="reference external" href="http://localhost:3000/#/home?msgid=812">[待校准&#64;812]</a><a class="headerlink" href="#message-service-and-action-definitions" title="永久链接至标题"></a></h3>
-<p>消息文件必须以 <code class="docutils literal notranslate"><span class="pre">.msg</span></code> 结尾，并且必须位于子文件夹 <code class="docutils literal notranslate"><span class="pre">msg</span></code> 。服务文件必须以 <code class="docutils literal notranslate"><span class="pre">.srv</span></code> 结尾，并且必须位于 <code class="docutils literal notranslate"><span class="pre">srv</span></code> 子文件夹中。Action文件必须结束 <code class="docutils literal notranslate"><span class="pre">.action</span></code> 必须位于子文件夹 <code class="docutils literal notranslate"><span class="pre">action</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=813">[待校准&#64;813]</a></p>
-<p>这些文件可能需要更新以符合 <a class="reference external" href="https://design.ros2.org/articles/interface_definition.html">ROS Interface definition</a> 。一些原始类型已被删除，ROS 1中内置类型的 <code class="docutils literal notranslate"><span class="pre">duration</span></code> 和 <code class="docutils literal notranslate"><span class="pre">time</span></code> 类型已被普通消息定义替换，必须从 <a class="reference external" href="https://github.com/ros2/rcl_interfaces/tree/master/builtin_interfaces">builtin_interfaces</a> 包中使用。此外，一些命名约定比ROS 1更严格。 <a class="reference external" href="http://localhost:3000/#/home?msgid=814">[待校准&#64;814]</a></p>
-<p>在你的 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 里: <a class="reference external" href="http://localhost:3000/#/home?msgid=815">[待校准&#64;815]</a></p>
+<h3>消息、服务和动作定义 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=812">[待校准&#64;812]</a><a class="headerlink" href="#message-service-and-action-definitions" title="永久链接至标题"></a></h3>
+<p>消息文件必须以 <code class="docutils literal notranslate"><span class="pre">.msg</span></code> 结尾，并且必须位于子文件夹 <code class="docutils literal notranslate"><span class="pre">msg</span></code> 。服务文件必须以 <code class="docutils literal notranslate"><span class="pre">.srv</span></code> 结尾，并且必须位于 <code class="docutils literal notranslate"><span class="pre">srv</span></code> 子文件夹中。Action文件必须结束 <code class="docutils literal notranslate"><span class="pre">.action</span></code> 必须位于子文件夹 <code class="docutils literal notranslate"><span class="pre">action</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=813">[待校准&#64;813]</a></p>
+<p>这些文件可能需要更新以符合 <a class="reference external" href="https://design.ros2.org/articles/interface_definition.html">ROS Interface definition</a> 。一些原始类型已被删除，ROS 1中内置类型的 <code class="docutils literal notranslate"><span class="pre">duration</span></code> 和 <code class="docutils literal notranslate"><span class="pre">time</span></code> 类型已被普通消息定义替换，必须从 <a class="reference external" href="https://github.com/ros2/rcl_interfaces/tree/master/builtin_interfaces">builtin_interfaces</a> 包中使用。此外，一些命名约定比ROS 1更严格。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=814">[待校准&#64;814]</a></p>
+<p>在你的 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 里: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=815">[待校准&#64;815]</a></p>
 <ul class="simple">
-<li><p>加入 <code class="docutils literal notranslate"><span class="pre">&lt;buildtool_depend&gt;rosidl_default_generators&lt;/buildtool_depend&gt;</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=816">[待校准&#64;816]</a></p></li>
-<li><p>加入 <code class="docutils literal notranslate"><span class="pre">&lt;exec_depend&gt;rosidl_default_runtime&lt;/exec_depend&gt;</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=817">[待校准&#64;817]</a></p></li>
-<li><p>对于每个依赖消息包，添加 <code class="docutils literal notranslate"><span class="pre">&lt;depend&gt;message_package&lt;/depend&gt;</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=818">[待校准&#64;818]</a></p></li>
+<li><p>加入 <code class="docutils literal notranslate"><span class="pre">&lt;buildtool_depend&gt;rosidl_default_generators&lt;/buildtool_depend&gt;</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=816">[待校准&#64;816]</a></p></li>
+<li><p>加入 <code class="docutils literal notranslate"><span class="pre">&lt;exec_depend&gt;rosidl_default_runtime&lt;/exec_depend&gt;</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=817">[待校准&#64;817]</a></p></li>
+<li><p>对于每个依赖消息包，添加 <code class="docutils literal notranslate"><span class="pre">&lt;depend&gt;message_package&lt;/depend&gt;</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=818">[待校准&#64;818]</a></p></li>
 </ul>
-<p>在你的 <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> 里: <a class="reference external" href="http://localhost:3000/#/home?msgid=819">[待校准&#64;819]</a></p>
+<p>在你的 <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> 里: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=819">[待校准&#64;819]</a></p>
 <ul class="simple">
-<li><p>从启用c14 14开始 <a class="reference external" href="http://localhost:3000/#/home?msgid=820">[待校准&#64;820]</a></p></li>
+<li><p>从启用c14 14开始 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=820">[待校准&#64;820]</a></p></li>
 </ul>
 <div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CXX_STANDARD</span> <span class="s">14</span><span class="p">)</span>
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>添加 <code class="docutils literal notranslate"><span class="pre">find_package(rosidl_default_generators</span> <span class="pre">REQUIRED)</span></code>  <a class="reference external" href="http://localhost:3000/#/home?msgid=821">[待校准&#64;821]</a></p></li>
-<li><p>对于每个依赖消息包，添加 <code class="docutils literal notranslate"><span class="pre">find_package(message_package</span> <span class="pre">REQUIRED)</span></code> ，并用 <code class="docutils literal notranslate"><span class="pre">rosidl_generate_interfaces</span></code> 替换调用 <code class="docutils literal notranslate"><span class="pre">generate_messages</span></code> 的CMake函数。 <a class="reference external" href="http://localhost:3000/#/home?msgid=822">[待校准&#64;822]</a></p></li>
+<li><p>添加 <code class="docutils literal notranslate"><span class="pre">find_package(rosidl_default_generators</span> <span class="pre">REQUIRED)</span></code>  <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=821">[待校准&#64;821]</a></p></li>
+<li><p>对于每个依赖消息包，添加 <code class="docutils literal notranslate"><span class="pre">find_package(message_package</span> <span class="pre">REQUIRED)</span></code> ，并用 <code class="docutils literal notranslate"><span class="pre">rosidl_generate_interfaces</span></code> 替换调用 <code class="docutils literal notranslate"><span class="pre">generate_messages</span></code> 的CMake函数。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=822">[待校准&#64;822]</a></p></li>
 </ul>
-<p>这将取代所有可以删除的消息和服务文件的 <code class="docutils literal notranslate"><span class="pre">add_message_files</span></code> 和 <code class="docutils literal notranslate"><span class="pre">add_service_files</span></code> 列表。 <a class="reference external" href="http://localhost:3000/#/home?msgid=823">[待校准&#64;823]</a></p>
+<p>这将取代所有可以删除的消息和服务文件的 <code class="docutils literal notranslate"><span class="pre">add_message_files</span></code> 和 <code class="docutils literal notranslate"><span class="pre">add_service_files</span></code> 列表。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=823">[待校准&#64;823]</a></p>
 </div>
 <div class="section" id="build-system">
-<h3>构建系统 <a class="reference external" href="http://localhost:3000/#/home?msgid=824">[待校准&#64;824]</a><a class="headerlink" href="#build-system" title="永久链接至标题"></a></h3>
-<p>ROS 2中的构建系统被调用 <a class="reference external" href="https://design.ros2.org/articles/ament.html">ament</a> ，构建工具是 <a class="reference internal" href="../Tutorials/Colcon-Tutorial.html"><span class="doc">colcon</span></a>. ，Ament建立在CMake上:  <code class="docutils literal notranslate"><span class="pre">ament_cmake</span></code> 提供CMake功能，使编写 <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> 文件更容易。 <a class="reference external" href="http://localhost:3000/#/home?msgid=825">[待校准&#64;825]</a></p>
+<h3>构建系统 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=824">[待校准&#64;824]</a><a class="headerlink" href="#build-system" title="永久链接至标题"></a></h3>
+<p>ROS 2中的构建系统被调用 <a class="reference external" href="https://design.ros2.org/articles/ament.html">ament</a> ，构建工具是 <a class="reference internal" href="../Tutorials/Colcon-Tutorial.html"><span class="doc">colcon</span></a>. ，Ament建立在CMake上:  <code class="docutils literal notranslate"><span class="pre">ament_cmake</span></code> 提供CMake功能，使编写 <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> 文件更容易。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=825">[待校准&#64;825]</a></p>
 <div class="section" id="build-tool">
-<h4>构建工具 <a class="reference external" href="http://localhost:3000/#/home?msgid=826">[待校准&#64;826]</a><a class="headerlink" href="#build-tool" title="永久链接至标题"></a></h4>
-<p>而不是使用 <code class="docutils literal notranslate"><span class="pre">catkin_make</span></code> ， <code class="docutils literal notranslate"><span class="pre">catkin_make_isolated</span></code> 或 <code class="docutils literal notranslate"><span class="pre">catkin</span> <span class="pre">build</span></code> ROS 2使用命令行工具 <a class="reference external" href="https://design.ros2.org/articles/build_tool.html">colcon</a> 建立和安装一组包。 <a class="reference external" href="http://localhost:3000/#/home?msgid=827">[待校准&#64;827]</a></p>
+<h4>构建工具 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=826">[待校准&#64;826]</a><a class="headerlink" href="#build-tool" title="永久链接至标题"></a></h4>
+<p>而不是使用 <code class="docutils literal notranslate"><span class="pre">catkin_make</span></code> ， <code class="docutils literal notranslate"><span class="pre">catkin_make_isolated</span></code> 或 <code class="docutils literal notranslate"><span class="pre">catkin</span> <span class="pre">build</span></code> ROS 2使用命令行工具 <a class="reference external" href="https://design.ros2.org/articles/build_tool.html">colcon</a> 建立和安装一组包。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=827">[待校准&#64;827]</a></p>
 </div>
 <div class="section" id="pure-python-package">
-<h4>纯Python包 <a class="reference external" href="http://localhost:3000/#/home?msgid=828">[待校准&#64;828]</a><a class="headerlink" href="#pure-python-package" title="永久链接至标题"></a></h4>
-<p>如果ROS 1包仅使用CMake调用 <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> 文件，并且不包含除Python代码之外的任何内容 (例如g.也没有消息、服务等。) 它应该在ROS 2中转换为纯Python包: <a class="reference external" href="http://localhost:3000/#/home?msgid=829">[待校准&#64;829]</a></p>
+<h4>纯Python包 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=828">[待校准&#64;828]</a><a class="headerlink" href="#pure-python-package" title="永久链接至标题"></a></h4>
+<p>如果ROS 1包仅使用CMake调用 <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> 文件，并且不包含除Python代码之外的任何内容 (例如g.也没有消息、服务等。) 它应该在ROS 2中转换为纯Python包: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=829">[待校准&#64;829]</a></p>
 <ul>
-<li><p>更新或添加 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 文件中的构建类型: <a class="reference external" href="http://localhost:3000/#/home?msgid=830">[待校准&#64;830]</a></p>
+<li><p>更新或添加 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 文件中的构建类型: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=830">[待校准&#64;830]</a></p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;export&gt;</span>
   <span class="nt">&lt;build_type&gt;</span>ament_python<span class="nt">&lt;/build_type&gt;</span>
 <span class="nt">&lt;/export&gt;</span>
 </pre></div>
 </div>
 </li>
-<li><p>删除 <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> 文件 <a class="reference external" href="http://localhost:3000/#/home?msgid=831">[待校准&#64;831]</a></p></li>
-<li><p>将 <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> 文件更新为标准Python安装脚本 <a class="reference external" href="http://localhost:3000/#/home?msgid=832">[待校准&#64;832]</a></p></li>
+<li><p>删除 <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> 文件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=831">[待校准&#64;831]</a></p></li>
+<li><p>将 <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> 文件更新为标准Python安装脚本 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=832">[待校准&#64;832]</a></p></li>
 </ul>
-<p>ROS 2仅支持Python 3。虽然每个包可以选择也支持Python 2，但如果它使用其他ROS 2包提供的任何API，则必须使用Python 3调用可执行文件。 <a class="reference external" href="http://localhost:3000/#/home?msgid=833">[待校准&#64;833]</a></p>
+<p>ROS 2仅支持Python 3。虽然每个包可以选择也支持Python 2，但如果它使用其他ROS 2包提供的任何API，则必须使用Python 3调用可执行文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=833">[待校准&#64;833]</a></p>
 </div>
 <div class="section" id="update-the-cmakelists-txt-to-use-ament-cmake">
-<h4>更新 * CMakeLists.txt * 以使用 * ament _ cmake * <a class="reference external" href="http://localhost:3000/#/home?msgid=834">[待校准&#64;834]</a><a class="headerlink" href="#update-the-cmakelists-txt-to-use-ament-cmake" title="永久链接至标题"></a></h4>
-<p>应用以下更改以使用 <code class="docutils literal notranslate"><span class="pre">ament_cmake</span></code> 代替 <code class="docutils literal notranslate"><span class="pre">catkin</span></code> : <a class="reference external" href="http://localhost:3000/#/home?msgid=835">[待校准&#64;835]</a></p>
+<h4>更新 * CMakeLists.txt * 以使用 * ament _ cmake * <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=834">[待校准&#64;834]</a><a class="headerlink" href="#update-the-cmakelists-txt-to-use-ament-cmake" title="永久链接至标题"></a></h4>
+<p>应用以下更改以使用 <code class="docutils literal notranslate"><span class="pre">ament_cmake</span></code> 代替 <code class="docutils literal notranslate"><span class="pre">catkin</span></code> : <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=835">[待校准&#64;835]</a></p>
 <ul>
-<li><p>在 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 文件导出部分设置构建类型: <a class="reference external" href="http://localhost:3000/#/home?msgid=836">[待校准&#64;836]</a></p>
+<li><p>在 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 文件导出部分设置构建类型: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=836">[待校准&#64;836]</a></p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;export&gt;</span>
   <span class="nt">&lt;build_type&gt;</span>ament_cmake<span class="nt">&lt;/build_type&gt;</span>
 <span class="nt">&lt;/export&gt;</span>
 </pre></div>
 </div>
 </li>
-<li><p>将 <code class="docutils literal notranslate"><span class="pre">find_package</span></code> 的调用改为 <code class="docutils literal notranslate"><span class="pre">catkin</span></code> ，将 <code class="docutils literal notranslate"><span class="pre">COMPONENTS</span></code> 的调用改为: <a class="reference external" href="http://localhost:3000/#/home?msgid=837">[待校准&#64;837]</a></p>
+<li><p>将 <code class="docutils literal notranslate"><span class="pre">find_package</span></code> 的调用改为 <code class="docutils literal notranslate"><span class="pre">catkin</span></code> ，将 <code class="docutils literal notranslate"><span class="pre">COMPONENTS</span></code> 的调用改为: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=837">[待校准&#64;837]</a></p>
 <div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">find_package</span><span class="p">(</span><span class="s">ament_cmake</span> <span class="s">REQUIRED</span><span class="p">)</span>
 <span class="nb">find_package</span><span class="p">(</span><span class="s">component1</span> <span class="s">REQUIRED</span><span class="p">)</span>
 <span class="c"># ...</span>
@@ -405,28 +405,28 @@
 </pre></div>
 </div>
 </li>
-<li><p>使用以下命令移动和更新 <code class="docutils literal notranslate"><span class="pre">catkin_package</span></code> 调用: <a class="reference external" href="http://localhost:3000/#/home?msgid=838">[待校准&#64;838]</a></p>
+<li><p>使用以下命令移动和更新 <code class="docutils literal notranslate"><span class="pre">catkin_package</span></code> 调用: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=838">[待校准&#64;838]</a></p>
 <ul class="simple">
-<li><p>而是在所有目标都注册后调用 <code class="docutils literal notranslate"><span class="pre">ament_package</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=839">[待校准&#64;839]</a></p></li>
-<li><p>[需手动修复的语法] <a class="reference external" href="https://github.com/ament/ament_cmake/blob/master/ament_cmake_core/cmake/core/ament_package.cmake">ament_package</a> 唯一有效的论据是 <code class="docutils literal notranslate"><span class="pre">CONFIG_EXTRAS</span></code> 。所有其他参数都包含在单独的函数中，这些函数都需要在 *  <code class="docutils literal notranslate"><span class="pre">ament_package</span></code> 之前调用: <a class="reference external" href="http://localhost:3000/#/home?msgid=840">[待校准&#64;840]</a></p>
+<li><p>而是在所有目标都注册后调用 <code class="docutils literal notranslate"><span class="pre">ament_package</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=839">[待校准&#64;839]</a></p></li>
+<li><p>[需手动修复的语法] <a class="reference external" href="https://github.com/ament/ament_cmake/blob/master/ament_cmake_core/cmake/core/ament_package.cmake">ament_package</a> 唯一有效的论据是 <code class="docutils literal notranslate"><span class="pre">CONFIG_EXTRAS</span></code> 。所有其他参数都包含在单独的函数中，这些函数都需要在 *  <code class="docutils literal notranslate"><span class="pre">ament_package</span></code> 之前调用: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=840">[待校准&#64;840]</a></p>
 <ul>
-<li><p>而不是之前通过 <code class="docutils literal notranslate"><span class="pre">CATKIN_DEPENDS</span> <span class="pre">...</span></code> 调用 <code class="docutils literal notranslate"><span class="pre">ament_export_dependencies(...)</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=841">[待校准&#64;841]</a></p></li>
-<li><p>而不是之前通过 <code class="docutils literal notranslate"><span class="pre">INCLUDE_DIRS</span> <span class="pre">...</span></code> 调用 <code class="docutils literal notranslate"><span class="pre">ament_export_include_directories(...)</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=842">[待校准&#64;842]</a></p></li>
-<li><p>而不是之前通过 <code class="docutils literal notranslate"><span class="pre">LIBRARIES</span> <span class="pre">...</span></code> 调用 <code class="docutils literal notranslate"><span class="pre">ament_export_libraries(...)</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=843">[待校准&#64;843]</a></p></li>
+<li><p>而不是之前通过 <code class="docutils literal notranslate"><span class="pre">CATKIN_DEPENDS</span> <span class="pre">...</span></code> 调用 <code class="docutils literal notranslate"><span class="pre">ament_export_dependencies(...)</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=841">[待校准&#64;841]</a></p></li>
+<li><p>而不是之前通过 <code class="docutils literal notranslate"><span class="pre">INCLUDE_DIRS</span> <span class="pre">...</span></code> 调用 <code class="docutils literal notranslate"><span class="pre">ament_export_include_directories(...)</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=842">[待校准&#64;842]</a></p></li>
+<li><p>而不是之前通过 <code class="docutils literal notranslate"><span class="pre">LIBRARIES</span> <span class="pre">...</span></code> 调用 <code class="docutils literal notranslate"><span class="pre">ament_export_libraries(...)</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=843">[待校准&#64;843]</a></p></li>
 </ul>
 </li>
 <li><p><strong>TODO document ament_export_targets (``ament_export_interfaces`` in Eloquent and older)?</strong></p></li>
 </ul>
 </li>
-<li><p>用 <a class="reference external" href="https://github.com/ros2/rosidl/blob/master/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake">rosidl_generate_interfaces</a> 代替 <code class="docutils literal notranslate"><span class="pre">add_message_files</span></code> 、 <code class="docutils literal notranslate"><span class="pre">add_service_files</span></code> 和 <code class="docutils literal notranslate"><span class="pre">generate_messages</span></code> 的调用。 <a class="reference external" href="http://localhost:3000/#/home?msgid=845">[待校准&#64;845]</a></p>
+<li><p>用 <a class="reference external" href="https://github.com/ros2/rosidl/blob/master/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake">rosidl_generate_interfaces</a> 代替 <code class="docutils literal notranslate"><span class="pre">add_message_files</span></code> 、 <code class="docutils literal notranslate"><span class="pre">add_service_files</span></code> 和 <code class="docutils literal notranslate"><span class="pre">generate_messages</span></code> 的调用。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=845">[待校准&#64;845]</a></p>
 <ul>
-<li><p>第一个论点是 <code class="docutils literal notranslate"><span class="pre">target_name</span></code> 。如果您是're building just one library it' ${PROJECT_NAME}'' <a class="reference external" href="http://localhost:3000/#/home?msgid=846">[待校准&#64;846]</a></p></li>
-<li><p>后跟相对于包根目录的消息文件名列表。 <a class="reference external" href="http://localhost:3000/#/home?msgid=847">[待校准&#64;847]</a></p>
+<li><p>第一个论点是 <code class="docutils literal notranslate"><span class="pre">target_name</span></code> 。如果您是're building just one library it' ${PROJECT_NAME}'' <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=846">[待校准&#64;846]</a></p></li>
+<li><p>后跟相对于包根目录的消息文件名列表。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=847">[待校准&#64;847]</a></p>
 <ul class="simple">
-<li><p>如果您将多次使用文件名列表，建议编写一个消息文件列表，并将该列表传递给函数以使其清晰。 <a class="reference external" href="http://localhost:3000/#/home?msgid=848">[待校准&#64;848]</a></p></li>
+<li><p>如果您将多次使用文件名列表，建议编写一个消息文件列表，并将该列表传递给函数以使其清晰。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=848">[待校准&#64;848]</a></p></li>
 </ul>
 </li>
-<li><p>最终的多值关键字参数fpr <code class="docutils literal notranslate"><span class="pre">generate_messages</span></code> 是 <code class="docutils literal notranslate"><span class="pre">DEPENDENCIES</span></code> ，它需要从属消息包的列表。 <a class="reference external" href="http://localhost:3000/#/home?msgid=849">[待校准&#64;849]</a></p>
+<li><p>最终的多值关键字参数fpr <code class="docutils literal notranslate"><span class="pre">generate_messages</span></code> 是 <code class="docutils literal notranslate"><span class="pre">DEPENDENCIES</span></code> ，它需要从属消息包的列表。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=849">[待校准&#64;849]</a></p>
 <div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">rosidl_generate_interfaces</span><span class="p">(</span><span class="o">${</span><span class="nv">PROJECT_NAME</span><span class="o">}</span>
   <span class="o">${</span><span class="nv">msg_files</span><span class="o">}</span>
   <span class="s">DEPENDENCIES</span> <span class="s">std_msgs</span>
@@ -436,26 +436,26 @@
 </li>
 </ul>
 </li>
-<li><p>删除出现的 * devel空间 <a href="#id1"><span class="problematic" id="id2">*</span></a>。像 <code class="docutils literal notranslate"><span class="pre">CATKIN_DEVEL_PREFIX</span></code> 这样的相关CMake变量已经不存在了。 <a class="reference external" href="http://localhost:3000/#/home?msgid=850">[待校准&#64;850]</a></p>
+<li><p>删除出现的 * devel空间 <a href="#id1"><span class="problematic" id="id2">*</span></a>。像 <code class="docutils literal notranslate"><span class="pre">CATKIN_DEVEL_PREFIX</span></code> 这样的相关CMake变量已经不存在了。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=850">[待校准&#64;850]</a></p>
 <ul class="simple">
-<li><p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">CATKIN_DEPENDS</span></code> 和 <code class="docutils literal notranslate"><span class="pre">DEPENDS</span></code> 的参数被传递给新的函数 <a class="reference external" href="https://github.com/ament/ament_cmake/blob/master/ament_cmake_export_dependencies/cmake/ament_export_dependencies.cmake">ament_export_dependencies</a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=851">[待校准&#64;851]</a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CATKIN_GLOBAL_BIN_DESTINATION</span></code>: <code class="docutils literal notranslate"><span class="pre">bin</span></code> <a class="reference external" href="http://localhost:3000/#/home?msgid=852">[待校准&#64;852]</a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CATKIN_GLOBAL_INCLUDE_DESTINATION</span></code>: <code class="docutils literal notranslate"><span class="pre">include</span></code> <a class="reference external" href="http://localhost:3000/#/home?msgid=853">[待校准&#64;853]</a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CATKIN_GLOBAL_LIB_DESTINATION</span></code>: <code class="docutils literal notranslate"><span class="pre">lib</span></code> <a class="reference external" href="http://localhost:3000/#/home?msgid=854">[待校准&#64;854]</a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CATKIN_GLOBAL_LIBEXEC_DESTINATION</span></code>: <code class="docutils literal notranslate"><span class="pre">lib</span></code> <a class="reference external" href="http://localhost:3000/#/home?msgid=855">[待校准&#64;855]</a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CATKIN_GLOBAL_SHARE_DESTINATION</span></code>: <code class="docutils literal notranslate"><span class="pre">share</span></code> <a class="reference external" href="http://localhost:3000/#/home?msgid=856">[待校准&#64;856]</a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CATKIN_PACKAGE_BIN_DESTINATION</span></code>: <code class="docutils literal notranslate"><span class="pre">lib/${PROJECT_NAME}</span></code> <a class="reference external" href="http://localhost:3000/#/home?msgid=857">[待校准&#64;857]</a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CATKIN_PACKAGE_INCLUDE_DESTINATION</span></code>: <code class="docutils literal notranslate"><span class="pre">include/${PROJECT_NAME}</span></code> <a class="reference external" href="http://localhost:3000/#/home?msgid=858">[待校准&#64;858]</a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CATKIN_PACKAGE_LIB_DESTINATION</span></code>: <code class="docutils literal notranslate"><span class="pre">lib</span></code> <a class="reference external" href="http://localhost:3000/#/home?msgid=859">[待校准&#64;859]</a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CATKIN_PACKAGE_SHARE_DESTINATION</span></code>: <code class="docutils literal notranslate"><span class="pre">share/${PROJECT_NAME}</span></code> <a class="reference external" href="http://localhost:3000/#/home?msgid=860">[待校准&#64;860]</a></p></li>
+<li><p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">CATKIN_DEPENDS</span></code> 和 <code class="docutils literal notranslate"><span class="pre">DEPENDS</span></code> 的参数被传递给新的函数 <a class="reference external" href="https://github.com/ament/ament_cmake/blob/master/ament_cmake_export_dependencies/cmake/ament_export_dependencies.cmake">ament_export_dependencies</a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=851">[待校准&#64;851]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CATKIN_GLOBAL_BIN_DESTINATION</span></code>: <code class="docutils literal notranslate"><span class="pre">bin</span></code> <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=852">[待校准&#64;852]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CATKIN_GLOBAL_INCLUDE_DESTINATION</span></code>: <code class="docutils literal notranslate"><span class="pre">include</span></code> <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=853">[待校准&#64;853]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CATKIN_GLOBAL_LIB_DESTINATION</span></code>: <code class="docutils literal notranslate"><span class="pre">lib</span></code> <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=854">[待校准&#64;854]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CATKIN_GLOBAL_LIBEXEC_DESTINATION</span></code>: <code class="docutils literal notranslate"><span class="pre">lib</span></code> <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=855">[待校准&#64;855]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CATKIN_GLOBAL_SHARE_DESTINATION</span></code>: <code class="docutils literal notranslate"><span class="pre">share</span></code> <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=856">[待校准&#64;856]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CATKIN_PACKAGE_BIN_DESTINATION</span></code>: <code class="docutils literal notranslate"><span class="pre">lib/${PROJECT_NAME}</span></code> <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=857">[待校准&#64;857]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CATKIN_PACKAGE_INCLUDE_DESTINATION</span></code>: <code class="docutils literal notranslate"><span class="pre">include/${PROJECT_NAME}</span></code> <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=858">[待校准&#64;858]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CATKIN_PACKAGE_LIB_DESTINATION</span></code>: <code class="docutils literal notranslate"><span class="pre">lib</span></code> <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=859">[待校准&#64;859]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CATKIN_PACKAGE_SHARE_DESTINATION</span></code>: <code class="docutils literal notranslate"><span class="pre">share/${PROJECT_NAME}</span></code> <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=860">[待校准&#64;860]</a></p></li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="section" id="unit-tests">
-<h4>单元测试 <a class="reference external" href="http://localhost:3000/#/home?msgid=861">[待校准&#64;861]</a><a class="headerlink" href="#unit-tests" title="永久链接至标题"></a></h4>
-<p>如果您正在使用gtest: <a class="reference external" href="http://localhost:3000/#/home?msgid=862">[待校准&#64;862]</a></p>
-<p>用 <code class="docutils literal notranslate"><span class="pre">BUILD_TESTING</span></code> 代替 <code class="docutils literal notranslate"><span class="pre">CATKIN_ENABLE_TESTING</span></code> 。用 <code class="docutils literal notranslate"><span class="pre">ament_add_gtest</span></code> 代替 <code class="docutils literal notranslate"><span class="pre">catkin_add_gtest</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=863">[待校准&#64;863]</a></p>
+<h4>单元测试 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=861">[待校准&#64;861]</a><a class="headerlink" href="#unit-tests" title="永久链接至标题"></a></h4>
+<p>如果您正在使用gtest: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=862">[待校准&#64;862]</a></p>
+<p>用 <code class="docutils literal notranslate"><span class="pre">BUILD_TESTING</span></code> 代替 <code class="docutils literal notranslate"><span class="pre">CATKIN_ENABLE_TESTING</span></code> 。用 <code class="docutils literal notranslate"><span class="pre">ament_add_gtest</span></code> 代替 <code class="docutils literal notranslate"><span class="pre">catkin_add_gtest</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=863">[待校准&#64;863]</a></p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">-   if (CATKIN_ENABLE_TESTING)</span>
 <span class="gd">-     find_package(GTest REQUIRED)  # or rostest</span>
 <span class="gd">-     include_directories(${GTEST_INCLUDE_DIRS})</span>
@@ -476,44 +476,44 @@
 <span class="gi">+   endif()</span>
 </pre></div>
 </div>
-<p>在你的 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 中加入 <code class="docutils literal notranslate"><span class="pre">&lt;test_depend&gt;ament_cmake_gtest&lt;/test_depend&gt;</span></code> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=864">[待校准&#64;864]</a></p>
+<p>在你的 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 中加入 <code class="docutils literal notranslate"><span class="pre">&lt;test_depend&gt;ament_cmake_gtest&lt;/test_depend&gt;</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=864">[待校准&#64;864]</a></p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">-   &lt;test_depend&gt;rostest&lt;/test_depend&gt;</span>
 <span class="gi">+   &lt;test_depend&gt;ament_cmake_gtest&lt;/test_depend&gt;</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="linters">
-<h4>林特 <a class="reference external" href="http://localhost:3000/#/home?msgid=327">[待校准&#64;327]</a><a class="headerlink" href="#linters" title="永久链接至标题"></a></h4>
-<p>在ROS 2中，我们正在努力使用linters维护干净的代码。不同语言的风格在我们的 <a class="reference internal" href="Developer-Guide.html"><span class="doc">Developer Guide</span></a>. 中定义 <a class="reference external" href="http://localhost:3000/#/home?msgid=865">[待校准&#64;865]</a></p>
-<p>如果你从头开始一个项目，建议遵循风格指南，通过在 <code class="docutils literal notranslate"><span class="pre">if(BUILD_TESTING)</span></code> 下面添加这些线来打开自动linter单元测试 (直到阿尔法5，这是 <code class="docutils literal notranslate"><span class="pre">AMENT_ENABLE_TESTING</span></code> )。 <a class="reference external" href="http://localhost:3000/#/home?msgid=866">[待校准&#64;866]</a></p>
+<h4>林特 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=327">[待校准&#64;327]</a><a class="headerlink" href="#linters" title="永久链接至标题"></a></h4>
+<p>在ROS 2中，我们正在努力使用linters维护干净的代码。不同语言的风格在我们的 <a class="reference internal" href="Developer-Guide.html"><span class="doc">Developer Guide</span></a>. 中定义 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=865">[待校准&#64;865]</a></p>
+<p>如果你从头开始一个项目，建议遵循风格指南，通过在 <code class="docutils literal notranslate"><span class="pre">if(BUILD_TESTING)</span></code> 下面添加这些线来打开自动linter单元测试 (直到阿尔法5，这是 <code class="docutils literal notranslate"><span class="pre">AMENT_ENABLE_TESTING</span></code> )。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=866">[待校准&#64;866]</a></p>
 <div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">find_package</span><span class="p">(</span><span class="s">ament_lint_auto</span> <span class="s">REQUIRED</span><span class="p">)</span>
 <span class="nb">ament_lint_auto_find_test_dependencies</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>您还需要将以下依赖项添加到您的 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 中: <a class="reference external" href="http://localhost:3000/#/home?msgid=867">[待校准&#64;867]</a></p>
+<p>您还需要将以下依赖项添加到您的 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 中: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=867">[待校准&#64;867]</a></p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;test_depend&gt;</span>ament_lint_auto<span class="nt">&lt;/test_depend&gt;</span>
 <span class="nt">&lt;test_depend&gt;</span>ament_lint_common<span class="nt">&lt;/test_depend&gt;</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="continue-to-use-catkin-in-cmake">
-<h4>继续在CMake中使用 <code class="docutils literal notranslate"><span class="pre">catkin</span></code>  <a class="reference external" href="http://localhost:3000/#/home?msgid=868">[待校准&#64;868]</a><a class="headerlink" href="#continue-to-use-catkin-in-cmake" title="永久链接至标题"></a></h4>
-<p>ROS 2使用ament作为构建系统，但为了向后兼容，ROS 2有一个调用ed <code class="docutils literal notranslate"><span class="pre">catkin</span></code> 的包，它提供了与ROS 1catkin几乎相同的API。为了使用这个向后兼容的应用编程接口， <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> 只能更新到在所有目标之后调用函数 <code class="docutils literal notranslate"><span class="pre">catkin_ament_package()</span></code>  <a href="#id1"><span class="problematic" id="id2">*</span></a>。 <a class="reference external" href="http://localhost:3000/#/home?msgid=869">[待校准&#64;869]</a></p>
-<p>NOTE注意: 这尚未实施，目前只是一个想法。由于与依赖项相关的更改数量，尚未确定此兼容性API是否足够有用以证明努力的合理性。** <a class="reference external" href="http://localhost:3000/#/home?msgid=870">[待校准&#64;870]</a></p>
+<h4>继续在CMake中使用 <code class="docutils literal notranslate"><span class="pre">catkin</span></code>  <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=868">[待校准&#64;868]</a><a class="headerlink" href="#continue-to-use-catkin-in-cmake" title="永久链接至标题"></a></h4>
+<p>ROS 2使用ament作为构建系统，但为了向后兼容，ROS 2有一个调用ed <code class="docutils literal notranslate"><span class="pre">catkin</span></code> 的包，它提供了与ROS 1catkin几乎相同的API。为了使用这个向后兼容的应用编程接口， <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> 只能更新到在所有目标之后调用函数 <code class="docutils literal notranslate"><span class="pre">catkin_ament_package()</span></code>  <a href="#id1"><span class="problematic" id="id2">*</span></a>。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=869">[待校准&#64;869]</a></p>
+<p>NOTE注意: 这尚未实施，目前只是一个想法。由于与依赖项相关的更改数量，尚未确定此兼容性API是否足够有用以证明努力的合理性。** <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=870">[待校准&#64;870]</a></p>
 </div>
 </div>
 <div class="section" id="update-source-code">
-<h3>更新源文件 <a class="reference external" href="http://localhost:3000/#/home?msgid=871">[待校准&#64;871]</a><a class="headerlink" href="#update-source-code" title="永久链接至标题"></a></h3>
+<h3>更新源文件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=871">[待校准&#64;871]</a><a class="headerlink" href="#update-source-code" title="永久链接至标题"></a></h3>
 <div class="section" id="messages-services-and-actions">
-<h4>消息、服务和动作 <a class="reference external" href="http://localhost:3000/#/home?msgid=872">[待校准&#64;872]</a><a class="headerlink" href="#messages-services-and-actions" title="永久链接至标题"></a></h4>
-<p>ROS 2消息、服务和动作的命名空间在包名称后使用子命名空间 (分别为 <code class="docutils literal notranslate"><span class="pre">msg</span></code> 、 <code class="docutils literal notranslate"><span class="pre">srv</span></code> 或 <code class="docutils literal notranslate"><span class="pre">action</span></code> )。因此，一个包含看起来像:  <code class="docutils literal notranslate"><span class="pre">#include</span> <span class="pre">&lt;my_interfaces/msg/my_message.hpp&gt;</span></code> 。然后将ctype类型命名为: “my_interface::msg:: mymessage”。 <a class="reference external" href="http://localhost:3000/#/home?msgid=873">[待校准&#64;873]</a></p>
-<p>共享指针类型在消息结构中作为typedefs提供: “我的接口::msg::MyMessage::SharedPtr `` as well as `` 我的接口::msg::MyMessage:: constsharedptr”。 <a class="reference external" href="http://localhost:3000/#/home?msgid=874">[待校准&#64;874]</a></p>
-<p>有关更多详细信息，请参阅有关 <a class="reference external" href="https://design.ros2.org/articles/generated_interfaces_cpp.html">generated C++ interfaces</a> 的文章。 <a class="reference external" href="http://localhost:3000/#/home?msgid=875">[待校准&#64;875]</a></p>
-<p>迁移要求包含更改方式: <a class="reference external" href="http://localhost:3000/#/home?msgid=876">[待校准&#64;876]</a></p>
+<h4>消息、服务和动作 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=872">[待校准&#64;872]</a><a class="headerlink" href="#messages-services-and-actions" title="永久链接至标题"></a></h4>
+<p>ROS 2消息、服务和动作的命名空间在包名称后使用子命名空间 (分别为 <code class="docutils literal notranslate"><span class="pre">msg</span></code> 、 <code class="docutils literal notranslate"><span class="pre">srv</span></code> 或 <code class="docutils literal notranslate"><span class="pre">action</span></code> )。因此，一个包含看起来像:  <code class="docutils literal notranslate"><span class="pre">#include</span> <span class="pre">&lt;my_interfaces/msg/my_message.hpp&gt;</span></code> 。然后将ctype类型命名为: “my_interface::msg:: mymessage”。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=873">[待校准&#64;873]</a></p>
+<p>共享指针类型在消息结构中作为typedefs提供: “我的接口::msg::MyMessage::SharedPtr `` as well as `` 我的接口::msg::MyMessage:: constsharedptr”。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=874">[待校准&#64;874]</a></p>
+<p>有关更多详细信息，请参阅有关 <a class="reference external" href="https://design.ros2.org/articles/generated_interfaces_cpp.html">generated C++ interfaces</a> 的文章。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=875">[待校准&#64;875]</a></p>
+<p>迁移要求包含更改方式: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=876">[待校准&#64;876]</a></p>
 <ul class="simple">
-<li><p>在包名称和消息数据类型之间插入子文件夹 <code class="docutils literal notranslate"><span class="pre">msg</span></code>  <a class="reference external" href="http://localhost:3000/#/home?msgid=877">[待校准&#64;877]</a></p></li>
-<li><p>将包含的文件名从CamelCase更改为下划线分隔 <a class="reference external" href="http://localhost:3000/#/home?msgid=878">[待校准&#64;878]</a></p></li>
-<li><p>从 <code class="docutils literal notranslate"><span class="pre">*.h</span></code> 改为 <code class="docutils literal notranslate"><span class="pre">*.hpp</span></code>  <a class="reference external" href="http://localhost:3000/#/home?msgid=879">[待校准&#64;879]</a></p></li>
+<li><p>在包名称和消息数据类型之间插入子文件夹 <code class="docutils literal notranslate"><span class="pre">msg</span></code>  <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=877">[待校准&#64;877]</a></p></li>
+<li><p>将包含的文件名从CamelCase更改为下划线分隔 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=878">[待校准&#64;878]</a></p></li>
+<li><p>从 <code class="docutils literal notranslate"><span class="pre">*.h</span></code> 改为 <code class="docutils literal notranslate"><span class="pre">*.hpp</span></code>  <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=879">[待校准&#64;879]</a></p></li>
 </ul>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// ROS 1 style is in comments, ROS 2 follows, uncommented.</span>
 <span class="c1">// # include &lt;geometry_msgs/PointStamped.h&gt;</span>
@@ -523,11 +523,11 @@
 <span class="n">geometry_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">PointStamped</span> <span class="n">point_stamped</span><span class="p">;</span>
 </pre></div>
 </div>
-<p>迁移需要代码才能将 <code class="docutils literal notranslate"><span class="pre">msg</span></code> 命名空间插入所有实例。 <a class="reference external" href="http://localhost:3000/#/home?msgid=880">[待校准&#64;880]</a></p>
+<p>迁移需要代码才能将 <code class="docutils literal notranslate"><span class="pre">msg</span></code> 命名空间插入所有实例。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=880">[待校准&#64;880]</a></p>
 </div>
 <div class="section" id="use-of-service-objects">
-<h4>服务对象的使用 <a class="reference external" href="http://localhost:3000/#/home?msgid=881">[待校准&#64;881]</a><a class="headerlink" href="#use-of-service-objects" title="永久链接至标题"></a></h4>
-<p>ROS 2中的服务调用没有boolean返回值。建议抛出异常，而不是在失败时返回false。 <a class="reference external" href="http://localhost:3000/#/home?msgid=882">[待校准&#64;882]</a></p>
+<h4>服务对象的使用 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=881">[待校准&#64;881]</a><a class="headerlink" href="#use-of-service-objects" title="永久链接至标题"></a></h4>
+<p>ROS 2中的服务调用没有boolean返回值。建议抛出异常，而不是在失败时返回false。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=882">[待校准&#64;882]</a></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// ROS 1 style is in comments, ROS 2 follows, uncommented.</span>
 <span class="c1">// #include &quot;nav_msgs/GetMap.h&quot;</span>
 <span class="cp">#include</span> <span class="cpf">&quot;nav_msgs/srv/get_map.hpp&quot;</span><span class="cp"></span>
@@ -546,92 +546,92 @@
 </div>
 </div>
 <div class="section" id="usages-of-ros-time">
-<h4>ros的用法:: 时间 <a class="reference external" href="http://localhost:3000/#/home?msgid=883">[待校准&#64;883]</a><a class="headerlink" href="#usages-of-ros-time" title="永久链接至标题"></a></h4>
-<p>对于 “ros:: time” 的用法: <a class="reference external" href="http://localhost:3000/#/home?msgid=884">[待校准&#64;884]</a></p>
+<h4>ros的用法:: 时间 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=883">[待校准&#64;883]</a><a class="headerlink" href="#usages-of-ros-time" title="永久链接至标题"></a></h4>
+<p>对于 “ros:: time” 的用法: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=884">[待校准&#64;884]</a></p>
 <ul class="simple">
-<li><p>替换 “ros::Time `` with `` rclcpp::Time” 的所有实例 <a class="reference external" href="http://localhost:3000/#/home?msgid=885">[待校准&#64;885]</a></p></li>
-<li><p>如果您的消息或代码使用std_msgs::Time: <a class="reference external" href="http://localhost:3000/#/home?msgid=886">[待校准&#64;886]</a></p>
+<li><p>替换 “ros::Time `` with `` rclcpp::Time” 的所有实例 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=885">[待校准&#64;885]</a></p></li>
+<li><p>如果您的消息或代码使用std_msgs::Time: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=886">[待校准&#64;886]</a></p>
 <ul>
-<li><p>将std_msgs::Time的所有实例转换为builtin_interface::msg::Time <a class="reference external" href="http://localhost:3000/#/home?msgid=887">[待校准&#64;887]</a></p></li>
-<li><p>转换所有 “# 包含” std_msgs/time.h `` to ``  # 包含 “构建接口/msg/time.hpp” <a class="reference external" href="http://localhost:3000/#/home?msgid=888">[待校准&#64;888]</a></p></li>
-<li><p>使用std_msgs:: 时间字段 <code class="docutils literal notranslate"><span class="pre">nsec</span></code> 将所有实例转换为builtin_interface::msg:: 时间字段 <code class="docutils literal notranslate"><span class="pre">nanosec</span></code>  <a class="reference external" href="http://localhost:3000/#/home?msgid=889">[待校准&#64;889]</a></p></li>
+<li><p>将std_msgs::Time的所有实例转换为builtin_interface::msg::Time <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=887">[待校准&#64;887]</a></p></li>
+<li><p>转换所有 “# 包含” std_msgs/time.h `` to ``  # 包含 “构建接口/msg/time.hpp” <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=888">[待校准&#64;888]</a></p></li>
+<li><p>使用std_msgs:: 时间字段 <code class="docutils literal notranslate"><span class="pre">nsec</span></code> 将所有实例转换为builtin_interface::msg:: 时间字段 <code class="docutils literal notranslate"><span class="pre">nanosec</span></code>  <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=889">[待校准&#64;889]</a></p></li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="section" id="usages-of-ros-rate">
-<h4>ros的用法:: 费率 <a class="reference external" href="http://localhost:3000/#/home?msgid=890">[待校准&#64;890]</a><a class="headerlink" href="#usages-of-ros-rate" title="永久链接至标题"></a></h4>
-<p>有一个等效类型 “rclcpp::Rate `` object which is basically a drop in replacement for `` ros:: rate”。 <a class="reference external" href="http://localhost:3000/#/home?msgid=891">[待校准&#64;891]</a></p>
+<h4>ros的用法:: 费率 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=890">[待校准&#64;890]</a><a class="headerlink" href="#usages-of-ros-rate" title="永久链接至标题"></a></h4>
+<p>有一个等效类型 “rclcpp::Rate `` object which is basically a drop in replacement for `` ros:: rate”。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=891">[待校准&#64;891]</a></p>
 </div>
 <div class="section" id="ros-client-library">
-<h4>ROS客户端库 <a class="reference external" href="http://localhost:3000/#/home?msgid=892">[待校准&#64;892]</a><a class="headerlink" href="#ros-client-library" title="永久链接至标题"></a></h4>
+<h4>ROS客户端库 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=892">[待校准&#64;892]</a><a class="headerlink" href="#ros-client-library" title="永久链接至标题"></a></h4>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Migration-Guide-Python.html">来自ROS 1的Python迁移指南 [待校准&#64;1022]</a></li>
 </ul>
 </div>
-<p>NOTE注意: 其他要写的Others <a class="reference external" href="http://localhost:3000/#/home?msgid=893">[待校准&#64;893]</a></p>
+<p>NOTE注意: 其他要写的Others <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=893">[待校准&#64;893]</a></p>
 </div>
 <div class="section" id="boost">
-<h4>提升 <a class="reference external" href="http://localhost:3000/#/home?msgid=295">[待校准&#64;295]</a><a class="headerlink" href="#boost" title="永久链接至标题"></a></h4>
-<p>以前由Boost提供的许多功能已经集成到cstandard标准库中。因此，我们希望利用新的核心功能，并在可能的情况下避免对boost的依赖。 <a class="reference external" href="http://localhost:3000/#/home?msgid=894">[待校准&#64;894]</a></p>
+<h4>提升 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=295">[待校准&#64;295]</a><a class="headerlink" href="#boost" title="永久链接至标题"></a></h4>
+<p>以前由Boost提供的许多功能已经集成到cstandard标准库中。因此，我们希望利用新的核心功能，并在可能的情况下避免对boost的依赖。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=894">[待校准&#64;894]</a></p>
 <div class="section" id="shared-pointers">
-<h5>共享指针 <a class="reference external" href="http://localhost:3000/#/home?msgid=895">[待校准&#64;895]</a><a class="headerlink" href="#shared-pointers" title="永久链接至标题"></a></h5>
-<p>要将共享指针从boost切换到标准creplace，请替换以下实例: <a class="reference external" href="http://localhost:3000/#/home?msgid=896">[待校准&#64;896]</a></p>
+<h5>共享指针 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=895">[待校准&#64;895]</a><a class="headerlink" href="#shared-pointers" title="永久链接至标题"></a></h5>
+<p>要将共享指针从boost切换到标准creplace，请替换以下实例: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=896">[待校准&#64;896]</a></p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">#include</span> <span class="pre">&lt;boost/shared_ptr.hpp&gt;</span></code> with <code class="docutils literal notranslate"><span class="pre">#include</span> <span class="pre">&lt;memory&gt;</span></code> <a class="reference external" href="http://localhost:3000/#/home?msgid=897">[待校准&#64;897]</a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">boost::shared_ptr</span></code> with <code class="docutils literal notranslate"><span class="pre">std::shared_ptr</span></code> <a class="reference external" href="http://localhost:3000/#/home?msgid=898">[待校准&#64;898]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">#include</span> <span class="pre">&lt;boost/shared_ptr.hpp&gt;</span></code> with <code class="docutils literal notranslate"><span class="pre">#include</span> <span class="pre">&lt;memory&gt;</span></code> <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=897">[待校准&#64;897]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">boost::shared_ptr</span></code> with <code class="docutils literal notranslate"><span class="pre">std::shared_ptr</span></code> <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=898">[待校准&#64;898]</a></p></li>
 </ul>
-<p>也可能有一些变体，如 <code class="docutils literal notranslate"><span class="pre">weak_ptr</span></code> ，你也想转换。 <a class="reference external" href="http://localhost:3000/#/home?msgid=899">[待校准&#64;899]</a></p>
-<p>此外，建议使用 <code class="docutils literal notranslate"><span class="pre">using</span></code> 代替 <code class="docutils literal notranslate"><span class="pre">typedef</span></code> 。 <code class="docutils literal notranslate"><span class="pre">using</span></code> 有能力在模板化逻辑中更好地工作。详情请参见 <a class="reference external" href="https://stackoverflow.com/questions/10747810/what-is-the-difference-between-typedef-and-using-in-c11">see here</a>  <a class="reference external" href="http://localhost:3000/#/home?msgid=900">[待校准&#64;900]</a></p>
+<p>也可能有一些变体，如 <code class="docutils literal notranslate"><span class="pre">weak_ptr</span></code> ，你也想转换。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=899">[待校准&#64;899]</a></p>
+<p>此外，建议使用 <code class="docutils literal notranslate"><span class="pre">using</span></code> 代替 <code class="docutils literal notranslate"><span class="pre">typedef</span></code> 。 <code class="docutils literal notranslate"><span class="pre">using</span></code> 有能力在模板化逻辑中更好地工作。详情请参见 <a class="reference external" href="https://stackoverflow.com/questions/10747810/what-is-the-difference-between-typedef-and-using-in-c11">see here</a>  <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=900">[待校准&#64;900]</a></p>
 </div>
 <div class="section" id="thread-mutexes">
-<h5>线程/互斥体 <a class="reference external" href="http://localhost:3000/#/home?msgid=901">[待校准&#64;901]</a><a class="headerlink" href="#thread-mutexes" title="永久链接至标题"></a></h5>
-<p>ROS代码库中使用的boost的另一个常见部分是 “boost:: 线程” 中的互斥体。 <a class="reference external" href="http://localhost:3000/#/home?msgid=902">[待校准&#64;902]</a></p>
+<h5>线程/互斥体 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=901">[待校准&#64;901]</a><a class="headerlink" href="#thread-mutexes" title="永久链接至标题"></a></h5>
+<p>ROS代码库中使用的boost的另一个常见部分是 “boost:: 线程” 中的互斥体。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=902">[待校准&#64;902]</a></p>
 <ul class="simple">
-<li><p>替换 <code class="docutils literal notranslate"><span class="pre">boost::mutex::scoped_lock乙甲std::unique_lock&lt;std::mutex&gt;</span></code>  <a class="reference external" href="http://localhost:3000/#/home?msgid=903">[待校准&#64;903]</a></p></li>
-<li><p>替换 “增强:: 互斥 `` with `` 标准:: 互斥” <a class="reference external" href="http://localhost:3000/#/home?msgid=904">[待校准&#64;904]</a></p></li>
-<li><p>替换 <code class="docutils literal notranslate"><span class="pre">#include</span> <span class="pre">&lt;boost/thread/mutex.hpp&gt;乙甲#include</span> <span class="pre">&lt;mutex&gt;</span></code>  <a class="reference external" href="http://localhost:3000/#/home?msgid=905">[待校准&#64;905]</a></p></li>
+<li><p>替换 <code class="docutils literal notranslate"><span class="pre">boost::mutex::scoped_lock乙甲std::unique_lock&lt;std::mutex&gt;</span></code>  <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=903">[待校准&#64;903]</a></p></li>
+<li><p>替换 “增强:: 互斥 `` with `` 标准:: 互斥” <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=904">[待校准&#64;904]</a></p></li>
+<li><p>替换 <code class="docutils literal notranslate"><span class="pre">#include</span> <span class="pre">&lt;boost/thread/mutex.hpp&gt;乙甲#include</span> <span class="pre">&lt;mutex&gt;</span></code>  <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=905">[待校准&#64;905]</a></p></li>
 </ul>
 </div>
 <div class="section" id="unordered-map">
-<h5>无序地图 <a class="reference external" href="http://localhost:3000/#/home?msgid=906">[待校准&#64;906]</a><a class="headerlink" href="#unordered-map" title="永久链接至标题"></a></h5>
-<p>替换: <a class="reference external" href="http://localhost:3000/#/home?msgid=907">[待校准&#64;907]</a></p>
+<h5>无序地图 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=906">[待校准&#64;906]</a><a class="headerlink" href="#unordered-map" title="永久链接至标题"></a></h5>
+<p>替换: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=907">[待校准&#64;907]</a></p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">#include</span> <span class="pre">&lt;boost/unordered_map.hpp&gt;</span></code> with <code class="docutils literal notranslate"><span class="pre">#include</span> <span class="pre">&lt;unordered_map&gt;</span></code> <a class="reference external" href="http://localhost:3000/#/home?msgid=908">[待校准&#64;908]</a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">boost::unordered_map</span></code> with <code class="docutils literal notranslate"><span class="pre">std::unordered_map</span></code> <a class="reference external" href="http://localhost:3000/#/home?msgid=909">[待校准&#64;909]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">#include</span> <span class="pre">&lt;boost/unordered_map.hpp&gt;</span></code> with <code class="docutils literal notranslate"><span class="pre">#include</span> <span class="pre">&lt;unordered_map&gt;</span></code> <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=908">[待校准&#64;908]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">boost::unordered_map</span></code> with <code class="docutils literal notranslate"><span class="pre">std::unordered_map</span></code> <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=909">[待校准&#64;909]</a></p></li>
 </ul>
 </div>
 <div class="section" id="function">
-<h5>功能 <a class="reference external" href="http://localhost:3000/#/home?msgid=910">[待校准&#64;910]</a><a class="headerlink" href="#function" title="永久链接至标题"></a></h5>
-<p>替换: <a class="reference external" href="http://localhost:3000/#/home?msgid=907">[待校准&#64;907]</a></p>
+<h5>功能 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=910">[待校准&#64;910]</a><a class="headerlink" href="#function" title="永久链接至标题"></a></h5>
+<p>替换: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=907">[待校准&#64;907]</a></p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">#include</span> <span class="pre">&lt;boost/function.hpp&gt;</span></code>  with <code class="docutils literal notranslate"><span class="pre">#include</span> <span class="pre">&lt;functional&gt;</span></code> <a class="reference external" href="http://localhost:3000/#/home?msgid=911">[待校准&#64;911]</a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">boost::function</span></code> with <code class="docutils literal notranslate"><span class="pre">std::function</span></code> <a class="reference external" href="http://localhost:3000/#/home?msgid=912">[待校准&#64;912]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">#include</span> <span class="pre">&lt;boost/function.hpp&gt;</span></code>  with <code class="docutils literal notranslate"><span class="pre">#include</span> <span class="pre">&lt;functional&gt;</span></code> <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=911">[待校准&#64;911]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">boost::function</span></code> with <code class="docutils literal notranslate"><span class="pre">std::function</span></code> <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=912">[待校准&#64;912]</a></p></li>
 </ul>
 </div>
 </div>
 </div>
 </div>
 <div class="section" id="parameters">
-<h2>参数 <a class="reference external" href="http://localhost:3000/#/home?msgid=913">[待校准&#64;913]</a><a class="headerlink" href="#parameters" title="永久链接至标题"></a></h2>
-<p>在ROS 1中，参数与允许在运行时通过使用网络api检索参数的中央服务器相关联。在ROS 2中，参数与每个节点相关联，并且在运行时可通过ROS服务进行配置。 <a class="reference external" href="http://localhost:3000/#/home?msgid=914">[待校准&#64;914]</a></p>
+<h2>参数 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=913">[待校准&#64;913]</a><a class="headerlink" href="#parameters" title="永久链接至标题"></a></h2>
+<p>在ROS 1中，参数与允许在运行时通过使用网络api检索参数的中央服务器相关联。在ROS 2中，参数与每个节点相关联，并且在运行时可通过ROS服务进行配置。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=914">[待校准&#64;914]</a></p>
 <ul class="simple">
-<li><p>有关系统模型的更多详细信息，请参见 <a class="reference external" href="https://design.ros2.org/articles/ros_parameters.html">ROS 2 Parameter design document</a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=915">[待校准&#64;915]</a></p></li>
-<li><p>有关CLI工具的工作方式及其与ROS 1工具的区别的更好理解，请参见 <a class="reference internal" href="../Tutorials/Parameters/Understanding-ROS2-Parameters.html"><span class="doc">ROS 2 CLI usage</span></a>  。 <a class="reference external" href="http://localhost:3000/#/home?msgid=916">[待校准&#64;916]</a></p></li>
-<li><p>请参阅: doc:'//操作指南/Parameters-YAML-文件-迁移-指南'，以了解如何在ROS 2中解析YAML参数文件及其与ROS实现的差异。 <a class="reference external" href="http://localhost:3000/#/home?msgid=917">[待校准&#64;917]</a></p></li>
+<li><p>有关系统模型的更多详细信息，请参见 <a class="reference external" href="https://design.ros2.org/articles/ros_parameters.html">ROS 2 Parameter design document</a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=915">[待校准&#64;915]</a></p></li>
+<li><p>有关CLI工具的工作方式及其与ROS 1工具的区别的更好理解，请参见 <a class="reference internal" href="../Tutorials/Parameters/Understanding-ROS2-Parameters.html"><span class="doc">ROS 2 CLI usage</span></a>  。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=916">[待校准&#64;916]</a></p></li>
+<li><p>请参阅: doc:'//操作指南/Parameters-YAML-文件-迁移-指南'，以了解如何在ROS 2中解析YAML参数文件及其与ROS实现的差异。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=917">[待校准&#64;917]</a></p></li>
 </ul>
 </div>
 <div class="section" id="launch-files">
-<h2>Launch档案 <a class="reference external" href="http://localhost:3000/#/home?msgid=918">[待校准&#64;918]</a><a class="headerlink" href="#launch-files" title="永久链接至标题"></a></h2>
-<p>虽然ROS 1中的launch文件始终使用 <a class="reference external" href="https://wiki.ros.org/roslaunch/XML">.xml</a> 文件指定，但ROS 2支持Python脚本以实现更大的灵活性 (见 <a class="reference external" href="https://github.com/ros2/launch/tree/master/launch">launch package</a> ) 以及XML和YAML文件。关于将launch文件从ROS 1迁移到ROS 2，请参见 <a class="reference internal" href="../How-To-Guides/Launch-files-migration-guide.html"><span class="doc">separate tutorial</span></a>  。 <a class="reference external" href="http://localhost:3000/#/home?msgid=919">[待校准&#64;919]</a></p>
+<h2>Launch档案 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=918">[待校准&#64;918]</a><a class="headerlink" href="#launch-files" title="永久链接至标题"></a></h2>
+<p>虽然ROS 1中的launch文件始终使用 <a class="reference external" href="https://wiki.ros.org/roslaunch/XML">.xml</a> 文件指定，但ROS 2支持Python脚本以实现更大的灵活性 (见 <a class="reference external" href="https://github.com/ros2/launch/tree/master/launch">launch package</a> ) 以及XML和YAML文件。关于将launch文件从ROS 1迁移到ROS 2，请参见 <a class="reference internal" href="../How-To-Guides/Launch-files-migration-guide.html"><span class="doc">separate tutorial</span></a>  。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=919">[待校准&#64;919]</a></p>
 </div>
 <div class="section" id="example-converting-an-existing-ros-1-package-to-use-ros-2">
-<h2>示例: 将现有的ROS 1包转换为使用ROS 2 <a class="reference external" href="http://localhost:3000/#/home?msgid=920">[待校准&#64;920]</a><a class="headerlink" href="#example-converting-an-existing-ros-1-package-to-use-ros-2" title="永久链接至标题"></a></h2>
-<p>假设我们有一个简单的ROS 1包调用ed <code class="docutils literal notranslate"><span class="pre">talker</span></code> ，它在一个节点中使用 <code class="docutils literal notranslate"><span class="pre">roscpp</span></code> ，调用ed <code class="docutils literal notranslate"><span class="pre">talker</span></code> 。此包位于catkin工作区，位于 “~/ros1_talker”。 <a class="reference external" href="http://localhost:3000/#/home?msgid=921">[待校准&#64;921]</a></p>
+<h2>示例: 将现有的ROS 1包转换为使用ROS 2 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=920">[待校准&#64;920]</a><a class="headerlink" href="#example-converting-an-existing-ros-1-package-to-use-ros-2" title="永久链接至标题"></a></h2>
+<p>假设我们有一个简单的ROS 1包调用ed <code class="docutils literal notranslate"><span class="pre">talker</span></code> ，它在一个节点中使用 <code class="docutils literal notranslate"><span class="pre">roscpp</span></code> ，调用ed <code class="docutils literal notranslate"><span class="pre">talker</span></code> 。此包位于catkin工作区，位于 “~/ros1_talker”。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=921">[待校准&#64;921]</a></p>
 <div class="section" id="the-ros-1-code">
-<h3>ROS 1代码 <a class="reference external" href="http://localhost:3000/#/home?msgid=922">[待校准&#64;922]</a><a class="headerlink" href="#the-ros-1-code" title="永久链接至标题"></a></h3>
-<p>这是我们catkin工作区的目录布局: <a class="reference external" href="http://localhost:3000/#/home?msgid=923">[待校准&#64;923]</a></p>
+<h3>ROS 1代码 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=922">[待校准&#64;922]</a><a class="headerlink" href="#the-ros-1-code" title="永久链接至标题"></a></h3>
+<p>这是我们catkin工作区的目录布局: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=923">[待校准&#64;923]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> ~/ros1_talker
 $ find .
 .
@@ -642,8 +642,8 @@ $ find .
 ./src/talker/talker.cpp
 </pre></div>
 </div>
-<p>以下是这三个文件的内容: <a class="reference external" href="http://localhost:3000/#/home?msgid=924">[待校准&#64;924]</a></p>
-<p><code class="docutils literal notranslate"><span class="pre">src/talker/package.xml</span></code>: <a class="reference external" href="http://localhost:3000/#/home?msgid=925">[待校准&#64;925]</a></p>
+<p>以下是这三个文件的内容: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=924">[待校准&#64;924]</a></p>
+<p><code class="docutils literal notranslate"><span class="pre">src/talker/package.xml</span></code>: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=925">[待校准&#64;925]</a></p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;package&gt;</span>
   <span class="nt">&lt;name&gt;</span>talker<span class="nt">&lt;/name&gt;</span>
   <span class="nt">&lt;version&gt;</span>0.0.0<span class="nt">&lt;/version&gt;</span>
@@ -658,7 +658,7 @@ $ find .
 <span class="nt">&lt;/package&gt;</span>
 </pre></div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">src/talker/CMakeLists.txt</span></code>: <a class="reference external" href="http://localhost:3000/#/home?msgid=926">[待校准&#64;926]</a></p>
+<p><code class="docutils literal notranslate"><span class="pre">src/talker/CMakeLists.txt</span></code>: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=926">[待校准&#64;926]</a></p>
 <div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">cmake_minimum_required</span><span class="p">(</span><span class="s">VERSION</span> <span class="s">2.8.3</span><span class="p">)</span>
 <span class="nb">project</span><span class="p">(</span><span class="s">talker</span><span class="p">)</span>
 <span class="nb">find_package</span><span class="p">(</span><span class="s">catkin</span> <span class="s">REQUIRED</span> <span class="s">COMPONENTS</span> <span class="s">roscpp</span> <span class="s">std_msgs</span><span class="p">)</span>
@@ -670,7 +670,7 @@ $ find .
   <span class="s">RUNTIME</span> <span class="s">DESTINATION</span> <span class="o">${</span><span class="nv">CATKIN_PACKAGE_BIN_DESTINATION</span><span class="o">}</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">src/talker/talker.cpp</span></code>: <a class="reference external" href="http://localhost:3000/#/home?msgid=927">[待校准&#64;927]</a></p>
+<p><code class="docutils literal notranslate"><span class="pre">src/talker/talker.cpp</span></code>: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=927">[待校准&#64;927]</a></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;sstream&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;ros/ros.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;std_msgs/String.h&quot;</span><span class="cp"></span>
@@ -697,8 +697,8 @@ $ find .
 </pre></div>
 </div>
 <div class="section" id="building-the-ros-1-code">
-<h4>构建ROS 1代码 <a class="reference external" href="http://localhost:3000/#/home?msgid=928">[待校准&#64;928]</a><a class="headerlink" href="#building-the-ros-1-code" title="永久链接至标题"></a></h4>
-<p>我们源文件环境设置文件 (在这种情况下，对于使用bash的Jade)，然后我们使用 <code class="docutils literal notranslate"><span class="pre">catkin_make</span> <span class="pre">install</span></code> 构建包: <a class="reference external" href="http://localhost:3000/#/home?msgid=929">[待校准&#64;929]</a></p>
+<h4>构建ROS 1代码 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=928">[待校准&#64;928]</a><a class="headerlink" href="#building-the-ros-1-code" title="永久链接至标题"></a></h4>
+<p>我们源文件环境设置文件 (在这种情况下，对于使用bash的Jade)，然后我们使用 <code class="docutils literal notranslate"><span class="pre">catkin_make</span> <span class="pre">install</span></code> 构建包: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=929">[待校准&#64;929]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>. /opt/ros/jade/setup.bash
 <span class="nb">cd</span> ~/ros1_talker
 catkin_make install
@@ -706,13 +706,13 @@ catkin_make install
 </div>
 </div>
 <div class="section" id="running-the-ros-1-node">
-<h4>运行ROS 1节点 <a class="reference external" href="http://localhost:3000/#/home?msgid=930">[待校准&#64;930]</a><a class="headerlink" href="#running-the-ros-1-node" title="永久链接至标题"></a></h4>
-<p>如果还没有运行，我们启动一个 <code class="docutils literal notranslate"><span class="pre">roscore</span></code> ，首先从我们的 <code class="docutils literal notranslate"><span class="pre">catkin</span></code> 安装树采购安装文件 ( <code class="docutils literal notranslate"><span class="pre">/opt/ros/jade/setup.bash</span></code> 的系统安装文件也可以在这里工作): <a class="reference external" href="http://localhost:3000/#/home?msgid=931">[待校准&#64;931]</a></p>
+<h4>运行ROS 1节点 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=930">[待校准&#64;930]</a><a class="headerlink" href="#running-the-ros-1-node" title="永久链接至标题"></a></h4>
+<p>如果还没有运行，我们启动一个 <code class="docutils literal notranslate"><span class="pre">roscore</span></code> ，首先从我们的 <code class="docutils literal notranslate"><span class="pre">catkin</span></code> 安装树采购安装文件 ( <code class="docutils literal notranslate"><span class="pre">/opt/ros/jade/setup.bash</span></code> 的系统安装文件也可以在这里工作): <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=931">[待校准&#64;931]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>. ~/ros1_talker/install/setup.bash
 roscore
 </pre></div>
 </div>
-<p>在另一个外壳，我们运行节点 <code class="docutils literal notranslate"><span class="pre">catkin</span></code> 安装空间 <code class="docutils literal notranslate"><span class="pre">rosrun</span></code> ，再次采购安装文件 (在这种情况下必须从我们工作区): <a class="reference external" href="http://localhost:3000/#/home?msgid=932">[待校准&#64;932]</a></p>
+<p>在另一个外壳，我们运行节点 <code class="docutils literal notranslate"><span class="pre">catkin</span></code> 安装空间 <code class="docutils literal notranslate"><span class="pre">rosrun</span></code> ，再次采购安装文件 (在这种情况下必须从我们工作区): <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=932">[待校准&#64;932]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>. ~/ros1_talker/install/setup.bash
 rosrun talker talker
 </pre></div>
@@ -720,41 +720,41 @@ rosrun talker talker
 </div>
 </div>
 <div class="section" id="migrating-to-ros-2">
-<h3>迁移到ROS 2 <a class="reference external" href="http://localhost:3000/#/home?msgid=933">[待校准&#64;933]</a><a class="headerlink" href="#migrating-to-ros-2" title="永久链接至标题"></a></h3>
-<p>让我们从创建一个新的工作空间开始: <a class="reference external" href="http://localhost:3000/#/home?msgid=934">[待校准&#64;934]</a></p>
+<h3>迁移到ROS 2 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=933">[待校准&#64;933]</a><a class="headerlink" href="#migrating-to-ros-2" title="永久链接至标题"></a></h3>
+<p>让我们从创建一个新的工作空间开始: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=934">[待校准&#64;934]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir ~/ros2_talker
 <span class="nb">cd</span> ~/ros2_talker
 </pre></div>
 </div>
-<p>我们将把源文件树从我们的ROS 1包复制到那个工作区，在那里我们可以修改它: <a class="reference external" href="http://localhost:3000/#/home?msgid=935">[待校准&#64;935]</a></p>
+<p>我们将把源文件树从我们的ROS 1包复制到那个工作区，在那里我们可以修改它: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=935">[待校准&#64;935]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir src
 cp -a ~/ros1_talker/src/talker src
 </pre></div>
 </div>
-<p>现在，我们将修改节点中的ccode代码。调用ed <code class="docutils literal notranslate"><span class="pre">rclcpp</span></code> 的ROS 2 c library库提供了与 <code class="docutils literal notranslate"><span class="pre">roscpp</span></code> 提供的API不同的API。两个库之间的概念非常相似，这使得更改相当简单。 <a class="reference external" href="http://localhost:3000/#/home?msgid=936">[待校准&#64;936]</a></p>
+<p>现在，我们将修改节点中的ccode代码。调用ed <code class="docutils literal notranslate"><span class="pre">rclcpp</span></code> 的ROS 2 c library库提供了与 <code class="docutils literal notranslate"><span class="pre">roscpp</span></code> 提供的API不同的API。两个库之间的概念非常相似，这使得更改相当简单。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=936">[待校准&#64;936]</a></p>
 <div class="section" id="included-headers">
-<h4>包含标题 <a class="reference external" href="http://localhost:3000/#/home?msgid=937">[待校准&#64;937]</a><a class="headerlink" href="#included-headers" title="永久链接至标题"></a></h4>
-<p>取代 <code class="docutils literal notranslate"><span class="pre">ros/ros.h</span></code> ，它使我们能够访问 <code class="docutils literal notranslate"><span class="pre">roscpp</span></code> 库API，我们需要包括 <code class="docutils literal notranslate"><span class="pre">rclcpp/rclcpp.hpp</span></code> ，它使我们能够访问 <code class="docutils literal notranslate"><span class="pre">rclcpp</span></code> 库API: <a class="reference external" href="http://localhost:3000/#/home?msgid=938">[待校准&#64;938]</a></p>
+<h4>包含标题 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=937">[待校准&#64;937]</a><a class="headerlink" href="#included-headers" title="永久链接至标题"></a></h4>
+<p>取代 <code class="docutils literal notranslate"><span class="pre">ros/ros.h</span></code> ，它使我们能够访问 <code class="docutils literal notranslate"><span class="pre">roscpp</span></code> 库API，我们需要包括 <code class="docutils literal notranslate"><span class="pre">rclcpp/rclcpp.hpp</span></code> ，它使我们能够访问 <code class="docutils literal notranslate"><span class="pre">rclcpp</span></code> 库API: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=938">[待校准&#64;938]</a></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//#include &quot;ros/ros.h&quot;</span>
 <span class="cp">#include</span> <span class="cpf">&quot;rclcpp/rclcpp.hpp&quot;</span><span class="cp"></span>
 </pre></div>
 </div>
-<p>为了得到 <code class="docutils literal notranslate"><span class="pre">std_msgs/String</span></code> 信息定义，我们需要包括 <code class="docutils literal notranslate"><span class="pre">std_msgs/msg/string.hpp</span></code> ，而不是 <code class="docutils literal notranslate"><span class="pre">std_msgs/String.h</span></code> : <a class="reference external" href="http://localhost:3000/#/home?msgid=939">[待校准&#64;939]</a></p>
+<p>为了得到 <code class="docutils literal notranslate"><span class="pre">std_msgs/String</span></code> 信息定义，我们需要包括 <code class="docutils literal notranslate"><span class="pre">std_msgs/msg/string.hpp</span></code> ，而不是 <code class="docutils literal notranslate"><span class="pre">std_msgs/String.h</span></code> : <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=939">[待校准&#64;939]</a></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//#include &quot;std_msgs/String.h&quot;</span>
 <span class="cp">#include</span> <span class="cpf">&quot;std_msgs/msg/string.hpp&quot;</span><span class="cp"></span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="changing-c-library-calls">
-<h4>更改clibrary库调用s <a class="reference external" href="http://localhost:3000/#/home?msgid=940">[待校准&#64;940]</a><a class="headerlink" href="#changing-c-library-calls" title="永久链接至标题"></a></h4>
-<p>我们进行初始化，而不是将节点的名称传递给库初始化调用，然后将节点名称传递给节点对象的创建 (我们可以使用 <code class="docutils literal notranslate"><span class="pre">auto</span></code> 关键字，因为现在我们需要一个c14 14编译器): <a class="reference external" href="http://localhost:3000/#/home?msgid=941">[待校准&#64;941]</a></p>
+<h4>更改clibrary库调用s <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=940">[待校准&#64;940]</a><a class="headerlink" href="#changing-c-library-calls" title="永久链接至标题"></a></h4>
+<p>我们进行初始化，而不是将节点的名称传递给库初始化调用，然后将节点名称传递给节点对象的创建 (我们可以使用 <code class="docutils literal notranslate"><span class="pre">auto</span></code> 关键字，因为现在我们需要一个c14 14编译器): <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=941">[待校准&#64;941]</a></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//  ros::init(argc, argv, &quot;talker&quot;);</span>
 <span class="c1">//  ros::NodeHandle n;</span>
     <span class="n">rclcpp</span><span class="o">::</span><span class="n">init</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span> <span class="n">argv</span><span class="p">);</span>
     <span class="k">auto</span> <span class="n">node</span> <span class="o">=</span> <span class="n">rclcpp</span><span class="o">::</span><span class="n">Node</span><span class="o">::</span><span class="n">make_shared</span><span class="p">(</span><span class="s">&quot;talker&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>发布者和速率对象的创建看起来非常相似，对命名空间和方法的名称进行了一些更改。 <a class="reference external" href="http://localhost:3000/#/home?msgid=942">[待校准&#64;942]</a></p>
+<p>发布者和速率对象的创建看起来非常相似，对命名空间和方法的名称进行了一些更改。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=942">[待校准&#64;942]</a></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//  ros::Publisher chatter_pub = n.advertise&lt;std_msgs::String&gt;(&quot;chatter&quot;, 1000);</span>
 <span class="c1">//  ros::Rate loop_rate(10);</span>
   <span class="k">auto</span> <span class="n">chatter_pub</span> <span class="o">=</span> <span class="n">node</span><span class="o">-&gt;</span><span class="n">create_publisher</span><span class="o">&lt;</span><span class="n">std_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">String</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;chatter&quot;</span><span class="p">,</span>
@@ -762,37 +762,37 @@ cp -a ~/ros1_talker/src/talker src
   <span class="n">rclcpp</span><span class="o">::</span><span class="n">Rate</span> <span class="n">loop_rate</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>为了进一步控制如何处理消息传递，可以传递服务质量 ( <code class="docutils literal notranslate"><span class="pre">QoS</span></code> ) 配置文件。默认配置文件为 <code class="docutils literal notranslate"><span class="pre">rmw_qos_profile_default</span></code> 。更多详情，请参见 <a class="reference external" href="https://design.ros2.org/articles/qos.html">design document</a> 和 <a class="reference internal" href="../Concepts/About-Quality-of-Service-Settings.html"><span class="doc">concept overview</span></a>.  <a class="reference external" href="http://localhost:3000/#/home?msgid=943">[待校准&#64;943]</a></p>
-<p>传出消息的创建在命名空间中不同: <a class="reference external" href="http://localhost:3000/#/home?msgid=944">[待校准&#64;944]</a></p>
+<p>为了进一步控制如何处理消息传递，可以传递服务质量 ( <code class="docutils literal notranslate"><span class="pre">QoS</span></code> ) 配置文件。默认配置文件为 <code class="docutils literal notranslate"><span class="pre">rmw_qos_profile_default</span></code> 。更多详情，请参见 <a class="reference external" href="https://design.ros2.org/articles/qos.html">design document</a> 和 <a class="reference internal" href="../Concepts/About-Quality-of-Service-Settings.html"><span class="doc">concept overview</span></a>.  <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=943">[待校准&#64;943]</a></p>
+<p>传出消息的创建在命名空间中不同: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=944">[待校准&#64;944]</a></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//  std_msgs::String msg;</span>
   <span class="n">std_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">String</span> <span class="n">msg</span><span class="p">;</span>
 </pre></div>
 </div>
-<p>代替 “ros::ok()”，我们调用 “rclcpp::ok()”: <a class="reference external" href="http://localhost:3000/#/home?msgid=945">[待校准&#64;945]</a></p>
+<p>代替 “ros::ok()”，我们调用 “rclcpp::ok()”: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=945">[待校准&#64;945]</a></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//  while (ros::ok())</span>
   <span class="k">while</span> <span class="p">(</span><span class="n">rclcpp</span><span class="o">::</span><span class="n">ok</span><span class="p">())</span>
 </pre></div>
 </div>
-<p>在出版循环中，我们像以前一样访问 <code class="docutils literal notranslate"><span class="pre">data</span></code> 领域: <a class="reference external" href="http://localhost:3000/#/home?msgid=946">[待校准&#64;946]</a></p>
+<p>在出版循环中，我们像以前一样访问 <code class="docutils literal notranslate"><span class="pre">data</span></code> 领域: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=946">[待校准&#64;946]</a></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">msg</span><span class="p">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">ss</span><span class="p">.</span><span class="n">str</span><span class="p">();</span>
 </pre></div>
 </div>
-<p>为了打印控制台消息，我们使用的不是 <code class="docutils literal notranslate"><span class="pre">ROS_INFO()</span></code> ，而是 <code class="docutils literal notranslate"><span class="pre">RCLCPP_INFO()</span></code> 及其各种表亲。关键的区别是 <code class="docutils literal notranslate"><span class="pre">RCLCPP_INFO()</span></code> 把一个日志记录器作为第一个参数。 <a class="reference external" href="http://localhost:3000/#/home?msgid=947">[待校准&#64;947]</a></p>
+<p>为了打印控制台消息，我们使用的不是 <code class="docutils literal notranslate"><span class="pre">ROS_INFO()</span></code> ，而是 <code class="docutils literal notranslate"><span class="pre">RCLCPP_INFO()</span></code> 及其各种表亲。关键的区别是 <code class="docutils literal notranslate"><span class="pre">RCLCPP_INFO()</span></code> 把一个日志记录器作为第一个参数。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=947">[待校准&#64;947]</a></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//    ROS_INFO(&quot;%s&quot;, msg.data.c_str());</span>
     <span class="n">RCLCPP_INFO</span><span class="p">(</span><span class="n">node</span><span class="o">-&gt;</span><span class="n">get_logger</span><span class="p">(),</span> <span class="s">&quot;%s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">msg</span><span class="p">.</span><span class="n">data</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span>
 </pre></div>
 </div>
-<p>发布消息与之前相同: <a class="reference external" href="http://localhost:3000/#/home?msgid=948">[待校准&#64;948]</a></p>
+<p>发布消息与之前相同: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=948">[待校准&#64;948]</a></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">chatter_pub</span><span class="o">-&gt;</span><span class="n">publish</span><span class="p">(</span><span class="n">msg</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>旋转 (即让通讯系统处理任何待处理的传入/传出消息) 的不同之处在于，调用现在将节点作为参数: <a class="reference external" href="http://localhost:3000/#/home?msgid=949">[待校准&#64;949]</a></p>
+<p>旋转 (即让通讯系统处理任何待处理的传入/传出消息) 的不同之处在于，调用现在将节点作为参数: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=949">[待校准&#64;949]</a></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//    ros::spinOnce();</span>
     <span class="n">rclcpp</span><span class="o">::</span><span class="n">spin_some</span><span class="p">(</span><span class="n">node</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>使用rate对象的睡眠保持不变。 <a class="reference external" href="http://localhost:3000/#/home?msgid=950">[待校准&#64;950]</a></p>
-<p>把它们放在一起，新的 <code class="docutils literal notranslate"><span class="pre">talker.cpp</span></code> 看起来像这样: <a class="reference external" href="http://localhost:3000/#/home?msgid=951">[待校准&#64;951]</a></p>
+<p>使用rate对象的睡眠保持不变。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=950">[待校准&#64;950]</a></p>
+<p>把它们放在一起，新的 <code class="docutils literal notranslate"><span class="pre">talker.cpp</span></code> 看起来像这样: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=951">[待校准&#64;951]</a></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;sstream&gt;</span><span class="cp"></span>
 <span class="c1">// #include &quot;ros/ros.h&quot;</span>
 <span class="cp">#include</span> <span class="cpf">&quot;rclcpp/rclcpp.hpp&quot;</span><span class="cp"></span>
@@ -830,41 +830,41 @@ cp -a ~/ros1_talker/src/talker src
 </div>
 </div>
 <div class="section" id="changing-the-package-xml">
-<h4>更换 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code>  <a class="reference external" href="http://localhost:3000/#/home?msgid=952">[待校准&#64;952]</a><a class="headerlink" href="#changing-the-package-xml" title="永久链接至标题"></a></h4>
-<p>ROS 2不支持包规格的格式1，只支持更新的格式版本 (2和更高版本)。我们首先在 <code class="docutils literal notranslate"><span class="pre">package</span></code> 标签中指定格式版本: <a class="reference external" href="http://localhost:3000/#/home?msgid=953">[待校准&#64;953]</a></p>
+<h4>更换 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code>  <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=952">[待校准&#64;952]</a><a class="headerlink" href="#changing-the-package-xml" title="永久链接至标题"></a></h4>
+<p>ROS 2不支持包规格的格式1，只支持更新的格式版本 (2和更高版本)。我们首先在 <code class="docutils literal notranslate"><span class="pre">package</span></code> 标签中指定格式版本: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=953">[待校准&#64;953]</a></p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!-- &lt;package&gt; --&gt;</span>
 <span class="nt">&lt;package</span> <span class="na">format=</span><span class="s">&quot;2&quot;</span><span class="nt">&gt;</span>
 </pre></div>
 </div>
-<p>ROS 2使用 <code class="docutils literal notranslate"><span class="pre">catkin</span></code> 的新版本，调用 <code class="docutils literal notranslate"><span class="pre">ament_cmake</span></code> ，我们在 <code class="docutils literal notranslate"><span class="pre">buildtool_depend</span></code> 标签中指定: <a class="reference external" href="http://localhost:3000/#/home?msgid=954">[待校准&#64;954]</a></p>
+<p>ROS 2使用 <code class="docutils literal notranslate"><span class="pre">catkin</span></code> 的新版本，调用 <code class="docutils literal notranslate"><span class="pre">ament_cmake</span></code> ，我们在 <code class="docutils literal notranslate"><span class="pre">buildtool_depend</span></code> 标签中指定: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=954">[待校准&#64;954]</a></p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!--  &lt;buildtool_depend&gt;catkin&lt;/buildtool_depend&gt; --&gt;</span>
   <span class="nt">&lt;buildtool_depend&gt;</span>ament_cmake<span class="nt">&lt;/buildtool_depend&gt;</span>
 </pre></div>
 </div>
-<p>在我们的构建依赖项中，我们使用的不是 <code class="docutils literal notranslate"><span class="pre">roscpp</span></code> ，而是 <code class="docutils literal notranslate"><span class="pre">rclcpp</span></code> ，它提供了我们使用的c ++ API。 <a class="reference external" href="http://localhost:3000/#/home?msgid=955">[待校准&#64;955]</a></p>
+<p>在我们的构建依赖项中，我们使用的不是 <code class="docutils literal notranslate"><span class="pre">roscpp</span></code> ，而是 <code class="docutils literal notranslate"><span class="pre">rclcpp</span></code> ，它提供了我们使用的c ++ API。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=955">[待校准&#64;955]</a></p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!--  &lt;build_depend&gt;roscpp&lt;/build_depend&gt; --&gt;</span>
   <span class="nt">&lt;build_depend&gt;</span>rclcpp<span class="nt">&lt;/build_depend&gt;</span>
 </pre></div>
 </div>
-<p>我们在运行依赖项中添加了相同的内容，并从 <code class="docutils literal notranslate"><span class="pre">run_depend</span></code> 标签更新到 <code class="docutils literal notranslate"><span class="pre">exec_depend</span></code> 标签 (包格式升级到版本2的一部分): <a class="reference external" href="http://localhost:3000/#/home?msgid=956">[待校准&#64;956]</a></p>
+<p>我们在运行依赖项中添加了相同的内容，并从 <code class="docutils literal notranslate"><span class="pre">run_depend</span></code> 标签更新到 <code class="docutils literal notranslate"><span class="pre">exec_depend</span></code> 标签 (包格式升级到版本2的一部分): <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=956">[待校准&#64;956]</a></p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!--  &lt;run_depend&gt;roscpp&lt;/run_depend&gt; --&gt;</span>
   <span class="nt">&lt;exec_depend&gt;</span>rclcpp<span class="nt">&lt;/exec_depend&gt;</span>
 <span class="c">&lt;!--  &lt;run_depend&gt;std_msgs&lt;/run_depend&gt; --&gt;</span>
   <span class="nt">&lt;exec_depend&gt;</span>std_msgs<span class="nt">&lt;/exec_depend&gt;</span>
 </pre></div>
 </div>
-<p>在ROS 1，我们使用 <code class="docutils literal notranslate"><span class="pre">&lt;depend&gt;</span></code> 简化指定依赖编译时和运行时。我们可以在ROS 2中做同样的事情: <a class="reference external" href="http://localhost:3000/#/home?msgid=957">[待校准&#64;957]</a></p>
+<p>在ROS 1，我们使用 <code class="docutils literal notranslate"><span class="pre">&lt;depend&gt;</span></code> 简化指定依赖编译时和运行时。我们可以在ROS 2中做同样的事情: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=957">[待校准&#64;957]</a></p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;depend&gt;</span>rclcpp<span class="nt">&lt;/depend&gt;</span>
 <span class="nt">&lt;depend&gt;</span>std_msgs<span class="nt">&lt;/depend&gt;</span>
 </pre></div>
 </div>
-<p>我们还需要告诉构建工具我们是什么样的包，以便它知道如何构建我们。因为我们使用的是 <code class="docutils literal notranslate"><span class="pre">ament</span></code> 和CMake，所以我们添加以下行来声明我们的构建类型为 <code class="docutils literal notranslate"><span class="pre">ament_cmake</span></code> : <a class="reference external" href="http://localhost:3000/#/home?msgid=958">[待校准&#64;958]</a></p>
+<p>我们还需要告诉构建工具我们是什么样的包，以便它知道如何构建我们。因为我们使用的是 <code class="docutils literal notranslate"><span class="pre">ament</span></code> 和CMake，所以我们添加以下行来声明我们的构建类型为 <code class="docutils literal notranslate"><span class="pre">ament_cmake</span></code> : <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=958">[待校准&#64;958]</a></p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;export&gt;</span>
   <span class="nt">&lt;build_type&gt;</span>ament_cmake<span class="nt">&lt;/build_type&gt;</span>
 <span class="nt">&lt;/export&gt;</span>
 </pre></div>
 </div>
-<p>综上所述，我们的 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 现在看起来像这样: <a class="reference external" href="http://localhost:3000/#/home?msgid=959">[待校准&#64;959]</a></p>
+<p>综上所述，我们的 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 现在看起来像这样: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=959">[待校准&#64;959]</a></p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!-- &lt;package&gt; --&gt;</span>
 <span class="nt">&lt;package</span> <span class="na">format=</span><span class="s">&quot;2&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;name&gt;</span>talker<span class="nt">&lt;/name&gt;</span>
@@ -885,20 +885,20 @@ cp -a ~/ros1_talker/src/talker src
 <span class="nt">&lt;/package&gt;</span>
 </pre></div>
 </div>
-<p>Totodo: 仅使用 <code class="docutils literal notranslate"><span class="pre">&lt;depend&gt;</span></code> 标签显示此文件的更简单版本，该标签由软件包格式的版本2启用 (也在 <code class="docutils literal notranslate"><span class="pre">catkin</span></code> 中支持，因此，严格来说，与ROS 2正交)。** <a class="reference external" href="http://localhost:3000/#/home?msgid=960">[待校准&#64;960]</a></p>
+<p>Totodo: 仅使用 <code class="docutils literal notranslate"><span class="pre">&lt;depend&gt;</span></code> 标签显示此文件的更简单版本，该标签由软件包格式的版本2启用 (也在 <code class="docutils literal notranslate"><span class="pre">catkin</span></code> 中支持，因此，严格来说，与ROS 2正交)。** <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=960">[待校准&#64;960]</a></p>
 </div>
 <div class="section" id="changing-the-cmake-code">
-<h4>更改CMake代码 <a class="reference external" href="http://localhost:3000/#/home?msgid=961">[待校准&#64;961]</a><a class="headerlink" href="#changing-the-cmake-code" title="永久链接至标题"></a></h4>
-<p>ROS 2依赖于CMake的更高版本: <a class="reference external" href="http://localhost:3000/#/home?msgid=962">[待校准&#64;962]</a></p>
+<h4>更改CMake代码 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=961">[待校准&#64;961]</a><a class="headerlink" href="#changing-the-cmake-code" title="永久链接至标题"></a></h4>
+<p>ROS 2依赖于CMake的更高版本: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=962">[待校准&#64;962]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#cmake_minimum_required(VERSION 2.8.3)</span>
 cmake_minimum_required<span class="o">(</span>VERSION <span class="m">3</span>.5<span class="o">)</span>
 </pre></div>
 </div>
-<p>ROS 2依赖于c14 14标准。根据您使用的编译器，默认情况下可能不会启用对c14 14的支持。使用 <code class="docutils literal notranslate"><span class="pre">gcc</span></code> 5.3 (这是在Ubuntu Xenial上使用的)，我们需要显式启用它，我们通过在文件顶部附近添加这一行来实现: <a class="reference external" href="http://localhost:3000/#/home?msgid=963">[待校准&#64;963]</a></p>
+<p>ROS 2依赖于c14 14标准。根据您使用的编译器，默认情况下可能不会启用对c14 14的支持。使用 <code class="docutils literal notranslate"><span class="pre">gcc</span></code> 5.3 (这是在Ubuntu Xenial上使用的)，我们需要显式启用它，我们通过在文件顶部附近添加这一行来实现: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=963">[待校准&#64;963]</a></p>
 <div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CXX_STANDARD</span> <span class="s">14</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>在所有平台上工作的首选方式是: <a class="reference external" href="http://localhost:3000/#/home?msgid=964">[待校准&#64;964]</a></p>
+<p>在所有平台上工作的首选方式是: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=964">[待校准&#64;964]</a></p>
 <div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">if</span><span class="p">(</span><span class="s">NOT</span> <span class="s">CMAKE_CXX_STANDARD</span><span class="p">)</span>
   <span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CXX_STANDARD</span> <span class="s">14</span><span class="p">)</span>
 <span class="nb">endif</span><span class="p">()</span>
@@ -907,61 +907,61 @@ cmake_minimum_required<span class="o">(</span>VERSION <span class="m">3</span>.5
 <span class="nb">endif</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>使用 <code class="docutils literal notranslate"><span class="pre">catkin</span></code> ，我们指定包我们想建立反对通过他们 <code class="docutils literal notranslate"><span class="pre">COMPONENTS</span></code> 参数当最初找到 <code class="docutils literal notranslate"><span class="pre">catkin</span></code> 本身。对于 <code class="docutils literal notranslate"><span class="pre">ament_cmake</span></code> ，我们发现每个包装都是单独的，从 <code class="docutils literal notranslate"><span class="pre">ament_cmake</span></code> 开始: <a class="reference external" href="http://localhost:3000/#/home?msgid=965">[待校准&#64;965]</a></p>
+<p>使用 <code class="docutils literal notranslate"><span class="pre">catkin</span></code> ，我们指定包我们想建立反对通过他们 <code class="docutils literal notranslate"><span class="pre">COMPONENTS</span></code> 参数当最初找到 <code class="docutils literal notranslate"><span class="pre">catkin</span></code> 本身。对于 <code class="docutils literal notranslate"><span class="pre">ament_cmake</span></code> ，我们发现每个包装都是单独的，从 <code class="docutils literal notranslate"><span class="pre">ament_cmake</span></code> 开始: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=965">[待校准&#64;965]</a></p>
 <div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="c">#find_package(catkin REQUIRED COMPONENTS roscpp std_msgs)</span>
 <span class="nb">find_package</span><span class="p">(</span><span class="s">ament_cmake</span> <span class="s">REQUIRED</span><span class="p">)</span>
 <span class="nb">find_package</span><span class="p">(</span><span class="s">rclcpp</span> <span class="s">REQUIRED</span><span class="p">)</span>
 <span class="nb">find_package</span><span class="p">(</span><span class="s">std_msgs</span> <span class="s">REQUIRED</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>可以像以前一样找到系统依赖项: <a class="reference external" href="http://localhost:3000/#/home?msgid=966">[待校准&#64;966]</a></p>
+<p>可以像以前一样找到系统依赖项: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=966">[待校准&#64;966]</a></p>
 <div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">find_package</span><span class="p">(</span><span class="s">Boost</span> <span class="s">REQUIRED</span> <span class="s">COMPONENTS</span> <span class="s">system</span> <span class="s">filesystem</span> <span class="s">thread</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>我们调用 <code class="docutils literal notranslate"><span class="pre">catkin_package()</span></code> ，为使用我们包的其他包自动生成CMake配置文件。鉴于该调用在指定要构建的目标之前发生，我们现在在 * 目标之后调用类似的 <code class="docutils literal notranslate"><span class="pre">ament_package()</span></code>  <a href="#id1"><span class="problematic" id="id2">*</span></a>: <a class="reference external" href="http://localhost:3000/#/home?msgid=967">[待校准&#64;967]</a></p>
+<p>我们调用 <code class="docutils literal notranslate"><span class="pre">catkin_package()</span></code> ，为使用我们包的其他包自动生成CMake配置文件。鉴于该调用在指定要构建的目标之前发生，我们现在在 * 目标之后调用类似的 <code class="docutils literal notranslate"><span class="pre">ament_package()</span></code>  <a href="#id1"><span class="problematic" id="id2">*</span></a>: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=967">[待校准&#64;967]</a></p>
 <div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="c"># catkin_package()</span>
 <span class="c"># At the bottom of the file:</span>
 <span class="nb">ament_package</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>唯一需要手动包含的目录是非ament包的本地目录和依赖项: <a class="reference external" href="http://localhost:3000/#/home?msgid=968">[待校准&#64;968]</a></p>
+<p>唯一需要手动包含的目录是非ament包的本地目录和依赖项: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=968">[待校准&#64;968]</a></p>
 <div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="c">#include_directories(${catkin_INCLUDE_DIRS})</span>
 <span class="nb">include_directories</span><span class="p">(</span><span class="s">include</span> <span class="o">${</span><span class="nv">Boost_INCLUDE_DIRS</span><span class="o">}</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>更好的选择是为每个目标单独指定包含目录，而不是为所有目标包含所有目录: <a class="reference external" href="http://localhost:3000/#/home?msgid=969">[待校准&#64;969]</a></p>
+<p>更好的选择是为每个目标单独指定包含目录，而不是为所有目标包含所有目录: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=969">[待校准&#64;969]</a></p>
 <div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">target_include_directories</span><span class="p">(</span><span class="s">target</span> <span class="s">include</span> <span class="o">${</span><span class="nv">Boost_INCLUDE_DIRS</span><span class="o">}</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>类似于我们分别找到每个依赖包的方式，我们需要将每个包链接到构建目标。为了与ament包的依赖包链接，而不是使用 <code class="docutils literal notranslate"><span class="pre">target_link_libraries()</span></code> ， <code class="docutils literal notranslate"><span class="pre">ament_target_dependencies()</span></code> 是处理构建标志的一种更简洁、更彻底的方法。它自动调用y处理 <code class="docutils literal notranslate"><span class="pre">_INCLUDE_DIRS</span></code> 中定义的包含目录和 <code class="docutils literal notranslate"><span class="pre">_LIBRARIES</span></code> 中定义的链接库。 <a class="reference external" href="http://localhost:3000/#/home?msgid=970">[待校准&#64;970]</a></p>
+<p>类似于我们分别找到每个依赖包的方式，我们需要将每个包链接到构建目标。为了与ament包的依赖包链接，而不是使用 <code class="docutils literal notranslate"><span class="pre">target_link_libraries()</span></code> ， <code class="docutils literal notranslate"><span class="pre">ament_target_dependencies()</span></code> 是处理构建标志的一种更简洁、更彻底的方法。它自动调用y处理 <code class="docutils literal notranslate"><span class="pre">_INCLUDE_DIRS</span></code> 中定义的包含目录和 <code class="docutils literal notranslate"><span class="pre">_LIBRARIES</span></code> 中定义的链接库。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=970">[待校准&#64;970]</a></p>
 <div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="c">#target_link_libraries(talker ${catkin_LIBRARIES})</span>
 <span class="nb">ament_target_dependencies</span><span class="p">(</span><span class="s">talker</span>
   <span class="s">rclcpp</span>
   <span class="s">std_msgs</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>要与不是ament包的包链接，例如系统依赖项，如 <code class="docutils literal notranslate"><span class="pre">Boost</span></code> ，或在同一 <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> 中构建的库，请使用 <code class="docutils literal notranslate"><span class="pre">target_link_libraries()</span></code> : <a class="reference external" href="http://localhost:3000/#/home?msgid=971">[待校准&#64;971]</a></p>
+<p>要与不是ament包的包链接，例如系统依赖项，如 <code class="docutils literal notranslate"><span class="pre">Boost</span></code> ，或在同一 <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> 中构建的库，请使用 <code class="docutils literal notranslate"><span class="pre">target_link_libraries()</span></code> : <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=971">[待校准&#64;971]</a></p>
 <div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">target_link_libraries</span><span class="p">(</span><span class="s">target</span> <span class="o">${</span><span class="nv">Boost_LIBRARIES</span><span class="o">}</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>对于安装， <code class="docutils literal notranslate"><span class="pre">catkin</span></code> 定义变量，如 <code class="docutils literal notranslate"><span class="pre">CATKIN_PACKAGE_BIN_DESTINATION</span></code> 。对于 <code class="docutils literal notranslate"><span class="pre">ament_cmake</span></code> ，我们只给出一个相对于安装根的路径，就像可执行文件的 <code class="docutils literal notranslate"><span class="pre">bin</span></code> : <a class="reference external" href="http://localhost:3000/#/home?msgid=972">[待校准&#64;972]</a></p>
+<p>对于安装， <code class="docutils literal notranslate"><span class="pre">catkin</span></code> 定义变量，如 <code class="docutils literal notranslate"><span class="pre">CATKIN_PACKAGE_BIN_DESTINATION</span></code> 。对于 <code class="docutils literal notranslate"><span class="pre">ament_cmake</span></code> ，我们只给出一个相对于安装根的路径，就像可执行文件的 <code class="docutils literal notranslate"><span class="pre">bin</span></code> : <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=972">[待校准&#64;972]</a></p>
 <div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="c">#install(TARGETS talker</span>
 <span class="c">#  RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})</span>
 <span class="nb">install</span><span class="p">(</span><span class="s">TARGETS</span> <span class="s">talker</span>
   <span class="s">DESTINATION</span> <span class="s">lib/</span><span class="o">${</span><span class="nv">PROJECT_NAME</span><span class="o">}</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>(可选) 我们可以为下游包安装和导出包含的目录: <a class="reference external" href="http://localhost:3000/#/home?msgid=973">[待校准&#64;973]</a></p>
+<p>(可选) 我们可以为下游包安装和导出包含的目录: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=973">[待校准&#64;973]</a></p>
 <div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">install</span><span class="p">(</span><span class="s">DIRECTORY</span> <span class="s">include/</span>
   <span class="s">DESTINATION</span> <span class="s">include</span><span class="p">)</span>
 <span class="nb">ament_export_include_directories</span><span class="p">(</span><span class="s">include</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>或者，我们可以导出下游包的依赖项: <a class="reference external" href="http://localhost:3000/#/home?msgid=974">[待校准&#64;974]</a></p>
+<p>或者，我们可以导出下游包的依赖项: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=974">[待校准&#64;974]</a></p>
 <div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">ament_export_dependencies</span><span class="p">(</span><span class="s">std_msgs</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>把它们放在一起，新的 <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> 看起来像这样: <a class="reference external" href="http://localhost:3000/#/home?msgid=975">[待校准&#64;975]</a></p>
+<p>把它们放在一起，新的 <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> 看起来像这样: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=975">[待校准&#64;975]</a></p>
 <div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="c">#cmake_minimum_required(VERSION 2.8.3)</span>
 <span class="nb">cmake_minimum_required</span><span class="p">(</span><span class="s">VERSION</span> <span class="s">3.5</span><span class="p">)</span>
 <span class="nb">project</span><span class="p">(</span><span class="s">talker</span><span class="p">)</span>
@@ -994,11 +994,11 @@ cmake_minimum_required<span class="o">(</span>VERSION <span class="m">3</span>.5
 <span class="nb">ament_package</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>Totodo: 展示 <code class="docutils literal notranslate"><span class="pre">ament_auto</span></code> 会是什么样子。** <a class="reference external" href="http://localhost:3000/#/home?msgid=976">[待校准&#64;976]</a></p>
+<p>Totodo: 展示 <code class="docutils literal notranslate"><span class="pre">ament_auto</span></code> 会是什么样子。** <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=976">[待校准&#64;976]</a></p>
 </div>
 <div class="section" id="building-the-ros-2-code">
-<h4>构建ROS 2代码 <a class="reference external" href="http://localhost:3000/#/home?msgid=977">[待校准&#64;977]</a><a class="headerlink" href="#building-the-ros-2-code" title="永久链接至标题"></a></h4>
-<p>我们源文件环境安装文件 (在本例中是按照ROS 2安装教程生成的文件，该教程以 “~/ros2_ws” 构建，然后我们使用 <code class="docutils literal notranslate"><span class="pre">colcon</span> <span class="pre">build</span></code> 构建包: <a class="reference external" href="http://localhost:3000/#/home?msgid=978">[待校准&#64;978]</a></p>
+<h4>构建ROS 2代码 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=977">[待校准&#64;977]</a><a class="headerlink" href="#building-the-ros-2-code" title="永久链接至标题"></a></h4>
+<p>我们源文件环境安装文件 (在本例中是按照ROS 2安装教程生成的文件，该教程以 “~/ros2_ws” 构建，然后我们使用 <code class="docutils literal notranslate"><span class="pre">colcon</span> <span class="pre">build</span></code> 构建包: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=978">[待校准&#64;978]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>. ~/ros2_ws/install/setup.bash
 <span class="nb">cd</span> ~/ros2_talker
 colcon build
@@ -1006,8 +1006,8 @@ colcon build
 </div>
 </div>
 <div class="section" id="running-the-ros-2-node">
-<h4>运行ROS 2节点 <a class="reference external" href="http://localhost:3000/#/home?msgid=979">[待校准&#64;979]</a><a class="headerlink" href="#running-the-ros-2-node" title="永久链接至标题"></a></h4>
-<p>因为我们将 <code class="docutils literal notranslate"><span class="pre">talker</span></code> 可执行文件安装到 <code class="docutils literal notranslate"><span class="pre">bin</span></code> 中，在从安装树采购安装文件后，我们可以直接通过名称调用它 (也，还没有相当于 <code class="docutils literal notranslate"><span class="pre">rosrun</span></code> 的ROS 2): <a class="reference external" href="http://localhost:3000/#/home?msgid=980">[待校准&#64;980]</a></p>
+<h4>运行ROS 2节点 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=979">[待校准&#64;979]</a><a class="headerlink" href="#running-the-ros-2-node" title="永久链接至标题"></a></h4>
+<p>因为我们将 <code class="docutils literal notranslate"><span class="pre">talker</span></code> 可执行文件安装到 <code class="docutils literal notranslate"><span class="pre">bin</span></code> 中，在从安装树采购安装文件后，我们可以直接通过名称调用它 (也，还没有相当于 <code class="docutils literal notranslate"><span class="pre">rosrun</span></code> 的ROS 2): <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=980">[待校准&#64;980]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>. ~/ros2_ws/install/setup.bash
 talker
 </pre></div>
@@ -1015,37 +1015,37 @@ talker
 </div>
 </div>
 <div class="section" id="update-scripts">
-<h3>更新脚本 <a class="reference external" href="http://localhost:3000/#/home?msgid=981">[待校准&#64;981]</a><a class="headerlink" href="#update-scripts" title="永久链接至标题"></a></h3>
+<h3>更新脚本 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=981">[待校准&#64;981]</a><a class="headerlink" href="#update-scripts" title="永久链接至标题"></a></h3>
 <div class="section" id="ros-cli-arguments">
-<h4>ROS CLI参数 <a class="reference external" href="http://localhost:3000/#/home?msgid=982">[待校准&#64;982]</a><a class="headerlink" href="#ros-cli-arguments" title="永久链接至标题"></a></h4>
-<p>因为 <a class="reference internal" href="../Releases/Release-Eloquent-Elusor.html"><span class="doc">ROS Eloquent</span></a>, ROS参数应该以 <code class="docutils literal notranslate"><span class="pre">--ros-args</span></code> 和尾随的 <code class="docutils literal notranslate"><span class="pre">--</span></code> 为范围 (如果没有参数跟随它，尾随的doubledash可能会被省略)。 <a class="reference external" href="http://localhost:3000/#/home?msgid=983">[待校准&#64;983]</a></p>
-<p>重新映射名称类似于ROS 1，采用 “from:= to” 的形式，不同之处在于它前面必须有一个 <code class="docutils literal notranslate"><span class="pre">--remap</span></code>  (或 <code class="docutils literal notranslate"><span class="pre">-r</span></code> ) 旗。例如: <a class="reference external" href="http://localhost:3000/#/home?msgid=984">[待校准&#64;984]</a></p>
+<h4>ROS CLI参数 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=982">[待校准&#64;982]</a><a class="headerlink" href="#ros-cli-arguments" title="永久链接至标题"></a></h4>
+<p>因为 <a class="reference internal" href="../Releases/Release-Eloquent-Elusor.html"><span class="doc">ROS Eloquent</span></a>, ROS参数应该以 <code class="docutils literal notranslate"><span class="pre">--ros-args</span></code> 和尾随的 <code class="docutils literal notranslate"><span class="pre">--</span></code> 为范围 (如果没有参数跟随它，尾随的doubledash可能会被省略)。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=983">[待校准&#64;983]</a></p>
+<p>重新映射名称类似于ROS 1，采用 “from:= to” 的形式，不同之处在于它前面必须有一个 <code class="docutils literal notranslate"><span class="pre">--remap</span></code>  (或 <code class="docutils literal notranslate"><span class="pre">-r</span></code> ) 旗。例如: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=984">[待校准&#64;984]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 run some_package some_ros_executable --ros-args -r foo:<span class="o">=</span>bar
 </pre></div>
 </div>
-<p>我们对参数使用类似的语法，使用 <code class="docutils literal notranslate"><span class="pre">--param</span></code>  (或 <code class="docutils literal notranslate"><span class="pre">-p</span></code> ) 标志: <a class="reference external" href="http://localhost:3000/#/home?msgid=985">[待校准&#64;985]</a></p>
+<p>我们对参数使用类似的语法，使用 <code class="docutils literal notranslate"><span class="pre">--param</span></code>  (或 <code class="docutils literal notranslate"><span class="pre">-p</span></code> ) 标志: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=985">[待校准&#64;985]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 run some_package some_ros_executable --ros-args -p my_param:<span class="o">=</span>value
 </pre></div>
 </div>
-<p>请注意，这不同于在ROS 1中使用前导下划线。 <a class="reference external" href="http://localhost:3000/#/home?msgid=986">[待校准&#64;986]</a></p>
-<p>要更改节点名称，请使用 <code class="docutils literal notranslate"><span class="pre">__node</span></code>  (ROS 1当量为 <code class="docutils literal notranslate"><span class="pre">__name</span></code> ): <a class="reference external" href="http://localhost:3000/#/home?msgid=987">[待校准&#64;987]</a></p>
+<p>请注意，这不同于在ROS 1中使用前导下划线。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=986">[待校准&#64;986]</a></p>
+<p>要更改节点名称，请使用 <code class="docutils literal notranslate"><span class="pre">__node</span></code>  (ROS 1当量为 <code class="docutils literal notranslate"><span class="pre">__name</span></code> ): <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=987">[待校准&#64;987]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 run some_package some_ros_executable --ros-args -r __node:<span class="o">=</span>new_node_name
 </pre></div>
 </div>
-<p>注意 <code class="docutils literal notranslate"><span class="pre">-r</span></code> 旗的使用。更改命名空间 <code class="docutils literal notranslate"><span class="pre">__ns</span></code> 需要相同的重映射标志: <a class="reference external" href="http://localhost:3000/#/home?msgid=988">[待校准&#64;988]</a></p>
+<p>注意 <code class="docutils literal notranslate"><span class="pre">-r</span></code> 旗的使用。更改命名空间 <code class="docutils literal notranslate"><span class="pre">__ns</span></code> 需要相同的重映射标志: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=988">[待校准&#64;988]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 run some_package some_ros_executable --ros-args -r __ns:<span class="o">=</span>/new/namespace
 </pre></div>
 </div>
-<p>在ROS 2中，以下ROS 1键没有等效项: <a class="reference external" href="http://localhost:3000/#/home?msgid=989">[待校准&#64;989]</a></p>
+<p>在ROS 2中，以下ROS 1键没有等效项: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=989">[待校准&#64;989]</a></p>
 <ul class="simple">
-<li><p>[需手动修复的语法]``__log`` (but <code class="docutils literal notranslate"><span class="pre">--log-config-file</span></code> can用于提供日志记录器配置文件) <a class="reference external" href="http://localhost:3000/#/home?msgid=990">[待校准&#64;990]</a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">__ip</span></code> <a class="reference external" href="http://localhost:3000/#/home?msgid=991">[待校准&#64;991]</a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">__hostname</span></code> <a class="reference external" href="http://localhost:3000/#/home?msgid=992">[待校准&#64;992]</a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">__master</span></code> <a class="reference external" href="http://localhost:3000/#/home?msgid=993">[待校准&#64;993]</a></p></li>
+<li><p>[需手动修复的语法]``__log`` (but <code class="docutils literal notranslate"><span class="pre">--log-config-file</span></code> can用于提供日志记录器配置文件) <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=990">[待校准&#64;990]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__ip</span></code> <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=991">[待校准&#64;991]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__hostname</span></code> <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=992">[待校准&#64;992]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__master</span></code> <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=993">[待校准&#64;993]</a></p></li>
 </ul>
-<p>有关更多信息，请参见 <a class="reference external" href="https://design.ros2.org/articles/ros_command_line_arguments.html">design document</a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=994">[待校准&#64;994]</a></p>
+<p>有关更多信息，请参见 <a class="reference external" href="https://design.ros2.org/articles/ros_command_line_arguments.html">design document</a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=994">[待校准&#64;994]</a></p>
 <div class="section" id="quick-reference">
-<h5>快速参考 <a class="reference external" href="http://localhost:3000/#/home?msgid=995">[待校准&#64;995]</a><a class="headerlink" href="#quick-reference" title="永久链接至标题"></a></h5>
+<h5>快速参考 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=995">[待校准&#64;995]</a><a class="headerlink" href="#quick-reference" title="永久链接至标题"></a></h5>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 29%" />
@@ -1053,27 +1053,27 @@ talker
 <col style="width: 39%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p>特征 <a class="reference external" href="http://localhost:3000/#/home?msgid=996">[待校准&#64;996]</a></p></th>
-<th class="head"><p>ROS 1 <a class="reference external" href="http://localhost:3000/#/home?msgid=997">[待校准&#64;997]</a></p></th>
-<th class="head"><p>ROS 2 <a class="reference external" href="http://localhost:3000/#/home?msgid=998">[待校准&#64;998]</a></p></th>
+<tr class="row-odd"><th class="head"><p>特征 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=996">[待校准&#64;996]</a></p></th>
+<th class="head"><p>ROS 1 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=997">[待校准&#64;997]</a></p></th>
+<th class="head"><p>ROS 2 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=998">[待校准&#64;998]</a></p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>重新映射 <a class="reference external" href="http://localhost:3000/#/home?msgid=999">[待校准&#64;999]</a></p></td>
-<td><p>foo:= bar <a class="reference external" href="http://localhost:3000/#/home?msgid=1000">[待校准&#64;1000]</a></p></td>
-<td><p>-r foo:= bar <a class="reference external" href="http://localhost:3000/#/home?msgid=1001">[待校准&#64;1001]</a></p></td>
+<tr class="row-even"><td><p>重新映射 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=999">[待校准&#64;999]</a></p></td>
+<td><p>foo:= bar <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=1000">[待校准&#64;1000]</a></p></td>
+<td><p>-r foo:= bar <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=1001">[待校准&#64;1001]</a></p></td>
 </tr>
-<tr class="row-odd"><td><p>参数 <a class="reference external" href="http://localhost:3000/#/home?msgid=1002">[待校准&#64;1002]</a></p></td>
-<td><p>_ foo:= bar <a class="reference external" href="http://localhost:3000/#/home?msgid=1003">[待校准&#64;1003]</a></p></td>
-<td><p>-p foo:= bar <a class="reference external" href="http://localhost:3000/#/home?msgid=1004">[待校准&#64;1004]</a></p></td>
+<tr class="row-odd"><td><p>参数 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=1002">[待校准&#64;1002]</a></p></td>
+<td><p>_ foo:= bar <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=1003">[待校准&#64;1003]</a></p></td>
+<td><p>-p foo:= bar <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=1004">[待校准&#64;1004]</a></p></td>
 </tr>
-<tr class="row-even"><td><p>节点名称 <a class="reference external" href="http://localhost:3000/#/home?msgid=1005">[待校准&#64;1005]</a></p></td>
-<td><p>__Name := foo <a class="reference external" href="http://localhost:3000/#/home?msgid=1006">[待校准&#64;1006]</a></p></td>
-<td><p>-r __node:= foo <a class="reference external" href="http://localhost:3000/#/home?msgid=1007">[待校准&#64;1007]</a></p></td>
+<tr class="row-even"><td><p>节点名称 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=1005">[待校准&#64;1005]</a></p></td>
+<td><p>__Name := foo <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=1006">[待校准&#64;1006]</a></p></td>
+<td><p>-r __node:= foo <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=1007">[待校准&#64;1007]</a></p></td>
 </tr>
-<tr class="row-odd"><td><p>命名空间 <a class="reference external" href="http://localhost:3000/#/home?msgid=1008">[待校准&#64;1008]</a></p></td>
-<td><p>__Ns: = foo <a class="reference external" href="http://localhost:3000/#/home?msgid=1009">[待校准&#64;1009]</a></p></td>
-<td><p>-R__ns: = foo <a class="reference external" href="http://localhost:3000/#/home?msgid=1010">[待校准&#64;1010]</a></p></td>
+<tr class="row-odd"><td><p>命名空间 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=1008">[待校准&#64;1008]</a></p></td>
+<td><p>__Ns: = foo <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=1009">[待校准&#64;1009]</a></p></td>
+<td><p>-R__ns: = foo <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=1010">[待校准&#64;1010]</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -1081,23 +1081,23 @@ talker
 </div>
 </div>
 <div class="section" id="more-examples-and-tools">
-<h3>更多示例和工具 <a class="reference external" href="http://localhost:3000/#/home?msgid=1011">[待校准&#64;1011]</a><a class="headerlink" href="#more-examples-and-tools" title="永久链接至标题"></a></h3>
+<h3>更多示例和工具 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=1011">[待校准&#64;1011]</a><a class="headerlink" href="#more-examples-and-tools" title="永久链接至标题"></a></h3>
 <ul class="simple">
-<li><p>[需手动修复的语法]Launch文件migrator，转换ROS 1XMLlaunch文件ROS 2 Pythonlaunch文件: <a class="reference external" href="https://github.com">https://github.com</a>/aws机器人/ros2-launch文件migrator <a class="reference external" href="http://localhost:3000/#/home?msgid=1012">[待校准&#64;1012]</a></p></li>
-<li><p>Amazon在工具移植ROS 1机器人ROS 2 <a class="reference external" href="https://github.com/awslabs/">https://github.com/awslabs/</a> ros2-migration-tools/树/主/移植 _ 工具 <a class="reference external" href="http://localhost:3000/#/home?msgid=1013">[待校准&#64;1013]</a></p></li>
+<li><p>[需手动修复的语法]Launch文件migrator，转换ROS 1XMLlaunch文件ROS 2 Pythonlaunch文件: <a class="reference external" href="https://github.com">https://github.com</a>/aws机器人/ros2-launch文件migrator <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=1012">[待校准&#64;1012]</a></p></li>
+<li><p>Amazon在工具移植ROS 1机器人ROS 2 <a class="reference external" href="https://github.com/awslabs/">https://github.com/awslabs/</a> ros2-migration-tools/树/主/移植 _ 工具 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=1013">[待校准&#64;1013]</a></p></li>
 </ul>
 </div>
 </div>
 <div class="section" id="licensing">
-<h2>许可 <a class="reference external" href="http://localhost:3000/#/home?msgid=1014">[待校准&#64;1014]</a><a class="headerlink" href="#licensing" title="永久链接至标题"></a></h2>
-<p>在ROS 2中，我们推荐的许可证是 <a class="reference external" href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 License</a>. In ROS 1 our recommended license was the <a class="reference external" href="https://opensource.org/licenses/BSD-3-Clause">3-Clause BSD License</a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=1015">[待校准&#64;1015]</a></p>
-<p>对于任何新项目，我们建议使用Apache 2.0许可证，无论是ROS 1还是ROS 2。 <a class="reference external" href="http://localhost:3000/#/home?msgid=1016">[待校准&#64;1016]</a></p>
-<p>但是，当将代码从ROS 1迁移到ROS 2时，我们不能简单地更改许可证。对于任何先前存在的贡献，必须保留现有许可证。 <a class="reference external" href="http://localhost:3000/#/home?msgid=1017">[待校准&#64;1017]</a></p>
-<p>为此，如果一个包正在迁移，我们建议保留现有的许可证，并在现有的OSI许可证下继续为该包做出贡献，我们希望该许可证是核心元素的BSD许可证。 <a class="reference external" href="http://localhost:3000/#/home?msgid=1018">[待校准&#64;1018]</a></p>
-<p>这将使事情清晰易懂。 <a class="reference external" href="http://localhost:3000/#/home?msgid=1019">[待校准&#64;1019]</a></p>
+<h2>许可 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=1014">[待校准&#64;1014]</a><a class="headerlink" href="#licensing" title="永久链接至标题"></a></h2>
+<p>在ROS 2中，我们推荐的许可证是 <a class="reference external" href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 License</a>. In ROS 1 our recommended license was the <a class="reference external" href="https://opensource.org/licenses/BSD-3-Clause">3-Clause BSD License</a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=1015">[待校准&#64;1015]</a></p>
+<p>对于任何新项目，我们建议使用Apache 2.0许可证，无论是ROS 1还是ROS 2。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=1016">[待校准&#64;1016]</a></p>
+<p>但是，当将代码从ROS 1迁移到ROS 2时，我们不能简单地更改许可证。对于任何先前存在的贡献，必须保留现有许可证。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=1017">[待校准&#64;1017]</a></p>
+<p>为此，如果一个包正在迁移，我们建议保留现有的许可证，并在现有的OSI许可证下继续为该包做出贡献，我们希望该许可证是核心元素的BSD许可证。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=1018">[待校准&#64;1018]</a></p>
+<p>这将使事情清晰易懂。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=1019">[待校准&#64;1019]</a></p>
 <div class="section" id="changing-the-license">
-<h3>更改许可证 <a class="reference external" href="http://localhost:3000/#/home?msgid=1020">[待校准&#64;1020]</a><a class="headerlink" href="#changing-the-license" title="永久链接至标题"></a></h3>
-<p>可以更改许可证，但是您需要联系所有贡献者并获得许可。对于大多数包来说，这可能是一项巨大的努力，不值得考虑。如果包有一小部分贡献者，那么这可能是可行的。 <a class="reference external" href="http://localhost:3000/#/home?msgid=1021">[待校准&#64;1021]</a></p>
+<h3>更改许可证 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=1020">[待校准&#64;1020]</a><a class="headerlink" href="#changing-the-license" title="永久链接至标题"></a></h3>
+<p>可以更改许可证，但是您需要联系所有贡献者并获得许可。对于大多数包来说，这可能是一项巨大的努力，不值得考虑。如果包有一小部分贡献者，那么这可能是可行的。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=1021">[待校准&#64;1021]</a></p>
 </div>
 </div>
 </div>

@@ -280,12 +280,12 @@
 
 
   <div class="section" id="building-a-visual-robot-model-with-urdf-from-scratch">
-<span id="buildingurdf"></span><h1>从头开始用URDF构建视觉机器人模型 <a class="reference external" href="http://localhost:3000/#/home?msgid=8996">[待校准&#64;8996]</a><a class="headerlink" href="#building-a-visual-robot-model-with-urdf-from-scratch" title="永久链接至标题"></a></h1>
-<p>Goal目标: Learn了解如何构建可以在Rviz中查看的机器人视觉模型 <a class="reference external" href="http://localhost:3000/#/home?msgid=8997">[待校准&#64;8997]</a></p>
-<p>Tutorial教程级别: Beginner初学者 <a class="reference external" href="http://localhost:3000/#/home?msgid=7088">[待校准&#64;7088]</a></p>
-<p>Note注意: This本教程假设您知道如何编写格式良好的XML代码 <a class="reference external" href="http://localhost:3000/#/home?msgid=8998">[待校准&#64;8998]</a></p>
+<span id="buildingurdf"></span><h1>从头开始用URDF构建视觉机器人模型 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8996">[待校准&#64;8996]</a><a class="headerlink" href="#building-a-visual-robot-model-with-urdf-from-scratch" title="永久链接至标题"></a></h1>
+<p>Goal目标: Learn了解如何构建可以在Rviz中查看的机器人视觉模型 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8997">[待校准&#64;8997]</a></p>
+<p>Tutorial教程级别: Beginner初学者 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7088">[待校准&#64;7088]</a></p>
+<p>Note注意: This本教程假设您知道如何编写格式良好的XML代码 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8998">[待校准&#64;8998]</a></p>
 <div class="contents local topic" id="contents">
-<p class="topic-title">内容 <a class="reference external" href="http://localhost:3000/#/home?msgid=6715">[待校准&#64;6715]</a></p>
+<p class="topic-title">内容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6715">[待校准&#64;6715]</a></p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#one-shape" id="id3">一个形状 [待校准&#64;9004]</a></p></li>
 <li><p><a class="reference internal" href="#multiple-shapes" id="id4">多种形状 [待校准&#64;9020]</a></p></li>
@@ -294,20 +294,20 @@
 <li><p><a class="reference internal" href="#finishing-the-model" id="id7">完成模型 [待校准&#64;9038]</a></p></li>
 </ul>
 </div>
-<p>在本教程中，我们将构建一个看起来有点像R2D2的机器人的视觉模型。在后面的教程中，您将学习如何 <a class="reference internal" href="Building-a-Movable-Robot-Model-with-URDF.html"><span class="doc">articulate the model</span></a>, <a class="reference internal" href="Adding-Physical-and-Collision-Properties-to-a-URDF-Model.html"><span class="doc">add in some physical properties</span></a>, and <a class="reference internal" href="Using-Xacro-to-Clean-Up-a-URDF-File.html"><span class="doc">generate neater code with xacro</span></a> ，但是现在，我们将重点关注使视觉几何正确。 <a class="reference external" href="http://localhost:3000/#/home?msgid=8999">[待校准&#64;8999]</a></p>
-<p>在继续之前，确保你有 <a class="reference external" href="https://index.ros.org/p/joint_state_publisher">joint_state_publisher</a> package installed. If you installed <a class="reference external" href="https://index.ros.org/p/urdf_tutorial">urdf_tutorial</a> 二进制文件，应该已经是这样了。如果没有，请更新您的安装以包含该包 (使用 <code class="docutils literal notranslate"><span class="pre">rosdep</span></code> 检查)。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9000">[待校准&#64;9000]</a></p>
-<p>本教程中提到的所有机器人模型 (以及源文件) 都可以在 <a class="reference external" href="https://index.ros.org/p/urdf_tutorial">urdf_tutorial</a> 包中找到。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9001">[待校准&#64;9001]</a></p>
-<p>为了确保正确解析urdf文件中定义的形状，需要将Linux环境变量 <code class="docutils literal notranslate"><span class="pre">LC_NUMERIC</span></code> 设置为 <code class="docutils literal notranslate"><span class="pre">en_US.UTF-8</span></code> 。每次打开终端时都必须这样做: <a class="reference external" href="http://localhost:3000/#/home?msgid=9002">[待校准&#64;9002]</a></p>
+<p>在本教程中，我们将构建一个看起来有点像R2D2的机器人的视觉模型。在后面的教程中，您将学习如何 <a class="reference internal" href="Building-a-Movable-Robot-Model-with-URDF.html"><span class="doc">articulate the model</span></a>, <a class="reference internal" href="Adding-Physical-and-Collision-Properties-to-a-URDF-Model.html"><span class="doc">add in some physical properties</span></a>, and <a class="reference internal" href="Using-Xacro-to-Clean-Up-a-URDF-File.html"><span class="doc">generate neater code with xacro</span></a> ，但是现在，我们将重点关注使视觉几何正确。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8999">[待校准&#64;8999]</a></p>
+<p>在继续之前，确保你有 <a class="reference external" href="https://index.ros.org/p/joint_state_publisher">joint_state_publisher</a> package installed. If you installed <a class="reference external" href="https://index.ros.org/p/urdf_tutorial">urdf_tutorial</a> 二进制文件，应该已经是这样了。如果没有，请更新您的安装以包含该包 (使用 <code class="docutils literal notranslate"><span class="pre">rosdep</span></code> 检查)。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9000">[待校准&#64;9000]</a></p>
+<p>本教程中提到的所有机器人模型 (以及源文件) 都可以在 <a class="reference external" href="https://index.ros.org/p/urdf_tutorial">urdf_tutorial</a> 包中找到。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9001">[待校准&#64;9001]</a></p>
+<p>为了确保正确解析urdf文件中定义的形状，需要将Linux环境变量 <code class="docutils literal notranslate"><span class="pre">LC_NUMERIC</span></code> 设置为 <code class="docutils literal notranslate"><span class="pre">en_US.UTF-8</span></code> 。每次打开终端时都必须这样做: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9002">[待校准&#64;9002]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">LC_NUMERIC=&quot;en_US.UTF-8&quot;</span>
 </pre></div>
 </div>
-<p>要永久设置此环境变量，请在终端中执行以下命令: <a class="reference external" href="http://localhost:3000/#/home?msgid=9003">[待校准&#64;9003]</a></p>
+<p>要永久设置此环境变量，请在终端中执行以下命令: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9003">[待校准&#64;9003]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">echo &#39;export LC_NUMERIC=&quot;en_US.UTF-8&quot;&#39; &gt;&gt; ~/.bashrc</span>
 </pre></div>
 </div>
 <div class="section" id="one-shape">
-<h2>一个形状 <a class="reference external" href="http://localhost:3000/#/home?msgid=9004">[待校准&#64;9004]</a><a class="headerlink" href="#one-shape" title="永久链接至标题"></a></h2>
-<p>首先，我们将探索一个简单的形状。这是尽可能简单的urdf。 <a class="reference external" href="https://github.com/ros/urdf_tutorial/blob/ros2/urdf/01-myfirst.urdf">[Source: 01-myfirst.urdf]</a>  <a class="reference external" href="http://localhost:3000/#/home?msgid=9005">[待校准&#64;9005]</a></p>
+<h2>一个形状 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9004">[待校准&#64;9004]</a><a class="headerlink" href="#one-shape" title="永久链接至标题"></a></h2>
+<p>首先，我们将探索一个简单的形状。这是尽可能简单的urdf。 <a class="reference external" href="https://github.com/ros/urdf_tutorial/blob/ros2/urdf/01-myfirst.urdf">[Source: 01-myfirst.urdf]</a>  <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9005">[待校准&#64;9005]</a></p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot;?&gt;</span>
 <span class="nt">&lt;robot</span> <span class="na">name=</span><span class="s">&quot;myfirst&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;link</span> <span class="na">name=</span><span class="s">&quot;base_link&quot;</span><span class="nt">&gt;</span>
@@ -320,38 +320,38 @@
 <span class="nt">&lt;/robot&gt;</span>
 </pre></div>
 </div>
-<p>要将XML翻译成英语，这是一个名为 <code class="docutils literal notranslate"><span class="pre">myfirst</span></code> 的机器人，它只包含一个链接 (又名部分)，其视觉成分只是一个长度为0.6米、半径为0.2米的圆柱体。对于一个简单的 “hello world” 类型的例子来说，这看起来像是很多封闭的标签，但是它会变得更加复杂，相信我。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9006">[待校准&#64;9006]</a></p>
-<p>检查模型，launch的 <code class="docutils literal notranslate"><span class="pre">display.launch.py</span></code> 文件: <a class="reference external" href="http://localhost:3000/#/home?msgid=9007">[待校准&#64;9007]</a></p>
+<p>要将XML翻译成英语，这是一个名为 <code class="docutils literal notranslate"><span class="pre">myfirst</span></code> 的机器人，它只包含一个链接 (又名部分)，其视觉成分只是一个长度为0.6米、半径为0.2米的圆柱体。对于一个简单的 “hello world” 类型的例子来说，这看起来像是很多封闭的标签，但是它会变得更加复杂，相信我。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9006">[待校准&#64;9006]</a></p>
+<p>检查模型，launch的 <code class="docutils literal notranslate"><span class="pre">display.launch.py</span></code> 文件: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9007">[待校准&#64;9007]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 launch urdf_tutorial display.launch.py model:=urdf/01-myfirst.urdf</span>
 </pre></div>
 </div>
-<p>这做了三件事: <a class="reference external" href="http://localhost:3000/#/home?msgid=9008">[待校准&#64;9008]</a></p>
+<p>这做了三件事: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9008">[待校准&#64;9008]</a></p>
 <blockquote>
 <div><ul class="simple">
-<li><p>加载指定模型并将其保存为参数 <a class="reference external" href="http://localhost:3000/#/home?msgid=9009">[待校准&#64;9009]</a></p></li>
-<li><p>运行节点以发布 <a class="reference external" href="https://github.com/ros2/common_interfaces/blob/eloquent/sensor_msgs/msg/JointState.msg">sensor_msgs/msg/JointState</a> 和转换 (稍后会详细介绍) <a class="reference external" href="http://localhost:3000/#/home?msgid=9010">[待校准&#64;9010]</a></p></li>
-<li><p>使用配置文件启动Rviz <a class="reference external" href="http://localhost:3000/#/home?msgid=9011">[待校准&#64;9011]</a></p></li>
+<li><p>加载指定模型并将其保存为参数 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9009">[待校准&#64;9009]</a></p></li>
+<li><p>运行节点以发布 <a class="reference external" href="https://github.com/ros2/common_interfaces/blob/eloquent/sensor_msgs/msg/JointState.msg">sensor_msgs/msg/JointState</a> 和转换 (稍后会详细介绍) <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9010">[待校准&#64;9010]</a></p></li>
+<li><p>使用配置文件启动Rviz <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9011">[待校准&#64;9011]</a></p></li>
 </ul>
 </div></blockquote>
-<p>请注意，上面的launch命令假定您正在从 <a class="reference external" href="https://index.ros.org/p/urdf_tutorial">urdf_tutorial</a> 包目录执行它 (即:  <code class="docutils literal notranslate"><span class="pre">urdf</span></code> 目录是当前工作目录的直接子目录)。如果不是这种情况，到 <code class="docutils literal notranslate"><span class="pre">01-myfirst.urdf</span></code> 的相对路径将无效，一旦launcher尝试将urdf作为参数加载，您将收到一个错误。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9012">[待校准&#64;9012]</a></p>
-<p>稍微修改的参数允许它工作，而不管当前的工作目录如何: <a class="reference external" href="http://localhost:3000/#/home?msgid=9013">[待校准&#64;9013]</a></p>
+<p>请注意，上面的launch命令假定您正在从 <a class="reference external" href="https://index.ros.org/p/urdf_tutorial">urdf_tutorial</a> 包目录执行它 (即:  <code class="docutils literal notranslate"><span class="pre">urdf</span></code> 目录是当前工作目录的直接子目录)。如果不是这种情况，到 <code class="docutils literal notranslate"><span class="pre">01-myfirst.urdf</span></code> 的相对路径将无效，一旦launcher尝试将urdf作为参数加载，您将收到一个错误。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9012">[待校准&#64;9012]</a></p>
+<p>稍微修改的参数允许它工作，而不管当前的工作目录如何: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9013">[待校准&#64;9013]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 launch urdf_tutorial display.launch.py model:=`ros2 pkg prefix --share urdf_tutorial`/urdf/01-myfirst.urdf</span>
 </pre></div>
 </div>
-<p>你将把所有示例launch命令给出这些教程如果不运行从 <code class="docutils literal notranslate"><span class="pre">urdf_tutorial</span></code> 包位置。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9014">[待校准&#64;9014]</a></p>
-<p>在launch <code class="docutils literal notranslate"><span class="pre">display.launch.py</span></code> 之后，你应该以RViz告终，向你展示以下内容: <a class="reference external" href="http://localhost:3000/#/home?msgid=9015">[待校准&#64;9015]</a></p>
-<a class="reference internal image-reference" href="https://raw.githubusercontent.com/ros/urdf_tutorial/ros2/images/myfirst.png"><img alt="我的第一张照片 `[待校准&#64;9016] &lt;http://localhost:3000/#/home?msgid=9016&gt;`_ " src="https://raw.githubusercontent.com/ros/urdf_tutorial/ros2/images/myfirst.png" style="width: 800px;" /></a>
+<p>你将把所有示例launch命令给出这些教程如果不运行从 <code class="docutils literal notranslate"><span class="pre">urdf_tutorial</span></code> 包位置。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9014">[待校准&#64;9014]</a></p>
+<p>在launch <code class="docutils literal notranslate"><span class="pre">display.launch.py</span></code> 之后，你应该以RViz告终，向你展示以下内容: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9015">[待校准&#64;9015]</a></p>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/ros/urdf_tutorial/ros2/images/myfirst.png"><img alt="我的第一张照片 `[待校准&#64;9016] &lt;http://dev.ros2.fishros.com/calibpage/#/home?msgid=9016&gt;`_ " src="https://raw.githubusercontent.com/ros/urdf_tutorial/ros2/images/myfirst.png" style="width: 800px;" /></a>
 <dl class="simple">
-<dt>需要注意的事项: <a class="reference external" href="http://localhost:3000/#/home?msgid=9017">[待校准&#64;9017]</a></dt><dd><ul class="simple">
-<li><p>固定帧是网格中心所在的变换帧。这里，它是由我们的一个链接base_link定义的帧。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9018">[待校准&#64;9018]</a></p></li>
-<li><p>默认情况下，视觉元素 (圆柱体) 的原点位于其几何图形的中心。因此，一半的圆柱体在网格下。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9019">[待校准&#64;9019]</a></p></li>
+<dt>需要注意的事项: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9017">[待校准&#64;9017]</a></dt><dd><ul class="simple">
+<li><p>固定帧是网格中心所在的变换帧。这里，它是由我们的一个链接base_link定义的帧。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9018">[待校准&#64;9018]</a></p></li>
+<li><p>默认情况下，视觉元素 (圆柱体) 的原点位于其几何图形的中心。因此，一半的圆柱体在网格下。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9019">[待校准&#64;9019]</a></p></li>
 </ul>
 </dd>
 </dl>
 </div>
 <div class="section" id="multiple-shapes">
-<h2>多种形状 <a class="reference external" href="http://localhost:3000/#/home?msgid=9020">[待校准&#64;9020]</a><a class="headerlink" href="#multiple-shapes" title="永久链接至标题"></a></h2>
-<p>现在让我们看看如何添加多个形状/链接。如果我们只是向urdf添加更多的链接元素，解析器将不知道将它们放在哪里。所以，我们必须增加关节。接缝元件可以指灵活和不灵活的接缝。我们将从不灵活或固定的关节开始。 <a class="reference external" href="https://github.com/ros/urdf_tutorial/blob/ros2/urdf/02-multipleshapes.urdf">[Source: 02-multipleshapes.urdf]</a>  <a class="reference external" href="http://localhost:3000/#/home?msgid=9021">[待校准&#64;9021]</a></p>
+<h2>多种形状 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9020">[待校准&#64;9020]</a><a class="headerlink" href="#multiple-shapes" title="永久链接至标题"></a></h2>
+<p>现在让我们看看如何添加多个形状/链接。如果我们只是向urdf添加更多的链接元素，解析器将不知道将它们放在哪里。所以，我们必须增加关节。接缝元件可以指灵活和不灵活的接缝。我们将从不灵活或固定的关节开始。 <a class="reference external" href="https://github.com/ros/urdf_tutorial/blob/ros2/urdf/02-multipleshapes.urdf">[Source: 02-multipleshapes.urdf]</a>  <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9021">[待校准&#64;9021]</a></p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot;?&gt;</span>
 <span class="nt">&lt;robot</span> <span class="na">name=</span><span class="s">&quot;multipleshapes&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;link</span> <span class="na">name=</span><span class="s">&quot;base_link&quot;</span><span class="nt">&gt;</span>
@@ -379,18 +379,18 @@
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>注意我们如何定义一个0.6米 × 0.1米 × 0.2米的盒子 <a class="reference external" href="http://localhost:3000/#/home?msgid=9022">[待校准&#64;9022]</a></p></li>
-<li><p>关节是根据父母和孩子来定义的。URDF最终是一个具有一个根链接的树结构。这意味着腿的位置取决于base_link的位置。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9023">[待校准&#64;9023]</a></p></li>
+<li><p>注意我们如何定义一个0.6米 × 0.1米 × 0.2米的盒子 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9022">[待校准&#64;9022]</a></p></li>
+<li><p>关节是根据父母和孩子来定义的。URDF最终是一个具有一个根链接的树结构。这意味着腿的位置取决于base_link的位置。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9023">[待校准&#64;9023]</a></p></li>
 </ul>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 launch urdf_tutorial display.launch.py model:=urdf/02-multipleshapes.urdf</span>
 </pre></div>
 </div>
-<a class="reference internal image-reference" href="https://raw.githubusercontent.com/ros/urdf_tutorial/ros2/images/multipleshapes.png"><img alt="多种形状 `[待校准&#64;9020] &lt;http://localhost:3000/#/home?msgid=9020&gt;`_ " src="https://raw.githubusercontent.com/ros/urdf_tutorial/ros2/images/multipleshapes.png" style="width: 800px;" /></a>
-<p>两个形状相互重叠，因为它们共享相同的原点。如果我们希望它们不重叠，我们必须定义更多的起源。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9024">[待校准&#64;9024]</a></p>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/ros/urdf_tutorial/ros2/images/multipleshapes.png"><img alt="多种形状 `[待校准&#64;9020] &lt;http://dev.ros2.fishros.com/calibpage/#/home?msgid=9020&gt;`_ " src="https://raw.githubusercontent.com/ros/urdf_tutorial/ros2/images/multipleshapes.png" style="width: 800px;" /></a>
+<p>两个形状相互重叠，因为它们共享相同的原点。如果我们希望它们不重叠，我们必须定义更多的起源。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9024">[待校准&#64;9024]</a></p>
 </div>
 <div class="section" id="origins">
-<h2>起源 <a class="reference external" href="http://localhost:3000/#/home?msgid=9025">[待校准&#64;9025]</a><a class="headerlink" href="#origins" title="永久链接至标题"></a></h2>
-<p>R2D2的腿附着在他躯干的上半部，在侧面。这就是我们指定关节的原点的地方。此外，它不会附着在腿的中间，而是附着在上部，所以我们也必须偏移腿的原点。我们也旋转腿，使它是直立的。 <a class="reference external" href="https://github.com/ros/urdf_tutorial/blob/ros2/urdf/03-origins.urdf">[Source: 03-origins.urdf]</a>  <a class="reference external" href="http://localhost:3000/#/home?msgid=9026">[待校准&#64;9026]</a></p>
+<h2>起源 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9025">[待校准&#64;9025]</a><a class="headerlink" href="#origins" title="永久链接至标题"></a></h2>
+<p>R2D2的腿附着在他躯干的上半部，在侧面。这就是我们指定关节的原点的地方。此外，它不会附着在腿的中间，而是附着在上部，所以我们也必须偏移腿的原点。我们也旋转腿，使它是直立的。 <a class="reference external" href="https://github.com/ros/urdf_tutorial/blob/ros2/urdf/03-origins.urdf">[Source: 03-origins.urdf]</a>  <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9026">[待校准&#64;9026]</a></p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot;?&gt;</span>
 <span class="nt">&lt;robot</span> <span class="na">name=</span><span class="s">&quot;origins&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;link</span> <span class="na">name=</span><span class="s">&quot;base_link&quot;</span><span class="nt">&gt;</span>
@@ -420,21 +420,21 @@
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>让我们从检查关节的起源开始。它是根据父级的参考帧来定义的。因此，我们在y方向 (左侧，但相对于轴的右侧) 为-0.22米，在z方向 (向上) 为0.25米。这意味着子链接的原点将向上和向右，而不考虑子链接的视觉原点标签。由于我们没有指定rpy (滚距偏航) 属性，因此子帧将默认具有与父帧相同的方向。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9027">[待校准&#64;9027]</a></p></li>
-<li><p>现在，看看腿的视觉来源，它有xyz和rpy偏移。这定义了视觉元素相对于其原点的中心应该在哪里。由于我们希望支腿附着在顶部，我们通过将z偏移设置为-0.3米来向下偏移原点。并且由于我们希望腿的长部分与z轴平行，因此我们将视觉部分形式发票/2绕y轴旋转。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9028">[待校准&#64;9028]</a></p></li>
+<li><p>让我们从检查关节的起源开始。它是根据父级的参考帧来定义的。因此，我们在y方向 (左侧，但相对于轴的右侧) 为-0.22米，在z方向 (向上) 为0.25米。这意味着子链接的原点将向上和向右，而不考虑子链接的视觉原点标签。由于我们没有指定rpy (滚距偏航) 属性，因此子帧将默认具有与父帧相同的方向。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9027">[待校准&#64;9027]</a></p></li>
+<li><p>现在，看看腿的视觉来源，它有xyz和rpy偏移。这定义了视觉元素相对于其原点的中心应该在哪里。由于我们希望支腿附着在顶部，我们通过将z偏移设置为-0.3米来向下偏移原点。并且由于我们希望腿的长部分与z轴平行，因此我们将视觉部分形式发票/2绕y轴旋转。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9028">[待校准&#64;9028]</a></p></li>
 </ul>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 launch urdf_tutorial display.launch.py model:=urdf/03-origins.urdf</span>
 </pre></div>
 </div>
-<a class="reference internal image-reference" href="https://raw.githubusercontent.com/ros/urdf_tutorial/ros2/images/origins.png"><img alt="起源截图 `[待校准&#64;9029] &lt;http://localhost:3000/#/home?msgid=9029&gt;`_ " src="https://raw.githubusercontent.com/ros/urdf_tutorial/ros2/images/origins.png" style="width: 800px;" /></a>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/ros/urdf_tutorial/ros2/images/origins.png"><img alt="起源截图 `[待校准&#64;9029] &lt;http://dev.ros2.fishros.com/calibpage/#/home?msgid=9029&gt;`_ " src="https://raw.githubusercontent.com/ros/urdf_tutorial/ros2/images/origins.png" style="width: 800px;" /></a>
 <ul class="simple">
-<li><p>[需手动修复的语法]launch文件运行包，该包将根据您的URDF为模型中的每个链接创建TF帧。Rviz使用此信息来确定在哪里显示每个形状。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9030">[待校准&#64;9030]</a></p></li>
-<li><p>如果给定的URDF链接不存在TF帧，则它将以白色 (参考 <a class="reference external" href="http://answers.ros.org/question/207947/how-do-you-use-externally-defined-materials-in-a-urdfxacro-file/">related question</a> ) 放置在原点。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9031">[待校准&#64;9031]</a></p></li>
+<li><p>[需手动修复的语法]launch文件运行包，该包将根据您的URDF为模型中的每个链接创建TF帧。Rviz使用此信息来确定在哪里显示每个形状。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9030">[待校准&#64;9030]</a></p></li>
+<li><p>如果给定的URDF链接不存在TF帧，则它将以白色 (参考 <a class="reference external" href="http://answers.ros.org/question/207947/how-do-you-use-externally-defined-materials-in-a-urdfxacro-file/">related question</a> ) 放置在原点。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9031">[待校准&#64;9031]</a></p></li>
 </ul>
 </div>
 <div class="section" id="material-girl">
-<h2>物质女孩 <a class="reference external" href="http://localhost:3000/#/home?msgid=9032">[待校准&#64;9032]</a><a class="headerlink" href="#material-girl" title="永久链接至标题"></a></h2>
-<p>“好吧，” 我听到你说。“那很可爱，但不是每个人都拥有b21。我的机器人和R2D2不是红色的!”这是一个很好的观点。让我们看看材料标签。 <a class="reference external" href="https://github.com/ros/urdf_tutorial/blob/ros2/urdf/04-materials.urdf">[Source: 04-materials.urdf]</a>  <a class="reference external" href="http://localhost:3000/#/home?msgid=9033">[待校准&#64;9033]</a></p>
+<h2>物质女孩 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9032">[待校准&#64;9032]</a><a class="headerlink" href="#material-girl" title="永久链接至标题"></a></h2>
+<p>“好吧，” 我听到你说。“那很可爱，但不是每个人都拥有b21。我的机器人和R2D2不是红色的!”这是一个很好的观点。让我们看看材料标签。 <a class="reference external" href="https://github.com/ros/urdf_tutorial/blob/ros2/urdf/04-materials.urdf">[Source: 04-materials.urdf]</a>  <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9033">[待校准&#64;9033]</a></p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot;?&gt;</span>
 <span class="nt">&lt;robot</span> <span class="na">name=</span><span class="s">&quot;materials&quot;</span><span class="nt">&gt;</span>
 
@@ -491,18 +491,18 @@
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>尸体现在是蓝色的。我们定义新材料调用了 “蓝色”，红色，绿色，蓝色和alpha通道定义为0,0，0.8和1。所有值都可以在 [0,1] 范围内。然后，此材质由base_link的视觉元素引用。白色材料的定义类似。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9034">[待校准&#64;9034]</a></p></li>
-<li><p>您还可以从视觉元素中定义材质标签，甚至在其他链接中引用它。如果你重新定义它，甚至没有人会抱怨。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9035">[待校准&#64;9035]</a></p></li>
-<li><p>您还可以使用纹理指定用于为对象着色的图像文件 <a class="reference external" href="http://localhost:3000/#/home?msgid=9036">[待校准&#64;9036]</a></p></li>
+<li><p>尸体现在是蓝色的。我们定义新材料调用了 “蓝色”，红色，绿色，蓝色和alpha通道定义为0,0，0.8和1。所有值都可以在 [0,1] 范围内。然后，此材质由base_link的视觉元素引用。白色材料的定义类似。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9034">[待校准&#64;9034]</a></p></li>
+<li><p>您还可以从视觉元素中定义材质标签，甚至在其他链接中引用它。如果你重新定义它，甚至没有人会抱怨。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9035">[待校准&#64;9035]</a></p></li>
+<li><p>您还可以使用纹理指定用于为对象着色的图像文件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9036">[待校准&#64;9036]</a></p></li>
 </ul>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 launch urdf_tutorial display.launch.py model:=urdf/04-materials.urdf</span>
 </pre></div>
 </div>
-<a class="reference internal image-reference" href="https://raw.githubusercontent.com/ros/urdf_tutorial/ros2/images/materials.png"><img alt="材料截图 `[待校准&#64;9037] &lt;http://localhost:3000/#/home?msgid=9037&gt;`_ " src="https://raw.githubusercontent.com/ros/urdf_tutorial/ros2/images/materials.png" style="width: 800px;" /></a>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/ros/urdf_tutorial/ros2/images/materials.png"><img alt="材料截图 `[待校准&#64;9037] &lt;http://dev.ros2.fishros.com/calibpage/#/home?msgid=9037&gt;`_ " src="https://raw.githubusercontent.com/ros/urdf_tutorial/ros2/images/materials.png" style="width: 800px;" /></a>
 </div>
 <div class="section" id="finishing-the-model">
-<h2>完成模型 <a class="reference external" href="http://localhost:3000/#/home?msgid=9038">[待校准&#64;9038]</a><a class="headerlink" href="#finishing-the-model" title="永久链接至标题"></a></h2>
-<p>现在我们用更多的形状来完成模型: 脚、轮子和头。最值得注意的是，我们添加了一个球体和一些网格。我们还将添加一些其他的作品，我们将在以后使用。 <a class="reference external" href="https://github.com/ros/urdf_tutorial/blob/ros2/urdf/05-visual.urdf">[Source: 05-visual.urdf]</a>  <a class="reference external" href="http://localhost:3000/#/home?msgid=9039">[待校准&#64;9039]</a></p>
+<h2>完成模型 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9038">[待校准&#64;9038]</a><a class="headerlink" href="#finishing-the-model" title="永久链接至标题"></a></h2>
+<p>现在我们用更多的形状来完成模型: 脚、轮子和头。最值得注意的是，我们添加了一个球体和一些网格。我们还将添加一些其他的作品，我们将在以后使用。 <a class="reference external" href="https://github.com/ros/urdf_tutorial/blob/ros2/urdf/05-visual.urdf">[Source: 05-visual.urdf]</a>  <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9039">[待校准&#64;9039]</a></p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot;?&gt;</span>
 <span class="nt">&lt;robot</span> <span class="na">name=</span><span class="s">&quot;visual&quot;</span><span class="nt">&gt;</span>
 
@@ -753,8 +753,8 @@
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 launch urdf_tutorial display.launch.py model:=urdf/05-visual.urdf</span>
 </pre></div>
 </div>
-<a class="reference internal image-reference" href="https://raw.githubusercontent.com/ros/urdf_tutorial/ros2/images/visual.png"><img alt="视觉截图 `[待校准&#64;9040] &lt;http://localhost:3000/#/home?msgid=9040&gt;`_ " src="https://raw.githubusercontent.com/ros/urdf_tutorial/ros2/images/visual.png" style="width: 800px;" /></a>
-<p>如何添加球体应该是相当不言自明的: <a class="reference external" href="http://localhost:3000/#/home?msgid=9041">[待校准&#64;9041]</a></p>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/ros/urdf_tutorial/ros2/images/visual.png"><img alt="视觉截图 `[待校准&#64;9040] &lt;http://dev.ros2.fishros.com/calibpage/#/home?msgid=9040&gt;`_ " src="https://raw.githubusercontent.com/ros/urdf_tutorial/ros2/images/visual.png" style="width: 800px;" /></a>
+<p>如何添加球体应该是相当不言自明的: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9041">[待校准&#64;9041]</a></p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;link</span> <span class="na">name=</span><span class="s">&quot;head&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;visual&gt;</span>
     <span class="nt">&lt;geometry&gt;</span>
@@ -765,7 +765,7 @@
 <span class="nt">&lt;/link&gt;</span>
 </pre></div>
 </div>
-<p>这里的网格是从pr2借来的。它们是单独的文件，您必须为其指定路径。您应该使用 “package:// NAME_OF_PACKAGE/path” 表示法。本教程的网格位于 <code class="docutils literal notranslate"><span class="pre">urdf_tutorial</span></code> 包中调用网格的文件夹中。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9042">[待校准&#64;9042]</a></p>
+<p>这里的网格是从pr2借来的。它们是单独的文件，您必须为其指定路径。您应该使用 “package:// NAME_OF_PACKAGE/path” 表示法。本教程的网格位于 <code class="docutils literal notranslate"><span class="pre">urdf_tutorial</span></code> 包中调用网格的文件夹中。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9042">[待校准&#64;9042]</a></p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;link</span> <span class="na">name=</span><span class="s">&quot;left_gripper&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;visual&gt;</span>
     <span class="nt">&lt;origin</span> <span class="na">rpy=</span><span class="s">&quot;0.0 0 0&quot;</span> <span class="na">xyz=</span><span class="s">&quot;0 0 0&quot;</span><span class="nt">/&gt;</span>
@@ -777,11 +777,11 @@
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>网格可以以多种不同格式导入。STL相当普遍，但引擎也支持DAE，它可以有自己的颜色数据，这意味着您不必指定颜色/材质。这些通常在单独的文件中。这些网格引用了网格文件夹中的 <code class="docutils literal notranslate"><span class="pre">.tif</span></code> 文件。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9043">[待校准&#64;9043]</a></p></li>
-<li><p>网格也可以使用相对缩放参数或边界框大小来确定大小。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9044">[待校准&#64;9044]</a></p></li>
-<li><p>我们也可以在一个完全不同的包中提到网格。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9045">[待校准&#64;9045]</a></p></li>
+<li><p>网格可以以多种不同格式导入。STL相当普遍，但引擎也支持DAE，它可以有自己的颜色数据，这意味着您不必指定颜色/材质。这些通常在单独的文件中。这些网格引用了网格文件夹中的 <code class="docutils literal notranslate"><span class="pre">.tif</span></code> 文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9043">[待校准&#64;9043]</a></p></li>
+<li><p>网格也可以使用相对缩放参数或边界框大小来确定大小。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9044">[待校准&#64;9044]</a></p></li>
+<li><p>我们也可以在一个完全不同的包中提到网格。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9045">[待校准&#64;9045]</a></p></li>
 </ul>
-<p>给你。一个R2D2-like的URDF模型。现在你可以继续下一步了， <a class="reference internal" href="Building-a-Movable-Robot-Model-with-URDF.html"><span class="doc">making it move</span></a> 。 <a class="reference external" href="http://localhost:3000/#/home?msgid=9046">[待校准&#64;9046]</a></p>
+<p>给你。一个R2D2-like的URDF模型。现在你可以继续下一步了， <a class="reference internal" href="Building-a-Movable-Robot-Model-with-URDF.html"><span class="doc">making it move</span></a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9046">[待校准&#64;9046]</a></p>
 </div>
 </div>
 
