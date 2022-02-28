@@ -44,7 +44,7 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../Installation.html">安装 [待校准&#64;5278]</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Installation.html">安装</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../Installation/Ubuntu-Development-Setup.html">在Ubuntu Linux上构建ROS 2 [待校准&#64;5474]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Installation/Ubuntu-Install-Binary.html">在Ubuntu Linux上安装ROS 2 [待校准&#64;5525]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Installation/Ubuntu-Install-Debians.html">通过Debian包安装ROS 2 [待校准&#64;5547]</a></li>
@@ -151,8 +151,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../../How-To-Guides.html">操作指南 [待校准&#64;5755]</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Installation-Troubleshooting.html">安装故障诊断工具 [待校准&#64;6086]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Developing-a-ROS-2-Package.html">开发ROS 2包 [待校准&#64;6065]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Ament-CMake-Documentation.html">[需手动修复的语法]ament _ cmake用户文档 [待校准&#64;5759]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Ament-CMake-Python-Documentation.html">[需手动修复的语法]ament _ cmake_python用户文档 [待校准&#64;5911]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Ament-CMake-Documentation.html">ament_cmake用户文档 [小鱼&#64;5759]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Ament-CMake-Python-Documentation.html">ament_cmake_python用户文档 [小鱼&#64;5911]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Launch-files-migration-guide.html">迁移launch文件ROS 1ROS 2 [待校准&#64;6189]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Launch-file-different-formats.html">对ROS 2Launch文件使用Python、XML和YAML [待校准&#64;6162]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Launching-composable-nodes.html">使用ROS 2launch到launch可组合节点 [待校准&#64;6284]</a></li>
@@ -192,7 +192,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-Command-Line-Tools.html">使用命令行工具进行自检 [待校准&#64;9667]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-RQt.html">RQt的概述和使用 [待校准&#64;10201]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-Composition.html">关于组件 [待校准&#64;9695]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-Catment.html">[需手动修复的语法]ament和catkin的混合研究 [待校准&#64;9595]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-Catment.html">ament和catkin的混合研究 [小鱼&#64;9595]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-Cross-Compilation.html">关于交叉编译 [待校准&#64;9717]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-Tf2.html">关于tf2 [待校准&#64;10229]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-Build-System.html">关于构建系统 [待校准&#64;9545]</a></li>
@@ -234,7 +234,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../Features.html">功能状态 [待校准&#64;10365]</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Roadmap.html">路线图 [待校准&#64;87]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Roadmap.html">开发计划（Roadmap） [小鱼&#64;87]</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Feature-Ideas.html">特色创意 [待校准&#64;5184]</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Governance.html">项目管理 [待校准&#64;1150]</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../Governance/ROS2-TSC-Charter.html">ROS 2技术指导委员会章程 [待校准&#64;1299]</a></li>
@@ -316,19 +316,19 @@
 <div class="section" id="components-of-a-quaternion">
 <h2>四元数的组成部分 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8501">[待校准&#64;8501]</a><a class="headerlink" href="#components-of-a-quaternion" title="永久链接至标题"></a></h2>
 <p>ROS 2使用四元数来跟踪和应用旋转。四元数有4个分量 “(x，y，z，w)”。在ROS 2中， <code class="docutils literal notranslate"><span class="pre">w</span></code> 是最后一个，但是在一些库中，如了海， <code class="docutils literal notranslate"><span class="pre">w</span></code> 可以放在第一个位置。在x/y/z轴上不产生旋转的常用单位四元数是 ''(0,0，0,1)''，可以通过以下方式创建: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8502">[待校准&#64;8502]</a></p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;tf2/LinearMath/Quaternion.h&gt;</span><span class="cp"></span>
-<span class="p">...</span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;tf2/LinearMath/Quaternion.h&gt;</span><span class="cp"></span>
+<span class="p">...</span><span class="w"></span>
 
-<span class="n">tf2</span><span class="o">::</span><span class="n">Quaternion</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">tf2</span><span class="o">::</span><span class="n">Quaternion</span><span class="w"> </span><span class="n">q</span><span class="p">;</span><span class="w"></span>
 <span class="c1">// Create a quaternion from roll/pitch/yaw in radians (0, 0, 0)</span>
-<span class="n">q</span><span class="p">.</span><span class="n">setRPY</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+<span class="n">q</span><span class="p">.</span><span class="n">setRPY</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
 <span class="c1">// Print the quaternion components (0, 0, 0, 1)</span>
-<span class="n">RCLCPP_INFO</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_logger</span><span class="p">(),</span> <span class="s">&quot;%f %f %f %f&quot;</span><span class="p">,</span>
-            <span class="n">q</span><span class="p">.</span><span class="n">x</span><span class="p">(),</span> <span class="n">q</span><span class="p">.</span><span class="n">y</span><span class="p">(),</span> <span class="n">q</span><span class="p">.</span><span class="n">z</span><span class="p">(),</span> <span class="n">q</span><span class="p">.</span><span class="n">w</span><span class="p">());</span>
+<span class="n">RCLCPP_INFO</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_logger</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;%f %f %f %f&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="n">q</span><span class="p">.</span><span class="n">x</span><span class="p">(),</span><span class="w"> </span><span class="n">q</span><span class="p">.</span><span class="n">y</span><span class="p">(),</span><span class="w"> </span><span class="n">q</span><span class="p">.</span><span class="n">z</span><span class="p">(),</span><span class="w"> </span><span class="n">q</span><span class="p">.</span><span class="n">w</span><span class="p">());</span><span class="w"></span>
 </pre></div>
 </div>
 <p>四元数的大小应始终为1。如果数值错误导致四元数数量级不是1，ROS 2将打印警告。要避免这些警告，请标准化四元数: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8503">[待校准&#64;8503]</a></p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">q</span><span class="p">.</span><span class="n">normalize</span><span class="p">();</span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">q</span><span class="p">.</span><span class="n">normalize</span><span class="p">();</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
@@ -336,18 +336,18 @@
 <h2>ROS 2中的四元数类型 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8504">[待校准&#64;8504]</a><a class="headerlink" href="#quaternion-types-in-ros-2" title="永久链接至标题"></a></h2>
 <p>ROS 2使用两个四元数数据类型: “tf2:: 四元数 `` and its equivalent `` 几何 _ msgs::msg:: 四元数”。要在c ++ 中转换它们，请使用 <code class="docutils literal notranslate"><span class="pre">tf2_geometry_msgs</span></code> 的方法。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8505">[待校准&#64;8505]</a></p>
 <p>C++ <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7215">[待校准&#64;7215]</a></p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;tf2_geometry_msgs/tf2_geometry_msgs.hpp&gt;</span><span class="cp"></span>
-<span class="p">...</span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;tf2_geometry_msgs/tf2_geometry_msgs.hpp&gt;</span><span class="cp"></span>
+<span class="p">...</span><span class="w"></span>
 
-<span class="n">tf2</span><span class="o">::</span><span class="n">Quaternion</span> <span class="n">tf2_quat</span><span class="p">,</span> <span class="n">tf2_quat_from_msg</span><span class="p">;</span>
-<span class="n">tf2_quat</span><span class="p">.</span><span class="n">setRPY</span><span class="p">(</span><span class="n">roll</span><span class="p">,</span> <span class="n">pitch</span><span class="p">,</span> <span class="n">yaw</span><span class="p">);</span>
+<span class="n">tf2</span><span class="o">::</span><span class="n">Quaternion</span><span class="w"> </span><span class="n">tf2_quat</span><span class="p">,</span><span class="w"> </span><span class="n">tf2_quat_from_msg</span><span class="p">;</span><span class="w"></span>
+<span class="n">tf2_quat</span><span class="p">.</span><span class="n">setRPY</span><span class="p">(</span><span class="n">roll</span><span class="p">,</span><span class="w"> </span><span class="n">pitch</span><span class="p">,</span><span class="w"> </span><span class="n">yaw</span><span class="p">);</span><span class="w"></span>
 <span class="c1">// Convert tf2::Quaternion to geometry_msgs::msg::Quaternion</span>
-<span class="n">geometry_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">Quaternion</span> <span class="n">msg_quat</span> <span class="o">=</span> <span class="n">tf2</span><span class="o">::</span><span class="n">toMsg</span><span class="p">(</span><span class="n">tf2_quat</span><span class="p">);</span>
+<span class="n">geometry_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">Quaternion</span><span class="w"> </span><span class="n">msg_quat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tf2</span><span class="o">::</span><span class="n">toMsg</span><span class="p">(</span><span class="n">tf2_quat</span><span class="p">);</span><span class="w"></span>
 
 <span class="c1">// Convert geometry_msgs::msg::Quaternion to tf2::Quaternion</span>
-<span class="n">tf2</span><span class="o">::</span><span class="n">convert</span><span class="p">(</span><span class="n">msg_quat</span><span class="p">,</span> <span class="n">tf2_quat_from_msg</span><span class="p">);</span>
+<span class="n">tf2</span><span class="o">::</span><span class="n">convert</span><span class="p">(</span><span class="n">msg_quat</span><span class="p">,</span><span class="w"> </span><span class="n">tf2_quat_from_msg</span><span class="p">);</span><span class="w"></span>
 <span class="c1">// or</span>
-<span class="n">tf2</span><span class="o">::</span><span class="n">fromMsg</span><span class="p">(</span><span class="n">msg_quat</span><span class="p">,</span> <span class="n">tf2_quat_from_msg</span><span class="p">);</span>
+<span class="n">tf2</span><span class="o">::</span><span class="n">fromMsg</span><span class="p">(</span><span class="n">msg_quat</span><span class="p">,</span><span class="w"> </span><span class="n">tf2_quat_from_msg</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 <p>蟒蛇 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7127">[待校准&#64;7127]</a></p>
@@ -372,7 +372,7 @@
 <span class="o">...</span>
 
 <span class="n">q</span> <span class="o">=</span> <span class="n">tf_transformations</span><span class="o">.</span><span class="n">quaternion_from_euler</span><span class="p">(</span><span class="mf">1.5707</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.5707</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;The quaternion representation is x: {q[0]} y: {q[1]} z: {q[2]} w: {q[3]}.&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The quaternion representation is x: </span><span class="si">{</span><span class="n">q</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s1"> y: </span><span class="si">{</span><span class="n">q</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s1"> z: </span><span class="si">{</span><span class="n">q</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="si">}</span><span class="s1"> w: </span><span class="si">{</span><span class="n">q</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="si">}</span><span class="s1">.&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -380,16 +380,16 @@
 <h3>2应用四元数旋转 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8509">[待校准&#64;8509]</a><a class="headerlink" href="#applying-a-quaternion-rotation" title="永久链接至标题"></a></h3>
 <p>要将一个四元数的旋转应用于一个姿势，只需将该姿势的前一个四元数乘以表示所需旋转的四元数。这个乘法的顺序很重要。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8510">[待校准&#64;8510]</a></p>
 <p>C++ <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7215">[待校准&#64;7215]</a></p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;tf2_geometry_msgs/tf2_geometry_msgs.hpp&gt;</span><span class="cp"></span>
-<span class="p">...</span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;tf2_geometry_msgs/tf2_geometry_msgs.hpp&gt;</span><span class="cp"></span>
+<span class="p">...</span><span class="w"></span>
 
-<span class="n">tf2</span><span class="o">::</span><span class="n">Quaternion</span> <span class="n">q_orig</span><span class="p">,</span> <span class="n">q_rot</span><span class="p">,</span> <span class="n">q_new</span><span class="p">;</span>
+<span class="n">tf2</span><span class="o">::</span><span class="n">Quaternion</span><span class="w"> </span><span class="n">q_orig</span><span class="p">,</span><span class="w"> </span><span class="n">q_rot</span><span class="p">,</span><span class="w"> </span><span class="n">q_new</span><span class="p">;</span><span class="w"></span>
 
-<span class="n">q_orig</span><span class="p">.</span><span class="n">setRPY</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">);</span>
+<span class="n">q_orig</span><span class="p">.</span><span class="n">setRPY</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">);</span><span class="w"></span>
 <span class="c1">// Rotate the previous pose by 180* about X</span>
-<span class="n">q_rot</span><span class="p">.</span><span class="n">setRPY</span><span class="p">(</span><span class="mf">3.14159</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">);</span>
-<span class="n">q_new</span> <span class="o">=</span> <span class="n">q_rot</span> <span class="o">*</span> <span class="n">q_orig</span><span class="p">;</span>
-<span class="n">q_new</span><span class="p">.</span><span class="n">normalize</span><span class="p">();</span>
+<span class="n">q_rot</span><span class="p">.</span><span class="n">setRPY</span><span class="p">(</span><span class="mf">3.14159</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">);</span><span class="w"></span>
+<span class="n">q_new</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">q_rot</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">q_orig</span><span class="p">;</span><span class="w"></span>
+<span class="n">q_new</span><span class="p">.</span><span class="n">normalize</span><span class="p">();</span><span class="w"></span>
 </pre></div>
 </div>
 <p>蟒蛇 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7127">[待校准&#64;7127]</a></p>
@@ -413,11 +413,11 @@
 <div class="section" id="relative-rotations">
 <h3>4相对旋转 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8513">[待校准&#64;8513]</a><a class="headerlink" href="#relative-rotations" title="永久链接至标题"></a></h3>
 <p>假设你有两个来自同一帧的四元数， <code class="docutils literal notranslate"><span class="pre">q_1</span></code> 和 <code class="docutils literal notranslate"><span class="pre">q_2</span></code> 。你想要找到相对旋转， <code class="docutils literal notranslate"><span class="pre">q_r</span></code> ，它通过以下方式将 <code class="docutils literal notranslate"><span class="pre">q_1</span></code> 转化为 <code class="docutils literal notranslate"><span class="pre">q_2</span></code> : <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8514">[待校准&#64;8514]</a></p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">q_2</span> <span class="o">=</span> <span class="n">q_r</span> <span class="o">*</span> <span class="n">q_1</span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">q_2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">q_r</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">q_1</span><span class="w"></span>
 </pre></div>
 </div>
 <p>你可以像求解矩阵方程一样求解 <code class="docutils literal notranslate"><span class="pre">q_r</span></code> 。反转 <code class="docutils literal notranslate"><span class="pre">q_1</span></code> ，右边-两边相乘。同样，乘法的顺序很重要: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8515">[待校准&#64;8515]</a></p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">q_r</span> <span class="o">=</span> <span class="n">q_2</span> <span class="o">*</span> <span class="n">q_1_inverse</span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">q_r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">q_2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">q_1_inverse</span><span class="w"></span>
 </pre></div>
 </div>
 <p>以下是在python中获取从先前机器人姿势到当前机器人姿势的相对旋转的示例: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8516">[待校准&#64;8516]</a></p>

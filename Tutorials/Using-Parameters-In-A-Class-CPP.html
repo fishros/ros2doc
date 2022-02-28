@@ -45,7 +45,7 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../Installation.html">安装 [待校准&#64;5278]</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../Installation.html">安装</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Ubuntu-Development-Setup.html">在Ubuntu Linux上构建ROS 2 [待校准&#64;5474]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Ubuntu-Install-Binary.html">在Ubuntu Linux上安装ROS 2 [待校准&#64;5525]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Ubuntu-Install-Debians.html">通过Debian包安装ROS 2 [待校准&#64;5547]</a></li>
@@ -152,8 +152,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../How-To-Guides.html">操作指南 [待校准&#64;5755]</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Installation-Troubleshooting.html">安装故障诊断工具 [待校准&#64;6086]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Developing-a-ROS-2-Package.html">开发ROS 2包 [待校准&#64;6065]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Ament-CMake-Documentation.html">[需手动修复的语法]ament _ cmake用户文档 [待校准&#64;5759]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Ament-CMake-Python-Documentation.html">[需手动修复的语法]ament _ cmake_python用户文档 [待校准&#64;5911]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Ament-CMake-Documentation.html">ament_cmake用户文档 [小鱼&#64;5759]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Ament-CMake-Python-Documentation.html">ament_cmake_python用户文档 [小鱼&#64;5911]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Launch-files-migration-guide.html">迁移launch文件ROS 1ROS 2 [待校准&#64;6189]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Launch-file-different-formats.html">对ROS 2Launch文件使用Python、XML和YAML [待校准&#64;6162]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Launching-composable-nodes.html">使用ROS 2launch到launch可组合节点 [待校准&#64;6284]</a></li>
@@ -193,7 +193,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Command-Line-Tools.html">使用命令行工具进行自检 [待校准&#64;9667]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Concepts/About-RQt.html">RQt的概述和使用 [待校准&#64;10201]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Composition.html">关于组件 [待校准&#64;9695]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Catment.html">[需手动修复的语法]ament和catkin的混合研究 [待校准&#64;9595]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Catment.html">ament和catkin的混合研究 [小鱼&#64;9595]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Cross-Compilation.html">关于交叉编译 [待校准&#64;9717]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Tf2.html">关于tf2 [待校准&#64;10229]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Build-System.html">关于构建系统 [待校准&#64;9545]</a></li>
@@ -235,7 +235,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../Features.html">功能状态 [待校准&#64;10365]</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Roadmap.html">路线图 [待校准&#64;87]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Roadmap.html">开发计划（Roadmap） [小鱼&#64;87]</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Feature-Ideas.html">特色创意 [待校准&#64;5184]</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Governance.html">项目管理 [待校准&#64;1150]</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Governance/ROS2-TSC-Charter.html">ROS 2技术指导委员会章程 [待校准&#64;1299]</a></li>
@@ -335,80 +335,80 @@
 <div class="section" id="write-the-c-node">
 <h3>2编写cnode节点 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8005">[待校准&#64;8005]</a><a class="headerlink" href="#write-the-c-node" title="永久链接至标题"></a></h3>
 <p>在 <code class="docutils literal notranslate"><span class="pre">dev_ws/src/cpp_parameters/src</span></code> 目录内，创建一个调用 <code class="docutils literal notranslate"><span class="pre">cpp_parameters_node.cpp</span></code> 的新文件，并将以下代码粘贴到: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9221">[待校准&#64;9221]</a></p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;rclcpp/rclcpp.hpp&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;chrono&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;string&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;functional&gt;</span><span class="cp"></span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;rclcpp/rclcpp.hpp&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;chrono&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;functional&gt;</span><span class="cp"></span>
 
-<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="o">::</span><span class="n">chrono_literals</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="o">::</span><span class="nn">chrono_literals</span><span class="p">;</span><span class="w"></span>
 
-<span class="k">class</span> <span class="nc">ParametersClass</span><span class="o">:</span> <span class="k">public</span> <span class="n">rclcpp</span><span class="o">::</span><span class="n">Node</span>
-<span class="p">{</span>
-  <span class="k">public</span><span class="o">:</span>
-    <span class="n">ParametersClass</span><span class="p">()</span>
-      <span class="o">:</span> <span class="n">Node</span><span class="p">(</span><span class="s">&quot;parameter_node&quot;</span><span class="p">)</span>
-    <span class="p">{</span>
-      <span class="k">this</span><span class="o">-&gt;</span><span class="n">declare_parameter</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;my_parameter&quot;</span><span class="p">,</span> <span class="s">&quot;world&quot;</span><span class="p">);</span>
-      <span class="n">timer_</span> <span class="o">=</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">create_wall_timer</span><span class="p">(</span>
-      <span class="mi">1000</span><span class="n">ms</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">bind</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ParametersClass</span><span class="o">::</span><span class="n">respond</span><span class="p">,</span> <span class="k">this</span><span class="p">));</span>
-    <span class="p">}</span>
-    <span class="kt">void</span> <span class="n">respond</span><span class="p">()</span>
-    <span class="p">{</span>
-      <span class="k">this</span><span class="o">-&gt;</span><span class="n">get_parameter</span><span class="p">(</span><span class="s">&quot;my_parameter&quot;</span><span class="p">,</span> <span class="n">parameter_string_</span><span class="p">);</span>
-      <span class="n">RCLCPP_INFO</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_logger</span><span class="p">(),</span> <span class="s">&quot;Hello %s&quot;</span><span class="p">,</span> <span class="n">parameter_string_</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span>
-    <span class="p">}</span>
-  <span class="k">private</span><span class="o">:</span>
-    <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">parameter_string_</span><span class="p">;</span>
-    <span class="n">rclcpp</span><span class="o">::</span><span class="n">TimerBase</span><span class="o">::</span><span class="n">SharedPtr</span> <span class="n">timer_</span><span class="p">;</span>
-<span class="p">};</span>
+<span class="k">class</span> <span class="nc">ParametersClass</span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">Node</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">ParametersClass</span><span class="p">()</span><span class="w"></span>
+<span class="w">      </span><span class="o">:</span><span class="w"> </span><span class="n">Node</span><span class="p">(</span><span class="s">&quot;parameter_node&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">declare_parameter</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;my_parameter&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;world&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="n">timer_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">create_wall_timer</span><span class="p">(</span><span class="w"></span>
+<span class="w">      </span><span class="mi">1000</span><span class="n">ms</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">bind</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ParametersClass</span><span class="o">::</span><span class="n">respond</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">));</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">respond</span><span class="p">()</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_parameter</span><span class="p">(</span><span class="s">&quot;my_parameter&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">parameter_string_</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="n">RCLCPP_INFO</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_logger</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;Hello %s&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">parameter_string_</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="k">private</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">parameter_string_</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">TimerBase</span><span class="o">::</span><span class="n">SharedPtr</span><span class="w"> </span><span class="n">timer_</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
 
-<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span><span class="o">**</span> <span class="n">argv</span><span class="p">)</span>
-<span class="p">{</span>
-  <span class="n">rclcpp</span><span class="o">::</span><span class="n">init</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span> <span class="n">argv</span><span class="p">);</span>
-  <span class="n">rclcpp</span><span class="o">::</span><span class="n">spin</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">ParametersClass</span><span class="o">&gt;</span><span class="p">());</span>
-  <span class="n">rclcpp</span><span class="o">::</span><span class="n">shutdown</span><span class="p">();</span>
-  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="o">**</span><span class="w"> </span><span class="n">argv</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">init</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="n">argv</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">spin</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">ParametersClass</span><span class="o">&gt;</span><span class="p">());</span><span class="w"></span>
+<span class="w">  </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">shutdown</span><span class="p">();</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <div class="section" id="examine-the-code">
 <h4>2.1检查代码 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8007">[待校准&#64;8007]</a><a class="headerlink" href="#examine-the-code" title="永久链接至标题"></a></h4>
 <p>顶部的 “# include” 语句是包依赖项。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9222">[待校准&#64;9222]</a></p>
 <p>下一段代码创建类和构造函数。此构造函数的第一行创建我们的参数。我们的参数名为 <code class="docutils literal notranslate"><span class="pre">my_parameter</span></code> ，并被指定为默认值 <code class="docutils literal notranslate"><span class="pre">world</span></code> 。接下来， <code class="docutils literal notranslate"><span class="pre">timer_</span></code> 初始化，这导致 <code class="docutils literal notranslate"><span class="pre">respond</span></code> 函数每秒执行一次。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9223">[待校准&#64;9223]</a></p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ParametersClass</span><span class="o">:</span> <span class="k">public</span> <span class="n">rclcpp</span><span class="o">::</span><span class="n">Node</span>
-<span class="p">{</span>
-  <span class="k">public</span><span class="o">:</span>
-    <span class="n">ParametersClass</span><span class="p">()</span>
-      <span class="o">:</span> <span class="n">Node</span><span class="p">(</span><span class="s">&quot;parameter_node&quot;</span><span class="p">)</span>
-    <span class="p">{</span>
-      <span class="k">this</span><span class="o">-&gt;</span><span class="n">declare_parameter</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;my_parameter&quot;</span><span class="p">,</span> <span class="s">&quot;world&quot;</span><span class="p">);</span>
-      <span class="n">timer_</span> <span class="o">=</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">create_wall_timer</span><span class="p">(</span>
-      <span class="mi">1000</span><span class="n">ms</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">bind</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ParametersClass</span><span class="o">::</span><span class="n">respond</span><span class="p">,</span> <span class="k">this</span><span class="p">));</span>
-    <span class="p">}</span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ParametersClass</span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">Node</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">ParametersClass</span><span class="p">()</span><span class="w"></span>
+<span class="w">      </span><span class="o">:</span><span class="w"> </span><span class="n">Node</span><span class="p">(</span><span class="s">&quot;parameter_node&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">declare_parameter</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;my_parameter&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;world&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="n">timer_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">create_wall_timer</span><span class="p">(</span><span class="w"></span>
+<span class="w">      </span><span class="mi">1000</span><span class="n">ms</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">bind</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ParametersClass</span><span class="o">::</span><span class="n">respond</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">));</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <p>我们的 <code class="docutils literal notranslate"><span class="pre">respond</span></code> 函数的第一行从节点获取参数 <code class="docutils literal notranslate"><span class="pre">my_parameter</span></code> ，并将其存储在 <code class="docutils literal notranslate"><span class="pre">parameter_string_</span></code> 中。 <code class="docutils literal notranslate"><span class="pre">RCLCPP_INFO</span></code> 函数确保消息被记录。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9224">[待校准&#64;9224]</a></p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">respond</span><span class="p">()</span>
-<span class="p">{</span>
-  <span class="k">this</span><span class="o">-&gt;</span><span class="n">get_parameter</span><span class="p">(</span><span class="s">&quot;my_parameter&quot;</span><span class="p">,</span> <span class="n">parameter_string_</span><span class="p">);</span>
-  <span class="n">RCLCPP_INFO</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_logger</span><span class="p">(),</span> <span class="s">&quot;Hello %s&quot;</span><span class="p">,</span> <span class="n">parameter_string_</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span>
-<span class="p">}</span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">respond</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_parameter</span><span class="p">(</span><span class="s">&quot;my_parameter&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">parameter_string_</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">RCLCPP_INFO</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_logger</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;Hello %s&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">parameter_string_</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <p>最后是 <code class="docutils literal notranslate"><span class="pre">timer_</span></code> 和 <code class="docutils literal notranslate"><span class="pre">parameter_string_</span></code> 的声明 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9225">[待校准&#64;9225]</a></p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">private</span><span class="o">:</span>
-  <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">parameter_string_</span><span class="p">;</span>
-  <span class="n">rclcpp</span><span class="o">::</span><span class="n">TimerBase</span><span class="o">::</span><span class="n">SharedPtr</span> <span class="n">timer_</span><span class="p">;</span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">private</span><span class="o">:</span><span class="w"></span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">parameter_string_</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">TimerBase</span><span class="o">::</span><span class="n">SharedPtr</span><span class="w"> </span><span class="n">timer_</span><span class="p">;</span><span class="w"></span>
 </pre></div>
 </div>
 <p>追踪我们的 <code class="docutils literal notranslate"><span class="pre">ParametersClass</span></code> 是我们的 <code class="docutils literal notranslate"><span class="pre">main</span></code> 。这里ROS 2被初始化，“rclcpp:: spin” 开始处理来自节点的数据。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9226">[待校准&#64;9226]</a></p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span><span class="o">**</span> <span class="n">argv</span><span class="p">)</span>
-<span class="p">{</span>
-  <span class="n">rclcpp</span><span class="o">::</span><span class="n">init</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span> <span class="n">argv</span><span class="p">);</span>
-  <span class="n">rclcpp</span><span class="o">::</span><span class="n">spin</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">ParametersClass</span><span class="o">&gt;</span><span class="p">());</span>
-  <span class="n">rclcpp</span><span class="o">::</span><span class="n">shutdown</span><span class="p">();</span>
-  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="o">**</span><span class="w"> </span><span class="n">argv</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">init</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="n">argv</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">spin</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">ParametersClass</span><span class="o">&gt;</span><span class="p">());</span><span class="w"></span>
+<span class="w">  </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">shutdown</span><span class="p">();</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
@@ -499,7 +499,7 @@
             <span class="n">executable</span><span class="o">=</span><span class="s2">&quot;parameter_node&quot;</span><span class="p">,</span>
             <span class="n">name</span><span class="o">=</span><span class="s2">&quot;custom_parameter_node&quot;</span><span class="p">,</span>
             <span class="n">output</span><span class="o">=</span><span class="s2">&quot;screen&quot;</span><span class="p">,</span>
-            <span class="n">emulate_tty</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+            <span class="n">emulate_tty</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
             <span class="n">parameters</span><span class="o">=</span><span class="p">[</span>
                 <span class="p">{</span><span class="s2">&quot;my_parameter&quot;</span><span class="p">:</span> <span class="s2">&quot;earth&quot;</span><span class="p">}</span>
             <span class="p">]</span>

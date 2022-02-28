@@ -44,7 +44,7 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../Installation.html">安装 [待校准&#64;5278]</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Installation.html">安装</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../Installation/Ubuntu-Development-Setup.html">在Ubuntu Linux上构建ROS 2 [待校准&#64;5474]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Installation/Ubuntu-Install-Binary.html">在Ubuntu Linux上安装ROS 2 [待校准&#64;5525]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Installation/Ubuntu-Install-Debians.html">通过Debian包安装ROS 2 [待校准&#64;5547]</a></li>
@@ -151,8 +151,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../../How-To-Guides.html">操作指南 [待校准&#64;5755]</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Installation-Troubleshooting.html">安装故障诊断工具 [待校准&#64;6086]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Developing-a-ROS-2-Package.html">开发ROS 2包 [待校准&#64;6065]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Ament-CMake-Documentation.html">[需手动修复的语法]ament _ cmake用户文档 [待校准&#64;5759]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Ament-CMake-Python-Documentation.html">[需手动修复的语法]ament _ cmake_python用户文档 [待校准&#64;5911]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Ament-CMake-Documentation.html">ament_cmake用户文档 [小鱼&#64;5759]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Ament-CMake-Python-Documentation.html">ament_cmake_python用户文档 [小鱼&#64;5911]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Launch-files-migration-guide.html">迁移launch文件ROS 1ROS 2 [待校准&#64;6189]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Launch-file-different-formats.html">对ROS 2Launch文件使用Python、XML和YAML [待校准&#64;6162]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Launching-composable-nodes.html">使用ROS 2launch到launch可组合节点 [待校准&#64;6284]</a></li>
@@ -192,7 +192,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-Command-Line-Tools.html">使用命令行工具进行自检 [待校准&#64;9667]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-RQt.html">RQt的概述和使用 [待校准&#64;10201]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-Composition.html">关于组件 [待校准&#64;9695]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-Catment.html">[需手动修复的语法]ament和catkin的混合研究 [待校准&#64;9595]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-Catment.html">ament和catkin的混合研究 [小鱼&#64;9595]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-Cross-Compilation.html">关于交叉编译 [待校准&#64;9717]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-Tf2.html">关于tf2 [待校准&#64;10229]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-Build-System.html">关于构建系统 [待校准&#64;9545]</a></li>
@@ -234,7 +234,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../Features.html">功能状态 [待校准&#64;10365]</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Roadmap.html">路线图 [待校准&#64;87]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Roadmap.html">开发计划（Roadmap） [小鱼&#64;87]</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Feature-Ideas.html">特色创意 [待校准&#64;5184]</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Governance.html">项目管理 [待校准&#64;1150]</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../Governance/ROS2-TSC-Charter.html">ROS 2技术指导委员会章程 [待校准&#64;1299]</a></li>
@@ -310,29 +310,29 @@
 <p>在本教程中，我们将设置一个有许多问题的例程应用程序。本教程的目标是应用系统的方法来发现和解决这些问题。首先，让我们创建源文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8401">[待校准&#64;8401]</a></p>
 <p>转到我们在 <a class="reference internal" href="Tf2-Main.html"><span class="doc">tf2 tutorials</span></a>. Inside the `  <code class="xref any docutils literal notranslate"><span class="pre">src</span></code> 目录中创建的 <code class="docutils literal notranslate"><span class="pre">learning_tf2_cpp</span></code> 包，复制源文件 <code class="docutils literal notranslate"><span class="pre">turtle_tf2_listener.cpp</span></code> ，并将其重命名为 <code class="docutils literal notranslate"><span class="pre">turtle_tf2_listener_debug.cpp</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8402">[待校准&#64;8402]</a></p>
 <p>使用您喜欢的文本编辑器打开文件，并将第67行从 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8403">[待校准&#64;8403]</a></p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">to_frame_rel</span> <span class="o">=</span> <span class="s">&quot;turtle2&quot;</span><span class="p">;</span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">to_frame_rel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;turtle2&quot;</span><span class="p">;</span><span class="w"></span>
 </pre></div>
 </div>
 <p>到 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8404">[待校准&#64;8404]</a></p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">to_frame_rel</span> <span class="o">=</span> <span class="s">&quot;turtle3&quot;</span><span class="p">;</span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">to_frame_rel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;turtle3&quot;</span><span class="p">;</span><span class="w"></span>
 </pre></div>
 </div>
 <p>并将第75-79行中的 <code class="docutils literal notranslate"><span class="pre">lookupTransform()</span></code> 调用从 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8405">[待校准&#64;8405]</a></p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">try</span> <span class="p">{</span>
-   <span class="n">transformStamped</span> <span class="o">=</span> <span class="n">tf_buffer_</span><span class="o">-&gt;</span><span class="n">lookupTransform</span><span class="p">(</span>
-     <span class="n">toFrameRel</span><span class="p">,</span>
-     <span class="n">fromFrameRel</span><span class="p">,</span>
-     <span class="n">tf2</span><span class="o">::</span><span class="n">TimePointZero</span><span class="p">);</span>
-<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">tf2</span><span class="o">::</span><span class="n">TransformException</span> <span class="o">&amp;</span> <span class="n">ex</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">   </span><span class="n">transformStamped</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tf_buffer_</span><span class="o">-&gt;</span><span class="n">lookupTransform</span><span class="p">(</span><span class="w"></span>
+<span class="w">     </span><span class="n">toFrameRel</span><span class="p">,</span><span class="w"></span>
+<span class="w">     </span><span class="n">fromFrameRel</span><span class="p">,</span><span class="w"></span>
+<span class="w">     </span><span class="n">tf2</span><span class="o">::</span><span class="n">TimePointZero</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">tf2</span><span class="o">::</span><span class="n">TransformException</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">ex</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 </pre></div>
 </div>
 <p>到 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8404">[待校准&#64;8404]</a></p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">try</span> <span class="p">{</span>
-   <span class="n">transformStamped</span> <span class="o">=</span> <span class="n">tf_buffer_</span><span class="o">-&gt;</span><span class="n">lookupTransform</span><span class="p">(</span>
-     <span class="n">toFrameRel</span><span class="p">,</span>
-     <span class="n">fromFrameRel</span><span class="p">,</span>
-     <span class="k">this</span><span class="o">-&gt;</span><span class="n">now</span><span class="p">());</span>
-<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">tf2</span><span class="o">::</span><span class="n">TransformException</span> <span class="o">&amp;</span> <span class="n">ex</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">   </span><span class="n">transformStamped</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tf_buffer_</span><span class="o">-&gt;</span><span class="n">lookupTransform</span><span class="p">(</span><span class="w"></span>
+<span class="w">     </span><span class="n">toFrameRel</span><span class="p">,</span><span class="w"></span>
+<span class="w">     </span><span class="n">fromFrameRel</span><span class="p">,</span><span class="w"></span>
+<span class="w">     </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">now</span><span class="p">());</span><span class="w"></span>
+<span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">tf2</span><span class="o">::</span><span class="n">TransformException</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">ex</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 </pre></div>
 </div>
 <p>并保存对文件的更改。为了运行此例程，我们需要创建launch文件 <code class="docutils literal notranslate"><span class="pre">start_tf2_debug_demo.launch.py</span></code> 在 <code class="docutils literal notranslate"><span class="pre">launch</span></code> 子目录包装 <code class="docutils literal notranslate"><span class="pre">learning_tf2_cpp</span></code> : <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8406">[待校准&#64;8406]</a></p>
@@ -400,16 +400,16 @@
 <div class="section" id="finding-the-tf2-request">
 <h3>2查找tf2请求 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8411">[待校准&#64;8411]</a><a class="headerlink" href="#finding-the-tf2-request" title="永久链接至标题"></a></h3>
 <p>首先，我们需要找出我们到底要求tf2做什么。因此，我们进入使用tf2的代码部分。打开 <code class="docutils literal notranslate"><span class="pre">src/turtle_tf2_listener_debug.cpp</span></code> 文件，看看第67行: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8412">[待校准&#64;8412]</a></p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">to_frame_rel</span> <span class="o">=</span> <span class="s">&quot;turtle3&quot;</span><span class="p">;</span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">to_frame_rel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;turtle3&quot;</span><span class="p">;</span><span class="w"></span>
 </pre></div>
 </div>
 <p>第75-79行: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8413">[待校准&#64;8413]</a></p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">try</span> <span class="p">{</span>
-   <span class="n">transformStamped</span> <span class="o">=</span> <span class="n">tf_buffer_</span><span class="o">-&gt;</span><span class="n">lookupTransform</span><span class="p">(</span>
-     <span class="n">toFrameRel</span><span class="p">,</span>
-     <span class="n">fromFrameRel</span><span class="p">,</span>
-     <span class="k">this</span><span class="o">-&gt;</span><span class="n">now</span><span class="p">());</span>
-<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">tf2</span><span class="o">::</span><span class="n">TransformException</span> <span class="o">&amp;</span> <span class="n">ex</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">   </span><span class="n">transformStamped</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tf_buffer_</span><span class="o">-&gt;</span><span class="n">lookupTransform</span><span class="p">(</span><span class="w"></span>
+<span class="w">     </span><span class="n">toFrameRel</span><span class="p">,</span><span class="w"></span>
+<span class="w">     </span><span class="n">fromFrameRel</span><span class="p">,</span><span class="w"></span>
+<span class="w">     </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">now</span><span class="p">());</span><span class="w"></span>
+<span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">tf2</span><span class="o">::</span><span class="n">TransformException</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">ex</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 </pre></div>
 </div>
 <p>在这里，我们对tf2进行实际请求。这三个论点直接告诉我们我们在问tf2什么: 在时间 <code class="docutils literal notranslate"><span class="pre">now</span></code> 时从帧 <code class="docutils literal notranslate"><span class="pre">turtle3</span></code> 转换到帧 <code class="docutils literal notranslate"><span class="pre">turtle1</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8414">[待校准&#64;8414]</a></p>
@@ -465,12 +465,12 @@
 </pre></div>
 </div>
 <p>这里的关键部分是链条从 <code class="docutils literal notranslate"><span class="pre">turtle2</span></code> 到 <code class="docutils literal notranslate"><span class="pre">turtle1</span></code> 的延迟。输出显示平均延迟约为3毫秒。这意味着tf2只能在经过3毫秒后在海龟之间转换。所以，如果我们在3毫秒前要求tf2在海龟之间转换，而不是 <code class="docutils literal notranslate"><span class="pre">now</span></code> ，tf2有时会给我们一个答案。让我们将第75-79行更改为: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8427">[待校准&#64;8427]</a></p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">try</span> <span class="p">{</span>
-   <span class="n">transformStamped</span> <span class="o">=</span> <span class="n">tf_buffer_</span><span class="o">-&gt;</span><span class="n">lookupTransform</span><span class="p">(</span>
-     <span class="n">toFrameRel</span><span class="p">,</span>
-     <span class="n">fromFrameRel</span><span class="p">,</span>
-     <span class="k">this</span><span class="o">-&gt;</span><span class="n">now</span><span class="p">()</span> <span class="o">-</span> <span class="n">rclcpp</span><span class="o">::</span><span class="n">Duration</span><span class="o">::</span><span class="n">from_seconds</span><span class="p">(</span><span class="mf">0.1</span><span class="p">));</span>
-<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">tf2</span><span class="o">::</span><span class="n">TransformException</span> <span class="o">&amp;</span> <span class="n">ex</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">   </span><span class="n">transformStamped</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tf_buffer_</span><span class="o">-&gt;</span><span class="n">lookupTransform</span><span class="p">(</span><span class="w"></span>
+<span class="w">     </span><span class="n">toFrameRel</span><span class="p">,</span><span class="w"></span>
+<span class="w">     </span><span class="n">fromFrameRel</span><span class="p">,</span><span class="w"></span>
+<span class="w">     </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">now</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">Duration</span><span class="o">::</span><span class="n">from_seconds</span><span class="p">(</span><span class="mf">0.1</span><span class="p">));</span><span class="w"></span>
+<span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">tf2</span><span class="o">::</span><span class="n">TransformException</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">ex</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 </pre></div>
 </div>
 <p>在新代码中，我们要求在100毫秒前在海龟之间进行转换。通常使用更长的周期，只是为了确保转换将到达。停止例程，构建并运行: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8428">[待校准&#64;8428]</a></p>
@@ -480,31 +480,31 @@
 <p>你应该终于看到乌龟动了! <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8429">[待校准&#64;8429]</a></p>
 <img alt="../../_images/turtlesim_follow1.png" src="../../_images/turtlesim_follow1.png" />
 <p>我们做的最后一个解决方案并不是你真正想做的，只是为了确保那是我们的问题。真正的修复如下所示: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8430">[待校准&#64;8430]</a></p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">try</span> <span class="p">{</span>
-   <span class="n">transformStamped</span> <span class="o">=</span> <span class="n">tf_buffer_</span><span class="o">-&gt;</span><span class="n">lookupTransform</span><span class="p">(</span>
-     <span class="n">toFrameRel</span><span class="p">,</span>
-     <span class="n">fromFrameRel</span><span class="p">,</span>
-     <span class="n">tf2</span><span class="o">::</span><span class="n">TimePointZero</span><span class="p">);</span>
-<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">tf2</span><span class="o">::</span><span class="n">TransformException</span> <span class="o">&amp;</span> <span class="n">ex</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">   </span><span class="n">transformStamped</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tf_buffer_</span><span class="o">-&gt;</span><span class="n">lookupTransform</span><span class="p">(</span><span class="w"></span>
+<span class="w">     </span><span class="n">toFrameRel</span><span class="p">,</span><span class="w"></span>
+<span class="w">     </span><span class="n">fromFrameRel</span><span class="p">,</span><span class="w"></span>
+<span class="w">     </span><span class="n">tf2</span><span class="o">::</span><span class="n">TimePointZero</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">tf2</span><span class="o">::</span><span class="n">TransformException</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">ex</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 </pre></div>
 </div>
 <p>或者像这样: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8431">[待校准&#64;8431]</a></p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">try</span> <span class="p">{</span>
-   <span class="n">transformStamped</span> <span class="o">=</span> <span class="n">tf_buffer_</span><span class="o">-&gt;</span><span class="n">lookupTransform</span><span class="p">(</span>
-     <span class="n">toFrameRel</span><span class="p">,</span>
-     <span class="n">fromFrameRel</span><span class="p">,</span>
-     <span class="n">tf2</span><span class="o">::</span><span class="n">TimePoint</span><span class="p">());</span>
-<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">tf2</span><span class="o">::</span><span class="n">TransformException</span> <span class="o">&amp;</span> <span class="n">ex</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">   </span><span class="n">transformStamped</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tf_buffer_</span><span class="o">-&gt;</span><span class="n">lookupTransform</span><span class="p">(</span><span class="w"></span>
+<span class="w">     </span><span class="n">toFrameRel</span><span class="p">,</span><span class="w"></span>
+<span class="w">     </span><span class="n">fromFrameRel</span><span class="p">,</span><span class="w"></span>
+<span class="w">     </span><span class="n">tf2</span><span class="o">::</span><span class="n">TimePoint</span><span class="p">());</span><span class="w"></span>
+<span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">tf2</span><span class="o">::</span><span class="n">TransformException</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">ex</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 </pre></div>
 </div>
 <p>您可以在 <a class="reference internal" href="Learning-About-Tf2-And-Time-Cpp.html"><span class="doc">Learning about tf2 and time</span></a> 教程中了解更多关于超时的信息，并如下所示使用它们: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8432">[待校准&#64;8432]</a></p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">try</span> <span class="p">{</span>
-   <span class="n">transformStamped</span> <span class="o">=</span> <span class="n">tf_buffer_</span><span class="o">-&gt;</span><span class="n">lookupTransform</span><span class="p">(</span>
-     <span class="n">toFrameRel</span><span class="p">,</span>
-     <span class="n">fromFrameRel</span><span class="p">,</span>
-     <span class="k">this</span><span class="o">-&gt;</span><span class="n">now</span><span class="p">(),</span>
-     <span class="n">rclcpp</span><span class="o">::</span><span class="n">Duration</span><span class="o">::</span><span class="n">from_seconds</span><span class="p">(</span><span class="mf">0.05</span><span class="p">));</span>
-<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">tf2</span><span class="o">::</span><span class="n">TransformException</span> <span class="o">&amp;</span> <span class="n">ex</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">   </span><span class="n">transformStamped</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tf_buffer_</span><span class="o">-&gt;</span><span class="n">lookupTransform</span><span class="p">(</span><span class="w"></span>
+<span class="w">     </span><span class="n">toFrameRel</span><span class="p">,</span><span class="w"></span>
+<span class="w">     </span><span class="n">fromFrameRel</span><span class="p">,</span><span class="w"></span>
+<span class="w">     </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">now</span><span class="p">(),</span><span class="w"></span>
+<span class="w">     </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">Duration</span><span class="o">::</span><span class="n">from_seconds</span><span class="p">(</span><span class="mf">0.05</span><span class="p">));</span><span class="w"></span>
+<span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">tf2</span><span class="o">::</span><span class="n">TransformException</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">ex</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 </pre></div>
 </div>
 </div>

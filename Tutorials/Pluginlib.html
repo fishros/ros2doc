@@ -45,7 +45,7 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../Installation.html">安装 [待校准&#64;5278]</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../Installation.html">安装</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Ubuntu-Development-Setup.html">在Ubuntu Linux上构建ROS 2 [待校准&#64;5474]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Ubuntu-Install-Binary.html">在Ubuntu Linux上安装ROS 2 [待校准&#64;5525]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Ubuntu-Install-Debians.html">通过Debian包安装ROS 2 [待校准&#64;5547]</a></li>
@@ -152,8 +152,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../How-To-Guides.html">操作指南 [待校准&#64;5755]</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Installation-Troubleshooting.html">安装故障诊断工具 [待校准&#64;6086]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Developing-a-ROS-2-Package.html">开发ROS 2包 [待校准&#64;6065]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Ament-CMake-Documentation.html">[需手动修复的语法]ament _ cmake用户文档 [待校准&#64;5759]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Ament-CMake-Python-Documentation.html">[需手动修复的语法]ament _ cmake_python用户文档 [待校准&#64;5911]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Ament-CMake-Documentation.html">ament_cmake用户文档 [小鱼&#64;5759]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Ament-CMake-Python-Documentation.html">ament_cmake_python用户文档 [小鱼&#64;5911]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Launch-files-migration-guide.html">迁移launch文件ROS 1ROS 2 [待校准&#64;6189]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Launch-file-different-formats.html">对ROS 2Launch文件使用Python、XML和YAML [待校准&#64;6162]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Launching-composable-nodes.html">使用ROS 2launch到launch可组合节点 [待校准&#64;6284]</a></li>
@@ -193,7 +193,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Command-Line-Tools.html">使用命令行工具进行自检 [待校准&#64;9667]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Concepts/About-RQt.html">RQt的概述和使用 [待校准&#64;10201]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Composition.html">关于组件 [待校准&#64;9695]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Catment.html">[需手动修复的语法]ament和catkin的混合研究 [待校准&#64;9595]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Catment.html">ament和catkin的混合研究 [小鱼&#64;9595]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Cross-Compilation.html">关于交叉编译 [待校准&#64;9717]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Tf2.html">关于tf2 [待校准&#64;10229]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Build-System.html">关于构建系统 [待校准&#64;9545]</a></li>
@@ -235,7 +235,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../Features.html">功能状态 [待校准&#64;10365]</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Roadmap.html">路线图 [待校准&#64;87]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Roadmap.html">开发计划（Roadmap） [小鱼&#64;87]</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Feature-Ideas.html">特色创意 [待校准&#64;5184]</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Governance.html">项目管理 [待校准&#64;1150]</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Governance/ROS2-TSC-Charter.html">ROS 2技术指导委员会章程 [待校准&#64;1299]</a></li>
@@ -331,19 +331,19 @@
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#ifndef POLYGON_BASE_REGULAR_POLYGON_HPP</span>
 <span class="cp">#define POLYGON_BASE_REGULAR_POLYGON_HPP</span>
 
-<span class="k">namespace</span> <span class="n">polygon_base</span>
-<span class="p">{</span>
-  <span class="k">class</span> <span class="nc">RegularPolygon</span>
-  <span class="p">{</span>
-    <span class="k">public</span><span class="o">:</span>
-      <span class="k">virtual</span> <span class="kt">void</span> <span class="n">initialize</span><span class="p">(</span><span class="kt">double</span> <span class="n">side_length</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-      <span class="k">virtual</span> <span class="kt">double</span> <span class="nf">area</span><span class="p">()</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-      <span class="k">virtual</span> <span class="o">~</span><span class="n">RegularPolygon</span><span class="p">(){}</span>
+<span class="k">namespace</span><span class="w"> </span><span class="nn">polygon_base</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">class</span> <span class="nc">RegularPolygon</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">      </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">initialize</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">side_length</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="k">virtual</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">area</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="k">virtual</span><span class="w"> </span><span class="o">~</span><span class="n">RegularPolygon</span><span class="p">(){}</span><span class="w"></span>
 
-    <span class="k">protected</span><span class="o">:</span>
-      <span class="n">RegularPolygon</span><span class="p">(){}</span>
-  <span class="p">};</span>
-<span class="p">}</span>  <span class="c1">// namespace polygon_base</span>
+<span class="w">    </span><span class="k">protected</span><span class="o">:</span><span class="w"></span>
+<span class="w">      </span><span class="n">RegularPolygon</span><span class="p">(){}</span><span class="w"></span>
+<span class="w">  </span><span class="p">};</span><span class="w"></span>
+<span class="p">}</span><span class="w">  </span><span class="c1">// namespace polygon_base</span>
 
 <span class="cp">#endif  </span><span class="c1">// POLYGON_BASE_REGULAR_POLYGON_HPP</span>
 </pre></div>
@@ -373,55 +373,55 @@
 <div class="section" id="source-code-for-the-plugins">
 <h4>2.1插件的源代码 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7867">[待校准&#64;7867]</a><a class="headerlink" href="#source-code-for-the-plugins" title="永久链接至标题"></a></h4>
 <p>打开 <code class="docutils literal notranslate"><span class="pre">dev_ws/src/polygon_plugins/src/polygon_plugins.cpp</span></code> 进行编辑，并在其中粘贴以下内容: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7868">[待校准&#64;7868]</a></p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;polygon_base/regular_polygon.hpp&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;cmath&gt;</span><span class="cp"></span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;polygon_base/regular_polygon.hpp&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cmath&gt;</span><span class="cp"></span>
 
-<span class="k">namespace</span> <span class="n">polygon_plugins</span>
-<span class="p">{</span>
-  <span class="k">class</span> <span class="nc">Square</span> <span class="o">:</span> <span class="k">public</span> <span class="n">polygon_base</span><span class="o">::</span><span class="n">RegularPolygon</span>
-  <span class="p">{</span>
-    <span class="k">public</span><span class="o">:</span>
-      <span class="kt">void</span> <span class="n">initialize</span><span class="p">(</span><span class="kt">double</span> <span class="n">side_length</span><span class="p">)</span> <span class="k">override</span>
-      <span class="p">{</span>
-        <span class="n">side_length_</span> <span class="o">=</span> <span class="n">side_length</span><span class="p">;</span>
-      <span class="p">}</span>
+<span class="k">namespace</span><span class="w"> </span><span class="nn">polygon_plugins</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">class</span> <span class="nc">Square</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">polygon_base</span><span class="o">::</span><span class="n">RegularPolygon</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">      </span><span class="kt">void</span><span class="w"> </span><span class="n">initialize</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">side_length</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">side_length_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">side_length</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
 
-      <span class="kt">double</span> <span class="n">area</span><span class="p">()</span> <span class="k">override</span>
-      <span class="p">{</span>
-        <span class="k">return</span> <span class="n">side_length_</span> <span class="o">*</span> <span class="n">side_length_</span><span class="p">;</span>
-      <span class="p">}</span>
+<span class="w">      </span><span class="kt">double</span><span class="w"> </span><span class="n">area</span><span class="p">()</span><span class="w"> </span><span class="k">override</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">side_length_</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">side_length_</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
 
-    <span class="k">protected</span><span class="o">:</span>
-      <span class="kt">double</span> <span class="n">side_length_</span><span class="p">;</span>
-  <span class="p">};</span>
+<span class="w">    </span><span class="k">protected</span><span class="o">:</span><span class="w"></span>
+<span class="w">      </span><span class="kt">double</span><span class="w"> </span><span class="n">side_length_</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">};</span><span class="w"></span>
 
-  <span class="k">class</span> <span class="nc">Triangle</span> <span class="o">:</span> <span class="k">public</span> <span class="n">polygon_base</span><span class="o">::</span><span class="n">RegularPolygon</span>
-  <span class="p">{</span>
-    <span class="k">public</span><span class="o">:</span>
-      <span class="kt">void</span> <span class="n">initialize</span><span class="p">(</span><span class="kt">double</span> <span class="n">side_length</span><span class="p">)</span> <span class="k">override</span>
-      <span class="p">{</span>
-        <span class="n">side_length_</span> <span class="o">=</span> <span class="n">side_length</span><span class="p">;</span>
-      <span class="p">}</span>
+<span class="w">  </span><span class="k">class</span> <span class="nc">Triangle</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">polygon_base</span><span class="o">::</span><span class="n">RegularPolygon</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">      </span><span class="kt">void</span><span class="w"> </span><span class="n">initialize</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">side_length</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">side_length_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">side_length</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
 
-      <span class="kt">double</span> <span class="n">area</span><span class="p">()</span> <span class="k">override</span>
-      <span class="p">{</span>
-        <span class="k">return</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">side_length_</span> <span class="o">*</span> <span class="n">getHeight</span><span class="p">();</span>
-      <span class="p">}</span>
+<span class="w">      </span><span class="kt">double</span><span class="w"> </span><span class="n">area</span><span class="p">()</span><span class="w"> </span><span class="k">override</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mf">0.5</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">side_length_</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">getHeight</span><span class="p">();</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
 
-      <span class="kt">double</span> <span class="n">getHeight</span><span class="p">()</span>
-      <span class="p">{</span>
-        <span class="k">return</span> <span class="n">sqrt</span><span class="p">((</span><span class="n">side_length_</span> <span class="o">*</span> <span class="n">side_length_</span><span class="p">)</span> <span class="o">-</span> <span class="p">((</span><span class="n">side_length_</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">side_length_</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)));</span>
-      <span class="p">}</span>
+<span class="w">      </span><span class="kt">double</span><span class="w"> </span><span class="n">getHeight</span><span class="p">()</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">sqrt</span><span class="p">((</span><span class="n">side_length_</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">side_length_</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">((</span><span class="n">side_length_</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">side_length_</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">)));</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
 
-    <span class="k">protected</span><span class="o">:</span>
-      <span class="kt">double</span> <span class="n">side_length_</span><span class="p">;</span>
-  <span class="p">};</span>
-<span class="p">}</span>
+<span class="w">    </span><span class="k">protected</span><span class="o">:</span><span class="w"></span>
+<span class="w">      </span><span class="kt">double</span><span class="w"> </span><span class="n">side_length_</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">};</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 
-<span class="cp">#include</span> <span class="cpf">&lt;pluginlib/class_list_macros.hpp&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;pluginlib/class_list_macros.hpp&gt;</span><span class="cp"></span>
 
-<span class="n">PLUGINLIB_EXPORT_CLASS</span><span class="p">(</span><span class="n">polygon_plugins</span><span class="o">::</span><span class="n">Square</span><span class="p">,</span> <span class="n">polygon_base</span><span class="o">::</span><span class="n">RegularPolygon</span><span class="p">)</span>
-<span class="n">PLUGINLIB_EXPORT_CLASS</span><span class="p">(</span><span class="n">polygon_plugins</span><span class="o">::</span><span class="n">Triangle</span><span class="p">,</span> <span class="n">polygon_base</span><span class="o">::</span><span class="n">RegularPolygon</span><span class="p">)</span>
+<span class="n">PLUGINLIB_EXPORT_CLASS</span><span class="p">(</span><span class="n">polygon_plugins</span><span class="o">::</span><span class="n">Square</span><span class="p">,</span><span class="w"> </span><span class="n">polygon_base</span><span class="o">::</span><span class="n">RegularPolygon</span><span class="p">)</span><span class="w"></span>
+<span class="n">PLUGINLIB_EXPORT_CLASS</span><span class="p">(</span><span class="n">polygon_plugins</span><span class="o">::</span><span class="n">Triangle</span><span class="p">,</span><span class="w"> </span><span class="n">polygon_base</span><span class="o">::</span><span class="n">RegularPolygon</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
 <p>正方形和三角形类的实现应该相当简单: 保存边长，并使用它来计算面积。唯一特定于pluginlib的部分是最后三行，它调用一些神奇的宏，将类注册为实际插件。让我们来看看 <code class="docutils literal notranslate"><span class="pre">PLUGINLIB_EXPORT_CLASS</span></code> 宏的参数: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7869">[待校准&#64;7869]</a></p>
@@ -501,35 +501,35 @@
 <div class="section" id="use-the-plugins">
 <h3>3使用插件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7888">[待校准&#64;7888]</a><a class="headerlink" href="#use-the-plugins" title="永久链接至标题"></a></h3>
 <p>现在是时候使用插件了。这可以在任何包中完成，但是在这里我们将在基本包中完成。编辑 <code class="docutils literal notranslate"><span class="pre">dev_ws/src/polygon_base/src/area_node.cpp</span></code> 以包含以下内容: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7889">[待校准&#64;7889]</a></p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;pluginlib/class_loader.hpp&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;polygon_base/regular_polygon.hpp&gt;</span><span class="cp"></span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;pluginlib/class_loader.hpp&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;polygon_base/regular_polygon.hpp&gt;</span><span class="cp"></span>
 
-<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span><span class="o">**</span> <span class="n">argv</span><span class="p">)</span>
-<span class="p">{</span>
-  <span class="c1">// To avoid unused parameter warnings</span>
-  <span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="n">argc</span><span class="p">;</span>
-  <span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="n">argv</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="o">**</span><span class="w"> </span><span class="n">argv</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="c1">// To avoid unused parameter warnings</span>
+<span class="w">  </span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="n">argc</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="n">argv</span><span class="p">;</span><span class="w"></span>
 
-  <span class="n">pluginlib</span><span class="o">::</span><span class="n">ClassLoader</span><span class="o">&lt;</span><span class="n">polygon_base</span><span class="o">::</span><span class="n">RegularPolygon</span><span class="o">&gt;</span> <span class="n">poly_loader</span><span class="p">(</span><span class="s">&quot;polygon_base&quot;</span><span class="p">,</span> <span class="s">&quot;polygon_base::RegularPolygon&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="n">pluginlib</span><span class="o">::</span><span class="n">ClassLoader</span><span class="o">&lt;</span><span class="n">polygon_base</span><span class="o">::</span><span class="n">RegularPolygon</span><span class="o">&gt;</span><span class="w"> </span><span class="n">poly_loader</span><span class="p">(</span><span class="s">&quot;polygon_base&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;polygon_base::RegularPolygon&quot;</span><span class="p">);</span><span class="w"></span>
 
-  <span class="k">try</span>
-  <span class="p">{</span>
-    <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">polygon_base</span><span class="o">::</span><span class="n">RegularPolygon</span><span class="o">&gt;</span> <span class="n">triangle</span> <span class="o">=</span> <span class="n">poly_loader</span><span class="p">.</span><span class="n">createSharedInstance</span><span class="p">(</span><span class="s">&quot;polygon_plugins::Triangle&quot;</span><span class="p">);</span>
-    <span class="n">triangle</span><span class="o">-&gt;</span><span class="n">initialize</span><span class="p">(</span><span class="mf">10.0</span><span class="p">);</span>
+<span class="w">  </span><span class="k">try</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">polygon_base</span><span class="o">::</span><span class="n">RegularPolygon</span><span class="o">&gt;</span><span class="w"> </span><span class="n">triangle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">poly_loader</span><span class="p">.</span><span class="n">createSharedInstance</span><span class="p">(</span><span class="s">&quot;polygon_plugins::Triangle&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">triangle</span><span class="o">-&gt;</span><span class="n">initialize</span><span class="p">(</span><span class="mf">10.0</span><span class="p">);</span><span class="w"></span>
 
-    <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">polygon_base</span><span class="o">::</span><span class="n">RegularPolygon</span><span class="o">&gt;</span> <span class="n">square</span> <span class="o">=</span> <span class="n">poly_loader</span><span class="p">.</span><span class="n">createSharedInstance</span><span class="p">(</span><span class="s">&quot;polygon_plugins::Square&quot;</span><span class="p">);</span>
-    <span class="n">square</span><span class="o">-&gt;</span><span class="n">initialize</span><span class="p">(</span><span class="mf">10.0</span><span class="p">);</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">polygon_base</span><span class="o">::</span><span class="n">RegularPolygon</span><span class="o">&gt;</span><span class="w"> </span><span class="n">square</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">poly_loader</span><span class="p">.</span><span class="n">createSharedInstance</span><span class="p">(</span><span class="s">&quot;polygon_plugins::Square&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">square</span><span class="o">-&gt;</span><span class="n">initialize</span><span class="p">(</span><span class="mf">10.0</span><span class="p">);</span><span class="w"></span>
 
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Triangle area: %.2f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">triangle</span><span class="o">-&gt;</span><span class="n">area</span><span class="p">());</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Square area: %.2f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">square</span><span class="o">-&gt;</span><span class="n">area</span><span class="p">());</span>
-  <span class="p">}</span>
-  <span class="k">catch</span><span class="p">(</span><span class="n">pluginlib</span><span class="o">::</span><span class="n">PluginlibException</span><span class="o">&amp;</span> <span class="n">ex</span><span class="p">)</span>
-  <span class="p">{</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;The plugin failed to load for some reason. Error: %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">ex</span><span class="p">.</span><span class="n">what</span><span class="p">());</span>
-  <span class="p">}</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Triangle area: %.2f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">triangle</span><span class="o">-&gt;</span><span class="n">area</span><span class="p">());</span><span class="w"></span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Square area: %.2f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">square</span><span class="o">-&gt;</span><span class="n">area</span><span class="p">());</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="k">catch</span><span class="p">(</span><span class="n">pluginlib</span><span class="o">::</span><span class="n">PluginlibException</span><span class="o">&amp;</span><span class="w"> </span><span class="n">ex</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;The plugin failed to load for some reason. Error: %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">ex</span><span class="p">.</span><span class="n">what</span><span class="p">());</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
 
-  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">ClassLoader</span></code> 是需要理解的关键类别，在 <code class="docutils literal notranslate"><span class="pre">class_loader.hpp</span></code>  <a class="reference external" href="https://github.com/ros/pluginlib/blob/ros2/pluginlib/include/pluginlib/class_loader.hpp">header</a> 中定义。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7890">[待校准&#64;7890]</a></p>

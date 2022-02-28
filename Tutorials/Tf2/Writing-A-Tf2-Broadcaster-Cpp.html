@@ -45,7 +45,7 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../Installation.html">安装 [待校准&#64;5278]</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Installation.html">安装</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../Installation/Ubuntu-Development-Setup.html">在Ubuntu Linux上构建ROS 2 [待校准&#64;5474]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Installation/Ubuntu-Install-Binary.html">在Ubuntu Linux上安装ROS 2 [待校准&#64;5525]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Installation/Ubuntu-Install-Debians.html">通过Debian包安装ROS 2 [待校准&#64;5547]</a></li>
@@ -152,8 +152,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../../How-To-Guides.html">操作指南 [待校准&#64;5755]</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Installation-Troubleshooting.html">安装故障诊断工具 [待校准&#64;6086]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Developing-a-ROS-2-Package.html">开发ROS 2包 [待校准&#64;6065]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Ament-CMake-Documentation.html">[需手动修复的语法]ament _ cmake用户文档 [待校准&#64;5759]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Ament-CMake-Python-Documentation.html">[需手动修复的语法]ament _ cmake_python用户文档 [待校准&#64;5911]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Ament-CMake-Documentation.html">ament_cmake用户文档 [小鱼&#64;5759]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Ament-CMake-Python-Documentation.html">ament_cmake_python用户文档 [小鱼&#64;5911]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Launch-files-migration-guide.html">迁移launch文件ROS 1ROS 2 [待校准&#64;6189]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Launch-file-different-formats.html">对ROS 2Launch文件使用Python、XML和YAML [待校准&#64;6162]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Launching-composable-nodes.html">使用ROS 2launch到launch可组合节点 [待校准&#64;6284]</a></li>
@@ -193,7 +193,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-Command-Line-Tools.html">使用命令行工具进行自检 [待校准&#64;9667]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-RQt.html">RQt的概述和使用 [待校准&#64;10201]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-Composition.html">关于组件 [待校准&#64;9695]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-Catment.html">[需手动修复的语法]ament和catkin的混合研究 [待校准&#64;9595]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-Catment.html">ament和catkin的混合研究 [小鱼&#64;9595]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-Cross-Compilation.html">关于交叉编译 [待校准&#64;9717]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-Tf2.html">关于tf2 [待校准&#64;10229]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-Build-System.html">关于构建系统 [待校准&#64;9545]</a></li>
@@ -235,7 +235,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../Features.html">功能状态 [待校准&#64;10365]</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Roadmap.html">路线图 [待校准&#64;87]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Roadmap.html">开发计划（Roadmap） [小鱼&#64;87]</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Feature-Ideas.html">特色创意 [待校准&#64;5184]</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Governance.html">项目管理 [待校准&#64;1150]</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../Governance/ROS2-TSC-Charter.html">ROS 2技术指导委员会章程 [待校准&#64;1299]</a></li>
@@ -330,99 +330,99 @@
 </div>
 </div></div>
 <p>使用您喜欢的文本编辑器打开文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8591">[待校准&#64;8591]</a></p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;geometry_msgs/msg/transform_stamped.hpp&gt;</span><span class="cp"></span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;geometry_msgs/msg/transform_stamped.hpp&gt;</span><span class="cp"></span>
 
-<span class="cp">#include</span> <span class="cpf">&lt;rclcpp/rclcpp.hpp&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;tf2/LinearMath/Quaternion.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;tf2_ros/transform_broadcaster.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;turtlesim/msg/pose.hpp&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;rclcpp/rclcpp.hpp&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;tf2/LinearMath/Quaternion.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;tf2_ros/transform_broadcaster.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;turtlesim/msg/pose.hpp&gt;</span><span class="cp"></span>
 
-<span class="cp">#include</span> <span class="cpf">&lt;memory&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;string&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;memory&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span><span class="cp"></span>
 
-<span class="k">using</span> <span class="n">std</span><span class="o">::</span><span class="n">placeholders</span><span class="o">::</span><span class="n">_1</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">placeholders</span><span class="o">::</span><span class="n">_1</span><span class="p">;</span><span class="w"></span>
 
-<span class="k">class</span> <span class="nc">FramePublisher</span> <span class="o">:</span> <span class="k">public</span> <span class="n">rclcpp</span><span class="o">::</span><span class="n">Node</span>
-<span class="p">{</span>
-<span class="k">public</span><span class="o">:</span>
-  <span class="n">FramePublisher</span><span class="p">()</span>
-  <span class="o">:</span> <span class="n">Node</span><span class="p">(</span><span class="s">&quot;turtle_tf2_frame_publisher&quot;</span><span class="p">)</span>
-  <span class="p">{</span>
-    <span class="c1">// Declare and acquire `turtlename` parameter</span>
-    <span class="k">this</span><span class="o">-&gt;</span><span class="n">declare_parameter</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;turtlename&quot;</span><span class="p">,</span> <span class="s">&quot;turtle&quot;</span><span class="p">);</span>
-    <span class="k">this</span><span class="o">-&gt;</span><span class="n">get_parameter</span><span class="p">(</span><span class="s">&quot;turtlename&quot;</span><span class="p">,</span> <span class="n">turtlename_</span><span class="p">);</span>
+<span class="k">class</span> <span class="nc">FramePublisher</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">Node</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">  </span><span class="n">FramePublisher</span><span class="p">()</span><span class="w"></span>
+<span class="w">  </span><span class="o">:</span><span class="w"> </span><span class="n">Node</span><span class="p">(</span><span class="s">&quot;turtle_tf2_frame_publisher&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Declare and acquire `turtlename` parameter</span>
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">declare_parameter</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;turtlename&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;turtle&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_parameter</span><span class="p">(</span><span class="s">&quot;turtlename&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">turtlename_</span><span class="p">);</span><span class="w"></span>
 
-    <span class="c1">// Initialize the transform broadcaster</span>
-    <span class="n">tf_broadcaster_</span> <span class="o">=</span>
-      <span class="n">std</span><span class="o">::</span><span class="n">make_unique</span><span class="o">&lt;</span><span class="n">tf2_ros</span><span class="o">::</span><span class="n">TransformBroadcaster</span><span class="o">&gt;</span><span class="p">(</span><span class="o">*</span><span class="k">this</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">// Initialize the transform broadcaster</span>
+<span class="w">    </span><span class="n">tf_broadcaster_</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
+<span class="w">      </span><span class="n">std</span><span class="o">::</span><span class="n">make_unique</span><span class="o">&lt;</span><span class="n">tf2_ros</span><span class="o">::</span><span class="n">TransformBroadcaster</span><span class="o">&gt;</span><span class="p">(</span><span class="o">*</span><span class="k">this</span><span class="p">);</span><span class="w"></span>
 
-    <span class="c1">// Subscribe to a turtle{1}{2}/pose topic and call handle_turtle_pose</span>
-    <span class="c1">// callback function on each message</span>
-    <span class="n">std</span><span class="o">::</span><span class="n">ostringstream</span> <span class="n">stream</span><span class="p">;</span>
-    <span class="n">stream</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;/&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">turtlename_</span><span class="p">.</span><span class="n">c_str</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;/pose&quot;</span><span class="p">;</span>
-    <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">topic_name</span> <span class="o">=</span> <span class="n">stream</span><span class="p">.</span><span class="n">str</span><span class="p">();</span>
+<span class="w">    </span><span class="c1">// Subscribe to a turtle{1}{2}/pose topic and call handle_turtle_pose</span>
+<span class="w">    </span><span class="c1">// callback function on each message</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">ostringstream</span><span class="w"> </span><span class="n">stream</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">stream</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;/&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">turtlename_</span><span class="p">.</span><span class="n">c_str</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;/pose&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">topic_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stream</span><span class="p">.</span><span class="n">str</span><span class="p">();</span><span class="w"></span>
 
-    <span class="n">subscription_</span> <span class="o">=</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">create_subscription</span><span class="o">&lt;</span><span class="n">turtlesim</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">Pose</span><span class="o">&gt;</span><span class="p">(</span>
-      <span class="n">topic_name</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span>
-      <span class="n">std</span><span class="o">::</span><span class="n">bind</span><span class="p">(</span><span class="o">&amp;</span><span class="n">FramePublisher</span><span class="o">::</span><span class="n">handle_turtle_pose</span><span class="p">,</span> <span class="k">this</span><span class="p">,</span> <span class="n">_1</span><span class="p">));</span>
-  <span class="p">}</span>
+<span class="w">    </span><span class="n">subscription_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">create_subscription</span><span class="o">&lt;</span><span class="n">turtlesim</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">Pose</span><span class="o">&gt;</span><span class="p">(</span><span class="w"></span>
+<span class="w">      </span><span class="n">topic_name</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="n">std</span><span class="o">::</span><span class="n">bind</span><span class="p">(</span><span class="o">&amp;</span><span class="n">FramePublisher</span><span class="o">::</span><span class="n">handle_turtle_pose</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">_1</span><span class="p">));</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
 
-<span class="k">private</span><span class="o">:</span>
-  <span class="kt">void</span> <span class="n">handle_turtle_pose</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">turtlesim</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">Pose</span><span class="o">&gt;</span> <span class="n">msg</span><span class="p">)</span>
-  <span class="p">{</span>
-    <span class="n">rclcpp</span><span class="o">::</span><span class="n">Time</span> <span class="n">now</span> <span class="o">=</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">get_clock</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">now</span><span class="p">();</span>
-    <span class="n">geometry_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">TransformStamped</span> <span class="n">t</span><span class="p">;</span>
+<span class="k">private</span><span class="o">:</span><span class="w"></span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="n">handle_turtle_pose</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">turtlesim</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">Pose</span><span class="o">&gt;</span><span class="w"> </span><span class="n">msg</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">Time</span><span class="w"> </span><span class="n">now</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_clock</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">now</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">geometry_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">TransformStamped</span><span class="w"> </span><span class="n">t</span><span class="p">;</span><span class="w"></span>
 
-    <span class="c1">// Read message content and assign it to</span>
-    <span class="c1">// corresponding tf variables</span>
-    <span class="n">t</span><span class="p">.</span><span class="n">header</span><span class="p">.</span><span class="n">stamp</span> <span class="o">=</span> <span class="n">now</span><span class="p">;</span>
-    <span class="n">t</span><span class="p">.</span><span class="n">header</span><span class="p">.</span><span class="n">frame_id</span> <span class="o">=</span> <span class="s">&quot;world&quot;</span><span class="p">;</span>
-    <span class="n">t</span><span class="p">.</span><span class="n">child_frame_id</span> <span class="o">=</span> <span class="n">turtlename_</span><span class="p">.</span><span class="n">c_str</span><span class="p">();</span>
+<span class="w">    </span><span class="c1">// Read message content and assign it to</span>
+<span class="w">    </span><span class="c1">// corresponding tf variables</span>
+<span class="w">    </span><span class="n">t</span><span class="p">.</span><span class="n">header</span><span class="p">.</span><span class="n">stamp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">now</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">t</span><span class="p">.</span><span class="n">header</span><span class="p">.</span><span class="n">frame_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;world&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">t</span><span class="p">.</span><span class="n">child_frame_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">turtlename_</span><span class="p">.</span><span class="n">c_str</span><span class="p">();</span><span class="w"></span>
 
-    <span class="c1">// Turtle only exists in 2D, thus we get x and y translation</span>
-    <span class="c1">// coordinates from the message and set the z coordinate to 0</span>
-    <span class="n">t</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">translation</span><span class="p">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">msg</span><span class="o">-&gt;</span><span class="n">x</span><span class="p">;</span>
-    <span class="n">t</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">translation</span><span class="p">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">msg</span><span class="o">-&gt;</span><span class="n">y</span><span class="p">;</span>
-    <span class="n">t</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">translation</span><span class="p">.</span><span class="n">z</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">// Turtle only exists in 2D, thus we get x and y translation</span>
+<span class="w">    </span><span class="c1">// coordinates from the message and set the z coordinate to 0</span>
+<span class="w">    </span><span class="n">t</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">translation</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">msg</span><span class="o">-&gt;</span><span class="n">x</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">t</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">translation</span><span class="p">.</span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">msg</span><span class="o">-&gt;</span><span class="n">y</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">t</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">translation</span><span class="p">.</span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span><span class="w"></span>
 
-    <span class="c1">// For the same reason, turtle can only rotate around one axis</span>
-    <span class="c1">// and this why we set rotation in x and y to 0 and obtain</span>
-    <span class="c1">// rotation in z axis from the message</span>
-    <span class="n">tf2</span><span class="o">::</span><span class="n">Quaternion</span> <span class="n">q</span><span class="p">;</span>
-    <span class="n">q</span><span class="p">.</span><span class="n">setRPY</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">msg</span><span class="o">-&gt;</span><span class="n">theta</span><span class="p">);</span>
-    <span class="n">t</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">rotation</span><span class="p">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">q</span><span class="p">.</span><span class="n">x</span><span class="p">();</span>
-    <span class="n">t</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">rotation</span><span class="p">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">q</span><span class="p">.</span><span class="n">y</span><span class="p">();</span>
-    <span class="n">t</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">rotation</span><span class="p">.</span><span class="n">z</span> <span class="o">=</span> <span class="n">q</span><span class="p">.</span><span class="n">z</span><span class="p">();</span>
-    <span class="n">t</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">rotation</span><span class="p">.</span><span class="n">w</span> <span class="o">=</span> <span class="n">q</span><span class="p">.</span><span class="n">w</span><span class="p">();</span>
+<span class="w">    </span><span class="c1">// For the same reason, turtle can only rotate around one axis</span>
+<span class="w">    </span><span class="c1">// and this why we set rotation in x and y to 0 and obtain</span>
+<span class="w">    </span><span class="c1">// rotation in z axis from the message</span>
+<span class="w">    </span><span class="n">tf2</span><span class="o">::</span><span class="n">Quaternion</span><span class="w"> </span><span class="n">q</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">q</span><span class="p">.</span><span class="n">setRPY</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">msg</span><span class="o">-&gt;</span><span class="n">theta</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">t</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">rotation</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">q</span><span class="p">.</span><span class="n">x</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">t</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">rotation</span><span class="p">.</span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">q</span><span class="p">.</span><span class="n">y</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">t</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">rotation</span><span class="p">.</span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">q</span><span class="p">.</span><span class="n">z</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">t</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">rotation</span><span class="p">.</span><span class="n">w</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">q</span><span class="p">.</span><span class="n">w</span><span class="p">();</span><span class="w"></span>
 
-    <span class="c1">// Send the transformation</span>
-    <span class="n">tf_broadcaster_</span><span class="o">-&gt;</span><span class="n">sendTransform</span><span class="p">(</span><span class="n">t</span><span class="p">);</span>
-  <span class="p">}</span>
-  <span class="n">rclcpp</span><span class="o">::</span><span class="n">Subscription</span><span class="o">&lt;</span><span class="n">turtlesim</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">Pose</span><span class="o">&gt;::</span><span class="n">SharedPtr</span> <span class="n">subscription_</span><span class="p">;</span>
-  <span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">tf2_ros</span><span class="o">::</span><span class="n">TransformBroadcaster</span><span class="o">&gt;</span> <span class="n">tf_broadcaster_</span><span class="p">;</span>
-  <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">turtlename_</span><span class="p">;</span>
-<span class="p">};</span>
+<span class="w">    </span><span class="c1">// Send the transformation</span>
+<span class="w">    </span><span class="n">tf_broadcaster_</span><span class="o">-&gt;</span><span class="n">sendTransform</span><span class="p">(</span><span class="n">t</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">Subscription</span><span class="o">&lt;</span><span class="n">turtlesim</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">Pose</span><span class="o">&gt;::</span><span class="n">SharedPtr</span><span class="w"> </span><span class="n">subscription_</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">tf2_ros</span><span class="o">::</span><span class="n">TransformBroadcaster</span><span class="o">&gt;</span><span class="w"> </span><span class="n">tf_broadcaster_</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">turtlename_</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
 
-<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span> <span class="n">argv</span><span class="p">[])</span>
-<span class="p">{</span>
-  <span class="n">rclcpp</span><span class="o">::</span><span class="n">init</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span> <span class="n">argv</span><span class="p">);</span>
-  <span class="n">rclcpp</span><span class="o">::</span><span class="n">spin</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">FramePublisher</span><span class="o">&gt;</span><span class="p">());</span>
-  <span class="n">rclcpp</span><span class="o">::</span><span class="n">shutdown</span><span class="p">();</span>
-  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">argv</span><span class="p">[])</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">init</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="n">argv</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">spin</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">FramePublisher</span><span class="o">&gt;</span><span class="p">());</span><span class="w"></span>
+<span class="w">  </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">shutdown</span><span class="p">();</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <div class="section" id="examine-the-code">
 <h4>1.1检查代码 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8367">[待校准&#64;8367]</a><a class="headerlink" href="#examine-the-code" title="永久链接至标题"></a></h4>
 <p>现在，让我们来看看与将海龟姿势发布到tf2相关的代码。首先，我们定义并获得一个单一参数 <code class="docutils literal notranslate"><span class="pre">turtlename</span></code> ，它指定了海龟的名字，例如 <code class="docutils literal notranslate"><span class="pre">turtle1</span></code> 或 <code class="docutils literal notranslate"><span class="pre">turtle2</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8627">[待校准&#64;8627]</a></p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">this</span><span class="o">-&gt;</span><span class="n">declare_parameter</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;turtlename&quot;</span><span class="p">,</span> <span class="s">&quot;turtle&quot;</span><span class="p">);</span>
-<span class="k">this</span><span class="o">-&gt;</span><span class="n">get_parameter</span><span class="p">(</span><span class="s">&quot;turtlename&quot;</span><span class="p">,</span> <span class="n">turtlename_</span><span class="p">);</span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">this</span><span class="o">-&gt;</span><span class="n">declare_parameter</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;turtlename&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;turtle&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="k">this</span><span class="o">-&gt;</span><span class="n">get_parameter</span><span class="p">(</span><span class="s">&quot;turtlename&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">turtlename_</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 <p>之后，节点订阅话题 <code class="docutils literal notranslate"><span class="pre">turtleX/pose</span></code> ，并对每一条传入的消息运行功能 <code class="docutils literal notranslate"><span class="pre">handle_turtle_pose</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8628">[待校准&#64;8628]</a></p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">subscription_</span> <span class="o">=</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">create_subscription</span><span class="o">&lt;</span><span class="n">turtlesim</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">Pose</span><span class="o">&gt;</span><span class="p">(</span>
- <span class="n">topic_name</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span>
- <span class="n">std</span><span class="o">::</span><span class="n">bind</span><span class="p">(</span><span class="o">&amp;</span><span class="n">FramePublisher</span><span class="o">::</span><span class="n">handle_turtle_pose</span><span class="p">,</span> <span class="k">this</span><span class="p">,</span> <span class="n">_1</span><span class="p">));</span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">subscription_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">create_subscription</span><span class="o">&lt;</span><span class="n">turtlesim</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">Pose</span><span class="o">&gt;</span><span class="p">(</span><span class="w"></span>
+<span class="w"> </span><span class="n">topic_name</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"></span>
+<span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">bind</span><span class="p">(</span><span class="o">&amp;</span><span class="n">FramePublisher</span><span class="o">::</span><span class="n">handle_turtle_pose</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">_1</span><span class="p">));</span><span class="w"></span>
 </pre></div>
 </div>
 <p>现在，我们创建一个 <code class="docutils literal notranslate"><span class="pre">TransformStamped</span></code> 对象并为其提供适当的元数据。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8629">[待校准&#64;8629]</a></p>
@@ -432,41 +432,41 @@
 <li><p>最后，我们需要设置我们正在创建的链接的子节点的名称，在这种情况下，这是turtle本身的名称。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8632">[待校准&#64;8632]</a></p></li>
 </ol>
 <p>海龟姿势信息的处理函数广播海龟的平移和旋转，并将其发布为从帧 <code class="docutils literal notranslate"><span class="pre">world</span></code> 到帧 <code class="docutils literal notranslate"><span class="pre">turtleX</span></code> 的转换。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8633">[待校准&#64;8633]</a></p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">rclcpp</span><span class="o">::</span><span class="n">Time</span> <span class="n">now</span> <span class="o">=</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">get_clock</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">now</span><span class="p">();</span>
-<span class="n">geometry_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">TransformStamped</span> <span class="n">t</span><span class="p">;</span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">rclcpp</span><span class="o">::</span><span class="n">Time</span><span class="w"> </span><span class="n">now</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_clock</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">now</span><span class="p">();</span><span class="w"></span>
+<span class="n">geometry_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">TransformStamped</span><span class="w"> </span><span class="n">t</span><span class="p">;</span><span class="w"></span>
 
 <span class="c1">// Read message content and assign it to</span>
 <span class="c1">// corresponding tf variables</span>
-<span class="n">t</span><span class="p">.</span><span class="n">header</span><span class="p">.</span><span class="n">stamp</span> <span class="o">=</span> <span class="n">now</span><span class="p">;</span>
-<span class="n">t</span><span class="p">.</span><span class="n">header</span><span class="p">.</span><span class="n">frame_id</span> <span class="o">=</span> <span class="s">&quot;world&quot;</span><span class="p">;</span>
-<span class="n">t</span><span class="p">.</span><span class="n">child_frame_id</span> <span class="o">=</span> <span class="n">turtlename_</span><span class="p">.</span><span class="n">c_str</span><span class="p">();</span>
+<span class="n">t</span><span class="p">.</span><span class="n">header</span><span class="p">.</span><span class="n">stamp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">now</span><span class="p">;</span><span class="w"></span>
+<span class="n">t</span><span class="p">.</span><span class="n">header</span><span class="p">.</span><span class="n">frame_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;world&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="n">t</span><span class="p">.</span><span class="n">child_frame_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">turtlename_</span><span class="p">.</span><span class="n">c_str</span><span class="p">();</span><span class="w"></span>
 </pre></div>
 </div>
 <p>在这里，我们将信息从3D海龟姿势复制到3D变换中。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8634">[待校准&#64;8634]</a></p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Turtle only exists in 2D, thus we get x and y translation</span>
 <span class="c1">// coordinates from the message and set the z coordinate to 0</span>
-<span class="n">t</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">translation</span><span class="p">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">msg</span><span class="o">-&gt;</span><span class="n">x</span><span class="p">;</span>
-<span class="n">t</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">translation</span><span class="p">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">msg</span><span class="o">-&gt;</span><span class="n">y</span><span class="p">;</span>
-<span class="n">t</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">translation</span><span class="p">.</span><span class="n">z</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">;</span>
+<span class="n">t</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">translation</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">msg</span><span class="o">-&gt;</span><span class="n">x</span><span class="p">;</span><span class="w"></span>
+<span class="n">t</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">translation</span><span class="p">.</span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">msg</span><span class="o">-&gt;</span><span class="n">y</span><span class="p">;</span><span class="w"></span>
+<span class="n">t</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">translation</span><span class="p">.</span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span><span class="w"></span>
 
 <span class="c1">// For the same reason, turtle can only rotate around one axis</span>
 <span class="c1">// and this why we set rotation in x and y to 0 and obtain</span>
 <span class="c1">// rotation in z axis from the message</span>
-<span class="n">tf2</span><span class="o">::</span><span class="n">Quaternion</span> <span class="n">q</span><span class="p">;</span>
-<span class="n">q</span><span class="p">.</span><span class="n">setRPY</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">msg</span><span class="o">-&gt;</span><span class="n">theta</span><span class="p">);</span>
-<span class="n">t</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">rotation</span><span class="p">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">q</span><span class="p">.</span><span class="n">x</span><span class="p">();</span>
-<span class="n">t</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">rotation</span><span class="p">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">q</span><span class="p">.</span><span class="n">y</span><span class="p">();</span>
-<span class="n">t</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">rotation</span><span class="p">.</span><span class="n">z</span> <span class="o">=</span> <span class="n">q</span><span class="p">.</span><span class="n">z</span><span class="p">();</span>
-<span class="n">t</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">rotation</span><span class="p">.</span><span class="n">w</span> <span class="o">=</span> <span class="n">q</span><span class="p">.</span><span class="n">w</span><span class="p">();</span>
+<span class="n">tf2</span><span class="o">::</span><span class="n">Quaternion</span><span class="w"> </span><span class="n">q</span><span class="p">;</span><span class="w"></span>
+<span class="n">q</span><span class="p">.</span><span class="n">setRPY</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">msg</span><span class="o">-&gt;</span><span class="n">theta</span><span class="p">);</span><span class="w"></span>
+<span class="n">t</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">rotation</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">q</span><span class="p">.</span><span class="n">x</span><span class="p">();</span><span class="w"></span>
+<span class="n">t</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">rotation</span><span class="p">.</span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">q</span><span class="p">.</span><span class="n">y</span><span class="p">();</span><span class="w"></span>
+<span class="n">t</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">rotation</span><span class="p">.</span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">q</span><span class="p">.</span><span class="n">z</span><span class="p">();</span><span class="w"></span>
+<span class="n">t</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">rotation</span><span class="p">.</span><span class="n">w</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">q</span><span class="p">.</span><span class="n">w</span><span class="p">();</span><span class="w"></span>
 </pre></div>
 </div>
 <p>最后我们采取变换建构并把它传递给 <code class="docutils literal notranslate"><span class="pre">sendTransform</span></code> 方法 <code class="docutils literal notranslate"><span class="pre">TransformBroadcaster</span></code> 负责广播。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8635">[待校准&#64;8635]</a></p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Send the transformation</span>
-<span class="n">tf_broadcaster_</span><span class="o">-&gt;</span><span class="n">sendTransform</span><span class="p">(</span><span class="n">t</span><span class="p">);</span>
+<span class="n">tf_broadcaster_</span><span class="o">-&gt;</span><span class="n">sendTransform</span><span class="p">(</span><span class="n">t</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="admonition-title">备注</p>
+<p class="admonition-title">注解</p>
 <p>您也可以通过实例化 “tf2_ros:: 静态转换广播公司 `` instead of a `` 2_ros:: 转换广播公司” 来发布具有相同模式的静态转换。静态转换将在 <code class="docutils literal notranslate"><span class="pre">/tf_static</span></code> 话题上发布，并且仅在需要时发送，而不是周期调用y。更多详情见 <a class="reference internal" href="Writing-A-Tf2-Static-Broadcaster-Cpp.html"><span class="doc">here</span></a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8636">[待校准&#64;8636]</a></p>
 </div>
 </div>

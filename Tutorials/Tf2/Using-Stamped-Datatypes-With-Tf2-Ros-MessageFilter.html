@@ -45,7 +45,7 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../Installation.html">安装 [待校准&#64;5278]</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Installation.html">安装</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../Installation/Ubuntu-Development-Setup.html">在Ubuntu Linux上构建ROS 2 [待校准&#64;5474]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Installation/Ubuntu-Install-Binary.html">在Ubuntu Linux上安装ROS 2 [待校准&#64;5525]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Installation/Ubuntu-Install-Debians.html">通过Debian包安装ROS 2 [待校准&#64;5547]</a></li>
@@ -152,8 +152,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../../How-To-Guides.html">操作指南 [待校准&#64;5755]</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Installation-Troubleshooting.html">安装故障诊断工具 [待校准&#64;6086]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Developing-a-ROS-2-Package.html">开发ROS 2包 [待校准&#64;6065]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Ament-CMake-Documentation.html">[需手动修复的语法]ament _ cmake用户文档 [待校准&#64;5759]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Ament-CMake-Python-Documentation.html">[需手动修复的语法]ament _ cmake_python用户文档 [待校准&#64;5911]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Ament-CMake-Documentation.html">ament_cmake用户文档 [小鱼&#64;5759]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Ament-CMake-Python-Documentation.html">ament_cmake_python用户文档 [小鱼&#64;5911]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Launch-files-migration-guide.html">迁移launch文件ROS 1ROS 2 [待校准&#64;6189]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Launch-file-different-formats.html">对ROS 2Launch文件使用Python、XML和YAML [待校准&#64;6162]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Launching-composable-nodes.html">使用ROS 2launch到launch可组合节点 [待校准&#64;6284]</a></li>
@@ -193,7 +193,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-Command-Line-Tools.html">使用命令行工具进行自检 [待校准&#64;9667]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-RQt.html">RQt的概述和使用 [待校准&#64;10201]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-Composition.html">关于组件 [待校准&#64;9695]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-Catment.html">[需手动修复的语法]ament和catkin的混合研究 [待校准&#64;9595]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-Catment.html">ament和catkin的混合研究 [小鱼&#64;9595]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-Cross-Compilation.html">关于交叉编译 [待校准&#64;9717]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-Tf2.html">关于tf2 [待校准&#64;10229]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-Build-System.html">关于构建系统 [待校准&#64;9545]</a></li>
@@ -235,7 +235,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../Features.html">功能状态 [待校准&#64;10365]</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Roadmap.html">路线图 [待校准&#64;87]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Roadmap.html">开发计划（Roadmap） [小鱼&#64;87]</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Feature-Ideas.html">特色创意 [待校准&#64;5184]</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Governance.html">项目管理 [待校准&#64;1150]</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../Governance/ROS2-TSC-Charter.html">ROS 2技术指导委员会章程 [待校准&#64;1299]</a></li>
@@ -366,23 +366,23 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">spawner</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_client</span><span class="p">(</span><span class="n">Spawn</span><span class="p">,</span> <span class="s1">&#39;spawn&#39;</span><span class="p">)</span>
         <span class="c1"># Boolean values to store the information</span>
         <span class="c1"># if the service for spawning turtle is available</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">turtle_spawning_service_ready</span> <span class="o">=</span> <span class="bp">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">turtle_spawning_service_ready</span> <span class="o">=</span> <span class="kc">False</span>
         <span class="c1"># if the turtle was successfully spawned</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">turtle_spawned</span> <span class="o">=</span> <span class="bp">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">turtle_spawned</span> <span class="o">=</span> <span class="kc">False</span>
         <span class="c1"># if the topics of turtle3 can be subscribed</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">turtle_pose_cansubscribe</span> <span class="o">=</span> <span class="bp">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">turtle_pose_cansubscribe</span> <span class="o">=</span> <span class="kc">False</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">timer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_timer</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">on_timer</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">on_timer</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">turtle_spawning_service_ready</span><span class="p">:</span>
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">turtle_spawned</span><span class="p">:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">turtle_pose_cansubscribe</span> <span class="o">=</span> <span class="bp">True</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">turtle_pose_cansubscribe</span> <span class="o">=</span> <span class="kc">True</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">result</span><span class="o">.</span><span class="n">done</span><span class="p">():</span>
                     <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
-                        <span class="n">f</span><span class="s1">&#39;Successfully spawned {self.result.result().name}&#39;</span><span class="p">)</span>
-                    <span class="bp">self</span><span class="o">.</span><span class="n">turtle_spawned</span> <span class="o">=</span> <span class="bp">True</span>
+                        <span class="sa">f</span><span class="s1">&#39;Successfully spawned </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">result</span><span class="o">.</span><span class="n">result</span><span class="p">()</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">turtle_spawned</span> <span class="o">=</span> <span class="kc">True</span>
                 <span class="k">else</span><span class="p">:</span>
                     <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Spawn is not finished&#39;</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
@@ -396,7 +396,7 @@
                 <span class="n">request</span><span class="o">.</span><span class="n">theta</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
                 <span class="c1"># Call request</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">spawner</span><span class="o">.</span><span class="n">call_async</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">turtle_spawning_service_ready</span> <span class="o">=</span> <span class="bp">True</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">turtle_spawning_service_ready</span> <span class="o">=</span> <span class="kc">True</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="c1"># Check if the service is ready</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Service is not ready&#39;</span><span class="p">)</span>
@@ -557,164 +557,164 @@
 </div>
 </div></div>
 <p>使用您喜欢的文本编辑器打开文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8591">[待校准&#64;8591]</a></p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;geometry_msgs/msg/point_stamped.hpp&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;message_filters/subscriber.h&gt;</span><span class="cp"></span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;geometry_msgs/msg/point_stamped.hpp&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;message_filters/subscriber.h&gt;</span><span class="cp"></span>
 
-<span class="cp">#include</span> <span class="cpf">&lt;rclcpp/rclcpp.hpp&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;tf2_ros/buffer.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;tf2_ros/create_timer_ros.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;tf2_ros/message_filter.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;tf2_ros/transform_listener.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;rclcpp/rclcpp.hpp&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;tf2_ros/buffer.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;tf2_ros/create_timer_ros.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;tf2_ros/message_filter.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;tf2_ros/transform_listener.h&gt;</span><span class="cp"></span>
 <span class="cp">#ifdef TF2_CPP_HEADERS</span>
-  <span class="cp">#include</span> <span class="cpf">&lt;tf2_geometry_msgs/tf2_geometry_msgs.hpp&gt;</span><span class="cp"></span>
+<span class="w">  </span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;tf2_geometry_msgs/tf2_geometry_msgs.hpp&gt;</span><span class="cp"></span>
 <span class="cp">#else</span>
-  <span class="cp">#include</span> <span class="cpf">&lt;tf2_geometry_msgs/tf2_geometry_msgs.h&gt;</span><span class="cp"></span>
+<span class="w">  </span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;tf2_geometry_msgs/tf2_geometry_msgs.h&gt;</span><span class="cp"></span>
 <span class="cp">#endif</span>
 
-<span class="cp">#include</span> <span class="cpf">&lt;chrono&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;memory&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;string&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;chrono&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;memory&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span><span class="cp"></span>
 
-<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="o">::</span><span class="n">chrono_literals</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="o">::</span><span class="nn">chrono_literals</span><span class="p">;</span><span class="w"></span>
 
-<span class="k">class</span> <span class="nc">PoseDrawer</span> <span class="o">:</span> <span class="k">public</span> <span class="n">rclcpp</span><span class="o">::</span><span class="n">Node</span>
-<span class="p">{</span>
-<span class="k">public</span><span class="o">:</span>
-  <span class="n">PoseDrawer</span><span class="p">()</span>
-  <span class="o">:</span> <span class="n">Node</span><span class="p">(</span><span class="s">&quot;turtle_tf2_pose_drawer&quot;</span><span class="p">)</span>
-  <span class="p">{</span>
-    <span class="c1">// Declare and acquire `target_frame` parameter</span>
-    <span class="k">this</span><span class="o">-&gt;</span><span class="n">declare_parameter</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;target_frame&quot;</span><span class="p">,</span> <span class="s">&quot;turtle1&quot;</span><span class="p">);</span>
-    <span class="k">this</span><span class="o">-&gt;</span><span class="n">get_parameter</span><span class="p">(</span><span class="s">&quot;target_frame&quot;</span><span class="p">,</span> <span class="n">target_frame_</span><span class="p">);</span>
+<span class="k">class</span> <span class="nc">PoseDrawer</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">Node</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">  </span><span class="n">PoseDrawer</span><span class="p">()</span><span class="w"></span>
+<span class="w">  </span><span class="o">:</span><span class="w"> </span><span class="n">Node</span><span class="p">(</span><span class="s">&quot;turtle_tf2_pose_drawer&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Declare and acquire `target_frame` parameter</span>
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">declare_parameter</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;target_frame&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;turtle1&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_parameter</span><span class="p">(</span><span class="s">&quot;target_frame&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">target_frame_</span><span class="p">);</span><span class="w"></span>
 
-    <span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">duration</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">seconds_type</span><span class="p">;</span>
-    <span class="n">seconds_type</span> <span class="nf">buffer_timeout</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="w">    </span><span class="k">typedef</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">duration</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">seconds_type</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">seconds_type</span><span class="w"> </span><span class="nf">buffer_timeout</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
 
-    <span class="n">tf2_buffer_</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">tf2_ros</span><span class="o">::</span><span class="n">Buffer</span><span class="o">&gt;</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_clock</span><span class="p">());</span>
-    <span class="c1">// Create the timer interface before call to waitForTransform,</span>
-    <span class="c1">// to avoid a tf2_ros::CreateTimerInterfaceException exception</span>
-    <span class="k">auto</span> <span class="n">timer_interface</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">tf2_ros</span><span class="o">::</span><span class="n">CreateTimerROS</span><span class="o">&gt;</span><span class="p">(</span>
-      <span class="k">this</span><span class="o">-&gt;</span><span class="n">get_node_base_interface</span><span class="p">(),</span>
-      <span class="k">this</span><span class="o">-&gt;</span><span class="n">get_node_timers_interface</span><span class="p">());</span>
-    <span class="n">tf2_buffer_</span><span class="o">-&gt;</span><span class="n">setCreateTimerInterface</span><span class="p">(</span><span class="n">timer_interface</span><span class="p">);</span>
-    <span class="n">tf2_listener_</span> <span class="o">=</span>
-      <span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">tf2_ros</span><span class="o">::</span><span class="n">TransformListener</span><span class="o">&gt;</span><span class="p">(</span><span class="o">*</span><span class="n">tf2_buffer_</span><span class="p">);</span>
+<span class="w">    </span><span class="n">tf2_buffer_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">tf2_ros</span><span class="o">::</span><span class="n">Buffer</span><span class="o">&gt;</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_clock</span><span class="p">());</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Create the timer interface before call to waitForTransform,</span>
+<span class="w">    </span><span class="c1">// to avoid a tf2_ros::CreateTimerInterfaceException exception</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">timer_interface</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">tf2_ros</span><span class="o">::</span><span class="n">CreateTimerROS</span><span class="o">&gt;</span><span class="p">(</span><span class="w"></span>
+<span class="w">      </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_node_base_interface</span><span class="p">(),</span><span class="w"></span>
+<span class="w">      </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_node_timers_interface</span><span class="p">());</span><span class="w"></span>
+<span class="w">    </span><span class="n">tf2_buffer_</span><span class="o">-&gt;</span><span class="n">setCreateTimerInterface</span><span class="p">(</span><span class="n">timer_interface</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">tf2_listener_</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
+<span class="w">      </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">tf2_ros</span><span class="o">::</span><span class="n">TransformListener</span><span class="o">&gt;</span><span class="p">(</span><span class="o">*</span><span class="n">tf2_buffer_</span><span class="p">);</span><span class="w"></span>
 
-    <span class="n">point_sub_</span><span class="p">.</span><span class="n">subscribe</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="s">&quot;/turtle3/turtle_point_stamped&quot;</span><span class="p">);</span>
-    <span class="n">tf2_filter_</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">tf2_ros</span><span class="o">::</span><span class="n">MessageFilter</span><span class="o">&lt;</span><span class="n">geometry_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">PointStamped</span><span class="o">&gt;&gt;</span><span class="p">(</span>
-      <span class="n">point_sub_</span><span class="p">,</span> <span class="o">*</span><span class="n">tf2_buffer_</span><span class="p">,</span> <span class="n">target_frame_</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">get_node_logging_interface</span><span class="p">(),</span>
-      <span class="k">this</span><span class="o">-&gt;</span><span class="n">get_node_clock_interface</span><span class="p">(),</span> <span class="n">buffer_timeout</span><span class="p">);</span>
-    <span class="c1">// Register a callback with tf2_ros::MessageFilter to be called when transforms are available</span>
-    <span class="n">tf2_filter_</span><span class="o">-&gt;</span><span class="n">registerCallback</span><span class="p">(</span><span class="o">&amp;</span><span class="n">PoseDrawer</span><span class="o">::</span><span class="n">msgCallback</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span>
-  <span class="p">}</span>
+<span class="w">    </span><span class="n">point_sub_</span><span class="p">.</span><span class="n">subscribe</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;/turtle3/turtle_point_stamped&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">tf2_filter_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">tf2_ros</span><span class="o">::</span><span class="n">MessageFilter</span><span class="o">&lt;</span><span class="n">geometry_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">PointStamped</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="w"></span>
+<span class="w">      </span><span class="n">point_sub_</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">tf2_buffer_</span><span class="p">,</span><span class="w"> </span><span class="n">target_frame_</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_node_logging_interface</span><span class="p">(),</span><span class="w"></span>
+<span class="w">      </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_node_clock_interface</span><span class="p">(),</span><span class="w"> </span><span class="n">buffer_timeout</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Register a callback with tf2_ros::MessageFilter to be called when transforms are available</span>
+<span class="w">    </span><span class="n">tf2_filter_</span><span class="o">-&gt;</span><span class="n">registerCallback</span><span class="p">(</span><span class="o">&amp;</span><span class="n">PoseDrawer</span><span class="o">::</span><span class="n">msgCallback</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
 
-<span class="k">private</span><span class="o">:</span>
-  <span class="kt">void</span> <span class="n">msgCallback</span><span class="p">(</span><span class="k">const</span> <span class="n">geometry_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">PointStamped</span><span class="o">::</span><span class="n">SharedPtr</span> <span class="n">point_ptr</span><span class="p">)</span>
-  <span class="p">{</span>
-    <span class="n">geometry_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">PointStamped</span> <span class="n">point_out</span><span class="p">;</span>
-    <span class="k">try</span> <span class="p">{</span>
-      <span class="n">tf2_buffer_</span><span class="o">-&gt;</span><span class="n">transform</span><span class="p">(</span><span class="o">*</span><span class="n">point_ptr</span><span class="p">,</span> <span class="n">point_out</span><span class="p">,</span> <span class="n">target_frame_</span><span class="p">);</span>
-      <span class="n">RCLCPP_INFO</span><span class="p">(</span>
-        <span class="k">this</span><span class="o">-&gt;</span><span class="n">get_logger</span><span class="p">(),</span> <span class="s">&quot;Point of turtle3 in frame of turtle1: x:%f y:%f z:%f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span>
-        <span class="n">point_out</span><span class="p">.</span><span class="n">point</span><span class="p">.</span><span class="n">x</span><span class="p">,</span>
-        <span class="n">point_out</span><span class="p">.</span><span class="n">point</span><span class="p">.</span><span class="n">y</span><span class="p">,</span>
-        <span class="n">point_out</span><span class="p">.</span><span class="n">point</span><span class="p">.</span><span class="n">z</span><span class="p">);</span>
-    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">tf2</span><span class="o">::</span><span class="n">TransformException</span> <span class="o">&amp;</span> <span class="n">ex</span><span class="p">)</span> <span class="p">{</span>
-      <span class="n">RCLCPP_WARN</span><span class="p">(</span>
-        <span class="c1">// Print exception which was caught</span>
-        <span class="k">this</span><span class="o">-&gt;</span><span class="n">get_logger</span><span class="p">(),</span> <span class="s">&quot;Failure %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">ex</span><span class="p">.</span><span class="n">what</span><span class="p">());</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-  <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">target_frame_</span><span class="p">;</span>
-  <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">tf2_ros</span><span class="o">::</span><span class="n">Buffer</span><span class="o">&gt;</span> <span class="n">tf2_buffer_</span><span class="p">;</span>
-  <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">tf2_ros</span><span class="o">::</span><span class="n">TransformListener</span><span class="o">&gt;</span> <span class="n">tf2_listener_</span><span class="p">;</span>
-  <span class="n">message_filters</span><span class="o">::</span><span class="n">Subscriber</span><span class="o">&lt;</span><span class="n">geometry_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">PointStamped</span><span class="o">&gt;</span> <span class="n">point_sub_</span><span class="p">;</span>
-  <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">tf2_ros</span><span class="o">::</span><span class="n">MessageFilter</span><span class="o">&lt;</span><span class="n">geometry_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">PointStamped</span><span class="o">&gt;&gt;</span> <span class="n">tf2_filter_</span><span class="p">;</span>
-<span class="p">};</span>
+<span class="k">private</span><span class="o">:</span><span class="w"></span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="n">msgCallback</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">geometry_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">PointStamped</span><span class="o">::</span><span class="n">SharedPtr</span><span class="w"> </span><span class="n">point_ptr</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">geometry_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">PointStamped</span><span class="w"> </span><span class="n">point_out</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">tf2_buffer_</span><span class="o">-&gt;</span><span class="n">transform</span><span class="p">(</span><span class="o">*</span><span class="n">point_ptr</span><span class="p">,</span><span class="w"> </span><span class="n">point_out</span><span class="p">,</span><span class="w"> </span><span class="n">target_frame_</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="n">RCLCPP_INFO</span><span class="p">(</span><span class="w"></span>
+<span class="w">        </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_logger</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;Point of turtle3 in frame of turtle1: x:%f y:%f z:%f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="n">point_out</span><span class="p">.</span><span class="n">point</span><span class="p">.</span><span class="n">x</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="n">point_out</span><span class="p">.</span><span class="n">point</span><span class="p">.</span><span class="n">y</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="n">point_out</span><span class="p">.</span><span class="n">point</span><span class="p">.</span><span class="n">z</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">tf2</span><span class="o">::</span><span class="n">TransformException</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">ex</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">RCLCPP_WARN</span><span class="p">(</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// Print exception which was caught</span>
+<span class="w">        </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_logger</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;Failure %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">ex</span><span class="p">.</span><span class="n">what</span><span class="p">());</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">target_frame_</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">tf2_ros</span><span class="o">::</span><span class="n">Buffer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">tf2_buffer_</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">tf2_ros</span><span class="o">::</span><span class="n">TransformListener</span><span class="o">&gt;</span><span class="w"> </span><span class="n">tf2_listener_</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">message_filters</span><span class="o">::</span><span class="n">Subscriber</span><span class="o">&lt;</span><span class="n">geometry_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">PointStamped</span><span class="o">&gt;</span><span class="w"> </span><span class="n">point_sub_</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">tf2_ros</span><span class="o">::</span><span class="n">MessageFilter</span><span class="o">&lt;</span><span class="n">geometry_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">PointStamped</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">tf2_filter_</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
 
-<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span> <span class="n">argv</span><span class="p">[])</span>
-<span class="p">{</span>
-  <span class="n">rclcpp</span><span class="o">::</span><span class="n">init</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span> <span class="n">argv</span><span class="p">);</span>
-  <span class="n">rclcpp</span><span class="o">::</span><span class="n">spin</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">PoseDrawer</span><span class="o">&gt;</span><span class="p">());</span>
-  <span class="n">rclcpp</span><span class="o">::</span><span class="n">shutdown</span><span class="p">();</span>
-  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">argv</span><span class="p">[])</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">init</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="n">argv</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">spin</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">PoseDrawer</span><span class="o">&gt;</span><span class="p">());</span><span class="w"></span>
+<span class="w">  </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">shutdown</span><span class="p">();</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <div class="section" id="id1">
 <h4>2.1检查代码 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8007">[待校准&#64;8007]</a><a class="headerlink" href="#id1" title="永久链接至标题"></a></h4>
 <p>首先，您必须包括 <code class="docutils literal notranslate"><span class="pre">tf2_ros</span></code> 包中的 “tf2_ros:: messagefilter” 标题，以及以前使用的 <code class="docutils literal notranslate"><span class="pre">tf2</span></code> 和 <code class="docutils literal notranslate"><span class="pre">ros2</span></code> 相关标题。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8602">[待校准&#64;8602]</a></p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;geometry_msgs/msg/point_stamped.hpp&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;message_filters/subscriber.h&gt;</span><span class="cp"></span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;geometry_msgs/msg/point_stamped.hpp&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;message_filters/subscriber.h&gt;</span><span class="cp"></span>
 
-<span class="cp">#include</span> <span class="cpf">&lt;rclcpp/rclcpp.hpp&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;tf2_ros/buffer.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;tf2_ros/create_timer_ros.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;tf2_ros/message_filter.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;tf2_ros/transform_listener.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;rclcpp/rclcpp.hpp&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;tf2_ros/buffer.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;tf2_ros/create_timer_ros.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;tf2_ros/message_filter.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;tf2_ros/transform_listener.h&gt;</span><span class="cp"></span>
 <span class="cp">#ifdef TF2_CPP_HEADERS</span>
-  <span class="cp">#include</span> <span class="cpf">&lt;tf2_geometry_msgs/tf2_geometry_msgs.hpp&gt;</span><span class="cp"></span>
+<span class="w">  </span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;tf2_geometry_msgs/tf2_geometry_msgs.hpp&gt;</span><span class="cp"></span>
 <span class="cp">#else</span>
-  <span class="cp">#include</span> <span class="cpf">&lt;tf2_geometry_msgs/tf2_geometry_msgs.h&gt;</span><span class="cp"></span>
+<span class="w">  </span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;tf2_geometry_msgs/tf2_geometry_msgs.h&gt;</span><span class="cp"></span>
 <span class="cp">#endif</span>
 </pre></div>
 </div>
 <p>第二，需要持续实例 ”tf2_ros: Buffer''，” tf2_ros: TransformListener `` and `` tf2_ros: MessageFilter''。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8603">[待校准&#64;8603]</a></p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">target_frame_</span><span class="p">;</span>
-<span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">tf2_ros</span><span class="o">::</span><span class="n">Buffer</span><span class="o">&gt;</span> <span class="n">tf2_buffer_</span><span class="p">;</span>
-<span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">tf2_ros</span><span class="o">::</span><span class="n">TransformListener</span><span class="o">&gt;</span> <span class="n">tf2_listener_</span><span class="p">;</span>
-<span class="n">message_filters</span><span class="o">::</span><span class="n">Subscriber</span><span class="o">&lt;</span><span class="n">geometry_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">PointStamped</span><span class="o">&gt;</span> <span class="n">point_sub_</span><span class="p">;</span>
-<span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">tf2_ros</span><span class="o">::</span><span class="n">MessageFilter</span><span class="o">&lt;</span><span class="n">geometry_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">PointStamped</span><span class="o">&gt;&gt;</span> <span class="n">tf2_filter_</span><span class="p">;</span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">target_frame_</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">tf2_ros</span><span class="o">::</span><span class="n">Buffer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">tf2_buffer_</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">tf2_ros</span><span class="o">::</span><span class="n">TransformListener</span><span class="o">&gt;</span><span class="w"> </span><span class="n">tf2_listener_</span><span class="p">;</span><span class="w"></span>
+<span class="n">message_filters</span><span class="o">::</span><span class="n">Subscriber</span><span class="o">&lt;</span><span class="n">geometry_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">PointStamped</span><span class="o">&gt;</span><span class="w"> </span><span class="n">point_sub_</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">tf2_ros</span><span class="o">::</span><span class="n">MessageFilter</span><span class="o">&lt;</span><span class="n">geometry_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">PointStamped</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">tf2_filter_</span><span class="p">;</span><span class="w"></span>
 </pre></div>
 </div>
 <p>第三，必须使用该 <code class="docutils literal notranslate"><span class="pre">Subscriber</span></code> 对象初始化ROS 2 “消息过滤器:: 订阅者 `` must be initialized with the topic. And the `` tf2_ros:: 消息过滤器”。 <code class="docutils literal notranslate"><span class="pre">MessageFilter</span></code> 构造函数中注意的其他参数是 <code class="docutils literal notranslate"><span class="pre">target_frame</span></code> 函数和调用back函数。目标帧是确保 <code class="docutils literal notranslate"><span class="pre">canTransform</span></code> 成功的帧。调用back函数是在数据准备就绪时将被调用的函数。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8604">[待校准&#64;8604]</a></p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">PoseDrawer</span><span class="p">()</span>
-<span class="o">:</span> <span class="n">Node</span><span class="p">(</span><span class="s">&quot;turtle_tf2_pose_drawer&quot;</span><span class="p">)</span>
-<span class="p">{</span>
-  <span class="c1">// Declare and acquire `target_frame` parameter</span>
-  <span class="k">this</span><span class="o">-&gt;</span><span class="n">declare_parameter</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;target_frame&quot;</span><span class="p">,</span> <span class="s">&quot;turtle1&quot;</span><span class="p">);</span>
-  <span class="k">this</span><span class="o">-&gt;</span><span class="n">get_parameter</span><span class="p">(</span><span class="s">&quot;target_frame&quot;</span><span class="p">,</span> <span class="n">target_frame_</span><span class="p">);</span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">PoseDrawer</span><span class="p">()</span><span class="w"></span>
+<span class="o">:</span><span class="w"> </span><span class="n">Node</span><span class="p">(</span><span class="s">&quot;turtle_tf2_pose_drawer&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="c1">// Declare and acquire `target_frame` parameter</span>
+<span class="w">  </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">declare_parameter</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;target_frame&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;turtle1&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_parameter</span><span class="p">(</span><span class="s">&quot;target_frame&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">target_frame_</span><span class="p">);</span><span class="w"></span>
 
-  <span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">duration</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">seconds_type</span><span class="p">;</span>
-  <span class="n">seconds_type</span> <span class="nf">buffer_timeout</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="w">  </span><span class="k">typedef</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">duration</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">seconds_type</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">seconds_type</span><span class="w"> </span><span class="nf">buffer_timeout</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
 
-  <span class="n">tf2_buffer_</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">tf2_ros</span><span class="o">::</span><span class="n">Buffer</span><span class="o">&gt;</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_clock</span><span class="p">());</span>
-  <span class="c1">// Create the timer interface before call to waitForTransform,</span>
-  <span class="c1">// to avoid a tf2_ros::CreateTimerInterfaceException exception</span>
-  <span class="k">auto</span> <span class="n">timer_interface</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">tf2_ros</span><span class="o">::</span><span class="n">CreateTimerROS</span><span class="o">&gt;</span><span class="p">(</span>
-    <span class="k">this</span><span class="o">-&gt;</span><span class="n">get_node_base_interface</span><span class="p">(),</span>
-    <span class="k">this</span><span class="o">-&gt;</span><span class="n">get_node_timers_interface</span><span class="p">());</span>
-  <span class="n">tf2_buffer_</span><span class="o">-&gt;</span><span class="n">setCreateTimerInterface</span><span class="p">(</span><span class="n">timer_interface</span><span class="p">);</span>
-  <span class="n">tf2_listener_</span> <span class="o">=</span>
-    <span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">tf2_ros</span><span class="o">::</span><span class="n">TransformListener</span><span class="o">&gt;</span><span class="p">(</span><span class="o">*</span><span class="n">tf2_buffer_</span><span class="p">);</span>
+<span class="w">  </span><span class="n">tf2_buffer_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">tf2_ros</span><span class="o">::</span><span class="n">Buffer</span><span class="o">&gt;</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_clock</span><span class="p">());</span><span class="w"></span>
+<span class="w">  </span><span class="c1">// Create the timer interface before call to waitForTransform,</span>
+<span class="w">  </span><span class="c1">// to avoid a tf2_ros::CreateTimerInterfaceException exception</span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">timer_interface</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">tf2_ros</span><span class="o">::</span><span class="n">CreateTimerROS</span><span class="o">&gt;</span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_node_base_interface</span><span class="p">(),</span><span class="w"></span>
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_node_timers_interface</span><span class="p">());</span><span class="w"></span>
+<span class="w">  </span><span class="n">tf2_buffer_</span><span class="o">-&gt;</span><span class="n">setCreateTimerInterface</span><span class="p">(</span><span class="n">timer_interface</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">tf2_listener_</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">tf2_ros</span><span class="o">::</span><span class="n">TransformListener</span><span class="o">&gt;</span><span class="p">(</span><span class="o">*</span><span class="n">tf2_buffer_</span><span class="p">);</span><span class="w"></span>
 
-  <span class="n">point_sub_</span><span class="p">.</span><span class="n">subscribe</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="s">&quot;/turtle3/turtle_point_stamped&quot;</span><span class="p">);</span>
-  <span class="n">tf2_filter_</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">tf2_ros</span><span class="o">::</span><span class="n">MessageFilter</span><span class="o">&lt;</span><span class="n">geometry_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">PointStamped</span><span class="o">&gt;&gt;</span><span class="p">(</span>
-    <span class="n">point_sub_</span><span class="p">,</span> <span class="o">*</span><span class="n">tf2_buffer_</span><span class="p">,</span> <span class="n">target_frame_</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">get_node_logging_interface</span><span class="p">(),</span>
-    <span class="k">this</span><span class="o">-&gt;</span><span class="n">get_node_clock_interface</span><span class="p">(),</span> <span class="n">buffer_timeout</span><span class="p">);</span>
-  <span class="c1">// Register a callback with tf2_ros::MessageFilter to be called when transforms are available</span>
-  <span class="n">tf2_filter_</span><span class="o">-&gt;</span><span class="n">registerCallback</span><span class="p">(</span><span class="o">&amp;</span><span class="n">PoseDrawer</span><span class="o">::</span><span class="n">msgCallback</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span>
-<span class="p">}</span>
+<span class="w">  </span><span class="n">point_sub_</span><span class="p">.</span><span class="n">subscribe</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;/turtle3/turtle_point_stamped&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">tf2_filter_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">tf2_ros</span><span class="o">::</span><span class="n">MessageFilter</span><span class="o">&lt;</span><span class="n">geometry_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">PointStamped</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="n">point_sub_</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">tf2_buffer_</span><span class="p">,</span><span class="w"> </span><span class="n">target_frame_</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_node_logging_interface</span><span class="p">(),</span><span class="w"></span>
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_node_clock_interface</span><span class="p">(),</span><span class="w"> </span><span class="n">buffer_timeout</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="c1">// Register a callback with tf2_ros::MessageFilter to be called when transforms are available</span>
+<span class="w">  </span><span class="n">tf2_filter_</span><span class="o">-&gt;</span><span class="n">registerCallback</span><span class="p">(</span><span class="o">&amp;</span><span class="n">PoseDrawer</span><span class="o">::</span><span class="n">msgCallback</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <p>最后，当数据准备好时，调用back方法将调用 <code class="docutils literal notranslate"><span class="pre">tf2_buffer_-&gt;transform</span></code> ，并将输出打印到控制台。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8605">[待校准&#64;8605]</a></p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">private</span><span class="o">:</span>
-<span class="kt">void</span> <span class="n">msgCallback</span><span class="p">(</span><span class="k">const</span> <span class="n">geometry_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">PointStamped</span><span class="o">::</span><span class="n">SharedPtr</span> <span class="n">point_ptr</span><span class="p">)</span>
-<span class="p">{</span>
-  <span class="n">geometry_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">PointStamped</span> <span class="n">point_out</span><span class="p">;</span>
-  <span class="k">try</span> <span class="p">{</span>
-    <span class="n">tf2_buffer_</span><span class="o">-&gt;</span><span class="n">transform</span><span class="p">(</span><span class="o">*</span><span class="n">point_ptr</span><span class="p">,</span> <span class="n">point_out</span><span class="p">,</span> <span class="n">target_frame_</span><span class="p">);</span>
-    <span class="n">RCLCPP_INFO</span><span class="p">(</span>
-      <span class="k">this</span><span class="o">-&gt;</span><span class="n">get_logger</span><span class="p">(),</span> <span class="s">&quot;Point of turtle3 in frame of turtle1: x:%f y:%f z:%f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span>
-      <span class="n">point_out</span><span class="p">.</span><span class="n">point</span><span class="p">.</span><span class="n">x</span><span class="p">,</span>
-      <span class="n">point_out</span><span class="p">.</span><span class="n">point</span><span class="p">.</span><span class="n">y</span><span class="p">,</span>
-      <span class="n">point_out</span><span class="p">.</span><span class="n">point</span><span class="p">.</span><span class="n">z</span><span class="p">);</span>
-  <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">tf2</span><span class="o">::</span><span class="n">TransformException</span> <span class="o">&amp;</span> <span class="n">ex</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">RCLCPP_WARN</span><span class="p">(</span>
-      <span class="c1">// Print exception which was caught</span>
-      <span class="k">this</span><span class="o">-&gt;</span><span class="n">get_logger</span><span class="p">(),</span> <span class="s">&quot;Failure %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">ex</span><span class="p">.</span><span class="n">what</span><span class="p">());</span>
-  <span class="p">}</span>
-<span class="p">}</span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">private</span><span class="o">:</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="n">msgCallback</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">geometry_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">PointStamped</span><span class="o">::</span><span class="n">SharedPtr</span><span class="w"> </span><span class="n">point_ptr</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">geometry_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">PointStamped</span><span class="w"> </span><span class="n">point_out</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">tf2_buffer_</span><span class="o">-&gt;</span><span class="n">transform</span><span class="p">(</span><span class="o">*</span><span class="n">point_ptr</span><span class="p">,</span><span class="w"> </span><span class="n">point_out</span><span class="p">,</span><span class="w"> </span><span class="n">target_frame_</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">RCLCPP_INFO</span><span class="p">(</span><span class="w"></span>
+<span class="w">      </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_logger</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;Point of turtle3 in frame of turtle1: x:%f y:%f z:%f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="n">point_out</span><span class="p">.</span><span class="n">point</span><span class="p">.</span><span class="n">x</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="n">point_out</span><span class="p">.</span><span class="n">point</span><span class="p">.</span><span class="n">y</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="n">point_out</span><span class="p">.</span><span class="n">point</span><span class="p">.</span><span class="n">z</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">tf2</span><span class="o">::</span><span class="n">TransformException</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">ex</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">RCLCPP_WARN</span><span class="p">(</span><span class="w"></span>
+<span class="w">      </span><span class="c1">// Print exception which was caught</span>
+<span class="w">      </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_logger</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;Failure %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">ex</span><span class="p">.</span><span class="n">what</span><span class="p">());</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 </div>

@@ -44,7 +44,7 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../Installation.html">安装 [待校准&#64;5278]</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../Installation.html">安装</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Ubuntu-Development-Setup.html">在Ubuntu Linux上构建ROS 2 [待校准&#64;5474]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Ubuntu-Install-Binary.html">在Ubuntu Linux上安装ROS 2 [待校准&#64;5525]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Ubuntu-Install-Debians.html">通过Debian包安装ROS 2 [待校准&#64;5547]</a></li>
@@ -151,8 +151,8 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../How-To-Guides.html">操作指南 [待校准&#64;5755]</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">安装故障诊断工具 [待校准&#64;6086]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Developing-a-ROS-2-Package.html">开发ROS 2包 [待校准&#64;6065]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Ament-CMake-Documentation.html">[需手动修复的语法]ament _ cmake用户文档 [待校准&#64;5759]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Ament-CMake-Python-Documentation.html">[需手动修复的语法]ament _ cmake_python用户文档 [待校准&#64;5911]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ament-CMake-Documentation.html">ament_cmake用户文档 [小鱼&#64;5759]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ament-CMake-Python-Documentation.html">ament_cmake_python用户文档 [小鱼&#64;5911]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Launch-files-migration-guide.html">迁移launch文件ROS 1ROS 2 [待校准&#64;6189]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Launch-file-different-formats.html">对ROS 2Launch文件使用Python、XML和YAML [待校准&#64;6162]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Launching-composable-nodes.html">使用ROS 2launch到launch可组合节点 [待校准&#64;6284]</a></li>
@@ -192,7 +192,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Command-Line-Tools.html">使用命令行工具进行自检 [待校准&#64;9667]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Concepts/About-RQt.html">RQt的概述和使用 [待校准&#64;10201]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Composition.html">关于组件 [待校准&#64;9695]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Catment.html">[需手动修复的语法]ament和catkin的混合研究 [待校准&#64;9595]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Catment.html">ament和catkin的混合研究 [小鱼&#64;9595]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Cross-Compilation.html">关于交叉编译 [待校准&#64;9717]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Tf2.html">关于tf2 [待校准&#64;10229]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Build-System.html">关于构建系统 [待校准&#64;9545]</a></li>
@@ -234,7 +234,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../Features.html">功能状态 [待校准&#64;10365]</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Roadmap.html">路线图 [待校准&#64;87]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Roadmap.html">开发计划（Roadmap） [小鱼&#64;87]</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Feature-Ideas.html">特色创意 [待校准&#64;5184]</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Governance.html">项目管理 [待校准&#64;1150]</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Governance/ROS2-TSC-Charter.html">ROS 2技术指导委员会章程 [待校准&#64;1299]</a></li>
@@ -309,8 +309,8 @@
 </pre></div>
 </div>
 <p>然后，您需要更新防火墙配置，以允许使用 <a class="reference external" href="https://help.ubuntu.com/community/UFW">ufw</a> 进行多播。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6096">[待校准&#64;6096]</a></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo ufw allow in proto udp to <span class="m">224</span>.0.0.0/4
-sudo ufw allow in proto udp from <span class="m">224</span>.0.0.0/4
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo ufw allow <span class="k">in</span> proto udp to <span class="m">224</span>.0.0.0/4
+sudo ufw allow <span class="k">in</span> proto udp from <span class="m">224</span>.0.0.0/4
 </pre></div>
 </div>
 <p>您可以使用: 代码:  <code class="xref any docutils literal notranslate"><span class="pre">ifconfig</span></code> 工具检查是否为您的网络接口启用了多播标志，并在标志部分查找: 代码:  <code class="xref any docutils literal notranslate"><span class="pre">MULITCAST</span></code> : <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6097">[待校准&#64;6097]</a></p>
@@ -382,8 +382,8 @@ sudo apt install python3-colcon* --only-upgrade  <span class="c1"># upgrade inst
 <p>如果您安装了opencv，则可能会得到以下信息: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6121">[待校准&#64;6121]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>dyld: Symbol not found: __cg_jpeg_resync_to_restart
   Referenced from: /System/Library/Frameworks/ImageIO.framework/Versions/A/ImageIO
-  Expected in: /usr/local/lib/libJPEG.dylib
- in /System/Library/Frameworks/ImageIO.framework/Versions/A/ImageIO
+  Expected <span class="k">in</span>: /usr/local/lib/libJPEG.dylib
+ <span class="k">in</span> /System/Library/Frameworks/ImageIO.framework/Versions/A/ImageIO
 /bin/sh: line <span class="m">1</span>: <span class="m">25274</span> Trace/BPT trap: <span class="m">5</span>       /usr/local/bin/cmake
 </pre></div>
 </div>

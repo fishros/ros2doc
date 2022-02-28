@@ -45,7 +45,7 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../Installation.html">安装 [待校准&#64;5278]</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Installation.html">安装</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../Installation/Ubuntu-Development-Setup.html">在Ubuntu Linux上构建ROS 2 [待校准&#64;5474]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Installation/Ubuntu-Install-Binary.html">在Ubuntu Linux上安装ROS 2 [待校准&#64;5525]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Installation/Ubuntu-Install-Debians.html">通过Debian包安装ROS 2 [待校准&#64;5547]</a></li>
@@ -152,8 +152,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../../How-To-Guides.html">操作指南 [待校准&#64;5755]</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Installation-Troubleshooting.html">安装故障诊断工具 [待校准&#64;6086]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Developing-a-ROS-2-Package.html">开发ROS 2包 [待校准&#64;6065]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Ament-CMake-Documentation.html">[需手动修复的语法]ament _ cmake用户文档 [待校准&#64;5759]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Ament-CMake-Python-Documentation.html">[需手动修复的语法]ament _ cmake_python用户文档 [待校准&#64;5911]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Ament-CMake-Documentation.html">ament_cmake用户文档 [小鱼&#64;5759]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Ament-CMake-Python-Documentation.html">ament_cmake_python用户文档 [小鱼&#64;5911]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Launch-files-migration-guide.html">迁移launch文件ROS 1ROS 2 [待校准&#64;6189]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Launch-file-different-formats.html">对ROS 2Launch文件使用Python、XML和YAML [待校准&#64;6162]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Launching-composable-nodes.html">使用ROS 2launch到launch可组合节点 [待校准&#64;6284]</a></li>
@@ -193,7 +193,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-Command-Line-Tools.html">使用命令行工具进行自检 [待校准&#64;9667]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-RQt.html">RQt的概述和使用 [待校准&#64;10201]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-Composition.html">关于组件 [待校准&#64;9695]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-Catment.html">[需手动修复的语法]ament和catkin的混合研究 [待校准&#64;9595]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-Catment.html">ament和catkin的混合研究 [小鱼&#64;9595]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-Cross-Compilation.html">关于交叉编译 [待校准&#64;9717]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-Tf2.html">关于tf2 [待校准&#64;10229]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Concepts/About-Build-System.html">关于构建系统 [待校准&#64;9545]</a></li>
@@ -235,7 +235,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../Features.html">功能状态 [待校准&#64;10365]</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Roadmap.html">路线图 [待校准&#64;87]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Roadmap.html">开发计划（Roadmap） [小鱼&#64;87]</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Feature-Ideas.html">特色创意 [待校准&#64;5184]</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Governance.html">项目管理 [待校准&#64;1150]</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../Governance/ROS2-TSC-Charter.html">ROS 2技术指导委员会章程 [待校准&#64;1299]</a></li>
@@ -337,77 +337,77 @@
 <div class="section" id="write-the-c-node">
 <h3>2编写cnode节点 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8005">[待校准&#64;8005]</a><a class="headerlink" href="#write-the-c-node" title="永久链接至标题"></a></h3>
 <p>在 <code class="docutils literal notranslate"><span class="pre">dev_ws/src/bag_recorder_nodes/src</span></code> 目录内，创建一个调用 <code class="docutils literal notranslate"><span class="pre">simple_bag_recorder.cpp</span></code> 的新文件，并将以下代码粘贴到其中。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8006">[待校准&#64;8006]</a></p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;rclcpp/rclcpp.hpp&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;std_msgs/msg/string.hpp&gt;</span><span class="cp"></span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;rclcpp/rclcpp.hpp&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;std_msgs/msg/string.hpp&gt;</span><span class="cp"></span>
 
-<span class="cp">#include</span> <span class="cpf">&lt;rosbag2_cpp/typesupport_helpers.hpp&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;rosbag2_cpp/writer.hpp&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;rosbag2_cpp/writers/sequential_writer.hpp&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;rosbag2_storage/serialized_bag_message.hpp&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;rosbag2_cpp/typesupport_helpers.hpp&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;rosbag2_cpp/writer.hpp&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;rosbag2_cpp/writers/sequential_writer.hpp&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;rosbag2_storage/serialized_bag_message.hpp&gt;</span><span class="cp"></span>
 
-<span class="k">using</span> <span class="n">std</span><span class="o">::</span><span class="n">placeholders</span><span class="o">::</span><span class="n">_1</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">placeholders</span><span class="o">::</span><span class="n">_1</span><span class="p">;</span><span class="w"></span>
 
-<span class="k">class</span> <span class="nc">SimpleBagRecorder</span> <span class="o">:</span> <span class="k">public</span> <span class="n">rclcpp</span><span class="o">::</span><span class="n">Node</span>
-<span class="p">{</span>
-<span class="k">public</span><span class="o">:</span>
-  <span class="n">SimpleBagRecorder</span><span class="p">()</span>
-  <span class="o">:</span> <span class="n">Node</span><span class="p">(</span><span class="s">&quot;simple_bag_recorder&quot;</span><span class="p">)</span>
-  <span class="p">{</span>
-    <span class="k">const</span> <span class="n">rosbag2_cpp</span><span class="o">::</span><span class="n">StorageOptions</span> <span class="n">storage_options</span><span class="p">({</span><span class="s">&quot;my_bag&quot;</span><span class="p">,</span> <span class="s">&quot;sqlite3&quot;</span><span class="p">});</span>
-    <span class="k">const</span> <span class="n">rosbag2_cpp</span><span class="o">::</span><span class="n">ConverterOptions</span> <span class="n">converter_options</span><span class="p">(</span>
-      <span class="p">{</span><span class="n">rmw_get_serialization_format</span><span class="p">(),</span>
-       <span class="n">rmw_get_serialization_format</span><span class="p">()});</span>
-    <span class="n">writer_</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">make_unique</span><span class="o">&lt;</span><span class="n">rosbag2_cpp</span><span class="o">::</span><span class="n">writers</span><span class="o">::</span><span class="n">SequentialWriter</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="k">class</span> <span class="nc">SimpleBagRecorder</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">Node</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">  </span><span class="n">SimpleBagRecorder</span><span class="p">()</span><span class="w"></span>
+<span class="w">  </span><span class="o">:</span><span class="w"> </span><span class="n">Node</span><span class="p">(</span><span class="s">&quot;simple_bag_recorder&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">rosbag2_cpp</span><span class="o">::</span><span class="n">StorageOptions</span><span class="w"> </span><span class="nf">storage_options</span><span class="p">({</span><span class="s">&quot;my_bag&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;sqlite3&quot;</span><span class="p">});</span><span class="w"></span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">rosbag2_cpp</span><span class="o">::</span><span class="n">ConverterOptions</span><span class="w"> </span><span class="nf">converter_options</span><span class="p">(</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="n">rmw_get_serialization_format</span><span class="p">(),</span><span class="w"></span>
+<span class="w">       </span><span class="n">rmw_get_serialization_format</span><span class="p">()});</span><span class="w"></span>
+<span class="w">    </span><span class="n">writer_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_unique</span><span class="o">&lt;</span><span class="n">rosbag2_cpp</span><span class="o">::</span><span class="n">writers</span><span class="o">::</span><span class="n">SequentialWriter</span><span class="o">&gt;</span><span class="p">();</span><span class="w"></span>
 
-    <span class="n">writer_</span><span class="o">-&gt;</span><span class="n">open</span><span class="p">(</span><span class="n">storage_options</span><span class="p">,</span> <span class="n">converter_options</span><span class="p">);</span>
+<span class="w">    </span><span class="n">writer_</span><span class="o">-&gt;</span><span class="n">open</span><span class="p">(</span><span class="n">storage_options</span><span class="p">,</span><span class="w"> </span><span class="n">converter_options</span><span class="p">);</span><span class="w"></span>
 
-    <span class="n">writer_</span><span class="o">-&gt;</span><span class="n">create_topic</span><span class="p">(</span>
-      <span class="p">{</span><span class="s">&quot;chatter&quot;</span><span class="p">,</span>
-       <span class="s">&quot;std_msgs/msg/String&quot;</span><span class="p">,</span>
-       <span class="n">rmw_get_serialization_format</span><span class="p">(),</span>
-       <span class="s">&quot;&quot;</span><span class="p">});</span>
+<span class="w">    </span><span class="n">writer_</span><span class="o">-&gt;</span><span class="n">create_topic</span><span class="p">(</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="s">&quot;chatter&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">       </span><span class="s">&quot;std_msgs/msg/String&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">       </span><span class="n">rmw_get_serialization_format</span><span class="p">(),</span><span class="w"></span>
+<span class="w">       </span><span class="s">&quot;&quot;</span><span class="p">});</span><span class="w"></span>
 
-    <span class="n">subscription_</span> <span class="o">=</span> <span class="n">create_subscription</span><span class="o">&lt;</span><span class="n">std_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">String</span><span class="o">&gt;</span><span class="p">(</span>
-      <span class="s">&quot;chatter&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">bind</span><span class="p">(</span><span class="o">&amp;</span><span class="n">SimpleBagRecorder</span><span class="o">::</span><span class="n">topic_callback</span><span class="p">,</span> <span class="k">this</span><span class="p">,</span> <span class="n">_1</span><span class="p">));</span>
-  <span class="p">}</span>
+<span class="w">    </span><span class="n">subscription_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">create_subscription</span><span class="o">&lt;</span><span class="n">std_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">String</span><span class="o">&gt;</span><span class="p">(</span><span class="w"></span>
+<span class="w">      </span><span class="s">&quot;chatter&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">bind</span><span class="p">(</span><span class="o">&amp;</span><span class="n">SimpleBagRecorder</span><span class="o">::</span><span class="n">topic_callback</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">_1</span><span class="p">));</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
 
-<span class="k">private</span><span class="o">:</span>
-  <span class="kt">void</span> <span class="n">topic_callback</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">rclcpp</span><span class="o">::</span><span class="n">SerializedMessage</span><span class="o">&gt;</span> <span class="n">msg</span><span class="p">)</span> <span class="k">const</span>
-  <span class="p">{</span>
-    <span class="k">auto</span> <span class="n">bag_message</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">rosbag2_storage</span><span class="o">::</span><span class="n">SerializedBagMessage</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="k">private</span><span class="o">:</span><span class="w"></span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="n">topic_callback</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">rclcpp</span><span class="o">::</span><span class="n">SerializedMessage</span><span class="o">&gt;</span><span class="w"> </span><span class="n">msg</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">bag_message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">rosbag2_storage</span><span class="o">::</span><span class="n">SerializedBagMessage</span><span class="o">&gt;</span><span class="p">();</span><span class="w"></span>
 
-    <span class="n">bag_message</span><span class="o">-&gt;</span><span class="n">serialized_data</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">rcutils_uint8_array_t</span><span class="o">&gt;</span><span class="p">(</span>
-      <span class="k">new</span> <span class="n">rcutils_uint8_array_t</span><span class="p">,</span>
-      <span class="p">[</span><span class="k">this</span><span class="p">](</span><span class="n">rcutils_uint8_array_t</span> <span class="o">*</span><span class="n">msg</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">auto</span> <span class="n">fini_return</span> <span class="o">=</span> <span class="n">rcutils_uint8_array_fini</span><span class="p">(</span><span class="n">msg</span><span class="p">);</span>
-        <span class="k">delete</span> <span class="n">msg</span><span class="p">;</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">fini_return</span> <span class="o">!=</span> <span class="n">RCUTILS_RET_OK</span><span class="p">)</span> <span class="p">{</span>
-          <span class="n">RCLCPP_ERROR</span><span class="p">(</span><span class="n">get_logger</span><span class="p">(),</span>
-            <span class="s">&quot;Failed to destroy serialized message %s&quot;</span><span class="p">,</span> <span class="n">rcutils_get_error_string</span><span class="p">().</span><span class="n">str</span><span class="p">);</span>
-        <span class="p">}</span>
-      <span class="p">});</span>
-    <span class="o">*</span><span class="n">bag_message</span><span class="o">-&gt;</span><span class="n">serialized_data</span> <span class="o">=</span> <span class="n">msg</span><span class="o">-&gt;</span><span class="n">release_rcl_serialized_message</span><span class="p">();</span>
+<span class="w">    </span><span class="n">bag_message</span><span class="o">-&gt;</span><span class="n">serialized_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">rcutils_uint8_array_t</span><span class="o">&gt;</span><span class="p">(</span><span class="w"></span>
+<span class="w">      </span><span class="k">new</span><span class="w"> </span><span class="n">rcutils_uint8_array_t</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="p">[</span><span class="k">this</span><span class="p">](</span><span class="n">rcutils_uint8_array_t</span><span class="w"> </span><span class="o">*</span><span class="n">msg</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">auto</span><span class="w"> </span><span class="n">fini_return</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rcutils_uint8_array_fini</span><span class="p">(</span><span class="n">msg</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="k">delete</span><span class="w"> </span><span class="n">msg</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">fini_return</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">RCUTILS_RET_OK</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="n">RCLCPP_ERROR</span><span class="p">(</span><span class="n">get_logger</span><span class="p">(),</span><span class="w"></span>
+<span class="w">            </span><span class="s">&quot;Failed to destroy serialized message %s&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">rcutils_get_error_string</span><span class="p">().</span><span class="n">str</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="p">});</span><span class="w"></span>
+<span class="w">    </span><span class="o">*</span><span class="n">bag_message</span><span class="o">-&gt;</span><span class="n">serialized_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">msg</span><span class="o">-&gt;</span><span class="n">release_rcl_serialized_message</span><span class="p">();</span><span class="w"></span>
 
-    <span class="n">bag_message</span><span class="o">-&gt;</span><span class="n">topic_name</span> <span class="o">=</span> <span class="s">&quot;chatter&quot;</span><span class="p">;</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">rcutils_system_time_now</span><span class="p">(</span><span class="o">&amp;</span><span class="n">bag_message</span><span class="o">-&gt;</span><span class="n">time_stamp</span><span class="p">)</span> <span class="o">!=</span> <span class="n">RCUTILS_RET_OK</span><span class="p">)</span> <span class="p">{</span>
-      <span class="n">RCLCPP_ERROR</span><span class="p">(</span><span class="n">get_logger</span><span class="p">(),</span> <span class="s">&quot;Error getting current time: %s&quot;</span><span class="p">,</span>
-        <span class="n">rcutils_get_error_string</span><span class="p">().</span><span class="n">str</span><span class="p">);</span>
-    <span class="p">}</span>
+<span class="w">    </span><span class="n">bag_message</span><span class="o">-&gt;</span><span class="n">topic_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;chatter&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">rcutils_system_time_now</span><span class="p">(</span><span class="o">&amp;</span><span class="n">bag_message</span><span class="o">-&gt;</span><span class="n">time_stamp</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">RCUTILS_RET_OK</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">RCLCPP_ERROR</span><span class="p">(</span><span class="n">get_logger</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;Error getting current time: %s&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="n">rcutils_get_error_string</span><span class="p">().</span><span class="n">str</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-    <span class="n">writer_</span><span class="o">-&gt;</span><span class="n">write</span><span class="p">(</span><span class="n">bag_message</span><span class="p">);</span>
-  <span class="p">}</span>
+<span class="w">    </span><span class="n">writer_</span><span class="o">-&gt;</span><span class="n">write</span><span class="p">(</span><span class="n">bag_message</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
 
-  <span class="n">rclcpp</span><span class="o">::</span><span class="n">Subscription</span><span class="o">&lt;</span><span class="n">rclcpp</span><span class="o">::</span><span class="n">SerializedMessage</span><span class="o">&gt;::</span><span class="n">SharedPtr</span> <span class="n">subscription_</span><span class="p">;</span>
-  <span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">rosbag2_cpp</span><span class="o">::</span><span class="n">writers</span><span class="o">::</span><span class="n">SequentialWriter</span><span class="o">&gt;</span> <span class="n">writer_</span><span class="p">;</span>
-<span class="p">};</span>
+<span class="w">  </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">Subscription</span><span class="o">&lt;</span><span class="n">rclcpp</span><span class="o">::</span><span class="n">SerializedMessage</span><span class="o">&gt;::</span><span class="n">SharedPtr</span><span class="w"> </span><span class="n">subscription_</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">rosbag2_cpp</span><span class="o">::</span><span class="n">writers</span><span class="o">::</span><span class="n">SequentialWriter</span><span class="o">&gt;</span><span class="w"> </span><span class="n">writer_</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
 
-<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span> <span class="n">argv</span><span class="p">[])</span>
-<span class="p">{</span>
-  <span class="n">rclcpp</span><span class="o">::</span><span class="n">init</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span> <span class="n">argv</span><span class="p">);</span>
-  <span class="n">rclcpp</span><span class="o">::</span><span class="n">spin</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">SimpleBagRecorder</span><span class="o">&gt;</span><span class="p">());</span>
-  <span class="n">rclcpp</span><span class="o">::</span><span class="n">shutdown</span><span class="p">();</span>
-  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">argv</span><span class="p">[])</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">init</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="n">argv</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">spin</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">SimpleBagRecorder</span><span class="o">&gt;</span><span class="p">());</span><span class="w"></span>
+<span class="w">  </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">shutdown</span><span class="p">();</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <div class="section" id="examine-the-code">
@@ -415,13 +415,13 @@
 <p>顶部的 “# include” 语句是包依赖项。注意包含来自 <code class="docutils literal notranslate"><span class="pre">rosbag2_cpp</span></code> 包的标题的功能和必要的结构来处理包文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8008">[待校准&#64;8008]</a></p>
 <p>在类构造函数中，我们首先创建将用于写入包的writer对象。我们必须为袋子提供存储选项。这些指定了袋子的名称 ( <code class="docutils literal notranslate"><span class="pre">my_bag</span></code> ) 和格式 ( <code class="docutils literal notranslate"><span class="pre">sqlite3</span></code> )。我们还必须提供转换选项，这些选项指定输入到编写器中的数据将如何序列化，以及在写入包时如何序列化相同的数据。在大多数情况下，您可以将它们指定为相同的值，因为不需要转换序列化格式。我们使用 <code class="docutils literal notranslate"><span class="pre">rmw_get_serialization_format()</span></code> 函数来检索底层中间件使用的序列化格式。这是将接收数据的序列化格式，我们将其存储在包中的格式也是如此。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8009">[待校准&#64;8009]</a></p>
 <p>最后，第三行创建writer对象。我们创建了一个 <code class="docutils literal notranslate"><span class="pre">SequentialWriter</span></code> ，这是最简单的作家对象。它不会执行高级操作，例如在将数据写入包时压缩数据。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8010">[待校准&#64;8010]</a></p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">rosbag2_cpp</span><span class="o">::</span><span class="n">StorageOptions</span> <span class="n">storage_options</span><span class="p">({</span><span class="s">&quot;my_bag&quot;</span><span class="p">,</span> <span class="s">&quot;sqlite3&quot;</span><span class="p">});</span>
-<span class="n">rosbag2_cpp</span><span class="o">::</span><span class="n">ConverterOptions</span> <span class="n">converter_options</span><span class="p">({</span><span class="n">rmw_get_serialization_format</span><span class="p">(),</span> <span class="n">rmw_get_serialization_format</span><span class="p">()});</span>
-<span class="n">writer_</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">make_unique</span><span class="o">&lt;</span><span class="n">rosbag2_cpp</span><span class="o">::</span><span class="n">writers</span><span class="o">::</span><span class="n">SequentialWriter</span><span class="o">&gt;</span><span class="p">();</span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">rosbag2_cpp</span><span class="o">::</span><span class="n">StorageOptions</span><span class="w"> </span><span class="nf">storage_options</span><span class="p">({</span><span class="s">&quot;my_bag&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;sqlite3&quot;</span><span class="p">});</span><span class="w"></span>
+<span class="n">rosbag2_cpp</span><span class="o">::</span><span class="n">ConverterOptions</span><span class="w"> </span><span class="nf">converter_options</span><span class="p">({</span><span class="n">rmw_get_serialization_format</span><span class="p">(),</span><span class="w"> </span><span class="n">rmw_get_serialization_format</span><span class="p">()});</span><span class="w"></span>
+<span class="n">writer_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_unique</span><span class="o">&lt;</span><span class="n">rosbag2_cpp</span><span class="o">::</span><span class="n">writers</span><span class="o">::</span><span class="n">SequentialWriter</span><span class="o">&gt;</span><span class="p">();</span><span class="w"></span>
 </pre></div>
 </div>
 <p>现在我们有了一个作家对象，我们可以用它打开袋子。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8011">[待校准&#64;8011]</a></p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">writer_</span><span class="o">-&gt;</span><span class="n">open</span><span class="p">(</span><span class="n">storage_options</span><span class="p">,</span> <span class="n">converter_options</span><span class="p">);</span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">writer_</span><span class="o">-&gt;</span><span class="n">open</span><span class="p">(</span><span class="n">storage_options</span><span class="p">,</span><span class="w"> </span><span class="n">converter_options</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 <p>下一步是通知作者我们将写给书包的每个话题。这是通过调用 <code class="docutils literal notranslate"><span class="pre">create_topic</span></code> 并传递 “rosbag2_storage::话题metadata” 结构的实例来完成的。在这里，我们使用现代的csyntax语法在适当的位置构造此结构的实例，而不是单独创建它并将其传递。存储在 “rosbag2_storage::话题metadata” 结构中的参数为: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8012">[待校准&#64;8012]</a></p>
@@ -431,12 +431,12 @@
 <li><p>数据的序列化格式。如前所述，我们仅使用与底层中间件相同的序列化格式。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8015">[待校准&#64;8015]</a></p></li>
 <li><p>为话题指定的任何QoS设置。这些必须以YAML格式指定。将其保留为空string将使用系统默认值。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8016">[待校准&#64;8016]</a></p></li>
 </ul>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">writer_</span><span class="o">-&gt;</span><span class="n">create_topic</span><span class="p">({</span><span class="s">&quot;chatter&quot;</span><span class="p">,</span> <span class="s">&quot;std_msgs/msg/String&quot;</span><span class="p">,</span> <span class="n">rmw_get_serialization_format</span><span class="p">(),</span> <span class="s">&quot;&quot;</span><span class="p">});</span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">writer_</span><span class="o">-&gt;</span><span class="n">create_topic</span><span class="p">({</span><span class="s">&quot;chatter&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;std_msgs/msg/String&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">rmw_get_serialization_format</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">});</span><span class="w"></span>
 </pre></div>
 </div>
 <p>现在，通过设置编写器来记录我们传递给它的数据，我们创建一个订阅并为它指定一个调用。我们将在调用中将数据写入包中。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8017">[待校准&#64;8017]</a></p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">subscription_</span> <span class="o">=</span> <span class="n">create_subscription</span><span class="o">&lt;</span><span class="n">std_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">String</span><span class="o">&gt;</span><span class="p">(</span>
-  <span class="s">&quot;chatter&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">bind</span><span class="p">(</span><span class="o">&amp;</span><span class="n">SimpleBagRecorder</span><span class="o">::</span><span class="n">topic_callback</span><span class="p">,</span> <span class="k">this</span><span class="p">,</span> <span class="n">_1</span><span class="p">));</span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">subscription_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">create_subscription</span><span class="o">&lt;</span><span class="n">std_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">String</span><span class="o">&gt;</span><span class="p">(</span><span class="w"></span>
+<span class="w">  </span><span class="s">&quot;chatter&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">bind</span><span class="p">(</span><span class="o">&amp;</span><span class="n">SimpleBagRecorder</span><span class="o">::</span><span class="n">topic_callback</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">_1</span><span class="p">));</span><span class="w"></span>
 </pre></div>
 </div>
 <p>调用back本身不同于典型的调用back。而不是接收话题的数据类型的实例，而是接收 “rclcpp:: serializedmessage”。我们这样做有两个原因。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8018">[待校准&#64;8018]</a></p>
@@ -444,42 +444,42 @@
 <li><p>在写入包之前，需要对消息数据进行序列化，因此，与其在接收数据时取消序列化，然后重新序列化，我们要求ROS按原样给我们序列化的消息。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8019">[待校准&#64;8019]</a></p></li>
 <li><p>writer API需要一个序列化消息，因此通过向ROS请求序列化消息，我们节省了自己对数据进行序列化的工作。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8020">[待校准&#64;8020]</a></p></li>
 </ol>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">topic_callback</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">rclcpp</span><span class="o">::</span><span class="n">SerializedMessage</span><span class="o">&gt;</span> <span class="n">msg</span><span class="p">)</span> <span class="k">const</span>
-<span class="p">{</span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">topic_callback</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">rclcpp</span><span class="o">::</span><span class="n">SerializedMessage</span><span class="o">&gt;</span><span class="w"> </span><span class="n">msg</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
 </pre></div>
 </div>
 <p>在订阅调用中，首先要做的是创建 “rosbag2_storage:: serializedbagmessage” 的实例。这是表示包中的单个数据样本的数据类型。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8021">[待校准&#64;8021]</a></p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span> <span class="n">bag_message</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">rosbag2_storage</span><span class="o">::</span><span class="n">SerializedBagMessage</span><span class="o">&gt;</span><span class="p">();</span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">bag_message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">rosbag2_storage</span><span class="o">::</span><span class="n">SerializedBagMessage</span><span class="o">&gt;</span><span class="p">();</span><span class="w"></span>
 </pre></div>
 </div>
 <p>由于直接处理来自中间件的序列化数据的内存管理要求，下一个代码块有些复杂。序列化数据的内存归 <code class="docutils literal notranslate"><span class="pre">SerializedMessage</span></code> 对象所有，但我们将传递给包的 <code class="docutils literal notranslate"><span class="pre">SerializedBagMessage</span></code> 对象必须拥有内存。否则，内存可能会超出范围，并在写入包之前被删除，从而导致内存访问错误。为了防止这种情况，我们在 <code class="docutils literal notranslate"><span class="pre">SerializedMessage</span></code> 物体上调用 <code class="docutils literal notranslate"><span class="pre">release_rcl_serialized_message()</span></code> 。这使得它释放对记忆的所有权，允许 <code class="docutils literal notranslate"><span class="pre">SerializedBagMessage</span></code> 获得所有权。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8022">[待校准&#64;8022]</a></p>
 <p>然而，我们也需要确保 <code class="docutils literal notranslate"><span class="pre">SerializedBagMessage</span></code> 物体在被清理时会正确地删除内存。这是通过在创建 <code class="docutils literal notranslate"><span class="pre">bag_message</span></code> 实例的 <code class="docutils literal notranslate"><span class="pre">serialized_data</span></code> 成员时提供自定义删除器函数来实现的。这是将lambda函数传递到 <code class="docutils literal notranslate"><span class="pre">std::shared_ptr&lt;rcutils_uint8_array_t&gt;</span></code> 对象的构造函数中的目的 (即 <code class="docutils literal notranslate"><span class="pre">bag_message</span></code> 物体的 <code class="docutils literal notranslate"><span class="pre">serialized_data</span></code> 成员)。当 <code class="docutils literal notranslate"><span class="pre">shared_ptr</span></code> 超出范围时，将调用lambda函数并清理内存。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8023">[待校准&#64;8023]</a></p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">bag_message</span><span class="o">-&gt;</span><span class="n">serialized_data</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">rcutils_uint8_array_t</span><span class="o">&gt;</span><span class="p">(</span>
-  <span class="k">new</span> <span class="n">rcutils_uint8_array_t</span><span class="p">,</span>
-  <span class="p">[</span><span class="k">this</span><span class="p">](</span><span class="n">rcutils_uint8_array_t</span> <span class="o">*</span><span class="n">msg</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">auto</span> <span class="n">fini_return</span> <span class="o">=</span> <span class="n">rcutils_uint8_array_fini</span><span class="p">(</span><span class="n">msg</span><span class="p">);</span>
-    <span class="k">delete</span> <span class="n">msg</span><span class="p">;</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">fini_return</span> <span class="o">!=</span> <span class="n">RCUTILS_RET_OK</span><span class="p">)</span> <span class="p">{</span>
-      <span class="n">RCLCPP_ERROR</span><span class="p">(</span><span class="n">get_logger</span><span class="p">(),</span>
-        <span class="s">&quot;Failed to destroy serialized message %s&quot;</span><span class="p">,</span> <span class="n">rcutils_get_error_string</span><span class="p">().</span><span class="n">str</span><span class="p">);</span>
-    <span class="p">}</span>
-  <span class="p">});</span>
-<span class="o">*</span><span class="n">bag_message</span><span class="o">-&gt;</span><span class="n">serialized_data</span> <span class="o">=</span> <span class="n">msg</span><span class="o">-&gt;</span><span class="n">release_rcl_serialized_message</span><span class="p">();</span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">bag_message</span><span class="o">-&gt;</span><span class="n">serialized_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">rcutils_uint8_array_t</span><span class="o">&gt;</span><span class="p">(</span><span class="w"></span>
+<span class="w">  </span><span class="k">new</span><span class="w"> </span><span class="n">rcutils_uint8_array_t</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="p">[</span><span class="k">this</span><span class="p">](</span><span class="n">rcutils_uint8_array_t</span><span class="w"> </span><span class="o">*</span><span class="n">msg</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">fini_return</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rcutils_uint8_array_fini</span><span class="p">(</span><span class="n">msg</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">delete</span><span class="w"> </span><span class="n">msg</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">fini_return</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">RCUTILS_RET_OK</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">RCLCPP_ERROR</span><span class="p">(</span><span class="n">get_logger</span><span class="p">(),</span><span class="w"></span>
+<span class="w">        </span><span class="s">&quot;Failed to destroy serialized message %s&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">rcutils_get_error_string</span><span class="p">().</span><span class="n">str</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">});</span><span class="w"></span>
+<span class="o">*</span><span class="n">bag_message</span><span class="o">-&gt;</span><span class="n">serialized_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">msg</span><span class="o">-&gt;</span><span class="n">release_rcl_serialized_message</span><span class="p">();</span><span class="w"></span>
 </pre></div>
 </div>
 <p>下一行用来告诉作者这个样本是为了什么话题。这是必要的，因为序列化消息不包含任何类型信息，并且可能会错误地写入包中的任何话题。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8024">[待校准&#64;8024]</a></p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">bag_message</span><span class="o">-&gt;</span><span class="n">topic_name</span> <span class="o">=</span> <span class="s">&quot;chatter&quot;</span><span class="p">;</span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">bag_message</span><span class="o">-&gt;</span><span class="n">topic_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;chatter&quot;</span><span class="p">;</span><span class="w"></span>
 </pre></div>
 </div>
 <p>时间戳的消息必须设置在 <code class="docutils literal notranslate"><span class="pre">time_stamp</span></code> 成员 <code class="docutils literal notranslate"><span class="pre">bag_message</span></code> 对象。这可以是任何适合您的数据的值，但是两个共同的值是数据生成的时间 (如果知道) 和接收时间。第二种选择，即接收时间，在此使用。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8025">[待校准&#64;8025]</a></p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">rcutils_system_time_now</span><span class="p">(</span><span class="o">&amp;</span><span class="n">bag_message</span><span class="o">-&gt;</span><span class="n">time_stamp</span><span class="p">)</span> <span class="o">!=</span> <span class="n">RCUTILS_RET_OK</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">RCLCPP_ERROR</span><span class="p">(</span><span class="n">get_logger</span><span class="p">(),</span> <span class="s">&quot;Error getting current time: %s&quot;</span><span class="p">,</span>
-    <span class="n">rcutils_get_error_string</span><span class="p">().</span><span class="n">str</span><span class="p">);</span>
-<span class="p">}</span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">rcutils_system_time_now</span><span class="p">(</span><span class="o">&amp;</span><span class="n">bag_message</span><span class="o">-&gt;</span><span class="n">time_stamp</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">RCUTILS_RET_OK</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">RCLCPP_ERROR</span><span class="p">(</span><span class="n">get_logger</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;Error getting current time: %s&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">rcutils_get_error_string</span><span class="p">().</span><span class="n">str</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <p>调用back的最后一步是将数据传递给writer对象，以便将其写入bag。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8026">[待校准&#64;8026]</a></p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">writer_</span><span class="o">-&gt;</span><span class="n">write</span><span class="p">(</span><span class="n">bag_message</span><span class="p">);</span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">writer_</span><span class="o">-&gt;</span><span class="n">write</span><span class="p">(</span><span class="n">bag_message</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 <p>该类包含两个成员变量。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8027">[待校准&#64;8027]</a></p>
@@ -487,18 +487,18 @@
 <li><p>订阅对象。请注意，模板参数是调用back的类型，而不是话题的类型。在这种情况下，调用back会收到一个 “rclcpp:: serializedmessage” 共享指针，因此这是模板参数必须的。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8028">[待校准&#64;8028]</a></p></li>
 <li><p>指向用于写入包的writer对象的托管指针。请注意，此处使用的编写器类型为 “rosbag2_cpp:: 编写器:: sequentialwriter”。其他作家可能有不同的行为。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8029">[待校准&#64;8029]</a></p></li>
 </ol>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">rclcpp</span><span class="o">::</span><span class="n">Subscription</span><span class="o">&lt;</span><span class="n">rclcpp</span><span class="o">::</span><span class="n">SerializedMessage</span><span class="o">&gt;::</span><span class="n">SharedPtr</span> <span class="n">subscription_</span><span class="p">;</span>
-<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">rosbag2_cpp</span><span class="o">::</span><span class="n">writers</span><span class="o">::</span><span class="n">SequentialWriter</span><span class="o">&gt;</span> <span class="n">writer_</span><span class="p">;</span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">rclcpp</span><span class="o">::</span><span class="n">Subscription</span><span class="o">&lt;</span><span class="n">rclcpp</span><span class="o">::</span><span class="n">SerializedMessage</span><span class="o">&gt;::</span><span class="n">SharedPtr</span><span class="w"> </span><span class="n">subscription_</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">rosbag2_cpp</span><span class="o">::</span><span class="n">writers</span><span class="o">::</span><span class="n">SequentialWriter</span><span class="o">&gt;</span><span class="w"> </span><span class="n">writer_</span><span class="p">;</span><span class="w"></span>
 </pre></div>
 </div>
 <p>该文件以用于创建节点实例并开始ROS处理的 <code class="docutils literal notranslate"><span class="pre">main</span></code> 函数结束。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8030">[待校准&#64;8030]</a></p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span> <span class="n">argv</span><span class="p">[])</span>
-<span class="p">{</span>
-  <span class="n">rclcpp</span><span class="o">::</span><span class="n">init</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span> <span class="n">argv</span><span class="p">);</span>
-  <span class="n">rclcpp</span><span class="o">::</span><span class="n">spin</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">SimpleBagRecorder</span><span class="o">&gt;</span><span class="p">());</span>
-  <span class="n">rclcpp</span><span class="o">::</span><span class="n">shutdown</span><span class="p">();</span>
-  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">argv</span><span class="p">[])</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">init</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="n">argv</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">spin</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">SimpleBagRecorder</span><span class="o">&gt;</span><span class="p">());</span><span class="w"></span>
+<span class="w">  </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">shutdown</span><span class="p">();</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
@@ -580,85 +580,85 @@
 <div class="section" id="write-a-c-node">
 <h4>4.1编写cnode节点 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8045">[待校准&#64;8045]</a><a class="headerlink" href="#write-a-c-node" title="永久链接至标题"></a></h4>
 <p>在 <code class="docutils literal notranslate"><span class="pre">dev_ws/src/bag_recorder_nodes/src</span></code> 目录内，创建一个调用 <code class="docutils literal notranslate"><span class="pre">data_generator_node.cpp</span></code> 的新文件，并将以下代码粘贴到其中。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8046">[待校准&#64;8046]</a></p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;chrono&gt;</span><span class="cp"></span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;chrono&gt;</span><span class="cp"></span>
 
-<span class="cp">#include</span> <span class="cpf">&lt;example_interfaces/msg/int32.hpp&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;rclcpp/rclcpp.hpp&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;rclcpp/serialization.hpp&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;example_interfaces/msg/int32.hpp&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;rclcpp/rclcpp.hpp&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;rclcpp/serialization.hpp&gt;</span><span class="cp"></span>
 
-<span class="cp">#include</span> <span class="cpf">&lt;rosbag2_cpp/writer.hpp&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;rosbag2_cpp/writers/sequential_writer.hpp&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;rosbag2_storage/serialized_bag_message.hpp&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;rosbag2_cpp/writer.hpp&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;rosbag2_cpp/writers/sequential_writer.hpp&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;rosbag2_storage/serialized_bag_message.hpp&gt;</span><span class="cp"></span>
 
-<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="o">::</span><span class="n">chrono_literals</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="o">::</span><span class="nn">chrono_literals</span><span class="p">;</span><span class="w"></span>
 
-<span class="k">class</span> <span class="nc">DataGenerator</span> <span class="o">:</span> <span class="k">public</span> <span class="n">rclcpp</span><span class="o">::</span><span class="n">Node</span>
-<span class="p">{</span>
-<span class="k">public</span><span class="o">:</span>
-  <span class="n">DataGenerator</span><span class="p">()</span>
-  <span class="o">:</span> <span class="n">Node</span><span class="p">(</span><span class="s">&quot;data_generator&quot;</span><span class="p">)</span>
-  <span class="p">{</span>
-    <span class="n">data</span><span class="p">.</span><span class="n">data</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="k">const</span> <span class="n">rosbag2_cpp</span><span class="o">::</span><span class="n">StorageOptions</span> <span class="n">storage_options</span><span class="p">({</span><span class="s">&quot;timed_synthetic_bag&quot;</span><span class="p">,</span> <span class="s">&quot;sqlite3&quot;</span><span class="p">});</span>
-    <span class="k">const</span> <span class="n">rosbag2_cpp</span><span class="o">::</span><span class="n">ConverterOptions</span> <span class="n">converter_options</span><span class="p">(</span>
-      <span class="p">{</span><span class="n">rmw_get_serialization_format</span><span class="p">(),</span>
-       <span class="n">rmw_get_serialization_format</span><span class="p">()});</span>
-    <span class="n">writer_</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">make_unique</span><span class="o">&lt;</span><span class="n">rosbag2_cpp</span><span class="o">::</span><span class="n">writers</span><span class="o">::</span><span class="n">SequentialWriter</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="k">class</span> <span class="nc">DataGenerator</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">Node</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">  </span><span class="n">DataGenerator</span><span class="p">()</span><span class="w"></span>
+<span class="w">  </span><span class="o">:</span><span class="w"> </span><span class="n">Node</span><span class="p">(</span><span class="s">&quot;data_generator&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">data</span><span class="p">.</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">rosbag2_cpp</span><span class="o">::</span><span class="n">StorageOptions</span><span class="w"> </span><span class="nf">storage_options</span><span class="p">({</span><span class="s">&quot;timed_synthetic_bag&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;sqlite3&quot;</span><span class="p">});</span><span class="w"></span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">rosbag2_cpp</span><span class="o">::</span><span class="n">ConverterOptions</span><span class="w"> </span><span class="nf">converter_options</span><span class="p">(</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="n">rmw_get_serialization_format</span><span class="p">(),</span><span class="w"></span>
+<span class="w">       </span><span class="n">rmw_get_serialization_format</span><span class="p">()});</span><span class="w"></span>
+<span class="w">    </span><span class="n">writer_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_unique</span><span class="o">&lt;</span><span class="n">rosbag2_cpp</span><span class="o">::</span><span class="n">writers</span><span class="o">::</span><span class="n">SequentialWriter</span><span class="o">&gt;</span><span class="p">();</span><span class="w"></span>
 
-    <span class="n">writer_</span><span class="o">-&gt;</span><span class="n">open</span><span class="p">(</span><span class="n">storage_options</span><span class="p">,</span> <span class="n">converter_options</span><span class="p">);</span>
+<span class="w">    </span><span class="n">writer_</span><span class="o">-&gt;</span><span class="n">open</span><span class="p">(</span><span class="n">storage_options</span><span class="p">,</span><span class="w"> </span><span class="n">converter_options</span><span class="p">);</span><span class="w"></span>
 
-    <span class="n">writer_</span><span class="o">-&gt;</span><span class="n">create_topic</span><span class="p">(</span>
-      <span class="p">{</span><span class="s">&quot;synthetic&quot;</span><span class="p">,</span>
-       <span class="s">&quot;example_interfaces/msg/Int32&quot;</span><span class="p">,</span>
-       <span class="n">rmw_get_serialization_format</span><span class="p">(),</span>
-       <span class="s">&quot;&quot;</span><span class="p">});</span>
+<span class="w">    </span><span class="n">writer_</span><span class="o">-&gt;</span><span class="n">create_topic</span><span class="p">(</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="s">&quot;synthetic&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">       </span><span class="s">&quot;example_interfaces/msg/Int32&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">       </span><span class="n">rmw_get_serialization_format</span><span class="p">(),</span><span class="w"></span>
+<span class="w">       </span><span class="s">&quot;&quot;</span><span class="p">});</span><span class="w"></span>
 
-    <span class="n">timer_</span> <span class="o">=</span> <span class="n">create_wall_timer</span><span class="p">(</span><span class="mi">1</span><span class="n">s</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">bind</span><span class="p">(</span><span class="o">&amp;</span><span class="n">DataGenerator</span><span class="o">::</span><span class="n">timer_callback</span><span class="p">,</span> <span class="k">this</span><span class="p">));</span>
-  <span class="p">}</span>
+<span class="w">    </span><span class="n">timer_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">create_wall_timer</span><span class="p">(</span><span class="mi">1</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">bind</span><span class="p">(</span><span class="o">&amp;</span><span class="n">DataGenerator</span><span class="o">::</span><span class="n">timer_callback</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">));</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
 
-<span class="k">private</span><span class="o">:</span>
-  <span class="kt">void</span> <span class="n">timer_callback</span><span class="p">()</span>
-  <span class="p">{</span>
-    <span class="k">auto</span> <span class="n">serializer</span> <span class="o">=</span> <span class="n">rclcpp</span><span class="o">::</span><span class="n">Serialization</span><span class="o">&lt;</span><span class="n">example_interfaces</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">Int32</span><span class="o">&gt;</span><span class="p">();</span>
-    <span class="k">auto</span> <span class="n">serialized_message</span> <span class="o">=</span> <span class="n">rclcpp</span><span class="o">::</span><span class="n">SerializedMessage</span><span class="p">();</span>
-    <span class="n">serializer</span><span class="p">.</span><span class="n">serialize_message</span><span class="p">(</span><span class="o">&amp;</span><span class="n">data</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">serialized_message</span><span class="p">);</span>
+<span class="k">private</span><span class="o">:</span><span class="w"></span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="n">timer_callback</span><span class="p">()</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">serializer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">Serialization</span><span class="o">&lt;</span><span class="n">example_interfaces</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">Int32</span><span class="o">&gt;</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">serialized_message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">SerializedMessage</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">serializer</span><span class="p">.</span><span class="n">serialize_message</span><span class="p">(</span><span class="o">&amp;</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">serialized_message</span><span class="p">);</span><span class="w"></span>
 
-    <span class="k">auto</span> <span class="n">bag_message</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">rosbag2_storage</span><span class="o">::</span><span class="n">SerializedBagMessage</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">bag_message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">rosbag2_storage</span><span class="o">::</span><span class="n">SerializedBagMessage</span><span class="o">&gt;</span><span class="p">();</span><span class="w"></span>
 
-    <span class="n">bag_message</span><span class="o">-&gt;</span><span class="n">serialized_data</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">rcutils_uint8_array_t</span><span class="o">&gt;</span><span class="p">(</span>
-      <span class="k">new</span> <span class="n">rcutils_uint8_array_t</span><span class="p">,</span>
-      <span class="p">[</span><span class="k">this</span><span class="p">](</span><span class="n">rcutils_uint8_array_t</span> <span class="o">*</span><span class="n">msg</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">auto</span> <span class="n">fini_return</span> <span class="o">=</span> <span class="n">rcutils_uint8_array_fini</span><span class="p">(</span><span class="n">msg</span><span class="p">);</span>
-        <span class="k">delete</span> <span class="n">msg</span><span class="p">;</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">fini_return</span> <span class="o">!=</span> <span class="n">RCUTILS_RET_OK</span><span class="p">)</span> <span class="p">{</span>
-          <span class="n">RCLCPP_ERROR</span><span class="p">(</span><span class="n">get_logger</span><span class="p">(),</span>
-            <span class="s">&quot;Failed to destroy serialized message %s&quot;</span><span class="p">,</span> <span class="n">rcutils_get_error_string</span><span class="p">().</span><span class="n">str</span><span class="p">);</span>
-        <span class="p">}</span>
-      <span class="p">});</span>
-    <span class="o">*</span><span class="n">bag_message</span><span class="o">-&gt;</span><span class="n">serialized_data</span> <span class="o">=</span> <span class="n">serialized_message</span><span class="p">.</span><span class="n">release_rcl_serialized_message</span><span class="p">();</span>
+<span class="w">    </span><span class="n">bag_message</span><span class="o">-&gt;</span><span class="n">serialized_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">rcutils_uint8_array_t</span><span class="o">&gt;</span><span class="p">(</span><span class="w"></span>
+<span class="w">      </span><span class="k">new</span><span class="w"> </span><span class="n">rcutils_uint8_array_t</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="p">[</span><span class="k">this</span><span class="p">](</span><span class="n">rcutils_uint8_array_t</span><span class="w"> </span><span class="o">*</span><span class="n">msg</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">auto</span><span class="w"> </span><span class="n">fini_return</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rcutils_uint8_array_fini</span><span class="p">(</span><span class="n">msg</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="k">delete</span><span class="w"> </span><span class="n">msg</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">fini_return</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">RCUTILS_RET_OK</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="n">RCLCPP_ERROR</span><span class="p">(</span><span class="n">get_logger</span><span class="p">(),</span><span class="w"></span>
+<span class="w">            </span><span class="s">&quot;Failed to destroy serialized message %s&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">rcutils_get_error_string</span><span class="p">().</span><span class="n">str</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="p">});</span><span class="w"></span>
+<span class="w">    </span><span class="o">*</span><span class="n">bag_message</span><span class="o">-&gt;</span><span class="n">serialized_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">serialized_message</span><span class="p">.</span><span class="n">release_rcl_serialized_message</span><span class="p">();</span><span class="w"></span>
 
-    <span class="n">bag_message</span><span class="o">-&gt;</span><span class="n">topic_name</span> <span class="o">=</span> <span class="s">&quot;synthetic&quot;</span><span class="p">;</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">rcutils_system_time_now</span><span class="p">(</span><span class="o">&amp;</span><span class="n">bag_message</span><span class="o">-&gt;</span><span class="n">time_stamp</span><span class="p">)</span> <span class="o">!=</span> <span class="n">RCUTILS_RET_OK</span><span class="p">)</span> <span class="p">{</span>
-      <span class="n">RCLCPP_ERROR</span><span class="p">(</span><span class="n">get_logger</span><span class="p">(),</span> <span class="s">&quot;Error getting current time: %s&quot;</span><span class="p">,</span>
-        <span class="n">rcutils_get_error_string</span><span class="p">().</span><span class="n">str</span><span class="p">);</span>
-    <span class="p">}</span>
+<span class="w">    </span><span class="n">bag_message</span><span class="o">-&gt;</span><span class="n">topic_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;synthetic&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">rcutils_system_time_now</span><span class="p">(</span><span class="o">&amp;</span><span class="n">bag_message</span><span class="o">-&gt;</span><span class="n">time_stamp</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">RCUTILS_RET_OK</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">RCLCPP_ERROR</span><span class="p">(</span><span class="n">get_logger</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;Error getting current time: %s&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="n">rcutils_get_error_string</span><span class="p">().</span><span class="n">str</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-    <span class="n">writer_</span><span class="o">-&gt;</span><span class="n">write</span><span class="p">(</span><span class="n">bag_message</span><span class="p">);</span>
-    <span class="o">++</span><span class="n">data</span><span class="p">.</span><span class="n">data</span><span class="p">;</span>
-  <span class="p">}</span>
+<span class="w">    </span><span class="n">writer_</span><span class="o">-&gt;</span><span class="n">write</span><span class="p">(</span><span class="n">bag_message</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="o">++</span><span class="n">data</span><span class="p">.</span><span class="n">data</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
 
-  <span class="n">rclcpp</span><span class="o">::</span><span class="n">TimerBase</span><span class="o">::</span><span class="n">SharedPtr</span> <span class="n">timer_</span><span class="p">;</span>
-  <span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">rosbag2_cpp</span><span class="o">::</span><span class="n">writers</span><span class="o">::</span><span class="n">SequentialWriter</span><span class="o">&gt;</span> <span class="n">writer_</span><span class="p">;</span>
-  <span class="n">example_interfaces</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">Int32</span> <span class="n">data</span><span class="p">;</span>
-<span class="p">};</span>
+<span class="w">  </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">TimerBase</span><span class="o">::</span><span class="n">SharedPtr</span><span class="w"> </span><span class="n">timer_</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">rosbag2_cpp</span><span class="o">::</span><span class="n">writers</span><span class="o">::</span><span class="n">SequentialWriter</span><span class="o">&gt;</span><span class="w"> </span><span class="n">writer_</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">example_interfaces</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">Int32</span><span class="w"> </span><span class="n">data</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
 
-<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span> <span class="n">argv</span><span class="p">[])</span>
-<span class="p">{</span>
-  <span class="n">rclcpp</span><span class="o">::</span><span class="n">init</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span> <span class="n">argv</span><span class="p">);</span>
-  <span class="n">rclcpp</span><span class="o">::</span><span class="n">spin</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">DataGenerator</span><span class="o">&gt;</span><span class="p">());</span>
-  <span class="n">rclcpp</span><span class="o">::</span><span class="n">shutdown</span><span class="p">();</span>
-  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">argv</span><span class="p">[])</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">init</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="n">argv</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">spin</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">DataGenerator</span><span class="o">&gt;</span><span class="p">());</span><span class="w"></span>
+<span class="w">  </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">shutdown</span><span class="p">();</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
@@ -666,21 +666,21 @@
 <h4>4.2检查代码 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8047">[待校准&#64;8047]</a><a class="headerlink" href="#id1" title="永久链接至标题"></a></h4>
 <p>此代码的大部分与第一个示例相同。这里描述了重要的区别。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8048">[待校准&#64;8048]</a></p>
 <p>首先，更改包的名称。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8049">[待校准&#64;8049]</a></p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">rosbag2_cpp</span><span class="o">::</span><span class="n">StorageOptions</span> <span class="n">storage_options</span><span class="p">({</span><span class="s">&quot;timed_synthetic_bag&quot;</span><span class="p">,</span> <span class="s">&quot;sqlite3&quot;</span><span class="p">});</span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">rosbag2_cpp</span><span class="o">::</span><span class="n">StorageOptions</span><span class="w"> </span><span class="nf">storage_options</span><span class="p">({</span><span class="s">&quot;timed_synthetic_bag&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;sqlite3&quot;</span><span class="p">});</span><span class="w"></span>
 </pre></div>
 </div>
 <p>将存储的话题名称和数据类型也不同，因此需要告知作者这一点。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8050">[待校准&#64;8050]</a></p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">writer_</span><span class="o">-&gt;</span><span class="n">create_topic</span><span class="p">({</span><span class="s">&quot;synthetic&quot;</span><span class="p">,</span> <span class="s">&quot;example_interfaces/msg/Int32&quot;</span><span class="p">,</span> <span class="n">rmw_get_serialization_format</span><span class="p">(),</span> <span class="s">&quot;&quot;</span><span class="p">});</span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">writer_</span><span class="o">-&gt;</span><span class="n">create_topic</span><span class="p">({</span><span class="s">&quot;synthetic&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;example_interfaces/msg/Int32&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">rmw_get_serialization_format</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">});</span><span class="w"></span>
 </pre></div>
 </div>
 <p>这个节点有一个计时器，而不是订阅一个话题。计时器以一秒钟的周期触发，并在给定成员函数触发时调用s。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8051">[待校准&#64;8051]</a></p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">timer_</span> <span class="o">=</span> <span class="n">create_wall_timer</span><span class="p">(</span><span class="mi">1</span><span class="n">s</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">bind</span><span class="p">(</span><span class="o">&amp;</span><span class="n">DataGenerator</span><span class="o">::</span><span class="n">timer_callback</span><span class="p">,</span> <span class="k">this</span><span class="p">));</span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">timer_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">create_wall_timer</span><span class="p">(</span><span class="mi">1</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">bind</span><span class="p">(</span><span class="o">&amp;</span><span class="n">DataGenerator</span><span class="o">::</span><span class="n">timer_callback</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">));</span><span class="w"></span>
 </pre></div>
 </div>
 <p>在计时器调用中，我们生成 (或以其他方式获取，例如从连接到某些硬件的串行端口读取) 我们希望存储在包中的数据。此示例与先前示例之间的重要区别在于，数据尚未序列化。因为包编写器需要序列化数据，所以我们必须先序列化它。这可以使用 “rclcpp:: serialization” 类来完成。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8052">[待校准&#64;8052]</a></p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span> <span class="n">serializer</span> <span class="o">=</span> <span class="n">rclcpp</span><span class="o">::</span><span class="n">Serialization</span><span class="o">&lt;</span><span class="n">example_interfaces</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">Int32</span><span class="o">&gt;</span><span class="p">();</span>
-<span class="k">auto</span> <span class="n">serialized_message</span> <span class="o">=</span> <span class="n">rclcpp</span><span class="o">::</span><span class="n">SerializedMessage</span><span class="p">();</span>
-<span class="n">serializer</span><span class="p">.</span><span class="n">serialize_message</span><span class="p">(</span><span class="o">&amp;</span><span class="n">data</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">serialized_message</span><span class="p">);</span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">serializer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">Serialization</span><span class="o">&lt;</span><span class="n">example_interfaces</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">Int32</span><span class="o">&gt;</span><span class="p">();</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">serialized_message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">SerializedMessage</span><span class="p">();</span><span class="w"></span>
+<span class="n">serializer</span><span class="p">.</span><span class="n">serialize_message</span><span class="p">(</span><span class="o">&amp;</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">serialized_message</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 <p>调用back中的其余代码是相同的，稍作修改以考虑到话题名称和数据类型的差异，并在每次执行调用back时增加数据。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8053">[待校准&#64;8053]</a></p>
@@ -758,70 +758,70 @@
 <div class="section" id="write-a-c-executable">
 <h4>5.1编写cexecutable可执行文件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8064">[待校准&#64;8064]</a><a class="headerlink" href="#write-a-c-executable" title="永久链接至标题"></a></h4>
 <p>在 <code class="docutils literal notranslate"><span class="pre">dev_ws/src/bag_recorder_nodes/src</span></code> 目录内，创建一个调用 <code class="docutils literal notranslate"><span class="pre">data_generator_executable.cpp</span></code> 的新文件，并将以下代码粘贴到其中。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8065">[待校准&#64;8065]</a></p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
 
-<span class="cp">#include</span> <span class="cpf">&lt;rclcpp/rclcpp.hpp&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;rclcpp/serialization.hpp&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;example_interfaces/msg/int32.hpp&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;rclcpp/rclcpp.hpp&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;rclcpp/serialization.hpp&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;example_interfaces/msg/int32.hpp&gt;</span><span class="cp"></span>
 
-<span class="cp">#include</span> <span class="cpf">&lt;rosbag2_cpp/writer.hpp&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;rosbag2_cpp/writers/sequential_writer.hpp&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;rosbag2_storage/serialized_bag_message.hpp&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;rosbag2_cpp/writer.hpp&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;rosbag2_cpp/writers/sequential_writer.hpp&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;rosbag2_storage/serialized_bag_message.hpp&gt;</span><span class="cp"></span>
 
-<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span> <span class="kt">char</span><span class="o">**</span><span class="p">)</span>
-<span class="p">{</span>
-  <span class="n">example_interfaces</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">Int32</span> <span class="n">data</span><span class="p">;</span>
-  <span class="n">data</span><span class="p">.</span><span class="n">data</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-  <span class="k">const</span> <span class="n">rosbag2_cpp</span><span class="o">::</span><span class="n">StorageOptions</span> <span class="n">storage_options</span><span class="p">({</span><span class="s">&quot;big_synthetic_bag&quot;</span><span class="p">,</span> <span class="s">&quot;sqlite3&quot;</span><span class="p">});</span>
-  <span class="k">const</span> <span class="n">rosbag2_cpp</span><span class="o">::</span><span class="n">ConverterOptions</span> <span class="n">converter_options</span><span class="p">(</span>
-    <span class="p">{</span><span class="n">rmw_get_serialization_format</span><span class="p">(),</span>
-     <span class="n">rmw_get_serialization_format</span><span class="p">()});</span>
-  <span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">rosbag2_cpp</span><span class="o">::</span><span class="n">writers</span><span class="o">::</span><span class="n">SequentialWriter</span><span class="o">&gt;</span> <span class="n">writer_</span> <span class="o">=</span>
-    <span class="n">std</span><span class="o">::</span><span class="n">make_unique</span><span class="o">&lt;</span><span class="n">rosbag2_cpp</span><span class="o">::</span><span class="n">writers</span><span class="o">::</span><span class="n">SequentialWriter</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="o">**</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">example_interfaces</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">Int32</span><span class="w"> </span><span class="n">data</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">data</span><span class="p">.</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">rosbag2_cpp</span><span class="o">::</span><span class="n">StorageOptions</span><span class="w"> </span><span class="n">storage_options</span><span class="p">({</span><span class="s">&quot;big_synthetic_bag&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;sqlite3&quot;</span><span class="p">});</span><span class="w"></span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">rosbag2_cpp</span><span class="o">::</span><span class="n">ConverterOptions</span><span class="w"> </span><span class="n">converter_options</span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="n">rmw_get_serialization_format</span><span class="p">(),</span><span class="w"></span>
+<span class="w">     </span><span class="n">rmw_get_serialization_format</span><span class="p">()});</span><span class="w"></span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">rosbag2_cpp</span><span class="o">::</span><span class="n">writers</span><span class="o">::</span><span class="n">SequentialWriter</span><span class="o">&gt;</span><span class="w"> </span><span class="n">writer_</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">make_unique</span><span class="o">&lt;</span><span class="n">rosbag2_cpp</span><span class="o">::</span><span class="n">writers</span><span class="o">::</span><span class="n">SequentialWriter</span><span class="o">&gt;</span><span class="p">();</span><span class="w"></span>
 
-  <span class="n">writer_</span><span class="o">-&gt;</span><span class="n">open</span><span class="p">(</span><span class="n">storage_options</span><span class="p">,</span> <span class="n">converter_options</span><span class="p">);</span>
+<span class="w">  </span><span class="n">writer_</span><span class="o">-&gt;</span><span class="n">open</span><span class="p">(</span><span class="n">storage_options</span><span class="p">,</span><span class="w"> </span><span class="n">converter_options</span><span class="p">);</span><span class="w"></span>
 
-  <span class="n">writer_</span><span class="o">-&gt;</span><span class="n">create_topic</span><span class="p">(</span>
-    <span class="p">{</span><span class="s">&quot;synthetic&quot;</span><span class="p">,</span>
-     <span class="s">&quot;example_interfaces/msg/Int32&quot;</span><span class="p">,</span>
-     <span class="n">rmw_get_serialization_format</span><span class="p">(),</span>
-     <span class="s">&quot;&quot;</span><span class="p">});</span>
+<span class="w">  </span><span class="n">writer_</span><span class="o">-&gt;</span><span class="n">create_topic</span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="s">&quot;synthetic&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">     </span><span class="s">&quot;example_interfaces/msg/Int32&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">     </span><span class="n">rmw_get_serialization_format</span><span class="p">(),</span><span class="w"></span>
+<span class="w">     </span><span class="s">&quot;&quot;</span><span class="p">});</span><span class="w"></span>
 
-  <span class="n">rcutils_time_point_value_t</span> <span class="n">time_stamp</span><span class="p">;</span>
-  <span class="k">if</span> <span class="p">(</span><span class="n">rcutils_system_time_now</span><span class="p">(</span><span class="o">&amp;</span><span class="n">time_stamp</span><span class="p">)</span> <span class="o">!=</span> <span class="n">RCUTILS_RET_OK</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">std</span><span class="o">::</span><span class="n">cerr</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Error getting current time: &quot;</span> <span class="o">&lt;&lt;</span>
-      <span class="n">rcutils_get_error_string</span><span class="p">().</span><span class="n">str</span><span class="p">;</span>
-    <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
-  <span class="p">}</span>
-  <span class="k">for</span> <span class="p">(</span><span class="kt">int32_t</span> <span class="n">ii</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">ii</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">;</span> <span class="o">++</span><span class="n">ii</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">auto</span> <span class="n">serializer</span> <span class="o">=</span> <span class="n">rclcpp</span><span class="o">::</span><span class="n">Serialization</span><span class="o">&lt;</span><span class="n">example_interfaces</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">Int32</span><span class="o">&gt;</span><span class="p">();</span>
-    <span class="k">auto</span> <span class="n">serialized_message</span> <span class="o">=</span> <span class="n">rclcpp</span><span class="o">::</span><span class="n">SerializedMessage</span><span class="p">();</span>
-    <span class="n">serializer</span><span class="p">.</span><span class="n">serialize_message</span><span class="p">(</span><span class="o">&amp;</span><span class="n">data</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">serialized_message</span><span class="p">);</span>
+<span class="w">  </span><span class="n">rcutils_time_point_value_t</span><span class="w"> </span><span class="n">time_stamp</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">rcutils_system_time_now</span><span class="p">(</span><span class="o">&amp;</span><span class="n">time_stamp</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">RCUTILS_RET_OK</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Error getting current time: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"></span>
+<span class="w">      </span><span class="n">rcutils_get_error_string</span><span class="p">().</span><span class="n">str</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int32_t</span><span class="w"> </span><span class="n">ii</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">ii</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">ii</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">serializer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">Serialization</span><span class="o">&lt;</span><span class="n">example_interfaces</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">Int32</span><span class="o">&gt;</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">serialized_message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">SerializedMessage</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">serializer</span><span class="p">.</span><span class="n">serialize_message</span><span class="p">(</span><span class="o">&amp;</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">serialized_message</span><span class="p">);</span><span class="w"></span>
 
-    <span class="k">auto</span> <span class="n">bag_message</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">rosbag2_storage</span><span class="o">::</span><span class="n">SerializedBagMessage</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">bag_message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">rosbag2_storage</span><span class="o">::</span><span class="n">SerializedBagMessage</span><span class="o">&gt;</span><span class="p">();</span><span class="w"></span>
 
-    <span class="n">bag_message</span><span class="o">-&gt;</span><span class="n">serialized_data</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">rcutils_uint8_array_t</span><span class="o">&gt;</span><span class="p">(</span>
-      <span class="k">new</span> <span class="n">rcutils_uint8_array_t</span><span class="p">,</span>
-      <span class="p">[](</span><span class="n">rcutils_uint8_array_t</span> <span class="o">*</span><span class="n">msg</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">auto</span> <span class="n">fini_return</span> <span class="o">=</span> <span class="n">rcutils_uint8_array_fini</span><span class="p">(</span><span class="n">msg</span><span class="p">);</span>
-        <span class="k">delete</span> <span class="n">msg</span><span class="p">;</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">fini_return</span> <span class="o">!=</span> <span class="n">RCUTILS_RET_OK</span><span class="p">)</span> <span class="p">{</span>
-          <span class="n">std</span><span class="o">::</span><span class="n">cerr</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Failed to destroy serialized message &quot;</span> <span class="o">&lt;&lt;</span>
-            <span class="n">rcutils_get_error_string</span><span class="p">().</span><span class="n">str</span><span class="p">;</span>
-        <span class="p">}</span>
-      <span class="p">});</span>
-    <span class="o">*</span><span class="n">bag_message</span><span class="o">-&gt;</span><span class="n">serialized_data</span> <span class="o">=</span> <span class="n">serialized_message</span><span class="p">.</span><span class="n">release_rcl_serialized_message</span><span class="p">();</span>
+<span class="w">    </span><span class="n">bag_message</span><span class="o">-&gt;</span><span class="n">serialized_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">rcutils_uint8_array_t</span><span class="o">&gt;</span><span class="p">(</span><span class="w"></span>
+<span class="w">      </span><span class="k">new</span><span class="w"> </span><span class="n">rcutils_uint8_array_t</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="p">[](</span><span class="n">rcutils_uint8_array_t</span><span class="w"> </span><span class="o">*</span><span class="n">msg</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">auto</span><span class="w"> </span><span class="n">fini_return</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rcutils_uint8_array_fini</span><span class="p">(</span><span class="n">msg</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="k">delete</span><span class="w"> </span><span class="n">msg</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">fini_return</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">RCUTILS_RET_OK</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Failed to destroy serialized message &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"></span>
+<span class="w">            </span><span class="n">rcutils_get_error_string</span><span class="p">().</span><span class="n">str</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="p">});</span><span class="w"></span>
+<span class="w">    </span><span class="o">*</span><span class="n">bag_message</span><span class="o">-&gt;</span><span class="n">serialized_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">serialized_message</span><span class="p">.</span><span class="n">release_rcl_serialized_message</span><span class="p">();</span><span class="w"></span>
 
-    <span class="n">bag_message</span><span class="o">-&gt;</span><span class="n">topic_name</span> <span class="o">=</span> <span class="s">&quot;synthetic&quot;</span><span class="p">;</span>
-    <span class="n">bag_message</span><span class="o">-&gt;</span><span class="n">time_stamp</span> <span class="o">=</span> <span class="n">time_stamp</span><span class="p">;</span>
+<span class="w">    </span><span class="n">bag_message</span><span class="o">-&gt;</span><span class="n">topic_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;synthetic&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">bag_message</span><span class="o">-&gt;</span><span class="n">time_stamp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">time_stamp</span><span class="p">;</span><span class="w"></span>
 
-    <span class="n">writer_</span><span class="o">-&gt;</span><span class="n">write</span><span class="p">(</span><span class="n">bag_message</span><span class="p">);</span>
-    <span class="o">++</span><span class="n">data</span><span class="p">.</span><span class="n">data</span><span class="p">;</span>
-    <span class="n">time_stamp</span> <span class="o">+=</span> <span class="mi">1000000000</span><span class="p">;</span>
-  <span class="p">}</span>
+<span class="w">    </span><span class="n">writer_</span><span class="o">-&gt;</span><span class="n">write</span><span class="p">(</span><span class="n">bag_message</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="o">++</span><span class="n">data</span><span class="p">.</span><span class="n">data</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">time_stamp</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1000000000</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
 
-  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
@@ -829,18 +829,18 @@
 <h4>5.2检查代码 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8066">[待校准&#64;8066]</a><a class="headerlink" href="#id4" title="永久链接至标题"></a></h4>
 <p>该样本与先前样本的比较将揭示它们并没有什么不同。唯一显著的区别是使用for循环来驱动数据生成，而不是计时器。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8067">[待校准&#64;8067]</a></p>
 <p>请注意，我们现在也在为数据生成时间戳，而不是依赖于每个样本的当前系统时间。时间戳可以是您需要的任何值。数据将以这些时间戳给出的速率回放，因此这是控制样本默认回放速度的有用方法。还请注意，虽然每个样本之间的间隔是整整一秒的时间，但此可执行文件不需要在每个样本之间等待一秒钟。这使我们能够在比回放所需的更短的时间内生成大量覆盖时间跨度的数据。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8068">[待校准&#64;8068]</a></p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">rcutils_time_point_value_t</span> <span class="n">time_stamp</span><span class="p">;</span>
-<span class="k">if</span> <span class="p">(</span><span class="n">rcutils_system_time_now</span><span class="p">(</span><span class="o">&amp;</span><span class="n">time_stamp</span><span class="p">)</span> <span class="o">!=</span> <span class="n">RCUTILS_RET_OK</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">std</span><span class="o">::</span><span class="n">cerr</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Error getting current time: &quot;</span> <span class="o">&lt;&lt;</span>
-    <span class="n">rcutils_get_error_string</span><span class="p">().</span><span class="n">str</span><span class="p">;</span>
-  <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="k">for</span> <span class="p">(</span><span class="kt">int32_t</span> <span class="n">ii</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">ii</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">;</span> <span class="o">++</span><span class="n">ii</span><span class="p">)</span> <span class="p">{</span>
-  <span class="p">...</span>
-  <span class="n">bag_message</span><span class="o">-&gt;</span><span class="n">time_stamp</span> <span class="o">=</span> <span class="n">time_stamp</span><span class="p">;</span>
-  <span class="p">...</span>
-  <span class="n">time_stamp</span> <span class="o">+=</span> <span class="mi">1000000000</span><span class="p">;</span>
-<span class="p">}</span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">rcutils_time_point_value_t</span><span class="w"> </span><span class="n">time_stamp</span><span class="p">;</span><span class="w"></span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">rcutils_system_time_now</span><span class="p">(</span><span class="o">&amp;</span><span class="n">time_stamp</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">RCUTILS_RET_OK</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Error getting current time: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"></span>
+<span class="w">    </span><span class="n">rcutils_get_error_string</span><span class="p">().</span><span class="n">str</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int32_t</span><span class="w"> </span><span class="n">ii</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">ii</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">ii</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="p">...</span><span class="w"></span>
+<span class="w">  </span><span class="n">bag_message</span><span class="o">-&gt;</span><span class="n">time_stamp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">time_stamp</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">...</span><span class="w"></span>
+<span class="w">  </span><span class="n">time_stamp</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1000000000</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 </div>

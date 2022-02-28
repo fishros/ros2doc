@@ -45,7 +45,7 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../Installation.html">安装 [待校准&#64;5278]</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../Installation.html">安装</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Ubuntu-Development-Setup.html">在Ubuntu Linux上构建ROS 2 [待校准&#64;5474]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Ubuntu-Install-Binary.html">在Ubuntu Linux上安装ROS 2 [待校准&#64;5525]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Ubuntu-Install-Debians.html">通过Debian包安装ROS 2 [待校准&#64;5547]</a></li>
@@ -152,8 +152,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../How-To-Guides.html">操作指南 [待校准&#64;5755]</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Installation-Troubleshooting.html">安装故障诊断工具 [待校准&#64;6086]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Developing-a-ROS-2-Package.html">开发ROS 2包 [待校准&#64;6065]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Ament-CMake-Documentation.html">[需手动修复的语法]ament _ cmake用户文档 [待校准&#64;5759]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Ament-CMake-Python-Documentation.html">[需手动修复的语法]ament _ cmake_python用户文档 [待校准&#64;5911]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Ament-CMake-Documentation.html">ament_cmake用户文档 [小鱼&#64;5759]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Ament-CMake-Python-Documentation.html">ament_cmake_python用户文档 [小鱼&#64;5911]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Launch-files-migration-guide.html">迁移launch文件ROS 1ROS 2 [待校准&#64;6189]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Launch-file-different-formats.html">对ROS 2Launch文件使用Python、XML和YAML [待校准&#64;6162]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Launching-composable-nodes.html">使用ROS 2launch到launch可组合节点 [待校准&#64;6284]</a></li>
@@ -193,7 +193,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Command-Line-Tools.html">使用命令行工具进行自检 [待校准&#64;9667]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Concepts/About-RQt.html">RQt的概述和使用 [待校准&#64;10201]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Composition.html">关于组件 [待校准&#64;9695]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Catment.html">[需手动修复的语法]ament和catkin的混合研究 [待校准&#64;9595]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Catment.html">ament和catkin的混合研究 [小鱼&#64;9595]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Cross-Compilation.html">关于交叉编译 [待校准&#64;9717]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Tf2.html">关于tf2 [待校准&#64;10229]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Build-System.html">关于构建系统 [待校准&#64;9545]</a></li>
@@ -235,7 +235,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../Features.html">功能状态 [待校准&#64;10365]</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Roadmap.html">路线图 [待校准&#64;87]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Roadmap.html">开发计划（Roadmap） [小鱼&#64;87]</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Feature-Ideas.html">特色创意 [待校准&#64;5184]</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Governance.html">项目管理 [待校准&#64;1150]</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Governance/ROS2-TSC-Charter.html">ROS 2技术指导委员会章程 [待校准&#64;1299]</a></li>
@@ -344,107 +344,107 @@
 </div>
 </div></div>
 <p>现在将会有一个名为 <code class="docutils literal notranslate"><span class="pre">publisher_member_function.cpp</span></code> 的新文件。使用您喜欢的文本编辑器打开文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9355">[待校准&#64;9355]</a></p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;chrono&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;functional&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;memory&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;string&gt;</span><span class="cp"></span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;chrono&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;functional&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;memory&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span><span class="cp"></span>
 
-<span class="cp">#include</span> <span class="cpf">&quot;rclcpp/rclcpp.hpp&quot;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&quot;std_msgs/msg/string.hpp&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;rclcpp/rclcpp.hpp&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;std_msgs/msg/string.hpp&quot;</span><span class="cp"></span>
 
-<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="o">::</span><span class="n">chrono_literals</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="o">::</span><span class="nn">chrono_literals</span><span class="p">;</span><span class="w"></span>
 
 <span class="cm">/* This example creates a subclass of Node and uses std::bind() to register a</span>
-<span class="cm">* member function as a callback from the timer. */</span>
+<span class="cm">* member function as a callback from the timer. */</span><span class="w"></span>
 
-<span class="k">class</span> <span class="nc">MinimalPublisher</span> <span class="o">:</span> <span class="k">public</span> <span class="n">rclcpp</span><span class="o">::</span><span class="n">Node</span>
-<span class="p">{</span>
-  <span class="k">public</span><span class="o">:</span>
-    <span class="n">MinimalPublisher</span><span class="p">()</span>
-    <span class="o">:</span> <span class="n">Node</span><span class="p">(</span><span class="s">&quot;minimal_publisher&quot;</span><span class="p">),</span> <span class="n">count_</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-    <span class="p">{</span>
-      <span class="n">publisher_</span> <span class="o">=</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">create_publisher</span><span class="o">&lt;</span><span class="n">std_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">String</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;topic&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
-      <span class="n">timer_</span> <span class="o">=</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">create_wall_timer</span><span class="p">(</span>
-      <span class="mi">500</span><span class="n">ms</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">bind</span><span class="p">(</span><span class="o">&amp;</span><span class="n">MinimalPublisher</span><span class="o">::</span><span class="n">timer_callback</span><span class="p">,</span> <span class="k">this</span><span class="p">));</span>
-    <span class="p">}</span>
+<span class="k">class</span> <span class="nc">MinimalPublisher</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">Node</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">MinimalPublisher</span><span class="p">()</span><span class="w"></span>
+<span class="w">    </span><span class="o">:</span><span class="w"> </span><span class="n">Node</span><span class="p">(</span><span class="s">&quot;minimal_publisher&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">count_</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">publisher_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">create_publisher</span><span class="o">&lt;</span><span class="n">std_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">String</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;topic&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="n">timer_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">create_wall_timer</span><span class="p">(</span><span class="w"></span>
+<span class="w">      </span><span class="mi">500</span><span class="n">ms</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">bind</span><span class="p">(</span><span class="o">&amp;</span><span class="n">MinimalPublisher</span><span class="o">::</span><span class="n">timer_callback</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">));</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-  <span class="k">private</span><span class="o">:</span>
-    <span class="kt">void</span> <span class="n">timer_callback</span><span class="p">()</span>
-    <span class="p">{</span>
-      <span class="k">auto</span> <span class="n">message</span> <span class="o">=</span> <span class="n">std_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">String</span><span class="p">();</span>
-      <span class="n">message</span><span class="p">.</span><span class="n">data</span> <span class="o">=</span> <span class="s">&quot;Hello, world! &quot;</span> <span class="o">+</span> <span class="n">std</span><span class="o">::</span><span class="n">to_string</span><span class="p">(</span><span class="n">count_</span><span class="o">++</span><span class="p">);</span>
-      <span class="n">RCLCPP_INFO</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_logger</span><span class="p">(),</span> <span class="s">&quot;Publishing: &#39;%s&#39;&quot;</span><span class="p">,</span> <span class="n">message</span><span class="p">.</span><span class="n">data</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span>
-      <span class="n">publisher_</span><span class="o">-&gt;</span><span class="n">publish</span><span class="p">(</span><span class="n">message</span><span class="p">);</span>
-    <span class="p">}</span>
-    <span class="n">rclcpp</span><span class="o">::</span><span class="n">TimerBase</span><span class="o">::</span><span class="n">SharedPtr</span> <span class="n">timer_</span><span class="p">;</span>
-    <span class="n">rclcpp</span><span class="o">::</span><span class="n">Publisher</span><span class="o">&lt;</span><span class="n">std_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">String</span><span class="o">&gt;::</span><span class="n">SharedPtr</span> <span class="n">publisher_</span><span class="p">;</span>
-    <span class="kt">size_t</span> <span class="n">count_</span><span class="p">;</span>
-<span class="p">};</span>
+<span class="w">  </span><span class="k">private</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">timer_callback</span><span class="p">()</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="k">auto</span><span class="w"> </span><span class="n">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">String</span><span class="p">();</span><span class="w"></span>
+<span class="w">      </span><span class="n">message</span><span class="p">.</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hello, world! &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">to_string</span><span class="p">(</span><span class="n">count_</span><span class="o">++</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="n">RCLCPP_INFO</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_logger</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;Publishing: &#39;%s&#39;&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">message</span><span class="p">.</span><span class="n">data</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span><span class="w"></span>
+<span class="w">      </span><span class="n">publisher_</span><span class="o">-&gt;</span><span class="n">publish</span><span class="p">(</span><span class="n">message</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">TimerBase</span><span class="o">::</span><span class="n">SharedPtr</span><span class="w"> </span><span class="n">timer_</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">Publisher</span><span class="o">&lt;</span><span class="n">std_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">String</span><span class="o">&gt;::</span><span class="n">SharedPtr</span><span class="w"> </span><span class="n">publisher_</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">count_</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
 
-<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span> <span class="n">argv</span><span class="p">[])</span>
-<span class="p">{</span>
-  <span class="n">rclcpp</span><span class="o">::</span><span class="n">init</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span> <span class="n">argv</span><span class="p">);</span>
-  <span class="n">rclcpp</span><span class="o">::</span><span class="n">spin</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">MinimalPublisher</span><span class="o">&gt;</span><span class="p">());</span>
-  <span class="n">rclcpp</span><span class="o">::</span><span class="n">shutdown</span><span class="p">();</span>
-  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">argv</span><span class="p">[])</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">init</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="n">argv</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">spin</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">MinimalPublisher</span><span class="o">&gt;</span><span class="p">());</span><span class="w"></span>
+<span class="w">  </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">shutdown</span><span class="p">();</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <div class="section" id="examine-the-code">
 <h4>2.1检查代码 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8007">[待校准&#64;8007]</a><a class="headerlink" href="#examine-the-code" title="永久链接至标题"></a></h4>
 <p>代码的顶部包括您将使用的标准C++ 标头。在标准的cheaders标头之后是 <code class="docutils literal notranslate"><span class="pre">rclcpp/rclcpp.hpp</span></code> ，它允许您使用ROS 2系统中最常见的部分。最后是 <code class="docutils literal notranslate"><span class="pre">std_msgs/msg/string.hpp</span></code> ，它包括将用于发布数据的内置消息类型。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9356">[待校准&#64;9356]</a></p>
 <p>这些行表示节点的依赖关系。重新调用必须将依赖项添加到 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 和 <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> 中，您将在下一节中执行此操作。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9357">[待校准&#64;9357]</a></p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;chrono&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;functional&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;memory&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;string&gt;</span><span class="cp"></span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;chrono&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;functional&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;memory&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span><span class="cp"></span>
 
-<span class="cp">#include</span> <span class="cpf">&quot;rclcpp/rclcpp.hpp&quot;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&quot;std_msgs/msg/string.hpp&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;rclcpp/rclcpp.hpp&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;std_msgs/msg/string.hpp&quot;</span><span class="cp"></span>
 
-<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="o">::</span><span class="n">chrono_literals</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="o">::</span><span class="nn">chrono_literals</span><span class="p">;</span><span class="w"></span>
 </pre></div>
 </div>
 <p>下一行通过继承 “rclcpp:: node” 来创建节点类 <code class="docutils literal notranslate"><span class="pre">MinimalPublisher</span></code> 。代码中的每一个 <code class="docutils literal notranslate"><span class="pre">this</span></code> 都指的是节点。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9358">[待校准&#64;9358]</a></p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MinimalPublisher</span> <span class="o">:</span> <span class="k">public</span> <span class="n">rclcpp</span><span class="o">::</span><span class="n">Node</span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MinimalPublisher</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">Node</span><span class="w"></span>
 </pre></div>
 </div>
 <p>公共构造函数命名节点 <code class="docutils literal notranslate"><span class="pre">minimal_publisher</span></code> ，并将 <code class="docutils literal notranslate"><span class="pre">count_</span></code> 初始化为0。在构造函数中，发布者使用 <code class="docutils literal notranslate"><span class="pre">String</span></code> 消息类型、话题名称 <code class="docutils literal notranslate"><span class="pre">topic</span></code> 以及在备份时限制消息所需的队列大小进行初始化。接下来，初始化 <code class="docutils literal notranslate"><span class="pre">timer_</span></code> ，这将导致 <code class="docutils literal notranslate"><span class="pre">timer_callback</span></code> 函数每秒执行两次。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9359">[待校准&#64;9359]</a></p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">public</span><span class="o">:</span>
-  <span class="n">MinimalPublisher</span><span class="p">()</span>
-  <span class="o">:</span> <span class="n">Node</span><span class="p">(</span><span class="s">&quot;minimal_publisher&quot;</span><span class="p">),</span> <span class="n">count_</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-  <span class="p">{</span>
-    <span class="n">publisher_</span> <span class="o">=</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">create_publisher</span><span class="o">&lt;</span><span class="n">std_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">String</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;topic&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
-    <span class="n">timer_</span> <span class="o">=</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">create_wall_timer</span><span class="p">(</span>
-    <span class="mi">500</span><span class="n">ms</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">bind</span><span class="p">(</span><span class="o">&amp;</span><span class="n">MinimalPublisher</span><span class="o">::</span><span class="n">timer_callback</span><span class="p">,</span> <span class="k">this</span><span class="p">));</span>
-  <span class="p">}</span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">  </span><span class="n">MinimalPublisher</span><span class="p">()</span><span class="w"></span>
+<span class="w">  </span><span class="o">:</span><span class="w"> </span><span class="n">Node</span><span class="p">(</span><span class="s">&quot;minimal_publisher&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">count_</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">publisher_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">create_publisher</span><span class="o">&lt;</span><span class="n">std_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">String</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;topic&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">timer_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">create_wall_timer</span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="mi">500</span><span class="n">ms</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">bind</span><span class="p">(</span><span class="o">&amp;</span><span class="n">MinimalPublisher</span><span class="o">::</span><span class="n">timer_callback</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">));</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">timer_callback</span></code> 函数是设置消息数据并实际发布消息的位置。 <code class="docutils literal notranslate"><span class="pre">RCLCPP_INFO</span></code> 宏可确保将每条发布的消息打印到控制台。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9360">[待校准&#64;9360]</a></p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">private</span><span class="o">:</span>
-  <span class="kt">void</span> <span class="n">timer_callback</span><span class="p">()</span>
-  <span class="p">{</span>
-    <span class="k">auto</span> <span class="n">message</span> <span class="o">=</span> <span class="n">std_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">String</span><span class="p">();</span>
-    <span class="n">message</span><span class="p">.</span><span class="n">data</span> <span class="o">=</span> <span class="s">&quot;Hello, world! &quot;</span> <span class="o">+</span> <span class="n">std</span><span class="o">::</span><span class="n">to_string</span><span class="p">(</span><span class="n">count_</span><span class="o">++</span><span class="p">);</span>
-    <span class="n">RCLCPP_INFO</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_logger</span><span class="p">(),</span> <span class="s">&quot;Publishing: &#39;%s&#39;&quot;</span><span class="p">,</span> <span class="n">message</span><span class="p">.</span><span class="n">data</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span>
-    <span class="n">publisher_</span><span class="o">-&gt;</span><span class="n">publish</span><span class="p">(</span><span class="n">message</span><span class="p">);</span>
-  <span class="p">}</span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">private</span><span class="o">:</span><span class="w"></span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="n">timer_callback</span><span class="p">()</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">String</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">message</span><span class="p">.</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hello, world! &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">to_string</span><span class="p">(</span><span class="n">count_</span><span class="o">++</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">RCLCPP_INFO</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_logger</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;Publishing: &#39;%s&#39;&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">message</span><span class="p">.</span><span class="n">data</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span><span class="w"></span>
+<span class="w">    </span><span class="n">publisher_</span><span class="o">-&gt;</span><span class="n">publish</span><span class="p">(</span><span class="n">message</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <p>最后是计时器、发布者和计数器字段的声明。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9361">[待校准&#64;9361]</a></p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">rclcpp</span><span class="o">::</span><span class="n">TimerBase</span><span class="o">::</span><span class="n">SharedPtr</span> <span class="n">timer_</span><span class="p">;</span>
-<span class="n">rclcpp</span><span class="o">::</span><span class="n">Publisher</span><span class="o">&lt;</span><span class="n">std_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">String</span><span class="o">&gt;::</span><span class="n">SharedPtr</span> <span class="n">publisher_</span><span class="p">;</span>
-<span class="kt">size_t</span> <span class="n">count_</span><span class="p">;</span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">rclcpp</span><span class="o">::</span><span class="n">TimerBase</span><span class="o">::</span><span class="n">SharedPtr</span><span class="w"> </span><span class="n">timer_</span><span class="p">;</span><span class="w"></span>
+<span class="n">rclcpp</span><span class="o">::</span><span class="n">Publisher</span><span class="o">&lt;</span><span class="n">std_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">String</span><span class="o">&gt;::</span><span class="n">SharedPtr</span><span class="w"> </span><span class="n">publisher_</span><span class="p">;</span><span class="w"></span>
+<span class="kt">size_t</span><span class="w"> </span><span class="n">count_</span><span class="p">;</span><span class="w"></span>
 </pre></div>
 </div>
 <p>追踪 <code class="docutils literal notranslate"><span class="pre">MinimalPublisher</span></code> 类是 <code class="docutils literal notranslate"><span class="pre">main</span></code> ，在这里节点实际执行。“Rclcpp::init” 初始化ROS 2，“rclcpp:: spin” 开始处理来自节点的数据，包括从计时器调用的数据。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9362">[待校准&#64;9362]</a></p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span> <span class="n">argv</span><span class="p">[])</span>
-<span class="p">{</span>
-  <span class="n">rclcpp</span><span class="o">::</span><span class="n">init</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span> <span class="n">argv</span><span class="p">);</span>
-  <span class="n">rclcpp</span><span class="o">::</span><span class="n">spin</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">MinimalPublisher</span><span class="o">&gt;</span><span class="p">());</span>
-  <span class="n">rclcpp</span><span class="o">::</span><span class="n">shutdown</span><span class="p">();</span>
-  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">argv</span><span class="p">[])</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">init</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="n">argv</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">spin</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">MinimalPublisher</span><span class="o">&gt;</span><span class="p">());</span><span class="w"></span>
+<span class="w">  </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">shutdown</span><span class="p">();</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
@@ -488,7 +488,7 @@
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cmake_minimum_required(VERSION 3.5)</span>
 <span class="go">project(cpp_pubsub)</span>
 
-<span class="gp">#</span> Default to C++14
+<span class="gp"># </span>Default to C++14
 <span class="go">if(NOT CMAKE_CXX_STANDARD)</span>
 <span class="go">  set(CMAKE_CXX_STANDARD 14)</span>
 <span class="go">endif()</span>
@@ -538,61 +538,61 @@
 </pre></div>
 </div>
 <p>使用文本编辑器打开 <code class="docutils literal notranslate"><span class="pre">subscriber_member_function.cpp</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9374">[待校准&#64;9374]</a></p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;memory&gt;</span><span class="cp"></span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;memory&gt;</span><span class="cp"></span>
 
-<span class="cp">#include</span> <span class="cpf">&quot;rclcpp/rclcpp.hpp&quot;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&quot;std_msgs/msg/string.hpp&quot;</span><span class="cp"></span>
-<span class="k">using</span> <span class="n">std</span><span class="o">::</span><span class="n">placeholders</span><span class="o">::</span><span class="n">_1</span><span class="p">;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;rclcpp/rclcpp.hpp&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;std_msgs/msg/string.hpp&quot;</span><span class="cp"></span>
+<span class="k">using</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">placeholders</span><span class="o">::</span><span class="n">_1</span><span class="p">;</span><span class="w"></span>
 
-<span class="k">class</span> <span class="nc">MinimalSubscriber</span> <span class="o">:</span> <span class="k">public</span> <span class="n">rclcpp</span><span class="o">::</span><span class="n">Node</span>
-<span class="p">{</span>
-  <span class="k">public</span><span class="o">:</span>
-    <span class="n">MinimalSubscriber</span><span class="p">()</span>
-    <span class="o">:</span> <span class="n">Node</span><span class="p">(</span><span class="s">&quot;minimal_subscriber&quot;</span><span class="p">)</span>
-    <span class="p">{</span>
-      <span class="n">subscription_</span> <span class="o">=</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">create_subscription</span><span class="o">&lt;</span><span class="n">std_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">String</span><span class="o">&gt;</span><span class="p">(</span>
-      <span class="s">&quot;topic&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">bind</span><span class="p">(</span><span class="o">&amp;</span><span class="n">MinimalSubscriber</span><span class="o">::</span><span class="n">topic_callback</span><span class="p">,</span> <span class="k">this</span><span class="p">,</span> <span class="n">_1</span><span class="p">));</span>
-    <span class="p">}</span>
+<span class="k">class</span> <span class="nc">MinimalSubscriber</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">Node</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">MinimalSubscriber</span><span class="p">()</span><span class="w"></span>
+<span class="w">    </span><span class="o">:</span><span class="w"> </span><span class="n">Node</span><span class="p">(</span><span class="s">&quot;minimal_subscriber&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">subscription_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">create_subscription</span><span class="o">&lt;</span><span class="n">std_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">String</span><span class="o">&gt;</span><span class="p">(</span><span class="w"></span>
+<span class="w">      </span><span class="s">&quot;topic&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">bind</span><span class="p">(</span><span class="o">&amp;</span><span class="n">MinimalSubscriber</span><span class="o">::</span><span class="n">topic_callback</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">_1</span><span class="p">));</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-  <span class="k">private</span><span class="o">:</span>
-    <span class="kt">void</span> <span class="n">topic_callback</span><span class="p">(</span><span class="k">const</span> <span class="n">std_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">String</span><span class="o">::</span><span class="n">SharedPtr</span> <span class="n">msg</span><span class="p">)</span> <span class="k">const</span>
-    <span class="p">{</span>
-      <span class="n">RCLCPP_INFO</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_logger</span><span class="p">(),</span> <span class="s">&quot;I heard: &#39;%s&#39;&quot;</span><span class="p">,</span> <span class="n">msg</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span>
-    <span class="p">}</span>
-    <span class="n">rclcpp</span><span class="o">::</span><span class="n">Subscription</span><span class="o">&lt;</span><span class="n">std_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">String</span><span class="o">&gt;::</span><span class="n">SharedPtr</span> <span class="n">subscription_</span><span class="p">;</span>
-<span class="p">};</span>
+<span class="w">  </span><span class="k">private</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">topic_callback</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">String</span><span class="o">::</span><span class="n">SharedPtr</span><span class="w"> </span><span class="n">msg</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">RCLCPP_INFO</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_logger</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;I heard: &#39;%s&#39;&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">msg</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">Subscription</span><span class="o">&lt;</span><span class="n">std_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">String</span><span class="o">&gt;::</span><span class="n">SharedPtr</span><span class="w"> </span><span class="n">subscription_</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
 
-<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span> <span class="n">argv</span><span class="p">[])</span>
-<span class="p">{</span>
-  <span class="n">rclcpp</span><span class="o">::</span><span class="n">init</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span> <span class="n">argv</span><span class="p">);</span>
-  <span class="n">rclcpp</span><span class="o">::</span><span class="n">spin</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">MinimalSubscriber</span><span class="o">&gt;</span><span class="p">());</span>
-  <span class="n">rclcpp</span><span class="o">::</span><span class="n">shutdown</span><span class="p">();</span>
-  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">argv</span><span class="p">[])</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">init</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="n">argv</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">spin</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">MinimalSubscriber</span><span class="o">&gt;</span><span class="p">());</span><span class="w"></span>
+<span class="w">  </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">shutdown</span><span class="p">();</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <div class="section" id="id1">
 <h4>3.1检查代码 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9375">[待校准&#64;9375]</a><a class="headerlink" href="#id1" title="永久链接至标题"></a></h4>
 <p>订阅节点的代码与发布者的代码几乎相同。现在节点被命名为 <code class="docutils literal notranslate"><span class="pre">minimal_subscriber</span></code> ，构造函数使用节点的 <code class="docutils literal notranslate"><span class="pre">create_subscription</span></code> 类来执行调用。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9376">[待校准&#64;9376]</a></p>
 <p>没有计时器，因为只要数据发布到 <code class="docutils literal notranslate"><span class="pre">topic</span></code> 话题，用户就会简单地做出反应。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9377">[待校准&#64;9377]</a></p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">public</span><span class="o">:</span>
-  <span class="n">MinimalSubscriber</span><span class="p">()</span>
-  <span class="o">:</span> <span class="n">Node</span><span class="p">(</span><span class="s">&quot;minimal_subscriber&quot;</span><span class="p">)</span>
-  <span class="p">{</span>
-    <span class="n">subscription_</span> <span class="o">=</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">create_subscription</span><span class="o">&lt;</span><span class="n">std_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">String</span><span class="o">&gt;</span><span class="p">(</span>
-    <span class="s">&quot;topic&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">bind</span><span class="p">(</span><span class="o">&amp;</span><span class="n">MinimalSubscriber</span><span class="o">::</span><span class="n">topic_callback</span><span class="p">,</span> <span class="k">this</span><span class="p">,</span> <span class="n">_1</span><span class="p">));</span>
-  <span class="p">}</span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">  </span><span class="n">MinimalSubscriber</span><span class="p">()</span><span class="w"></span>
+<span class="w">  </span><span class="o">:</span><span class="w"> </span><span class="n">Node</span><span class="p">(</span><span class="s">&quot;minimal_subscriber&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">subscription_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">create_subscription</span><span class="o">&lt;</span><span class="n">std_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">String</span><span class="o">&gt;</span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="s">&quot;topic&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">bind</span><span class="p">(</span><span class="o">&amp;</span><span class="n">MinimalSubscriber</span><span class="o">::</span><span class="n">topic_callback</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">_1</span><span class="p">));</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <p>从 <a class="reference internal" href="Topics/Understanding-ROS2-Topics.html"><span class="doc">topic tutorial</span></a> 中重新调用，发布者和订阅者使用的话题名称和消息类型必须匹配以允许他们进行交流。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9378">[待校准&#64;9378]</a></p>
 <p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">topic_callback</span></code> 函数接收在该话题上发布的string消息数据，并使用 <code class="docutils literal notranslate"><span class="pre">RCLCPP_INFO</span></code> 宏将其简单地写入控制台。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9379">[待校准&#64;9379]</a></p>
 <p>此类中唯一的字段声明是订阅。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9380">[待校准&#64;9380]</a></p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">private</span><span class="o">:</span>
-  <span class="kt">void</span> <span class="n">topic_callback</span><span class="p">(</span><span class="k">const</span> <span class="n">std_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">String</span><span class="o">::</span><span class="n">SharedPtr</span> <span class="n">msg</span><span class="p">)</span> <span class="k">const</span>
-  <span class="p">{</span>
-    <span class="n">RCLCPP_INFO</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_logger</span><span class="p">(),</span> <span class="s">&quot;I heard: &#39;%s&#39;&quot;</span><span class="p">,</span> <span class="n">msg</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span>
-  <span class="p">}</span>
-  <span class="n">rclcpp</span><span class="o">::</span><span class="n">Subscription</span><span class="o">&lt;</span><span class="n">std_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">String</span><span class="o">&gt;::</span><span class="n">SharedPtr</span> <span class="n">subscription_</span><span class="p">;</span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">private</span><span class="o">:</span><span class="w"></span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="n">topic_callback</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">String</span><span class="o">::</span><span class="n">SharedPtr</span><span class="w"> </span><span class="n">msg</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">RCLCPP_INFO</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_logger</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;I heard: &#39;%s&#39;&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">msg</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">Subscription</span><span class="o">&lt;</span><span class="n">std_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">String</span><span class="o">&gt;::</span><span class="n">SharedPtr</span><span class="w"> </span><span class="n">subscription_</span><span class="p">;</span><span class="w"></span>
 </pre></div>
 </div>
 <p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">main</span></code> 函数完全一样，除了现在它旋转 <code class="docutils literal notranslate"><span class="pre">MinimalSubscriber</span></code> 节点。对于发布者节点来说，旋转意味着启动计时器，但对于订阅者来说，这仅仅意味着准备在消息来的时候接收消息。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9381">[待校准&#64;9381]</a></p>
