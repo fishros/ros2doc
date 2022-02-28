@@ -287,7 +287,7 @@
 <li><p><a class="reference internal" href="#prerequisites" id="id1">先决条件 [待校准&#64;5924]</a></p></li>
 <li><p><a class="reference internal" href="#specifying-rmw-implementations" id="id2">指定RMW实现 [待校准&#64;6622]</a></p></li>
 <li><p><a class="reference internal" href="#adding-rmw-implementations-to-your-workspace" id="id3">将RMW实现添加到您的工作区 [待校准&#64;6627]</a></p></li>
-<li><p><a class="reference internal" href="#troubleshooting" id="id4">故障排除 [待校准&#64;6630]</a></p>
+<li><p><a class="reference internal" href="#troubleshooting" id="id4">故障排除</a></p>
 <ul>
 <li><p><a class="reference internal" href="#ensuring-use-of-a-particular-rmw-implementation" id="id5">确保特定RMW实施的使用 [待校准&#64;6631]</a></p></li>
 <li><p><a class="reference internal" href="#rti-connext-on-osx-failure-due-to-insufficient-shared-memory-kernel-settings" id="id6">OSX上的RTI Connext: 由于共享内存内核设置不足而导致故障 [待校准&#64;6641]</a></p></li>
@@ -336,7 +336,7 @@ ros2 run demo_nodes_py listener
 <p>可能遇到问题  &quot;rebuilding&quot; 工作区额外RMW实现使用 <code class="docutils literal notranslate"><span class="pre">--cmake-force-configure</span></code> 选项生成抱怨默认RMW实施更换。要解决此问题，您可以使用 <code class="docutils literal notranslate"><span class="pre">RMW_IMPLEMENTATION</span></code> CMake参数将默认实现设置为以前的实现，也可以删除投诉包的构建文件夹，然后继续使用 <code class="docutils literal notranslate"><span class="pre">--start-with</span> <span class="pre">&lt;package</span> <span class="pre">name&gt;</span></code> 进行构建。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6629">[待校准&#64;6629]</a></p>
 </div>
 <div class="section" id="troubleshooting">
-<h2>故障排除 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6630">[待校准&#64;6630]</a><a class="headerlink" href="#troubleshooting" title="永久链接至标题"></a></h2>
+<h2><a class="toc-backref" href="#id4">故障排除</a><a class="headerlink" href="#troubleshooting" title="永久链接至标题"></a></h2>
 <div class="section" id="ensuring-use-of-a-particular-rmw-implementation">
 <h3>确保特定RMW实施的使用 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6631">[待校准&#64;6631]</a><a class="headerlink" href="#ensuring-use-of-a-particular-rmw-implementation" title="永久链接至标题"></a></h3>
 <p>如果 <code class="docutils literal notranslate"><span class="pre">RMW_IMPLEMENTATION</span></code> 环境变量设置为未安装支持的RMW实现，如果仅安装了一个实现，您将看到类似于以下内容的错误消息: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6632">[待校准&#64;6632]</a></p>
