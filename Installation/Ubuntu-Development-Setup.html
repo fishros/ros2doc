@@ -283,12 +283,12 @@
 <div class="contents local topic" id="table-of-contents">
 <p class="topic-title">目录</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#system-requirements" id="id1">系统要求 [待校准&#64;5476]</a></p></li>
-<li><p><a class="reference internal" href="#system-setup" id="id2">系统设置 [待校准&#64;5484]</a></p>
+<li><p><a class="reference internal" href="#system-requirements" id="id1">系统要求</a></p></li>
+<li><p><a class="reference internal" href="#system-setup" id="id2">系统设置</a></p>
 <ul>
-<li><p><a class="reference internal" href="#set-locale" id="id3">设置区域设置 [待校准&#64;5485]</a></p></li>
+<li><p><a class="reference internal" href="#set-locale" id="id3">设置语言区域 [Alyssa&#64;5485]</a></p></li>
 <li><p><a class="reference internal" href="#add-the-ros-2-apt-repository" id="id4">添加ROS 2 apt仓库 [待校准&#64;5487]</a></p></li>
-<li><p><a class="reference internal" href="#install-development-tools-and-ros-tools" id="id5">安装开发版本工具和ROS工具 [待校准&#64;5490]</a></p></li>
+<li><p><a class="reference internal" href="#install-development-tools-and-ros-tools" id="id5">安装开发工具和ROS工具 [Alyssa&#64;5490]</a></p></li>
 </ul>
 </li>
 <li><p><a class="reference internal" href="#get-ros-2-code" id="id6">获取ROS 2代码 [待校准&#64;5491]</a></p></li>
@@ -300,7 +300,7 @@
 <li><p><a class="reference internal" href="#source-the-setup-script" id="id11">获取安装脚本 [待校准&#64;5502]</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#try-some-examples" id="id12">尝试一些例子 [待校准&#64;5504]</a></p></li>
+<li><p><a class="reference internal" href="#try-some-examples" id="id12">尝试运行一些例子 [Alyssa&#64;5504]</a></p></li>
 <li><p><a class="reference internal" href="#next-steps-after-installing" id="id13">安装后的下一步 [待校准&#64;5508]</a></p></li>
 <li><p><a class="reference internal" href="#using-the-ros-1-bridge" id="id14">使用ROS 1bridge [待校准&#64;5510]</a></p></li>
 <li><p><a class="reference internal" href="#additional-rmw-implementations-optional" id="id15">附加RMW实现 (可选) [待校准&#64;5512]</a></p></li>
@@ -315,10 +315,10 @@
 </ul>
 </div>
 <div class="section" id="system-requirements">
-<h2>系统要求 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5476">[待校准&#64;5476]</a><a class="headerlink" href="#system-requirements" title="永久链接至标题"></a></h2>
+<h2><a class="toc-backref" href="#id1">系统要求</a><a class="headerlink" href="#system-requirements" title="永久链接至标题"></a></h2>
 <p>目前基于Debian的FoxyFitzroy目标平台是: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5477">[待校准&#64;5477]</a></p>
 <ul class="simple">
-<li><p>第一层: Ubuntu Linux - Focal Fossa (20.04) 64位 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5478">[待校准&#64;5478]</a></p></li>
+<li><p>第1层: Ubuntu Linux - Focal Fossa (20.04) 64位 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5478">[Alyssa&#64;5478]</a></p></li>
 <li><p>第3层: Debian Linux - Buster (10) 64位 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5479">[待校准&#64;5479]</a></p></li>
 </ul>
 <p>其他支持级别不同的Linux平台包括: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5480">[待校准&#64;5480]</a></p>
@@ -329,10 +329,10 @@
 </ul>
 </div>
 <div class="section" id="system-setup">
-<h2>系统设置 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5484">[待校准&#64;5484]</a><a class="headerlink" href="#system-setup" title="永久链接至标题"></a></h2>
+<h2><a class="toc-backref" href="#id2">系统设置</a><a class="headerlink" href="#system-setup" title="永久链接至标题"></a></h2>
 <div class="section" id="set-locale">
-<h3>设置区域设置 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5485">[待校准&#64;5485]</a><a class="headerlink" href="#set-locale" title="永久链接至标题"></a></h3>
-<p>确保你有一个支持 <code class="docutils literal notranslate"><span class="pre">UTF-8</span></code> 的区域。如果您处于最小环境中 (例如docker容器)，则区域设置可能是最小的，例如 <code class="docutils literal notranslate"><span class="pre">POSIX</span></code> 。我们使用以下设置进行测试。但是，如果您使用不同的UTF-8支持的区域设置，应该没问题。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5486">[待校准&#64;5486]</a></p>
+<h3>设置语言区域 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5485">[Alyssa&#64;5485]</a><a class="headerlink" href="#set-locale" title="永久链接至标题"></a></h3>
+<p>确保你有一个支持 <code class="docutils literal notranslate"><span class="pre">UTF-8</span></code> 的语言区域。如果您处于最小环境中 (例如docker容器)，则区域设置可能是最小的，例如 <code class="docutils literal notranslate"><span class="pre">POSIX</span></code> 。我们使用以下设置进行测试。但是，如果您使用不同的UTF-8支持的语言区域也是没有问题的。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5486">[Alyssa&#64;5486]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>locale  <span class="c1"># check for UTF-8</span>
 
 sudo apt update <span class="o">&amp;&amp;</span> sudo apt install locales
@@ -346,7 +346,7 @@ locale  <span class="c1"># verify settings</span>
 </div>
 <div class="section" id="add-the-ros-2-apt-repository">
 <h3>添加ROS 2 apt仓库 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5487">[待校准&#64;5487]</a><a class="headerlink" href="#add-the-ros-2-apt-repository" title="永久链接至标题"></a></h3>
-<p>您需要将ROS 2 apt仓库添加到您的系统中。为此，首先使用如下apt授权我们的GPG密钥: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5488">[待校准&#64;5488]</a></p>
+<p>您需要将ROS 2 apt仓库添加到您的系统中。为此，首先使用如下apt指令授权我们的GPG密钥: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5488">[Alyssa&#64;5488]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt update <span class="o">&amp;&amp;</span> sudo apt install curl gnupg2 lsb-release
 sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key  -o /usr/share/keyrings/ros-archive-keyring.gpg
 </pre></div>
@@ -357,7 +357,7 @@ sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key  -
 </div>
 </div>
 <div class="section" id="install-development-tools-and-ros-tools">
-<h3>安装开发版本工具和ROS工具 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5490">[待校准&#64;5490]</a><a class="headerlink" href="#install-development-tools-and-ros-tools" title="永久链接至标题"></a></h3>
+<h3>安装开发工具和ROS工具 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5490">[Alyssa&#64;5490]</a><a class="headerlink" href="#install-development-tools-and-ros-tools" title="永久链接至标题"></a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt update <span class="o">&amp;&amp;</span> sudo apt install -y <span class="se">\</span>
   build-essential <span class="se">\</span>
   cmake <span class="se">\</span>
@@ -398,7 +398,7 @@ sudo apt install --no-install-recommends -y <span class="se">\</span>
 </div>
 <div class="section" id="get-ros-2-code">
 <span id="foxy-linux-dev-get-ros2-code"></span><h2>获取ROS 2代码 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5491">[待校准&#64;5491]</a><a class="headerlink" href="#get-ros-2-code" title="永久链接至标题"></a></h2>
-<p>创建工作区并克隆所有存储库: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5492">[待校准&#64;5492]</a></p>
+<p>创建工作区并克隆所有仓库: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5492">[Alyssa&#64;5492]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir -p ~/ros2_foxy/src
 <span class="nb">cd</span> ~/ros2_foxy
 wget https://raw.githubusercontent.com/ros2/ros2/foxy/ros2.repos
@@ -413,45 +413,45 @@ rosdep update
 rosdep install --from-paths src --ignore-src -y --skip-keys <span class="s2">&quot;fastcdr rti-connext-dds-5.3.1 urdfdom_headers&quot;</span>
 </pre></div>
 </div>
-<p>注意: 如果你使用的是一个基于Ubuntu的发行版 (比如Linux Mint)，但没有这样标识自己，你会收到一条错误信息，比如 <code class="docutils literal notranslate"><span class="pre">Unsupported</span> <span class="pre">OS</span> <span class="pre">[mint]</span></code> 。在这种情况下，将 “-- os = ubuntu: focal” 附加到上述命令中。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5494">[待校准&#64;5494]</a></p>
+<p>注意: 如果你使用的是一个基于Ubuntu的发行版 (比如Linux Mint)，但没有标识自己的版本，你会收到一条错误信息，比如 <code class="docutils literal notranslate"><span class="pre">Unsupported</span> <span class="pre">OS</span> <span class="pre">[mint]</span></code> 。在这种情况下，将 “-- os = ubuntu: focal” 附加到上述命令中。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5494">[Alyssa&#64;5494]</a></p>
 </div>
 <div class="section" id="install-additional-dds-implementations-optional">
 <h2>安装额外的DDS实现 (可选) <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5495">[待校准&#64;5495]</a><a class="headerlink" href="#install-additional-dds-implementations-optional" title="永久链接至标题"></a></h2>
-<p>如果你想使用另一个DDS或RTPS供应商，除了默认的，eProsima的快速RTPS，你可以找到说明 <a class="reference internal" href="DDS-Implementations.html"><span class="doc">here</span></a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5496">[待校准&#64;5496]</a></p>
+<p>如果你想使用除了默认的eProsima的快速RTPS，以外的DDS或RTPS供应商，你可以在 <a class="reference internal" href="DDS-Implementations.html"><span class="doc">here</span></a> 找到说明。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5496">[Alyssa&#64;5496]</a></p>
 </div>
 <div class="section" id="build-the-code-in-the-workspace">
 <h2>在工作区中构建代码 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5497">[待校准&#64;5497]</a><a class="headerlink" href="#build-the-code-in-the-workspace" title="永久链接至标题"></a></h2>
-<p>如果您已经以另一种方式安装了ROS 2 (通过Debians或二进制发行版)，确保在没有其他安装源文件d的新环境中运行以下命令。另外，请确保您的 <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code> 中没有 “源文件/可选/ros/$ {ros_diso}/setup.Bash”。您可以使用命令 “printenv | grep -i ROS” 确保ROS 2不是源文件。输出应为空。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5498">[待校准&#64;5498]</a></p>
-<p>有关使用ROS工作区的更多信息，请参见 <a class="reference internal" href="../Tutorials/Colcon-Tutorial.html"><span class="doc">this tutorial</span></a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5499">[待校准&#64;5499]</a></p>
+<p>如果您已经以另一种方式安装了ROS 2 (通过Debians或二进制发行版)，确保在没有其他安装源文件的新环境中运行以下命令。另外，请确保您的 <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code> 中没有 “source /opt/ros/$ {ros_diso}/setup.Bash”。您可以使用命令 “printenv | grep -i ROS” 确定ROS 2还没有进行环境配置。输出应为空。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5498">[Alyssa&#64;5498]</a></p>
+<p>有关使用ROS工作空间的更多信息，请参见 <a class="reference internal" href="../Tutorials/Colcon-Tutorial.html"><span class="doc">this tutorial</span></a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5499">[Alyssa&#64;5499]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/ros2_foxy/
 colcon build --symlink-install
 </pre></div>
 </div>
-<p>注意: 如果您在编译所有示例时遇到问题，并且这使您无法成功完成构建，你可以使用 <code class="docutils literal notranslate"><span class="pre">COLCON_IGNORE</span></code> 一样 <a class="reference external" href="https://github.com/ros-infrastructure/rep/blob/master/rep-0128.rst">CATKIN_IGNORE</a> 忽略子树或删除文件夹工作区。举个例子: 您希望避免安装大型的tcl库。那么简单地在 <code class="docutils literal notranslate"><span class="pre">cam2image</span></code> 例程目录中运行 <code class="docutils literal notranslate"><span class="pre">touch</span> <span class="pre">COLCON_IGNORE</span></code> ，把它排除在构建过程之外。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5500">[待校准&#64;5500]</a></p>
+<p>注意: 如果您在编译所有示例时遇到问题，并且这使您无法成功完成编译，你可以像使用`CATKIN_IGNORE &lt;<a class="reference external" href="https://github.com/ros-infrastructure/rep/blob/master/rep-0128.rst">https://github.com/ros-infrastructure/rep/blob/master/rep-0128.rst</a>&gt;`__ 的语法一样使用 <code class="docutils literal notranslate"><span class="pre">COLCON_IGNORE</span></code> 命令忽略子树或删除文件夹工作区。举个例子: 您希望避免安装大型的tcl库。那么简单地在 <code class="docutils literal notranslate"><span class="pre">cam2image</span></code> 例程目录中运行 <code class="docutils literal notranslate"><span class="pre">touch</span> <span class="pre">COLCON_IGNORE</span></code> ，把它排除在构建过程之外即可。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5500">[Alyssa&#64;5500]</a></p>
 </div>
 <div class="section" id="environment-setup">
 <h2>环境设置 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5501">[待校准&#64;5501]</a><a class="headerlink" href="#environment-setup" title="永久链接至标题"></a></h2>
 <div class="section" id="source-the-setup-script">
 <h3>获取安装脚本 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5502">[待校准&#64;5502]</a><a class="headerlink" href="#source-the-setup-script" title="永久链接至标题"></a></h3>
-<p>通过采购以下文件来设置您的环境。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5503">[待校准&#64;5503]</a></p>
+<p>通过source以下文件来设置您的环境。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5503">[Alyssa&#64;5503]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>. ~/ros2_foxy/install/local_setup.bash
 </pre></div>
 </div>
 </div>
 </div>
 <div class="section" id="try-some-examples">
-<span id="talker-listener"></span><h2>尝试一些例子 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5504">[待校准&#64;5504]</a><a class="headerlink" href="#try-some-examples" title="永久链接至标题"></a></h2>
-<p>在一个终端中，源文件安装文件，然后运行c <code class="docutils literal notranslate"><span class="pre">talker</span></code>  : <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5505">[待校准&#64;5505]</a></p>
+<span id="talker-listener"></span><h2>尝试运行一些例子 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5504">[Alyssa&#64;5504]</a><a class="headerlink" href="#try-some-examples" title="永久链接至标题"></a></h2>
+<p>在一个终端中，source安装文件，然后运行一个c++ <code class="docutils literal notranslate"><span class="pre">talker</span></code>  : <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5505">[Alyssa&#64;5505]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>. ~/ros2_foxy/install/local_setup.bash
 ros2 run demo_nodes_cpp talker
 </pre></div>
 </div>
-<p>在另一个终端源文件中，安装文件，然后运行Python <code class="docutils literal notranslate"><span class="pre">listener</span></code>  : <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5506">[待校准&#64;5506]</a></p>
+<p>在另一个终端中，source安装文件，然后运行一个Python <code class="docutils literal notranslate"><span class="pre">listener</span></code>  : <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5506">[Alyssa&#64;5506]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>. ~/ros2_foxy/install/local_setup.bash
 ros2 run demo_nodes_py listener
 </pre></div>
 </div>
-<p>你应该看到 <code class="docutils literal notranslate"><span class="pre">talker</span></code> 说这是 <code class="docutils literal notranslate"><span class="pre">Publishing</span></code> 消息 <code class="docutils literal notranslate"><span class="pre">listener</span></code> 说 <code class="docutils literal notranslate"><span class="pre">I</span> <span class="pre">heard</span></code> 这些消息。这将验证capis和Python api是否正常工作。万岁! <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5507">[待校准&#64;5507]</a></p>
+<p>你应该看到 <code class="docutils literal notranslate"><span class="pre">talker</span></code> 说这是 <code class="docutils literal notranslate"><span class="pre">Publishing</span></code> 消息 ，<code class="docutils literal notranslate"><span class="pre">listener</span></code> 说 <code class="docutils literal notranslate"><span class="pre">I</span> <span class="pre">heard</span></code> 这些消息。这证明了C++和Python的APIs都是正常工作的。万岁! <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5507">[Alyssa&#64;5507]</a></p>
 </div>
 <div class="section" id="next-steps-after-installing">
 <h2>安装后的下一步 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5508">[待校准&#64;5508]</a><a class="headerlink" href="#next-steps-after-installing" title="永久链接至标题"></a></h2>
@@ -459,18 +459,18 @@ ros2 run demo_nodes_py listener
 </div>
 <div class="section" id="using-the-ros-1-bridge">
 <h2>使用ROS 1bridge <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5510">[待校准&#64;5510]</a><a class="headerlink" href="#using-the-ros-1-bridge" title="永久链接至标题"></a></h2>
-<p>[需手动修复的语法]ROS 1bridge可以连接从[需手动修复的语法]ROS 1到ROS 2的话题，反之亦然。看到专用 <a class="reference external" href="https://github.com/ros2/ros1_bridge/blob/master/README.md">documentation</a> 如何构建和使用[需手动修复的语法]ROS 1bridge。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5511">[待校准&#64;5511]</a></p>
+<p>ROS 1bridge可以连接从ROS 1到ROS 2的话题，反之亦然。看看这个专门的文献 <a class="reference external" href="https://github.com/ros2/ros1_bridge/blob/master/README.md">documentation</a> 如何编译和使用ROS 1bridge。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5511">[Alyssa&#64;5511]</a></p>
 </div>
 <div class="section" id="additional-rmw-implementations-optional">
 <h2>附加RMW实现 (可选) <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5512">[待校准&#64;5512]</a><a class="headerlink" href="#additional-rmw-implementations-optional" title="永久链接至标题"></a></h2>
-<p>ROS 2使用的默认中间件是 <code class="docutils literal notranslate"><span class="pre">Fast-RTPS</span></code> ，但中间件 (RMW) 可以在运行时替换。查看关于如何使用多个RMWs的 <a class="reference internal" href="../How-To-Guides/Working-with-multiple-RMW-implementations.html"><span class="doc">guide</span></a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5513">[待校准&#64;5513]</a></p>
+<p>ROS 2使用的默认中间件是 <code class="docutils literal notranslate"><span class="pre">Fast-RTPS</span></code> ，但中间件 (RMW) 可以在运行时进行替换。查看 <a class="reference internal" href="../How-To-Guides/Working-with-multiple-RMW-implementations.html"><span class="doc">guide</span></a> 了解如何使用多个RMWs。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5513">[Alyssa&#64;5513]</a></p>
 </div>
 <div class="section" id="alternate-compilers">
 <h2>备用编译器 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5514">[待校准&#64;5514]</a><a class="headerlink" href="#alternate-compilers" title="永久链接至标题"></a></h2>
-<p>使用除gcc之外的其他编译器编译ROS 2很容易。如果您将环境变量 <code class="docutils literal notranslate"><span class="pre">CC</span></code> 和 <code class="docutils literal notranslate"><span class="pre">CXX</span></code> 分别设置为工作的C和C + + 编译器的可执行文件，和检索CMake配置 (通过使用 <code class="docutils literal notranslate"><span class="pre">--force-cmake-config</span></code> 或删除您想要受影响的包)，CMake将重新配置并使用不同的编译器。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5515">[待校准&#64;5515]</a></p>
+<p>使用除gcc之外的其他编译器编译ROS 2也很容易。如果您将环境变量 <code class="docutils literal notranslate"><span class="pre">CC</span></code> 和 <code class="docutils literal notranslate"><span class="pre">CXX</span></code> 分别设置为可用的C和C + + 编译器去生成可执行文件，并依次重新触发CMake配置 (通过使用 <code class="docutils literal notranslate"><span class="pre">--force-cmake-config</span></code> 或删除您想要重新编译的包)，CMake将使用不同的编译器重新配置。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5515">[Alyssa&#64;5515]</a></p>
 <div class="section" id="clang">
 <h3><a class="toc-backref" href="#id17">Clang</a><a class="headerlink" href="#clang" title="永久链接至标题"></a></h3>
-<p>要将CMake配置为检测和使用Clang，请执行以下操作: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5517">[待校准&#64;5517]</a></p>
+<p>检测并且使用Clang去配置CMake，请执行以下操作: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5517">[Alyssa&#64;5517]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt install clang
 <span class="nb">export</span> <span class="nv">CC</span><span class="o">=</span>clang
 <span class="nb">export</span> <span class="nv">CXX</span><span class="o">=</span>clang++
@@ -481,11 +481,11 @@ colcon build --cmake-force-configure
 </div>
 <div class="section" id="stay-up-to-date">
 <h2>保持最新 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5518">[待校准&#64;5518]</a><a class="headerlink" href="#stay-up-to-date" title="永久链接至标题"></a></h2>
-<p>请参阅 <a class="reference internal" href="Maintaining-a-Source-Checkout.html"><span class="doc">主源文件检出ROS 2Foxy [待校准&#64;5438]</span></a> 以定期调用y刷新源文件安装。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5519">[待校准&#64;5519]</a></p>
+<p>请参阅 <a class="reference internal" href="Maintaining-a-Source-Checkout.html"><span class="doc">主源文件检出ROS 2Foxy [待校准&#64;5438]</span></a> 以定期的刷新安装源。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5519">[Alyssa&#64;5519]</a></p>
 </div>
 <div class="section" id="troubleshooting">
 <h2><a class="toc-backref" href="#id19">故障排除</a><a class="headerlink" href="#troubleshooting" title="永久链接至标题"></a></h2>
-<p>故障排除技术可以找到 <a class="reference internal" href="../How-To-Guides/Installation-Troubleshooting.html#linux-troubleshooting"><span class="std std-ref">here</span></a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5521">[待校准&#64;5521]</a></p>
+<p>故障排除技术可以参考 <a class="reference internal" href="../How-To-Guides/Installation-Troubleshooting.html#linux-troubleshooting"><span class="std std-ref">here</span></a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5521">[Alyssa&#64;5521]</a></p>
 </div>
 <div class="section" id="uninstall">
 <h2><a class="toc-backref" href="#id20">卸载</a><a class="headerlink" href="#uninstall" title="永久链接至标题"></a></h2>
