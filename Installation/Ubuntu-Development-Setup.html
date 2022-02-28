@@ -287,7 +287,7 @@
 <li><p><a class="reference internal" href="#system-setup" id="id2">系统设置</a></p>
 <ul>
 <li><p><a class="reference internal" href="#set-locale" id="id3">设置语言区域 [Alyssa&#64;5485]</a></p></li>
-<li><p><a class="reference internal" href="#add-the-ros-2-apt-repository" id="id4">添加ROS 2 apt仓库 [待校准&#64;5487]</a></p></li>
+<li><p><a class="reference internal" href="#add-the-ros-2-apt-repository" id="id4">添加ROS 2 apt仓库</a></p></li>
 <li><p><a class="reference internal" href="#install-development-tools-and-ros-tools" id="id5">安装开发工具和ROS工具 [Alyssa&#64;5490]</a></p></li>
 </ul>
 </li>
@@ -323,9 +323,9 @@
 </ul>
 <p>其他支持级别不同的Linux平台包括: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5480">[待校准&#64;5480]</a></p>
 <ul class="simple">
-<li><p>Arch Linux，见 <a class="reference external" href="https://wiki.archlinux.org/index.php/ROS#ROS_2">alternate instructions</a>  <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5481">[待校准&#64;5481]</a></p></li>
-<li><p>Fedora Linux，请参阅 “替代说明 &lt;Fedora-开发-安装&gt;” <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5482">[待校准&#64;5482]</a></p></li>
-<li><p>开放嵌入式/网络操作系统，见 <a class="reference external" href="https://github.com/ros/meta-ros/wiki/OpenEmbedded-Build-Instructions">alternate instructions</a>  <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5483">[待校准&#64;5483]</a></p></li>
+<li><p>Arch Linux，见 <a class="reference external" href="https://wiki.archlinux.org/index.php/ROS#ROS_2">替换说明</a> <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5481">[小鱼&#64;5481]</a></p></li>
+<li><p>Fedora Linux，请参阅  <a class="reference internal" href="Fedora-Development-Setup.html"><span class="doc">替代说明</span></a> <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5482">[小鱼&#64;5482]</a></p></li>
+<li><p>开放嵌入式/网络操作系统，见 <a class="reference external" href="https://github.com/ros/meta-ros/wiki/OpenEmbedded-Build-Instructions">替换说明</a> <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5483">[小鱼&#64;5483]</a></p></li>
 </ul>
 </div>
 <div class="section" id="system-setup">
@@ -345,7 +345,7 @@ locale  <span class="c1"># verify settings</span>
 </div>
 </div>
 <div class="section" id="add-the-ros-2-apt-repository">
-<h3>添加ROS 2 apt仓库 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5487">[待校准&#64;5487]</a><a class="headerlink" href="#add-the-ros-2-apt-repository" title="永久链接至标题"></a></h3>
+<h3><a class="toc-backref" href="#id4">添加ROS 2 apt仓库</a><a class="headerlink" href="#add-the-ros-2-apt-repository" title="永久链接至标题"></a></h3>
 <p>您需要将ROS 2 apt仓库添加到您的系统中。为此，首先使用如下apt指令授权我们的GPG密钥: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5488">[Alyssa&#64;5488]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt update <span class="o">&amp;&amp;</span> sudo apt install curl gnupg2 lsb-release
 sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key  -o /usr/share/keyrings/ros-archive-keyring.gpg
