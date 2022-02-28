@@ -290,7 +290,7 @@
 <li><p><a class="reference internal" href="#changes-since-the-dashing-release" id="id4">自Dashing发布以来的变化 [待校准&#64;4672]</a></p>
 <ul>
 <li><p><a class="reference internal" href="#geometry-msgs" id="id5">几何 _ msgs [待校准&#64;4673]</a></p></li>
-<li><p><a class="reference internal" href="#rclcpp" id="id6">rclcpp [待校准&#64;4505]</a></p></li>
+<li><p><a class="reference internal" href="#rclcpp" id="id6">ROS C++客户端库（rclcpp） [小鱼&#64;4505]</a></p></li>
 <li><p><a class="reference internal" href="#rmw" id="id7">rmw [待校准&#64;4597]</a></p></li>
 <li><p><a class="reference internal" href="#ros2cli" id="id8">ros2cli [待校准&#64;4697]</a></p></li>
 <li><p><a class="reference internal" href="#rviz" id="id9">rviz [待校准&#64;4624]</a></p></li>
@@ -365,7 +365,7 @@
 <p>静态变换广播器和听众现在在 <code class="docutils literal notranslate"><span class="pre">/tf_static</span></code> 话题上使用服务质量耐久性 <code class="docutils literal notranslate"><span class="pre">transient_local</span></code> 。与ROS 1的锁定设置类似，静态转换只需发布一次。新的听众将接收来自所有静态广播器的转换，这些静态广播器是活的并且已经发布过。必须更新所有发布者以使用此持久性设置，否则转换侦听器将不会接收其消息。有关更多详细信息，请参阅此请求:  <a class="reference external" href="https://github.com/ros2/geometry2/pull/160">https://github.com/ros2/geometry2/pull/160</a>  <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=4677">[待校准&#64;4677]</a></p>
 </div>
 <div class="section" id="rclcpp">
-<h3>rclcpp <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=4505">[待校准&#64;4505]</a><a class="headerlink" href="#rclcpp" title="永久链接至标题"></a></h3>
+<h3>ROS C++客户端库（rclcpp） <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=4505">[小鱼&#64;4505]</a><a class="headerlink" href="#rclcpp" title="永久链接至标题"></a></h3>
 <div class="section" id="api-break-with-get-actual-qos">
 <h4><code class="docutils literal notranslate"><span class="pre">get_actual_qos()</span></code> API中断 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=4678">[待校准&#64;4678]</a><a class="headerlink" href="#api-break-with-get-actual-qos" title="永久链接至标题"></a></h4>
 <p>介绍Dashing， <code class="docutils literal notranslate"><span class="pre">get_actual_qos()</span></code> 方法 <code class="docutils literal notranslate"><span class="pre">PublisherBase</span></code> 和 <code class="docutils literal notranslate"><span class="pre">SubscriptionBase</span></code> 以前返回rmw类型， <code class="docutils literal notranslate"><span class="pre">rmw_qos_profile_t</span></code> ，但那却尴尬重用创建其他实体。因此，它被更新为返回 “rclcpp:: qos”。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=4679">[待校准&#64;4679]</a></p>
