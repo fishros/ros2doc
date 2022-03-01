@@ -395,7 +395,7 @@ brew install qt@5 freetype assimp
 <li><p><em>Optional</em>: if you want to build the ROS 1&lt;-&gt;2 bridge, then you must also install ROS 1:</p>
 <ul>
 <li><p>从标准安装说明开始: <a class="reference external" href="https://wiki.ros.org/kinetic/Installation/OSX/Homebrew/Source">https://wiki.ros.org/kinetic/Installation/OSX/Homebrew/Source</a> <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5724">[Alyssa&#64;5724]</a></p></li>
-<li><p>当您到达调用 <code class="docutils literal notranslate"><span class="pre">rosinstall_generator</span></code> 来获取源文件的步骤时，这里有一个替代调用，它只带来生成有用的bridge所需的最低限度: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5725">[待校准&#64;5725]</a></p>
+<li><p>当您进行调用 <code class="docutils literal notranslate"><span class="pre">rosinstall_generator</span></code> 来获取源文件的步骤时，这里有一个替代调用，它只安装一些为了生成有用的bridge所需的最低限度依赖包: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5725">[Alyssa&#64;5725]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rosinstall_generator catkin common_msgs roscpp rosmsg --rosdistro kinetic --deps --wet-only --tar &gt; kinetic-ros2-bridge-deps.rosinstall
 wstool init -j8 src kinetic-ros2-bridge-deps.rosinstall
 </pre></div>
