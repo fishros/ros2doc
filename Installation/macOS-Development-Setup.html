@@ -288,7 +288,7 @@
 <li><p><a class="reference internal" href="#disable-system-integrity-protection-sip" id="id3">禁用系统完整性保护 (SIP) [待校准&#64;5727]</a></p></li>
 <li><p><a class="reference internal" href="#get-the-ros-2-code" id="id4">获取ROS 2代码 [待校准&#64;5599]</a></p></li>
 <li><p><a class="reference internal" href="#install-additional-dds-vendors-optional" id="id5">安装其他DDS供应商 (可选) [待校准&#64;5729]</a></p></li>
-<li><p><a class="reference internal" href="#build-the-ros-2-code" id="id6">构建ROS 2代码 [待校准&#64;5604]</a></p></li>
+<li><p><a class="reference internal" href="#build-the-ros-2-code" id="id6">编译ROS 2代码 [Alyssa&#64;5604]</a></p></li>
 <li><p><a class="reference internal" href="#environment-setup" id="id7">环境设置 [待校准&#64;5501]</a></p></li>
 <li><p><a class="reference internal" href="#try-some-examples" id="id8">尝试运行一些例子 [Alyssa&#64;5504]</a></p></li>
 <li><p><a class="reference internal" href="#next-steps-after-installing" id="id9">安装后的下一步 [待校准&#64;5508]</a></p></li>
@@ -425,7 +425,7 @@ vcs import src &lt; ros2.repos
 <p>如果你想使用除了默认的eProsima的快速RTPS，以外的DDS或RTPS供应商，你可以在 <a class="reference internal" href="DDS-Implementations.html"><span class="doc">here</span></a> 找到说明。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5496">[Alyssa&#64;5496]</a></p>
 </div>
 <div class="section" id="build-the-ros-2-code">
-<h2>构建ROS 2代码 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5604">[待校准&#64;5604]</a><a class="headerlink" href="#build-the-ros-2-code" title="永久链接至标题"></a></h2>
+<h2>编译ROS 2代码 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5604">[Alyssa&#64;5604]</a><a class="headerlink" href="#build-the-ros-2-code" title="永久链接至标题"></a></h2>
 <p>运行 <code class="docutils literal notranslate"><span class="pre">colcon</span></code> 工具来构建一切 (更多关于在 <a class="reference internal" href="../Tutorials/Colcon-Tutorial.html"><span class="doc">this tutorial</span></a> 中使用 <code class="docutils literal notranslate"><span class="pre">colcon</span></code> 的信息): <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5730">[待校准&#64;5730]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/ros2_foxy/
 colcon build --symlink-install --packages-skip-by-dep python_qt_binding
