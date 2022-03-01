@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>在Fedora Linux上构建ROS 2 [待校准@5424] &mdash; ROS 2 documentation  文档</title>
+  <title>在Fedora Linux上构建ROS 2 &mdash; ROS 2 documentation  文档</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
@@ -24,8 +24,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="安装最新的ROS 2开发版本 [待校准@5428]" href="Latest-Development-Setup.html" />
-    <link rel="prev" title="在Windows上安装ROS 2 [待校准@5638]" href="Windows-Install-Binary.html" /> 
+    <link rel="next" title="安装最新的ROS 2开发版本" href="Latest-Development-Setup.html" />
+    <link rel="prev" title="在Windows上安装ROS 2" href="Windows-Install-Binary.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -47,13 +47,13 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../Installation.html">安装</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="Ubuntu-Development-Setup.html">在Ubuntu Linux上构建ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Ubuntu-Install-Binary.html">在Ubuntu Linux上安装ROS 2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Ubuntu-Install-Debians.html">通过Debian包安装ROS 2 [待校准&#64;5547]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="macOS-Development-Setup.html">在macOS上构建ROS 2 [待校准&#64;5705]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ubuntu-Install-Debians.html">通过Debian包安装ROS 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="macOS-Development-Setup.html">在macOS上构建ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="macOS-Install-Binary.html">在macOS上安装ROS 2 [待校准&#64;5736]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Windows-Development-Setup.html">在Windows上构建ROS 2 [待校准&#64;5561]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Windows-Install-Binary.html">在Windows上安装ROS 2 [待校准&#64;5638]</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">在Fedora Linux上构建ROS 2 [待校准&#64;5424]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Latest-Development-Setup.html">安装最新的ROS 2开发版本 [待校准&#64;5428]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Windows-Development-Setup.html">在Windows上构建ROS 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Windows-Install-Binary.html">在Windows上安装ROS 2</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">在Fedora Linux上构建ROS 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Latest-Development-Setup.html">安装最新的ROS 2开发版本</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Maintaining-a-Source-Checkout.html">维护ROS 2Foxy源文件的检出 [Alyssa&#64;5438]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Testing.html">用于测试的替代安装源 [待校准&#64;5461]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="DDS-Implementations.html">安装DDS实现 [待校准&#64;5305]</a><ul>
@@ -266,7 +266,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="../Installation.html">安装</a> &raquo;</li>
-      <li>在Fedora Linux上构建ROS 2 [待校准&#64;5424]</li>
+      <li>在Fedora Linux上构建ROS 2</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/ros2/ros2_documentation/blob/foxy/source/Installation/Fedora-Development-Setup.rst" class="fa fa-github"> 在 GitHub 上修改</a>
       </li>
@@ -279,7 +279,7 @@
 
 
   <div class="section" id="building-ros-2-on-fedora-linux">
-<h1>在Fedora Linux上构建ROS 2 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5424">[待校准&#64;5424]</a><a class="headerlink" href="#building-ros-2-on-fedora-linux" title="永久链接至标题"></a></h1>
+<h1>在Fedora Linux上构建ROS 2<a class="headerlink" href="#building-ros-2-on-fedora-linux" title="永久链接至标题"></a></h1>
 <div class="section" id="how-to-setup-the-development-environment">
 <h2>如何设置开发版本环境？ <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5425">[待校准&#64;5425]</a><a class="headerlink" href="#how-to-setup-the-development-environment" title="永久链接至标题"></a></h2>
 <p>在Fedora上构建ROS 2需要以下系统依赖项。它们可以安装如下 <code class="docutils literal notranslate"><span class="pre">dnf</span></code> : <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5426">[待校准&#64;5426]</a></p>
@@ -337,8 +337,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="Windows-Install-Binary.html" class="btn btn-neutral float-left" title="在Windows上安装ROS 2 [待校准@5638]" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
-        <a href="Latest-Development-Setup.html" class="btn btn-neutral float-right" title="安装最新的ROS 2开发版本 [待校准@5428]" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="Windows-Install-Binary.html" class="btn btn-neutral float-left" title="在Windows上安装ROS 2" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="Latest-Development-Setup.html" class="btn btn-neutral float-right" title="安装最新的ROS 2开发版本" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
