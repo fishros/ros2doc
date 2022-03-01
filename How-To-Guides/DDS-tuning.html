@@ -298,7 +298,7 @@
 </pre></div>
 </div>
 <p>减小此参数的值还会减少未收到片段的时间窗口。对于所有传入的片段，该参数是全局的，因此需要为每个环境考虑降低其值的可行性。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6035">[待校准&#64;6035]</a></p>
-<p><strong>Solution:</strong> Increase the value of the <code class="docutils literal notranslate"><span class="pre">ipfrag_high_thresh</span></code> parameter.</p>
+<p>解决方案:  增加 <code class="docutils literal notranslate"><span class="pre">ipfrag_high_thresh</span></code> 参数的值。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6036">[小鱼&#64;6036]</a></p>
 <p>[需手动修复的语法]``net.ipv4.ipfrag_high_thresh / /proc/sys/net/ipv4/ipfrag_high_thresh``  (默认值: 262144字节): 用于重新组装IP片段的最大内存。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6037">[待校准&#64;6037]</a></p>
 <p>例如，通过运行以下命令将值增加到128mb: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6038">[待校准&#64;6038]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sudo sysctl net.ipv4.ipfrag_high_thresh=134217728     # (128 MB)</span>
@@ -331,7 +331,7 @@
 <p>Issue问题: 尽管使用了可靠的设置并通过有线网络传输，但CycloneDDS无法可靠地传递大消息。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6048">[待校准&#64;6048]</a></p>
 <p>这个问题应该是 <a class="reference external" href="https://github.com/eclipse-cyclonedds/cyclonedds/issues/484">addressed soon</a> 。在此之前，我们提出了以下解决方案 (使用 <a class="reference external" href="https://github.com/jacobperron/pc_pipe">this test program</a> 调试): <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6049">[待校准&#64;6049]</a></p>
 <p>Solution解决方案: Increase增加linux内核接收缓冲区的最大大小和Cyclone使用的最小套接字接收缓冲区大小。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6050">[待校准&#64;6050]</a></p>
-<p><em>Adjustments to solve for a 9MB message:</em></p>
+<p>为解决9MB消息而进行的调整: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6051">[小鱼&#64;6051]</a></p>
 <p>通过运行以下命令设置最大接收缓冲区大小 <code class="docutils literal notranslate"><span class="pre">rmem_max</span></code> : <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6052">[待校准&#64;6052]</a></p>
 <blockquote>
 <div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sudo sysctl -w net.core.rmem_max=2147483647</span>
@@ -364,7 +364,7 @@
 <div class="section" id="rti-connext-tuning">
 <h2>RTI Connext调谐 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6056">[待校准&#64;6056]</a><a class="headerlink" href="#rti-connext-tuning" title="永久链接至标题"></a></h2>
 <p>Issue问题: con尽管使用了可靠的设置并通过有线网络传输，但Connext无法可靠地传递大消息。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6057">[待校准&#64;6057]</a></p>
-<p><strong>Solution:</strong> This <a class="reference external" href="https://github.com/jacobperron/pc_pipe/blob/master/etc/ROS2TEST_QOS_PROFILES.xml">Connext QoS profile</a>, along with increasing the <code class="docutils literal notranslate"><span class="pre">rmem_max</span></code> parameter.</p>
+<p>解决方案: 此 <a class="reference external" href="https://github.com/jacobperron/pc_pipe/blob/master/etc/ROS2TEST_QOS_PROFILES.xml">Connext QoS 配置文件</a> ，同时增加 <code class="docutils literal notranslate"><span class="pre">rmem_max</span></code> 参数。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6058">[小鱼&#64;6058]</a></p>
 <p>通过运行以下命令设置最大接收缓冲区大小 <code class="docutils literal notranslate"><span class="pre">rmem_max</span></code> : <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6052">[待校准&#64;6052]</a></p>
 <blockquote>
 <div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sudo sysctl -w net.core.rmem_max=4194304</span>
