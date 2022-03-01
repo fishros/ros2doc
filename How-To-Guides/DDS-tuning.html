@@ -280,18 +280,18 @@
 
   <div class="section" id="dds-tuning-information">
 <h1>DDS调优指南 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6021">[小鱼&#64;6021]</a><a class="headerlink" href="#dds-tuning-information" title="永久链接至标题"></a></h1>
-<p>本页提供了一些关于参数调整的指导，这些参数调整被发现可以解决在实际情况下在Linux上使用各种DDS实现时所面临的问题。我们在Linux上或使用一个供应商时发现的问题可能会发生在其他平台和此处未记录的供应商身上。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6022">[待校准&#64;6022]</a></p>
+<p>本页提供了一些关于参数调整的指导，这些参数调整被发现可以解决在实际情况下在Linux上使用各种DDS实现时所面临的问题。我们在Linux上或使用一个供应商时发现的问题可能会发生在其他平台和此处未记录的供应商身上。</p>
 <p>以下建议是调整的起点; 它们适用于特定的系统和环境，但调整可能因多种因素而异。在调试时，您可能需要增加或减少与消息大小、网络拓扑等因素相关的值。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6023">[待校准&#64;6023]</a></p>
 <p>重要的是要认识到，优化参数可能会给重新源文件带来代价，并且可能会影响系统的某些部分，超出预期的改进范围。提高可靠性的好处应该与每个个案的任何不利因素相权衡。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6024">[待校准&#64;6024]</a></p>
 <div class="section" id="cross-vendor-tuning">
-<span id="id1"></span><h2>跨供应商调整 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6025">[待校准&#64;6025]</a><a class="headerlink" href="#cross-vendor-tuning" title="永久链接至标题"></a></h2>
+<span id="id1"></span><h2>跨供应商调整<a class="headerlink" href="#cross-vendor-tuning" title="永久链接至标题"></a></h2>
 <p>Issue问题: when当一些IP片段被丢弃时，通过有损 (通常是WiFi) 连接发送数据会变得有问题，这可能导致接收端的内核缓冲区变满。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6026">[待校准&#64;6026]</a></p>
 <p>当UDP数据包缺少至少一个IP片段时，其余接收到的片段会填满内核缓冲区。默认情况下，linux内核将在尝试重组数据包片段30秒后超时。因为内核缓冲区已满此时 (默认大小是256KB)，无新片段可以进来，所以连接看似  &quot;hang&quot; 长时间。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6027">[待校准&#64;6027]</a></p>
 <p>此问题在所有DDS供应商中都是通用的，因此解决方案涉及调整内核参数。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6028">[待校准&#64;6028]</a></p>
 <p>Solution解决方案: Use使用尽力而为的QoS设置，而不是可靠的。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6029">[待校准&#64;6029]</a></p>
 <p>尽力而为的设置减少了网络流量，因为DDS的实施不需要产生可靠通讯的开销，如果发布者要求对发送给订阅者的消息进行确认，并且必须重新发送未正确接收的样本。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6030">[待校准&#64;6030]</a></p>
 <p>但是，如果用于IP片段的内核缓冲区已满，则症状仍然相同 (阻塞30秒)。这个解决方案应该在不需要调整参数的情况下改善问题。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6031">[待校准&#64;6031]</a></p>
-<p><strong>Solution:</strong> Reduce the value of the <code class="docutils literal notranslate"><span class="pre">ipfrag_time</span></code> parameter.</p>
+<p>解决方案:  减少 <code class="docutils literal notranslate"><span class="pre">ipfrag_time</span></code> 参数的值。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6032">[小鱼&#64;6032]</a></p>
 <p>[需手动修复的语法]``net.ipv4.ipfrag_time / /proc/sys/net/ipv4/ipfrag_time``  (默认30秒): 将IP片段保存在内存中的时间 (以秒为单位)。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6033">[待校准&#64;6033]</a></p>
 <p>例如，通过运行以下命令将值减小到3s: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6034">[待校准&#64;6034]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sudo sysctl net.ipv4.ipfrag_time=3</span>
