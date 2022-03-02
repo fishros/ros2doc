@@ -3,5 +3,4 @@
 完整文档请访问:http://ros2.fishros.com
 
 ## 最近一次更新记录
-- [小鱼](https://github.com/fishros) update:6556|1
-- [小鱼](https://github.com/fishros) mark:title
+- [Alyssa](https://github.com/alyssa1024) mark:no_calib
