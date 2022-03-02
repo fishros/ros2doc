@@ -294,7 +294,7 @@
 <li><p><a class="reference internal" href="#get-ros-2-code" id="id6">获取ROS 2代码</a></p></li>
 <li><p><a class="reference internal" href="#install-dependencies-using-rosdep" id="id7">使用rosdep安装依赖项</a></p></li>
 <li><p><a class="reference internal" href="#install-additional-dds-implementations-optional" id="id8">安装额外的DDS实现 (可选) [待校准&#64;5495]</a></p></li>
-<li><p><a class="reference internal" href="#build-the-code-in-the-workspace" id="id9">在工作区中构建代码 [待校准&#64;5497]</a></p></li>
+<li><p><a class="reference internal" href="#build-the-code-in-the-workspace" id="id9">在工作区中编译代码 [Alyssa&#64;5497]</a></p></li>
 <li><p><a class="reference internal" href="#environment-setup" id="id10">环境设置 [待校准&#64;5501]</a></p>
 <ul>
 <li><p><a class="reference internal" href="#source-the-setup-script" id="id11">获取安装脚本 [待校准&#64;5502]</a></p></li>
@@ -420,7 +420,7 @@ rosdep install --from-paths src --ignore-src -y --skip-keys <span class="s2">&qu
 <p>如果你想使用除了默认的eProsima的快速RTPS，以外的DDS或RTPS供应商，你可以在 <a class="reference internal" href="DDS-Implementations.html"><span class="doc">here</span></a> 找到说明。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5496">[Alyssa&#64;5496]</a></p>
 </div>
 <div class="section" id="build-the-code-in-the-workspace">
-<h2>在工作区中构建代码 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5497">[待校准&#64;5497]</a><a class="headerlink" href="#build-the-code-in-the-workspace" title="永久链接至标题"></a></h2>
+<h2>在工作区中编译代码 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5497">[Alyssa&#64;5497]</a><a class="headerlink" href="#build-the-code-in-the-workspace" title="永久链接至标题"></a></h2>
 <p>如果您已经以另一种方式安装了ROS 2 (通过Debians或二进制发行版)，确保在没有其他安装源文件的新环境中运行以下命令。另外，请确保您的 <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code> 中没有 “source /opt/ros/$ {ros_diso}/setup.Bash”。您可以使用命令 “printenv | grep -i ROS” 确定ROS 2还没有进行环境配置。输出应为空。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5498">[Alyssa&#64;5498]</a></p>
 <p>有关使用ROS工作空间的更多信息，请参见 <a class="reference internal" href="../Tutorials/Colcon-Tutorial.html"><span class="doc">this tutorial</span></a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5499">[Alyssa&#64;5499]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/ros2_foxy/
