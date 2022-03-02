@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>话题vs服务vsAction [待校准@6548] &mdash; ROS 2 documentation  文档</title>
+  <title>话题vs服务vs动作 [小鱼@6548] &mdash; ROS 2 documentation  文档</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
@@ -169,7 +169,7 @@
 <li class="toctree-l2"><a class="reference internal" href="Run-2-nodes-in-single-or-separate-docker-containers.html">在Docker中运行ROS 2节点 [社区-贡献] [待校准&#64;6510]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Package-maintainer-guide.html">ROS 2包维护者指南 [待校准&#64;6336]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Building-a-Custom-Debian-Package.html">构建自定义Debian包</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">话题vs服务vsAction [待校准&#64;6548]</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">话题vs服务vs动作 [小鱼&#64;6548]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Using-Variants.html">使用变体 [待校准&#64;6582]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Using-ros2-param.html">使用 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span></code> 命令行工具 [待校准&#64;6597]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="RQt-Source-Install.html">从源码构建RQt</a><ul>
@@ -266,7 +266,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="../How-To-Guides.html">问题指南</a> &raquo;</li>
-      <li>话题vs服务vsAction [待校准&#64;6548]</li>
+      <li>话题vs服务vs动作 [小鱼&#64;6548]</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/ros2/ros2_documentation/blob/foxy/source/How-To-Guides/Topics-Services-Actions.rst" class="fa fa-github"> 在 GitHub 上修改</a>
       </li>
@@ -279,13 +279,13 @@
 
 
   <div class="section" id="topics-vs-services-vs-actions">
-<span id="topicsservicesactions"></span><h1>话题vs服务vsAction <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6548">[待校准&#64;6548]</a><a class="headerlink" href="#topics-vs-services-vs-actions" title="永久链接至标题"></a></h1>
+<span id="topicsservicesactions"></span><h1>话题vs服务vs动作 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6548">[小鱼&#64;6548]</a><a class="headerlink" href="#topics-vs-services-vs-actions" title="永久链接至标题"></a></h1>
 <div class="contents local topic" id="contents">
 <p class="topic-title">内容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6325">[待校准&#64;6325]</a></p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#topics" id="id1">话题 [待校准&#64;6550]</a></p></li>
 <li><p><a class="reference internal" href="#services" id="id2">服务 [待校准&#64;6553]</a></p></li>
-<li><p><a class="reference internal" href="#actions" id="id3">Actions [待校准&#64;6556]</a></p></li>
+<li><p><a class="reference internal" href="#actions" id="id3">动作（Actions）</a></p></li>
 </ul>
 </div>
 <p>设计系统时，有三种主要的界面风格。内容的规格在 <a class="reference internal" href="../Concepts/About-ROS-Interfaces.html"><span class="doc">Interfaces Overview</span></a> 中。编写此文档的目的是为读者提供有关何时使用每种类型的界面的指南。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6549">[待校准&#64;6549]</a></p>
@@ -304,7 +304,7 @@
 </ul>
 </div>
 <div class="section" id="actions">
-<h2>Actions <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6556">[待校准&#64;6556]</a><a class="headerlink" href="#actions" title="永久链接至标题"></a></h2>
+<h2><a class="toc-backref" href="#id3">动作（Actions）</a><a class="headerlink" href="#actions" title="永久链接至标题"></a></h2>
 <ul class="simple">
 <li><p>应该用于移动机器人或运行更长时间但在执行过程中提供反馈的任何离散行为。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6557">[待校准&#64;6557]</a></p></li>
 <li><p>动作最重要的特性是它们可以被抢占，抢占应该始终由动作服务器干净地实现。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6558">[待校准&#64;6558]</a></p></li>
