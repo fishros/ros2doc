@@ -285,7 +285,7 @@
 <p class="topic-title">内容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6325">[待校准&#64;6325]</a></p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#background" id="id1">背景 [待校准&#64;6191]</a></p></li>
-<li><p><a class="reference internal" href="#using-qos-overrides" id="id2">使用QoS覆盖 [待校准&#64;6328]</a></p></li>
+<li><p><a class="reference internal" href="#using-qos-overrides" id="id2">使用QoS覆盖</a></p></li>
 <li><p><a class="reference internal" href="#example" id="id3">示例 [待校准&#64;6204]</a></p></li>
 </ul>
 </div>
@@ -295,7 +295,7 @@
 <p>当记录/播放来自某个话题的数据时，Ros2Bag会调整其请求/提供的QoS配置文件，以防止信息丢失。在回放过程中，Ros2bag也试图保留话题最初提供的政策。某些情况可能需要指定明确的QoS配置文件设置，以便Ros2Bag可以记录/回放话题。这些QoS配置文件覆盖可以通过CLI使用 <code class="docutils literal notranslate"><span class="pre">--qos-profile-overrides-path</span></code> 标志指定。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6327">[待校准&#64;6327]</a></p>
 </div>
 <div class="section" id="using-qos-overrides">
-<h2>使用QoS覆盖 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6328">[待校准&#64;6328]</a><a class="headerlink" href="#using-qos-overrides" title="永久链接至标题"></a></h2>
+<h2><a class="toc-backref" href="#id2">使用QoS覆盖</a><a class="headerlink" href="#using-qos-overrides" title="永久链接至标题"></a></h2>
 <p>配置文件替代的YAML模式是针对每个QoS策略的具有键/值对的话题名称的字典: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6329">[待校准&#64;6329]</a></p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">topic_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">str</span>
   <span class="l l-Scalar l-Scalar-Plain">qos_policy_name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">str</span>
