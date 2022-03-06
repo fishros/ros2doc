@@ -379,7 +379,7 @@ curl https://raw.githubusercontent.com/ros2/ros2/foxy/ros2.repos -o ros2.repos
 </div>
 <div class="section" id="update-your-repositories">
 <h2>更新您的仓库 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5452">[待校准&#64;5452]</a><a class="headerlink" href="#update-your-repositories" title="永久链接至标题"></a></h2>
-<p>您会注意到，在 <a class="reference external" href="https://raw.githubusercontent.com/ros2/ros2/foxy/ros2.repos">ros2.repos</a> 文件中，每个仓库都有一个与之关联的 <code class="docutils literal notranslate"><span class="pre">version</span></code> ，它指向特定的提交哈希、标记或分支名称。这些版本可能指的是新标签/分支，您的仓库本地副本将无法识别，因为它们已经过时。因此，您应该使用以下命令更新已经签出的仓库: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5453">[待校准&#64;5453]</a></p>
+<p>您会注意到，在 <a class="reference external" href="https://raw.githubusercontent.com/ros2/ros2/foxy/ros2.repos">ros2.repos</a> 文件中，每个仓库都有一个与之关联的 <code class="docutils literal notranslate"><span class="pre">version</span></code> ，它指向特定的提交哈希值、标签或分支名称。这些版本有可能指向的新标签/分支，您本地复制的仓库将因为已经过时而无法识别。因此，您应该使用以下命令更新已经检出的仓库: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5453">[Alyssa&#64;5453]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vcs custom --args remote update
 </pre></div>
 </div>
