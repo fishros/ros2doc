@@ -280,7 +280,7 @@
 
   <div class="section" id="alternative-installation-sources-for-testing">
 <h1>用于测试的替代安装源<a class="headerlink" href="#alternative-installation-sources-for-testing" title="永久链接至标题"></a></h1>
-<p>许多ROS包作为预构建的二进制文件提供。通常，当遵循 <a class="reference internal" href="../Installation.html"><span class="doc">安装</span></a> 时，你会得到二进制文件的发布版本。还有一些二进制文件的预发布版本，可用于正式发布之前的测试。如果您想试用ROS二进制文件的预发布版本，本文将介绍几个选项。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5462">[待校准&#64;5462]</a></p>
+<p>许多ROS包是作为预编译的二进制文件提供。通常，当按照 <a class="reference internal" href="../Installation.html"><span class="doc">安装</span></a> 步骤操作时，你会得到二进制文件的发布版本。还有一些二进制文件的预发布版本，是用于正式发布之前的测试。如果您想试用ROS二进制文件的预发布版本，本文将介绍几个选项。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5462">[Alyssa&#64;5462]</a></p>
 <div class="section" id="debian-testing-repository">
 <h2>Debian测试仓库 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5463">[待校准&#64;5463]</a><a class="headerlink" href="#debian-testing-repository" title="永久链接至标题"></a></h2>
 <p>当包被释放到ROS分发 (使用bloom) 时，buildfarm会将它们构建到debian包中，这些包会暂时存储在building apt仓库中。在重建依赖包时，自动进程周期调用y将构建中的包同步到辅助仓库调用ros-test。ros-测试旨在作为一个浸泡区，开发人员和前沿用户可以为包提供额外的测试，在将它们手动同步到公共ros仓库之前，用户可能会从中调用y安装包。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5464">[待校准&#64;5464]</a></p>
