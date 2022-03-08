@@ -285,7 +285,7 @@
 <h2>Debian测试仓库 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5463">[待校准&#64;5463]</a><a class="headerlink" href="#debian-testing-repository" title="永久链接至标题"></a></h2>
 <p>当包被发布到ROS发行集 (使用bloom) 时，buildfarm会将它们编译到debian包中，这些包会暂时存储在building apt仓库中。在依赖包被重新编译时，自动进程周期性的将building中的包同步到被称为ros-testing的辅助仓库。ros-testing旨在作为一个浸制区，开发人员和前沿用户可以为包提供额外的测试，在将它们手动同步到用户通常安装包的公共ros仓库之前。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5464">[Alyssa&#64;5464]</a></p>
 <p>大约每两周，rosdistro的发布管理器将ros-testing的内容手动同步到main ROS仓库中。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5465">[Alyssa&#64;5465]</a></p>
-<p>对于基于Debian的操作系统，您可以从ros测试仓库安装二进制包。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5466">[待校准&#64;5466]</a></p>
+<p>对于基于Debian的操作系统，您可以从ros-testing仓库安装二进制包。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5466">[Alyssa&#64;5466]</a></p>
 <ol class="arabic">
 <li><p>确保从Debian包安装了有效的ROS 2 (请参阅 <a class="reference internal" href="../Installation.html"><span class="doc">安装</span></a> )。</p></li>
 <li><p>编辑 (用sudo)  <code class="docutils literal notranslate"><span class="pre">/etc/apt/sources.list.d/ros2-latest.list</span></code> 文件，用 <code class="docutils literal notranslate"><span class="pre">ros2-testing</span></code> 改变 <code class="docutils literal notranslate"><span class="pre">ros2</span></code> 。例如，在UbuntuFocal 上，内容应如下所示: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5468">[待校准&#64;5468]</a></p>
