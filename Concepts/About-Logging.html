@@ -315,7 +315,7 @@
 <div class="section" id="logger-concepts">
 <h2><a class="toc-backref" href="#id4">日志记录器概念</a><a class="headerlink" href="#logger-concepts" title="永久链接至标题"></a></h2>
 <p>日志消息具有与之相关的严重性级别:  <code class="docutils literal notranslate"><span class="pre">DEBUG</span></code> 、 <code class="docutils literal notranslate"><span class="pre">INFO</span></code> 、 <code class="docutils literal notranslate"><span class="pre">WARN</span></code> 、 <code class="docutils literal notranslate"><span class="pre">ERROR</span></code> 或 <code class="docutils literal notranslate"><span class="pre">FATAL</span></code> ，按升序排列。</p>
-<p>日志记录器将仅处理严重性等于或高于为日志记录器选择的指定级别的日志消息。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9913">[待校准&#64;9913]</a></p>
+<p>日志记录器将仅处理严重性等于或高于为日志记录器选择的指定级别的日志消息。</p>
 <p>每个节点 (在 <code class="docutils literal notranslate"><span class="pre">rclcpp</span></code> 和 <code class="docutils literal notranslate"><span class="pre">rclpy</span></code> 中) 都有一个与之关联的日志记录器，自动调用y包括节点的名称和命名空间。如果节点的名称在外部重新映射到源文件中定义的名称以外的其他名称，则它将反映在日志记录器名称中。还可以创建使用特定名称的非节点日志记录器。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9914">[待校准&#64;9914]</a></p>
 <p>日志记录器名称表示层次结构。如果名为 “abc.de f” 的日志记录器的级别未设置，它将服从其父级名为  &quot;abc&quot; 的级别，如果该级别也未设置，将使用默认的日志记录器级别。当日志记录器  &quot;abc&quot; 的水平改变时，它的所有后代 (例如g.“abc.de f”，“abc。ghi。jkl”) 将影响其级别，除非已明确设置其级别。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9915">[待校准&#64;9915]</a></p>
 </div>
