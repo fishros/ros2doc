@@ -25,7 +25,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="关于不同的ROS 2 DDS/RTPS供应商 [待校准@9729]" href="About-Different-Middleware-Vendors.html" />
+    <link rel="next" title="关于不同的ROS 2 DDS/RTPS供应商" href="About-Different-Middleware-Vendors.html" />
     <link rel="prev" title="概念" href="../Concepts.html" /> 
 </head>
 
@@ -182,7 +182,7 @@
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="../Concepts.html">概念</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">ROS_DOMAIN_ID</a></li>
-<li class="toctree-l2"><a class="reference internal" href="About-Different-Middleware-Vendors.html">关于不同的ROS 2 DDS/RTPS供应商 [待校准&#64;9729]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="About-Different-Middleware-Vendors.html">关于不同的ROS 2 DDS/RTPS供应商</a></li>
 <li class="toctree-l2"><a class="reference internal" href="About-Logging.html">关于日志和日志记录器配置 [待校准&#64;9901]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="About-Quality-of-Service-Settings.html">关于服务质量设置 [待校准&#64;9945]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="About-ROS-2-Client-Libraries.html">关于ROS 2客户端库 [待校准&#64;10035]</a></li>
@@ -286,7 +286,7 @@
 <p>如其他地方所解释的，ROS 2用于通讯的默认中间件是DDS。在DDS中，不同逻辑网络共享物理网络的主要机制称为域(Domain) ID。同一域上的ROS 2节点可以自由地相互发现并发送消息，而不同域上的ROS 2节点则不能。所有ROS 2节点默认使用域ID为0。为了避免在同一网络上运行ROS 2的不同计算机组之间互相干扰，应为每组设置不同的域ID。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9771">[小鱼&#64;9771]</a></p>
 </div>
 <div class="section" id="choosing-a-domain-id-short-version">
-<h2>选择域ID (短版本) <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9772">[小鱼&#64;9772]</a><a class="headerlink" href="#choosing-a-domain-id-short-version" title="永久链接至标题"></a></h2>
+<h2>选择域ID (短版本)<a class="headerlink" href="#choosing-a-domain-id-short-version" title="永久链接至标题"></a></h2>
 <p>下面的文本解释了应该在ROS 2中使用的域ID范围的推导。要跳过该背景，只需选择一个介于0和101之间的安全的域ID (包括0和101)。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9773">[小鱼&#64;9773]</a></p>
 </div>
 <div class="section" id="choosing-a-domain-id-long-version">
@@ -323,10 +323,10 @@
 <li><p>计算机上的第54个ROS 2进程将连接到端口32650、32651、32768和32769，运行在临时端口范围内。</p></li>
 </ul>
 <p>因此，在Linux上使用域ID为101时应创建的最大进程数为54。同样，在Linux上使用域ID为232时应创建的最大进程数为63，因为最大端口号为65535。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9800">[小鱼&#64;9800]</a></p>
-<p>macOS和Windows的情况相似，尽管数字不同。在macOS和Windows上，当选择166 (范围顶部) 的域账号时，运行到临时端口范围之前，可以在计算机上创建的ROS 2进程的最大数量为120。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9801">[待校准&#64;9801]</a></p>
+<p>macOS和Windows的情况相似，尽管数字不同。在macOS和Windows上，当选择166 (范围顶部) 的域账号时，运行到临时端口范围之前，可以在计算机上创建的ROS 2进程的最大数量为120。</p>
 </div>
 <div class="section" id="domain-id-to-udp-port-calculator">
-<h3>域ID到UDP端口号计算器 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9802">[小鱼&#64;9802]</a><a class="headerlink" href="#domain-id-to-udp-port-calculator" title="永久链接至标题"></a></h3>
+<h3>域ID到UDP端口号计算器<a class="headerlink" href="#domain-id-to-udp-port-calculator" title="永久链接至标题"></a></h3>
 <table>
   <tr>
     <td style="text-align: right; vertical-align: middle;"><label>Domain ID:</label></td>
@@ -396,7 +396,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../Concepts.html" class="btn btn-neutral float-left" title="概念" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
-        <a href="About-Different-Middleware-Vendors.html" class="btn btn-neutral float-right" title="关于不同的ROS 2 DDS/RTPS供应商 [待校准@9729]" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="About-Different-Middleware-Vendors.html" class="btn btn-neutral float-right" title="关于不同的ROS 2 DDS/RTPS供应商" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>关于不同的ROS 2 DDS/RTPS供应商 [待校准@9729] &mdash; ROS 2 documentation  文档</title>
+  <title>关于不同的ROS 2 DDS/RTPS供应商 &mdash; ROS 2 documentation  文档</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
@@ -181,7 +181,7 @@
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="../Concepts.html">概念</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="About-Domain-ID.html">ROS_DOMAIN_ID</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">关于不同的ROS 2 DDS/RTPS供应商 [待校准&#64;9729]</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">关于不同的ROS 2 DDS/RTPS供应商</a></li>
 <li class="toctree-l2"><a class="reference internal" href="About-Logging.html">关于日志和日志记录器配置 [待校准&#64;9901]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="About-Quality-of-Service-Settings.html">关于服务质量设置 [待校准&#64;9945]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="About-ROS-2-Client-Libraries.html">关于ROS 2客户端库 [待校准&#64;10035]</a></li>
@@ -266,7 +266,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="../Concepts.html">概念</a> &raquo;</li>
-      <li>关于不同的ROS 2 DDS/RTPS供应商 [待校准&#64;9729]</li>
+      <li>关于不同的ROS 2 DDS/RTPS供应商</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/ros2/ros2_documentation/blob/foxy/source/Concepts/About-Different-Middleware-Vendors.rst" class="fa fa-github"> 在 GitHub 上修改</a>
       </li>
@@ -279,7 +279,7 @@
 
 
   <div class="section" id="about-different-ros-2-dds-rtps-vendors">
-<h1>关于不同的ROS 2 DDS/RTPS供应商 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9729">[待校准&#64;9729]</a><a class="headerlink" href="#about-different-ros-2-dds-rtps-vendors" title="永久链接至标题"></a></h1>
+<h1>关于不同的ROS 2 DDS/RTPS供应商<a class="headerlink" href="#about-different-ros-2-dds-rtps-vendors" title="永久链接至标题"></a></h1>
 <p>ROS 2建立在DDS/RTPS之上，作为其中间件，提供发现、序列化和传输。 <a class="reference external" href="https://design.ros2.org/articles/ros_on_dds.html">This article</a> 解释动机使用DDS实现和/或RTPS电线协议DDS，详细。总之，DDS是一种端到端中间件，它提供与ROS系统相关的功能，例如分布式发现 (不像ROS 1那样集中) 以及对不同的  &quot;Quality of Service&quot; 运输选择的控制。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9730">[待校准&#64;9730]</a></p>
 <p>[需手动修复的语法] <a class="reference external" href="https://www.omg.org/omg-dds-portal">DDS</a> 是一系列供应商实施的行业标准，如RTI的 <a class="reference external" href="https://www.rti.com/products/">Connext DDS</a>, eProsima's <a class="reference external" href="https://fast-dds.docs.eprosima.com/">Fast DDS</a>, Eclipse's <a class="reference external" href="https://projects.eclipse.org/projects/iot.cyclonedds">Cyclone DDS</a> ，或GurumNetworks的 <a class="reference external" href="https://gurum.cc/index_eng">GurumDDS</a>. RTPS (a.k.a. <a class="reference external" href="https://www.omg.org/spec/DDSI-RTPS/About-DDSI-RTPS/">DDSI-RTPS</a> ) 是DDS通过网络进行通信的有线协议。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9731">[待校准&#64;9731]</a></p>
 <p>ROS 2支持多个DDS/RTPS实现，因为在选择供应商/实现时，它不一定是  &quot;one size fits all&quot; 。在选择中间件实现时，您可能会考虑许多因素: 诸如许可证之类的后勤考虑，或诸如平台可用性或计算占用的技术考虑。供应商可以提供针对满足不同需求的多个DDS或RTPS实施。例如，RTI的Connext实现有一些不同的目的，就像一个专门调用目标微控制器，另一个目标应用需要特殊的安全认证 (我们目前只支持他们的标准桌面版本)。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9732">[待校准&#64;9732]</a></p>
