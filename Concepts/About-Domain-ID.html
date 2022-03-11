@@ -305,10 +305,10 @@
 <div class="section" id="participant-constraints">
 <h3>参与者约束<a class="headerlink" href="#participant-constraints" title="永久链接至标题"></a></h3>
 <p>对于计算机上运行的每个ROS 2进程，将创建一个DDS  &quot;participant&quot; 。由于每个DDS参与者占用计算机上的两个端口，因此在一台计算机上运行120个以上的ROS 2进程可能会溢出到其他域ID或临时端口。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9786">[小鱼&#64;9786]</a></p>
-<p>要了解原因，请考虑域id 1和2。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9787">[待校准&#64;9787]</a></p>
+<p>为了解释原因，我们考虑域ID编号1和2。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9787">[小鱼&#64;9787]</a></p>
 <ul class="simple">
-<li><p>域账号1使用端口7650和7651进行多播。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9788">[待校准&#64;9788]</a></p></li>
-<li><p>域账号2使用端口7900和7901进行多播。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9789">[待校准&#64;9789]</a></p></li>
+<li><p>域ID 1使用端口7650和7651进行多播。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9788">[小鱼&#64;9788]</a></p></li>
+<li><p>域ID 2使用端口7900和7901进行多播。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9789">[小鱼&#64;9789]</a></p></li>
 <li><p>在域账号1中创建第一个进程 (第0个参与者) 时，端口7660和7661用于单播。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9790">[待校准&#64;9790]</a></p></li>
 <li><p>在域账号1中创建第120个进程 (第119个参与者) 时，端口7898和7899用于单播。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9791">[待校准&#64;9791]</a></p></li>
 <li><p>在域账号1中创建第121个进程 (第120个参与者) 时，端口7900和7901用于单播，并与域账号2重叠。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9792">[待校准&#64;9792]</a></p></li>
