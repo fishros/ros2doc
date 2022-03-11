@@ -323,10 +323,10 @@
 </tr>
 </tbody>
 </table>
-<p>有关使用多个RMW实现的实用信息，请参见 <a class="reference internal" href="../How-To-Guides/Working-with-multiple-RMW-implementations.html"><span class="doc">&quot;Working with multiple RMW implementations&quot;</span></a> 教程。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9755">[待校准&#64;9755]</a></p>
+<p>有关使用多个RMW实现的实用信息，请参见 <a class="reference internal" href="../How-To-Guides/Working-with-multiple-RMW-implementations.html"><span class="doc">&quot;使用多个RMW实现&quot;</span></a> 教程。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9755">[小鱼&#64;9755]</a></p>
 </div>
 <div class="section" id="multiple-rmw-implementations">
-<h2>多个RMW实现 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9756">[待校准&#64;9756]</a><a class="headerlink" href="#multiple-rmw-implementations" title="永久链接至标题"></a></h2>
+<h2>多个RMW实现<a class="headerlink" href="#multiple-rmw-implementations" title="永久链接至标题"></a></h2>
 <p>ROS 2二进制发行版本目前有源发行版有内置支持几个RMW实现开箱 (Fast DDSRTI Connext Pro，EclipseCycloneDDS，GurumNetworks GurumDDS)。自从Galactic以来，默认值为CycloneDDS，无需任何额外的安装步骤即可工作，因为我们将其与二进制包一起分发。在Galactic之前，默认值为Fast DDS，无需任何额外安装步骤即可工作。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9757">[待校准&#64;9757]</a></p>
 <p>[需手动修复的语法] <a class="reference internal" href="../Installation/DDS-Implementations.html"><span class="doc">installing additional packages</span></a> 可以启用其他RMWs，如Fast DDS、Connext或GurumDDS，但无需重建任何东西或替换任何现有的包。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9758">[待校准&#64;9758]</a></p>
 <p>从源文件构建的ROS 2工作区可以同时构建和安装多个RMW实现。在编译核心ROS 2代码时，如果正确安装了相关的DDS/RTPS实施并且配置了相关的环境变量，则将构建找到的任何RMW实施。例如，如果 <a class="reference external" href="https://github.com/ros2/rmw_connext/tree/master/rmw_connext_cpp">RMW package for RTI Connext</a> 的代码在工作区中，如果也可以找到RTI的Connext Pro的安装，它将被构建。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9759">[待校准&#64;9759]</a></p>
@@ -340,15 +340,15 @@
 </dl>
 </li>
 <li><dl class="simple">
-<dt>Connext &lt;-&gt; CycloneDDS <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9763">[待校准&#64;9763]</a></dt><dd><ul>
+<dt>Connext &lt;-&gt; Cyclone DDS</dt><dd><ul>
 <li><p>不支持 <code class="docutils literal notranslate"><span class="pre">WString</span></code> 的发布/子通讯 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9764">[待校准&#64;9764]</a></p></li>
 </ul>
 </dd>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>Connext动态 &lt;-&gt; Connext动态 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9765">[待校准&#64;9765]</a></dt><dd><ul>
-<li><p>不支持C服务 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9766">[待校准&#64;9766]</a></p></li>
+<dt>Connext Dynamic &lt;-&gt; Connext Dynamic</dt><dd><ul>
+<li><p>不支持C服务</p></li>
 </ul>
 </dd>
 </dl>
