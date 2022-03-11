@@ -328,13 +328,13 @@
 <div class="section" id="multiple-rmw-implementations">
 <h2>多个RMW实现<a class="headerlink" href="#multiple-rmw-implementations" title="永久链接至标题"></a></h2>
 <p>ROS 2二进制发行版本目前有源发行版有内置支持几个RMW实现开箱 (Fast DDSRTI Connext Pro，EclipseCycloneDDS，GurumNetworks GurumDDS)。自从Galactic以来，默认值为CycloneDDS，无需任何额外的安装步骤即可工作，因为我们将其与二进制包一起分发。在Galactic之前，默认值为Fast DDS，无需任何额外安装步骤即可工作。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9757">[待校准&#64;9757]</a></p>
-<p>[需手动修复的语法] <a class="reference internal" href="../Installation/DDS-Implementations.html"><span class="doc">installing additional packages</span></a> 可以启用其他RMWs，如Fast DDS、Connext或GurumDDS，但无需重建任何东西或替换任何现有的包。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9758">[待校准&#64;9758]</a></p>
+<p>文档 <a class="reference internal" href="../Installation/DDS-Implementations.html"><span class="doc">安装额外的包</span></a> 可以启用其他RMWs，如Fast DDS、Connext或GurumDDS，但无需重建任何东西或替换任何现有的包。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9758">[小鱼&#64;9758]</a></p>
 <p>从源文件构建的ROS 2工作区可以同时构建和安装多个RMW实现。在编译核心ROS 2代码时，如果正确安装了相关的DDS/RTPS实施并且配置了相关的环境变量，则将构建找到的任何RMW实施。例如，如果 <a class="reference external" href="https://github.com/ros2/rmw_connext/tree/master/rmw_connext_cpp">RMW package for RTI Connext</a> 的代码在工作区中，如果也可以找到RTI的Connext Pro的安装，它将被构建。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9759">[待校准&#64;9759]</a></p>
 <p>在许多情况下，您会发现使用不同RMW实现的节点能够通信，但是并非在所有情况下都是如此。以下是不支持的供应商间通讯配置列表: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9760">[待校准&#64;9760]</a></p>
 <ul class="simple">
 <li><dl class="simple">
 <dt>Fast DDS &lt;-&gt; Connext</dt><dd><ul>
-<li><p>[需手动修复的语法]``WString`` published的Fast DDS不能接收正确Connext macOS <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9762">[待校准&#64;9762]</a></p></li>
+<li><p>在macOS上使用Fast DDS发布的``WString`` 不能被Connext正确接收 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9762">[小鱼&#64;9762]</a></p></li>
 </ul>
 </dd>
 </dl>
