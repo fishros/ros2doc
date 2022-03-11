@@ -57,8 +57,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Maintaining-a-Source-Checkout.html">维护ROS 2Foxy源文件的检出</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Testing.html">用于测试的替代安装源</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/DDS-Implementations.html">安装DDS实现</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Install-Connext-Security-Plugins.html">安装Connext安全插件 [待校准&#64;5356]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Install-Connext-University-Eval.html">安装大学或RTI Connext DDS的评估版本 [待校准&#64;5370]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Install-Connext-Security-Plugins.html">安装Connext安全插件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Install-Connext-University-Eval.html">安装RTI Connext DDS的大学或评估版本 [Alyssa&#64;5370]</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Working-with-Eclipse-CycloneDDS.html">使用EclipseCycloneDDS [待校准&#64;5384]</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Working-with-GurumNetworks-GurumDDS.html">与GurumNetworks GurumDDS合作 [待校准&#64;5400]</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Working-with-eProsima-Fast-DDS.html">与eProsimaFast DDS合作 [待校准&#64;5417]</a></li>
@@ -180,7 +180,7 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="../Concepts.html">概念</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="About-Domain-ID.html">ROS_DOMAIN_ID [待校准&#64;9770]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="About-Domain-ID.html">ROS_DOMAIN_ID</a></li>
 <li class="toctree-l2"><a class="reference internal" href="About-Different-Middleware-Vendors.html">关于不同的ROS 2 DDS/RTPS供应商 [待校准&#64;9729]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="About-Logging.html">关于日志和日志记录器配置 [待校准&#64;9901]</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">关于服务质量设置 [待校准&#64;9945]</a></li>
@@ -281,7 +281,7 @@
   <div class="section" id="about-quality-of-service-settings">
 <h1>关于服务质量设置 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9945">[待校准&#64;9945]</a><a class="headerlink" href="#about-quality-of-service-settings" title="永久链接至标题"></a></h1>
 <div class="section" id="overview">
-<h2>概述 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9718">[待校准&#64;9718]</a><a class="headerlink" href="#overview" title="永久链接至标题"></a></h2>
+<h2>概述<a class="headerlink" href="#overview" title="永久链接至标题"></a></h2>
 <p>ROS 2提供了丰富多样的服务质量 (QoS) 策略，使您可以调整节点之间的通讯。有了一套正确的服务质量策略，ROS 2可以像TCP一样可靠，也可以像UDP一样尽力而为，在这两者之间有很多很多可能的状态。与主要只支持TCP的ROS 1不同，ROS 2在具有 “尽力而为” 策略更合适的有损无线网络的环境中，受益于底层DDS传输的灵活性，或者在实时计算系统中，需要适当质量的服务配置文件来满足截止日期。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9946">[待校准&#64;9946]</a></p>
 <p>一组QoS “策略” 结合在一起形成QoS “配置文件”。考虑到为给定场景选择正确的QoS策略的复杂性，ROS 2为常见用例 (例如传感器数据) 提供了一组预定义的QoS配置文件。同时，开发人员可以灵活地控制QoS配置文件的特定策略。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9947">[待校准&#64;9947]</a></p>
 <p>可以为发布者、订阅、服务服务器和客户端指定QoS配置文件。QoS配置文件可以独立地应用于上述实体的每个实例，但是如果使用不同的配置文件，则它们可能不兼容，从而阻止消息的传递。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9948">[待校准&#64;9948]</a></p>

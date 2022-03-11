@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ROS_DOMAIN_ID [待校准@9770] &mdash; ROS 2 documentation  文档</title>
+  <title>ROS_DOMAIN_ID &mdash; ROS 2 documentation  文档</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
@@ -58,8 +58,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Maintaining-a-Source-Checkout.html">维护ROS 2Foxy源文件的检出</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Testing.html">用于测试的替代安装源</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/DDS-Implementations.html">安装DDS实现</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Install-Connext-Security-Plugins.html">安装Connext安全插件 [待校准&#64;5356]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Install-Connext-University-Eval.html">安装大学或RTI Connext DDS的评估版本 [待校准&#64;5370]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Install-Connext-Security-Plugins.html">安装Connext安全插件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Install-Connext-University-Eval.html">安装RTI Connext DDS的大学或评估版本 [Alyssa&#64;5370]</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Working-with-Eclipse-CycloneDDS.html">使用EclipseCycloneDDS [待校准&#64;5384]</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Working-with-GurumNetworks-GurumDDS.html">与GurumNetworks GurumDDS合作 [待校准&#64;5400]</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Working-with-eProsima-Fast-DDS.html">与eProsimaFast DDS合作 [待校准&#64;5417]</a></li>
@@ -181,7 +181,7 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="../Concepts.html">概念</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">ROS_DOMAIN_ID [待校准&#64;9770]</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">ROS_DOMAIN_ID</a></li>
 <li class="toctree-l2"><a class="reference internal" href="About-Different-Middleware-Vendors.html">关于不同的ROS 2 DDS/RTPS供应商 [待校准&#64;9729]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="About-Logging.html">关于日志和日志记录器配置 [待校准&#64;9901]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="About-Quality-of-Service-Settings.html">关于服务质量设置 [待校准&#64;9945]</a></li>
@@ -267,7 +267,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="../Concepts.html">概念</a> &raquo;</li>
-      <li>ROS_DOMAIN_ID [待校准&#64;9770]</li>
+      <li>ROS_DOMAIN_ID</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/ros2/ros2_documentation/blob/foxy/source/Concepts/About-Domain-ID.rst" class="fa fa-github"> 在 GitHub 上修改</a>
       </li>
@@ -280,14 +280,14 @@
 
 
   <div class="section" id="the-ros-domain-id">
-<h1>ROS_DOMAIN_ID <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9770">[待校准&#64;9770]</a><a class="headerlink" href="#the-ros-domain-id" title="永久链接至标题"></a></h1>
+<h1>ROS_DOMAIN_ID<a class="headerlink" href="#the-ros-domain-id" title="永久链接至标题"></a></h1>
 <div class="section" id="overview">
-<h2>概述 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9718">[待校准&#64;9718]</a><a class="headerlink" href="#overview" title="永久链接至标题"></a></h2>
-<p>如其他地方所解释的，ROS 2用于通讯的默认中间件是DDS。在DDS中，不同逻辑网络共享物理网络的主要机制称为域账号。同一域上的ROS 2节点可以自由地相互发现并发送消息，而不同域上的ROS 2节点则不能。所有ROS 2节点默认使用域账号0。为了在同一网络上运行ROS 2的不同计算机组之间进行avo账号干扰，应为每组设置不同的域账号。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9771">[待校准&#64;9771]</a></p>
+<h2>概述<a class="headerlink" href="#overview" title="永久链接至标题"></a></h2>
+<p>如其他地方所解释的，ROS 2用于通讯的默认中间件是DDS。在DDS中，不同逻辑网络共享物理网络的主要机制称为域(Domain) ID。同一域上的ROS 2节点可以自由地相互发现并发送消息，而不同域上的ROS 2节点则不能。所有ROS 2节点默认使用域ID为0。为了避免在同一网络上运行ROS 2的不同计算机组之间互相干扰，应为每组设置不同的域ID。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9771">[小鱼&#64;9771]</a></p>
 </div>
 <div class="section" id="choosing-a-domain-id-short-version">
-<h2>选择域名账号 (简称) <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9772">[待校准&#64;9772]</a><a class="headerlink" href="#choosing-a-domain-id-short-version" title="永久链接至标题"></a></h2>
-<p>下面的文本解释了应该在ROS 2中使用的域账号范围的推导。要跳过该背景，只需选择一个安全号码，只需选择一个介于0和101之间的域账号 (包括0和)。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9773">[待校准&#64;9773]</a></p>
+<h2>选择域ID (简称) <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9772">[小鱼&#64;9772]</a><a class="headerlink" href="#choosing-a-domain-id-short-version" title="永久链接至标题"></a></h2>
+<p>下面的文本解释了应该在ROS 2中使用的域ID范围的推导。要跳过该背景，只需选择一个介于0和101之间的安全的域ID (包括0和101)。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9773">[小鱼&#64;9773]</a></p>
 </div>
 <div class="section" id="choosing-a-domain-id-long-version">
 <h2>选择域账号 (长版本) <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9774">[待校准&#64;9774]</a><a class="headerlink" href="#choosing-a-domain-id-long-version" title="永久链接至标题"></a></h2>
