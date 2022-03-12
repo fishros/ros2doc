@@ -317,13 +317,13 @@
 <div class="section" id="build-from-source-code">
 <h2>从源文件构建<a class="headerlink" href="#build-from-source-code" title="永久链接至标题"></a></h2>
 <p>从源文件构建也是另一种安装方式。</p>
-<p>首先，在ROS 2工作区源文件目录中克隆rosidl_typesupport_gurumdds和rmw_gurumdds。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5412">[待校准&#64;5412]</a></p>
+<p>首先，在ROS 2工作空间源文件目录中克隆 rosidl_typesupport_gurumdds 和 rmw_gurumdds。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5412">[Alyssa&#64;5412]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ros2_ws/src
 git clone https://github.com/ros2/rmw_gurumdds ros2/rmw_gurumdds
 git clone https://github.com/ros2/rosidl_typesupport_gurumdds ros2/rosidl_typesupport_gurumdds
 </pre></div>
 </div>
-<p>然后，为GurumDDS安装必要的包。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5413">[待校准&#64;5413]</a></p>
+<p>然后，为GurumDDS安装必要的包。</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ..
 rosdep install --from src -i --rosdistro foxy
 </pre></div>
@@ -334,7 +334,7 @@ rosdep install --from src -i --rosdistro foxy
 </div>
 </div>
 <div class="section" id="switch-to-rmw-gurumdds">
-<h2>切换到rmw_gurumdds <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5414">[待校准&#64;5414]</a><a class="headerlink" href="#switch-to-rmw-gurumdds" title="永久链接至标题"></a></h2>
+<h2>切换到rmw_gurumdds<a class="headerlink" href="#switch-to-rmw-gurumdds" title="永久链接至标题"></a></h2>
 <p>通过指定环境变量，从其他rmw切换到rmw_gurumdds。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5415">[待校准&#64;5415]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">RMW_IMPLEMENTATION</span><span class="o">=</span>rmw_gurumdds_cpp
 </pre></div>
