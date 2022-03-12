@@ -283,7 +283,7 @@
 <div class="contents local topic" id="table-of-contents">
 <p class="topic-title">目录</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#background" id="id1">背景 [待校准&#64;6716]</a></p></li>
+<li><p><a class="reference internal" href="#background" id="id1">背景</a></p></li>
 <li><p><a class="reference internal" href="#install-and-run-the-demo" id="id2">安装并运行例程 [待校准&#64;7937]</a></p>
 <ul>
 <li><p><a class="reference internal" href="#run-the-tests" id="id3">运行测试 [待校准&#64;7941]</a></p></li>
@@ -298,7 +298,7 @@
 </ul>
 </div>
 <div class="section" id="background">
-<h2>背景 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6716">[待校准&#64;6716]</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
+<h2><a class="toc-backref" href="#id1">背景</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
 <p>实时计算是许多机器人系统的关键特征，尤其是安全和关键任务应用，如自动驾驶汽车、宇宙飞船和工业制造。我们在设计和制作ROS 2时考虑到了实时性能限制，因为这是在ROS 1的早期阶段没有考虑的要求，现在很难将ROS 1重构为实时友好。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7932">[待校准&#64;7932]</a></p>
 <p>[需手动修复的语法] <a class="reference external" href="https://design.ros2.org/articles/realtime_background.html">This document</a> 概述了软件工程师对实时计算的要求和最佳实践。简而言之: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7933">[待校准&#64;7933]</a></p>
 <p>为了制作实时计算机系统，我们的实时循环必须更新周期调用y以满足截止日期。我们只能容忍这些截止日期上的微小误差 (我们允许的最大抖动)。为此，我们必须避免执行路径中的非确定性操作，例如: 页面错误事件、动态内存分配/解除分配以及无限期阻塞的同步原语。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7934">[待校准&#64;7934]</a></p>

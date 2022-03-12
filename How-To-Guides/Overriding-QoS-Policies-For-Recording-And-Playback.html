@@ -284,13 +284,13 @@
 <div class="contents local topic" id="contents">
 <p class="topic-title">内容</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#background" id="id1">背景 [待校准&#64;6191]</a></p></li>
+<li><p><a class="reference internal" href="#background" id="id1">背景</a></p></li>
 <li><p><a class="reference internal" href="#using-qos-overrides" id="id2">使用QoS覆盖</a></p></li>
 <li><p><a class="reference internal" href="#example" id="id3">示例 [待校准&#64;6204]</a></p></li>
 </ul>
 </div>
 <div class="section" id="background">
-<h2>背景 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6191">[待校准&#64;6191]</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
+<h2><a class="toc-backref" href="#id1">背景</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
 <p>随着ROS 2中DDS的引入，在记录和回放数据时，需要考虑发布者/订户节点的服务质量 (QoS) 兼容性。关于服务质量如何工作的更多细节可以在 <a class="reference internal" href="../Concepts/About-Quality-of-Service-Settings.html"><span class="doc">here</span></a> 找到。就本指南而言，只要知道只有可靠性和耐用性政策会影响出版商/订阅者是否兼容以及是否可以从彼此那里接收数据，就足够了。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6326">[待校准&#64;6326]</a></p>
 <p>当记录/播放来自某个话题的数据时，Ros2Bag会调整其请求/提供的QoS配置文件，以防止信息丢失。在回放过程中，Ros2bag也试图保留话题最初提供的政策。某些情况可能需要指定明确的QoS配置文件设置，以便Ros2Bag可以记录/回放话题。这些QoS配置文件覆盖可以通过CLI使用 <code class="docutils literal notranslate"><span class="pre">--qos-profile-overrides-path</span></code> 标志指定。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6327">[待校准&#64;6327]</a></p>
 </div>

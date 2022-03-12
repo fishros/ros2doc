@@ -283,7 +283,7 @@
 <div class="contents local topic" id="table-of-contents">
 <p class="topic-title">目录</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#background" id="id1">背景 [待校准&#64;6716]</a></p></li>
+<li><p><a class="reference internal" href="#background" id="id1">背景</a></p></li>
 <li><p><a class="reference internal" href="#writing-an-allocator" id="id2">编写分配器 [待校准&#64;6891]</a></p></li>
 <li><p><a class="reference internal" href="#writing-an-example-main" id="id3">编写示例main [待校准&#64;6898]</a></p></li>
 <li><p><a class="reference internal" href="#passing-an-allocator-to-the-intra-process-pipeline" id="id4">将分配器传递给进程内管道 [待校准&#64;6902]</a></p></li>
@@ -293,7 +293,7 @@
 </div>
 <p>本教程将教您如何为发布者和订阅者集成自定义分配器，以便在执行ROS节点时永远不会调用默认的堆分配器。本教程的代码可用 <a class="reference external" href="https://github.com/ros2/demos/blob/foxy/demo_nodes_cpp/src/topics/allocator_tutorial.cpp">here</a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6887">[待校准&#64;6887]</a></p>
 <div class="section" id="background">
-<h2>背景 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6716">[待校准&#64;6716]</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
+<h2><a class="toc-backref" href="#id1">背景</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
 <p>假设您想要编写实时安全代码，并且您已经听说了在实时关键部分调用  &quot;new&quot; 的许多危险，因为大多数平台上的默认堆分配器是不确定的。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6888">[待校准&#64;6888]</a></p>
 <p>默认情况下，许多cstandard标准库结构会随着其增长隐式分配内存，例如 “std:: vector”。然而，这些数据结构也接受  &quot;Allocator&quot; 模板参数。如果您为这些数据结构之一指定自定义分配器，它将为您使用该分配器而不是系统分配器来增加或缩小数据结构。您的自定义分配器可以在堆栈上预先分配一个内存池，这可能更适合实时应用程序。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6889">[待校准&#64;6889]</a></p>
 <p>在ROS 2 cclient客户端库 (rclcpp) 中，我们遵循与cstandard标准库类似的理念。发布者、订阅者和执行程序接受分配器模板参数，该参数控制该实体在执行期间进行的分配。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6890">[待校准&#64;6890]</a></p>

@@ -287,7 +287,7 @@
 <div class="contents local topic" id="contents">
 <p class="topic-title">内容</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#background" id="id1">背景 [待校准&#64;6716]</a></p></li>
+<li><p><a class="reference internal" href="#background" id="id1">背景</a></p></li>
 <li><p><a class="reference internal" href="#tasks" id="id2">任务 [待校准&#64;6725]</a></p>
 <ul>
 <li><p><a class="reference internal" href="#tf2-and-time" id="id3">1 tf2和时间 [待校准&#64;8466]</a></p></li>
@@ -299,7 +299,7 @@
 </ul>
 </div>
 <div class="section" id="background">
-<h2>背景 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6716">[待校准&#64;6716]</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
+<h2><a class="toc-backref" href="#id1">背景</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
 <p>在之前的教程中，我们通过编写 <a class="reference internal" href="Writing-A-Tf2-Broadcaster-Cpp.html"><span class="doc">tf2 broadcaster</span></a> and a <a class="reference internal" href="Writing-A-Tf2-Listener-Cpp.html"><span class="doc">tf2 listener</span></a>. We also learned how to <a class="reference internal" href="Adding-A-Frame-Cpp.html"><span class="doc">add a new frame to the transformation tree</span></a> 重新创建了turtle例程，并学习了tf2如何跟踪坐标帧树。此树随时间变化，tf2为每次转换存储时间快照 (默认情况下最多10秒)。到目前为止，我们使用 <code class="docutils literal notranslate"><span class="pre">lookupTransform()</span></code> 函数来访问tf2树中的最新可用变换，而不知道该变换是在什么时候记录的。本教程将教您如何在特定时间进行转换。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8465">[待校准&#64;8465]</a></p>
 </div>
 <div class="section" id="tasks">
