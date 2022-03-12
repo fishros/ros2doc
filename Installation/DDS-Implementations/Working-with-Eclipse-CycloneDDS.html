@@ -302,23 +302,23 @@ git clone https://github.com/ros2/rmw_cyclonedds ros2/rmw_cyclonedds
 git clone https://github.com/eclipse-cyclonedds/cyclonedds eclipse-cyclonedds/cyclonedds
 </pre></div>
 </div>
-<p>然后，为CycloneDDS安装必要的包。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5393">[待校准&#64;5393]</a></p>
+<p>然后，为Cyclone DDS安装必要的包。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5393">[Alyssa&#64;5393]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ..
 rosdep install --from src -i
 </pre></div>
 </div>
-<p>最后，运行colcon build。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5394">[待校准&#64;5394]</a></p>
+<p>最后，运行colcon build。</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>colcon build --symlink-install
 </pre></div>
 </div>
 </div>
 <div class="section" id="switch-to-rmw-cyclonedds">
-<h2>切换到rmw_cyclonedds <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5395">[待校准&#64;5395]</a><a class="headerlink" href="#switch-to-rmw-cyclonedds" title="永久链接至标题"></a></h2>
-<p>通过指定环境变量，从其他rmw切换到rmw_cyclonedds。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5396">[待校准&#64;5396]</a></p>
+<h2>切换到rmw_cyclonedds<a class="headerlink" href="#switch-to-rmw-cyclonedds" title="永久链接至标题"></a></h2>
+<p>通过指定环境变量，从其他rmw切换到rmw_cyclonedds。</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">RMW_IMPLEMENTATION</span><span class="o">=</span>rmw_cyclonedds_cpp
 </pre></div>
 </div>
-<p>另请参阅:  <a class="reference internal" href="../../How-To-Guides/Working-with-multiple-RMW-implementations.html"><span class="doc">Working with multiple RMW implementations</span></a>  <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5397">[待校准&#64;5397]</a></p>
+<p>另请参阅:  <a class="reference internal" href="../../How-To-Guides/Working-with-multiple-RMW-implementations.html"><span class="doc">Working with multiple RMW implementations</span></a></p>
 </div>
 <div class="section" id="run-the-talker-and-listener">
 <h2>运行谈话者和听众 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5398">[待校准&#64;5398]</a><a class="headerlink" href="#run-the-talker-and-listener" title="永久链接至标题"></a></h2>
