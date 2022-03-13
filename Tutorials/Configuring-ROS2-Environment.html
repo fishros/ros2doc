@@ -293,7 +293,7 @@
 <ul>
 <li><p><a class="reference internal" href="#source-the-setup-files" id="id4">1 source安装文件 [Alyssa&#64;7095]</a></p></li>
 <li><p><a class="reference internal" href="#add-sourcing-to-your-shell-startup-script" id="id5">2 将source命令添加到您的shell启动脚本 [Alyssa&#64;7098]</a></p></li>
-<li><p><a class="reference internal" href="#check-environment-variables" id="id6">3检查环境变量 [待校准&#64;7104]</a></p></li>
+<li><p><a class="reference internal" href="#check-environment-variables" id="id6">3 检查环境变量 [Alyssa&#64;7104]</a></p></li>
 </ul>
 </li>
 <li><p><a class="reference internal" href="#summary" id="id7">总结 [待校准&#64;6747]</a></p></li>
@@ -356,10 +356,10 @@
 </pre></div>
 </div>
 </div></div>
-<p>要在Linux和macOS中撤消此操作 (更改为另一个发行版)，请找到系统的shell启动脚本并删除附加的源文件命令。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7103">[待校准&#64;7103]</a></p>
+<p>要在Linux和macOS中撤消此操作 (更改为另一个发行版)，请找到系统的shell启动脚本并删除添加的source命令。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7103">[Alyssa&#64;7103]</a></p>
 </div>
 <div class="section" id="check-environment-variables">
-<h3>3检查环境变量 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7104">[待校准&#64;7104]</a><a class="headerlink" href="#check-environment-variables" title="永久链接至标题"></a></h3>
+<h3>3 检查环境变量 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7104">[Alyssa&#64;7104]</a><a class="headerlink" href="#check-environment-variables" title="永久链接至标题"></a></h3>
 <p>采购ROS 2安装文件将设置几个操作ROS 2所需的环境变量。如果您在查找或使用ROS 2包时遇到问题，请确保使用以下命令正确设置了环境: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7105">[待校准&#64;7105]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-2-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-2-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-2-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-2-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-2-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-2-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-2-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-2-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">printenv | grep -i ROS</span>
