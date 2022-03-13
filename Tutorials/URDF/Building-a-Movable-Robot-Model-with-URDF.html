@@ -294,7 +294,7 @@
 <li><p><a class="reference internal" href="#the-gripper-arm" id="id3">抓臂 [待校准&#64;8988]</a></p></li>
 <li><p><a class="reference internal" href="#other-types-of-joints" id="id4">其他类型的接头 [待校准&#64;8991]</a></p></li>
 <li><p><a class="reference internal" href="#specifying-the-pose" id="id5">指定姿势 [待校准&#64;8993]</a></p></li>
-<li><p><a class="reference internal" href="#next-steps" id="id6">下一步 [待校准&#64;6749]</a></p></li>
+<li><p><a class="reference internal" href="#next-steps" id="id6">下一步</a></p></li>
 </ul>
 </div>
 <p>带有柔性接头的 <a class="reference external" href="https://github.com/ros/urdf_tutorial/blob/ros2/urdf/06-flexible.urdf">Here is the new urdf</a> 。您可以将它与以前的版本进行比较，看看所有已经改变的东西，但是我们将只关注三个示例关节。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8979">[待校准&#64;8979]</a></p>
@@ -352,7 +352,7 @@
 <p>当你在图形用户界面中移动滑块时，模型在Rviz中移动。这是怎么做到的？首先， <a class="reference external" href="https://index.ros.org/p/joint_state_publisher_gui">GUI</a> 解析URDF并找到所有非固定关节及其极限。然后，它使用滑块的值发布 <a class="reference external" href="https://github.com/ros2/common_interfaces/blob/eloquent/sensor_msgs/msg/JointState.msg">sensor_msgs/msg/JointState</a> 乙消息。然后这些被 <a class="reference external" href="https://index.ros.org/p/robot_state_publisher">robot_state_publisher</a> 用来计算不同部分之间的所有变换。然后，生成的变换树用于显示Rviz中的所有形状。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8994">[待校准&#64;8994]</a></p>
 </div>
 <div class="section" id="next-steps">
-<h2>下一步 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6749">[待校准&#64;6749]</a><a class="headerlink" href="#next-steps" title="永久链接至标题"></a></h2>
+<h2><a class="toc-backref" href="#id6">下一步</a><a class="headerlink" href="#next-steps" title="永久链接至标题"></a></h2>
 <p>既然你有了一个明显的功能模型，你就可以 <a class="reference internal" href="Adding-Physical-and-Collision-Properties-to-a-URDF-Model.html"><span class="doc">add in some physical properties</span></a>, or <a class="reference internal" href="Using-Xacro-to-Clean-Up-a-URDF-File.html"><span class="doc">start using xacro to simplify your code</span></a> 了。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8995">[待校准&#64;8995]</a></p>
 </div>
 </div>
