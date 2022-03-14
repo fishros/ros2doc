@@ -296,7 +296,7 @@
 <li><p><a class="reference internal" href="#use-turtlesim" id="id6">3 使用turtlesim [Alyssa&#64;8885]</a></p></li>
 <li><p><a class="reference internal" href="#install-rqt" id="id7">4 安装rqt [Alyssa&#64;8893]</a></p></li>
 <li><p><a class="reference internal" href="#use-rqt" id="id8">5 使用rqt [Alyssa&#64;8900]</a></p></li>
-<li><p><a class="reference internal" href="#remapping" id="id9">6重新映射 [待校准&#64;7717]</a></p></li>
+<li><p><a class="reference internal" href="#remapping" id="id9">6 重新映射 [Alyssa&#64;7717]</a></p></li>
 <li><p><a class="reference internal" href="#close-turtlesim" id="id10">7关闭turtlesim [待校准&#64;8921]</a></p></li>
 </ul>
 </li>
@@ -437,12 +437,12 @@
 <p>要让turtle1绘制一条不同的红线，请将r的值更改为255，将宽度的值更改为5。更新值后，不要忘记调用服务。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8916">[待校准&#64;8916]</a></p>
 <p>如果你回到 <code class="docutils literal notranslate"><span class="pre">turtle_teleop_node</span></code> 正在运行的终端，按下箭头键，你会看到turtle1的笔变了。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8917">[Alyssa&#64;8917]</a></p>
 <img alt="../../_images/new_pen.png" src="../../_images/new_pen.png" />
-<p>你've probably noticed that there'没有办法移动turtle2。你可以通过将turtle1的 <code class="docutils literal notranslate"><span class="pre">cmd_vel</span></code> 话题重新映射到turtle2上来实现这一点。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8918">[待校准&#64;8918]</a></p>
+<p>你可能已经注意到没有办法移动turtle2。你可以通过将turtle1的 <code class="docutils literal notranslate"><span class="pre">cmd_vel</span></code> 话题重新映射到turtle2上来实现这一点。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8918">[Alyssa&#64;8918]</a></p>
 </div>
 </div>
 <div class="section" id="remapping">
-<h3>6重新映射 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7717">[待校准&#64;7717]</a><a class="headerlink" href="#remapping" title="永久链接至标题"></a></h3>
-<p>在新终端中，源文件ROS 2，然后运行: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8919">[待校准&#64;8919]</a></p>
+<h3>6 重新映射 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7717">[Alyssa&#64;7717]</a><a class="headerlink" href="#remapping" title="永久链接至标题"></a></h3>
+<p>在新终端中，source ROS 2，然后运行: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8919">[Alyssa&#64;8919]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run turtlesim turtle_teleop_key --ros-args --remap turtle1/cmd_vel:=turtle2/cmd_vel</span>
 </pre></div>
 </div>
