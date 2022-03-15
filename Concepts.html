@@ -372,7 +372,7 @@
 <ol class="arabic simple">
 <li><p>启动节点时，它会将其存在广播给具有相同ROS域 (使用ROS_DOMAIN_ID环境变量设置) 的网络上的其他节点。节点用关于它们自己的信息来回应这个广播，这样就可以建立适当的连接，并且节点间可以进行通信。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9535">[Alyssa&#64;9535]</a></p></li>
 <li><p>节点周期的广播它们的存在，以便即使在初始发现期之后，也可以与新发现的实体建立连接。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9536">[Alyssa&#64;9536]</a></p></li>
-<li><p>当其他节点离线时，向它们做广告。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9537">[待校准&#64;9537]</a></p></li>
+<li><p>当节点离线时，向其他节点广播自己离线的消息。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9537">[Alyssa&#64;9537]</a></p></li>
 </ol>
 <p>只有当其他节点具有兼容的 <a class="reference internal" href="Tutorials/Quality-of-Service.html"><span class="doc">Quality of Service</span></a> 设置时，节点才会与它们建立连接。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9538">[待校准&#64;9538]</a></p>
 <p>以 <a class="reference internal" href="Installation/Ubuntu-Development-Setup.html#talker-listener"><span class="std std-ref">talker-listener demo</span></a> 为例。在一个终端中运行ctaltalker节点将发布有关某个话题的消息，而在另一个终端中运行的Python侦听器节点将订阅有关同一话题的消息。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9539">[待校准&#64;9539]</a></p>
