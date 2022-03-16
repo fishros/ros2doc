@@ -282,7 +282,7 @@
 <h1>关于服务质量(QOS)设置 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9945">[小鱼&#64;9945]</a><a class="headerlink" href="#about-quality-of-service-settings" title="永久链接至标题"></a></h1>
 <div class="section" id="overview">
 <h2>概述<a class="headerlink" href="#overview" title="永久链接至标题"></a></h2>
-<p>ROS 2提供了丰富多样的服务质量 (QoS) 策略，使您可以调整节点之间的通讯。有了一套正确的服务质量策略，ROS 2可以像TCP一样可靠，也可以像UDP一样尽力而为，在这两者之间有很多很多可能的状态。与主要只支持TCP的ROS 1不同，ROS 2在具有 “尽力而为” 策略更合适的有损无线网络的环境中，受益于底层DDS传输的灵活性，或者在实时计算系统中，需要适当质量的服务配置文件来满足截止日期。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9946">[待校准&#64;9946]</a></p>
+<p>ROS 2提供了丰富多样的服务质量 (QoS) 策略，使您可以调整节点之间的通讯。通过正确设置服务质量策略，ROS 2可以像TCP一样可靠，也可以像UDP一样尽力而为，在这两者之间有很多很多可能的状态。与主要只支持TCP的ROS 1不同，ROS 2受益于底层DDS传输的灵活性，在有损无线网络的环境中“尽力而为” 策略更合适，或者在实时计算系统中，需要适当质量的服务配置文件来满足时间期限要求。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9946">[Alyssa&#64;9946]</a></p>
 <p>一组QoS “策略” 结合在一起形成QoS “配置文件”。考虑到为给定场景选择正确的QoS策略的复杂性，ROS 2为常见用例 (例如传感器数据) 提供了一组预定义的QoS配置文件。同时，开发人员可以灵活地控制QoS配置文件的特定策略。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9947">[待校准&#64;9947]</a></p>
 <p>可以为发布者、订阅、服务服务器和客户端指定QoS配置文件。QoS配置文件可以独立地应用于上述实体的每个实例，但是如果使用不同的配置文件，则它们可能不兼容，从而阻止消息的传递。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9948">[待校准&#64;9948]</a></p>
 </div>
