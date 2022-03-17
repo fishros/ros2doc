@@ -309,7 +309,7 @@
 </li>
 <li><p>耐久性 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9959">[待校准&#64;9959]</a></p>
 <ul>
-<li><p><em>Transient local</em>: the publisher becomes responsible for persisting samples for “late-joining” subscriptions.</p></li>
+<li><p><em>临时的本地</em>: 发布者负责为“延迟加入”的订阅者保留样本。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9960">[Alyssa&#64;9960]</a></p></li>
 <li><p><em>易失性</em>: 不尝试保留样本。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9961">[Alyssa&#64;9961]</a></p></li>
 </ul>
 </li>
@@ -320,13 +320,13 @@
 </li>
 <li><p>寿命 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9964">[待校准&#64;9964]</a></p>
 <ul>
-<li><p><em>Duration</em>: the maximum amount of time between the publishing and the reception of a message without the message being considered stale or expired (expired messages are silently dropped and are effectively never received).</p></li>
+<li><p><em>持续时间</em>: 在没有被视为过时或过期的消息发布和接收之间的最长时间 (过期的消息将被静默的丢弃，实际上永远不会收到)。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9965">[Alyssa&#64;9965]</a></p></li>
 </ul>
 </li>
-<li><p>活泼 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9966">[待校准&#64;9966]</a></p>
+<li><p>活性 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9966">[Alyssa&#64;9966]</a></p>
 <ul>
-<li><p><em>Automatic</em>: the system will consider all of the node’s publishers to be alive for another “lease duration” when any one of its publishers has published a message.</p></li>
-<li><p><em>Manual by topic</em>: the system will consider the publisher to be alive for another “lease duration” if it manually asserts that it is still alive (via a call to the publisher API).</p></li>
+<li><p><em>自动</em>: 当节点的任何一个发布者发布消息时，系统将认为该节点的所有发布者还要存活另一个“租赁期限”。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9967">[Alyssa&#64;9967]</a></p></li>
+<li><p><em>按话题手动</em>: 如果手动断言发布者仍然活着 (通过调用发布者API)，则系统将认为该发布者还要存活另一个“租约期限”。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9968">[Alyssa&#64;9968]</a></p></li>
 </ul>
 </li>
 <li><p>租赁期限 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9969">[待校准&#64;9969]</a></p>
