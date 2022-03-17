@@ -331,14 +331,14 @@
 </li>
 <li><p>租赁期限 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9969">[待校准&#64;9969]</a></p>
 <ul>
-<li><p><em>Duration</em>: the maximum period of time a publisher has to indicate that it is alive before the system considers it to have lost liveliness (losing liveliness could be an indication of a failure).</p></li>
+<li><p><em>持续时间</em>: 在系统认为它已经失去活性之前，发布者必须指明它还活着的最长周期 (失去活性可能暗示出现了故障)。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9970">[Alyssa&#64;9970]</a></p></li>
 </ul>
 </li>
 </ul>
-<p>对于不是持续时间的每个策略，还有 “系统默认” 选项，它使用底层中间件的默认。对于每个具有持续时间的策略，还存在一个 “默认” 选项，这意味着持续时间未指定，底层中间件通常将其解释为无限长的持续时间。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9971">[待校准&#64;9971]</a></p>
+<p>对于不是持续时间的每个策略，还有“系统默认”选项，它使用底层中间件的默认选项。对于每个具有持续时间的策略，也存在一个“默认”选项，这意味着持续时间未指定，底层中间件通常将其解释为无限长的持续时间。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9971">[Alyssa&#64;9971]</a></p>
 <div class="section" id="comparison-to-ros-1">
-<h3>与ROS 1的比较 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9972">[待校准&#64;9972]</a><a class="headerlink" href="#comparison-to-ros-1" title="永久链接至标题"></a></h3>
-<p>ROS 2中的 “历史” 和 “深度” 策略相结合以提供类似于ROS 1中的队列大小的功能。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9973">[待校准&#64;9973]</a></p>
+<h3>与ROS 1的比较<a class="headerlink" href="#comparison-to-ros-1" title="永久链接至标题"></a></h3>
+<p>ROS 2中的“历史记录”和“深度”策略相结合以提供类似于ROS 1中的队列大小的功能。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9973">[Alyssa&#64;9973]</a></p>
 <p>ROS 2中的 “可靠性” 策略类似于使用UDPROS (仅在 <code class="docutils literal notranslate"><span class="pre">roscpp</span></code> 中) 来 “尽最大努力”，或者使用TCPROS (ROS 1默认) 来 “可靠”。但是请注意，即使ROS 2中的可靠策略也是使用UDP实现的，这允许在适当的情况下进行多播。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9974">[待校准&#64;9974]</a></p>
 <p>“持久性” 政策 “瞬态局部”，结合任何深度，提供类似于 “锁定” 出版商的功能。ROS 2中的其余策略与ROS 1中可用的任何策略都不相似，这意味着ROS 2在这方面比ROS 1更具特色。将来，ROS 2中可能会提供更多的QoS策略。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9975">[待校准&#64;9975]</a></p>
 </div>
@@ -557,7 +557,7 @@
 <p>为了建立连接，所有影响兼容性的策略都必须兼容。例如，即使请求和提供的QoS配置文件对具有兼容的可靠性QoS策略，但它们具有不兼容的持久性QoS策略，也不会建立连接。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10016">[待校准&#64;10016]</a></p>
 <p>未建立连接时，发布者和订阅之间不会传递任何消息。有检测这种情况的机制，这将在后面的章节中介绍。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10017">[待校准&#64;10017]</a></p>
 <div class="section" id="id1">
-<h3>与ROS 1的比较 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9972">[待校准&#64;9972]</a><a class="headerlink" href="#id1" title="永久链接至标题"></a></h3>
+<h3>与ROS 1的比较<a class="headerlink" href="#id1" title="永久链接至标题"></a></h3>
 <p>历史调用y在ROS 1中，任何在相同话题上具有相同消息类型的出版商和订阅者都将被连接。在使用ROS 2时，需要注意的是请求和提供的QoS配置文件不兼容的可能性。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10018">[待校准&#64;10018]</a></p>
 </div>
 </div>
