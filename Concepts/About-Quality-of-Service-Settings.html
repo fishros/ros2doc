@@ -355,7 +355,7 @@
 <p>与发布者和订阅者一样，服务是可靠的。服务使用易失性的持久性策略尤为重要，否则重新启动的服务服务器可能会收到过时的请求。虽然保护客户端不接收多个响应，但不保护服务器免受接收过时请求的副作用。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9982">[Alyssa&#64;9982]</a></p>
 </li>
 <li><p>传感器数据</p>
-<p>对于传感器数据，在大多数情况下，及时接收读数比确保所有读数都到达更为重要。也就是说，开发人员希望最新的样本一被捕获，就以丢失一些为代价。因此，传感器数据配置文件使用最大的努力可靠性和较小的队列大小。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9984">[待校准&#64;9984]</a></p>
+<p>对于传感器数据，在大多数情况下，及时接收读数比确保所有读数都到达更为重要。也就是说，开发人员希望一捕获到最新的样本就获取他们，即使以丢失一些数据为代价。因此，传感器数据配置文件使用尽力而为的可靠性策略和较小的队列大小。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9984">[Alyssa&#64;9984]</a></p>
 </li>
 <li><p>参数 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9985">[待校准&#64;9985]</a></p>
 <p>ROS 2中的参数基于服务，因此具有类似的配置文件。不同之处在于，参数使用更大的队列深度，这样当例如参数客户端无法到达参数服务服务器时，请求就不会丢失。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9986">[待校准&#64;9986]</a></p>
