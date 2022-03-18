@@ -358,7 +358,7 @@
 <p>对于传感器数据，在大多数情况下，及时接收读数比确保所有读数都到达更为重要。也就是说，开发人员希望一捕获到最新的样本就获取他们，即使以丢失一些数据为代价。因此，传感器数据配置文件使用尽力而为的可靠性策略和较小的队列大小。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9984">[Alyssa&#64;9984]</a></p>
 </li>
 <li><p>参数</p>
-<p>ROS 2中的参数基于服务，因此具有类似的配置文件。不同之处在于，参数使用更大的队列深度，这样，例如参数客户端无法访问参数服务服务器时，请求就不会丢失。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9986">[Alyssa&#64;9986]</a></p>
+<p>ROS 2中的参数基于服务，因此具有类似的配置文件。不同之处在于，参数使用更大的队列深度，这样，例如参数客户端无法访问参数服务的服务端时，请求就不会丢失。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9986">[Alyssa&#64;9986]</a></p>
 </li>
 <li><p>系统默认</p>
 <p>这将对所有策略使用RMW实现的默认值。不同的RMW实现可能有不同的默认值。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9988">[待校准&#64;9988]</a></p>
@@ -368,7 +368,7 @@
 </div>
 <div class="section" id="qos-compatibilities">
 <h2>QoS兼容性<a class="headerlink" href="#qos-compatibilities" title="永久链接至标题"></a></h2>
-<p>Note注意: This本节涉及发布者和订阅，但内容以相同的方式适用于服务服务器和客户端。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9991">[待校准&#64;9991]</a></p>
+<p>注意: 本节涉及发布者和订阅，但内容以相同的方式适用于服务的服务端和客户端。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9991">[Alyssa&#64;9991]</a></p>
 <p>QoS配置文件可以独立为发布者和订阅配置。仅当发布服务器和订阅具有兼容的QoS配置文件时，才会在发布服务器和订阅之间建立连接。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9992">[待校准&#64;9992]</a></p>
 <p>QoS配置文件兼容性是基于 “请求与提供” 模型确定的。订阅 * 请求 * 它愿意接受的 “最低质量” 的QoS配置文件，出版商 * 提供 * 一个QoS配置文件，这是它能够提供的 “最高质量”。连接只有如果每政策要求QoS配置文件不是更string耳鼻喉科比提供QoS配置文件。多个订阅可以同时连接到单个发布者，即使它们请求的QoS配置文件不同。发布者和订阅之间的兼容性不受其他发布者和订阅存在的影响。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9993">[待校准&#64;9993]</a></p>
 <p>下表显示了不同策略设置的兼容性和结果: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9994">[待校准&#64;9994]</a></p>
