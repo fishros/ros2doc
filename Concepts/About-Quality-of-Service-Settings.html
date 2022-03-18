@@ -349,7 +349,7 @@
 <p>当前定义的QoS配置文件如下:</p>
 <ul>
 <li><p>发布者和订阅者的默认QoS设置 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9979">[Alyssa&#64;9979]</a></p>
-<p>为了使从ROS 1到ROS 2的过渡更容易，需要执行类似的网络行为。默认情况下，ROS 2中的发布者和订阅对于队列大小为10的历史记录具有 “最后保留”，对于可靠性具有 “可靠”，对于耐用性具有 “易失性”，和 “系统默认” 的活力。截止日期、寿命和租赁持续时间也都设置为 “默认”。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9980">[待校准&#64;9980]</a></p>
+<p>为了使从ROS 1到ROS 2的过渡更容易，需要执行类似的网络行为。默认情况下，ROS 2中的发布者和订阅者对于历史记录有队列大小为10的“保留最后”策略，对于可靠性具有“可靠”策略，对于耐用性具有 “易失性”策略，和 “系统默认” 的活性。时间限制、寿命和租赁持续时间也都设置为 “默认”。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9980">[Alyssa&#64;9980]</a></p>
 </li>
 <li><p>服务 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9981">[待校准&#64;9981]</a></p>
 <p>与出版商和订阅一样，服务是可靠的。服务使用易失性持久性尤为重要，否则重新启动的服务服务器可能会收到过时的请求。虽然保护客户端不接收多个响应，但不保护服务器免受接收过时请求的副作用。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9982">[待校准&#64;9982]</a></p>
