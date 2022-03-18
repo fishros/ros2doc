@@ -352,7 +352,7 @@
 <p>为了使从ROS 1到ROS 2的过渡更容易，需要执行类似的网络行为。默认情况下，ROS 2中的发布者和订阅者对于历史记录有队列大小为10的“保留最后”策略，对于可靠性具有“可靠”策略，对于耐用性具有 “易失性”策略，和 “系统默认” 的活性。时间限制、寿命和租赁持续时间也都设置为 “默认”。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9980">[Alyssa&#64;9980]</a></p>
 </li>
 <li><p>服务</p>
-<p>与发布者和订阅者一样，服务是可靠的。服务使用易失性的持久性策略尤为重要，否则重新启动的服务服务器可能会收到过时的请求。虽然保护客户端不接收多个响应，但不保护服务器免受接收过时请求的副作用。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9982">[Alyssa&#64;9982]</a></p>
+<p>与发布者和订阅者一样，服务是可靠的。服务使用易失性的持久性策略尤为重要，否则重新启动的服务的服务端时可能会收到过时的请求。虽然保护客户端不接收多个响应，但不保护服务端免受接收过时请求的副作用。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9982">[Alyssa&#64;9982]</a></p>
 </li>
 <li><p>传感器数据</p>
 <p>对于传感器数据，在大多数情况下，及时接收读数比确保所有读数都到达更为重要。也就是说，开发人员希望一捕获到最新的样本就获取他们，即使以丢失一些数据为代价。因此，传感器数据配置文件使用尽力而为的可靠性策略和较小的队列大小。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9984">[Alyssa&#64;9984]</a></p>
