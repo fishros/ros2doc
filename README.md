@@ -4,5 +4,3 @@
 
 ## 最近一次更新记录
 - [Alyssa](https://github.com/alyssa1024) mark:no_translate
-- [Alyssa](https://github.com/alyssa1024) mark:no_translate
-- [Alyssa](https://github.com/alyssa1024) mark:no_translate
