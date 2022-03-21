@@ -429,7 +429,7 @@
 <h3>TF2缓冲器 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=4706">[待校准&#64;4706]</a><a class="headerlink" href="#tf2-buffer" title="永久链接至标题"></a></h3>
 <p>现在必须给TF2缓冲器一个计时器接口。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=4707">[待校准&#64;4707]</a></p>
 <p>如果没有给出计时器接口，将引发异常。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=4708">[待校准&#64;4708]</a></p>
-<p>例如: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=4709">[待校准&#64;4709]</a></p>
+<p>例如:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">tf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">tf2_ros</span><span class="o">::</span><span class="n">Buffer</span><span class="o">&gt;</span><span class="p">(</span><span class="n">get_clock</span><span class="p">());</span><span class="w"></span>
 <span class="c1">// The next two lines are new in Eloquent</span>
 <span class="k">auto</span><span class="w"> </span><span class="n">timer_interface</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">tf2_ros</span><span class="o">::</span><span class="n">CreateTimerROS</span><span class="o">&gt;</span><span class="p">(</span><span class="w"></span>

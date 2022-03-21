@@ -377,7 +377,7 @@ For a list of all of the changes since Foxy, see the <a class="reference interna
 </ul>
 <p>因此，默认值保持不变: ''~/.ros/log''。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=4886">[待校准&#64;4886]</a></p>
 <p>相关PRs:  <a class="reference external" href="https://github.com/ros2/rcl_logging/pull/53">ros2/rcl_logging#53</a> and <a class="reference external" href="https://github.com/ros2/launch/pull/460">ros2/launch#460</a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=4887">[待校准&#64;4887]</a></p>
-<p>例如: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=4709">[待校准&#64;4709]</a></p>
+<p>例如:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">ROS_LOG_DIR</span><span class="o">=</span>/tmp/foo ros2 run demo_nodes_cpp talker
 </pre></div>
 </div>
@@ -740,7 +740,7 @@ ros2 bag play my_bag --clock <span class="m">100</span>
 <div class="section" id="tf2-ros-python-transformlistener-uses-global-namespace">
 <h3>tf2_ros Python转换侦听器使用全局命名空间 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=4989">[待校准&#64;4989]</a><a class="headerlink" href="#tf2-ros-python-transformlistener-uses-global-namespace" title="永久链接至标题"></a></h3>
 <p>Python <code class="docutils literal notranslate"><span class="pre">TransformListener</span></code> 现在在全局命名空间中订阅 <code class="docutils literal notranslate"><span class="pre">/tf</span></code> 和 <code class="docutils literal notranslate"><span class="pre">/tf_static</span></code> 。以前，它存在于节点的命名空间中。这意味着节点的命名空间将不再影响 <code class="docutils literal notranslate"><span class="pre">/tf</span></code> 和 <code class="docutils literal notranslate"><span class="pre">/tf_static</span></code> 订阅。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=4990">[待校准&#64;4990]</a></p>
-<p>例如: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=4709">[待校准&#64;4709]</a></p>
+<p>例如:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 run tf2_ros tf2_echo --ros-args -r __ns:<span class="o">=</span>/test -- odom base_link
 </pre></div>
 </div>
