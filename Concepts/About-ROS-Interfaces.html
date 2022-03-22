@@ -297,7 +297,7 @@
 </ul>
 </li>
 <li><p><a class="reference internal" href="#service-description-specification" id="id8">3. 服务描述规范 [Alyssa&#64;10190]</a></p></li>
-<li><p><a class="reference internal" href="#new-features-in-ros-2-interfaces" id="id9">4.ROS 2接口的新功能 [待校准&#64;10196]</a></p></li>
+<li><p><a class="reference internal" href="#new-features-in-ros-2-interfaces" id="id9">4. ROS 2接口的新功能 [Alyssa&#64;10196]</a></p></li>
 </ul>
 </div>
 <div class="section" id="background">
@@ -533,7 +533,7 @@ string <span class="nv">EXAMPLE</span><span class="o">=</span><span class="s1">&
 string str
 </pre></div>
 </div>
-<p>我们当然会变得更加复杂 (如果您想引用来自同一包的消息，您不能提及包名称): <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10194">[待校准&#64;10194]</a></p>
+<p>我们当然可以使服务消息变得更加复杂 (如果您想引用来自同一包的消息，您不能提及包名称): <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10194">[Alyssa&#64;10194]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#request constants</span>
 int8 <span class="nv">FOO</span><span class="o">=</span><span class="m">1</span>
 int8 <span class="nv">BAR</span><span class="o">=</span><span class="m">2</span>
@@ -552,7 +552,7 @@ uint32 an_integer
 <p>您不能在服务中嵌入其他服务。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10195">[待校准&#64;10195]</a></p>
 </div>
 <div class="section" id="new-features-in-ros-2-interfaces">
-<h2>4.ROS 2接口的新功能 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10196">[待校准&#64;10196]</a><a class="headerlink" href="#new-features-in-ros-2-interfaces" title="永久链接至标题"></a></h2>
+<h2>4. ROS 2接口的新功能 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10196">[Alyssa&#64;10196]</a><a class="headerlink" href="#new-features-in-ros-2-interfaces" title="永久链接至标题"></a></h2>
 <p>ROS 2 IDL与 <a class="reference external" href="https://wiki.ros.org/msg">ROS 1 IDL</a> 密切相关。大多数现有的ROS 1 <code class="docutils literal notranslate"><span class="pre">.msg</span></code> 和 <code class="docutils literal notranslate"><span class="pre">.srv</span></code> 文件应该与ROS 2一样可用。在ROS 1现有的特征集上，ROS 2 IDL引入了一些新的特征，即: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10197">[待校准&#64;10197]</a></p>
 <ul class="simple">
 <li><p>有界数组: 而ROS 1IDL允许无界数组 (例如g.， <code class="docutils literal notranslate"><span class="pre">int32[]</span> <span class="pre">foo</span></code> ) 和固定尺寸阵列 (例如g.， <code class="docutils literal notranslate"><span class="pre">int32[5]</span> <span class="pre">bar</span></code> )，ROS 2 IDL进一步允许有界阵列 (例如g.， <code class="docutils literal notranslate"><span class="pre">int32[&lt;=5]</span> <span class="pre">bat</span></code> )。在某些用例中，重要的是能够在数组大小上设置上限，而不必总是使用那么多空间 (例如g.，在实时系统中，您需要预分配将在执行期间使用的所有内存)。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10198">[待校准&#64;10198]</a></p></li>
