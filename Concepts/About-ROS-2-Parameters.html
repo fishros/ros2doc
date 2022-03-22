@@ -288,7 +288,7 @@
 <ul>
 <li><p><a class="reference internal" href="#declaring-parameters" id="id3">声明参数</a></p></li>
 <li><p><a class="reference internal" href="#parameter-types" id="id4">参数类型 [待校准&#64;10075]</a></p></li>
-<li><p><a class="reference internal" href="#parameter-callbacks" id="id5">参数调用返回 [待校准&#64;10078]</a></p></li>
+<li><p><a class="reference internal" href="#parameter-callbacks" id="id5">参数回调函数 [Alyssa&#64;10078]</a></p></li>
 </ul>
 </li>
 <li><p><a class="reference internal" href="#interacting-with-parameters" id="id6">与参数交互 [待校准&#64;10083]</a></p></li>
@@ -318,7 +318,7 @@
 <p>如果需要一个参数是多个不同的类型，并且使用该参数的代码可以处理它，则可以更改此默认行为。声明该参数时，应使用 <code class="docutils literal notranslate"><span class="pre">dynamic_typing</span></code> 成员变量设置为 <code class="docutils literal notranslate"><span class="pre">true</span></code> 的 <code class="docutils literal notranslate"><span class="pre">参数描述符（ParameterDescriptor）</span></code> 进行声明。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10077">[Alyssa&#64;10077]</a></p>
 </div>
 <div class="section" id="parameter-callbacks">
-<h3>参数调用返回 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10078">[待校准&#64;10078]</a><a class="headerlink" href="#parameter-callbacks" title="永久链接至标题"></a></h3>
+<h3>参数回调函数 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10078">[Alyssa&#64;10078]</a><a class="headerlink" href="#parameter-callbacks" title="永久链接至标题"></a></h3>
 <p>ROS 2节点可以注册两种不同类型的调用，以便在参数发生更改时通知。有两种类型的调用返回的原因是为了有机会在参数更改发生之前进行干预，以及有机会在参数更改发生之后做出反应。节点可以同时注册调用的back类型之一，也可以不注册。这两种类型如下所述。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10079">[待校准&#64;10079]</a></p>
 <p>第一种类型被称为  &quot;set parameter&quot; 调用，可以通过调用 <code class="docutils literal notranslate"><span class="pre">add_on_set_parameters_callback</span></code> 来安装。调用back应该接受一个 <code class="docutils literal notranslate"><span class="pre">Parameter</span></code> 对象列表，并返回一个 <code class="docutils literal notranslate"><span class="pre">rcl_interfaces/msg/SetParametersResult</span></code> 。在节点上声明或更改参数之前，将调用此调用。调用back的主要目的是使用户能够检查即将对参数进行的更改，并明确拒绝该更改。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10080">[待校准&#64;10080]</a></p>
 <div class="admonition note">
