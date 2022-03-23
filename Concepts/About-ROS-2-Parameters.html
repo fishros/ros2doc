@@ -323,7 +323,7 @@
 <p>第一种类型被称为  &quot;set parameter&quot; 调用，可以通过调用 <code class="docutils literal notranslate"><span class="pre">add_on_set_parameters_callback</span></code> 来安装。这个回调函数应该接受一个 <code class="docutils literal notranslate"><span class="pre">Parameter</span></code> 对象列表，并返回一个 <code class="docutils literal notranslate"><span class="pre">rcl_interfaces/msg/SetParametersResult</span></code> 。在节点上声明或更改参数之前，将调用此回调函数。这种回调函数的主要目的是使用户能够检查即将对参数进行的更改，并显示的拒绝该更改。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10080">[Alyssa&#64;10080]</a></p>
 <div class="admonition note">
 <p class="admonition-title">注解</p>
-<p>重要的是  &quot;set parameter&quot; 调用没有副作用。由于可以链接多个  &quot;set parameter&quot; 调用，因此单个调用无法知道以后的调用是否会拒绝更新。例如，如果单个调用要对其所在的类进行更改，它可能会与实参不同步。要在成功更改参数后 * 返回调用，请参阅下面的下一种调用类型。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10081">[待校准&#64;10081]</a></p>
+<p>重要的是  &quot;set parameter&quot; 回调函数没有副作用。由于可以链接多个  &quot;set parameter&quot; 回调函数，因此单个回调函数无法知道后续的回调函数是否会拒绝更新。例如，如果单个回调函数要对其所在的类进行更改，它可能会与实参不同步。要在成功更改参数*后* 返回回调函数，请参阅下面的下一种回调类型。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10081">[Alyssa&#64;10081]</a></p>
 </div>
 <p>第二种类型的调用被称为  &quot;on parameter event&quot; 调用，可以通过调用 <code class="docutils literal notranslate"><span class="pre">on_parameter_event</span></code> 来安装。调用back应该接受一个 <code class="docutils literal notranslate"><span class="pre">rcl_interfaces/msg/ParameterEvent</span></code> 对象，并且不返回任何内容。在声明、更改或删除所有参数后，将调用此调用。调用back的主要目的是使用户能够对已成功接受的参数的更改做出反应。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10082">[待校准&#64;10082]</a></p>
 </div>
