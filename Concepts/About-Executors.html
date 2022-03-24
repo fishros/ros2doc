@@ -294,7 +294,7 @@
 </div>
 <div class="section" id="overview">
 <h2><a class="toc-backref" href="#id2">概述</a><a class="headerlink" href="#overview" title="永久链接至标题"></a></h2>
-<p>ROS 2中的执行管理通过执行器的概念进行了阐述。执行程序使用底层操作系统的一个或多个线程对传入的消息和事件调用订阅、计时器、服务服务器、动作服务器等。显式执行者类 (在rclcpp中的 <a class="reference external" href="https://github.com/ros2/rclcpp/blob/master/rclcpp/include/rclcpp/executor.hpp">executor.hpp</a> 、rclpy中的 <a class="reference external" href="https://github.com/ros2/rclpy/blob/master/rclpy/rclpy/executors.py">executors.py</a> 或rclc中的 <a class="reference external" href="https://github.com/ros2/rclc/blob/master/rclc/include/rclc/executor.h">executor.h</a> ) 比在ROS 1中的自旋机制提供了对执行管理的更多控制，尽管基本API非常相似。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9804">[待校准&#64;9804]</a></p>
+<p>ROS 2中的执行管理通过执行器的概念进行了阐述。执行器使用底层操作系统的一个或多个线程对传入的消息和事件调用订阅者、计时器、服务服务端、动作服务端等的回调函数。显式执行器类 (在rclcpp中的 <a class="reference external" href="https://github.com/ros2/rclcpp/blob/master/rclcpp/include/rclcpp/executor.hpp">executor.hpp</a> 、rclpy中的 <a class="reference external" href="https://github.com/ros2/rclpy/blob/master/rclpy/rclpy/executors.py">executors.py</a> 或rclc中的 <a class="reference external" href="https://github.com/ros2/rclc/blob/master/rclc/include/rclc/executor.h">executor.h</a> ) 比ROS 1中的自旋（spin）机制提供了对执行管理的更多控制，尽管两者基本API非常相似。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9804">[Alyssa&#64;9804]</a></p>
 <p>下面，我们重点介绍cclient客户端库 * rclcpp <a href="#id1"><span class="problematic" id="id2">*</span></a>。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9805">[待校准&#64;9805]</a></p>
 </div>
 <div class="section" id="basic-use">
