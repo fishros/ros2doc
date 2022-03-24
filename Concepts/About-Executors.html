@@ -324,7 +324,7 @@
 <span class="n">executor</span><span class="p">.</span><span class="n">spin</span><span class="p">();</span><span class="w"></span>
 </pre></div>
 </div>
-<p>通过调用执行程序实例的 <code class="docutils literal notranslate"><span class="pre">spin()</span></code> ，当前线程开始向rcl和中间件层查询传入消息和其他事件，并调用相应的调用函数，直到节点关闭。为了不抵消中间件的QoS设置，传入的消息不会存储在客户端库层的队列中，而是保存在中间件中，直到被调用的back函数处理为止。(这对ROS 1来说是一个至关重要的区别。)* 等待集 * 用于通知执行程序中间件层上的可用消息，每个队列有一个二进制标志。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9809">[待校准&#64;9809]</a></p>
+<p>通过调用执行器实例的 <code class="docutils literal notranslate"><span class="pre">spin()</span></code> ，当前线程开始向rcl和中间件层查询传入消息和其他事件，并调用相应的回调函数，直到节点关闭。为了不抵消中间件的QoS设置，传入的消息不会存储在客户端库层的队列中，而是保存在中间件中，直到被回调函数处理为止。(这是和ROS 1的一个至关重要的区别。) <em>等待集</em> 用于通知执行器中间件层上的可用消息，每个队列有一个二进制标志。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9809">[Alyssa&#64;9809]</a></p>
 <img alt="../_images/executors_basic_principle.png" src="../_images/executors_basic_principle.png" />
 <p>单线程执行程序也被容器进程用于 <a class="reference internal" href="About-Composition.html"><span class="doc">components</span></a> ，即在没有显式主函数的情况下创建和执行节点的所有情况下。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9810">[待校准&#64;9810]</a></p>
 </div>
