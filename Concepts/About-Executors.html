@@ -393,7 +393,7 @@
 <li><p>对回调执行顺序没有明确的控制。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9831">[Alyssa&#64;9831]</a></p></li>
 <li><p>对特定话题的触发没有内置控制。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9832">[待校准&#64;9832]</a></p></li>
 </ol>
-<p>此外，执行程序在CPU和内存使用方面的开销相当大。静态单线程执行程序大大减少了这种开销，但对于某些应用程序来说可能还不够。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9833">[待校准&#64;9833]</a></p>
+<p>此外，执行器在CPU和内存使用方面的开销相当大。静态单线程执行器大大减少了这种开销，但对于某些应用程序来说可能还不够。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9833">[Alyssa&#64;9833]</a></p>
 <p>以下开发版本已部分解决了这些问题: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9834">[待校准&#64;9834]</a></p>
 <ul class="simple">
 <li><p>[需手动修复的语法] <a class="reference external" href="https://github.com/ros2/rclcpp/blob/master/rclcpp/include/rclcpp/wait_set.hpp">rclcpp WaitSet</a> : rclcpp的 <code class="docutils literal notranslate"><span class="pre">WaitSet</span></code> 类允许直接在订阅、计时器、服务服务器、动作服务器等上等待，而不是使用执行程序。它可用于实现确定性的、用户定义的处理序列，可能一起处理来自不同订阅的多个消息。 <a class="reference external" href="https://github.com/ros2/examples/tree/master/rclcpp/wait_set">examples_rclcpp_wait_set package</a> 提供了几个使用该用户级等待集机制的例子。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9835">[待校准&#64;9835]</a></p></li>
