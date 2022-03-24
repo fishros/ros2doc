@@ -342,11 +342,8 @@
    StaticSingleThreadedExecutor  [shape=polygon,sides=4];
 
    }" class="graphviz" /></div>
-<p>The <em>Multi-Threaded Executor</em> creates a configurable number of threads to allow for processing multiple messages or events in parallel.
-The <em>Static Single-Threaded Executor</em> optimizes the runtime costs for scanning the structure of a node in terms of subscriptions, timers, service servers, action servers, etc.
-It performs this scan only once when the node is added, while the other two executors regularly scan for such changes.
-Therefore, the Static Single-Threaded Executor should be used only with nodes that create all subscriptions, timers, etc. during initialization.</p>
-<p>通过为每个节点调用 <code class="docutils literal notranslate"><span class="pre">add_node(..)</span></code> ，所有三个执行程序都可以与多个节点一起使用。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9814">[待校准&#64;9814]</a></p>
+<p><em>多线程执行器</em> 创建可配置数量的线程，以允许并行处理多个消息或事件。<em>静态单线程执行器</em> 根据订阅者、计时器、服务服务端、动作服务端等优化扫描节点结构的运行时成本。当添加节点时，它仅执行一次扫描，而其他两个执行器定期扫描此类更改。因此，静态单线程执行器应仅用于在初始化期间创建所有订阅者、计时器等的节点。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9813">[Alyssa&#64;9813]</a></p>
+<p>通过为每个节点调用 <code class="docutils literal notranslate"><span class="pre">add_node(..)</span></code> ，所有三个执行器都可以与多个节点一起使用。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9814">[Alyssa&#64;9814]</a></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">rclcpp</span><span class="o">::</span><span class="n">Node</span><span class="o">::</span><span class="n">SharedPtr</span><span class="w"> </span><span class="n">node1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...</span><span class="w"></span>
 <span class="n">rclcpp</span><span class="o">::</span><span class="n">Node</span><span class="o">::</span><span class="n">SharedPtr</span><span class="w"> </span><span class="n">node2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...</span><span class="w"></span>
 <span class="n">rclcpp</span><span class="o">::</span><span class="n">Node</span><span class="o">::</span><span class="n">SharedPtr</span><span class="w"> </span><span class="n">node3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...</span><span class="w"></span>
