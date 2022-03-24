@@ -369,10 +369,10 @@
 <span class="w">                                             </span><span class="n">callback</span><span class="p">,</span><span class="w"> </span><span class="n">options</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-<p>创建的所有订阅、计时器等 (不指示调用返回组) 都分配给 * 默认调用返回组 <a href="#id1"><span class="problematic" id="id2">*</span></a>。可以通过 “nodebaseinterface::get_default _ 调用back_group()” 查询默认调用back组。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9818">[待校准&#64;9818]</a></p>
-<p>有两种类型的调用返回组，其中必须在实例化时指定类型: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9819">[待校准&#64;9819]</a></p>
+<p>创建的所有订阅者、计时器等 (不指明回调组) 都会被分配 <em>默认调用返回组</em>。可以通过 <code class="docutils literal notranslate"><span class="pre">NodeBaseInterface::get_default_callback_group()</span></code> 查询默认回调组。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9818">[Alyssa&#64;9818]</a></p>
+<p>有两种类型的回调组，必须在实例化时指定类型: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9819">[Alyssa&#64;9819]</a></p>
 <ul class="simple">
-<li><p><em>Mutually exclusive:</em> Callbacks of this group must not be executed in parallel.</p></li>
+<li><p><em>互斥:</em> 不得并行执行此组的回调。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9820">[Alyssa&#64;9820]</a></p></li>
 <li><p><em>Reentrant:</em> Callbacks of this group may be executed in parallel.</p></li>
 </ul>
 <p>不同调用组的回调可以始终并行执行。多线程执行程序使用其线程作为池，根据这些条件并行处理尽可能多的调用。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9822">[待校准&#64;9822]</a></p>
