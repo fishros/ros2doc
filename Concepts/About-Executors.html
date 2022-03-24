@@ -287,7 +287,7 @@
 <li><p><a class="reference internal" href="#basic-use" id="id3">基本用途</a></p></li>
 <li><p><a class="reference internal" href="#types-of-executors" id="id4">执行器类型</a></p></li>
 <li><p><a class="reference internal" href="#callback-groups" id="id5">回调组</a></p></li>
-<li><p><a class="reference internal" href="#scheduling-semantics" id="id6">调度语义 [待校准&#64;9824]</a></p></li>
+<li><p><a class="reference internal" href="#scheduling-semantics" id="id6">调度语义</a></p></li>
 <li><p><a class="reference internal" href="#outlook" id="id7">展望 [待校准&#64;9827]</a></p></li>
 <li><p><a class="reference internal" href="#further-information" id="id8">更多信息 [待校准&#64;9837]</a></p></li>
 </ul>
@@ -379,7 +379,7 @@
 <p>自从Galactic之后，执行器（Executor）基类的接口被一个新的函数 <code class="docutils literal notranslate"><span class="pre">add_callback_group(..)</span></code> 改进了。这允许将回调组分配给不同的执行器。通过使用操作系统调度程序配置基础线程，特定的回调可以优先于其他回调。例如，控制循环的订阅者和计时器可以优先于节点的所有其他订阅者和标准服务。 <a class="reference external" href="https://github.com/ros2/examples/tree/master/rclcpp/executors/cbg_executor">examples_rclcpp_cbg_executor package</a> 提供了这一机制的例程。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9823">[Alyssa&#64;9823]</a></p>
 </div>
 <div class="section" id="scheduling-semantics">
-<h2>调度语义 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9824">[待校准&#64;9824]</a><a class="headerlink" href="#scheduling-semantics" title="永久链接至标题"></a></h2>
+<h2><a class="toc-backref" href="#id6">调度语义</a><a class="headerlink" href="#scheduling-semantics" title="永久链接至标题"></a></h2>
 <p>如果调用back的处理时间短于消息和事件发生的时间，则执行程序basi调用y以FIFO顺序处理它们。但是，如果某些调用的处理时间较长，则消息和事件将在堆栈的较低层排队。等待集机制只向执行程序报告很少的关于这些队列的信息。详细地说，它只报告某个话题是否有任何消息。执行程序使用此信息以循环方式处理消息 (包括服务和动作)，但不按FIFO顺序处理。此外，它优先考虑所有计时器事件而不是消息。以下流程图可视化了此调度语义。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9825">[待校准&#64;9825]</a></p>
 <img alt="../_images/executors_scheduling_semantics.png" src="../_images/executors_scheduling_semantics.png" />
 <p>这种语义首次在 <a class="reference external" href="https://drops.dagstuhl.de/opus/volltexte/2019/10743/pdf/LIPIcs-ECRTS-2019-6.pdf">paper by Casini et al. at ECRTS 2019</a> 中被描述。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9826">[待校准&#64;9826]</a></p>
