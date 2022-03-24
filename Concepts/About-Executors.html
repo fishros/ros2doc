@@ -288,7 +288,7 @@
 <li><p><a class="reference internal" href="#types-of-executors" id="id4">执行器类型</a></p></li>
 <li><p><a class="reference internal" href="#callback-groups" id="id5">回调组</a></p></li>
 <li><p><a class="reference internal" href="#scheduling-semantics" id="id6">调度语义</a></p></li>
-<li><p><a class="reference internal" href="#outlook" id="id7">展望 [待校准&#64;9827]</a></p></li>
+<li><p><a class="reference internal" href="#outlook" id="id7">展望</a></p></li>
 <li><p><a class="reference internal" href="#further-information" id="id8">更多信息 [待校准&#64;9837]</a></p></li>
 </ul>
 </div>
@@ -380,16 +380,16 @@
 </div>
 <div class="section" id="scheduling-semantics">
 <h2><a class="toc-backref" href="#id6">调度语义</a><a class="headerlink" href="#scheduling-semantics" title="永久链接至标题"></a></h2>
-<p>如果调用back的处理时间短于消息和事件发生的时间，则执行程序basi调用y以FIFO顺序处理它们。但是，如果某些调用的处理时间较长，则消息和事件将在堆栈的较低层排队。等待集机制只向执行程序报告很少的关于这些队列的信息。详细地说，它只报告某个话题是否有任何消息。执行程序使用此信息以循环方式处理消息 (包括服务和动作)，但不按FIFO顺序处理。此外，它优先考虑所有计时器事件而不是消息。以下流程图可视化了此调度语义。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9825">[待校准&#64;9825]</a></p>
+<p>如果回调函数的处理时间短于消息和事件发生的时间，则执行器基本上以FIFO顺序处理它们。但是，如果某些回调的处理时间较长，则消息和事件将在堆栈的较低层排队。等待集机制只向执行器上报很少的关于这些队列的信息。具体地说，它只报告某个话题是否有任何消息。执行器使用此信息以循环方式处理消息 (包括服务和动作)，而不是按FIFO顺序处理。此外，它优先考虑所有计时器事件而不是消息。以下流程图可视化了此调度语义。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9825">[Alyssa&#64;9825]</a></p>
 <img alt="../_images/executors_scheduling_semantics.png" src="../_images/executors_scheduling_semantics.png" />
 <p>这种语义首次在 <a class="reference external" href="https://drops.dagstuhl.de/opus/volltexte/2019/10743/pdf/LIPIcs-ECRTS-2019-6.pdf">paper by Casini et al. at ECRTS 2019</a> 中被描述。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9826">[待校准&#64;9826]</a></p>
 </div>
 <div class="section" id="outlook">
-<h2>展望 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9827">[待校准&#64;9827]</a><a class="headerlink" href="#outlook" title="永久链接至标题"></a></h2>
+<h2><a class="toc-backref" href="#id7">展望</a><a class="headerlink" href="#outlook" title="永久链接至标题"></a></h2>
 <p>虽然rclcpp的三个执行器在大多数应用程序中运行良好，但仍存在一些问题，使其不适合实时应用程序，这需要定义明确的执行时间、确定性、以及对执行顺序的自定义控制。以下是其中一些问题的摘要: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9828">[待校准&#64;9828]</a></p>
 <ol class="arabic simple">
-<li><p>复杂和混合调度语义。理想情况下，您需要定义良好的调度语义来执行正式的时序分析。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9829">[待校准&#64;9829]</a></p></li>
-<li><p>回调可能会遭受优先级反转。较高优先级的调用可能会被较低优先级的调用阻止。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9830">[待校准&#64;9830]</a></p></li>
+<li><p>复杂和混合调度语义。理想情况下，您需要定义良好的调度语义来执行规范的时序分析。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9829">[Alyssa&#64;9829]</a></p></li>
+<li><p>回调可能会遭受优先级反转。较高优先级的回调可能会被较低优先级的回调阻塞。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9830">[Alyssa&#64;9830]</a></p></li>
 <li><p>对调用返回执行顺序没有明确的控制。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9831">[待校准&#64;9831]</a></p></li>
 <li><p>对特定话题的触发没有内置控制。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9832">[待校准&#64;9832]</a></p></li>
 </ol>
