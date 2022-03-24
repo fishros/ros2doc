@@ -373,7 +373,7 @@
 <p>有两种类型的回调组，必须在实例化时指定类型: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9819">[Alyssa&#64;9819]</a></p>
 <ul class="simple">
 <li><p><em>互斥:</em> 不得并行执行此组的回调。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9820">[Alyssa&#64;9820]</a></p></li>
-<li><p><em>Reentrant:</em> Callbacks of this group may be executed in parallel.</p></li>
+<li><p><em>可重入:</em> 该组的回调可以并行执行。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9821">[Alyssa&#64;9821]</a></p></li>
 </ul>
 <p>不同调用组的回调可以始终并行执行。多线程执行程序使用其线程作为池，根据这些条件并行处理尽可能多的调用。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9822">[待校准&#64;9822]</a></p>
 <p>自从Galactic之后，Executor基类的接口被一个新的函数 <code class="docutils literal notranslate"><span class="pre">add_callback_group(..)</span></code> 改进了。这允许将调用组分配给不同的执行器。通过使用操作系统调度程序配置基础线程，特定的调用返回可以优先于其他调用返回。例如，控制循环的订阅和计时器可以优先于节点的所有其他订阅和标准服务。 <a class="reference external" href="https://github.com/ros2/examples/tree/master/rclcpp/executors/cbg_executor">examples_rclcpp_cbg_executor package</a> 提供了这一机制的例程。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9823">[待校准&#64;9823]</a></p>
