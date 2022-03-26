@@ -285,7 +285,7 @@
 <ul class="simple">
 <li><p><a class="reference internal" href="#usage" id="id1">用法 [Alyssa&#64;9669]</a></p></li>
 <li><p><a class="reference internal" href="#example" id="id2">示例</a></p></li>
-<li><p><a class="reference internal" href="#behind-the-scenes" id="id3">幕后 [待校准&#64;9689]</a></p></li>
+<li><p><a class="reference internal" href="#behind-the-scenes" id="id3">幕后花絮 [Alyssa&#64;9689]</a></p></li>
 <li><p><a class="reference internal" href="#implementation" id="id4">实施 [待校准&#64;9692]</a></p></li>
 </ul>
 </div>
@@ -324,7 +324,7 @@ publishing std_msgs.msg.String<span class="o">(</span><span class="nv">data</spa
 publishing std_msgs.msg.String<span class="o">(</span><span class="nv">data</span><span class="o">=</span><span class="s1">&#39;Hello world&#39;</span><span class="o">)</span>
 </pre></div>
 </div>
-<p>在另一个终端接收到的回显消息，具有: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9688">[待校准&#64;9688]</a></p>
+<p>在另一个终端回显接收到的消息，命令如下: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9688">[Alyssa&#64;9688]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ros2 topic <span class="nb">echo</span> /chatter
 data: Hello world
 
@@ -333,7 +333,7 @@ data: Hello world
 </div>
 </div>
 <div class="section" id="behind-the-scenes">
-<h2>幕后 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9689">[待校准&#64;9689]</a><a class="headerlink" href="#behind-the-scenes" title="永久链接至标题"></a></h2>
+<h2>幕后花絮 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9689">[Alyssa&#64;9689]</a><a class="headerlink" href="#behind-the-scenes" title="永久链接至标题"></a></h2>
 <p>ROS 2使用分布式发现过程使节点相互连接。由于此过程有目的地不使用集中发现机制 (如ROS 1中的ROS主机)，因此ROS节点发现ROS图中所有其他参与者可能需要时间。因此，在后台有一个长时间运行的守护程序，该守护程序存储有关ROS图的信息，以提供对查询的更快响应，例如节点名称列表。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9690">[待校准&#64;9690]</a></p>
 <p>当首次使用相关命令行工具时，守护程序会自动调用y。您可以运行 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">daemon</span> <span class="pre">--help</span></code> 与守护程序交互的更多选项。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9691">[待校准&#64;9691]</a></p>
 </div>
