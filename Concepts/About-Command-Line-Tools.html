@@ -286,7 +286,7 @@
 <li><p><a class="reference internal" href="#usage" id="id1">用法 [Alyssa&#64;9669]</a></p></li>
 <li><p><a class="reference internal" href="#example" id="id2">示例</a></p></li>
 <li><p><a class="reference internal" href="#behind-the-scenes" id="id3">幕后花絮 [Alyssa&#64;9689]</a></p></li>
-<li><p><a class="reference internal" href="#implementation" id="id4">实施 [待校准&#64;9692]</a></p></li>
+<li><p><a class="reference internal" href="#implementation" id="id4">实现 [Alyssa&#64;9692]</a></p></li>
 </ul>
 </div>
 <p>ROS 2包括一套用于自检ROS 2系统的命令行工具。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9668">[Alyssa&#64;9668]</a></p>
@@ -338,9 +338,9 @@ data: Hello world
 <p>当首次使用相关命令行工具时，守护程序会自动启动。您可以运行 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">daemon</span> <span class="pre">--help</span></code> 获得与守护程序交互的更多选项。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9691">[Alyssa&#64;9691]</a></p>
 </div>
 <div class="section" id="implementation">
-<h2>实施 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9692">[待校准&#64;9692]</a><a class="headerlink" href="#implementation" title="永久链接至标题"></a></h2>
+<h2>实现 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9692">[Alyssa&#64;9692]</a><a class="headerlink" href="#implementation" title="永久链接至标题"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">ros2</span></code> 命令的源代码可在 <a class="reference external" href="https://github.com/ros2/ros2cli">https://github.com/ros2/ros2cli</a> 获取 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9693">[Alyssa&#64;9693]</a></p>
-<p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">ros2</span></code> 工具已经被实现为一个可以通过插件扩展的帧工作。例如， <a class="reference external" href="https://github.com/ros2/sros2">sros2</a> 包提供 <code class="docutils literal notranslate"><span class="pre">security</span></code> 子命令自动调用y检测[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">ros2</span></code> 工具如果 <code class="docutils literal notranslate"><span class="pre">sros2</span></code> 包安装。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9694">[待校准&#64;9694]</a></p>
+<p><code class="docutils literal notranslate"><span class="pre">ros2</span></code> 工具已经被实现为一个可以通过插件扩展的框架。例如，如果安装了 <code class="docutils literal notranslate"><span class="pre">sros2</span></code> 包，<code class="docutils literal notranslate"><span class="pre">ros2</span></code> 工具就会自动检测`sros2 &lt;<a class="reference external" href="https://github.com/ros2/sros2">https://github.com/ros2/sros2</a>&gt;`__ 包提供的 <code class="docutils literal notranslate"><span class="pre">security</span></code> 子命令。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9694">[Alyssa&#64;9694]</a></p>
 </div>
 </div>
 
