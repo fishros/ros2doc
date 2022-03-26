@@ -334,7 +334,7 @@ data: Hello world
 </div>
 <div class="section" id="behind-the-scenes">
 <h2>幕后花絮 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9689">[Alyssa&#64;9689]</a><a class="headerlink" href="#behind-the-scenes" title="永久链接至标题"></a></h2>
-<p>ROS 2使用分布式发现过程使节点相互连接。由于此过程有目的地不使用集中发现机制 (如ROS 1中的ROS主机)，因此ROS节点发现ROS图中所有其他参与者可能需要时间。因此，在后台有一个长时间运行的守护程序，该守护程序存储有关ROS图的信息，以提供对查询的更快响应，例如节点名称列表。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9690">[待校准&#64;9690]</a></p>
+<p>ROS 2使用分布式发现过程使节点相互连接。由于此过程有意地不使用集中发现机制 (如ROS 1中的ROS主机)，因此ROS节点发现ROS图中所有其他参与者可能需要时间。因此，在后台有一个长期运行的守护程序，该守护程序存储有关ROS图的信息，以提供对查询的更快响应，例如节点名称列表。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9690">[Alyssa&#64;9690]</a></p>
 <p>当首次使用相关命令行工具时，守护程序会自动调用y。您可以运行 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">daemon</span> <span class="pre">--help</span></code> 与守护程序交互的更多选项。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9691">[待校准&#64;9691]</a></p>
 </div>
 <div class="section" id="implementation">
