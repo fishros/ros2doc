@@ -285,7 +285,7 @@
 <ul class="simple">
 <li><p><a class="reference internal" href="#ros-1-nodes-vs-nodelets" id="id1">ROS 1- Nodes vs. Nodelets [Alyssa&#64;9696]</a></p></li>
 <li><p><a class="reference internal" href="#ros-2-unified-api" id="id2">ROS 2 - 统一API [Alyssa&#64;9698]</a></p></li>
-<li><p><a class="reference internal" href="#writing-a-component" id="id3">编写组件 [待校准&#64;9705]</a></p></li>
+<li><p><a class="reference internal" href="#writing-a-component" id="id3">编写一个组件 [Alyssa&#64;9705]</a></p></li>
 <li><p><a class="reference internal" href="#using-components" id="id4">使用组件 [待校准&#64;9710]</a></p></li>
 <li><p><a class="reference internal" href="#practical-application" id="id5">实际应用 [待校准&#64;9715]</a></p></li>
 </ul>
@@ -309,7 +309,7 @@
 <p>此外， <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">launch</span></code> 可以通过专门的launch动作使这些动作自动化。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9704">[待校准&#64;9704]</a></p>
 </div>
 <div class="section" id="writing-a-component">
-<h2>编写组件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9705">[待校准&#64;9705]</a><a class="headerlink" href="#writing-a-component" title="永久链接至标题"></a></h2>
+<h2>编写一个组件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9705">[Alyssa&#64;9705]</a><a class="headerlink" href="#writing-a-component" title="永久链接至标题"></a></h2>
 <p>由于组件仅内置于共享库中，因此它没有 <code class="docutils literal notranslate"><span class="pre">main</span></code> 函数 (见 <a class="reference external" href="https://github.com/ros2/demos/blob/master/composition/src/talker_component.cpp">Talker source code</a> )。组件通常是 “rclcpp:: node” 的子类。由于它不能控制线程，因此不应在其构造函数中执行任何长时间运行或阻塞任务。相反，它可以使用计时器来获取定期通知。此外，它还可以创建发布者、订阅者、服务器和客户端。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9706">[待校准&#64;9706]</a></p>
 <p>使这样的类成为组件的一个重要方面是，类使用来自包 <code class="docutils literal notranslate"><span class="pre">rclcpp_components</span></code> 的宏注册自身 (请参阅源文件中的最后一行)。这使得组件在其库被加载到正在运行的进程中时可以被发现 -- 它充当一种入口点。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9707">[待校准&#64;9707]</a></p>
 <p>此外，一旦创建了一个组件，它必须在索引中注册才能被工具发现。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9708">[待校准&#64;9708]</a></p>
