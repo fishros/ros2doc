@@ -286,7 +286,7 @@
 <ul class="simple">
 <li><p><a class="reference internal" href="#background" id="id1">背景</a></p></li>
 <li><p><a class="reference internal" href="#postulates" id="id2">假设</a></p></li>
-<li><p><a class="reference internal" href="#use-cases-with-experimental-implementations" id="id3">使用案例，实验实现 [待校准&#64;9617]</a></p>
+<li><p><a class="reference internal" href="#use-cases-with-experimental-implementations" id="id3">具有实验性实现的使用案例 [Alyssa&#64;9617]</a></p>
 <ul>
 <li><p><a class="reference internal" href="#adding-ros-packages-to-a-ros-2-workspace-and-building-with-ament-build" id="id4">将ROS包添加到ROS 2工作区并使用 <code class="docutils literal notranslate"><span class="pre">ament</span> <span class="pre">build</span></code> 构建 [待校准&#64;9618]</a></p></li>
 <li><p><a class="reference internal" href="#building-ros-2-packages-with-catkin-make-isolated" id="id5">用 <code class="docutils literal notranslate"><span class="pre">catkin_make_isolated</span></code> 构建ROS 2包 [待校准&#64;9640]</a></p></li>
@@ -330,13 +330,13 @@
 </li>
 <li><p><strong>互通性是一件好事。</strong> 只要有可能 (不是所有的组合都是可行的)，开发人员应该能够混合和匹配元构建系统，包括混合他们不同的方面 (例如，使用来自一个系统的构建工具和来自另一个系统的API)。当开发人员想要将使用一个元构建系统 (例如，带有 <code class="docutils literal notranslate"><span class="pre">catkin</span></code> 的ROS)的现有的大型代码，与使用另一个元构建系统的代码提供的新的库和工具 (例如，ROS 2和 <code class="docutils literal notranslate"><span class="pre">ament</span></code> )组合使用时，这种混合和匹配就是尤其重要的。理想情况下，这种组合可以在不需要更改任何代码库使用的API的情况下完成，也不需要告诉开发人员使用哪个构建器工具。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9615">[Alyssa&#64;9615]</a></p>
 <ol class="arabic simple">
-<li><p>推论: work工作空间不必同质。* * 's no reason that we shouldn'不能自由混合， <code class="docutils literal notranslate"><span class="pre">catkin</span></code> 和 <code class="docutils literal notranslate"><span class="pre">ament</span></code> 包在一个工作区，依赖会在两个方向，只要正在使用的构建器工具知道如何同时构建它们。包 (至少是CMake控制的包) 之间的主要接口是它们的CMake配置文件。只要该配置文件遵循标准协议 (设置 <code class="docutils literal notranslate"><span class="pre">foo_LIBRARIES</span></code> 等)，那么谁编写该文件就无关紧要。它可以由 <code class="docutils literal notranslate"><span class="pre">catkin</span></code> 或 <code class="docutils literal notranslate"><span class="pre">ament</span></code> 自动生成，甚至可以由想要在其包中使用普通CMake的开发人员手动制作，但仍有 <code class="docutils literal notranslate"><span class="pre">catkin</span></code> 或 <code class="docutils literal notranslate"><span class="pre">ament</span></code> 包依赖。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9616">[待校准&#64;9616]</a></p></li>
+<li><p>推论: <strong>工作空间不必同质。</strong> 没有理由不能自由混合，例如在两个方向上都存在依赖关系的 <code class="docutils literal notranslate"><span class="pre">catkin</span></code> 和 <code class="docutils literal notranslate"><span class="pre">ament</span></code> 包在一个工作区，只要正在使用的构建器工具知道如何同时构建它们。包 (至少是CMake控制的包) 之间的主要接口是它们的CMake配置文件。只要该配置文件遵循标准协议 (设置 <code class="docutils literal notranslate"><span class="pre">foo_LIBRARIES</span></code> 等)，那么谁编写该文件就无关紧要。它可以由 <code class="docutils literal notranslate"><span class="pre">catkin</span></code> 或 <code class="docutils literal notranslate"><span class="pre">ament</span></code> 自动生成，甚至可以由想要在其包中使用纯CMake的开发人员手动编写，但仍要有 <code class="docutils literal notranslate"><span class="pre">catkin</span></code> 或 <code class="docutils literal notranslate"><span class="pre">ament</span></code> 包依赖。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9616">[Alyssa&#64;9616]</a></p></li>
 </ol>
 </li>
 </ol>
 </div>
 <div class="section" id="use-cases-with-experimental-implementations">
-<h2>使用案例，实验实现 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9617">[待校准&#64;9617]</a><a class="headerlink" href="#use-cases-with-experimental-implementations" title="永久链接至标题"></a></h2>
+<h2>具有实验性实现的使用案例 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9617">[Alyssa&#64;9617]</a><a class="headerlink" href="#use-cases-with-experimental-implementations" title="永久链接至标题"></a></h2>
 <div class="section" id="adding-ros-packages-to-a-ros-2-workspace-and-building-with-ament-build">
 <h3>将ROS包添加到ROS 2工作区并使用 <code class="docutils literal notranslate"><span class="pre">ament</span> <span class="pre">build</span></code> 构建 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9618">[待校准&#64;9618]</a><a class="headerlink" href="#adding-ros-packages-to-a-ros-2-workspace-and-building-with-ament-build" title="永久链接至标题"></a></h3>
 <p>让's say that you want to add some existing ROS packages to your ROS 2 workspace and don'将ROS包从 <code class="docutils literal notranslate"><span class="pre">catkin</span></code> 迁移到 <code class="docutils literal notranslate"><span class="pre">ament</span></code>  (反之亦然)。以下是两个允许您执行此操作的补丁: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9619">[待校准&#64;9619]</a></p>
