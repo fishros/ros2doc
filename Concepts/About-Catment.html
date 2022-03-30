@@ -290,7 +290,7 @@
 <ul>
 <li><p><a class="reference internal" href="#adding-ros-packages-to-a-ros-2-workspace-and-building-with-ament-build" id="id4">将ROS包添加到ROS 2工作空间并使用 <code class="docutils literal notranslate"><span class="pre">ament</span> <span class="pre">build</span></code> 构建 [Alyssa&#64;9618]</a></p></li>
 <li><p><a class="reference internal" href="#building-ros-2-packages-with-catkin-make-isolated" id="id5">用 <code class="docutils literal notranslate"><span class="pre">catkin_make_isolated</span></code> 构建ROS 2包 [待校准&#64;9640]</a></p></li>
-<li><p><a class="reference internal" href="#combining-all-of-ros-and-ros-2-in-one-workspace-and-building-it-todo" id="id6">将所有ROS和ROS 2组合在一个工作区中并构建它 (待办事项) [待校准&#64;9649]</a></p></li>
+<li><p><a class="reference internal" href="#combining-all-of-ros-and-ros-2-in-one-workspace-and-building-it-todo" id="id6">将所有ROS和ROS 2组合在一个工作空间中并构建它 (待办事项) [Alyssa&#64;9649]</a></p></li>
 <li><p><a class="reference internal" href="#using-bloom-to-release-ament-packages-todo" id="id7">使用 <code class="docutils literal notranslate"><span class="pre">bloom</span></code> 释放 <code class="docutils literal notranslate"><span class="pre">ament</span></code> 包 (TODO) [待校准&#64;9653]</a></p></li>
 </ul>
 </li>
@@ -458,11 +458,11 @@ touch src/eProsima/AMENT_IGNORE
 </div>
 <p>瞧: 你已经用你熟悉的工具构建了ROS 2。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9647">[Alyssa&#64;9647]</a></p>
 <ul class="simple">
-<li><p>警告: 我们忽略了工作区中的 <code class="docutils literal notranslate"><span class="pre">eProsima</span></code> 包，因为它们缺少 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 包，这意味着 <code class="docutils literal notranslate"><span class="pre">catkin</span></code> 看不到它们。 <code class="docutils literal notranslate"><span class="pre">ament</span></code> 有一些处理这种包的启发式方法。选项: 将这些启发式方法反向移植到 <code class="docutils literal notranslate"><span class="pre">catkin</span></code> ; 切换到在工作区之外安装不含 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 的包; 或者只是在每个包中添加一个 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code>  (例如g.，在我们自己的叉子里)。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9648">[待校准&#64;9648]</a></p></li>
+<li><p><strong>警告</strong>: 我们忽略了工作空间中的 <code class="docutils literal notranslate"><span class="pre">eProsima</span></code> 包，因为它们缺少 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 文件，这意味着 <code class="docutils literal notranslate"><span class="pre">catkin</span></code> 看不到它们。 <code class="docutils literal notranslate"><span class="pre">ament</span></code> 有一些处理这种包的启发式方法。选项: 将这些启发式方法反向移植到 <code class="docutils literal notranslate"><span class="pre">catkin</span></code> ; 切换到在工作空间之外安装不含 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 的包; 或者只是在每个包中添加一个 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code>  (例如，在我们自己的fork里)。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9648">[Alyssa&#64;9648]</a></p></li>
 </ul>
 </div>
 <div class="section" id="combining-all-of-ros-and-ros-2-in-one-workspace-and-building-it-todo">
-<h3>将所有ROS和ROS 2组合在一个工作区中并构建它 (待办事项) <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9649">[待校准&#64;9649]</a><a class="headerlink" href="#combining-all-of-ros-and-ros-2-in-one-workspace-and-building-it-todo" title="永久链接至标题"></a></h3>
+<h3>将所有ROS和ROS 2组合在一个工作空间中并构建它 (待办事项) <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9649">[Alyssa&#64;9649]</a><a class="headerlink" href="#combining-all-of-ros-and-ros-2-in-one-workspace-and-building-it-todo" title="永久链接至标题"></a></h3>
 <p>这一步需要整理一些东西，至少包括: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9650">[待校准&#64;9650]</a></p>
 <ul class="simple">
 <li><p>包名称冲突。我们目前有ROS 2版本的ROS消息包，以及 <code class="docutils literal notranslate"><span class="pre">geometry2</span></code> 的一些东西。要么功能需要合并到一个可以支持两个系统的包中，要么新版本需要不同的名称。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9651">[待校准&#64;9651]</a></p></li>
