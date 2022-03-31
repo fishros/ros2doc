@@ -286,7 +286,7 @@
 <li><p><a class="reference internal" href="#overview" id="id1">概述</a></p></li>
 <li><p><a class="reference internal" href="#properties-of-tf2" id="id2">tf2的特性</a></p></li>
 <li><p><a class="reference internal" href="#tutorials" id="id3">教程</a></p></li>
-<li><p><a class="reference internal" href="#paper" id="id4">纸 [待校准&#64;10245]</a></p></li>
+<li><p><a class="reference internal" href="#paper" id="id4">论文 [Alyssa&#64;10245]</a></p></li>
 </ul>
 </div>
 <div class="section" id="overview">
@@ -312,11 +312,11 @@
 <p>为了扩展机器人的能力，你需要开始广播坐标转换。广播坐标转换意味着将坐标系的相对姿态发送到系统的其余部分。一个系统可以有许多广播者，每个广播者提供关于机器人不同部分的信息。查看编写一个tf2广播者教程 <a class="reference internal" href="../Tutorials/Tf2/Writing-A-Tf2-Broadcaster-Py.html"><span class="doc">(Python)</span></a> <a class="reference internal" href="../Tutorials/Tf2/Writing-A-Tf2-Broadcaster-Cpp.html"><span class="doc">(C++)</span></a> 以了解更多信息。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10241">[Alyssa&#64;10241]</a></p>
 <p>除此之外，tf2可以广播不会随时间变化的静态坐标转换。这主要节省了存储和查找时间，尽管发布开销也得到了改善。您应该注意的是，静态坐标转换只发布一次，并假定不会发生变，因此不存储时间历史。如果你想在你的tf2树中定义静态坐标转换，看看编写静态tf2广播者 <a class="reference internal" href="../Tutorials/Tf2/Writing-A-Tf2-Static-Broadcaster-Py.html"><span class="doc">(Python)</span></a> <a class="reference internal" href="../Tutorials/Tf2/Writing-A-Tf2-Static-Broadcaster-Cpp.html"><span class="doc">(C++)</span></a> 教程。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10242">[Alyssa&#64;10242]</a></p>
 <p>您还可以在添加坐标系 <a class="reference internal" href="../Tutorials/Tf2/Adding-A-Frame-Py.html"><span class="doc">(Python)</span></a> <a class="reference internal" href="../Tutorials/Tf2/Adding-A-Frame-Cpp.html"><span class="doc">(C++)</span></a> 教程中学习如何将固定坐标系和动态坐标系添加到你的tf2树中。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10243">[Alyssa&#64;10243]</a></p>
-<p>完成基本教程后，您可以继续学习tf2和时间。tf2和时间教程 <a class="reference internal" href="../Tutorials/Tf2/Learning-About-Tf2-And-Time-Py.html"><span class="doc">(Python)</span></a> <a class="reference internal" href="../Tutorials/Tf2/Learning-About-Tf2-And-Time-Cpp.html"><span class="doc">(C++)</span></a> teaches the basic principles of tf2 and time. The advanced tutorial about tf2 and time <a class="reference internal" href="../Tutorials/Tf2/Time-Travel-With-Tf2-Py.html"><span class="doc">(Python)</span></a> <a class="reference internal" href="../Tutorials/Tf2/Time-Travel-With-Tf2-Cpp.html"><span class="doc">(C++)</span></a> 用tf2教授时间穿梭的原理。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10244">[待校准&#64;10244]</a></p>
+<p>完成基本教程后，您可以继续学习tf2和时间。tf2和时间教程 <a class="reference internal" href="../Tutorials/Tf2/Learning-About-Tf2-And-Time-Py.html"><span class="doc">(Python)</span></a> <a class="reference internal" href="../Tutorials/Tf2/Learning-About-Tf2-And-Time-Cpp.html"><span class="doc">(C++)</span></a> 讲解了tf2和时间的基本原则。tf2和时间的提高教程 <a class="reference internal" href="../Tutorials/Tf2/Time-Travel-With-Tf2-Py.html"><span class="doc">(Python)</span></a> <a class="reference internal" href="../Tutorials/Tf2/Time-Travel-With-Tf2-Cpp.html"><span class="doc">(C++)</span></a> 讲解了tf2时间旅行的原理。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10244">[Alyssa&#64;10244]</a></p>
 </div>
 <div class="section" id="paper">
-<h2>纸 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10245">[待校准&#64;10245]</a><a class="headerlink" href="#paper" title="永久链接至标题"></a></h2>
-<p>有一篇关于tf2的论文发表在TePRA 2013:  <a class="reference external" href="https://ieeexplore.ieee.org/abstract/document/6556373">tf: The transform library</a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10246">[待校准&#64;10246]</a></p>
+<h2>论文 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10245">[Alyssa&#64;10245]</a><a class="headerlink" href="#paper" title="永久链接至标题"></a></h2>
+<p>有一篇关于tf2的论文发表在TePRA 2013:  <a class="reference external" href="https://ieeexplore.ieee.org/abstract/document/6556373">tf: 坐标变换库</a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10246">[Alyssa&#64;10246]</a></p>
 </div>
 </div>
 
