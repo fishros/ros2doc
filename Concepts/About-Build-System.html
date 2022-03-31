@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>关于构建系统 [待校准@9545] &mdash; ROS 2 documentation  文档</title>
+  <title>关于构建系统 &mdash; ROS 2 documentation  文档</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
@@ -195,7 +195,7 @@
 <li class="toctree-l2"><a class="reference internal" href="About-Catment.html">ament和catkin的混合研究(catment) [Alyssa&#64;9595]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="About-Cross-Compilation.html">关于交叉编译</a></li>
 <li class="toctree-l2"><a class="reference internal" href="About-Tf2.html">关于tf2 [待校准&#64;10229]</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">关于构建系统 [待校准&#64;9545]</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">关于构建系统</a></li>
 <li class="toctree-l2"><a class="reference internal" href="About-Internal-Interfaces.html">关于内部ROS 2接口 [待校准&#64;9841]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="About-Middleware-Implementations.html">关于ROS 2中间件实现 [待校准&#64;9923]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="About-Client-Interfaces.html">ROS 2客户端接口 (客户端库) [待校准&#64;9655]</a></li>
@@ -266,7 +266,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="../Concepts.html">概念</a> &raquo;</li>
-      <li>关于构建系统 [待校准&#64;9545]</li>
+      <li>关于构建系统</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/ros2/ros2_documentation/blob/foxy/source/Concepts/About-Build-System.rst" class="fa fa-github"> 在 GitHub 上修改</a>
       </li>
@@ -279,7 +279,7 @@
 
 
   <div class="section" id="about-the-build-system">
-<h1>关于构建系统 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9545">[待校准&#64;9545]</a><a class="headerlink" href="#about-the-build-system" title="永久链接至标题"></a></h1>
+<h1>关于构建系统<a class="headerlink" href="#about-the-build-system" title="永久链接至标题"></a></h1>
 <p>在一切之下是构建系统。从ROS 1迭代 <code class="docutils literal notranslate"><span class="pre">catkin</span></code> ，我们创建了一组 | 包 | 以 <code class="docutils literal notranslate"><span class="pre">ament</span></code> 命名。一些原因更换名称 <code class="docutils literal notranslate"><span class="pre">ament</span></code> 是我们希望不碰撞 <code class="docutils literal notranslate"><span class="pre">catkin</span></code>  (以防我们需要混合他们在一些点) 防止混淆现有 <code class="docutils literal notranslate"><span class="pre">catkin</span></code> 文档。 <code class="docutils literal notranslate"><span class="pre">ament</span></code> 的主要职责是使开发和维护ROS 2核心 | 包 | 变得更容易。然而，这一责任延伸到任何愿意使用我们的构建系统约定和工具的用户。此外，它应该使 | 包 | 传统，这样开发人员应该能够选择任何基于 <code class="docutils literal notranslate"><span class="pre">ament</span></code> 的 | 包 | 并对它如何工作、如何反思做一些假设，以及如何构建或使用它。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9546">[待校准&#64;9546]</a></p>
 <p>[需手动修复的语法]``ament`` consists of a few important repositories which are all in the <code class="docutils literal notranslate"><span class="pre">ament</span></code>  | GitHub | _ 组织: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9547">[待校准&#64;9547]</a></p>
 <div class="contents local topic" id="contents">
