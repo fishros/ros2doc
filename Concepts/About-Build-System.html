@@ -284,10 +284,10 @@
 <p><code class="docutils literal notranslate"><span class="pre">ament</span></code> 由以下几个重要的仓库组成，这些仓库均位于 <code class="docutils literal notranslate"><span class="pre">ament</span></code>  <a class="reference external" href="https://github.com/">GitHub</a> 组织中： <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9547">[Alyssa&#64;9547]</a></p>
 <div class="contents local topic" id="contents">
 <ul class="simple">
-<li><p><a class="reference internal" href="#the-ament-package-package" id="id29"><code class="docutils literal notranslate"><span class="pre">ament_package</span></code> 包 [Alyssa&#64;9548]</a></p></li>
-<li><p><a class="reference internal" href="#the-ament-cmake-repository" id="id30"><code class="docutils literal notranslate"><span class="pre">ament_cmake</span></code> 仓库 [Alyssa&#64;9567]</a></p></li>
-<li><p><a class="reference internal" href="#the-ament-lint-repository" id="id31"><code class="docutils literal notranslate"><span class="pre">ament_lint</span></code> 仓库 [Alyssa&#64;9591]</a></p></li>
-<li><p><a class="reference internal" href="#build-tools" id="id32">构建工具 [待校准&#64;9593]</a></p></li>
+<li><p><a class="reference internal" href="#the-ament-package-package" id="id41"><code class="docutils literal notranslate"><span class="pre">ament_package</span></code> 包 [Alyssa&#64;9548]</a></p></li>
+<li><p><a class="reference internal" href="#the-ament-cmake-repository" id="id42"><code class="docutils literal notranslate"><span class="pre">ament_cmake</span></code> 仓库 [Alyssa&#64;9567]</a></p></li>
+<li><p><a class="reference internal" href="#the-ament-lint-repository" id="id43"><code class="docutils literal notranslate"><span class="pre">ament_lint</span></code> 仓库 [Alyssa&#64;9591]</a></p></li>
+<li><p><a class="reference internal" href="#build-tools" id="id44">构建工具 [待校准&#64;9593]</a></p></li>
 </ul>
 </div>
 <div class="section" id="the-ament-package-package">
@@ -320,34 +320,34 @@
 <div class="section" id="the-ament-cmake-repository">
 <h2><code class="docutils literal notranslate"><span class="pre">ament_cmake</span></code> 仓库 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9567">[Alyssa&#64;9567]</a><a class="headerlink" href="#the-ament-cmake-repository" title="永久链接至标题"></a></h2>
 <p>位于 <a class="reference external" href="https://github.com/">GitHub</a> 网站的 <a class="reference external" href="https://github.com/ament/ament_cmake">ament/ament_cmake</a> 中，仓库包含许多 &quot;ament CMake&quot; 和纯CMake包，它们提供了创建 &quot;ament CMake&quot; 包所需的CMake基础设施。在这种情况下，  &quot;ament CMake&quot; 包意味着: 使用CMake构建的 <code class="docutils literal notranslate"><span class="pre">ament</span></code> 包。因此，该仓库中的 <a href="#id27"><span class="problematic" id="id28">|包|</span></a> 提供了必要的CMake函数/宏和CMake模块，以方便创建更多 &quot;ament CMake&quot;  (或 <code class="docutils literal notranslate"><span class="pre">ament_cmake</span></code> ) 包。这种类型的包可以在: 术语:  <a class="reference internal" href="#term-package.xml"><code class="xref any std std-term docutils literal notranslate"><span class="pre">package.xml</span></code></a> 文件的 <code class="docutils literal notranslate"><span class="pre">&lt;export&gt;</span></code> 标签中用 <code class="docutils literal notranslate"><span class="pre">&lt;build_type&gt;ament_cmake&lt;/build_type&gt;</span></code> 标签标识。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9568">[Alyssa&#64;9568]</a></p>
-<p>这个仓库中的 | 包 | 是非常模块化的，但是有一个单一的  &quot;bottleneck&quot;  | 包 | 调用 <code class="docutils literal notranslate"><span class="pre">ament_cmake</span></code> 。任何人都可以依靠 <code class="docutils literal notranslate"><span class="pre">ament_cmake</span></code>  | 包 | 来获得这个仓库中 | 包 | 的所有综合功能。以下是仓库中的 | 包 | 的列表以及简短说明: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9569">[待校准&#64;9569]</a></p>
+<p>这个仓库中的 <a href="#id29"><span class="problematic" id="id30">|包|</span></a> 是非常模块化的，但是有一个单独的  &quot;bottleneck&quot;  <a href="#id31"><span class="problematic" id="id32">|包|</span></a> 叫做 <code class="docutils literal notranslate"><span class="pre">ament_cmake</span></code> 。任何人都可以依靠 <code class="docutils literal notranslate"><span class="pre">ament_cmake</span></code>  <a href="#id33"><span class="problematic" id="id34">|包|</span></a> 来获得这个仓库中 <a href="#id35"><span class="problematic" id="id36">|包|</span></a> 的所有综合功能。以下是仓库中的 | 包 | 的列表以及简短说明: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9569">[Alyssa&#64;9569]</a></p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">ament_cmake</span></code> <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9570">[待校准&#64;9570]</a></p>
+<li><p><code class="docutils literal notranslate"><span class="pre">ament_cmake</span></code></p>
 <ul>
-<li><p>聚集所有其他 | 包 | 在仓库，用户只需要取决于此。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9571">[待校准&#64;9571]</a></p></li>
+<li><p>聚合该仓库中的所有其他 <a href="#id37"><span class="problematic" id="id38">|包|</span></a> ，用户只需要依赖此包即可。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9571">[Alyssa&#64;9571]</a></p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ament_cmake_auto</span></code> <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9572">[待校准&#64;9572]</a></p>
+<li><p><code class="docutils literal notranslate"><span class="pre">ament_cmake_auto</span></code></p>
 <ul>
-<li><p>提供方便的CMake函数，自动调用y处理编写 | 包 | 的 <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> 文件的许多繁琐部分 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9573">[待校准&#64;9573]</a></p></li>
+<li><p>提供方便的CMake函数，自动处理编写 <a href="#id39"><span class="problematic" id="id40">|包|</span></a> 的 <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> 文件的许多繁琐部分 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9573">[Alyssa&#64;9573]</a></p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ament_cmake_core</span></code> <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9574">[待校准&#64;9574]</a></p>
+<li><p><code class="docutils literal notranslate"><span class="pre">ament_cmake_core</span></code></p>
 <ul>
-<li><p>为 <code class="docutils literal notranslate"><span class="pre">ament</span></code> 提供所有内置的核心概念，例如环境挂钩、重建源文件索引、符号链接安装等 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9575">[待校准&#64;9575]</a></p></li>
+<li><p>为 <code class="docutils literal notranslate"><span class="pre">ament</span></code> 提供所有内置的核心概念，例如环境钩子、重建源文件索引、符号链接安装等 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9575">[Alyssa&#64;9575]</a></p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ament_cmake_gmock</span></code> <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9576">[待校准&#64;9576]</a></p>
+<li><p><code class="docutils literal notranslate"><span class="pre">ament_cmake_gmock</span></code></p>
 <ul>
-<li><p>增加了用于制作基于gmock的单元测试的便利功能 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9577">[待校准&#64;9577]</a></p></li>
+<li><p>增加了用于制作基于gmock的单元测试的便利功能</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ament_cmake_gtest</span></code> <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9578">[待校准&#64;9578]</a></p>
+<li><p><code class="docutils literal notranslate"><span class="pre">ament_cmake_gtest</span></code></p>
 <ul>
-<li><p>增加了基于gtest的自动化测试的便利功能 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9579">[待校准&#64;9579]</a></p></li>
+<li><p>增加了制作基于gtest的自动化测试的便利功能 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9579">[Alyssa&#64;9579]</a></p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ament_cmake_nose</span></code> <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9580">[待校准&#64;9580]</a></p>
+<li><p><code class="docutils literal notranslate"><span class="pre">ament_cmake_nose</span></code></p>
 <ul>
 <li><p>为基于nosetests的python自动测试添加了便利功能 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9581">[待校准&#64;9581]</a></p></li>
 </ul>
