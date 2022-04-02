@@ -289,7 +289,7 @@
 <ul class="simple">
 <li><p><a class="reference internal" href="#background" id="id1">背景</a></p></li>
 <li><p><a class="reference internal" href="#prerequisites" id="id2">先决条件</a></p></li>
-<li><p><a class="reference internal" href="#introduction" id="id3">简介 [待校准&#64;7677]</a></p></li>
+<li><p><a class="reference internal" href="#introduction" id="id3">简介</a></p></li>
 <li><p><a class="reference internal" href="#writing-launch-files" id="id4">编写launch文件 [待校准&#64;7679]</a></p>
 <ul>
 <li><p><a class="reference internal" href="#top-level-organization" id="id5">1顶级组织 [待校准&#64;7680]</a></p></li>
@@ -326,7 +326,7 @@
 <p>本教程使用 <a class="reference internal" href="../Turtlesim/Introducing-Turtlesim.html"><span class="doc">turtlesim</span></a> and <a class="reference internal" href="../Tf2/Introduction-To-Tf2.html"><span class="doc">turtle_tf2_py</span></a> packages. This tutorial also assumes you have <a class="reference internal" href="../Creating-Your-First-ROS2-Package.html"><span class="doc">created a new package</span></a> 构建类型 <code class="docutils literal notranslate"><span class="pre">ament_python</span></code> 调用ed <code class="docutils literal notranslate"><span class="pre">launch_tutorial</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7676">[待校准&#64;7676]</a></p>
 </div>
 <div class="section" id="introduction">
-<h2>简介 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7677">[待校准&#64;7677]</a><a class="headerlink" href="#introduction" title="永久链接至标题"></a></h2>
+<h2><a class="toc-backref" href="#id3">简介</a><a class="headerlink" href="#introduction" title="永久链接至标题"></a></h2>
 <p>典型调用y机器人上的大型应用程序涉及几个互连节点，每个节点可以有许多参数。海龟模拟器中多只海龟的仿真可以作为一个很好的例子。turtle仿真由多个turtle节点、world配置以及TF广播器和监听节点组成。在所有节点之间，有大量的ROS参数会影响这些节点的行为和外观。ROS 2launch文件允许我们启动所有节点并在一个地方设置相应的参数。在教程结束时，您将在 <code class="docutils literal notranslate"><span class="pre">launch_tutorial</span></code> 包中构建 <code class="docutils literal notranslate"><span class="pre">launch_turtlesim.launch.py</span></code> launch文件。这launch文件将带来不同节点负责仿真两turtlesim仿真，启动TF广播器s和听众，加载参数，launch成为RViz配置。在本教程中，我们将介绍这个launch文件和所有使用的相关功能。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7678">[待校准&#64;7678]</a></p>
 </div>
 <div class="section" id="writing-launch-files">

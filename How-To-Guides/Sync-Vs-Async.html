@@ -281,11 +281,11 @@
   <div class="section" id="synchronous-vs-asynchronous-service-clients">
 <span id="syncasync"></span><h1>同步与异步服务的客户端对比 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6523">[Alyssa&#64;6523]</a><a class="headerlink" href="#synchronous-vs-asynchronous-service-clients" title="永久链接至标题"></a></h1>
 <p><strong>级别:</strong> 中级 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6524">[Alyssa&#64;6524]</a></p>
-<p>Time时间: 10 10分钟 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6525">[待校准&#64;6525]</a></p>
+<p><strong>时间:</strong> 10分钟 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6525">[Alyssa&#64;6525]</a></p>
 <div class="contents local topic" id="contents">
 <p class="topic-title">内容</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#introduction" id="id1">简介 [待校准&#64;6489]</a></p></li>
+<li><p><a class="reference internal" href="#introduction" id="id1">简介</a></p></li>
 <li><p><a class="reference internal" href="#synchronous-calls" id="id2">1同步调用 [待校准&#64;6530]</a></p></li>
 <li><p><a class="reference internal" href="#sync-deadlock" id="id3">1.1同步死锁 [待校准&#64;6534]</a></p></li>
 <li><p><a class="reference internal" href="#asynchronous-calls" id="id4">2异步调用 [待校准&#64;6540]</a></p></li>
@@ -293,7 +293,7 @@
 </ul>
 </div>
 <div class="section" id="introduction">
-<h2>简介 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6489">[待校准&#64;6489]</a><a class="headerlink" href="#introduction" title="永久链接至标题"></a></h2>
+<h2><a class="toc-backref" href="#id1">简介</a><a class="headerlink" href="#introduction" title="永久链接至标题"></a></h2>
 <p>本指南旨在警告用户与Python同步服务客户端 <code class="docutils literal notranslate"><span class="pre">call()</span></code> API相关的风险。同步调用服务时很容易导致死锁，因此我们不建议使用 <code class="docutils literal notranslate"><span class="pre">call()</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6526">[待校准&#64;6526]</a></p>
 <p>对于希望使用同步调用并意识到陷阱的有经验的用户，我们提供了一个如何正确使用 <code class="docutils literal notranslate"><span class="pre">call()</span></code> 的例子。我们还强调了随之而来的僵局的可能情况。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6527">[待校准&#64;6527]</a></p>
 <p>因为我们建议避免同步调用，本指南还将介绍推荐的替代方法 -- 异步调用 ( <code class="docutils literal notranslate"><span class="pre">call_async()</span></code> ) 的特点和用法。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6528">[待校准&#64;6528]</a></p>
