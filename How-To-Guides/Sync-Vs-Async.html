@@ -301,7 +301,7 @@
 </div>
 <div class="section" id="synchronous-calls">
 <h2>1 同步调用 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6530">[Alyssa&#64;6530]</a><a class="headerlink" href="#synchronous-calls" title="永久链接至标题"></a></h2>
-<p>当向服务发送请求时，同步客户端将阻止调用线程，直到收到响应为止; 在调用期间，该线程上不会发生任何其他事情。调用可能需要任意时间才能完成。完成后，响应将直接返回给客户端。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6531">[待校准&#64;6531]</a></p>
+<p>当向服务发送请求时，同步客户端将阻瑟调用线程，直到收到响应为止; 在调用期间，该线程上不会做任何其他事情。调用可能需要任意时间才能完成。完成后，响应将直接返回给客户端。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6531">[Alyssa&#64;6531]</a></p>
 <p>以下是如何从客户端节点正确执行同步服务调用的示例，类似于 <a class="reference internal" href="../Tutorials/Writing-A-Simple-Py-Service-And-Client.html"><span class="doc">Simple Service and Client</span></a> 教程中的异步节点。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6532">[待校准&#64;6532]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
 <span class="kn">from</span> <span class="nn">threading</span> <span class="kn">import</span> <span class="n">Thread</span>
