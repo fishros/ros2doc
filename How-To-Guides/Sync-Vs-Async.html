@@ -287,7 +287,7 @@
 <ul class="simple">
 <li><p><a class="reference internal" href="#introduction" id="id1">简介</a></p></li>
 <li><p><a class="reference internal" href="#synchronous-calls" id="id2">1 同步调用 [Alyssa&#64;6530]</a></p></li>
-<li><p><a class="reference internal" href="#sync-deadlock" id="id3">1.1同步死锁 [待校准&#64;6534]</a></p></li>
+<li><p><a class="reference internal" href="#sync-deadlock" id="id3">1.1 同步死锁 [Alyssa&#64;6534]</a></p></li>
 <li><p><a class="reference internal" href="#asynchronous-calls" id="id4">2异步调用 [待校准&#64;6540]</a></p></li>
 <li><p><a class="reference internal" href="#summary" id="id5">总结</a></p></li>
 </ul>
@@ -302,7 +302,7 @@
 <div class="section" id="synchronous-calls">
 <h2>1 同步调用 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6530">[Alyssa&#64;6530]</a><a class="headerlink" href="#synchronous-calls" title="永久链接至标题"></a></h2>
 <p>当向服务发送请求时，同步客户端将阻瑟调用线程，直到收到响应为止; 在调用期间，该线程上不会做任何其他事情。调用可能需要任意时间才能完成。完成后，响应将直接返回给客户端。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6531">[Alyssa&#64;6531]</a></p>
-<p>以下是如何从客户端节点正确执行同步服务调用的示例，类似于 <a class="reference internal" href="../Tutorials/Writing-A-Simple-Py-Service-And-Client.html"><span class="doc">Simple Service and Client</span></a> 教程中的异步节点。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6532">[待校准&#64;6532]</a></p>
+<p>以下是如何从客户端节点正确执行同步服务调用的示例，类似于 <a class="reference internal" href="../Tutorials/Writing-A-Simple-Py-Service-And-Client.html"><span class="doc">简单的服务端和客户端</span></a> 教程中的异步节点。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6532">[Alyssa&#64;6532]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
 <span class="kn">from</span> <span class="nn">threading</span> <span class="kn">import</span> <span class="n">Thread</span>
 
@@ -347,10 +347,10 @@
     <span class="n">main</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>请注意，在 <code class="docutils literal notranslate"><span class="pre">main()</span></code> 内部，客户端在单独的线程中调用 <code class="docutils literal notranslate"><span class="pre">rclpy.spin</span></code> 。 <code class="docutils literal notranslate"><span class="pre">send_request</span></code> 和 <code class="docutils literal notranslate"><span class="pre">rclpy.spin</span></code> 都是阻塞的，所以它们需要在不同的线上。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6533">[待校准&#64;6533]</a></p>
+<p>请注意，在 <code class="docutils literal notranslate"><span class="pre">main()</span></code> 内部，客户端在单独的线程中调用 <code class="docutils literal notranslate"><span class="pre">rclpy.spin</span></code> 。 <code class="docutils literal notranslate"><span class="pre">send_request</span></code> 和 <code class="docutils literal notranslate"><span class="pre">rclpy.spin</span></code> 都是阻塞的，所以它们需要在不同的线程上。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6533">[Alyssa&#64;6533]</a></p>
 </div>
 <div class="section" id="sync-deadlock">
-<h2>1.1同步死锁 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6534">[待校准&#64;6534]</a><a class="headerlink" href="#sync-deadlock" title="永久链接至标题"></a></h2>
+<h2>1.1 同步死锁 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6534">[Alyssa&#64;6534]</a><a class="headerlink" href="#sync-deadlock" title="永久链接至标题"></a></h2>
 <p>同步 <code class="docutils literal notranslate"><span class="pre">call()</span></code> API有几种导致死锁的方法。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6535">[待校准&#64;6535]</a></p>
 <p>评论中提到的例子，未能创建单独的线程自旋 <code class="docutils literal notranslate"><span class="pre">rclpy</span></code> 是导致死锁。当客户端阻塞线程等待响应，但响应只能返回同一线程，客户端不会停止等待，没有什么可以发生。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6536">[待校准&#64;6536]</a></p>
 <p>死锁的另一个原因是通过在订阅、计时器调用或服务调用中同步调用服务来阻止 <code class="docutils literal notranslate"><span class="pre">rclpy.spin</span></code> 。例如，如果同步客户端的 <code class="docutils literal notranslate"><span class="pre">send_request</span></code> 被放在一个调用中: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6537">[待校准&#64;6537]</a></p>
