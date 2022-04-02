@@ -364,7 +364,7 @@
 <span class="n">rclpy</span><span class="o">.</span><span class="n">spin</span><span class="p">(</span><span class="n">minimal_client</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>发生死锁是因为 <code class="docutils literal notranslate"><span class="pre">rclpy.spin</span></code> 不会先用 <code class="docutils literal notranslate"><span class="pre">send_request</span></code> 调用来阻止调用。通常，调用back只能执行轻快的操作。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6538">[待校准&#64;6538]</a></p>
+<p>发生死锁是因为 <code class="docutils literal notranslate"><span class="pre">rclpy.spin</span></code> 不会先用 <code class="docutils literal notranslate"><span class="pre">send_request</span></code> 调用来阻塞回调函数。通常，回调函数应该只能执行轻快的操作。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6538">[Alyssa&#64;6538]</a></p>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
 <p>发生死锁时，您将不会收到任何服务被阻止的指示。不会引发警告或异常，堆栈跟踪中没有指示，调用也不会失败。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6539">[待校准&#64;6539]</a></p>
