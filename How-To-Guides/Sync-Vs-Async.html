@@ -288,7 +288,7 @@
 <li><p><a class="reference internal" href="#introduction" id="id1">简介</a></p></li>
 <li><p><a class="reference internal" href="#synchronous-calls" id="id2">1 同步调用 [Alyssa&#64;6530]</a></p></li>
 <li><p><a class="reference internal" href="#sync-deadlock" id="id3">1.1 同步死锁 [Alyssa&#64;6534]</a></p></li>
-<li><p><a class="reference internal" href="#asynchronous-calls" id="id4">2异步调用 [待校准&#64;6540]</a></p></li>
+<li><p><a class="reference internal" href="#asynchronous-calls" id="id4">2 异步调用 [Alyssa&#64;6540]</a></p></li>
 <li><p><a class="reference internal" href="#summary" id="id5">总结</a></p></li>
 </ul>
 </div>
@@ -367,11 +367,11 @@
 <p>发生死锁是因为 <code class="docutils literal notranslate"><span class="pre">rclpy.spin</span></code> 不会先用 <code class="docutils literal notranslate"><span class="pre">send_request</span></code> 调用来阻塞回调函数。通常，回调函数应该只能执行轻快的操作。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6538">[Alyssa&#64;6538]</a></p>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
-<p>发生死锁时，您将不会收到任何服务被阻止的指示。不会引发警告或异常，堆栈跟踪中没有指示，调用也不会失败。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6539">[待校准&#64;6539]</a></p>
+<p>发生死锁时，您将不会收到任何服务被阻塞的指示。不会引发警告或异常，堆栈跟踪中没有指示，调用也不会失败。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6539">[Alyssa&#64;6539]</a></p>
 </div>
 </div>
 <div class="section" id="asynchronous-calls">
-<h2>2异步调用 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6540">[待校准&#64;6540]</a><a class="headerlink" href="#asynchronous-calls" title="永久链接至标题"></a></h2>
+<h2>2 异步调用 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6540">[Alyssa&#64;6540]</a><a class="headerlink" href="#asynchronous-calls" title="永久链接至标题"></a></h2>
 <p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">rclpy</span></code> 中的异步调用是完全安全的，也是调用服务的推荐方法。与同步调用不同，它们可以在任何地方制作，而不会冒阻塞其他ROS和非ROS进程的风险。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6541">[待校准&#64;6541]</a></p>
 <p>异步客户端将在向服务发送请求后立即返回 <code class="docutils literal notranslate"><span class="pre">future</span></code> ，该值指示调用和响应是否完成 (而不是响应本身的值)。可以随时询问退回的 <code class="docutils literal notranslate"><span class="pre">future</span></code> 的响应。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6542">[待校准&#64;6542]</a></p>
 <p>由于发送请求不会阻止任何事情，因此可以使用循环在同一线程中旋转 <code class="docutils literal notranslate"><span class="pre">rclpy</span></code> 和检查 <code class="docutils literal notranslate"><span class="pre">future</span></code> ，例如: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6543">[待校准&#64;6543]</a></p>
