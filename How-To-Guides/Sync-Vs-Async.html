@@ -286,7 +286,7 @@
 <p class="topic-title">内容</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#introduction" id="id1">简介</a></p></li>
-<li><p><a class="reference internal" href="#synchronous-calls" id="id2">1同步调用 [待校准&#64;6530]</a></p></li>
+<li><p><a class="reference internal" href="#synchronous-calls" id="id2">1 同步调用 [Alyssa&#64;6530]</a></p></li>
 <li><p><a class="reference internal" href="#sync-deadlock" id="id3">1.1同步死锁 [待校准&#64;6534]</a></p></li>
 <li><p><a class="reference internal" href="#asynchronous-calls" id="id4">2异步调用 [待校准&#64;6540]</a></p></li>
 <li><p><a class="reference internal" href="#summary" id="id5">总结</a></p></li>
@@ -297,10 +297,10 @@
 <p>本指南旨在警告用户与Python同步的服务（service）客户端 <code class="docutils literal notranslate"><span class="pre">call()</span></code> API相关的风险。同步调用服务时很容易错误的导致死锁，因此我们不建议使用 <code class="docutils literal notranslate"><span class="pre">call()</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6526">[Alyssa&#64;6526]</a></p>
 <p>对于希望使用同步调用并意识到陷阱的有经验的用户，我们提供了一个如何正确使用 <code class="docutils literal notranslate"><span class="pre">call()</span></code> 的例子。我们还强调了随之而来的死锁的可能情况。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6527">[Alyssa&#64;6527]</a></p>
 <p>因为我们建议避免同步调用，本指南还将介绍推荐的替代方法 -- 异步调用 ( <code class="docutils literal notranslate"><span class="pre">call_async()</span></code> ) 的特点和用法。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6528">[待校准&#64;6528]</a></p>
-<p>Cservice服务调用API仅在async中可用，因此本指南中的比较和示例与Python服务和客户端有关。这里给出的async的定义通常适用于C++，但也有一些例外。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6529">[待校准&#64;6529]</a></p>
+<p>C++ 服务调用API仅在异步中可用，因此本指南中的比较和示例与Python服务和客户端有关。这里给出的异步的定义通常适用于C++，但也有一些例外。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6529">[Alyssa&#64;6529]</a></p>
 </div>
 <div class="section" id="synchronous-calls">
-<h2>1同步调用 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6530">[待校准&#64;6530]</a><a class="headerlink" href="#synchronous-calls" title="永久链接至标题"></a></h2>
+<h2>1 同步调用 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6530">[Alyssa&#64;6530]</a><a class="headerlink" href="#synchronous-calls" title="永久链接至标题"></a></h2>
 <p>当向服务发送请求时，同步客户端将阻止调用线程，直到收到响应为止; 在调用期间，该线程上不会发生任何其他事情。调用可能需要任意时间才能完成。完成后，响应将直接返回给客户端。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6531">[待校准&#64;6531]</a></p>
 <p>以下是如何从客户端节点正确执行同步服务调用的示例，类似于 <a class="reference internal" href="../Tutorials/Writing-A-Simple-Py-Service-And-Client.html"><span class="doc">Simple Service and Client</span></a> 教程中的异步节点。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6532">[待校准&#64;6532]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
