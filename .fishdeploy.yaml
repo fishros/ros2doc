@@ -1,21 +1,17 @@
-# fishros deploy tool 
-# 所有的操作都在工程目录进行
-# os / docker 
-mode: os
-env: os
-name: ros2doc
+# fishros deploy tool 所有的操作都在工程目录进行
+name: ros22doc
 tag: foxy
-parallel: true
-stage:
-  prepare:
-    - echo "prepare"
+pipline:
+  - createdir
+  - delete
+  - install
+stages:
+  createdir:
     - mkdir -p /root/ros2/master/doc/
     - mkdir -p /root/ros2/dev/doc/
-  start:
+  delete:
     - rm -rf /root/ros2/master/doc/*
     - rm -rf /root/ros2/dev/doc/*
-  end:
+  install:
     - cp -r * /root/ros2/master/doc/
     - cp -r * /root/ros2/dev/doc/
-# 超时
-timeout: 200
