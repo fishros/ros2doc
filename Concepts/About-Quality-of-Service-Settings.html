@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="zh" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>关于服务质量(QOS)设置 [小鱼@9945] &mdash; ROS 2 documentation  文档</title>
+  <title>About Quality of Service settings &mdash; ROS 2 documentation  文档</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
@@ -24,8 +25,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="关于ROS 2客户端库" href="About-ROS-2-Client-Libraries.html" />
-    <link rel="prev" title="关于日志和日志记录器配置" href="About-Logging.html" /> 
+    <link rel="next" title="About ROS 2 client libraries" href="About-ROS-2-Client-Libraries.html" />
+    <link rel="prev" title="About logging and logger configuration" href="About-Logging.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -44,211 +45,211 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../Installation.html">安装</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Installation/Ubuntu-Development-Setup.html">在Ubuntu Linux上构建ROS 2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Installation/Ubuntu-Install-Binary.html">在Ubuntu Linux上安装ROS 2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Installation/Ubuntu-Install-Debians.html">通过Debian包安装ROS 2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Installation/macOS-Development-Setup.html">在macOS上构建ROS 2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Installation/macOS-Install-Binary.html">在macOS上安装ROS 2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Installation/Windows-Development-Setup.html">在Windows上构建ROS 2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Installation/Windows-Install-Binary.html">在Windows上安装ROS 2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Installation/Fedora-Development-Setup.html">在Fedora Linux上构建ROS 2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Installation/Latest-Development-Setup.html">安装最新的ROS 2开发版本</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Installation/Maintaining-a-Source-Checkout.html">维护ROS 2Foxy源文件的检出</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Installation/Testing.html">用于测试的替代安装源</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Installation/DDS-Implementations.html">安装DDS实现</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Install-Connext-Security-Plugins.html">安装Connext安全插件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Install-Connext-University-Eval.html">安装RTI Connext DDS的大学或评估版本 [Alyssa&#64;5370]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Working-with-Eclipse-CycloneDDS.html">使用Eclipse Cyclone DDS [Alyssa&#64;5384]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Working-with-GurumNetworks-GurumDDS.html">使用GurumNetworks GurumDDS [Alyssa&#64;5400]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Working-with-eProsima-Fast-DDS.html">使用eProsima Fast DDS [Alyssa&#64;5417]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Ubuntu-Development-Setup.html">Building ROS 2 on Ubuntu Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Ubuntu-Install-Binary.html">Installing ROS 2 on Ubuntu Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Ubuntu-Install-Debians.html">Installing ROS 2 via Debian Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/macOS-Development-Setup.html">Building ROS 2 on macOS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/macOS-Install-Binary.html">Installing ROS 2 on macOS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Windows-Development-Setup.html">Building ROS 2 on Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Windows-Install-Binary.html">Installing ROS 2 on Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Fedora-Development-Setup.html">Building ROS 2 on Fedora Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Latest-Development-Setup.html">Installing the latest ROS 2 development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Maintaining-a-Source-Checkout.html">Maintaining a source checkout of ROS 2 Rolling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Testing.html">Alternative Installation Sources for Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/DDS-Implementations.html">Installing DDS implementations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Install-Connext-Security-Plugins.html">Installing Connext security plugins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Install-Connext-University-Eval.html">Installing University or Evaluation versions of RTI Connext DDS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Working-with-Eclipse-CycloneDDS.html">Working with Eclipse Cyclone DDS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Working-with-GurumNetworks-GurumDDS.html">Working with GurumNetworks GurumDDS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Working-with-eProsima-Fast-DDS.html">Working with eProsima Fast DDS</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../Docs-Guide.html">文档指南</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Tutorials.html">教程</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Configuring-ROS2-Environment.html">配置ROS 2环境</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Turtlesim/Introducing-Turtlesim.html">介绍turtlesim和rqt</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Understanding-ROS2-Nodes.html">了解ROS 2节点 [待校准&#64;9173]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Topics/Understanding-ROS2-Topics.html">理解ROS 2话题 [待校准&#64;8808]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Services/Understanding-ROS2-Services.html">了解ROS 2服务 [待校准&#64;8182]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Parameters/Understanding-ROS2-Parameters.html">理解ROS 2参数</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Understanding-ROS2-Actions.html">理解ROS 2动作 [待校准&#64;9124]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Rqt-Console/Using-Rqt-Console.html">使用rqt_控制台 [待校准&#64;8152]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Launch/CLI-Intro.html">介绍ROS 2launch [待校准&#64;7541]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Ros2bag/Recording-And-Playing-Back-Data.html">记录和回放数据 [待校准&#64;8079]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Workspace/Creating-A-Workspace.html">创建工作空间 [待校准&#64;9276]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Creating-Your-First-ROS2-Package.html">创建您的第一个ROS 2包 [待校准&#64;7117]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Writing-A-Simple-Cpp-Publisher-And-Subscriber.html">编写简单的发布者和订阅者 (c ++) [待校准&#64;9345]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Writing-A-Simple-Py-Publisher-And-Subscriber.html">编写简单的发布者和订阅者 (Python) [待校准&#64;9432]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Writing-A-Simple-Cpp-Service-And-Client.html">编写简单的服务和客户端 (c ++) [待校准&#64;9393]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Writing-A-Simple-Py-Service-And-Client.html">编写简单的服务和客户端 (Python) [待校准&#64;9468]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Custom-ROS2-Interfaces.html">创建自定义ROS 2 msg 和 srv 文件 [待校准&#64;7179]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Single-Package-Define-And-Use-Interface.html">在ROS 2接口上扩展 [待校准&#64;8284]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Using-Parameters-In-A-Class-CPP.html">在类 (c ++) 中使用参数 [待校准&#64;9209]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Using-Parameters-In-A-Class-Python.html">在类中使用参数 (Python) [待校准&#64;9249]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Getting-Started-With-Ros2doctor.html">开始使用ros2doctor [待校准&#64;7450]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Pluginlib.html">创建和使用插件 (c ++) [待校准&#64;7851]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Actions/Creating-an-Action.html">创建动作 [待校准&#64;6711]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Actions/Writing-a-Cpp-Action-Server-Client.html">编写动作服务器和客户端 (c ++) [待校准&#64;6753]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Actions/Writing-a-Py-Action-Server-Client.html">编写动作服务器和客户端 (Python) [待校准&#64;6825]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Composition.html">在单个进程中组成多个节点 [待校准&#64;7034]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Colcon-Tutorial.html">使用colcon构建包 [待校准&#64;6975]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Launch/Launch-Main.html">Launch教程 [待校准&#64;7600]</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Launch/Creating-Launch-Files.html">创建launch文件 [待校准&#64;7562]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Launch/Launch-system.html">[需手动修复的语法]Launch/监控多节点[需手动修复的语法]Launch [待校准&#64;7614]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Launch/Using-Substitutions.html">在launch文件中使用替换 [待校准&#64;7737]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Launch/Using-Event-Handlers.html">在launch文件中使用事件处理程序 [待校准&#64;7641]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Launch/Using-ROS2-Launch-For-Large-Projects.html">在大型项目中使用ROS 2launch [待校准&#64;7674]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Docs-Guide.html">Docs Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorials.html">Tutorials</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Configuring-ROS2-Environment.html">Configuring your ROS 2 environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Turtlesim/Introducing-Turtlesim.html">Introducing turtlesim and rqt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Understanding-ROS2-Nodes.html">Understanding ROS 2 nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Topics/Understanding-ROS2-Topics.html">Understanding ROS 2 topics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Services/Understanding-ROS2-Services.html">Understanding ROS 2 services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Parameters/Understanding-ROS2-Parameters.html">Understanding ROS 2 parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Understanding-ROS2-Actions.html">Understanding ROS 2 actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Rqt-Console/Using-Rqt-Console.html">Using rqt_console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Launch/CLI-Intro.html">Introducing ROS 2 launch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Ros2bag/Recording-And-Playing-Back-Data.html">Recording and playing back data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Workspace/Creating-A-Workspace.html">Creating a workspace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Creating-Your-First-ROS2-Package.html">Creating your first ROS 2 package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Writing-A-Simple-Cpp-Publisher-And-Subscriber.html">Writing a simple publisher and subscriber (C++)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Writing-A-Simple-Py-Publisher-And-Subscriber.html">Writing a simple publisher and subscriber (Python)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Writing-A-Simple-Cpp-Service-And-Client.html">Writing a simple service and client (C++)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Writing-A-Simple-Py-Service-And-Client.html">Writing a simple service and client (Python)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Custom-ROS2-Interfaces.html">Creating custom ROS 2 msg and srv files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Single-Package-Define-And-Use-Interface.html">Expanding on ROS 2 interfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Using-Parameters-In-A-Class-CPP.html">Using parameters in a class (C++)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Using-Parameters-In-A-Class-Python.html">Using parameters in a class (Python)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Getting-Started-With-Ros2doctor.html">Getting started with ros2doctor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Pluginlib.html">Creating and Using Plugins (C++)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Actions/Creating-an-Action.html">Creating an action</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Actions/Writing-a-Cpp-Action-Server-Client.html">Writing an action server and client (C++)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Actions/Writing-a-Py-Action-Server-Client.html">Writing an action server and client (Python)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Composition.html">Composing multiple nodes in a single process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Colcon-Tutorial.html">Using colcon to build packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Launch/Launch-Main.html">Launch Tutorials</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Launch/Creating-Launch-Files.html">Creating a launch file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Launch/Launch-system.html">Launching/monitoring multiple nodes with Launch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Launch/Using-Substitutions.html">Using substitutions in launch files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Launch/Using-Event-Handlers.html">Using event handlers in launch files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Launch/Using-ROS2-Launch-For-Large-Projects.html">Using ROS 2 launch for large projects</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Tf2/Tf2-Main.html">tf2教程 [待校准&#64;8518]</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Introduction-To-Tf2.html">tf2简介 [待校准&#64;8434]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Writing-A-Tf2-Static-Broadcaster-Py.html">编写tf2静态广播器 (Python) [待校准&#64;8739]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Writing-A-Tf2-Static-Broadcaster-Cpp.html">编写tf2静态广播器 (c ++) [待校准&#64;8697]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Writing-A-Tf2-Broadcaster-Py.html">编写tf2广播器 (Python) [待校准&#64;8660]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Writing-A-Tf2-Broadcaster-Cpp.html">编写tf2广播器 (c ++) [待校准&#64;8621]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Writing-A-Tf2-Listener-Py.html">编写tf2监听程序 (Python) [待校准&#64;8691]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Writing-A-Tf2-Listener-Cpp.html">编写tf2监听程序 (c ++) [待校准&#64;8673]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Adding-A-Frame-Py.html">添加帧 (Python) [待校准&#64;8390]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Adding-A-Frame-Cpp.html">添加帧 (c ++) [待校准&#64;8354]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Learning-About-Tf2-And-Time-Py.html">学习tf2和时间 (Python) [待校准&#64;8480]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Learning-About-Tf2-And-Time-Cpp.html">学习tf2和时间 (c ++) [待校准&#64;8463]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Time-Travel-With-Tf2-Py.html">时间穿梭tf2 (Python) [待校准&#64;8570]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Time-Travel-With-Tf2-Cpp.html">时间穿梭带tf2 (C++) [待校准&#64;8545]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Debugging-Tf2-Problems.html">调试tf2问题 [待校准&#64;8396]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Quaternion-Fundamentals.html">四元数基金amentals [待校准&#64;8494]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.html">使用stamped数据类型与tf2_ros: MessageFilter [待校准&#64;8578]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Tf2/Tf2-Main.html">tf2 Tutorials</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Introduction-To-Tf2.html">Introduction to tf2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Writing-A-Tf2-Static-Broadcaster-Py.html">Writing a tf2 static broadcaster (Python)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Writing-A-Tf2-Static-Broadcaster-Cpp.html">Writing a tf2 static broadcaster (C++)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Writing-A-Tf2-Broadcaster-Py.html">Writing a tf2 broadcaster (Python)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Writing-A-Tf2-Broadcaster-Cpp.html">Writing a tf2 broadcaster (C++)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Writing-A-Tf2-Listener-Py.html">Writing a tf2 listener (Python)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Writing-A-Tf2-Listener-Cpp.html">Writing a tf2 listener (C++)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Adding-A-Frame-Py.html">Adding a frame (Python)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Adding-A-Frame-Cpp.html">Adding a frame (C++)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Learning-About-Tf2-And-Time-Py.html">Learning about tf2 and time (Python)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Learning-About-Tf2-And-Time-Cpp.html">Learning about tf2 and time (C++)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Time-Travel-With-Tf2-Py.html">Time travel with tf2 (Python)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Time-Travel-With-Tf2-Cpp.html">Time travel with tf2 (C++)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Debugging-Tf2-Problems.html">Debugging tf2 problems</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Quaternion-Fundamentals.html">Quaternion fundamentals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.html">Using stamped datatypes with tf2_ros::MessageFilter</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/URDF/URDF-Main.html">URDF教程 [待校准&#64;9047]</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/URDF/Building-a-Visual-Robot-Model-with-URDF-from-Scratch.html">从头开始用URDF构建视觉机器人模型 [待校准&#64;8996]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/URDF/Building-a-Movable-Robot-Model-with-URDF.html">用URDF建立可移动机器人模型 [待校准&#64;8974]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/URDF/Adding-Physical-and-Collision-Properties-to-a-URDF-Model.html">向URDF模型添加物理和碰撞属性 [待校准&#64;8927]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/URDF/Using-Xacro-to-Clean-Up-a-URDF-File.html">使用Xacro清理URDF文件 [待校准&#64;9075]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/URDF/Using-URDF-with-Robot-State-Publisher.html">将URDF与robot_state_发布者结合使用 [待校准&#64;9049]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/URDF/URDF-Main.html">URDF Tutorials</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/URDF/Building-a-Visual-Robot-Model-with-URDF-from-Scratch.html">Building a Visual Robot Model with URDF from Scratch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/URDF/Building-a-Movable-Robot-Model-with-URDF.html">Building a Movable Robot Model with URDF</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/URDF/Adding-Physical-and-Collision-Properties-to-a-URDF-Model.html">Adding Physical and Collision Properties to a URDF Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/URDF/Using-Xacro-to-Clean-Up-a-URDF-File.html">Using Xacro to Clean Up a URDF File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/URDF/Using-URDF-with-Robot-State-Publisher.html">Using URDF with robot_state_publisher</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Topics/Topic-Statistics-Tutorial.html">ROS 2话题统计教程 (c ++) [待校准&#64;8751]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Discovery-Server/Discovery-Server.html">使用Fast DDS Discovery Server作为发现协议 [社区贡献] [待校准&#64;7319]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Allocator-Template-Tutorial.html">实现自定义内存分配器 [待校准&#64;6885]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Simulators/Webots/Setting-up-a-Robot-Simulation-Webots.html">设置机器人仿真 (Webots) [待校准&#64;8222]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Deploying-ROS-2-on-IBM-Cloud.html">IBM Cloud Kubernetes上的ROS2 [社区-贡献] [待校准&#64;7232]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Eclipse-Oxygen-with-ROS-2-and-rviz2.html">带有ROS 2和rviz2的Eclipse Oxygen [社区贡献] [待校准&#64;7387]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Building-Realtime-rt_preempt-kernel-for-ROS-2.html">为ROS 2构建实时Linux [社区-贡献] [待校准&#64;6954]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Ros2bag/Recording-A-Bag-From-Your-Own-Node.html">从您自己的节点记录一个包 [待校准&#64;7994]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Building-ROS2-Package-with-eclipse-2021-06.html">使用eclipse 2021-06构建ROS 2包 [待校准&#64;6926]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Quality-of-Service.html">使用服务质量设置处理有损网络 [待校准&#64;7902]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Managed-Nodes.html">具有托管生命周期的节点管理 [待校准&#64;7809]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Intra-Process-Communication.html">高效的流程内通讯 [待校准&#64;7491]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Rosbag-with-ROS1-Bridge.html">使用ROS 1bridge用rosbag记录和回放话题数据 [待校准&#64;8125]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Real-Time-Programming.html">ROS 2中的实时编程 [待校准&#64;7931]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/dummy-robot-demo.html">尝试dummy robot例程 [待校准&#64;9496]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Logging-and-logger-configuration.html">日志和日志记录器配置例程 [待校准&#64;7762]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Topics/Topic-Statistics-Tutorial.html">ROS 2 Topic Statistics Tutorial (C++)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Discovery-Server/Discovery-Server.html">Using Fast DDS Discovery Server as discovery protocol [community-contributed]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Allocator-Template-Tutorial.html">Implement a custom memory allocator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Simulators/Webots/Setting-up-a-Robot-Simulation-Webots.html">Setting-up a Robot Simulation (Webots)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Deploying-ROS-2-on-IBM-Cloud.html">ROS2 on IBM Cloud Kubernetes [community-contributed]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Eclipse-Oxygen-with-ROS-2-and-rviz2.html">Eclipse Oxygen with ROS 2 and rviz2 [community-contributed]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Building-Realtime-rt_preempt-kernel-for-ROS-2.html">Building realtime Linux for ROS 2 [community-contributed]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Ros2bag/Recording-A-Bag-From-Your-Own-Node.html">Recording a bag from your own node</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Building-ROS2-Package-with-eclipse-2021-06.html">Building ROS 2 Package with eclipse 2021-06</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Quality-of-Service.html">Use quality-of-service settings to handle lossy networks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Managed-Nodes.html">Management of nodes with managed lifecycles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Intra-Process-Communication.html">Efficient intra-process communication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Rosbag-with-ROS1-Bridge.html">Recording and playback of topic data with rosbag using the ROS 1 bridge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Real-Time-Programming.html">Real-time programming in ROS 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/dummy-robot-demo.html">Trying the dummy robot demo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Logging-and-logger-configuration.html">Logging and logger configuration demo</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../How-To-Guides.html">问题指南</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Installation-Troubleshooting.html">安装故障诊断工具 [待校准&#64;6086]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Developing-a-ROS-2-Package.html">开发ROS 2包 [待校准&#64;6065]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Ament-CMake-Documentation.html">ament_cmake用户文档</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Ament-CMake-Python-Documentation.html">ament_cmake_python用户文档 [小鱼&#64;5911]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Launch-files-migration-guide.html">迁移launch文件ROS 1ROS 2 [待校准&#64;6189]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Launch-file-different-formats.html">对ROS 2Launch文件使用Python、XML和YAML [待校准&#64;6162]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Launching-composable-nodes.html">使用ROS 2launch到launch可组合节点 [待校准&#64;6284]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Parameters-YAML-files-migration-guide.html">将YAML参数文件从ROS 1迁移到ROS 2 [待校准&#64;6401]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Node-arguments.html">通过命令行将ROS参数传递给节点 [待校准&#64;6297]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Sync-Vs-Async.html">同步与异步服务的客户端对比 [Alyssa&#64;6523]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/DDS-tuning.html">DDS调优指南</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Overriding-QoS-Policies-For-Recording-And-Playback.html">rosbag2: 重载QoS策略 [待校准&#64;6323]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Working-with-multiple-RMW-implementations.html">使用多个ROS 2中间件实现 [待校准&#64;6619]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Cross-compilation.html">交叉编译 [待校准&#64;5934]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Releasing-a-ROS-2-package-with-bloom.html">发布带有bloom的ROS 2包 [待校准&#64;6488]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Using-Python-Packages.html">将Python包与ROS 2结合使用 [待校准&#64;6562]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/RQt-Port-Plugin-Windows.html">将RQt插件移植到Windows [待校准&#64;6413]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Run-2-nodes-in-single-or-separate-docker-containers.html">在Docker中运行ROS 2节点 [社区-贡献] [待校准&#64;6510]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Package-maintainer-guide.html">ROS 2包维护者指南 [待校准&#64;6336]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Building-a-Custom-Debian-Package.html">构建自定义Debian包</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Topics-Services-Actions.html">话题vs服务vs动作 [小鱼&#64;6548]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Using-Variants.html">使用变体 [待校准&#64;6582]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Using-ros2-param.html">使用 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span></code> 命令行工具 [待校准&#64;6597]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/RQt-Source-Install.html">从源码构建RQt</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../How-To-Guides/RQt-Source-Install-MacOS.html">在macOS上从源文件构建RQt [待校准&#64;6459]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../How-To-Guides/RQt-Source-Install-Windows10.html">在Windows 10上从源文件构建RQt [待校准&#64;6467]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../How-To-Guides.html">How-to Guides</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Installation-Troubleshooting.html">Installation troubleshooting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Developing-a-ROS-2-Package.html">Developing a ROS 2 package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Ament-CMake-Documentation.html">ament_cmake user documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Ament-CMake-Python-Documentation.html">ament_cmake_python user documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Launch-files-migration-guide.html">Migrating launch files from ROS 1 to ROS 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Launch-file-different-formats.html">Using Python, XML, and YAML for ROS 2 Launch Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Launching-composable-nodes.html">Using ROS 2 launch to launch composable nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Parameters-YAML-files-migration-guide.html">Migrating YAML parameter files from ROS 1 to ROS 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Node-arguments.html">Passing ROS arguments to nodes via the command-line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Sync-Vs-Async.html">Synchronous vs. asynchronous service clients</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/DDS-tuning.html">DDS tuning information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Overriding-QoS-Policies-For-Recording-And-Playback.html">rosbag2: Overriding QoS Policies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Working-with-multiple-RMW-implementations.html">Working with multiple ROS 2 middleware implementations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Cross-compilation.html">Cross-compilation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Releasing-a-ROS-2-package-with-bloom.html">Releasing a ROS 2 package with bloom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Using-Python-Packages.html">Using Python Packages with ROS 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/RQt-Port-Plugin-Windows.html">Porting RQt plugins to Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Run-2-nodes-in-single-or-separate-docker-containers.html">Running ROS 2 nodes in Docker [community-contributed]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Package-maintainer-guide.html">ROS 2 Package Maintainer Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Building-a-Custom-Debian-Package.html">Building a custom Debian package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Topics-Services-Actions.html">Topics vs Services vs Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Using-Variants.html">Using variants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Using-ros2-param.html">Using the <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span></code> command-line tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/RQt-Source-Install.html">Building RQt from source</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../How-To-Guides/RQt-Source-Install-MacOS.html">Building RQt from source on macOS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../How-To-Guides/RQt-Source-Install-Windows10.html">Building RQt from source on Windows 10</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="reference internal" href="../Concepts.html">概念</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="About-Domain-ID.html">ROS_DOMAIN_ID</a></li>
-<li class="toctree-l2"><a class="reference internal" href="About-Different-Middleware-Vendors.html">关于不同的ROS 2 DDS/RTPS供应商</a></li>
-<li class="toctree-l2"><a class="reference internal" href="About-Logging.html">关于日志和日志记录器配置</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">关于服务质量(QOS)设置 [小鱼&#64;9945]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="About-ROS-2-Client-Libraries.html">关于ROS 2客户端库</a></li>
-<li class="toctree-l2"><a class="reference internal" href="About-ROS-Interfaces.html">关于ROS 2接口 [待校准&#64;10102]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="About-ROS-2-Parameters.html">关于ROS 2中的参数 [待校准&#64;10066]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="About-Executors.html">执行器</a></li>
-<li class="toctree-l2"><a class="reference internal" href="About-Topic-Statistics.html">关于话题统计</a></li>
-<li class="toctree-l2"><a class="reference internal" href="About-Command-Line-Tools.html">使用命令行工具进行自检</a></li>
-<li class="toctree-l2"><a class="reference internal" href="About-RQt.html">RQt的概述和使用</a></li>
-<li class="toctree-l2"><a class="reference internal" href="About-Composition.html">关于组件</a></li>
-<li class="toctree-l2"><a class="reference internal" href="About-Catment.html">ament和catkin的混合研究(catment) [Alyssa&#64;9595]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="About-Cross-Compilation.html">关于交叉编译</a></li>
-<li class="toctree-l2"><a class="reference internal" href="About-Tf2.html">关于tf2 [待校准&#64;10229]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="About-Build-System.html">关于构建系统</a></li>
-<li class="toctree-l2"><a class="reference internal" href="About-Internal-Interfaces.html">关于内部ROS 2接口</a></li>
-<li class="toctree-l2"><a class="reference internal" href="About-Middleware-Implementations.html">关于ROS 2中间件实现</a></li>
-<li class="toctree-l2"><a class="reference internal" href="About-Client-Interfaces.html">ROS 2客户端接口 (客户端库)</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../Concepts.html">Concepts</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="About-Domain-ID.html">The ROS_DOMAIN_ID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="About-Different-Middleware-Vendors.html">About different ROS 2 DDS/RTPS vendors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="About-Logging.html">About logging and logger configuration</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">About Quality of Service settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="About-ROS-2-Client-Libraries.html">About ROS 2 client libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="About-ROS-Interfaces.html">About ROS 2 interfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="About-ROS-2-Parameters.html">About parameters in ROS 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="About-Executors.html">Executors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="About-Topic-Statistics.html">About topic statistics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="About-Command-Line-Tools.html">Introspection with command line tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="About-RQt.html">Overview and usage of RQt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="About-Composition.html">About Composition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="About-Catment.html">On the mixing of ament and catkin (catment)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="About-Cross-Compilation.html">About Cross-compilation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="About-Tf2.html">About tf2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="About-Build-System.html">About the build system</a></li>
+<li class="toctree-l2"><a class="reference internal" href="About-Internal-Interfaces.html">About internal ROS 2 interfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="About-Middleware-Implementations.html">About ROS 2 middleware implementations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="About-Client-Interfaces.html">ROS 2 Client Interfaces (Client Libraries)</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../Contributing.html">贡献</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Contributing/Developer-Guide.html">ROS 2开发人员指南 [待校准&#64;449]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Contributing/Code-Style-Language-Versions.html">代码样式和语言版本 [待校准&#64;231]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Contributing/Quality-Guide.html">质量指南: 确保代码质量 [待校准&#64;1031]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Contributing/Migration-Guide.html">从ROS 1迁移指南 [待校准&#64;799]</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Contributing/Migration-Guide-Python.html">来自ROS 1的Python迁移指南 [待校准&#64;1022]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Contributing.html">Contributing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Contributing/Developer-Guide.html">ROS 2 developer guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Contributing/Code-Style-Language-Versions.html">Code style and language versions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Contributing/Quality-Guide.html">Quality guide: ensuring code quality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Contributing/Migration-Guide.html">Migration guide from ROS 1</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Contributing/Migration-Guide-Python.html">Python migration guide from ROS 1</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../Contributing/Build-Farms.html">ROS Build Farms [待校准&#64;186]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Contributing/Windows-Tips-and-Tricks.html">Windows提示和技巧 [待校准&#64;1124]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Contributing/Contributing-To-ROS-2-Documentation.html">为ROS 2文档做出贡献 [待校准&#64;385]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Contributing/Build-Farms.html">ROS Build Farms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Contributing/Windows-Tips-and-Tricks.html">Windows Tips and Tricks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Contributing/Contributing-To-ROS-2-Documentation.html">Contributing to ROS 2 Documentation</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../Contact.html">联系</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../ROSCon-Content.html">ROSCon内容</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Releases.html">发行版</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Releases/Alpha-Overview.html">ROS 2 α 发行版本 (2015年8月-2016年10月) [待校准&#64;1527]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Releases/Beta1-Overview.html">贝塔1 (代号'Asphalt'; 2016年12月) [待校准&#64;1607]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Releases/Beta2-Overview.html">贝塔2 (代号'r2b2'; 2017年7月) [待校准&#64;1641]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Releases/Beta3-Overview.html">贝塔3 (代号'r2b3'; 2017年9月) [待校准&#64;1672]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Ardent-Apalone.html">ROS 2Ardent阿帕隆 (代号'ardent'; 2017年12月) [待校准&#64;4310]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Bouncy-Bolson.html">ROS 2 Bouncy Bolson (代号'bouncy'; 2018年6月) [待校准&#64;4351]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Crystal-Clemmys.html">ROS 2Crystal Clemmys (代号'crystal'; 2018年12月) [待校准&#64;4379]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Dashing-Diademata.html">ROS 2DashingDiademata (代号'dashing'; 2019年5月31日) [待校准&#64;4458]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Eloquent-Elusor.html">ROS 2EloquentElusor (代号'eloquent'; 2019年11月22日) [待校准&#64;4648]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Foxy-Fitzroy.html">ROS 2FoxyFitzroy (代号'foxy'; 2020年6月5日) [待校准&#64;4724]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Galactic-Geochelone.html">ROS 2GalacticGeochelone (代号'galactic'; 2021年5月) [待校准&#64;4870]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Releases/Galactic-Geochelone-Complete-Changelog.html">ROS 2GalacticGeochelone完整变更日志 [待校准&#64;1691]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Humble-Hawksbill.html">ROS 2Humble Hawksbill (代号'humble'; 2022年5月) [待校准&#64;5066]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Rolling-Ridley.html">ROS 2Rolling Ridley (代号'rolling'; 2020年6月) [待校准&#64;5150]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Contact.html">Contact</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ROSCon-Content.html">ROSCon Content</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Releases.html">Distributions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Alpha-Overview.html">ROS 2 alpha releases (Aug 2015 - Oct 2016)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Beta1-Overview.html">Beta 1 (codename 'Asphalt'; December 2016)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Beta2-Overview.html">Beta 2 (codename 'r2b2'; July 2017)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Beta3-Overview.html">Beta 3 (codename 'r2b3'; September 2017)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Ardent-Apalone.html">ROS 2 Ardent Apalone (codename 'ardent'; December 2017)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Bouncy-Bolson.html">ROS 2 Bouncy Bolson (codename 'bouncy'; June 2018)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Crystal-Clemmys.html">ROS 2 Crystal Clemmys (codename 'crystal'; December 2018)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Dashing-Diademata.html">ROS 2 Dashing Diademata (codename 'dashing'; May 31st, 2019)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Eloquent-Elusor.html">ROS 2 Eloquent Elusor (codename 'eloquent'; November 22nd, 2019)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Foxy-Fitzroy.html">ROS 2 Foxy Fitzroy (codename 'foxy'; June 5th, 2020)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Galactic-Geochelone.html">ROS 2 Galactic Geochelone (codename 'galactic'; May, 2021)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Galactic-Geochelone-Complete-Changelog.html">ROS 2 Galactic Geochelone Complete Changelog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Humble-Hawksbill.html">ROS 2 Humble Hawksbill (codename 'humble'; May, 2022)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Rolling-Ridley.html">ROS 2 Rolling Ridley (codename 'rolling'; June 2020)</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../Features.html">功能状态</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Roadmap.html">开发计划（Roadmap）</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Feature-Ideas.html">功能理念</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Governance.html">项目管理</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Governance/ROS2-TSC-Charter.html">ROS 2技术指导委员会章程</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Governance/ROS2-TSC-Intake-process.html">ROS 2 TSC申请人加入流程 [小鱼&#64;1387]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Governance/How-To-Start-A-Community-Working-Group.html">如何成立社区工作组 [待校准&#64;1272]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Features.html">Features Status</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Roadmap.html">Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Feature-Ideas.html">Feature Ideas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Governance.html">Project Governance</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Governance/ROS2-TSC-Charter.html">ROS 2 Technical Steering Committee Charter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Governance/ROS2-TSC-Intake-process.html">ROS 2 TSC applicant intake process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Governance/How-To-Start-A-Community-Working-Group.html">How to Start a Community Working Group</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../Marketing.html">营销材料</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Related-Projects.html">相关项目</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Related-Projects/Intel-ROS2-Projects.html">Intel ROS2 项目</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Related-Projects/Nvidia-ROS2-Projects.html">NVIDIA ROS 2 项目</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Marketing.html">Marketing Materials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Related-Projects.html">Related Projects</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Related-Projects/Intel-ROS2-Projects.html">Intel ROS 2 Projects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Related-Projects/Nvidia-ROS2-Projects.html">NVIDIA ROS 2 Projects</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../Glossary.html">相关术语</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Glossary.html">Glossary</a></li>
 </ul>
 
         </div>
@@ -265,10 +266,10 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../Concepts.html">概念</a> &raquo;</li>
-      <li>关于服务质量(QOS)设置 [小鱼&#64;9945]</li>
+          <li><a href="../Concepts.html">Concepts</a> &raquo;</li>
+      <li>About Quality of Service settings</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ros2/ros2_documentation/blob/foxy/source/Concepts/About-Quality-of-Service-Settings.rst" class="fa fa-github"> 在 GitHub 上修改</a>
+              <a href="https://github.com/ros2/ros2_documentation/blob/rolling/source/Concepts/About-Quality-of-Service-Settings.rst" class="fa fa-github"> 在 GitHub 上修改</a>
       </li>
   </ul>
   <hr/>
@@ -278,101 +279,125 @@
              
 
 
-  <div class="section" id="about-quality-of-service-settings">
-<h1>关于服务质量(QOS)设置 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9945">[小鱼&#64;9945]</a><a class="headerlink" href="#about-quality-of-service-settings" title="永久链接至标题"></a></h1>
-<div class="section" id="overview">
-<h2>概述<a class="headerlink" href="#overview" title="永久链接至标题"></a></h2>
-<p>ROS 2提供了丰富多样的服务质量 (QoS) 策略，使您可以调整节点之间的通讯。通过正确设置服务质量策略，ROS 2可以像TCP一样可靠，也可以像UDP一样尽力而为，在这两者之间有很多很多可能的状态。与主要只支持TCP的ROS 1不同，ROS 2受益于底层DDS传输的灵活性，在有损无线网络的环境中“尽力而为” 策略更合适，或者在实时计算系统中，需要适当质量的服务配置文件来满足时间期限要求。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9946">[Alyssa&#64;9946]</a></p>
-<p>一组QoS “策略” 结合在一起形成QoS “配置文件”。考虑到为给定场景选择正确的QoS策略的复杂性，ROS 2为常见用例 (例如传感器数据) 提供了一组预定义的QoS配置文件。同时，开发人员可以灵活地控制QoS配置文件的具体策略。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9947">[Alyssa&#64;9947]</a></p>
-<p>可以为发布者、订阅、服务服务器和客户端指定QoS配置文件。QoS配置文件可以独立地应用于上述实体的每个实例，但是如果使用不同的配置文件，则它们可能不兼容，从而阻止消息的传递。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9948">[待校准&#64;9948]</a></p>
-</div>
-<div class="section" id="qos-policies">
-<h2>QoS策略<a class="headerlink" href="#qos-policies" title="永久链接至标题"></a></h2>
-<p>基本QoS配置文件当前包括以下策略的设置: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9950">[待校准&#64;9950]</a></p>
+  <section id="about-quality-of-service-settings">
+<h1>About Quality of Service settings<a class="headerlink" href="#about-quality-of-service-settings" title="永久链接至标题"></a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="永久链接至标题"></a></h2>
+<p>ROS 2 offers a rich variety of Quality of Service (QoS) policies that allow you to tune communication between nodes.
+With the right set of Quality of Service policies, ROS 2 can be as reliable as TCP or as best-effort as UDP, with many, many possible states in between.
+Unlike ROS 1, which primarily only supported TCP, ROS 2 benefits from the flexibility of the underlying DDS transport in environments with lossy wireless networks where a “best effort” policy would be more suitable, or in real-time computing systems where the right Quality of Service profile is needed to meet deadlines.</p>
+<p>A set of QoS “policies” combine to form a QoS “profile”.
+Given the complexity of choosing the correct QoS policies for a given scenario, ROS 2 provides a set of predefined QoS profiles for common use cases (e.g. sensor data).
+At the same time, developers are given the flexibility to control specific policies of the QoS profiles.</p>
+<p>QoS profiles can be specified for publishers, subscriptions, service servers and clients.
+A QoS profile can be applied independently to each instance of the aforementioned entities, but if different profiles are used, it is possible that they will be incompatible, preventing the delivery of messages.</p>
+</section>
+<section id="qos-policies">
+<h2>QoS policies<a class="headerlink" href="#qos-policies" title="永久链接至标题"></a></h2>
+<p>The base QoS profile currently includes settings for the following policies:</p>
 <ul class="simple">
-<li><p>历史记录 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9951">[Alyssa&#64;9951]</a></p>
+<li><p>History</p>
 <ul>
-<li><p><em>保留最后的</em>: 最多只能存储N个样本，可通过队列深度选项进行配置。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9952">[Alyssa&#64;9952]</a></p></li>
-<li><p><em>保留所有</em>: 存储所有样本，但要遵守底层中间件配置的资源限制。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9953">[Alyssa&#64;9953]</a></p></li>
+<li><p><em>Keep last</em>: only store up to N samples, configurable via the queue depth option.</p></li>
+<li><p><em>Keep all</em>: store all samples, subject to the configured resource limits of the underlying middleware.</p></li>
 </ul>
 </li>
-<li><p>深度 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9954">[待校准&#64;9954]</a></p>
+<li><p>Depth</p>
 <ul>
-<li><p><em>队列大小</em>: 仅在“历史记录”策略设置为“保留最后的”时才设置。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9955">[Alyssa&#64;9955]</a></p></li>
+<li><p><em>Queue size</em>: only honored if the “history” policy was set to “keep last”.</p></li>
 </ul>
 </li>
-<li><p>可靠性 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9956">[待校准&#64;9956]</a></p>
+<li><p>Reliability</p>
 <ul>
-<li><p><em>尽力而为</em>: 尝试传递样本，但如果网络不强大，可能会丢失样本。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9957">[Alyssa&#64;9957]</a></p></li>
-<li><p><em>可靠</em>: 保证传递所有样品，可能会重试多次。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9958">[Alyssa&#64;9958]</a></p></li>
+<li><p><em>Best effort</em>: attempt to deliver samples, but may lose them if the network is not robust.</p></li>
+<li><p><em>Reliable</em>: guarantee that samples are delivered, may retry multiple times.</p></li>
 </ul>
 </li>
-<li><p>持久性 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9959">[Alyssa&#64;9959]</a></p>
+<li><p>Durability</p>
 <ul>
-<li><p><em>临时的本地</em>: 发布者负责为“延迟加入”的订阅者保留样本。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9960">[Alyssa&#64;9960]</a></p></li>
-<li><p><em>易失性</em>: 不尝试保留样本。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9961">[Alyssa&#64;9961]</a></p></li>
+<li><p><em>Transient local</em>: the publisher becomes responsible for persisting samples for “late-joining” subscriptions.</p></li>
+<li><p><em>Volatile</em>: no attempt is made to persist samples.</p></li>
 </ul>
 </li>
-<li><p>时间期限 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9962">[Alyssa&#64;9962]</a></p>
+<li><p>Deadline</p>
 <ul>
-<li><p><em>持续时间</em>: 前后两个消息发布到某个话题之间的预期最长时间 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9963">[Alyssa&#64;9963]</a></p></li>
+<li><p><em>Duration</em>: the expected maximum amount of time between subsequent messages being published to a topic</p></li>
 </ul>
 </li>
-<li><p>寿命 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9964">[待校准&#64;9964]</a></p>
+<li><p>Lifespan</p>
 <ul>
-<li><p><em>持续时间</em>: 在没有被视为过时或过期的消息发布和接收之间的最长时间 (过期的消息将被静默的丢弃，实际上永远不会收到)。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9965">[Alyssa&#64;9965]</a></p></li>
+<li><p><em>Duration</em>: the maximum amount of time between the publishing and the reception of a message without the message being considered stale or expired (expired messages are silently dropped and are effectively never received).</p></li>
 </ul>
 </li>
-<li><p>活性 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9966">[Alyssa&#64;9966]</a></p>
+<li><p>Liveliness</p>
 <ul>
-<li><p><em>自动</em>: 当节点的任何一个发布者发布消息时，系统将认为该节点的所有发布者还要存活另一个“租赁期限”。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9967">[Alyssa&#64;9967]</a></p></li>
-<li><p><em>按话题手动</em>: 如果手动断言发布者仍然活着 (通过调用发布者API)，则系统将认为该发布者还要存活另一个“租约期限”。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9968">[Alyssa&#64;9968]</a></p></li>
+<li><p><em>Automatic</em>: the system will consider all of the node’s publishers to be alive for another “lease duration” when any one of its publishers has published a message.</p></li>
+<li><p><em>Manual by topic</em>: the system will consider the publisher to be alive for another “lease duration” if it manually asserts that it is still alive (via a call to the publisher API).</p></li>
 </ul>
 </li>
-<li><p>租赁期限 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9969">[待校准&#64;9969]</a></p>
+<li><p>Lease Duration</p>
 <ul>
-<li><p><em>持续时间</em>: 在系统认为它已经失去活性之前，发布者必须指明它还活着的最长周期 (失去活性可能暗示出现了故障)。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9970">[Alyssa&#64;9970]</a></p></li>
+<li><p><em>Duration</em>: the maximum period of time a publisher has to indicate that it is alive before the system considers it to have lost liveliness (losing liveliness could be an indication of a failure).</p></li>
 </ul>
 </li>
 </ul>
-<p>对于不是持续时间的每个策略，还有“系统默认”选项，它使用底层中间件的默认选项。对于每个具有持续时间的策略，也存在一个“默认”选项，这意味着持续时间未指定，底层中间件通常将其解释为无限长的持续时间。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9971">[Alyssa&#64;9971]</a></p>
-<div class="section" id="comparison-to-ros-1">
-<h3>与ROS 1的比较<a class="headerlink" href="#comparison-to-ros-1" title="永久链接至标题"></a></h3>
-<p>ROS 2中的“历史记录”和“深度”策略相结合以提供类似于ROS 1中的队列大小的功能。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9973">[Alyssa&#64;9973]</a></p>
-<p>ROS 2中的“可靠性”策略类似于使用UDPROS (仅在 <code class="docutils literal notranslate"><span class="pre">roscpp</span></code> 中) 实现“尽力而为”策略，或者使用TCPROS (ROS 1默认) 实现“可靠”策略。但是请注意，在ROS 2中即使是可靠策略也是使用UDP实现的，这允许在适当的情况下进行多播。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9974">[Alyssa&#64;9974]</a></p>
-<p>“持久性”策略“暂时的本地”，和任何”深度“策略相结合，提供类似于“锁定”发布者的功能。ROS 2中的其余策略与ROS 1中可用的任何策略都不相似，这意味着ROS 2在这方面比ROS 1更具特色。将来，ROS 2中可能会提供更多的QoS策略。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9975">[Alyssa&#64;9975]</a></p>
-</div>
-</div>
-<div class="section" id="qos-profiles">
-<h2>QoS配置文件<a class="headerlink" href="#qos-profiles" title="永久链接至标题"></a></h2>
-<p>配置文件让开发人员可以专注于他们的应用程序，而不必担心每个可能的QoS设置。QoS配置文件定义了一组策略，这些策略有望在特定用例中很好地结合在一起。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9977">[Alyssa&#64;9977]</a></p>
-<p>当前定义的QoS配置文件如下:</p>
+<p>For each of the policies that is not a duration, there is also the option of “system default”, which uses the default of the underlying middleware.
+For each of the policies that is a duration, there also exists a “default” option that means the duration is unspecified, which the underlying middleware will usually interpret as an infinitely long duration.</p>
+<section id="comparison-to-ros-1">
+<h3>Comparison to ROS 1<a class="headerlink" href="#comparison-to-ros-1" title="永久链接至标题"></a></h3>
+<p>The “history” and “depth” policies in ROS 2 combine to provide functionality akin to the queue size in ROS 1.</p>
+<p>The “reliability” policy in ROS 2 is akin to the use of either UDPROS (only in <code class="docutils literal notranslate"><span class="pre">roscpp</span></code>) for “best effort”, or TCPROS (ROS 1 default) for “reliable”.
+Note however that even the reliable policy in ROS 2 is implemented using UDP, which allows for multicasting if appropriate.</p>
+<p>The “durability” policy “transient local”, combined with any depth, provides functionality similar to that of “latching” publishers.
+The remaining policies in ROS 2 are not akin to anything that is available in ROS 1, meaning that ROS 2 is more featureful than ROS 1 in this respect.
+It is possible that in the future, even more QoS policies will be available in ROS 2.</p>
+</section>
+</section>
+<section id="qos-profiles">
+<h2>QoS profiles<a class="headerlink" href="#qos-profiles" title="永久链接至标题"></a></h2>
+<p>Profiles allow developers to focus on their applications without worrying about every QoS setting possible.
+A QoS profile defines a set of policies that are expected to go well together for a particular use case.</p>
+<p>The currently defined QoS profiles are:</p>
 <ul>
-<li><p>发布者和订阅者的默认QoS设置 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9979">[Alyssa&#64;9979]</a></p>
-<p>为了使从ROS 1到ROS 2的过渡更容易，需要执行类似的网络行为。默认情况下，ROS 2中的发布者和订阅者对于历史记录有队列大小为10的“保留最后”策略，对于可靠性具有“可靠”策略，对于耐用性具有 “易失性”策略，和 “系统默认” 的活性。时间限制、寿命和租赁持续时间也都设置为 “默认”。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9980">[Alyssa&#64;9980]</a></p>
+<li><p>Default QoS settings for publishers and subscriptions</p>
+<p>In order to make the transition from ROS 1 to ROS 2 easier, exercising a similar network behavior is desirable.
+By default, publishers and subscriptions in ROS 2 have “keep last” for history with a queue size of 10, “reliable” for reliability, “volatile” for durability, and “system default” for liveliness.
+Deadline, lifespan, and lease durations are also all set to “default”.</p>
 </li>
-<li><p>服务</p>
-<p>与发布者和订阅者一样，服务是可靠的。服务使用易失性的持久性策略尤为重要，否则重新启动的服务的服务端时可能会收到过时的请求。虽然保护客户端不接收多个响应，但不保护服务端免受接收过时请求的副作用。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9982">[Alyssa&#64;9982]</a></p>
+<li><p>Services</p>
+<p>In the same vein as publishers and subscriptions, services are reliable.
+It is especially important for services to use volatile durability, as otherwise service servers that re-start may receive outdated requests.
+While the client is protected from receiving multiple responses, the server is not protected from side-effects of receiving the outdated requests.</p>
 </li>
-<li><p>传感器数据</p>
-<p>对于传感器数据，在大多数情况下，及时接收读数比确保所有读数都到达更为重要。也就是说，开发人员希望一捕获到最新的样本就获取他们，即使以丢失一些数据为代价。因此，传感器数据配置文件使用尽力而为的可靠性策略和较小的队列大小。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9984">[Alyssa&#64;9984]</a></p>
+<li><p>Sensor data</p>
+<p>For sensor data, in most cases it’s more important to receive readings in a timely fashion, rather than ensuring that all of them arrive.
+That is, developers want the latest samples as soon as they are captured, at the expense of maybe losing some.
+For that reason the sensor data profile uses best effort reliability and a smaller queue size.</p>
 </li>
-<li><p>参数</p>
-<p>ROS 2中的参数基于服务，因此具有类似的配置文件。不同之处在于，参数使用更大的队列深度，这样，例如参数客户端无法访问参数服务的服务端时，请求就不会丢失。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9986">[Alyssa&#64;9986]</a></p>
+<li><p>Parameters</p>
+<p>Parameters in ROS 2 are based on services, and as such have a similar profile.
+The difference is that parameters use a much larger queue depth so that requests do not get lost when, for example, the parameter client is unable to reach the parameter service server.</p>
 </li>
-<li><p>系统默认</p>
-<p>这将对所有策略使用RMW实现的默认值。不同的RMW实现可能有不同的默认值。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9988">[待校准&#64;9988]</a></p>
+<li><p>System default</p>
+<p>This uses the RMW implementation’s default values for all of the policies.
+Different RMW implementations may have different defaults.</p>
 </li>
 </ul>
-<p>用于上述配置文件的具体策略请 <a class="reference external" href="https://github.com/ros2/rmw/blob/master/rmw/include/rmw/qos_profiles.h">单机这里</a> 查看。这些配置文件中的设置会根据社区的反馈进行进一步调整。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9989">[Alyssa&#64;9989]</a></p>
-</div>
-<div class="section" id="qos-compatibilities">
-<h2>QoS兼容性<a class="headerlink" href="#qos-compatibilities" title="永久链接至标题"></a></h2>
-<p>注意: 本节涉及发布者和订阅，但内容以相同的方式适用于服务的服务端和客户端。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9991">[Alyssa&#64;9991]</a></p>
-<p>QoS配置文件可以独立为发布者和订阅者配置。仅当发布者和订阅者具有兼容的QoS配置文件时，才会在发布者和订阅者之间建立连接。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9992">[Alyssa&#64;9992]</a></p>
-<p>QoS配置文件兼容性是基于“请求vs提供”模型确定的。订阅者* 请求 <em>它愿意接受的“最低质量”的QoS配置文件，发布者</em> 提供 <a href="#id1"><span class="problematic" id="id2">*</span></a>一个它能够提供的“最高质量”的QoS配置文件。只有在每个请求的QoS配置文件中的策略不比提供的QoS配置文件中的策略更严格才会进行连接。多个订阅者可以同时连接到一个发布者，即使它们请求的QoS配置文件不同。发布者和订阅者之间的兼容性不受其他发布者和订阅者存在的影响。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9993">[Alyssa&#64;9993]</a></p>
-<p>下表显示了不同策略设置的兼容性以及结果: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9994">[Alyssa&#64;9994]</a></p>
-<p><em>可靠性QoS策略的兼容性:</em> <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9995">[Alyssa&#64;9995]</a></p>
+<p><a class="reference external" href="https://github.com/ros2/rmw/blob/master/rmw/include/rmw/qos_profiles.h">Click here</a> for the specific policies in use for the above profiles.
+The settings in these profiles are subject to further tweaks, based on the feedback from the community.</p>
+</section>
+<section id="qos-compatibilities">
+<h2>QoS compatibilities<a class="headerlink" href="#qos-compatibilities" title="永久链接至标题"></a></h2>
+<p><strong>Note:</strong> This section refers to publishers and subscriptions but the content applies to service servers and clients in the same manner.</p>
+<p>QoS profiles may be configured for publishers and subscriptions independently.
+A connection between a publisher and a subscription is only made if the pair has compatible QoS profiles.</p>
+<p>QoS profile compatibility is determined based on a “Request vs Offered” model.
+Subscriptions <em>request</em> a QoS profile that is the “minimum quality” that it is willing to accept, and publishers <em>offer</em> a QoS profile that is the “maximum quality” that it is able to provide.
+Connections are only made if every policy of the requested QoS profile is not more stringent than that of the offered QoS profile.
+Multiple subscriptions can be connected to a single publisher simultaneously even if their requested QoS profiles are different.
+The compatibility between a publisher and a subscription is unaffected by the presence of other publishers and subscriptions.</p>
+<p>The following tables show the compatibility of the different policy settings and the result:</p>
+<p><em>Compatibility of reliability QoS policies:</em></p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 33%" />
@@ -380,31 +405,31 @@
 <col style="width: 33%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p>发布者 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9996">[Alyssa&#64;9996]</a></p></th>
-<th class="head"><p>订阅者 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9997">[Alyssa&#64;9997]</a></p></th>
-<th class="head"><p>兼容性 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9998">[Alyssa&#64;9998]</a></p></th>
+<tr class="row-odd"><th class="head"><p>Publisher</p></th>
+<th class="head"><p>Subscription</p></th>
+<th class="head"><p>Compatible</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>尽力而为 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9999">[Alyssa&#64;9999]</a></p></td>
-<td><p>尽力而为 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9999">[Alyssa&#64;9999]</a></p></td>
-<td><p>兼容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10000">[Alyssa&#64;10000]</a></p></td>
+<tr class="row-even"><td><p>Best effort</p></td>
+<td><p>Best effort</p></td>
+<td><p>Yes</p></td>
 </tr>
-<tr class="row-odd"><td><p>尽力而为 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9999">[Alyssa&#64;9999]</a></p></td>
-<td><p>可靠 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10001">[待校准&#64;10001]</a></p></td>
-<td><p>不兼容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10002">[Alyssa&#64;10002]</a></p></td>
+<tr class="row-odd"><td><p>Best effort</p></td>
+<td><p>Reliable</p></td>
+<td><p>No</p></td>
 </tr>
-<tr class="row-even"><td><p>可靠 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10001">[待校准&#64;10001]</a></p></td>
-<td><p>尽力而为 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9999">[Alyssa&#64;9999]</a></p></td>
-<td><p>兼容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10000">[Alyssa&#64;10000]</a></p></td>
+<tr class="row-even"><td><p>Reliable</p></td>
+<td><p>Best effort</p></td>
+<td><p>Yes</p></td>
 </tr>
-<tr class="row-odd"><td><p>可靠 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10001">[待校准&#64;10001]</a></p></td>
-<td><p>可靠 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10001">[待校准&#64;10001]</a></p></td>
-<td><p>兼容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10000">[Alyssa&#64;10000]</a></p></td>
+<tr class="row-odd"><td><p>Reliable</p></td>
+<td><p>Reliable</p></td>
+<td><p>Yes</p></td>
 </tr>
 </tbody>
 </table>
-<p><em>持久性服务质量策略的兼容性:</em> <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10003">[Alyssa&#64;10003]</a></p>
+<p><em>Compatibility of durability QoS policies:</em></p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 33%" />
@@ -412,33 +437,33 @@
 <col style="width: 33%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p>发布者 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9996">[Alyssa&#64;9996]</a></p></th>
-<th class="head"><p>订阅者 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9997">[Alyssa&#64;9997]</a></p></th>
-<th class="head"><p>兼容性 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9998">[Alyssa&#64;9998]</a></p></th>
+<tr class="row-odd"><th class="head"><p>Publisher</p></th>
+<th class="head"><p>Subscription</p></th>
+<th class="head"><p>Compatible</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>易失性 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10004">[待校准&#64;10004]</a></p></td>
-<td><p>易失性 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10004">[待校准&#64;10004]</a></p></td>
-<td><p>兼容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10000">[Alyssa&#64;10000]</a></p></td>
+<tr class="row-even"><td><p>Volatile</p></td>
+<td><p>Volatile</p></td>
+<td><p>Yes</p></td>
 </tr>
-<tr class="row-odd"><td><p>易失性 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10004">[待校准&#64;10004]</a></p></td>
-<td><p>临时的本地 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10005">[Alyssa&#64;10005]</a></p></td>
-<td><p>不兼容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10002">[Alyssa&#64;10002]</a></p></td>
+<tr class="row-odd"><td><p>Volatile</p></td>
+<td><p>Transient local</p></td>
+<td><p>No</p></td>
 </tr>
-<tr class="row-even"><td><p>临时的本地 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10005">[Alyssa&#64;10005]</a></p></td>
-<td><p>易失性 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10004">[待校准&#64;10004]</a></p></td>
-<td><p>兼容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10000">[Alyssa&#64;10000]</a></p></td>
+<tr class="row-even"><td><p>Transient local</p></td>
+<td><p>Volatile</p></td>
+<td><p>Yes</p></td>
 </tr>
-<tr class="row-odd"><td><p>临时的本地 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10005">[Alyssa&#64;10005]</a></p></td>
-<td><p>临时的本地 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10005">[Alyssa&#64;10005]</a></p></td>
-<td><p>兼容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10000">[Alyssa&#64;10000]</a></p></td>
+<tr class="row-odd"><td><p>Transient local</p></td>
+<td><p>Transient local</p></td>
+<td><p>Yes</p></td>
 </tr>
 </tbody>
 </table>
-<p><em>时间期限QoS策略的兼容性:</em> <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10006">[Alyssa&#64;10006]</a></p>
+<p><em>Compatibility of deadline QoS policies:</em></p>
 <blockquote>
-<div><p>假设 <em>x</em> 和 <em>y</em> 是任意有效的持续时间值。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10007">[Alyssa&#64;10007]</a></p>
+<div><p>Assume <em>x</em> and <em>y</em> are arbitrary valid duration values.</p>
 </div></blockquote>
 <table class="docutils align-default">
 <colgroup>
@@ -447,39 +472,39 @@
 <col style="width: 33%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p>发布者 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9996">[Alyssa&#64;9996]</a></p></th>
-<th class="head"><p>订阅者 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9997">[Alyssa&#64;9997]</a></p></th>
-<th class="head"><p>兼容性 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9998">[Alyssa&#64;9998]</a></p></th>
+<tr class="row-odd"><th class="head"><p>Publisher</p></th>
+<th class="head"><p>Subscription</p></th>
+<th class="head"><p>Compatible</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>默认值 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10008">[Alyssa&#64;10008]</a></p></td>
-<td><p>默认值 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10008">[Alyssa&#64;10008]</a></p></td>
-<td><p>兼容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10000">[Alyssa&#64;10000]</a></p></td>
+<tr class="row-even"><td><p>Default</p></td>
+<td><p>Default</p></td>
+<td><p>Yes</p></td>
 </tr>
-<tr class="row-odd"><td><p>默认值 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10008">[Alyssa&#64;10008]</a></p></td>
-<td><p><em>x</em> <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10009">[Alyssa&#64;10009]</a></p></td>
-<td><p>不兼容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10002">[Alyssa&#64;10002]</a></p></td>
+<tr class="row-odd"><td><p>Default</p></td>
+<td><p><em>x</em></p></td>
+<td><p>No</p></td>
 </tr>
-<tr class="row-even"><td><p><em>x</em> <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10009">[Alyssa&#64;10009]</a></p></td>
-<td><p>默认值 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10008">[Alyssa&#64;10008]</a></p></td>
-<td><p>兼容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10000">[Alyssa&#64;10000]</a></p></td>
+<tr class="row-even"><td><p><em>x</em></p></td>
+<td><p>Default</p></td>
+<td><p>Yes</p></td>
 </tr>
-<tr class="row-odd"><td><p><em>x</em> <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10009">[Alyssa&#64;10009]</a></p></td>
-<td><p><em>x</em> <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10009">[Alyssa&#64;10009]</a></p></td>
-<td><p>兼容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10000">[Alyssa&#64;10000]</a></p></td>
+<tr class="row-odd"><td><p><em>x</em></p></td>
+<td><p><em>x</em></p></td>
+<td><p>Yes</p></td>
 </tr>
-<tr class="row-even"><td><p><em>x</em> <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10009">[Alyssa&#64;10009]</a></p></td>
-<td><p><em>y</em> (其中 <em>y</em> &gt; <em>x</em>) <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10010">[Alyssa&#64;10010]</a></p></td>
-<td><p>兼容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10000">[Alyssa&#64;10000]</a></p></td>
+<tr class="row-even"><td><p><em>x</em></p></td>
+<td><p><em>y</em> (where <em>y</em> &gt; <em>x</em>)</p></td>
+<td><p>Yes</p></td>
 </tr>
-<tr class="row-odd"><td><p><em>x</em> <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10009">[Alyssa&#64;10009]</a></p></td>
-<td><p><em>y</em> (其中 <em>y</em> &lt; <em>x</em>) <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10011">[Alyssa&#64;10011]</a></p></td>
-<td><p>不兼容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10002">[Alyssa&#64;10002]</a></p></td>
+<tr class="row-odd"><td><p><em>x</em></p></td>
+<td><p><em>y</em> (where <em>y</em> &lt; <em>x</em>)</p></td>
+<td><p>No</p></td>
 </tr>
 </tbody>
 </table>
-<p><em>活性QoS策略的兼容性:</em> <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10012">[Alyssa&#64;10012]</a></p>
+<p><em>Compatibility of liveliness QoS policies:</em></p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 33%" />
@@ -487,33 +512,33 @@
 <col style="width: 33%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p>发布者 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9996">[Alyssa&#64;9996]</a></p></th>
-<th class="head"><p>订阅者 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9997">[Alyssa&#64;9997]</a></p></th>
-<th class="head"><p>兼容性 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9998">[Alyssa&#64;9998]</a></p></th>
+<tr class="row-odd"><th class="head"><p>Publisher</p></th>
+<th class="head"><p>Subscription</p></th>
+<th class="head"><p>Compatible</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>自动 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10013">[待校准&#64;10013]</a></p></td>
-<td><p>自动 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10013">[待校准&#64;10013]</a></p></td>
-<td><p>兼容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10000">[Alyssa&#64;10000]</a></p></td>
+<tr class="row-even"><td><p>Automatic</p></td>
+<td><p>Automatic</p></td>
+<td><p>Yes</p></td>
 </tr>
-<tr class="row-odd"><td><p>自动 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10013">[待校准&#64;10013]</a></p></td>
-<td><p>按话题手动 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10014">[Alyssa&#64;10014]</a></p></td>
-<td><p>不兼容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10002">[Alyssa&#64;10002]</a></p></td>
+<tr class="row-odd"><td><p>Automatic</p></td>
+<td><p>Manual by topic</p></td>
+<td><p>No</p></td>
 </tr>
-<tr class="row-even"><td><p>按话题手动 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10014">[Alyssa&#64;10014]</a></p></td>
-<td><p>自动 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10013">[待校准&#64;10013]</a></p></td>
-<td><p>兼容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10000">[Alyssa&#64;10000]</a></p></td>
+<tr class="row-even"><td><p>Manual by topic</p></td>
+<td><p>Automatic</p></td>
+<td><p>Yes</p></td>
 </tr>
-<tr class="row-odd"><td><p>按话题手动 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10014">[Alyssa&#64;10014]</a></p></td>
-<td><p>按话题手动 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10014">[Alyssa&#64;10014]</a></p></td>
-<td><p>兼容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10000">[Alyssa&#64;10000]</a></p></td>
+<tr class="row-odd"><td><p>Manual by topic</p></td>
+<td><p>Manual by topic</p></td>
+<td><p>Yes</p></td>
 </tr>
 </tbody>
 </table>
-<p><em>租赁期限QoS策略的兼容性:</em> <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10015">[Alyssa&#64;10015]</a></p>
+<p><em>Compatibility of lease duration QoS policies:</em></p>
 <blockquote>
-<div><p>假设 <em>x</em> 和 <em>y</em> 是任意有效的持续时间值。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10007">[Alyssa&#64;10007]</a></p>
+<div><p>Assume <em>x</em> and <em>y</em> are arbitrary valid duration values.</p>
 </div></blockquote>
 <table class="docutils align-default">
 <colgroup>
@@ -522,82 +547,86 @@
 <col style="width: 33%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p>发布者 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9996">[Alyssa&#64;9996]</a></p></th>
-<th class="head"><p>订阅者 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9997">[Alyssa&#64;9997]</a></p></th>
-<th class="head"><p>兼容性 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9998">[Alyssa&#64;9998]</a></p></th>
+<tr class="row-odd"><th class="head"><p>Publisher</p></th>
+<th class="head"><p>Subscription</p></th>
+<th class="head"><p>Compatible</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>默认值 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10008">[Alyssa&#64;10008]</a></p></td>
-<td><p>默认值 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10008">[Alyssa&#64;10008]</a></p></td>
-<td><p>兼容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10000">[Alyssa&#64;10000]</a></p></td>
+<tr class="row-even"><td><p>Default</p></td>
+<td><p>Default</p></td>
+<td><p>Yes</p></td>
 </tr>
-<tr class="row-odd"><td><p>默认值 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10008">[Alyssa&#64;10008]</a></p></td>
-<td><p><em>x</em> <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10009">[Alyssa&#64;10009]</a></p></td>
-<td><p>不兼容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10002">[Alyssa&#64;10002]</a></p></td>
+<tr class="row-odd"><td><p>Default</p></td>
+<td><p><em>x</em></p></td>
+<td><p>No</p></td>
 </tr>
-<tr class="row-even"><td><p><em>x</em> <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10009">[Alyssa&#64;10009]</a></p></td>
-<td><p>默认值 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10008">[Alyssa&#64;10008]</a></p></td>
-<td><p>兼容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10000">[Alyssa&#64;10000]</a></p></td>
+<tr class="row-even"><td><p><em>x</em></p></td>
+<td><p>Default</p></td>
+<td><p>Yes</p></td>
 </tr>
-<tr class="row-odd"><td><p><em>x</em> <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10009">[Alyssa&#64;10009]</a></p></td>
-<td><p><em>x</em> <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10009">[Alyssa&#64;10009]</a></p></td>
-<td><p>兼容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10000">[Alyssa&#64;10000]</a></p></td>
+<tr class="row-odd"><td><p><em>x</em></p></td>
+<td><p><em>x</em></p></td>
+<td><p>Yes</p></td>
 </tr>
-<tr class="row-even"><td><p><em>x</em> <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10009">[Alyssa&#64;10009]</a></p></td>
-<td><p><em>y</em> (其中 <em>y</em> &gt; <em>x</em>) <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10010">[Alyssa&#64;10010]</a></p></td>
-<td><p>兼容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10000">[Alyssa&#64;10000]</a></p></td>
+<tr class="row-even"><td><p><em>x</em></p></td>
+<td><p><em>y</em> (where <em>y</em> &gt; <em>x</em>)</p></td>
+<td><p>Yes</p></td>
 </tr>
-<tr class="row-odd"><td><p><em>x</em> <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10009">[Alyssa&#64;10009]</a></p></td>
-<td><p><em>y</em> (其中 <em>y</em> &lt; <em>x</em>) <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10011">[Alyssa&#64;10011]</a></p></td>
-<td><p>不兼容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10002">[Alyssa&#64;10002]</a></p></td>
+<tr class="row-odd"><td><p><em>x</em></p></td>
+<td><p><em>y</em> (where <em>y</em> &lt; <em>x</em>)</p></td>
+<td><p>No</p></td>
 </tr>
 </tbody>
 </table>
-<p>为了建立连接，所有影响兼容性的策略都必须兼容。例如，即使请求和提供的QoS配置文件对具有兼容的可靠性QoS策略，但它们具有不兼容的持久性QoS策略，也不会建立连接。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10016">[待校准&#64;10016]</a></p>
-<p>未建立连接时，发布者和订阅之间不会传递任何消息。有对这种情况进行检测的机制，将在后面的章节中介绍。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10017">[Alyssa&#64;10017]</a></p>
-<div class="section" id="id1">
-<h3>与ROS 1的比较<a class="headerlink" href="#id1" title="永久链接至标题"></a></h3>
-<p>过去在ROS 1中，任何在相同话题上具有相同消息类型的发布者和订阅者都将被连接。在使用ROS 2时，需要注意的新事项是请求和提供的QoS配置文件不兼容的可能性。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10018">[Alyssa&#64;10018]</a></p>
-</div>
-</div>
-<div class="section" id="qos-events">
-<h2>QoS事件<a class="headerlink" href="#qos-events" title="永久链接至标题"></a></h2>
-<p>一些QoS策略有可能与之相关的事件。开发人员可以为每个发布者和订阅提供由这些QoS事件触发的回调函数，并以他们认为合适的方式处理它们，类似于处理话题上接收的消息。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10020">[Alyssa&#64;10020]</a></p>
-<p>开发人员可以订阅与发布者相关的以下QoS事件: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10021">[Alyssa&#64;10021]</a></p>
+<p>In order for a connection to be made, all of the policies that affect compatibility must be compatible.
+For example, even if a requested and offered QoS profile pair has compatible reliability QoS policies, but they have incompatible durability QoS policies, a connection will still not be made.</p>
+<p>When connections are not made, no messages will be passed between the publisher and subscription.
+There are mechanisms to detect this situation, which will be covered in a later section.</p>
+<section id="id1">
+<h3>Comparison to ROS 1<a class="headerlink" href="#id1" title="永久链接至标题"></a></h3>
+<p>Historically in ROS 1, any publisher and subscriber with the same message type on the same topic would be connected.
+The possibility of incompatible requested and offered QoS profiles is something new to be aware of when using ROS 2.</p>
+</section>
+</section>
+<section id="qos-events">
+<h2>QoS events<a class="headerlink" href="#qos-events" title="永久链接至标题"></a></h2>
+<p>Some QoS policies have possible events related to them.
+Developers may provide each publisher and subscription with callback functions that are triggered by these QoS events and handle them in a way they see fit, similar to how messages received on a topic are handled.</p>
+<p>Developers may subscribe to the following QoS events that are associated with a publisher:</p>
 <ul>
-<li><p>错过时间期限 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10022">[Alyssa&#64;10022]</a></p>
-<p>发布者未在时间期限QoS策略规定的预期持续时间内发布消息。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10023">[Alyssa&#64;10023]</a></p>
+<li><p>Offered deadline missed</p>
+<p>The publisher has not published a message within the expected duration that was set out by the deadline QoS policy.</p>
 </li>
-<li><p>失去活性 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10024">[Alyssa&#64;10024]</a></p>
-<p>发布者未能在租赁期限内声明其活性。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10025">[Alyssa&#64;10025]</a></p>
+<li><p>Liveliness lost</p>
+<p>The publisher has failed to indicate its liveliness within the lease duration.</p>
 </li>
-<li><p>提供不兼容的QoS <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10026">[待校准&#64;10026]</a></p>
-<p>发布者在同一话题上遇到了一个订阅者，发布者所提供的QoS配置文件无法满足该订阅者正在请求的的QoS配置文件，导致发布者与该订阅者之间无法连接。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10027">[Alyssa&#64;10027]</a></p>
+<li><p>Offered incompatible QoS</p>
+<p>The publisher has encountered a subscription on the same topic that is requesting a QoS profile that the offered QoS profile cannot satisfy, resulting in no connection between the publisher and that subscription.</p>
 </li>
 </ul>
-<p>开发人员可以订阅与订阅者相关的以下QoS事件: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10028">[Alyssa&#64;10028]</a></p>
+<p>Developers may subscribe to the following QoS events that are associated with a subscription:</p>
 <ul>
-<li><p>错过请求的时间期限 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10029">[Alyssa&#64;10029]</a></p>
-<p>订阅者未在时间期限QoS策略规定的预期持续时间内收到消息。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10030">[Alyssa&#64;10030]</a></p>
+<li><p>Requested deadline missed</p>
+<p>The subscription has not received a message within the expected duration that was set out by the deadline QoS policy.</p>
 </li>
-<li><p>活性改变了 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10031">[Alyssa&#64;10031]</a></p>
-<p>订阅者注意到在订阅的话题上存在一个或多个发布者未能表明他们在租赁期限内的活性。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10032">[Alyssa&#64;10032]</a></p>
+<li><p>Liveliness changed</p>
+<p>The subscription has noticed that one or more publishers on the subscribed topic has failed to indicate their liveliness within the lease duration.</p>
 </li>
-<li><p>请求的不兼容QoS <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10033">[待校准&#64;10033]</a></p>
-<p>订阅者在同一话题上遇到了一个发布者，其提供的QoS配置文件不满足所请求的QoS配置文件，导致订阅者与该发布者之间无法连接。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10034">[Alyssa&#64;10034]</a></p>
+<li><p>Requested incompatible QoS</p>
+<p>The subscription has encountered a publisher on the same topic that is offering a QoS profile that does not satisfy the requested QoS profile, resulting in no connection between the subscription and that publisher.</p>
 </li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="About-Logging.html" class="btn btn-neutral float-left" title="关于日志和日志记录器配置" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
-        <a href="About-ROS-2-Client-Libraries.html" class="btn btn-neutral float-right" title="关于ROS 2客户端库" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="About-Logging.html" class="btn btn-neutral float-left" title="About logging and logger configuration" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="About-ROS-2-Client-Libraries.html" class="btn btn-neutral float-right" title="About ROS 2 client libraries" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

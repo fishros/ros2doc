@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="zh" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>在Windows上构建ROS 2 &mdash; ROS 2 documentation  文档</title>
+  <title>Building ROS 2 on Windows &mdash; ROS 2 documentation  文档</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
@@ -24,8 +25,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="在Windows上安装ROS 2" href="Windows-Install-Binary.html" />
-    <link rel="prev" title="在macOS上安装ROS 2" href="macOS-Install-Binary.html" /> 
+    <link rel="next" title="Installing ROS 2 on Windows" href="Windows-Install-Binary.html" />
+    <link rel="prev" title="Installing ROS 2 on macOS" href="macOS-Install-Binary.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -44,211 +45,211 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../Installation.html">安装</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="Ubuntu-Development-Setup.html">在Ubuntu Linux上构建ROS 2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Ubuntu-Install-Binary.html">在Ubuntu Linux上安装ROS 2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Ubuntu-Install-Debians.html">通过Debian包安装ROS 2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="macOS-Development-Setup.html">在macOS上构建ROS 2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="macOS-Install-Binary.html">在macOS上安装ROS 2</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">在Windows上构建ROS 2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Windows-Install-Binary.html">在Windows上安装ROS 2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Fedora-Development-Setup.html">在Fedora Linux上构建ROS 2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Latest-Development-Setup.html">安装最新的ROS 2开发版本</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Maintaining-a-Source-Checkout.html">维护ROS 2Foxy源文件的检出</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Testing.html">用于测试的替代安装源</a></li>
-<li class="toctree-l2"><a class="reference internal" href="DDS-Implementations.html">安装DDS实现</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="DDS-Implementations/Install-Connext-Security-Plugins.html">安装Connext安全插件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="DDS-Implementations/Install-Connext-University-Eval.html">安装RTI Connext DDS的大学或评估版本 [Alyssa&#64;5370]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="DDS-Implementations/Working-with-Eclipse-CycloneDDS.html">使用Eclipse Cyclone DDS [Alyssa&#64;5384]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="DDS-Implementations/Working-with-GurumNetworks-GurumDDS.html">使用GurumNetworks GurumDDS [Alyssa&#64;5400]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="DDS-Implementations/Working-with-eProsima-Fast-DDS.html">使用eProsima Fast DDS [Alyssa&#64;5417]</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../Installation.html">Installation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Ubuntu-Development-Setup.html">Building ROS 2 on Ubuntu Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ubuntu-Install-Binary.html">Installing ROS 2 on Ubuntu Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ubuntu-Install-Debians.html">Installing ROS 2 via Debian Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="macOS-Development-Setup.html">Building ROS 2 on macOS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="macOS-Install-Binary.html">Installing ROS 2 on macOS</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Building ROS 2 on Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Windows-Install-Binary.html">Installing ROS 2 on Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Fedora-Development-Setup.html">Building ROS 2 on Fedora Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Latest-Development-Setup.html">Installing the latest ROS 2 development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Maintaining-a-Source-Checkout.html">Maintaining a source checkout of ROS 2 Rolling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Testing.html">Alternative Installation Sources for Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DDS-Implementations.html">Installing DDS implementations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="DDS-Implementations/Install-Connext-Security-Plugins.html">Installing Connext security plugins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DDS-Implementations/Install-Connext-University-Eval.html">Installing University or Evaluation versions of RTI Connext DDS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DDS-Implementations/Working-with-Eclipse-CycloneDDS.html">Working with Eclipse Cyclone DDS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DDS-Implementations/Working-with-GurumNetworks-GurumDDS.html">Working with GurumNetworks GurumDDS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DDS-Implementations/Working-with-eProsima-Fast-DDS.html">Working with eProsima Fast DDS</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../Docs-Guide.html">文档指南</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Tutorials.html">教程</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Configuring-ROS2-Environment.html">配置ROS 2环境</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Turtlesim/Introducing-Turtlesim.html">介绍turtlesim和rqt</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Understanding-ROS2-Nodes.html">了解ROS 2节点 [待校准&#64;9173]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Topics/Understanding-ROS2-Topics.html">理解ROS 2话题 [待校准&#64;8808]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Services/Understanding-ROS2-Services.html">了解ROS 2服务 [待校准&#64;8182]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Parameters/Understanding-ROS2-Parameters.html">理解ROS 2参数</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Understanding-ROS2-Actions.html">理解ROS 2动作 [待校准&#64;9124]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Rqt-Console/Using-Rqt-Console.html">使用rqt_控制台 [待校准&#64;8152]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Launch/CLI-Intro.html">介绍ROS 2launch [待校准&#64;7541]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Ros2bag/Recording-And-Playing-Back-Data.html">记录和回放数据 [待校准&#64;8079]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Workspace/Creating-A-Workspace.html">创建工作空间 [待校准&#64;9276]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Creating-Your-First-ROS2-Package.html">创建您的第一个ROS 2包 [待校准&#64;7117]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Writing-A-Simple-Cpp-Publisher-And-Subscriber.html">编写简单的发布者和订阅者 (c ++) [待校准&#64;9345]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Writing-A-Simple-Py-Publisher-And-Subscriber.html">编写简单的发布者和订阅者 (Python) [待校准&#64;9432]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Writing-A-Simple-Cpp-Service-And-Client.html">编写简单的服务和客户端 (c ++) [待校准&#64;9393]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Writing-A-Simple-Py-Service-And-Client.html">编写简单的服务和客户端 (Python) [待校准&#64;9468]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Custom-ROS2-Interfaces.html">创建自定义ROS 2 msg 和 srv 文件 [待校准&#64;7179]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Single-Package-Define-And-Use-Interface.html">在ROS 2接口上扩展 [待校准&#64;8284]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Using-Parameters-In-A-Class-CPP.html">在类 (c ++) 中使用参数 [待校准&#64;9209]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Using-Parameters-In-A-Class-Python.html">在类中使用参数 (Python) [待校准&#64;9249]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Getting-Started-With-Ros2doctor.html">开始使用ros2doctor [待校准&#64;7450]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Pluginlib.html">创建和使用插件 (c ++) [待校准&#64;7851]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Actions/Creating-an-Action.html">创建动作 [待校准&#64;6711]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Actions/Writing-a-Cpp-Action-Server-Client.html">编写动作服务器和客户端 (c ++) [待校准&#64;6753]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Actions/Writing-a-Py-Action-Server-Client.html">编写动作服务器和客户端 (Python) [待校准&#64;6825]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Composition.html">在单个进程中组成多个节点 [待校准&#64;7034]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Colcon-Tutorial.html">使用colcon构建包 [待校准&#64;6975]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Launch/Launch-Main.html">Launch教程 [待校准&#64;7600]</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Launch/Creating-Launch-Files.html">创建launch文件 [待校准&#64;7562]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Launch/Launch-system.html">[需手动修复的语法]Launch/监控多节点[需手动修复的语法]Launch [待校准&#64;7614]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Launch/Using-Substitutions.html">在launch文件中使用替换 [待校准&#64;7737]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Launch/Using-Event-Handlers.html">在launch文件中使用事件处理程序 [待校准&#64;7641]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Launch/Using-ROS2-Launch-For-Large-Projects.html">在大型项目中使用ROS 2launch [待校准&#64;7674]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Docs-Guide.html">Docs Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorials.html">Tutorials</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Configuring-ROS2-Environment.html">Configuring your ROS 2 environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Turtlesim/Introducing-Turtlesim.html">Introducing turtlesim and rqt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Understanding-ROS2-Nodes.html">Understanding ROS 2 nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Topics/Understanding-ROS2-Topics.html">Understanding ROS 2 topics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Services/Understanding-ROS2-Services.html">Understanding ROS 2 services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Parameters/Understanding-ROS2-Parameters.html">Understanding ROS 2 parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Understanding-ROS2-Actions.html">Understanding ROS 2 actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Rqt-Console/Using-Rqt-Console.html">Using rqt_console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Launch/CLI-Intro.html">Introducing ROS 2 launch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Ros2bag/Recording-And-Playing-Back-Data.html">Recording and playing back data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Workspace/Creating-A-Workspace.html">Creating a workspace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Creating-Your-First-ROS2-Package.html">Creating your first ROS 2 package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Writing-A-Simple-Cpp-Publisher-And-Subscriber.html">Writing a simple publisher and subscriber (C++)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Writing-A-Simple-Py-Publisher-And-Subscriber.html">Writing a simple publisher and subscriber (Python)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Writing-A-Simple-Cpp-Service-And-Client.html">Writing a simple service and client (C++)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Writing-A-Simple-Py-Service-And-Client.html">Writing a simple service and client (Python)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Custom-ROS2-Interfaces.html">Creating custom ROS 2 msg and srv files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Single-Package-Define-And-Use-Interface.html">Expanding on ROS 2 interfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Using-Parameters-In-A-Class-CPP.html">Using parameters in a class (C++)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Using-Parameters-In-A-Class-Python.html">Using parameters in a class (Python)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Getting-Started-With-Ros2doctor.html">Getting started with ros2doctor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Pluginlib.html">Creating and Using Plugins (C++)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Actions/Creating-an-Action.html">Creating an action</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Actions/Writing-a-Cpp-Action-Server-Client.html">Writing an action server and client (C++)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Actions/Writing-a-Py-Action-Server-Client.html">Writing an action server and client (Python)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Composition.html">Composing multiple nodes in a single process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Colcon-Tutorial.html">Using colcon to build packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Launch/Launch-Main.html">Launch Tutorials</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Launch/Creating-Launch-Files.html">Creating a launch file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Launch/Launch-system.html">Launching/monitoring multiple nodes with Launch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Launch/Using-Substitutions.html">Using substitutions in launch files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Launch/Using-Event-Handlers.html">Using event handlers in launch files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Launch/Using-ROS2-Launch-For-Large-Projects.html">Using ROS 2 launch for large projects</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Tf2/Tf2-Main.html">tf2教程 [待校准&#64;8518]</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Introduction-To-Tf2.html">tf2简介 [待校准&#64;8434]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Writing-A-Tf2-Static-Broadcaster-Py.html">编写tf2静态广播器 (Python) [待校准&#64;8739]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Writing-A-Tf2-Static-Broadcaster-Cpp.html">编写tf2静态广播器 (c ++) [待校准&#64;8697]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Writing-A-Tf2-Broadcaster-Py.html">编写tf2广播器 (Python) [待校准&#64;8660]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Writing-A-Tf2-Broadcaster-Cpp.html">编写tf2广播器 (c ++) [待校准&#64;8621]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Writing-A-Tf2-Listener-Py.html">编写tf2监听程序 (Python) [待校准&#64;8691]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Writing-A-Tf2-Listener-Cpp.html">编写tf2监听程序 (c ++) [待校准&#64;8673]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Adding-A-Frame-Py.html">添加帧 (Python) [待校准&#64;8390]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Adding-A-Frame-Cpp.html">添加帧 (c ++) [待校准&#64;8354]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Learning-About-Tf2-And-Time-Py.html">学习tf2和时间 (Python) [待校准&#64;8480]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Learning-About-Tf2-And-Time-Cpp.html">学习tf2和时间 (c ++) [待校准&#64;8463]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Time-Travel-With-Tf2-Py.html">时间穿梭tf2 (Python) [待校准&#64;8570]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Time-Travel-With-Tf2-Cpp.html">时间穿梭带tf2 (C++) [待校准&#64;8545]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Debugging-Tf2-Problems.html">调试tf2问题 [待校准&#64;8396]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Quaternion-Fundamentals.html">四元数基金amentals [待校准&#64;8494]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.html">使用stamped数据类型与tf2_ros: MessageFilter [待校准&#64;8578]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Tf2/Tf2-Main.html">tf2 Tutorials</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Introduction-To-Tf2.html">Introduction to tf2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Writing-A-Tf2-Static-Broadcaster-Py.html">Writing a tf2 static broadcaster (Python)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Writing-A-Tf2-Static-Broadcaster-Cpp.html">Writing a tf2 static broadcaster (C++)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Writing-A-Tf2-Broadcaster-Py.html">Writing a tf2 broadcaster (Python)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Writing-A-Tf2-Broadcaster-Cpp.html">Writing a tf2 broadcaster (C++)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Writing-A-Tf2-Listener-Py.html">Writing a tf2 listener (Python)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Writing-A-Tf2-Listener-Cpp.html">Writing a tf2 listener (C++)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Adding-A-Frame-Py.html">Adding a frame (Python)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Adding-A-Frame-Cpp.html">Adding a frame (C++)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Learning-About-Tf2-And-Time-Py.html">Learning about tf2 and time (Python)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Learning-About-Tf2-And-Time-Cpp.html">Learning about tf2 and time (C++)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Time-Travel-With-Tf2-Py.html">Time travel with tf2 (Python)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Time-Travel-With-Tf2-Cpp.html">Time travel with tf2 (C++)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Debugging-Tf2-Problems.html">Debugging tf2 problems</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Quaternion-Fundamentals.html">Quaternion fundamentals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.html">Using stamped datatypes with tf2_ros::MessageFilter</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/URDF/URDF-Main.html">URDF教程 [待校准&#64;9047]</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/URDF/Building-a-Visual-Robot-Model-with-URDF-from-Scratch.html">从头开始用URDF构建视觉机器人模型 [待校准&#64;8996]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/URDF/Building-a-Movable-Robot-Model-with-URDF.html">用URDF建立可移动机器人模型 [待校准&#64;8974]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/URDF/Adding-Physical-and-Collision-Properties-to-a-URDF-Model.html">向URDF模型添加物理和碰撞属性 [待校准&#64;8927]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/URDF/Using-Xacro-to-Clean-Up-a-URDF-File.html">使用Xacro清理URDF文件 [待校准&#64;9075]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/URDF/Using-URDF-with-Robot-State-Publisher.html">将URDF与robot_state_发布者结合使用 [待校准&#64;9049]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/URDF/URDF-Main.html">URDF Tutorials</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/URDF/Building-a-Visual-Robot-Model-with-URDF-from-Scratch.html">Building a Visual Robot Model with URDF from Scratch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/URDF/Building-a-Movable-Robot-Model-with-URDF.html">Building a Movable Robot Model with URDF</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/URDF/Adding-Physical-and-Collision-Properties-to-a-URDF-Model.html">Adding Physical and Collision Properties to a URDF Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/URDF/Using-Xacro-to-Clean-Up-a-URDF-File.html">Using Xacro to Clean Up a URDF File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/URDF/Using-URDF-with-Robot-State-Publisher.html">Using URDF with robot_state_publisher</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Topics/Topic-Statistics-Tutorial.html">ROS 2话题统计教程 (c ++) [待校准&#64;8751]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Discovery-Server/Discovery-Server.html">使用Fast DDS Discovery Server作为发现协议 [社区贡献] [待校准&#64;7319]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Allocator-Template-Tutorial.html">实现自定义内存分配器 [待校准&#64;6885]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Simulators/Webots/Setting-up-a-Robot-Simulation-Webots.html">设置机器人仿真 (Webots) [待校准&#64;8222]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Deploying-ROS-2-on-IBM-Cloud.html">IBM Cloud Kubernetes上的ROS2 [社区-贡献] [待校准&#64;7232]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Eclipse-Oxygen-with-ROS-2-and-rviz2.html">带有ROS 2和rviz2的Eclipse Oxygen [社区贡献] [待校准&#64;7387]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Building-Realtime-rt_preempt-kernel-for-ROS-2.html">为ROS 2构建实时Linux [社区-贡献] [待校准&#64;6954]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Ros2bag/Recording-A-Bag-From-Your-Own-Node.html">从您自己的节点记录一个包 [待校准&#64;7994]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Building-ROS2-Package-with-eclipse-2021-06.html">使用eclipse 2021-06构建ROS 2包 [待校准&#64;6926]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Quality-of-Service.html">使用服务质量设置处理有损网络 [待校准&#64;7902]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Managed-Nodes.html">具有托管生命周期的节点管理 [待校准&#64;7809]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Intra-Process-Communication.html">高效的流程内通讯 [待校准&#64;7491]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Rosbag-with-ROS1-Bridge.html">使用ROS 1bridge用rosbag记录和回放话题数据 [待校准&#64;8125]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Real-Time-Programming.html">ROS 2中的实时编程 [待校准&#64;7931]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/dummy-robot-demo.html">尝试dummy robot例程 [待校准&#64;9496]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Logging-and-logger-configuration.html">日志和日志记录器配置例程 [待校准&#64;7762]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Topics/Topic-Statistics-Tutorial.html">ROS 2 Topic Statistics Tutorial (C++)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Discovery-Server/Discovery-Server.html">Using Fast DDS Discovery Server as discovery protocol [community-contributed]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Allocator-Template-Tutorial.html">Implement a custom memory allocator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Simulators/Webots/Setting-up-a-Robot-Simulation-Webots.html">Setting-up a Robot Simulation (Webots)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Deploying-ROS-2-on-IBM-Cloud.html">ROS2 on IBM Cloud Kubernetes [community-contributed]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Eclipse-Oxygen-with-ROS-2-and-rviz2.html">Eclipse Oxygen with ROS 2 and rviz2 [community-contributed]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Building-Realtime-rt_preempt-kernel-for-ROS-2.html">Building realtime Linux for ROS 2 [community-contributed]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Ros2bag/Recording-A-Bag-From-Your-Own-Node.html">Recording a bag from your own node</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Building-ROS2-Package-with-eclipse-2021-06.html">Building ROS 2 Package with eclipse 2021-06</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Quality-of-Service.html">Use quality-of-service settings to handle lossy networks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Managed-Nodes.html">Management of nodes with managed lifecycles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Intra-Process-Communication.html">Efficient intra-process communication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Rosbag-with-ROS1-Bridge.html">Recording and playback of topic data with rosbag using the ROS 1 bridge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Real-Time-Programming.html">Real-time programming in ROS 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/dummy-robot-demo.html">Trying the dummy robot demo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Logging-and-logger-configuration.html">Logging and logger configuration demo</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../How-To-Guides.html">问题指南</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Installation-Troubleshooting.html">安装故障诊断工具 [待校准&#64;6086]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Developing-a-ROS-2-Package.html">开发ROS 2包 [待校准&#64;6065]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Ament-CMake-Documentation.html">ament_cmake用户文档</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Ament-CMake-Python-Documentation.html">ament_cmake_python用户文档 [小鱼&#64;5911]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Launch-files-migration-guide.html">迁移launch文件ROS 1ROS 2 [待校准&#64;6189]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Launch-file-different-formats.html">对ROS 2Launch文件使用Python、XML和YAML [待校准&#64;6162]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Launching-composable-nodes.html">使用ROS 2launch到launch可组合节点 [待校准&#64;6284]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Parameters-YAML-files-migration-guide.html">将YAML参数文件从ROS 1迁移到ROS 2 [待校准&#64;6401]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Node-arguments.html">通过命令行将ROS参数传递给节点 [待校准&#64;6297]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Sync-Vs-Async.html">同步与异步服务的客户端对比 [Alyssa&#64;6523]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/DDS-tuning.html">DDS调优指南</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Overriding-QoS-Policies-For-Recording-And-Playback.html">rosbag2: 重载QoS策略 [待校准&#64;6323]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Working-with-multiple-RMW-implementations.html">使用多个ROS 2中间件实现 [待校准&#64;6619]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Cross-compilation.html">交叉编译 [待校准&#64;5934]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Releasing-a-ROS-2-package-with-bloom.html">发布带有bloom的ROS 2包 [待校准&#64;6488]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Using-Python-Packages.html">将Python包与ROS 2结合使用 [待校准&#64;6562]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/RQt-Port-Plugin-Windows.html">将RQt插件移植到Windows [待校准&#64;6413]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Run-2-nodes-in-single-or-separate-docker-containers.html">在Docker中运行ROS 2节点 [社区-贡献] [待校准&#64;6510]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Package-maintainer-guide.html">ROS 2包维护者指南 [待校准&#64;6336]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Building-a-Custom-Debian-Package.html">构建自定义Debian包</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Topics-Services-Actions.html">话题vs服务vs动作 [小鱼&#64;6548]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Using-Variants.html">使用变体 [待校准&#64;6582]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Using-ros2-param.html">使用 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span></code> 命令行工具 [待校准&#64;6597]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/RQt-Source-Install.html">从源码构建RQt</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../How-To-Guides/RQt-Source-Install-MacOS.html">在macOS上从源文件构建RQt [待校准&#64;6459]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../How-To-Guides/RQt-Source-Install-Windows10.html">在Windows 10上从源文件构建RQt [待校准&#64;6467]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../How-To-Guides.html">How-to Guides</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Installation-Troubleshooting.html">Installation troubleshooting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Developing-a-ROS-2-Package.html">Developing a ROS 2 package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Ament-CMake-Documentation.html">ament_cmake user documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Ament-CMake-Python-Documentation.html">ament_cmake_python user documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Launch-files-migration-guide.html">Migrating launch files from ROS 1 to ROS 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Launch-file-different-formats.html">Using Python, XML, and YAML for ROS 2 Launch Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Launching-composable-nodes.html">Using ROS 2 launch to launch composable nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Parameters-YAML-files-migration-guide.html">Migrating YAML parameter files from ROS 1 to ROS 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Node-arguments.html">Passing ROS arguments to nodes via the command-line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Sync-Vs-Async.html">Synchronous vs. asynchronous service clients</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/DDS-tuning.html">DDS tuning information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Overriding-QoS-Policies-For-Recording-And-Playback.html">rosbag2: Overriding QoS Policies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Working-with-multiple-RMW-implementations.html">Working with multiple ROS 2 middleware implementations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Cross-compilation.html">Cross-compilation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Releasing-a-ROS-2-package-with-bloom.html">Releasing a ROS 2 package with bloom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Using-Python-Packages.html">Using Python Packages with ROS 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/RQt-Port-Plugin-Windows.html">Porting RQt plugins to Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Run-2-nodes-in-single-or-separate-docker-containers.html">Running ROS 2 nodes in Docker [community-contributed]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Package-maintainer-guide.html">ROS 2 Package Maintainer Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Building-a-Custom-Debian-Package.html">Building a custom Debian package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Topics-Services-Actions.html">Topics vs Services vs Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Using-Variants.html">Using variants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Using-ros2-param.html">Using the <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span></code> command-line tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/RQt-Source-Install.html">Building RQt from source</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../How-To-Guides/RQt-Source-Install-MacOS.html">Building RQt from source on macOS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../How-To-Guides/RQt-Source-Install-Windows10.html">Building RQt from source on Windows 10</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../Concepts.html">概念</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Domain-ID.html">ROS_DOMAIN_ID</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Different-Middleware-Vendors.html">关于不同的ROS 2 DDS/RTPS供应商</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Logging.html">关于日志和日志记录器配置</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Quality-of-Service-Settings.html">关于服务质量(QOS)设置 [小鱼&#64;9945]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-ROS-2-Client-Libraries.html">关于ROS 2客户端库</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-ROS-Interfaces.html">关于ROS 2接口 [待校准&#64;10102]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-ROS-2-Parameters.html">关于ROS 2中的参数 [待校准&#64;10066]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Executors.html">执行器</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Topic-Statistics.html">关于话题统计</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Command-Line-Tools.html">使用命令行工具进行自检</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-RQt.html">RQt的概述和使用</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Composition.html">关于组件</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Catment.html">ament和catkin的混合研究(catment) [Alyssa&#64;9595]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Cross-Compilation.html">关于交叉编译</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Tf2.html">关于tf2 [待校准&#64;10229]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Build-System.html">关于构建系统</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Internal-Interfaces.html">关于内部ROS 2接口</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Middleware-Implementations.html">关于ROS 2中间件实现</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Client-Interfaces.html">ROS 2客户端接口 (客户端库)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Concepts.html">Concepts</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Domain-ID.html">The ROS_DOMAIN_ID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Different-Middleware-Vendors.html">About different ROS 2 DDS/RTPS vendors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Logging.html">About logging and logger configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Quality-of-Service-Settings.html">About Quality of Service settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-ROS-2-Client-Libraries.html">About ROS 2 client libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-ROS-Interfaces.html">About ROS 2 interfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-ROS-2-Parameters.html">About parameters in ROS 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Executors.html">Executors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Topic-Statistics.html">About topic statistics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Command-Line-Tools.html">Introspection with command line tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-RQt.html">Overview and usage of RQt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Composition.html">About Composition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Catment.html">On the mixing of ament and catkin (catment)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Cross-Compilation.html">About Cross-compilation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Tf2.html">About tf2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Build-System.html">About the build system</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Internal-Interfaces.html">About internal ROS 2 interfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Middleware-Implementations.html">About ROS 2 middleware implementations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Concepts/About-Client-Interfaces.html">ROS 2 Client Interfaces (Client Libraries)</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../Contributing.html">贡献</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Contributing/Developer-Guide.html">ROS 2开发人员指南 [待校准&#64;449]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Contributing/Code-Style-Language-Versions.html">代码样式和语言版本 [待校准&#64;231]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Contributing/Quality-Guide.html">质量指南: 确保代码质量 [待校准&#64;1031]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Contributing/Migration-Guide.html">从ROS 1迁移指南 [待校准&#64;799]</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Contributing/Migration-Guide-Python.html">来自ROS 1的Python迁移指南 [待校准&#64;1022]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Contributing.html">Contributing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Contributing/Developer-Guide.html">ROS 2 developer guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Contributing/Code-Style-Language-Versions.html">Code style and language versions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Contributing/Quality-Guide.html">Quality guide: ensuring code quality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Contributing/Migration-Guide.html">Migration guide from ROS 1</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Contributing/Migration-Guide-Python.html">Python migration guide from ROS 1</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../Contributing/Build-Farms.html">ROS Build Farms [待校准&#64;186]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Contributing/Windows-Tips-and-Tricks.html">Windows提示和技巧 [待校准&#64;1124]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Contributing/Contributing-To-ROS-2-Documentation.html">为ROS 2文档做出贡献 [待校准&#64;385]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Contributing/Build-Farms.html">ROS Build Farms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Contributing/Windows-Tips-and-Tricks.html">Windows Tips and Tricks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Contributing/Contributing-To-ROS-2-Documentation.html">Contributing to ROS 2 Documentation</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../Contact.html">联系</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../ROSCon-Content.html">ROSCon内容</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Releases.html">发行版</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Releases/Alpha-Overview.html">ROS 2 α 发行版本 (2015年8月-2016年10月) [待校准&#64;1527]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Releases/Beta1-Overview.html">贝塔1 (代号'Asphalt'; 2016年12月) [待校准&#64;1607]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Releases/Beta2-Overview.html">贝塔2 (代号'r2b2'; 2017年7月) [待校准&#64;1641]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Releases/Beta3-Overview.html">贝塔3 (代号'r2b3'; 2017年9月) [待校准&#64;1672]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Ardent-Apalone.html">ROS 2Ardent阿帕隆 (代号'ardent'; 2017年12月) [待校准&#64;4310]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Bouncy-Bolson.html">ROS 2 Bouncy Bolson (代号'bouncy'; 2018年6月) [待校准&#64;4351]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Crystal-Clemmys.html">ROS 2Crystal Clemmys (代号'crystal'; 2018年12月) [待校准&#64;4379]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Dashing-Diademata.html">ROS 2DashingDiademata (代号'dashing'; 2019年5月31日) [待校准&#64;4458]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Eloquent-Elusor.html">ROS 2EloquentElusor (代号'eloquent'; 2019年11月22日) [待校准&#64;4648]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Foxy-Fitzroy.html">ROS 2FoxyFitzroy (代号'foxy'; 2020年6月5日) [待校准&#64;4724]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Galactic-Geochelone.html">ROS 2GalacticGeochelone (代号'galactic'; 2021年5月) [待校准&#64;4870]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Releases/Galactic-Geochelone-Complete-Changelog.html">ROS 2GalacticGeochelone完整变更日志 [待校准&#64;1691]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Humble-Hawksbill.html">ROS 2Humble Hawksbill (代号'humble'; 2022年5月) [待校准&#64;5066]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Rolling-Ridley.html">ROS 2Rolling Ridley (代号'rolling'; 2020年6月) [待校准&#64;5150]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Contact.html">Contact</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ROSCon-Content.html">ROSCon Content</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Releases.html">Distributions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Alpha-Overview.html">ROS 2 alpha releases (Aug 2015 - Oct 2016)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Beta1-Overview.html">Beta 1 (codename 'Asphalt'; December 2016)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Beta2-Overview.html">Beta 2 (codename 'r2b2'; July 2017)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Beta3-Overview.html">Beta 3 (codename 'r2b3'; September 2017)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Ardent-Apalone.html">ROS 2 Ardent Apalone (codename 'ardent'; December 2017)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Bouncy-Bolson.html">ROS 2 Bouncy Bolson (codename 'bouncy'; June 2018)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Crystal-Clemmys.html">ROS 2 Crystal Clemmys (codename 'crystal'; December 2018)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Dashing-Diademata.html">ROS 2 Dashing Diademata (codename 'dashing'; May 31st, 2019)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Eloquent-Elusor.html">ROS 2 Eloquent Elusor (codename 'eloquent'; November 22nd, 2019)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Foxy-Fitzroy.html">ROS 2 Foxy Fitzroy (codename 'foxy'; June 5th, 2020)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Galactic-Geochelone.html">ROS 2 Galactic Geochelone (codename 'galactic'; May, 2021)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Galactic-Geochelone-Complete-Changelog.html">ROS 2 Galactic Geochelone Complete Changelog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Humble-Hawksbill.html">ROS 2 Humble Hawksbill (codename 'humble'; May, 2022)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Rolling-Ridley.html">ROS 2 Rolling Ridley (codename 'rolling'; June 2020)</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../Features.html">功能状态</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Roadmap.html">开发计划（Roadmap）</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Feature-Ideas.html">功能理念</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Governance.html">项目管理</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Governance/ROS2-TSC-Charter.html">ROS 2技术指导委员会章程</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Governance/ROS2-TSC-Intake-process.html">ROS 2 TSC申请人加入流程 [小鱼&#64;1387]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Governance/How-To-Start-A-Community-Working-Group.html">如何成立社区工作组 [待校准&#64;1272]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Features.html">Features Status</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Roadmap.html">Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Feature-Ideas.html">Feature Ideas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Governance.html">Project Governance</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Governance/ROS2-TSC-Charter.html">ROS 2 Technical Steering Committee Charter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Governance/ROS2-TSC-Intake-process.html">ROS 2 TSC applicant intake process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Governance/How-To-Start-A-Community-Working-Group.html">How to Start a Community Working Group</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../Marketing.html">营销材料</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Related-Projects.html">相关项目</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Related-Projects/Intel-ROS2-Projects.html">Intel ROS2 项目</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Related-Projects/Nvidia-ROS2-Projects.html">NVIDIA ROS 2 项目</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Marketing.html">Marketing Materials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Related-Projects.html">Related Projects</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Related-Projects/Intel-ROS2-Projects.html">Intel ROS 2 Projects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Related-Projects/Nvidia-ROS2-Projects.html">NVIDIA ROS 2 Projects</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../Glossary.html">相关术语</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Glossary.html">Glossary</a></li>
 </ul>
 
         </div>
@@ -265,10 +266,10 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../Installation.html">安装</a> &raquo;</li>
-      <li>在Windows上构建ROS 2</li>
+          <li><a href="../Installation.html">Installation</a> &raquo;</li>
+      <li>Building ROS 2 on Windows</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ros2/ros2_documentation/blob/foxy/source/Installation/Windows-Development-Setup.rst" class="fa fa-github"> 在 GitHub 上修改</a>
+              <a href="https://github.com/ros2/ros2_documentation/blob/rolling/source/Installation/Windows-Development-Setup.rst" class="fa fa-github"> 在 GitHub 上修改</a>
       </li>
   </ul>
   <hr/>
@@ -278,144 +279,150 @@
              
 
 
-  <div class="section" id="building-ros-2-on-windows">
-<h1>在Windows上构建ROS 2<a class="headerlink" href="#building-ros-2-on-windows" title="永久链接至标题"></a></h1>
+  <section id="building-ros-2-on-windows">
+<h1>Building ROS 2 on Windows<a class="headerlink" href="#building-ros-2-on-windows" title="永久链接至标题"></a></h1>
 <div class="contents local topic" id="table-of-contents">
-<p class="topic-title">目录</p>
+<p class="topic-title">Table of Contents</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#prerequisites" id="id1">先决条件</a></p>
+<li><p><a class="reference internal" href="#prerequisites" id="id1">Prerequisites</a></p>
 <ul>
-<li><p><a class="reference internal" href="#language-support" id="id2">语言支持</a></p></li>
-<li><p><a class="reference internal" href="#additional-prerequisites" id="id3">附加先决条件</a></p></li>
+<li><p><a class="reference internal" href="#language-support" id="id2">Language support</a></p></li>
+<li><p><a class="reference internal" href="#additional-prerequisites" id="id3">Additional prerequisites</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#install-developer-tools" id="id4">安装开发人员工具</a></p></li>
-<li><p><a class="reference internal" href="#install-dependencies" id="id5">安装依赖项</a></p>
+<li><p><a class="reference internal" href="#install-developer-tools" id="id4">Install developer tools</a></p></li>
+<li><p><a class="reference internal" href="#install-dependencies" id="id5">Install dependencies</a></p>
 <ul>
-<li><p><a class="reference internal" href="#install-qt5" id="id6">安装Qt5</a></p></li>
+<li><p><a class="reference internal" href="#install-qt5" id="id6">Install Qt5</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#get-the-ros-2-code" id="id7">获取ROS 2代码</a></p>
+<li><p><a class="reference internal" href="#get-the-ros-2-code" id="id7">Get the ROS 2 code</a></p>
 <ul>
-<li><p><a class="reference internal" href="#install-additional-dds-implementations-optional" id="id8">安装额外的DDS实现 (可选) [待校准&#64;5495]</a></p></li>
+<li><p><a class="reference internal" href="#install-additional-dds-implementations-optional" id="id8">Install additional DDS implementations (optional)</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#build-the-ros-2-code" id="id9">编译ROS 2代码 [Alyssa&#64;5604]</a></p></li>
-<li><p><a class="reference internal" href="#environment-setup" id="id10">环境设置</a></p></li>
-<li><p><a class="reference internal" href="#test-and-run" id="id11">测试和运行</a></p></li>
-<li><p><a class="reference internal" href="#next-steps-after-installing" id="id12">安装后的下一步</a></p></li>
-<li><p><a class="reference internal" href="#using-the-ros-1-bridge" id="id13">使用ROS 1 bridge</a></p></li>
-<li><p><a class="reference internal" href="#additional-rmw-implementations-optional" id="id14">附加RMW实现 (可选)</a></p></li>
-<li><p><a class="reference internal" href="#extra-stuff-for-debug-mode" id="id15">调试模式的额外内容</a></p></li>
-<li><p><a class="reference internal" href="#stay-up-to-date" id="id16">了解最新情况 [Alyssa&#64;5518]</a></p></li>
-<li><p><a class="reference internal" href="#troubleshooting" id="id17">故障排除</a></p></li>
-<li><p><a class="reference internal" href="#uninstall" id="id18">卸载</a></p></li>
+<li><p><a class="reference internal" href="#build-the-ros-2-code" id="id9">Build the ROS 2 code</a></p></li>
+<li><p><a class="reference internal" href="#environment-setup" id="id10">Environment setup</a></p></li>
+<li><p><a class="reference internal" href="#test-and-run" id="id11">Test and run</a></p></li>
+<li><p><a class="reference internal" href="#next-steps-after-installing" id="id12">Next steps after installing</a></p></li>
+<li><p><a class="reference internal" href="#using-the-ros-1-bridge" id="id13">Using the ROS 1 bridge</a></p></li>
+<li><p><a class="reference internal" href="#additional-rmw-implementations-optional" id="id14">Additional RMW implementations (optional)</a></p></li>
+<li><p><a class="reference internal" href="#extra-stuff-for-debug-mode" id="id15">Extra stuff for Debug mode</a></p></li>
+<li><p><a class="reference internal" href="#stay-up-to-date" id="id16">Stay up to date</a></p></li>
+<li><p><a class="reference internal" href="#troubleshooting" id="id17">Troubleshooting</a></p></li>
+<li><p><a class="reference internal" href="#uninstall" id="id18">Uninstall</a></p></li>
 </ul>
 </div>
-<p>本指南介绍了如何在Windows上为ROS 2设置一个开发环境。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5562">[Alyssa&#64;5562]</a></p>
-<div class="section" id="prerequisites">
-<h2><a class="toc-backref" href="#id1">先决条件</a><a class="headerlink" href="#prerequisites" title="永久链接至标题"></a></h2>
-<p>首先按照二进制安装页面上的 <a class="reference internal" href="Windows-Install-Binary.html#windows-install-binary-installing-prerequisites"><span class="std std-ref">Installing Prerequisites</span></a>  步骤操作。</p>
-<p>当你进行  &quot;Downloading ROS 2&quot; 部分时，停下来并返回这里执行以下步骤。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5564">[Alyssa&#64;5564]</a></p>
-<div class="section" id="language-support">
-<h3><a class="toc-backref" href="#id2">语言支持</a><a class="headerlink" href="#language-support" title="永久链接至标题"></a></h3>
-<p>确保你有一个支持 <code class="docutils literal notranslate"><span class="pre">UTF-8</span></code> 的语言区域。例如，对于汉语Windows 10的设备，您可能需要安装 <a class="reference external" href="https://support.microsoft.com/en-us/windows/language-packs-for-windows-a5094319-a92d-18de-5b53-1cfc697cfca8">English language pack</a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5566">[Alyssa&#64;5566]</a></p>
-</div>
-<div class="section" id="additional-prerequisites">
-<h3><a class="toc-backref" href="#id3">附加先决条件</a><a class="headerlink" href="#additional-prerequisites" title="永久链接至标题"></a></h3>
-<p>从源文件构建时，您需要先安装一些额外的先决条件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5568">[Alyssa&#64;5568]</a></p>
-<div class="section" id="install-additional-prerequisites-from-chocolatey">
-<h4>从Chocolatey安装额外的先决条件<a class="headerlink" href="#install-additional-prerequisites-from-chocolatey" title="永久链接至标题"></a></h4>
-<p>首先安装git:</p>
+<p>This guide is about how to set up a development environment for ROS 2 on Windows.</p>
+<section id="prerequisites">
+<h2><a class="toc-backref" href="#id1">Prerequisites</a><a class="headerlink" href="#prerequisites" title="永久链接至标题"></a></h2>
+<p>First follow the steps for <a class="reference internal" href="Windows-Install-Binary.html#windows-install-binary-installing-prerequisites"><span class="std std-ref">Installing Prerequisites</span></a> on the Binary Installation page.</p>
+<p>Stop and return here when you reach the &quot;Downloading ROS 2&quot; section.</p>
+<section id="language-support">
+<h3><a class="toc-backref" href="#id2">Language support</a><a class="headerlink" href="#language-support" title="永久链接至标题"></a></h3>
+<p>Make sure you have a locale which supports <code class="docutils literal notranslate"><span class="pre">UTF-8</span></code>.
+For example, for a Chinese-language Windows 10 installation, you may need to install an <a class="reference external" href="https://support.microsoft.com/en-us/windows/language-packs-for-windows-a5094319-a92d-18de-5b53-1cfc697cfca8">English language pack</a>.</p>
+</section>
+<section id="additional-prerequisites">
+<h3><a class="toc-backref" href="#id3">Additional prerequisites</a><a class="headerlink" href="#additional-prerequisites" title="永久链接至标题"></a></h3>
+<p>When building from source you'll need a few additional prerequisites installed.</p>
+<section id="install-additional-prerequisites-from-chocolatey">
+<h4>Install additional prerequisites from Chocolatey<a class="headerlink" href="#install-additional-prerequisites-from-chocolatey" title="永久链接至标题"></a></h4>
+<p>First install git:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>choco install -y git
 </pre></div>
 </div>
-<p>您需要将Git cmd文件夹 “c: Program Files Git cmd'” 添加到路径中 (您可以通过单击Windows图标，键入  &quot;Environment Variables&quot; ，然后点击  &quot;Edit the system environment variables&quot; 。在生成的对话框中，单击  &quot;Environment Variables&quot; ，在底部窗格中单击  &quot;Path&quot; ，然后单击  &quot;Edit&quot; 并添加路径)。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5571">[Alyssa&#64;5571]</a></p>
-</div>
-</div>
-</div>
-<div class="section" id="install-developer-tools">
-<h2><a class="toc-backref" href="#id4">安装开发人员工具</a><a class="headerlink" href="#install-developer-tools" title="永久链接至标题"></a></h2>
-<p>现在，我们准备安装一些用于帮助开发ROS 2的工具。</p>
-<p>让我们从 <code class="docutils literal notranslate"><span class="pre">vcstool</span></code> 开始:</p>
+<p>You will need to append the Git cmd folder <code class="docutils literal notranslate"><span class="pre">C:\Program</span> <span class="pre">Files\Git\cmd</span></code> to the PATH (you can do this by clicking the Windows icon, typing &quot;Environment Variables&quot;, then clicking on &quot;Edit the system environment variables&quot;.
+In the resulting dialog, click &quot;Environment Variables&quot;, the click &quot;Path&quot; on the bottom pane, then click &quot;Edit&quot; and add the path).</p>
+</section>
+</section>
+</section>
+<section id="install-developer-tools">
+<h2><a class="toc-backref" href="#id4">Install developer tools</a><a class="headerlink" href="#install-developer-tools" title="永久链接至标题"></a></h2>
+<p>Now we are ready to install some our tools that we use to help in developing ROS 2.</p>
+<p>Let's start with <code class="docutils literal notranslate"><span class="pre">vcstool</span></code>:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install -U vcstool
 </pre></div>
 </div>
-<p>你可以通过运行 <code class="docutils literal notranslate"><span class="pre">vcs</span></code> 来测试它 (你应该可以在同一个cmd命令行终端中这样做)。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5575">[Alyssa&#64;5575]</a></p>
-<p>接下来，安装 <code class="docutils literal notranslate"><span class="pre">colcon</span></code> : <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5576">[待校准&#64;5576]</a></p>
+<p>You can test it out by just running <code class="docutils literal notranslate"><span class="pre">vcs</span></code> (you should be able to do this in the same cmd prompt).</p>
+<p>Next, install <code class="docutils literal notranslate"><span class="pre">colcon</span></code>:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install -U colcon-common-extensions
 </pre></div>
 </div>
-<p>你可以通过运行 <code class="docutils literal notranslate"><span class="pre">colcon</span></code> 来测试它 (你应该可以在同一个cmd提示中这样做)。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5577">[待校准&#64;5577]</a></p>
-<p>另外，你应该安装 <code class="docutils literal notranslate"><span class="pre">curl</span></code> :</p>
+<p>You can test it out by just running <code class="docutils literal notranslate"><span class="pre">colcon</span></code> (you should be able to do this in the same cmd prompt).</p>
+<p>Also, you should install <code class="docutils literal notranslate"><span class="pre">curl</span></code>:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>choco install -y curl
 </pre></div>
 </div>
-</div>
-<div class="section" id="install-dependencies">
-<h2><a class="toc-backref" href="#id5">安装依赖项</a><a class="headerlink" href="#install-dependencies" title="永久链接至标题"></a></h2>
-<p>接下来安装最新版本的 <code class="docutils literal notranslate"><span class="pre">setuptools</span></code> 和 <code class="docutils literal notranslate"><span class="pre">pip</span></code> :</p>
+</section>
+<section id="install-dependencies">
+<h2><a class="toc-backref" href="#id5">Install dependencies</a><a class="headerlink" href="#install-dependencies" title="永久链接至标题"></a></h2>
+<p>Next install the latest version of <code class="docutils literal notranslate"><span class="pre">setuptools</span></code> and <code class="docutils literal notranslate"><span class="pre">pip</span></code>:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m pip install -U setuptools pip
 </pre></div>
 </div>
-<p>然后，您可以继续安装其他Python依赖项:</p>
+<p>Then you can continue installing other Python dependencies:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install -U catkin_pkg cryptography EmPy ifcfg lark-parser lxml numpy pyparsing pyyaml
 </pre></div>
 </div>
-<p>接下来安装测试工具，如 <code class="docutils literal notranslate"><span class="pre">pytest</span></code> 等:</p>
+<p>Next install testing tools like <code class="docutils literal notranslate"><span class="pre">pytest</span></code> and others:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install -U pytest pytest-mock coverage mock
 </pre></div>
 </div>
-<p>接下来安装代码审查工具，像 <code class="docutils literal notranslate"><span class="pre">flake8</span></code> 等: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5583">[Alyssa&#64;5583]</a></p>
+<p>Next install linters and checkers like <code class="docutils literal notranslate"><span class="pre">flake8</span></code> and others:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install -U flake8 flake8-blind-except flake8-builtins flake8-class-newline flake8-comprehensions flake8-deprecated flake8-docstrings flake8-import-order flake8-quotes <span class="nv">mypy</span><span class="o">==</span><span class="m">0</span>.761 pep8 pydocstyle
 </pre></div>
 </div>
-<p>接下来安装cppcheck:</p>
+<p>Next install cppcheck:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>choco install -y cppcheck
 </pre></div>
 </div>
-<p>接下来安装xmllint:</p>
+<p>Next install xmllint:</p>
 <ul class="simple">
-<li><p>从https://www.zlatkovic.com/projects/libxml/ 下载 <code class="docutils literal notranslate"><span class="pre">libxml2</span></code> 的 <a class="reference external" href="https://www.zlatkovic.com/pub/libxml/64bit/">64 bit binary archives</a>  (及其依赖的 <code class="docutils literal notranslate"><span class="pre">iconv</span></code> 和 <code class="docutils literal notranslate"><span class="pre">zlib</span></code> ) <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5586">[Alyssa&#64;5586]</a></p></li>
-<li><p>解压所有archives到例如 <code class="docutils literal notranslate"><span class="pre">C:\xmllint</span></code> 文件夹 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5587">[Alyssa&#64;5587]</a></p></li>
-<li><p>将 <code class="docutils literal notranslate"><span class="pre">C:\xmllint\bin</span></code> 添加到 <code class="docutils literal notranslate"><span class="pre">PATH</span></code> 路径库中。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5588">[Alyssa&#64;5588]</a></p></li>
+<li><p>Download the <a class="reference external" href="https://www.zlatkovic.com/pub/libxml/64bit/">64 bit binary archives</a> of <code class="docutils literal notranslate"><span class="pre">libxml2</span></code> (and its dependencies <code class="docutils literal notranslate"><span class="pre">iconv</span></code> and <code class="docutils literal notranslate"><span class="pre">zlib</span></code>) from <a class="reference external" href="https://www.zlatkovic.com/projects/libxml/">https://www.zlatkovic.com/projects/libxml/</a></p></li>
+<li><p>Unpack all archives into e.g. <code class="docutils literal notranslate"><span class="pre">C:\xmllint</span></code></p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">C:\xmllint\bin</span></code> to the <code class="docutils literal notranslate"><span class="pre">PATH</span></code>.</p></li>
 </ul>
-<div class="section" id="install-qt5">
-<h3><a class="toc-backref" href="#id6">安装Qt5</a><a class="headerlink" href="#install-qt5" title="永久链接至标题"></a></h3>
-<p>仅当您正在安装rviz时才需要此部分，但它是我们的默认安装源自带的，因此如果您不知道（这是安装rviz才需要的），那么假设您正在安装它，需要进行如下操作。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5590">[Alyssa&#64;5590]</a></p>
-<p>首先从Qt的网站获取安装包: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5591">[Alyssa&#64;5591]</a></p>
+<section id="install-qt5">
+<h3><a class="toc-backref" href="#id6">Install Qt5</a><a class="headerlink" href="#install-qt5" title="永久链接至标题"></a></h3>
+<p>This section is only required if you are building rviz, but it comes with our default set of sources, so if you don't know, then assume you are building it.</p>
+<p>First get the installer from Qt's website:</p>
 <p><a class="reference external" href="https://www.qt.io/download">https://www.qt.io/download</a></p>
-<p>选择开源版本，然后选择 <code class="docutils literal notranslate"><span class="pre">Qt</span> <span class="pre">Online</span> <span class="pre">Installer</span> <span class="pre">for</span> <span class="pre">Windows</span></code> 。</p>
-<p>运行安装程序并安装qt5。</p>
-<p>我们建议您将其安装到默认位置 “c: qt”，但是如果您选择其他位置，请确保相应地更新以下路径。当选择要安装的组件时，对于Foxy和更高版本你唯一需要确定的东西是 <code class="docutils literal notranslate"><span class="pre">Qt</span></code>  -&gt;  <code class="docutils literal notranslate"><span class="pre">Qt</span> <span class="pre">5.15.0</span></code> 目录树下有合适的MSVC 64位组件。在撰写本文档时，我们正在使用 <code class="docutils literal notranslate"><span class="pre">5.15.0</span></code> ，这也是我们推荐的版本，因为我们在Windows上只测试了这个版本，但更高的版本可能也可以用。对于Foxy及更高版本，一定要选择 <code class="docutils literal notranslate"><span class="pre">MSVC</span> <span class="pre">2019</span> <span class="pre">64-bit</span></code> 。之后的步骤，选择默认设置就可以了。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5595">[Alyssa&#64;5595]</a></p>
-<p>最后，在 <code class="docutils literal notranslate"><span class="pre">cmd.exe</span></code> 中将 <code class="docutils literal notranslate"><span class="pre">Qt5_DIR</span></code> 环境变量设置为你编译器所在的路径，以使CMake可以找到该编译器: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5596">[Alyssa&#64;5596]</a></p>
+<p>Select the Open Source version and then the <code class="docutils literal notranslate"><span class="pre">Qt</span> <span class="pre">Online</span> <span class="pre">Installer</span> <span class="pre">for</span> <span class="pre">Windows</span></code>.</p>
+<p>Run the installer and install Qt5.</p>
+<p>We recommend you install it to the default location of <code class="docutils literal notranslate"><span class="pre">C:\Qt</span></code>, but if you choose somewhere else, make sure to update the paths below accordingly.
+When selecting components to install, the only thing you absolutely need for Foxy and later is the appropriate MSVC 64-bit component under the <code class="docutils literal notranslate"><span class="pre">Qt</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Qt</span> <span class="pre">5.15.0</span></code> tree.
+We're using <code class="docutils literal notranslate"><span class="pre">5.15.0</span></code> as of the writing of this document and that's what we recommend since that's all we test on Windows, but later version will probably work too.
+For Foxy and later, be sure to select <code class="docutils literal notranslate"><span class="pre">MSVC</span> <span class="pre">2019</span> <span class="pre">64-bit</span></code>.
+After that, the default settings are fine.</p>
+<p>Finally, set the <code class="docutils literal notranslate"><span class="pre">Qt5_DIR</span></code> environment variable in the <code class="docutils literal notranslate"><span class="pre">cmd.exe</span></code> where you intend to build so that CMake can find it:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span> <span class="nv">Qt5_DIR</span><span class="o">=</span>C:<span class="se">\Q</span>t<span class="se">\5</span>.15.0<span class="se">\m</span>svc2019_64
 </pre></div>
 </div>
-<p>您可以使用 “setx-m Qt5_DIR C :Qt 5.15.0 msvc2019_64” 让它永久生效，但这需要管理员权限。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5597">[Alyssa&#64;5597]</a></p>
+<p>You could set it permanently with <code class="docutils literal notranslate"><span class="pre">setx</span> <span class="pre">-m</span> <span class="pre">Qt5_DIR</span> <span class="pre">C:\Qt\5.15.0\msvc2019_64</span></code> instead, but that requires Administrator.</p>
 <div class="admonition note">
-<p class="admonition-title">注解</p>
-<p>此具体路径可能会根据您使用的MSVC版本或将其安装到其他目录而不一样。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5598">[Alyssa&#64;5598]</a></p>
+<p class="admonition-title">备注</p>
+<p>This path might change based on which MSVC version you're using or if you installed it to a different directory.</p>
 </div>
-</div>
-</div>
-<div class="section" id="get-the-ros-2-code">
-<h2><a class="toc-backref" href="#id7">获取ROS 2代码</a><a class="headerlink" href="#get-the-ros-2-code" title="永久链接至标题"></a></h2>
-<p>现在我们有了开发工具，我们可以获取ROS 2源代码了。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5600">[Alyssa&#64;5600]</a></p>
-<p>首先设置一个开发文件夹，例如 “c: dev ros2_foxy”: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5601">[Alyssa&#64;5601]</a></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>md <span class="se">\d</span>ev<span class="se">\r</span>os2_foxy<span class="se">\s</span>rc
-<span class="nb">cd</span> <span class="se">\d</span>ev<span class="se">\r</span>os2_foxy
+</section>
+</section>
+<section id="get-the-ros-2-code">
+<h2><a class="toc-backref" href="#id7">Get the ROS 2 code</a><a class="headerlink" href="#get-the-ros-2-code" title="永久链接至标题"></a></h2>
+<p>Now that we have the development tools we can get the ROS 2 source code.</p>
+<p>First setup a development folder, for example <code class="docutils literal notranslate"><span class="pre">C:\dev\ros2_rolling</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>md <span class="se">\d</span>ev<span class="se">\r</span>os2_rolling<span class="se">\s</span>rc
+<span class="nb">cd</span> <span class="se">\d</span>ev<span class="se">\r</span>os2_rolling
 </pre></div>
 </div>
-<p>指明所克隆的仓库地址并下载 <code class="docutils literal notranslate"><span class="pre">ros2.repos</span></code> 文件: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5602">[Alyssa&#64;5602]</a></p>
+<p>Get the <code class="docutils literal notranslate"><span class="pre">ros2.repos</span></code> file which defines the repositories to clone from:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># CMD</span>
-curl -sk https://raw.githubusercontent.com/ros2/ros2/foxy/ros2.repos -o ros2.repos
+curl -sk https://raw.githubusercontent.com/ros2/ros2/master/ros2.repos -o ros2.repos
 
 <span class="c1"># PowerShell</span>
-curl https://raw.githubusercontent.com/ros2/ros2/foxy/ros2.repos -o ros2.repos
+curl https://raw.githubusercontent.com/ros2/ros2/master/ros2.repos -o ros2.repos
 </pre></div>
 </div>
-<p>接下来，您可以使用 <code class="docutils literal notranslate"><span class="pre">vcs</span></code> 导入 <code class="docutils literal notranslate"><span class="pre">ros2.repos</span></code> 文件中列出的仓库:</p>
+<p>Next you can use <code class="docutils literal notranslate"><span class="pre">vcs</span></code> to import the repositories listed in the <code class="docutils literal notranslate"><span class="pre">ros2.repos</span></code> file:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># CMD</span>
 vcs import src &lt; ros2.repos
 
@@ -423,104 +430,110 @@ vcs import src &lt; ros2.repos
 vcs import --input ros2.repos src
 </pre></div>
 </div>
-<div class="section" id="install-additional-dds-implementations-optional">
-<h3>安装额外的DDS实现 (可选) <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5495">[待校准&#64;5495]</a><a class="headerlink" href="#install-additional-dds-implementations-optional" title="永久链接至标题"></a></h3>
-<p>如果你想使用除了默认的eProsima的快速RTPS，以外的DDS或RTPS供应商，你可以在 <a class="reference internal" href="DDS-Implementations.html"><span class="doc">here</span></a> 找到说明。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5496">[Alyssa&#64;5496]</a></p>
-</div>
-</div>
-<div class="section" id="build-the-ros-2-code">
-<h2>编译ROS 2代码 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5604">[Alyssa&#64;5604]</a><a class="headerlink" href="#build-the-ros-2-code" title="永久链接至标题"></a></h2>
-<p id="windows-dev-build-ros2">要编译ROS 2，您需要以管理员身份运行Visual Studio命令终端 (  &quot;x64 Native Tools Command Prompt for VS 2019&quot; )。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5605">[Alyssa&#64;5605]</a></p>
-<p>Fast RTPS与ROS 2源文件捆绑在一起，除非您将 <code class="docutils literal notranslate"><span class="pre">AMENT_IGNORE</span></code> 文件放在 “src eProsima” 文件夹中，否则它将始终被编译。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5606">[Alyssa&#64;5606]</a></p>
-<p>编译 “dev ros2_foxy” 文件夹目录: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5607">[Alyssa&#64;5607]</a></p>
+<section id="install-additional-dds-implementations-optional">
+<h3><a class="toc-backref" href="#id8">Install additional DDS implementations (optional)</a><a class="headerlink" href="#install-additional-dds-implementations-optional" title="永久链接至标题"></a></h3>
+<p>If you would like to use another DDS or RTPS vendor besides the default, eProsima's Fast RTPS, you can find instructions <a class="reference internal" href="DDS-Implementations.html"><span class="doc">here</span></a>.</p>
+</section>
+</section>
+<section id="build-the-ros-2-code">
+<h2><a class="toc-backref" href="#id9">Build the ROS 2 code</a><a class="headerlink" href="#build-the-ros-2-code" title="永久链接至标题"></a></h2>
+<p id="windows-dev-build-ros2">To build ROS 2 you will need a Visual Studio Command Prompt (&quot;x64 Native Tools Command Prompt for VS 2019&quot;) running as Administrator.</p>
+<p>Fast RTPS is bundled with the ROS 2 source and will always be built unless you put an <code class="docutils literal notranslate"><span class="pre">AMENT_IGNORE</span></code> file in the <code class="docutils literal notranslate"><span class="pre">src\eProsima</span></code> folder.</p>
+<p>To build the <code class="docutils literal notranslate"><span class="pre">\dev\ros2_rolling</span></code> folder tree:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>colcon build --merge-install
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="admonition-title">注解</p>
-<p>我们在这里使用 <code class="docutils literal notranslate"><span class="pre">--merge-install</span></code> 来避免在编译结束时 <code class="docutils literal notranslate"><span class="pre">PATH</span></code> 变量太长。如果要调整这些说明以构建较小的工作区，则可以使用默认行为，即隔离安装，即每个包安装到不同的文件夹的位置。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5608">[Alyssa&#64;5608]</a></p>
+<p class="admonition-title">备注</p>
+<p>We're using <code class="docutils literal notranslate"><span class="pre">--merge-install</span></code> here to avoid a <code class="docutils literal notranslate"><span class="pre">PATH</span></code> variable that is too long at the end of the build.
+If you're adapting these instructions to build a smaller workspace then you might be able to use the default behavior which is isolated install, i.e. where each package is installed to a different folder.</p>
 </div>
 <div class="admonition note">
-<p class="admonition-title">注解</p>
-<p>如果您正在构建一个调试版本，请使用 <code class="docutils literal notranslate"><span class="pre">python_d</span> <span class="pre">path\to\colcon_executable</span> <span class="pre">build</span> <span class="pre">--cmake-args</span> <span class="pre">-DCMAKE_BUILD_TYPE=Debug</span></code>. 参考 <a class="reference internal" href="#extra-stuff-for-debug-mode">Extra stuff for debug mode</a> 了解有关在Windows上的运行调试版本的Python代码的更多信息。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5609">[Alyssa&#64;5609]</a></p>
+<p class="admonition-title">备注</p>
+<p>If you are doing a debug build use <code class="docutils literal notranslate"><span class="pre">python_d</span> <span class="pre">path\to\colcon_executable</span> <span class="pre">build</span> <span class="pre">--cmake-args</span> <span class="pre">-DCMAKE_BUILD_TYPE=Debug</span></code>.
+See <a class="reference internal" href="#extra-stuff-for-debug-mode">Extra stuff for debug mode</a> for more info on running Python code in debug builds on Windows.</p>
 </div>
-</div>
-<div class="section" id="environment-setup">
-<h2><a class="toc-backref" href="#id10">环境设置</a><a class="headerlink" href="#environment-setup" title="永久链接至标题"></a></h2>
-<p>打开一个shell命令终端并source ROS 2的安装文件以配置工作空间的环境: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5610">[Alyssa&#64;5610]</a></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>call C:<span class="se">\d</span>ev<span class="se">\r</span>os2_foxy<span class="se">\i</span>nstall<span class="se">\l</span>ocal_setup.bat
+</section>
+<section id="environment-setup">
+<h2><a class="toc-backref" href="#id10">Environment setup</a><a class="headerlink" href="#environment-setup" title="永久链接至标题"></a></h2>
+<p>Start a command shell and source the ROS 2 setup file to set up the workspace:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>call C:<span class="se">\d</span>ev<span class="se">\r</span>os2_rolling<span class="se">\i</span>nstall<span class="se">\l</span>ocal_setup.bat
 </pre></div>
 </div>
-<p>这将自动为其支持的任何DDS供应商设置编译环境。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5611">[Alyssa&#64;5611]</a></p>
-<p>如果没有其他错误，正常情况下前一个命令只会输出 一次 “系统找不到指定的路径”。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5612">[Alyssa&#64;5612]</a></p>
-</div>
-<div class="section" id="test-and-run">
-<h2><a class="toc-backref" href="#id11">测试和运行</a><a class="headerlink" href="#test-and-run" title="永久链接至标题"></a></h2>
-<p>请注意，首次运行任何可执行文件时，必须在Windows防火墙弹出的窗口中允许访问网络。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5614">[Alyssa&#64;5614]</a></p>
-<p>您可以使用以下命令运行测试例程: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5615">[Alyssa&#64;5615]</a></p>
+<p>This will automatically set up the environment for any DDS vendors that support was built for.</p>
+<p>It is normal that the previous command, if nothing else went wrong, outputs &quot;The system cannot find the path specified.&quot; exactly once.</p>
+</section>
+<section id="test-and-run">
+<h2><a class="toc-backref" href="#id11">Test and run</a><a class="headerlink" href="#test-and-run" title="永久链接至标题"></a></h2>
+<p>Note that the first time you run any executable you will have to allow access to the network through a Windows Firewall popup.</p>
+<p>You can run the tests using this command:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>colcon <span class="nb">test</span> --merge-install
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="admonition-title">注解</p>
-<p>只有处于编译步骤时，才应该使用``--merge-install`` 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5616">[Alyssa&#64;5616]</a></p>
+<p class="admonition-title">备注</p>
+<p><code class="docutils literal notranslate"><span class="pre">--merge-install</span></code> should only be used if it was also used in the build step.</p>
 </div>
-<p>之后，您可以使用以下命令获取测试的概要信息: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5617">[Alyssa&#64;5617]</a></p>
+<p>Afterwards you can get a summary of the tests using this command:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>colcon test-result
 </pre></div>
 </div>
-<p>要运行这些示例，首先打开一个干净的新 <code class="docutils literal notranslate"><span class="pre">cmd.exe</span></code> 终端，并通过source <code class="docutils literal notranslate"><span class="pre">local_setup.bat</span></code> 文件来设置工作空间的环境变量。然后，运行一个c++ <code class="docutils literal notranslate"><span class="pre">talker</span></code>  : <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5618">[Alyssa&#64;5618]</a></p>
+<p>To run the examples, first open a clean new <code class="docutils literal notranslate"><span class="pre">cmd.exe</span></code> and set up the workspace by sourcing the <code class="docutils literal notranslate"><span class="pre">local_setup.bat</span></code> file.
+Then, run a C++ <code class="docutils literal notranslate"><span class="pre">talker</span></code>:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>call install<span class="se">\l</span>ocal_setup.bat
 ros2 run demo_nodes_cpp talker
 </pre></div>
 </div>
-<p>在另一个单独的shell中，您可以执行与上面相同的操作，只是换成运行一个Python <code class="docutils literal notranslate"><span class="pre">listener</span></code>  : <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5619">[Alyssa&#64;5619]</a></p>
+<p>In a separate shell you can do the same, but instead run a Python <code class="docutils literal notranslate"><span class="pre">listener</span></code>:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>call install<span class="se">\l</span>ocal_setup.bat
 ros2 run demo_nodes_py listener
 </pre></div>
 </div>
-<p>你应该看到了 <code class="docutils literal notranslate"><span class="pre">talker</span></code> 说这是 <code class="docutils literal notranslate"><span class="pre">Publishing</span></code> 消息 ，<code class="docutils literal notranslate"><span class="pre">listener</span></code> 说 <code class="docutils literal notranslate"><span class="pre">I</span> <span class="pre">heard</span></code> 这些消息。这证明了C++和Python的APIs都是正常工作的。万岁! <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5507">[Alyssa&#64;5507]</a></p>
+<p>You should see the <code class="docutils literal notranslate"><span class="pre">talker</span></code> saying that it's <code class="docutils literal notranslate"><span class="pre">Publishing</span></code> messages and the <code class="docutils literal notranslate"><span class="pre">listener</span></code> saying <code class="docutils literal notranslate"><span class="pre">I</span> <span class="pre">heard</span></code> those messages.
+This verifies both the C++ and Python APIs are working properly.
+Hooray!</p>
 <div class="admonition note">
-<p class="admonition-title">注解</p>
-<p>不建议在已经source了 <code class="docutils literal notranslate"><span class="pre">local_setup.bat</span></code> 环境的同一个cmd命令终端中编译。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5620">[Alyssa&#64;5620]</a></p>
+<p class="admonition-title">备注</p>
+<p>It is not recommended to build in the same cmd prompt that you've sourced the <code class="docutils literal notranslate"><span class="pre">local_setup.bat</span></code>.</p>
 </div>
-</div>
-<div class="section" id="next-steps-after-installing">
-<h2><a class="toc-backref" href="#id12">安装后的下一步</a><a class="headerlink" href="#next-steps-after-installing" title="永久链接至标题"></a></h2>
-<p>继续使用 <a class="reference internal" href="../Tutorials.html"><span class="doc">教程和Demo</span></a> 来配置您的环境，创建您自己的工作区和包，并学习ROS 2核心概念。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5509">[小鱼&#64;5509]</a></p>
-</div>
-<div class="section" id="using-the-ros-1-bridge">
-<h2><a class="toc-backref" href="#id13">使用ROS 1 bridge</a><a class="headerlink" href="#using-the-ros-1-bridge" title="永久链接至标题"></a></h2>
-<p>ROS 1bridge可以连接从ROS 1到ROS 2的话题，反之亦然。看看这个专门的文献 <a class="reference external" href="https://github.com/ros2/ros1_bridge/blob/master/README.md">documentation</a> 如何编译和使用ROS 1bridge。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5511">[Alyssa&#64;5511]</a></p>
-</div>
-<div class="section" id="additional-rmw-implementations-optional">
-<h2><a class="toc-backref" href="#id14">附加RMW实现 (可选)</a><a class="headerlink" href="#additional-rmw-implementations-optional" title="永久链接至标题"></a></h2>
-<p>ROS 2使用的默认中间件是 <code class="docutils literal notranslate"><span class="pre">Fast-RTPS</span></code> ，但中间件 (RMW) 可以在运行时进行替换。查看 <a class="reference internal" href="../How-To-Guides/Working-with-multiple-RMW-implementations.html"><span class="doc">guide</span></a> 了解如何使用多个RMWs。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5513">[Alyssa&#64;5513]</a></p>
-</div>
-<div class="section" id="extra-stuff-for-debug-mode">
-<h2><a class="toc-backref" href="#id15">调试模式的额外内容</a><a class="headerlink" href="#extra-stuff-for-debug-mode" title="永久链接至标题"></a></h2>
-<p>如果您希望能够在调试模式下运行所有测试，您需要安装更多内容:</p>
+</section>
+<section id="next-steps-after-installing">
+<h2><a class="toc-backref" href="#id12">Next steps after installing</a><a class="headerlink" href="#next-steps-after-installing" title="永久链接至标题"></a></h2>
+<p>Continue with the <a class="reference internal" href="../Tutorials.html"><span class="doc">tutorials and demos</span></a> to configure your environment, create your own workspace and packages, and learn ROS 2 core concepts.</p>
+</section>
+<section id="using-the-ros-1-bridge">
+<h2><a class="toc-backref" href="#id13">Using the ROS 1 bridge</a><a class="headerlink" href="#using-the-ros-1-bridge" title="永久链接至标题"></a></h2>
+<p>The ROS 1 bridge can connect topics from ROS 1 to ROS 2 and vice-versa. See the dedicated <a class="reference external" href="https://github.com/ros2/ros1_bridge/blob/master/README.md">documentation</a> on how to build and use the ROS 1 bridge.</p>
+</section>
+<section id="additional-rmw-implementations-optional">
+<h2><a class="toc-backref" href="#id14">Additional RMW implementations (optional)</a><a class="headerlink" href="#additional-rmw-implementations-optional" title="永久链接至标题"></a></h2>
+<p>The default middleware that ROS 2 uses is <code class="docutils literal notranslate"><span class="pre">Fast-RTPS</span></code>, but the middleware (RMW) can be replaced at runtime.
+See the <a class="reference internal" href="../How-To-Guides/Working-with-multiple-RMW-implementations.html"><span class="doc">guide</span></a> on how to work with multiple RMWs.</p>
+</section>
+<section id="extra-stuff-for-debug-mode">
+<h2><a class="toc-backref" href="#id15">Extra stuff for Debug mode</a><a class="headerlink" href="#extra-stuff-for-debug-mode" title="永久链接至标题"></a></h2>
+<p>If you want to be able to run all the tests in Debug mode, you'll need to install a few more things:</p>
 <ul class="simple">
-<li><p>为了提取Python源文件压缩包，您可以使用PeaZip: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5623">[Alyssa&#64;5623]</a></p></li>
+<li><p>To be able to extract the Python source tarball, you can use PeaZip:</p></li>
 </ul>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>choco install -y peazip
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>您还需要SVN，因为某些Python源文件编译依赖项是通过SVN检出的: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5624">[Alyssa&#64;5624]</a></p></li>
+<li><p>You'll also need SVN, since some of the Python source-build dependencies are checked out via SVN:</p></li>
 </ul>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>choco install -y svn hg
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>安装上述内容后，您需要退出并重新启动命令终端。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5625">[Alyssa&#64;5625]</a></p></li>
-<li><p>从 <code class="docutils literal notranslate"><span class="pre">tgz</span></code> 中获取并提取Python 3.8.3源文件: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5626">[待校准&#64;5626]</a></p>
+<li><p>You'll need to quit and restart the command prompt after installing the above.</p></li>
+<li><p>Get and extract the Python 3.8.3 source from the <code class="docutils literal notranslate"><span class="pre">tgz</span></code>:</p>
 <ul>
-<li><p><a class="reference external" href="https://www.python.org/ftp/python/3.8.3/Python-3.8.3.tgz">https://www.python.org/ftp/python/3.8.3/Python-3.8.3.tgz</a> <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5627">[Alyssa&#64;5627]</a></p></li>
-<li><p>为了使以下说明简洁，请解压缩到 “c:devPython-3.8.3” <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5628">[Alyssa&#64;5628]</a></p></li>
+<li><p><a class="reference external" href="https://www.python.org/ftp/python/3.8.3/Python-3.8.3.tgz">https://www.python.org/ftp/python/3.8.3/Python-3.8.3.tgz</a></p></li>
+<li><p>To keep these instructions concise, please extract it to <code class="docutils literal notranslate"><span class="pre">C:\dev\Python-3.8.3</span></code></p></li>
 </ul>
 </li>
-<li><p>现在，从Visual Studio命令行终端以调试模式编译Python源文件: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5629">[Alyssa&#64;5629]</a></p></li>
+<li><p>Now, build the Python source in debug mode from a Visual Studio command prompt:</p></li>
 </ul>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> C:<span class="se">\d</span>ev<span class="se">\P</span>ython-3.8.3<span class="se">\P</span>Cbuild
 get_externals.bat
@@ -528,7 +541,7 @@ build.bat -p x64 -d
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>最后，将编译生成的文件复制到发布模式Python可执行文件和DLL's旁边的Python 38安装目录中: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5630">[Alyssa&#64;5630]</a></p></li>
+<li><p>Finally, copy the build products into the Python38 installation directories, next to the Release-mode Python executable and DLL's:</p></li>
 </ul>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> C:<span class="se">\d</span>ev<span class="se">\P</span>ython-3.8.3<span class="se">\P</span>Cbuild<span class="se">\a</span>md64
 copy python_d.exe C:<span class="se">\P</span>ython38 /Y
@@ -541,69 +554,71 @@ copy sqlite3_d.dll C:<span class="se">\P</span>ython38<span class="se">\D</span>
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>现在，打开一个新的命令行终端，确保 <code class="docutils literal notranslate"><span class="pre">python_d</span></code> 正常安装: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5631">[Alyssa&#64;5631]</a></p></li>
+<li><p>Now, from a fresh command prompt, make sure that <code class="docutils literal notranslate"><span class="pre">python_d</span></code> works:</p></li>
 </ul>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python_d -c <span class="s2">&quot;import _ctypes ; import coverage&quot;</span>
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>验证 <code class="docutils literal notranslate"><span class="pre">python_d</span></code> 的操作后，有必要重新安装一些带有启用调试模式相关库的依赖项: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5632">[Alyssa&#64;5632]</a></p></li>
+<li><p>Once you have verified the operation of <code class="docutils literal notranslate"><span class="pre">python_d</span></code>, it is necessary to reinstall a few dependencies with the debug-enabled libraries:</p></li>
 </ul>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python_d -m pip install --force-reinstall https://github.com/ros2/ros2/releases/download/numpy-archives/numpy-1.18.4-cp38-cp38d-win_amd64.whl
 python_d -m pip install --force-reinstall https://github.com/ros2/ros2/releases/download/lxml-archives/lxml-4.5.1-cp38-cp38d-win_amd64.whl
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>验证这些依赖项的安装:</p></li>
+<li><p>To verify the installation of these dependencies:</p></li>
 </ul>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python_d -c <span class="s2">&quot;from lxml import etree ; import numpy&quot;</span>
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>当您希望回到编译发行二进制文件的模式时，必须卸载调试变量并使用发行变量: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5634">[Alyssa&#64;5634]</a></p></li>
+<li><p>When you wish to return to building release binaries, it is necessary to uninstall the debug variants and use the release variants:</p></li>
 </ul>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m pip uninstall numpy lxml
 python -m pip install numpy lxml
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>要创建可执行文件的python脚本 (.exe)，应使用python _ d调用colcon以及相应的CMake编译类型。如果是用pip安装的colcon，则可以通过 <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">show</span> <span class="pre">colcon-core</span></code> 找到colcon可执行文件的路径。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5635">[Alyssa&#64;5635]</a></p></li>
+<li><p>To create executables python scripts(.exe), python_d should be used to invoke colcon, along with the corresponding CMake build type.
+If you installed colcon using pip, the path to the colcon executable can be found with <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">show</span> <span class="pre">colcon-core</span></code>.</p></li>
 </ul>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python_d path<span class="se">\t</span>o<span class="se">\c</span>olcon_executable build --merge-install --cmake-args -DCMAKE_BUILD_TYPE<span class="o">=</span>Debug
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>万岁，你完成了! <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5636">[Alyssa&#64;5636]</a></p></li>
+<li><p>Hooray, you're done!</p></li>
 </ul>
-</div>
-<div class="section" id="stay-up-to-date">
-<h2>了解最新情况 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5518">[Alyssa&#64;5518]</a><a class="headerlink" href="#stay-up-to-date" title="永久链接至标题"></a></h2>
-<p>请参阅 <a class="reference internal" href="Maintaining-a-Source-Checkout.html"><span class="doc">维护ROS 2Foxy源文件的检出</span></a> 以定期的刷新安装源。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5519">[Alyssa&#64;5519]</a></p>
-</div>
-<div class="section" id="troubleshooting">
-<h2><a class="toc-backref" href="#id17">故障排除</a><a class="headerlink" href="#troubleshooting" title="永久链接至标题"></a></h2>
-<p>故障排除技术可以参考 <a class="reference internal" href="../How-To-Guides/Installation-Troubleshooting.html#windows-troubleshooting"><span class="std std-ref">这份文档</span></a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5637">[Alyssa&#64;5637]</a></p>
-</div>
-<div class="section" id="uninstall">
-<h2><a class="toc-backref" href="#id18">卸载</a><a class="headerlink" href="#uninstall" title="永久链接至标题"></a></h2>
+</section>
+<section id="stay-up-to-date">
+<h2><a class="toc-backref" href="#id16">Stay up to date</a><a class="headerlink" href="#stay-up-to-date" title="永久链接至标题"></a></h2>
+<p>See <a class="reference internal" href="Maintaining-a-Source-Checkout.html"><span class="doc">Maintaining a source checkout of ROS 2 Rolling</span></a> to periodically refresh your source installation.</p>
+</section>
+<section id="troubleshooting">
+<h2><a class="toc-backref" href="#id17">Troubleshooting</a><a class="headerlink" href="#troubleshooting" title="永久链接至标题"></a></h2>
+<p>Troubleshooting techniques can be found <a class="reference internal" href="../How-To-Guides/Installation-Troubleshooting.html#windows-troubleshooting"><span class="std std-ref">here</span></a>.</p>
+</section>
+<section id="uninstall">
+<h2><a class="toc-backref" href="#id18">Uninstall</a><a class="headerlink" href="#uninstall" title="永久链接至标题"></a></h2>
 <ol class="arabic">
-<li><p>如果你按照上面的指示用colcon安装了你的工作空间，  &quot;uninstalling&quot; 可能只是打开一个新的终端，而没有source工作空间的 <code class="docutils literal notranslate"><span class="pre">setup</span></code> 文件。因此，您的环境就会表现得好像您的系统上没有安装Foxy。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5523">[Alyssa&#64;5523]</a></p></li>
-<li><p>如果您还打算释放所有空间，则可以使用以下命令删除整个工作空间的目录: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5524">[Alyssa&#64;5524]</a></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rmdir /s /q <span class="se">\r</span>os2_foxy
+<li><p>If you installed your workspace with colcon as instructed above, &quot;uninstalling&quot; could be just a matter of opening a new terminal and not sourcing the workspace's <code class="docutils literal notranslate"><span class="pre">setup</span></code> file.
+This way, your environment will behave as though there is no Rolling install on your system.</p></li>
+<li><p>If you're also trying to free up space, you can delete the entire workspace directory with:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rmdir /s /q <span class="se">\r</span>os2_rolling
 </pre></div>
 </div>
 </li>
 </ol>
-</div>
-</div>
+</section>
+</section>
 
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="macOS-Install-Binary.html" class="btn btn-neutral float-left" title="在macOS上安装ROS 2" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
-        <a href="Windows-Install-Binary.html" class="btn btn-neutral float-right" title="在Windows上安装ROS 2" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="macOS-Install-Binary.html" class="btn btn-neutral float-left" title="Installing ROS 2 on macOS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="Windows-Install-Binary.html" class="btn btn-neutral float-right" title="Installing ROS 2 on Windows" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

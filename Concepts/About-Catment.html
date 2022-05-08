@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="zh" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ament和catkin的混合研究(catment) [Alyssa@9595] &mdash; ROS 2 documentation  文档</title>
+  <title>On the mixing of ament and catkin (catment) &mdash; ROS 2 documentation  文档</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
@@ -24,8 +25,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="关于交叉编译" href="About-Cross-Compilation.html" />
-    <link rel="prev" title="关于组件" href="About-Composition.html" /> 
+    <link rel="next" title="About Cross-compilation" href="About-Cross-Compilation.html" />
+    <link rel="prev" title="About Composition" href="About-Composition.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -44,211 +45,211 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../Installation.html">安装</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Installation/Ubuntu-Development-Setup.html">在Ubuntu Linux上构建ROS 2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Installation/Ubuntu-Install-Binary.html">在Ubuntu Linux上安装ROS 2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Installation/Ubuntu-Install-Debians.html">通过Debian包安装ROS 2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Installation/macOS-Development-Setup.html">在macOS上构建ROS 2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Installation/macOS-Install-Binary.html">在macOS上安装ROS 2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Installation/Windows-Development-Setup.html">在Windows上构建ROS 2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Installation/Windows-Install-Binary.html">在Windows上安装ROS 2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Installation/Fedora-Development-Setup.html">在Fedora Linux上构建ROS 2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Installation/Latest-Development-Setup.html">安装最新的ROS 2开发版本</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Installation/Maintaining-a-Source-Checkout.html">维护ROS 2Foxy源文件的检出</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Installation/Testing.html">用于测试的替代安装源</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Installation/DDS-Implementations.html">安装DDS实现</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Install-Connext-Security-Plugins.html">安装Connext安全插件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Install-Connext-University-Eval.html">安装RTI Connext DDS的大学或评估版本 [Alyssa&#64;5370]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Working-with-Eclipse-CycloneDDS.html">使用Eclipse Cyclone DDS [Alyssa&#64;5384]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Working-with-GurumNetworks-GurumDDS.html">使用GurumNetworks GurumDDS [Alyssa&#64;5400]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Working-with-eProsima-Fast-DDS.html">使用eProsima Fast DDS [Alyssa&#64;5417]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Ubuntu-Development-Setup.html">Building ROS 2 on Ubuntu Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Ubuntu-Install-Binary.html">Installing ROS 2 on Ubuntu Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Ubuntu-Install-Debians.html">Installing ROS 2 via Debian Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/macOS-Development-Setup.html">Building ROS 2 on macOS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/macOS-Install-Binary.html">Installing ROS 2 on macOS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Windows-Development-Setup.html">Building ROS 2 on Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Windows-Install-Binary.html">Installing ROS 2 on Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Fedora-Development-Setup.html">Building ROS 2 on Fedora Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Latest-Development-Setup.html">Installing the latest ROS 2 development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Maintaining-a-Source-Checkout.html">Maintaining a source checkout of ROS 2 Rolling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Testing.html">Alternative Installation Sources for Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/DDS-Implementations.html">Installing DDS implementations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Install-Connext-Security-Plugins.html">Installing Connext security plugins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Install-Connext-University-Eval.html">Installing University or Evaluation versions of RTI Connext DDS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Working-with-Eclipse-CycloneDDS.html">Working with Eclipse Cyclone DDS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Working-with-GurumNetworks-GurumDDS.html">Working with GurumNetworks GurumDDS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Working-with-eProsima-Fast-DDS.html">Working with eProsima Fast DDS</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../Docs-Guide.html">文档指南</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Tutorials.html">教程</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Configuring-ROS2-Environment.html">配置ROS 2环境</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Turtlesim/Introducing-Turtlesim.html">介绍turtlesim和rqt</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Understanding-ROS2-Nodes.html">了解ROS 2节点 [待校准&#64;9173]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Topics/Understanding-ROS2-Topics.html">理解ROS 2话题 [待校准&#64;8808]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Services/Understanding-ROS2-Services.html">了解ROS 2服务 [待校准&#64;8182]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Parameters/Understanding-ROS2-Parameters.html">理解ROS 2参数</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Understanding-ROS2-Actions.html">理解ROS 2动作 [待校准&#64;9124]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Rqt-Console/Using-Rqt-Console.html">使用rqt_控制台 [待校准&#64;8152]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Launch/CLI-Intro.html">介绍ROS 2launch [待校准&#64;7541]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Ros2bag/Recording-And-Playing-Back-Data.html">记录和回放数据 [待校准&#64;8079]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Workspace/Creating-A-Workspace.html">创建工作空间 [待校准&#64;9276]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Creating-Your-First-ROS2-Package.html">创建您的第一个ROS 2包 [待校准&#64;7117]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Writing-A-Simple-Cpp-Publisher-And-Subscriber.html">编写简单的发布者和订阅者 (c ++) [待校准&#64;9345]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Writing-A-Simple-Py-Publisher-And-Subscriber.html">编写简单的发布者和订阅者 (Python) [待校准&#64;9432]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Writing-A-Simple-Cpp-Service-And-Client.html">编写简单的服务和客户端 (c ++) [待校准&#64;9393]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Writing-A-Simple-Py-Service-And-Client.html">编写简单的服务和客户端 (Python) [待校准&#64;9468]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Custom-ROS2-Interfaces.html">创建自定义ROS 2 msg 和 srv 文件 [待校准&#64;7179]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Single-Package-Define-And-Use-Interface.html">在ROS 2接口上扩展 [待校准&#64;8284]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Using-Parameters-In-A-Class-CPP.html">在类 (c ++) 中使用参数 [待校准&#64;9209]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Using-Parameters-In-A-Class-Python.html">在类中使用参数 (Python) [待校准&#64;9249]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Getting-Started-With-Ros2doctor.html">开始使用ros2doctor [待校准&#64;7450]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Pluginlib.html">创建和使用插件 (c ++) [待校准&#64;7851]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Actions/Creating-an-Action.html">创建动作 [待校准&#64;6711]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Actions/Writing-a-Cpp-Action-Server-Client.html">编写动作服务器和客户端 (c ++) [待校准&#64;6753]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Actions/Writing-a-Py-Action-Server-Client.html">编写动作服务器和客户端 (Python) [待校准&#64;6825]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Composition.html">在单个进程中组成多个节点 [待校准&#64;7034]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Colcon-Tutorial.html">使用colcon构建包 [待校准&#64;6975]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Launch/Launch-Main.html">Launch教程 [待校准&#64;7600]</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Launch/Creating-Launch-Files.html">创建launch文件 [待校准&#64;7562]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Launch/Launch-system.html">[需手动修复的语法]Launch/监控多节点[需手动修复的语法]Launch [待校准&#64;7614]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Launch/Using-Substitutions.html">在launch文件中使用替换 [待校准&#64;7737]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Launch/Using-Event-Handlers.html">在launch文件中使用事件处理程序 [待校准&#64;7641]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Launch/Using-ROS2-Launch-For-Large-Projects.html">在大型项目中使用ROS 2launch [待校准&#64;7674]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Docs-Guide.html">Docs Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorials.html">Tutorials</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Configuring-ROS2-Environment.html">Configuring your ROS 2 environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Turtlesim/Introducing-Turtlesim.html">Introducing turtlesim and rqt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Understanding-ROS2-Nodes.html">Understanding ROS 2 nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Topics/Understanding-ROS2-Topics.html">Understanding ROS 2 topics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Services/Understanding-ROS2-Services.html">Understanding ROS 2 services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Parameters/Understanding-ROS2-Parameters.html">Understanding ROS 2 parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Understanding-ROS2-Actions.html">Understanding ROS 2 actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Rqt-Console/Using-Rqt-Console.html">Using rqt_console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Launch/CLI-Intro.html">Introducing ROS 2 launch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Ros2bag/Recording-And-Playing-Back-Data.html">Recording and playing back data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Workspace/Creating-A-Workspace.html">Creating a workspace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Creating-Your-First-ROS2-Package.html">Creating your first ROS 2 package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Writing-A-Simple-Cpp-Publisher-And-Subscriber.html">Writing a simple publisher and subscriber (C++)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Writing-A-Simple-Py-Publisher-And-Subscriber.html">Writing a simple publisher and subscriber (Python)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Writing-A-Simple-Cpp-Service-And-Client.html">Writing a simple service and client (C++)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Writing-A-Simple-Py-Service-And-Client.html">Writing a simple service and client (Python)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Custom-ROS2-Interfaces.html">Creating custom ROS 2 msg and srv files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Single-Package-Define-And-Use-Interface.html">Expanding on ROS 2 interfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Using-Parameters-In-A-Class-CPP.html">Using parameters in a class (C++)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Using-Parameters-In-A-Class-Python.html">Using parameters in a class (Python)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Getting-Started-With-Ros2doctor.html">Getting started with ros2doctor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Pluginlib.html">Creating and Using Plugins (C++)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Actions/Creating-an-Action.html">Creating an action</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Actions/Writing-a-Cpp-Action-Server-Client.html">Writing an action server and client (C++)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Actions/Writing-a-Py-Action-Server-Client.html">Writing an action server and client (Python)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Composition.html">Composing multiple nodes in a single process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Colcon-Tutorial.html">Using colcon to build packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Launch/Launch-Main.html">Launch Tutorials</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Launch/Creating-Launch-Files.html">Creating a launch file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Launch/Launch-system.html">Launching/monitoring multiple nodes with Launch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Launch/Using-Substitutions.html">Using substitutions in launch files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Launch/Using-Event-Handlers.html">Using event handlers in launch files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Launch/Using-ROS2-Launch-For-Large-Projects.html">Using ROS 2 launch for large projects</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Tf2/Tf2-Main.html">tf2教程 [待校准&#64;8518]</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Introduction-To-Tf2.html">tf2简介 [待校准&#64;8434]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Writing-A-Tf2-Static-Broadcaster-Py.html">编写tf2静态广播器 (Python) [待校准&#64;8739]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Writing-A-Tf2-Static-Broadcaster-Cpp.html">编写tf2静态广播器 (c ++) [待校准&#64;8697]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Writing-A-Tf2-Broadcaster-Py.html">编写tf2广播器 (Python) [待校准&#64;8660]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Writing-A-Tf2-Broadcaster-Cpp.html">编写tf2广播器 (c ++) [待校准&#64;8621]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Writing-A-Tf2-Listener-Py.html">编写tf2监听程序 (Python) [待校准&#64;8691]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Writing-A-Tf2-Listener-Cpp.html">编写tf2监听程序 (c ++) [待校准&#64;8673]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Adding-A-Frame-Py.html">添加帧 (Python) [待校准&#64;8390]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Adding-A-Frame-Cpp.html">添加帧 (c ++) [待校准&#64;8354]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Learning-About-Tf2-And-Time-Py.html">学习tf2和时间 (Python) [待校准&#64;8480]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Learning-About-Tf2-And-Time-Cpp.html">学习tf2和时间 (c ++) [待校准&#64;8463]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Time-Travel-With-Tf2-Py.html">时间穿梭tf2 (Python) [待校准&#64;8570]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Time-Travel-With-Tf2-Cpp.html">时间穿梭带tf2 (C++) [待校准&#64;8545]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Debugging-Tf2-Problems.html">调试tf2问题 [待校准&#64;8396]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Quaternion-Fundamentals.html">四元数基金amentals [待校准&#64;8494]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.html">使用stamped数据类型与tf2_ros: MessageFilter [待校准&#64;8578]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Tf2/Tf2-Main.html">tf2 Tutorials</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Introduction-To-Tf2.html">Introduction to tf2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Writing-A-Tf2-Static-Broadcaster-Py.html">Writing a tf2 static broadcaster (Python)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Writing-A-Tf2-Static-Broadcaster-Cpp.html">Writing a tf2 static broadcaster (C++)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Writing-A-Tf2-Broadcaster-Py.html">Writing a tf2 broadcaster (Python)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Writing-A-Tf2-Broadcaster-Cpp.html">Writing a tf2 broadcaster (C++)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Writing-A-Tf2-Listener-Py.html">Writing a tf2 listener (Python)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Writing-A-Tf2-Listener-Cpp.html">Writing a tf2 listener (C++)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Adding-A-Frame-Py.html">Adding a frame (Python)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Adding-A-Frame-Cpp.html">Adding a frame (C++)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Learning-About-Tf2-And-Time-Py.html">Learning about tf2 and time (Python)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Learning-About-Tf2-And-Time-Cpp.html">Learning about tf2 and time (C++)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Time-Travel-With-Tf2-Py.html">Time travel with tf2 (Python)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Time-Travel-With-Tf2-Cpp.html">Time travel with tf2 (C++)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Debugging-Tf2-Problems.html">Debugging tf2 problems</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Quaternion-Fundamentals.html">Quaternion fundamentals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.html">Using stamped datatypes with tf2_ros::MessageFilter</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/URDF/URDF-Main.html">URDF教程 [待校准&#64;9047]</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/URDF/Building-a-Visual-Robot-Model-with-URDF-from-Scratch.html">从头开始用URDF构建视觉机器人模型 [待校准&#64;8996]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/URDF/Building-a-Movable-Robot-Model-with-URDF.html">用URDF建立可移动机器人模型 [待校准&#64;8974]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/URDF/Adding-Physical-and-Collision-Properties-to-a-URDF-Model.html">向URDF模型添加物理和碰撞属性 [待校准&#64;8927]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/URDF/Using-Xacro-to-Clean-Up-a-URDF-File.html">使用Xacro清理URDF文件 [待校准&#64;9075]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/URDF/Using-URDF-with-Robot-State-Publisher.html">将URDF与robot_state_发布者结合使用 [待校准&#64;9049]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/URDF/URDF-Main.html">URDF Tutorials</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/URDF/Building-a-Visual-Robot-Model-with-URDF-from-Scratch.html">Building a Visual Robot Model with URDF from Scratch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/URDF/Building-a-Movable-Robot-Model-with-URDF.html">Building a Movable Robot Model with URDF</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/URDF/Adding-Physical-and-Collision-Properties-to-a-URDF-Model.html">Adding Physical and Collision Properties to a URDF Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/URDF/Using-Xacro-to-Clean-Up-a-URDF-File.html">Using Xacro to Clean Up a URDF File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/URDF/Using-URDF-with-Robot-State-Publisher.html">Using URDF with robot_state_publisher</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Topics/Topic-Statistics-Tutorial.html">ROS 2话题统计教程 (c ++) [待校准&#64;8751]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Discovery-Server/Discovery-Server.html">使用Fast DDS Discovery Server作为发现协议 [社区贡献] [待校准&#64;7319]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Allocator-Template-Tutorial.html">实现自定义内存分配器 [待校准&#64;6885]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Simulators/Webots/Setting-up-a-Robot-Simulation-Webots.html">设置机器人仿真 (Webots) [待校准&#64;8222]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Deploying-ROS-2-on-IBM-Cloud.html">IBM Cloud Kubernetes上的ROS2 [社区-贡献] [待校准&#64;7232]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Eclipse-Oxygen-with-ROS-2-and-rviz2.html">带有ROS 2和rviz2的Eclipse Oxygen [社区贡献] [待校准&#64;7387]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Building-Realtime-rt_preempt-kernel-for-ROS-2.html">为ROS 2构建实时Linux [社区-贡献] [待校准&#64;6954]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Ros2bag/Recording-A-Bag-From-Your-Own-Node.html">从您自己的节点记录一个包 [待校准&#64;7994]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Building-ROS2-Package-with-eclipse-2021-06.html">使用eclipse 2021-06构建ROS 2包 [待校准&#64;6926]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Quality-of-Service.html">使用服务质量设置处理有损网络 [待校准&#64;7902]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Managed-Nodes.html">具有托管生命周期的节点管理 [待校准&#64;7809]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Intra-Process-Communication.html">高效的流程内通讯 [待校准&#64;7491]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Rosbag-with-ROS1-Bridge.html">使用ROS 1bridge用rosbag记录和回放话题数据 [待校准&#64;8125]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Real-Time-Programming.html">ROS 2中的实时编程 [待校准&#64;7931]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/dummy-robot-demo.html">尝试dummy robot例程 [待校准&#64;9496]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Logging-and-logger-configuration.html">日志和日志记录器配置例程 [待校准&#64;7762]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Topics/Topic-Statistics-Tutorial.html">ROS 2 Topic Statistics Tutorial (C++)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Discovery-Server/Discovery-Server.html">Using Fast DDS Discovery Server as discovery protocol [community-contributed]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Allocator-Template-Tutorial.html">Implement a custom memory allocator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Simulators/Webots/Setting-up-a-Robot-Simulation-Webots.html">Setting-up a Robot Simulation (Webots)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Deploying-ROS-2-on-IBM-Cloud.html">ROS2 on IBM Cloud Kubernetes [community-contributed]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Eclipse-Oxygen-with-ROS-2-and-rviz2.html">Eclipse Oxygen with ROS 2 and rviz2 [community-contributed]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Building-Realtime-rt_preempt-kernel-for-ROS-2.html">Building realtime Linux for ROS 2 [community-contributed]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Ros2bag/Recording-A-Bag-From-Your-Own-Node.html">Recording a bag from your own node</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Building-ROS2-Package-with-eclipse-2021-06.html">Building ROS 2 Package with eclipse 2021-06</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Quality-of-Service.html">Use quality-of-service settings to handle lossy networks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Managed-Nodes.html">Management of nodes with managed lifecycles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Intra-Process-Communication.html">Efficient intra-process communication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Rosbag-with-ROS1-Bridge.html">Recording and playback of topic data with rosbag using the ROS 1 bridge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Real-Time-Programming.html">Real-time programming in ROS 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/dummy-robot-demo.html">Trying the dummy robot demo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Logging-and-logger-configuration.html">Logging and logger configuration demo</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../How-To-Guides.html">问题指南</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Installation-Troubleshooting.html">安装故障诊断工具 [待校准&#64;6086]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Developing-a-ROS-2-Package.html">开发ROS 2包 [待校准&#64;6065]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Ament-CMake-Documentation.html">ament_cmake用户文档</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Ament-CMake-Python-Documentation.html">ament_cmake_python用户文档 [小鱼&#64;5911]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Launch-files-migration-guide.html">迁移launch文件ROS 1ROS 2 [待校准&#64;6189]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Launch-file-different-formats.html">对ROS 2Launch文件使用Python、XML和YAML [待校准&#64;6162]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Launching-composable-nodes.html">使用ROS 2launch到launch可组合节点 [待校准&#64;6284]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Parameters-YAML-files-migration-guide.html">将YAML参数文件从ROS 1迁移到ROS 2 [待校准&#64;6401]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Node-arguments.html">通过命令行将ROS参数传递给节点 [待校准&#64;6297]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Sync-Vs-Async.html">同步与异步服务的客户端对比 [Alyssa&#64;6523]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/DDS-tuning.html">DDS调优指南</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Overriding-QoS-Policies-For-Recording-And-Playback.html">rosbag2: 重载QoS策略 [待校准&#64;6323]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Working-with-multiple-RMW-implementations.html">使用多个ROS 2中间件实现 [待校准&#64;6619]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Cross-compilation.html">交叉编译 [待校准&#64;5934]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Releasing-a-ROS-2-package-with-bloom.html">发布带有bloom的ROS 2包 [待校准&#64;6488]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Using-Python-Packages.html">将Python包与ROS 2结合使用 [待校准&#64;6562]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/RQt-Port-Plugin-Windows.html">将RQt插件移植到Windows [待校准&#64;6413]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Run-2-nodes-in-single-or-separate-docker-containers.html">在Docker中运行ROS 2节点 [社区-贡献] [待校准&#64;6510]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Package-maintainer-guide.html">ROS 2包维护者指南 [待校准&#64;6336]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Building-a-Custom-Debian-Package.html">构建自定义Debian包</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Topics-Services-Actions.html">话题vs服务vs动作 [小鱼&#64;6548]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Using-Variants.html">使用变体 [待校准&#64;6582]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Using-ros2-param.html">使用 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span></code> 命令行工具 [待校准&#64;6597]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/RQt-Source-Install.html">从源码构建RQt</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../How-To-Guides/RQt-Source-Install-MacOS.html">在macOS上从源文件构建RQt [待校准&#64;6459]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../How-To-Guides/RQt-Source-Install-Windows10.html">在Windows 10上从源文件构建RQt [待校准&#64;6467]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../How-To-Guides.html">How-to Guides</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Installation-Troubleshooting.html">Installation troubleshooting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Developing-a-ROS-2-Package.html">Developing a ROS 2 package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Ament-CMake-Documentation.html">ament_cmake user documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Ament-CMake-Python-Documentation.html">ament_cmake_python user documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Launch-files-migration-guide.html">Migrating launch files from ROS 1 to ROS 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Launch-file-different-formats.html">Using Python, XML, and YAML for ROS 2 Launch Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Launching-composable-nodes.html">Using ROS 2 launch to launch composable nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Parameters-YAML-files-migration-guide.html">Migrating YAML parameter files from ROS 1 to ROS 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Node-arguments.html">Passing ROS arguments to nodes via the command-line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Sync-Vs-Async.html">Synchronous vs. asynchronous service clients</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/DDS-tuning.html">DDS tuning information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Overriding-QoS-Policies-For-Recording-And-Playback.html">rosbag2: Overriding QoS Policies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Working-with-multiple-RMW-implementations.html">Working with multiple ROS 2 middleware implementations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Cross-compilation.html">Cross-compilation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Releasing-a-ROS-2-package-with-bloom.html">Releasing a ROS 2 package with bloom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Using-Python-Packages.html">Using Python Packages with ROS 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/RQt-Port-Plugin-Windows.html">Porting RQt plugins to Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Run-2-nodes-in-single-or-separate-docker-containers.html">Running ROS 2 nodes in Docker [community-contributed]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Package-maintainer-guide.html">ROS 2 Package Maintainer Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Building-a-Custom-Debian-Package.html">Building a custom Debian package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Topics-Services-Actions.html">Topics vs Services vs Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Using-Variants.html">Using variants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/Using-ros2-param.html">Using the <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span></code> command-line tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To-Guides/RQt-Source-Install.html">Building RQt from source</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../How-To-Guides/RQt-Source-Install-MacOS.html">Building RQt from source on macOS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../How-To-Guides/RQt-Source-Install-Windows10.html">Building RQt from source on Windows 10</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="reference internal" href="../Concepts.html">概念</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="About-Domain-ID.html">ROS_DOMAIN_ID</a></li>
-<li class="toctree-l2"><a class="reference internal" href="About-Different-Middleware-Vendors.html">关于不同的ROS 2 DDS/RTPS供应商</a></li>
-<li class="toctree-l2"><a class="reference internal" href="About-Logging.html">关于日志和日志记录器配置</a></li>
-<li class="toctree-l2"><a class="reference internal" href="About-Quality-of-Service-Settings.html">关于服务质量(QOS)设置 [小鱼&#64;9945]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="About-ROS-2-Client-Libraries.html">关于ROS 2客户端库</a></li>
-<li class="toctree-l2"><a class="reference internal" href="About-ROS-Interfaces.html">关于ROS 2接口 [待校准&#64;10102]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="About-ROS-2-Parameters.html">关于ROS 2中的参数 [待校准&#64;10066]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="About-Executors.html">执行器</a></li>
-<li class="toctree-l2"><a class="reference internal" href="About-Topic-Statistics.html">关于话题统计</a></li>
-<li class="toctree-l2"><a class="reference internal" href="About-Command-Line-Tools.html">使用命令行工具进行自检</a></li>
-<li class="toctree-l2"><a class="reference internal" href="About-RQt.html">RQt的概述和使用</a></li>
-<li class="toctree-l2"><a class="reference internal" href="About-Composition.html">关于组件</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">ament和catkin的混合研究(catment) [Alyssa&#64;9595]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="About-Cross-Compilation.html">关于交叉编译</a></li>
-<li class="toctree-l2"><a class="reference internal" href="About-Tf2.html">关于tf2 [待校准&#64;10229]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="About-Build-System.html">关于构建系统</a></li>
-<li class="toctree-l2"><a class="reference internal" href="About-Internal-Interfaces.html">关于内部ROS 2接口</a></li>
-<li class="toctree-l2"><a class="reference internal" href="About-Middleware-Implementations.html">关于ROS 2中间件实现</a></li>
-<li class="toctree-l2"><a class="reference internal" href="About-Client-Interfaces.html">ROS 2客户端接口 (客户端库)</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../Concepts.html">Concepts</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="About-Domain-ID.html">The ROS_DOMAIN_ID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="About-Different-Middleware-Vendors.html">About different ROS 2 DDS/RTPS vendors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="About-Logging.html">About logging and logger configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="About-Quality-of-Service-Settings.html">About Quality of Service settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="About-ROS-2-Client-Libraries.html">About ROS 2 client libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="About-ROS-Interfaces.html">About ROS 2 interfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="About-ROS-2-Parameters.html">About parameters in ROS 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="About-Executors.html">Executors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="About-Topic-Statistics.html">About topic statistics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="About-Command-Line-Tools.html">Introspection with command line tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="About-RQt.html">Overview and usage of RQt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="About-Composition.html">About Composition</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">On the mixing of ament and catkin (catment)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="About-Cross-Compilation.html">About Cross-compilation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="About-Tf2.html">About tf2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="About-Build-System.html">About the build system</a></li>
+<li class="toctree-l2"><a class="reference internal" href="About-Internal-Interfaces.html">About internal ROS 2 interfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="About-Middleware-Implementations.html">About ROS 2 middleware implementations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="About-Client-Interfaces.html">ROS 2 Client Interfaces (Client Libraries)</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../Contributing.html">贡献</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Contributing/Developer-Guide.html">ROS 2开发人员指南 [待校准&#64;449]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Contributing/Code-Style-Language-Versions.html">代码样式和语言版本 [待校准&#64;231]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Contributing/Quality-Guide.html">质量指南: 确保代码质量 [待校准&#64;1031]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Contributing/Migration-Guide.html">从ROS 1迁移指南 [待校准&#64;799]</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Contributing/Migration-Guide-Python.html">来自ROS 1的Python迁移指南 [待校准&#64;1022]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Contributing.html">Contributing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Contributing/Developer-Guide.html">ROS 2 developer guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Contributing/Code-Style-Language-Versions.html">Code style and language versions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Contributing/Quality-Guide.html">Quality guide: ensuring code quality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Contributing/Migration-Guide.html">Migration guide from ROS 1</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Contributing/Migration-Guide-Python.html">Python migration guide from ROS 1</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../Contributing/Build-Farms.html">ROS Build Farms [待校准&#64;186]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Contributing/Windows-Tips-and-Tricks.html">Windows提示和技巧 [待校准&#64;1124]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Contributing/Contributing-To-ROS-2-Documentation.html">为ROS 2文档做出贡献 [待校准&#64;385]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Contributing/Build-Farms.html">ROS Build Farms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Contributing/Windows-Tips-and-Tricks.html">Windows Tips and Tricks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Contributing/Contributing-To-ROS-2-Documentation.html">Contributing to ROS 2 Documentation</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../Contact.html">联系</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../ROSCon-Content.html">ROSCon内容</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Releases.html">发行版</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Releases/Alpha-Overview.html">ROS 2 α 发行版本 (2015年8月-2016年10月) [待校准&#64;1527]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Releases/Beta1-Overview.html">贝塔1 (代号'Asphalt'; 2016年12月) [待校准&#64;1607]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Releases/Beta2-Overview.html">贝塔2 (代号'r2b2'; 2017年7月) [待校准&#64;1641]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Releases/Beta3-Overview.html">贝塔3 (代号'r2b3'; 2017年9月) [待校准&#64;1672]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Ardent-Apalone.html">ROS 2Ardent阿帕隆 (代号'ardent'; 2017年12月) [待校准&#64;4310]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Bouncy-Bolson.html">ROS 2 Bouncy Bolson (代号'bouncy'; 2018年6月) [待校准&#64;4351]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Crystal-Clemmys.html">ROS 2Crystal Clemmys (代号'crystal'; 2018年12月) [待校准&#64;4379]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Dashing-Diademata.html">ROS 2DashingDiademata (代号'dashing'; 2019年5月31日) [待校准&#64;4458]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Eloquent-Elusor.html">ROS 2EloquentElusor (代号'eloquent'; 2019年11月22日) [待校准&#64;4648]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Foxy-Fitzroy.html">ROS 2FoxyFitzroy (代号'foxy'; 2020年6月5日) [待校准&#64;4724]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Galactic-Geochelone.html">ROS 2GalacticGeochelone (代号'galactic'; 2021年5月) [待校准&#64;4870]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Releases/Galactic-Geochelone-Complete-Changelog.html">ROS 2GalacticGeochelone完整变更日志 [待校准&#64;1691]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Humble-Hawksbill.html">ROS 2Humble Hawksbill (代号'humble'; 2022年5月) [待校准&#64;5066]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Rolling-Ridley.html">ROS 2Rolling Ridley (代号'rolling'; 2020年6月) [待校准&#64;5150]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Contact.html">Contact</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ROSCon-Content.html">ROSCon Content</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Releases.html">Distributions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Alpha-Overview.html">ROS 2 alpha releases (Aug 2015 - Oct 2016)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Beta1-Overview.html">Beta 1 (codename 'Asphalt'; December 2016)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Beta2-Overview.html">Beta 2 (codename 'r2b2'; July 2017)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Beta3-Overview.html">Beta 3 (codename 'r2b3'; September 2017)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Ardent-Apalone.html">ROS 2 Ardent Apalone (codename 'ardent'; December 2017)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Bouncy-Bolson.html">ROS 2 Bouncy Bolson (codename 'bouncy'; June 2018)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Crystal-Clemmys.html">ROS 2 Crystal Clemmys (codename 'crystal'; December 2018)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Dashing-Diademata.html">ROS 2 Dashing Diademata (codename 'dashing'; May 31st, 2019)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Eloquent-Elusor.html">ROS 2 Eloquent Elusor (codename 'eloquent'; November 22nd, 2019)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Foxy-Fitzroy.html">ROS 2 Foxy Fitzroy (codename 'foxy'; June 5th, 2020)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Galactic-Geochelone.html">ROS 2 Galactic Geochelone (codename 'galactic'; May, 2021)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Galactic-Geochelone-Complete-Changelog.html">ROS 2 Galactic Geochelone Complete Changelog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Humble-Hawksbill.html">ROS 2 Humble Hawksbill (codename 'humble'; May, 2022)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Rolling-Ridley.html">ROS 2 Rolling Ridley (codename 'rolling'; June 2020)</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../Features.html">功能状态</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Roadmap.html">开发计划（Roadmap）</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Feature-Ideas.html">功能理念</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Governance.html">项目管理</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Governance/ROS2-TSC-Charter.html">ROS 2技术指导委员会章程</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Governance/ROS2-TSC-Intake-process.html">ROS 2 TSC申请人加入流程 [小鱼&#64;1387]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Governance/How-To-Start-A-Community-Working-Group.html">如何成立社区工作组 [待校准&#64;1272]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Features.html">Features Status</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Roadmap.html">Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Feature-Ideas.html">Feature Ideas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Governance.html">Project Governance</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Governance/ROS2-TSC-Charter.html">ROS 2 Technical Steering Committee Charter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Governance/ROS2-TSC-Intake-process.html">ROS 2 TSC applicant intake process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Governance/How-To-Start-A-Community-Working-Group.html">How to Start a Community Working Group</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../Marketing.html">营销材料</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Related-Projects.html">相关项目</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Related-Projects/Intel-ROS2-Projects.html">Intel ROS2 项目</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Related-Projects/Nvidia-ROS2-Projects.html">NVIDIA ROS 2 项目</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Marketing.html">Marketing Materials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Related-Projects.html">Related Projects</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Related-Projects/Intel-ROS2-Projects.html">Intel ROS 2 Projects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Related-Projects/Nvidia-ROS2-Projects.html">NVIDIA ROS 2 Projects</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../Glossary.html">相关术语</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Glossary.html">Glossary</a></li>
 </ul>
 
         </div>
@@ -265,10 +266,10 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../Concepts.html">概念</a> &raquo;</li>
-      <li>ament和catkin的混合研究(catment) [Alyssa&#64;9595]</li>
+          <li><a href="../Concepts.html">Concepts</a> &raquo;</li>
+      <li>On the mixing of ament and catkin (catment)</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ros2/ros2_documentation/blob/foxy/source/Concepts/About-Catment.rst" class="fa fa-github"> 在 GitHub 上修改</a>
+              <a href="https://github.com/ros2/ros2_documentation/blob/rolling/source/Concepts/About-Catment.rst" class="fa fa-github"> 在 GitHub 上修改</a>
       </li>
   </ul>
   <hr/>
@@ -278,82 +279,108 @@
              
 
 
-  <div class="section" id="on-the-mixing-of-ament-and-catkin-catment">
-<h1>ament和catkin的混合研究(catment) <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9595">[Alyssa&#64;9595]</a><a class="headerlink" href="#on-the-mixing-of-ament-and-catkin-catment" title="永久链接至标题"></a></h1>
-<p><strong>接下来的一切都是试验性的和推测性的。</strong> <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9596">[Alyssa&#64;9596]</a></p>
+  <section id="on-the-mixing-of-ament-and-catkin-catment">
+<h1>On the mixing of ament and catkin (catment)<a class="headerlink" href="#on-the-mixing-of-ament-and-catkin-catment" title="永久链接至标题"></a></h1>
+<p><strong>All that follows is experimental and speculative.</strong></p>
 <div class="contents local topic" id="table-of-contents">
-<p class="topic-title">目录</p>
+<p class="topic-title">Table of Contents</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#background" id="id1">背景</a></p></li>
-<li><p><a class="reference internal" href="#postulates" id="id2">假设</a></p></li>
-<li><p><a class="reference internal" href="#use-cases-with-experimental-implementations" id="id3">具有实验性实现的使用案例 [Alyssa&#64;9617]</a></p>
+<li><p><a class="reference internal" href="#background" id="id1">Background</a></p></li>
+<li><p><a class="reference internal" href="#postulates" id="id2">Postulates</a></p></li>
+<li><p><a class="reference internal" href="#use-cases-with-experimental-implementations" id="id3">Use cases, with experimental implementations</a></p>
 <ul>
-<li><p><a class="reference internal" href="#adding-ros-packages-to-a-ros-2-workspace-and-building-with-ament-build" id="id4">将ROS包添加到ROS 2工作空间并使用 <code class="docutils literal notranslate"><span class="pre">ament</span> <span class="pre">build</span></code> 构建 [Alyssa&#64;9618]</a></p></li>
-<li><p><a class="reference internal" href="#building-ros-2-packages-with-catkin-make-isolated" id="id5">用 <code class="docutils literal notranslate"><span class="pre">catkin_make_isolated</span></code> 构建ROS 2包 [待校准&#64;9640]</a></p></li>
-<li><p><a class="reference internal" href="#combining-all-of-ros-and-ros-2-in-one-workspace-and-building-it-todo" id="id6">将所有ROS和ROS 2组合在一个工作空间中并构建它 (待办事项) [Alyssa&#64;9649]</a></p></li>
-<li><p><a class="reference internal" href="#using-bloom-to-release-ament-packages-todo" id="id7">使用 <code class="docutils literal notranslate"><span class="pre">bloom</span></code> 释放 <code class="docutils literal notranslate"><span class="pre">ament</span></code> 包 (待办事项) [Alyssa&#64;9653]</a></p></li>
+<li><p><a class="reference internal" href="#adding-ros-packages-to-a-ros-2-workspace-and-building-with-ament-build" id="id4">Adding ROS packages to a ROS 2 workspace and building with <code class="docutils literal notranslate"><span class="pre">ament</span> <span class="pre">build</span></code></a></p></li>
+<li><p><a class="reference internal" href="#building-ros-2-packages-with-catkin-make-isolated" id="id5">Building ROS 2 packages with <code class="docutils literal notranslate"><span class="pre">catkin_make_isolated</span></code></a></p></li>
+<li><p><a class="reference internal" href="#combining-all-of-ros-and-ros-2-in-one-workspace-and-building-it-todo" id="id6">Combining all of ROS and ROS 2 in one workspace and building it (TODO)</a></p></li>
+<li><p><a class="reference internal" href="#using-bloom-to-release-ament-packages-todo" id="id7">Using <code class="docutils literal notranslate"><span class="pre">bloom</span></code> to release <code class="docutils literal notranslate"><span class="pre">ament</span></code> packages (TODO)</a></p></li>
 </ul>
 </li>
 </ul>
 </div>
-<div class="section" id="background">
-<h2><a class="toc-backref" href="#id1">背景</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
-<p>曾经有一个编译工具被称为 <code class="docutils literal notranslate"><span class="pre">rosbuild</span></code> 。然后推出了另外一个工具叫做 <code class="docutils literal notranslate"><span class="pre">catkin</span></code> ，很大程度上取代了 <code class="docutils literal notranslate"><span class="pre">rosbuild</span></code> 。最近介绍一个工具叫做 <code class="docutils literal notranslate"><span class="pre">ament</span></code> ，有一天可能会取代 <code class="docutils literal notranslate"><span class="pre">catkin</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9599">[Alyssa&#64;9599]</a></p>
-<p>这三种工具都可以被认为是“元构建系统”。它们位于其他构建系统之上 (例如，CMake、Python setuptools)，并提供旨在使这些构建系统更易于使用的额外功能，尤其是在跨多个包管理依赖关系以及在单个工作区中构建多个包时。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9600">[Alyssa&#64;9600]</a></p>
-<p>这些元构建系统中的每一个都会执行两个操作: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9601">[Alyssa&#64;9601]</a></p>
+<section id="background">
+<h2><a class="toc-backref" href="#id1">Background</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
+<p>There once was a thing called <code class="docutils literal notranslate"><span class="pre">rosbuild</span></code>.
+Then came a thing called <code class="docutils literal notranslate"><span class="pre">catkin</span></code>, which largely replaced <code class="docutils literal notranslate"><span class="pre">rosbuild</span></code>.
+Recently introduced is a thing called <code class="docutils literal notranslate"><span class="pre">ament</span></code>, which may one day replace <code class="docutils literal notranslate"><span class="pre">catkin</span></code>.</p>
+<p>All three tools can be considered &quot;meta-build systems.&quot;
+They sit atop other build systems (e.g., CMake, Python setuptools) and provide extra functionality that's intended to make those build systems easier to use, especially when managing dependencies across multiple packages and when building multiple packages in a single workspace.</p>
+<p>Each of these meta-build systems does two things:</p>
 <ol class="arabic simple">
-<li><p>将API添加到底层构建系统 (例如，CMake)，可用于简化常见任务 (例如，在构建可执行文件时提供由依赖包导出的所有标志)。通常有钩子程序允许包在核心元构建系统之外注入额外的API。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9602">[Alyssa&#64;9602]</a></p>
+<li><p>Add API to the underlying build system (e.g,. CMake) that can be used to simplify common tasks (e.g., supplying all the flags exported by depended-upon packages when building an executable).
+There are usually hooks to allow injection of extra API by packages outside of the core meta-build system.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">rosbuild</span></code>: <code class="docutils literal notranslate"><span class="pre">mk/cmake.mk</span></code>, <code class="docutils literal notranslate"><span class="pre">rosbuild_init()</span></code>, <code class="docutils literal notranslate"><span class="pre">rosbuild_add_executable()</span></code> 等 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9603">[Alyssa&#64;9603]</a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">catkin</span></code>: <code class="docutils literal notranslate"><span class="pre">catkin_package()</span></code>, <code class="docutils literal notranslate"><span class="pre">catkin_install_python()</span></code> 等 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9604">[Alyssa&#64;9604]</a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ament</span></code>: <code class="docutils literal notranslate"><span class="pre">ament_target_dependencies()</span></code>, <code class="docutils literal notranslate"><span class="pre">ament_export_dependencies()</span></code>, <code class="docutils literal notranslate"><span class="pre">ament_package()</span></code> 等 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9605">[Alyssa&#64;9605]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rosbuild</span></code>: <code class="docutils literal notranslate"><span class="pre">mk/cmake.mk</span></code>, <code class="docutils literal notranslate"><span class="pre">rosbuild_init()</span></code>, <code class="docutils literal notranslate"><span class="pre">rosbuild_add_executable()</span></code>, etc.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">catkin</span></code>: <code class="docutils literal notranslate"><span class="pre">catkin_package()</span></code>, <code class="docutils literal notranslate"><span class="pre">catkin_install_python()</span></code>, etc.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ament</span></code>: <code class="docutils literal notranslate"><span class="pre">ament_target_dependencies()</span></code>, <code class="docutils literal notranslate"><span class="pre">ament_export_dependencies()</span></code>, <code class="docutils literal notranslate"><span class="pre">ament_package()</span></code>, etc.</p></li>
 </ul>
 </li>
-<li><p>提供一种工具，该工具可用于在包含许多包的工作区上按依赖项顺序迭代，构建并可能安装每个包。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9606">[Alyssa&#64;9606]</a></p>
+<li><p>Provide a tool that can be used to iterate in dependency order over a workspace full of packages, building and perhaps installing each one.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">rosbuild</span></code>: <code class="docutils literal notranslate"><span class="pre">rosmake</span></code> <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9607">[待校准&#64;9607]</a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">catkin</span></code>: <code class="docutils literal notranslate"><span class="pre">catkin</span> <span class="pre">build</span></code>, <code class="docutils literal notranslate"><span class="pre">catkin_make</span></code>, <code class="docutils literal notranslate"><span class="pre">catkin_make_isolated</span></code> 等 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9608">[Alyssa&#64;9608]</a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ament</span></code>: <code class="docutils literal notranslate"><span class="pre">ament</span> <span class="pre">build</span></code> <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9609">[待校准&#64;9609]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rosbuild</span></code>: <code class="docutils literal notranslate"><span class="pre">rosmake</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">catkin</span></code>: <code class="docutils literal notranslate"><span class="pre">catkin</span> <span class="pre">build</span></code>, <code class="docutils literal notranslate"><span class="pre">catkin_make</span></code>, <code class="docutils literal notranslate"><span class="pre">catkin_make_isolated</span></code>, etc.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ament</span></code>: <code class="docutils literal notranslate"><span class="pre">ament</span> <span class="pre">build</span></code></p></li>
 </ul>
 </li>
 </ol>
-<p>将所有这些系统连接在一起的是将代码分成**包**的共同线程，每个包包含一个清单文件 ( <code class="docutils literal notranslate"><span class="pre">manifest.xml</span></code> 或 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> )。该清单是元构建系统 (API和构建工具) 两个部分运行所必需的 (除了一些例外)。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9610">[Alyssa&#64;9610]</a></p>
-</div>
-<div class="section" id="postulates">
-<h2><a class="toc-backref" href="#id2">假设</a><a class="headerlink" href="#postulates" title="永久链接至标题"></a></h2>
+<p>The common thread that ties all of these systems together is the division of the code into <strong>packages</strong>, with each package containing a manifest file (<code class="docutils literal notranslate"><span class="pre">manifest.xml</span></code> or <code class="docutils literal notranslate"><span class="pre">package.xml</span></code>).
+This manifest is required (with some exceptions) for both parts of the meta-build system (API and building tool) to function.</p>
+</section>
+<section id="postulates">
+<h2><a class="toc-backref" href="#id2">Postulates</a><a class="headerlink" href="#postulates" title="永久链接至标题"></a></h2>
 <ol class="arabic simple">
-<li><p><strong>虽然我们通常认为元构建系统的两个方面是耦合的，但它们不是必须的。</strong> 包内部使用的API和遍历包的工具可以被认为在很大程度上是独立的，包清单构成它们之间的接口。原则上没有理由，例如，不能修改 <code class="docutils literal notranslate"><span class="pre">rosmake</span></code> 来迭代一个由 <code class="docutils literal notranslate"><span class="pre">catkin</span></code> 包组成的工作空间，按照依赖关系的顺序进入软件包，并为每个软件包执行通常的 <code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">build;</span> <span class="pre">cd</span> <span class="pre">build;</span> <span class="pre">cmake</span> <span class="pre">..;</span> <span class="pre">make</span> <span class="pre">install</span></code> 惯例 (通过将适当的标志传递给 <code class="docutils literal notranslate"><span class="pre">cmake</span></code> 和 <code class="docutils literal notranslate"><span class="pre">make</span></code> )。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9612">[Alyssa&#64;9612]</a></p></li>
-<li><p><strong>从一个元构建系统迁移到另一个元构建系统所需的工作量应该被最小化。</strong> 从 <code class="docutils literal notranslate"><span class="pre">rosbuild</span></code> 到 <code class="docutils literal notranslate"><span class="pre">catkin</span></code> 的大规模迁移是困难的，对社区中的许多人来说仍然是一个痛点。虽然要求开发人员进行改变以换取对新功能的访问是合理的，但在不牺牲新系统的有效性的前提下所需的更改应尽可能小。当旧系统被广泛使用时，情况尤其如此。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9613">[Alyssa&#64;9613]</a></p>
+<li><p><strong>While we usually consider the two aspects of a meta-build system to be coupled, they needn't be.</strong>
+The API used inside a package and the tool that iterates over the packages can be considered largely independent, with the package manifest forming the interface between them.
+There's no reason in principle why, for example, <code class="docutils literal notranslate"><span class="pre">rosmake</span></code> couldn't be modified to iterate over a workspace filled with <code class="docutils literal notranslate"><span class="pre">catkin</span></code> packages, stepping into them in dependency order and doing the usual <code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">build;</span> <span class="pre">cd</span> <span class="pre">build;</span> <span class="pre">cmake</span> <span class="pre">..;</span> <span class="pre">make</span> <span class="pre">install</span></code> routine for each one (with appropriate flags passed to <code class="docutils literal notranslate"><span class="pre">cmake</span></code> and <code class="docutils literal notranslate"><span class="pre">make</span></code>).</p></li>
+<li><p><strong>The effort required to migrate from one meta-build system to another should be minimized.</strong>
+The mass migration from <code class="docutils literal notranslate"><span class="pre">rosbuild</span></code> to <code class="docutils literal notranslate"><span class="pre">catkin</span></code> was difficult and remains a sore point for many in the community.
+While it's reasonable to ask developers to make changes in exchange for getting access to new functionality, the changes that are required should be as small as possible without sacrificing the effectiveness of the new system.
+This is especially true when the old system is in widespread use.</p>
 <ol class="arabic simple">
-<li><p>推论: <strong>没有很好的理由，就不需要迁移到新的元构建系统。</strong> 如果开发者不想要新系统提供的功能，那么她就不应该被强迫从老的系统迁移到新的系统，除非旧系统有什么不可挽回故障 (例如， <code class="docutils literal notranslate"><span class="pre">rosbuild</span></code> 的源内构建模式和缺少  &quot;install&quot; 步骤)。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9614">[Alyssa&#64;9614]</a></p></li>
+<li><p>Corollary: <strong>Migration to a new meta-build system should not be required without a very good reason.</strong>
+If a developer doesn't want the functionality offered by the new system, then she shouldn't be coerced into migrating from the old system unless there's something irrevocably broken about the old system (e.g., <code class="docutils literal notranslate"><span class="pre">rosbuild</span></code>'s in-source build pattern and lack of an &quot;install&quot; step).</p></li>
 </ol>
 </li>
-<li><p><strong>互通性是一件好事。</strong> 只要有可能 (不是所有的组合都是可行的)，开发人员应该能够混合和匹配元构建系统，包括混合他们不同的方面 (例如，使用来自一个系统的构建工具和来自另一个系统的API)。当开发人员想要将使用一个元构建系统 (例如，带有 <code class="docutils literal notranslate"><span class="pre">catkin</span></code> 的ROS)的现有的大型代码，与使用另一个元构建系统的代码提供的新的库和工具 (例如，ROS 2和 <code class="docutils literal notranslate"><span class="pre">ament</span></code> )组合使用时，这种混合和匹配就是尤其重要的。理想情况下，这种组合可以在不需要更改任何代码库使用的API的情况下完成，也不需要告诉开发人员使用哪个构建器工具。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9615">[Alyssa&#64;9615]</a></p>
+<li><p><strong>Interoperability is a good thing.</strong>
+Whenever possible (not all combinations will be practical), developers should be able to mix and match meta-build systems, including mixing their different aspects (i.e., use the building tool from one system and the API from another).
+Such mixing and matching is especially important when developers want to combine a large existing code base using one meta-build system (e.g., ROS with <code class="docutils literal notranslate"><span class="pre">catkin</span></code>) with new libraries and tools offered by a code base using another meta-build system (e.g., ROS 2 with <code class="docutils literal notranslate"><span class="pre">ament</span></code>).
+Ideally that kind of combination can be done without requiring changes to the API used by either code base and without telling the developer which builder tool to use.</p>
 <ol class="arabic simple">
-<li><p>推论: <strong>工作空间不必同质。</strong> 没有理由不能自由混合，例如在两个方向上都存在依赖关系的 <code class="docutils literal notranslate"><span class="pre">catkin</span></code> 和 <code class="docutils literal notranslate"><span class="pre">ament</span></code> 包在一个工作区，只要正在使用的构建器工具知道如何同时构建它们。包 (至少是CMake控制的包) 之间的主要接口是它们的CMake配置文件。只要该配置文件遵循标准协议 (设置 <code class="docutils literal notranslate"><span class="pre">foo_LIBRARIES</span></code> 等)，那么谁编写该文件就无关紧要。它可以由 <code class="docutils literal notranslate"><span class="pre">catkin</span></code> 或 <code class="docutils literal notranslate"><span class="pre">ament</span></code> 自动生成，甚至可以由想要在其包中使用纯CMake的开发人员手动编写，但仍要有 <code class="docutils literal notranslate"><span class="pre">catkin</span></code> 或 <code class="docutils literal notranslate"><span class="pre">ament</span></code> 包依赖。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9616">[Alyssa&#64;9616]</a></p></li>
+<li><p>Corollary: <strong>Workspaces needn't be homogeneous.</strong>
+There's no reason that we shouldn't be able to freely mix, say, <code class="docutils literal notranslate"><span class="pre">catkin</span></code> and <code class="docutils literal notranslate"><span class="pre">ament</span></code> packages in one workspace, with dependencies going in both directions, so long as the builder tool in use knows how to build them both.
+The primary interface between packages (at least, CMake-controlled packages) is their CMake configuration file.
+So long as that configuration file follows the standard protocol (setting <code class="docutils literal notranslate"><span class="pre">foo_LIBRARIES</span></code>, etc.), then it shouldn't matter who wrote the file.
+It could be auto-generated by <code class="docutils literal notranslate"><span class="pre">catkin</span></code> or <code class="docutils literal notranslate"><span class="pre">ament</span></code>, or even manually crafted by a developer who wants to use plain CMake in her package, but still have that package depended-upon by <code class="docutils literal notranslate"><span class="pre">catkin</span></code> or <code class="docutils literal notranslate"><span class="pre">ament</span></code> packages.</p></li>
 </ol>
 </li>
 </ol>
-</div>
-<div class="section" id="use-cases-with-experimental-implementations">
-<h2>具有实验性实现的使用案例 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9617">[Alyssa&#64;9617]</a><a class="headerlink" href="#use-cases-with-experimental-implementations" title="永久链接至标题"></a></h2>
-<div class="section" id="adding-ros-packages-to-a-ros-2-workspace-and-building-with-ament-build">
-<h3>将ROS包添加到ROS 2工作空间并使用 <code class="docutils literal notranslate"><span class="pre">ament</span> <span class="pre">build</span></code> 构建 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9618">[Alyssa&#64;9618]</a><a class="headerlink" href="#adding-ros-packages-to-a-ros-2-workspace-and-building-with-ament-build" title="永久链接至标题"></a></h3>
-<p>假设您要添加一些现有的ROS包到ROS2的工作空间中， 但不想将ROS包从 <code class="docutils literal notranslate"><span class="pre">catkin</span></code> 迁移到 <code class="docutils literal notranslate"><span class="pre">ament</span></code>  (反之亦然)。以下是两个允许您执行此操作的补丁: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9619">[Alyssa&#64;9619]</a></p>
+</section>
+<section id="use-cases-with-experimental-implementations">
+<h2><a class="toc-backref" href="#id3">Use cases, with experimental implementations</a><a class="headerlink" href="#use-cases-with-experimental-implementations" title="永久链接至标题"></a></h2>
+<section id="adding-ros-packages-to-a-ros-2-workspace-and-building-with-ament-build">
+<h3><a class="toc-backref" href="#id4">Adding ROS packages to a ROS 2 workspace and building with <code class="docutils literal notranslate"><span class="pre">ament</span> <span class="pre">build</span></code></a><a class="headerlink" href="#adding-ros-packages-to-a-ros-2-workspace-and-building-with-ament-build" title="永久链接至标题"></a></h3>
+<p>Let's say that you want to add some existing ROS packages to your ROS 2 workspace and don't want to migrate the ROS packages from <code class="docutils literal notranslate"><span class="pre">catkin</span></code> to <code class="docutils literal notranslate"><span class="pre">ament</span></code> (or vice versa). Here are two patches that let you do that:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://github.com/ament/ament_package/compare/catkin?expand=1">ament_package</a> : 增加对格式1包清单的支持，而不是要求格式2。这一变化与 <code class="docutils literal notranslate"><span class="pre">catkin</span></code> 和 <code class="docutils literal notranslate"><span class="pre">ament</span></code> 的对比没有严格的关系，因为格式2已经出现一段时间并且 <code class="docutils literal notranslate"><span class="pre">catkin</span></code> 支持它，所以开发人员已经可以将他们的清单更新为格式2。但是有大量的ROS代码使用格式1，所以我们应该支持它。该实现可以改进，例如，通过推理各种类型的依赖标签以及它们在格式1和2之间的差异。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9620">[Alyssa&#64;9620]</a></p></li>
-<li><p><a class="reference external" href="https://github.com/ament/ament_tools/compare/catkin?expand=1">ament_tools</a> : 在 <code class="docutils literal notranslate"><span class="pre">ament</span></code> 中添加一个新的 <code class="docutils literal notranslate"><span class="pre">catkin</span></code> 构建类型。此实现只是将 <code class="docutils literal notranslate"><span class="pre">catkin</span></code> 包与纯 <code class="docutils literal notranslate"><span class="pre">cmake</span></code> 包同等对待，这样似乎工作正常。它还可以做得更复杂。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9621">[Alyssa&#64;9621]</a></p></li>
+<li><p><a class="reference external" href="https://github.com/ament/ament_package/compare/catkin?expand=1">ament_package</a>:
+Add support for format 1 package manifests, instead of requiring format 2.
+This change isn't strictly related to <code class="docutils literal notranslate"><span class="pre">catkin</span></code> vs. <code class="docutils literal notranslate"><span class="pre">ament</span></code>, because format 2 has been around for a while and <code class="docutils literal notranslate"><span class="pre">catkin</span></code> supports it, so developers could already update their manifests to format 2.
+But there's a ton of ROS code out there that uses format 1, so we should support it.
+This implementation could be improved, e.g., by reasoning over the various flavors of depend tags and how they differ between formats 1 and 2.</p></li>
+<li><p><a class="reference external" href="https://github.com/ament/ament_tools/compare/catkin?expand=1">ament_tools</a>:
+Add a new <code class="docutils literal notranslate"><span class="pre">catkin</span></code> build type to <code class="docutils literal notranslate"><span class="pre">ament</span></code>.
+This implementation just treats <code class="docutils literal notranslate"><span class="pre">catkin</span></code> packages the same as plain <code class="docutils literal notranslate"><span class="pre">cmake</span></code> packages, which seems to work fine.
+It could be made more sophisticated.</p></li>
 </ul>
-<p>示例用法： <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9622">[Alyssa&#64;9622]</a></p>
+<p>Example usage:</p>
 <ol class="arabic simple">
-<li><p>使用上面提到的分支，像往常一样获取ROS 2代码。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9623">[待校准&#64;9623]</a></p></li>
-<li><p>向您的工作空间添加一些 <code class="docutils literal notranslate"><span class="pre">catkin</span></code> ROS包，确保满足它们的所有依赖项 (或者存在于工作空间中，或者在source合适的安装shell文件后安装在其他地方)。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9624">[Alyssa&#64;9624]</a></p></li>
-<li><p>像往常一样构建 (例如， <code class="docutils literal notranslate"><span class="pre">./src/ament/ament_tools/scripts/ament.by</span> <span class="pre">build</span></code> )。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9625">[Alyssa&#64;9625]</a></p></li>
+<li><p>Get the ROS 2 code as usual, using the branches mentioned above.</p></li>
+<li><p>Add to your workspace some <code class="docutils literal notranslate"><span class="pre">catkin</span></code> ROS packages, ensuring that all of their dependencies are satisfied (either also present in the workspace or installed elsewhere with appropriate setup shell files sourced).</p></li>
+<li><p>Build as usual (e.g., <code class="docutils literal notranslate"><span class="pre">./src/ament/ament_tools/scripts/ament.by</span> <span class="pre">build</span></code>).</p></li>
 </ol>
-<p>瞧: 您的现有代码不会仅仅因为使用了新构建工具而突然崩溃。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9626">[Alyssa&#64;9626]</a></p>
-<div class="section" id="variation-building-ros-packages-with-ament-build">
-<h4>变体: 用 <code class="docutils literal notranslate"><span class="pre">ament</span> <span class="pre">build</span></code> 构建ROS包 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9627">[Alyssa&#64;9627]</a><a class="headerlink" href="#variation-building-ros-packages-with-ament-build" title="永久链接至标题"></a></h4>
-<p>假设您喜欢新的 <code class="docutils literal notranslate"><span class="pre">ament</span></code> 工具，并希望使用它来构建内部使用 <code class="docutils literal notranslate"><span class="pre">catkin</span></code> 的现有ROS包。这里有一个如何做到这一点的例子，安装一个最轻量的 <code class="docutils literal notranslate"><span class="pre">ament</span></code> 工具，然后用它来构建一个完全由ROS <code class="docutils literal notranslate"><span class="pre">catkin</span></code> 包组成的工作空间: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9628">[Alyssa&#64;9628]</a></p>
+<p>Voila: your existing code isn't suddenly broken just because there's a new builder tool in use.</p>
+<section id="variation-building-ros-packages-with-ament-build">
+<h4>Variation: Building ROS packages with <code class="docutils literal notranslate"><span class="pre">ament</span> <span class="pre">build</span></code><a class="headerlink" href="#variation-building-ros-packages-with-ament-build" title="永久链接至标题"></a></h4>
+<p>Let's say that you love the new <code class="docutils literal notranslate"><span class="pre">ament</span></code> tool and want to use it to build your existing ROS packages that use <code class="docutils literal notranslate"><span class="pre">catkin</span></code> internally.
+Here's an example of how to do that, by doing a minimal installation of <code class="docutils literal notranslate"><span class="pre">ament</span></code> and then using it to build a workspace full of ROS <code class="docutils literal notranslate"><span class="pre">catkin</span></code> packages:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir -p ~/ament_ws/src
 <span class="nb">cd</span> ~/ament_ws/src
 git clone https://github.com/osrf/osrf_pycommon.git
@@ -368,18 +395,19 @@ git checkout catkin
  ./src/ament_tools/scripts/ament.py build
 </pre></div>
 </div>
-<p>现在构建ROS包： <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9629">[Alyssa&#64;9629]</a></p>
+<p>Now build the ROS packages:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>. <span class="nv">$HOME</span>/ament_ws/install/setup.bash
 <span class="nb">cd</span> ~/ros_catkin_ws
 ament build
 </pre></div>
 </div>
-<p>瞧: 你使用 <code class="docutils literal notranslate"><span class="pre">ament</span></code> 构建工具来构建了你的 <code class="docutils literal notranslate"><span class="pre">catkin</span></code> 包，而不必迁移它们。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9630">[Alyssa&#64;9630]</a></p>
-</div>
-<div class="section" id="variation-using-the-catkin-api-in-a-ros-2-package">
-<h4>变体: 在ROS 2包中使用 <code class="docutils literal notranslate"><span class="pre">catkin</span></code> API <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9631">[待校准&#64;9631]</a><a class="headerlink" href="#variation-using-the-catkin-api-in-a-ros-2-package" title="永久链接至标题"></a></h4>
-<p>让我们假设你正在内部使用 <code class="docutils literal notranslate"><span class="pre">ament</span></code> API的ROS 2之上构建，并且您想要使用 <code class="docutils literal notranslate"><span class="pre">catkin</span></code> API添加一个新包。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9632">[Alyssa&#64;9632]</a></p>
-<p>为了完成这项工作，我们需要安装一个 Python3的 <code class="docutils literal notranslate"><span class="pre">catkin</span></code>  (二进制debians使用Python2.7)。下面是一个安装到 <code class="docutils literal notranslate"><span class="pre">$HOME/catkin</span></code> 的例子: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9633">[Alyssa&#64;9633]</a></p>
+<p>Voila: you used the <code class="docutils literal notranslate"><span class="pre">ament</span></code> build tool to build your <code class="docutils literal notranslate"><span class="pre">catkin</span></code> packages, without having to migrate them.</p>
+</section>
+<section id="variation-using-the-catkin-api-in-a-ros-2-package">
+<h4>Variation: Using the <code class="docutils literal notranslate"><span class="pre">catkin</span></code> API in a ROS 2 package<a class="headerlink" href="#variation-using-the-catkin-api-in-a-ros-2-package" title="永久链接至标题"></a></h4>
+<p>Let's say that you're building on top of ROS 2, which internally uses the <code class="docutils literal notranslate"><span class="pre">ament</span></code> API, and you want to add a new package using the <code class="docutils literal notranslate"><span class="pre">catkin</span></code> API.</p>
+<p>To make this work, we need a Python3 installation of <code class="docutils literal notranslate"><span class="pre">catkin</span></code> (the binary debians use Python2.7).
+Here's an example of doing that, installing to <code class="docutils literal notranslate"><span class="pre">$HOME/catkin</span></code>:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># install catkin_pkg</span>
 git clone https://github.com/ros-infrastructure/catkin_pkg.git
 <span class="nb">cd</span> catkin_pkg
@@ -395,29 +423,41 @@ mkdir build
 make install
 </pre></div>
 </div>
-<p>要使用该版本的catkin，您只需source <code class="docutils literal notranslate"><span class="pre">$HOME/catkin/setup.bash</span></code> 文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9634">[Alyssa&#64;9634]</a></p>
-<p>假设您在 <code class="docutils literal notranslate"><span class="pre">~/ros2_ws</span></code> 中有通常的ROS 2工作空间，并且您在 <code class="docutils literal notranslate"><span class="pre">ament_package</span></code> 和 <code class="docutils literal notranslate"><span class="pre">ament_tools</span></code> 的 <code class="docutils literal notranslate"><span class="pre">catkin</span></code> 分支上。将来自 <a class="reference external" href="https://github.com/gerkey/catment">https://github.com/gerkey/catment</a> 的 <code class="docutils literal notranslate"><span class="pre">image_tools_catkin</span></code> 包添加到该工作空间，这是ROS 2 <code class="docutils literal notranslate"><span class="pre">image_tools</span></code> 包的一个简单端口，将其从 <code class="docutils literal notranslate"><span class="pre">ament</span></code> API转换为 <code class="docutils literal notranslate"><span class="pre">catkin</span></code> API。使用以下命令构建它： <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9635">[Alyssa&#64;9635]</a></p>
+<p>To use that version of catkin, you just need to source the <code class="docutils literal notranslate"><span class="pre">$HOME/catkin/setup.bash</span></code> file.</p>
+<p>Let's assume that you have the usual ROS 2 workspace in <code class="docutils literal notranslate"><span class="pre">~/ros2_ws</span></code>, and that you're on the <code class="docutils literal notranslate"><span class="pre">catkin</span></code> branches in <code class="docutils literal notranslate"><span class="pre">ament_package</span></code> and <code class="docutils literal notranslate"><span class="pre">ament_tools</span></code>.
+Add to that workspace the <code class="docutils literal notranslate"><span class="pre">image_tools_catkin</span></code> package from <a class="reference external" href="https://github.com/gerkey/catment">https://github.com/gerkey/catment</a>.
+It's a simple port of the ROS 2 <code class="docutils literal notranslate"><span class="pre">image_tools</span></code> package, taking it from the <code class="docutils literal notranslate"><span class="pre">ament</span></code> API to the <code class="docutils literal notranslate"><span class="pre">catkin</span></code> API.
+To build it:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/ros2_ws
 . <span class="nv">$HOME</span>/catkin/setup.bash
 ./src/ament/ament_tools/scripts/ament.py build
 </pre></div>
 </div>
-<p>瞧: 在ROS 2上添加新包时，您可以在包中自由选择您喜欢的CMake API。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9636">[待校准&#64;9636]</a></p>
+<p>Voila: when adding new packages atop ROS 2, you're free to choose which CMake API you prefer inside your package.</p>
 <ul class="simple">
-<li><p><strong>警告</strong>: 需要注释掉 <code class="docutils literal notranslate"><span class="pre">catkin_package()</span></code> 中 <code class="docutils literal notranslate"><span class="pre">CATKIN_DEPENDS</span></code> 的使用，因为在某个地方有人因为像 <code class="docutils literal notranslate"><span class="pre">rclcpp</span></code> 这样的东西不是 <code class="docutils literal notranslate"><span class="pre">catkin</span></code> 包而感到不安。这种限制需要以某种方式放宽。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9637">[Alyssa&#64;9637]</a></p></li>
-<li><p>待办事项: 相同的例程，但使用依赖于 <code class="docutils literal notranslate"><span class="pre">catkin</span></code> 包的 <code class="docutils literal notranslate"><span class="pre">ament</span></code> 包 (这很容易)。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9638">[Alyssa&#64;9638]</a></p></li>
-<li><p>待办事项: 同样的例程，但用一个既不使用 <code class="docutils literal notranslate"><span class="pre">ament</span></code> 也不使用 <code class="docutils literal notranslate"><span class="pre">catkin</span></code> 的普通 <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> 软件包，并提供一个手动生成的 <code class="docutils literal notranslate"><span class="pre">fooConfig.cmake</span></code> 文件，该文件导出正确的内容，使其对外部用户来说看起来一样。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9639">[Alyssa&#64;9639]</a></p></li>
+<li><p><strong>Caveat</strong>: Requires commenting out the use of <code class="docutils literal notranslate"><span class="pre">CATKIN_DEPENDS</span></code> inside <code class="docutils literal notranslate"><span class="pre">catkin_package()</span></code>, because somewhere somebody was getting upset that things like <code class="docutils literal notranslate"><span class="pre">rclcpp</span></code> aren't <code class="docutils literal notranslate"><span class="pre">catkin</span></code> packages.
+That constraint needs to be relaxed somehow.</p></li>
+<li><p><strong>TODO</strong>: The same demo but with a <code class="docutils literal notranslate"><span class="pre">ament</span></code> package that depends on a <code class="docutils literal notranslate"><span class="pre">catkin</span></code> package (this is easy).</p></li>
+<li><p><strong>TODO</strong>: The same demo but with a package that has a vanilla <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> that uses neither <code class="docutils literal notranslate"><span class="pre">ament</span></code> nor <code class="docutils literal notranslate"><span class="pre">catkin</span></code>, and provides a manually generated <code class="docutils literal notranslate"><span class="pre">fooConfig.cmake</span></code> file that exports the right stuff to make it look the same to outsiders.</p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="building-ros-2-packages-with-catkin-make-isolated">
-<h3>用 <code class="docutils literal notranslate"><span class="pre">catkin_make_isolated</span></code> 构建ROS 2包 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9640">[待校准&#64;9640]</a><a class="headerlink" href="#building-ros-2-packages-with-catkin-make-isolated" title="永久链接至标题"></a></h3>
-<p>让我们假设您已经熟悉了ROS和 <code class="docutils literal notranslate"><span class="pre">catkin</span></code> ，并且很乐于去尝试ROS2，但你没有心情学习 <code class="docutils literal notranslate"><span class="pre">ament</span></code> 。你宁愿坚持你所知道的，比如用 <code class="docutils literal notranslate"><span class="pre">catkin_make_isolated</span></code> 构建一切。这里有一个允许您这样做的补丁: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9641">[Alyssa&#64;9641]</a></p>
+</section>
+</section>
+<section id="building-ros-2-packages-with-catkin-make-isolated">
+<h3><a class="toc-backref" href="#id5">Building ROS 2 packages with <code class="docutils literal notranslate"><span class="pre">catkin_make_isolated</span></code></a><a class="headerlink" href="#building-ros-2-packages-with-catkin-make-isolated" title="永久链接至标题"></a></h3>
+<p>Let's say that you're already familiar with ROS and <code class="docutils literal notranslate"><span class="pre">catkin</span></code> and that you're excited to try ROS 2, but that you're not in the mood to learn about <code class="docutils literal notranslate"><span class="pre">ament</span></code>.
+You'd rather stick to what you know, such as using <code class="docutils literal notranslate"><span class="pre">catkin_make_isolated</span></code> to build everything.
+Here is a patch that allows you to do that:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://github.com/ros/catkin/compare/ament?expand=1">catkin</a> : 增加对声称自己有 <code class="docutils literal notranslate"><span class="pre">ament_*</span></code> 构建类型的包的支持。此实现唤起 <code class="docutils literal notranslate"><span class="pre">ament</span></code> 来构建每个这样的包。虽然 <code class="docutils literal notranslate"><span class="pre">ament_cmake</span></code> 包可以被视为普通的 <code class="docutils literal notranslate"><span class="pre">cmake</span></code> 包 (就像我们在 <code class="docutils literal notranslate"><span class="pre">ament</span></code> 中添加 <code class="docutils literal notranslate"><span class="pre">catkin</span></code> 支持时所做的那样)，但 <code class="docutils literal notranslate"><span class="pre">ament_python</span></code> 包需要一些粗糙的Python调用。与其试图在 <code class="docutils literal notranslate"><span class="pre">catkin</span></code> 中复制这种逻辑，不如让 <code class="docutils literal notranslate"><span class="pre">ament</span></code> 来处理它。同样在此补丁中，我们将 <code class="docutils literal notranslate"><span class="pre">buildtool_export_depend</span></code> 包添加到构建时考虑的集合中。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9642">[Alyssa&#64;9642]</a></p></li>
-<li><p><a class="reference external" href="https://github.com/ros-infrastructure/catkin_pkg/compare/ament?expand=1">catkin_pkg</a> : 同样在这个补丁，我们将 <code class="docutils literal notranslate"><span class="pre">buildtool_export_depend</span></code> 包添加到计算拓扑顺序需要考虑的任务集中。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9643">[Alyssa&#64;9643]</a></p></li>
+<li><p><a class="reference external" href="https://github.com/ros/catkin/compare/ament?expand=1">catkin</a>:
+Add support for packages that declare themselves to have a build type of <code class="docutils literal notranslate"><span class="pre">ament_*</span></code>.
+This implementation calls out to <code class="docutils literal notranslate"><span class="pre">ament</span></code> to build each such package.
+While <code class="docutils literal notranslate"><span class="pre">ament_cmake</span></code> packages can be treated as plain <code class="docutils literal notranslate"><span class="pre">cmake</span></code> packages (as we did when adding <code class="docutils literal notranslate"><span class="pre">catkin</span></code> support to <code class="docutils literal notranslate"><span class="pre">ament</span></code>), <code class="docutils literal notranslate"><span class="pre">ament_python</span></code> packages require some gnarly invocations of Python.
+Instead of trying to replicate that logic in <code class="docutils literal notranslate"><span class="pre">catkin</span></code>, it's easier to just let <code class="docutils literal notranslate"><span class="pre">ament</span></code> handle it.
+Also in this patch, we add the <code class="docutils literal notranslate"><span class="pre">buildtool_export_depend</span></code> packages to the set that are considered when building.</p></li>
+<li><p><a class="reference external" href="https://github.com/ros-infrastructure/catkin_pkg/compare/ament?expand=1">catkin_pkg</a>:
+Also in this patch, we add the <code class="docutils literal notranslate"><span class="pre">buildtool_export_depend</span></code> packages to the set that are considered when computing the topological order.</p></li>
 </ul>
-<p>因为我们要去调用到 <code class="docutils literal notranslate"><span class="pre">ament</span> <span class="pre">build</span></code> ，我们还需要一个 <code class="docutils literal notranslate"><span class="pre">ament</span></code> 的最小安装，如前一个例子做的那样: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9644">[Alyssa&#64;9644]</a></p>
+<p>Because we're going to call out to <code class="docutils literal notranslate"><span class="pre">ament</span> <span class="pre">build</span></code>, we will also need a minimal installation of <code class="docutils literal notranslate"><span class="pre">ament</span></code>, as done in a previous example:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir -p ~/ament_ws/src
 <span class="nb">cd</span> ~/ament_ws/src
 git clone https://github.com/osrf/osrf_pycommon.git
@@ -432,7 +472,7 @@ git checkout catkin
  ./src/ament_tools/scripts/ament.py build
 </pre></div>
 </div>
-<p>然后我们需要在某处安装catkin的修改版： <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9645">[Alyssa&#64;9645]</a></p>
+<p>Then we need to install the modified version of catkin somewhere:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># install catkin_pkg</span>
 git clone https://github.com/ros-infrastructure/catkin_pkg.git
 <span class="nb">cd</span> catkin_pkg
@@ -448,7 +488,7 @@ mkdir build
 make install
 </pre></div>
 </div>
-<p>现在构建ROS 2包： <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9646">[Alyssa&#64;9646]</a></p>
+<p>Now build the ROS 2 packages:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>. <span class="nv">$HOME</span>/catkin/setup.bash
 . <span class="nv">$HOME</span>/ament_ws/install/setup.bash
 <span class="nb">cd</span> ~/ros2_ws
@@ -456,33 +496,40 @@ touch src/eProsima/AMENT_IGNORE
 <span class="nv">PYTHONPATH</span><span class="o">=</span><span class="nv">$PYTHONPATH</span>:/home/gerkey/ros2_ws_catkin/install_isolated/lib/python3.5/site-packages catkin_make_isolated --install
 </pre></div>
 </div>
-<p>瞧: 你已经用你熟悉的工具构建了ROS 2。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9647">[Alyssa&#64;9647]</a></p>
+<p>Voila: you've built ROS 2 using the tools that you're familiar with.</p>
 <ul class="simple">
-<li><p><strong>警告</strong>: 我们忽略了工作空间中的 <code class="docutils literal notranslate"><span class="pre">eProsima</span></code> 包，因为它们缺少 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 文件，这意味着 <code class="docutils literal notranslate"><span class="pre">catkin</span></code> 看不到它们。 <code class="docutils literal notranslate"><span class="pre">ament</span></code> 有一些处理这种包的启发式方法。选项: 将这些启发式方法反向移植到 <code class="docutils literal notranslate"><span class="pre">catkin</span></code> ; 切换到在工作空间之外安装不含 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 的包; 或者只是在每个包中添加一个 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code>  (例如，在我们自己的fork里)。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9648">[Alyssa&#64;9648]</a></p></li>
+<li><p><strong>Caveat</strong>: we're ignoring the <code class="docutils literal notranslate"><span class="pre">eProsima</span></code> packages in the workspace because they lack <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> files, which means that <code class="docutils literal notranslate"><span class="pre">catkin</span></code> can't see them.
+<code class="docutils literal notranslate"><span class="pre">ament</span></code> has some heuristics for handling such packages.
+Options: backport those heuristics to <code class="docutils literal notranslate"><span class="pre">catkin</span></code>; switch to installing non-<code class="docutils literal notranslate"><span class="pre">package.xml</span></code>-containing packages outside of the workspace; or just add a <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> to each of those packages (e.g., in our own fork).</p></li>
 </ul>
-</div>
-<div class="section" id="combining-all-of-ros-and-ros-2-in-one-workspace-and-building-it-todo">
-<h3>将所有ROS和ROS 2组合在一个工作空间中并构建它 (待办事项) <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9649">[Alyssa&#64;9649]</a><a class="headerlink" href="#combining-all-of-ros-and-ros-2-in-one-workspace-and-building-it-todo" title="永久链接至标题"></a></h3>
-<p>这一步需要整理一些东西，至少包括： <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9650">[Alyssa&#64;9650]</a></p>
+</section>
+<section id="combining-all-of-ros-and-ros-2-in-one-workspace-and-building-it-todo">
+<h3><a class="toc-backref" href="#id6">Combining all of ROS and ROS 2 in one workspace and building it (TODO)</a><a class="headerlink" href="#combining-all-of-ros-and-ros-2-in-one-workspace-and-building-it-todo" title="永久链接至标题"></a></h3>
+<p>This step will require sorting out some things, including at least:</p>
 <ul class="simple">
-<li><p>包名称冲突。我们目前有ROS 2版本的ROS消息包，以及 <code class="docutils literal notranslate"><span class="pre">geometry2</span></code> 的一些包。要么功能需要合并到一个可以支持两个系统的包中，要么新版本需要不同的名称。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9651">[Alyssa&#64;9651]</a></p></li>
-<li><p>消息生成。ROS和ROS 2具有不同的消息生成步骤，其输出可能冲突，也可能不冲突。需要做一些复杂的事情来允许从一个消息包中生成所有正确的文件 (或者，如上所述，新的消息包需要不同的名称)。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9652">[Alyssa&#64;9652]</a></p></li>
+<li><p>Package name conflicts.
+We currently have ROS 2 versions of ROS message packages, as well as some stuff in <code class="docutils literal notranslate"><span class="pre">geometry2</span></code>.
+Either the functionality needs to be merged into one package that can support both systems, or the new versions need different names.</p></li>
+<li><p>Message generation.
+ROS and ROS 2 have different message generation steps, the output of which might or not might conflict.
+Something sort of sophisticated needs to be done to allow generation of all the right artifacts from a single message package (or, as indicated above, the new message packages need different name).</p></li>
 </ul>
-</div>
-<div class="section" id="using-bloom-to-release-ament-packages-todo">
-<h3>使用 <code class="docutils literal notranslate"><span class="pre">bloom</span></code> 释放 <code class="docutils literal notranslate"><span class="pre">ament</span></code> 包 (待办事项) <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9653">[Alyssa&#64;9653]</a><a class="headerlink" href="#using-bloom-to-release-ament-packages-todo" title="永久链接至标题"></a></h3>
-<p>似乎 <code class="docutils literal notranslate"><span class="pre">bloom</span></code> 应该能够发布使用 <code class="docutils literal notranslate"><span class="pre">ament</span></code> CMake API的包，并且生成的发行版本应该能够在farm上构建。我们可以根据需要对 <code class="docutils literal notranslate"><span class="pre">bloom</span></code> 和 <code class="docutils literal notranslate"><span class="pre">ros_buildfarm</span></code> 进行更改以启用此用例。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9654">[Alyssa&#64;9654]</a></p>
-</div>
-</div>
-</div>
+</section>
+<section id="using-bloom-to-release-ament-packages-todo">
+<h3><a class="toc-backref" href="#id7">Using <code class="docutils literal notranslate"><span class="pre">bloom</span></code> to release <code class="docutils literal notranslate"><span class="pre">ament</span></code> packages (TODO)</a><a class="headerlink" href="#using-bloom-to-release-ament-packages-todo" title="永久链接至标题"></a></h3>
+<p>It seems like <code class="docutils literal notranslate"><span class="pre">bloom</span></code> ought be able to release packages that use the <code class="docutils literal notranslate"><span class="pre">ament</span></code> CMake API, and that the resulting releases should be able to be built on the farm.
+We can make changes to <code class="docutils literal notranslate"><span class="pre">bloom</span></code> and <code class="docutils literal notranslate"><span class="pre">ros_buildfarm</span></code> as needed to enable this use case.</p>
+</section>
+</section>
+</section>
 
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="About-Composition.html" class="btn btn-neutral float-left" title="关于组件" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
-        <a href="About-Cross-Compilation.html" class="btn btn-neutral float-right" title="关于交叉编译" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="About-Composition.html" class="btn btn-neutral float-left" title="About Composition" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="About-Cross-Compilation.html" class="btn btn-neutral float-right" title="About Cross-compilation" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
