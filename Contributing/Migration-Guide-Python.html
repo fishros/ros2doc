@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="zh" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>来自ROS 1的Python迁移指南 [待校准@1022] &mdash; ROS 2 documentation  文档</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -55,7 +54,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Windows-Install-Binary.html">在Windows上安装ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Fedora-Development-Setup.html">在Fedora Linux上构建ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Latest-Development-Setup.html">安装最新的ROS 2开发版本</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Installation/Maintaining-a-Source-Checkout.html">Maintaining a source checkout of ROS 2 Rolling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Maintaining-a-Source-Checkout.html">维护ROS 2Foxy源文件的检出</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Testing.html">用于测试的替代安装源</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/DDS-Implementations.html">安装DDS实现</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Install-Connext-Security-Plugins.html">安装Connext安全插件</a></li>
@@ -270,7 +269,7 @@
           <li><a href="Migration-Guide.html">从ROS 1迁移指南 [待校准&#64;799]</a> &raquo;</li>
       <li>来自ROS 1的Python迁移指南 [待校准&#64;1022]</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ros2/ros2_documentation/blob/rolling/source/Contributing/Migration-Guide-Python.rst" class="fa fa-github"> 在 GitHub 上修改</a>
+              <a href="https://github.com/ros2/ros2_documentation/blob/foxy/source/Contributing/Migration-Guide-Python.rst" class="fa fa-github"> 在 GitHub 上修改</a>
       </li>
   </ul>
   <hr/>
@@ -280,9 +279,9 @@
              
 
 
-  <section id="python-migration-guide-from-ros-1">
+  <div class="section" id="python-migration-guide-from-ros-1">
 <h1>来自ROS 1的Python迁移指南 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=1022">[待校准&#64;1022]</a><a class="headerlink" href="#python-migration-guide-from-ros-1" title="永久链接至标题"></a></h1>
-<section id="node-initialization">
+<div class="section" id="node-initialization">
 <h2>节点初始化 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=1023">[待校准&#64;1023]</a><a class="headerlink" href="#node-initialization" title="永久链接至标题"></a></h2>
 <p>在ROS 1中: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=1024">[待校准&#64;1024]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">rospy</span><span class="o">.</span><span class="n">init_node</span><span class="p">(</span><span class="s1">&#39;asdf&#39;</span><span class="p">)</span>
@@ -297,8 +296,8 @@
 <span class="n">node</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Created node&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-</section>
-<section id="ros-parameters">
+</div>
+<div class="section" id="ros-parameters">
 <h2>ROS参数 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=1026">[待校准&#64;1026]</a><a class="headerlink" href="#ros-parameters" title="永久链接至标题"></a></h2>
 <p>在ROS 1中: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=1024">[待校准&#64;1024]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span> <span class="n">port</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">get_param</span><span class="p">(</span><span class="s1">&#39;port&#39;</span><span class="p">,</span> <span class="s1">&#39;/dev/ttyUSB0&#39;</span><span class="p">)</span>
@@ -320,8 +319,8 @@
 <span class="n">node</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;port: &#39;</span> <span class="o">+</span> <span class="n">port</span><span class="p">)</span>
 </pre></div>
 </div>
-</section>
-<section id="creating-a-publisher">
+</div>
+<div class="section" id="creating-a-publisher">
 <h2>创建发布者 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=1027">[待校准&#64;1027]</a><a class="headerlink" href="#creating-a-publisher" title="永久链接至标题"></a></h2>
 <p>在ROS 1中: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=1024">[待校准&#64;1024]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pub</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">Publisher</span><span class="p">(</span><span class="s1">&#39;chatter&#39;</span><span class="p">,</span> <span class="n">String</span><span class="p">)</span>
@@ -331,8 +330,8 @@
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pub</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">create_publisher</span><span class="p">(</span><span class="n">String</span><span class="p">,</span> <span class="s1">&#39;chatter&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-</section>
-<section id="creating-a-subscriber">
+</div>
+<div class="section" id="creating-a-subscriber">
 <h2>创建订户 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=1028">[待校准&#64;1028]</a><a class="headerlink" href="#creating-a-subscriber" title="永久链接至标题"></a></h2>
 <p>在ROS 1中: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=1024">[待校准&#64;1024]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sub</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">Subscriber</span><span class="p">(</span><span class="s1">&#39;chatter&#39;</span><span class="p">,</span> <span class="n">String</span><span class="p">,</span> <span class="n">callback</span><span class="p">)</span>
@@ -342,8 +341,8 @@
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sub</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">create_subscription</span><span class="p">(</span><span class="n">String</span><span class="p">,</span> <span class="s1">&#39;chatter&#39;</span><span class="p">,</span> <span class="n">callback</span><span class="p">)</span>
 </pre></div>
 </div>
-</section>
-<section id="creating-a-service">
+</div>
+<div class="section" id="creating-a-service">
 <h2>创建服务 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=1029">[待校准&#64;1029]</a><a class="headerlink" href="#creating-a-service" title="永久链接至标题"></a></h2>
 <p>在ROS 1中: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=1024">[待校准&#64;1024]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">srv</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">Service</span><span class="p">(</span><span class="s1">&#39;add_two_ints&#39;</span><span class="p">,</span> <span class="n">AddTwoInts</span><span class="p">,</span> <span class="n">add_two_ints_callback</span><span class="p">)</span>
@@ -353,8 +352,8 @@
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">srv</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">create_service</span><span class="p">(</span><span class="n">AddTwoInts</span><span class="p">,</span> <span class="s1">&#39;add_two_ints&#39;</span><span class="p">,</span> <span class="n">add_two_ints_callback</span><span class="p">)</span>
 </pre></div>
 </div>
-</section>
-<section id="creating-a-service-client">
+</div>
+<div class="section" id="creating-a-service-client">
 <h2>创建服务客户端 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=1030">[待校准&#64;1030]</a><a class="headerlink" href="#creating-a-service-client" title="永久链接至标题"></a></h2>
 <p>在ROS 1中: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=1024">[待校准&#64;1024]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">rospy</span><span class="o">.</span><span class="n">wait_for_service</span><span class="p">(</span><span class="s1">&#39;add_two_ints&#39;</span><span class="p">)</span>
@@ -370,8 +369,8 @@
 <span class="n">rclpy</span><span class="o">.</span><span class="n">spin_until_future_complete</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">resp</span><span class="p">)</span>
 </pre></div>
 </div>
-</section>
-</section>
+</div>
+</div>
 
 
 

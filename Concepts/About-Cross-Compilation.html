@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="zh" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>关于交叉编译 &mdash; ROS 2 documentation  文档</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -55,7 +54,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Windows-Install-Binary.html">在Windows上安装ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Fedora-Development-Setup.html">在Fedora Linux上构建ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Latest-Development-Setup.html">安装最新的ROS 2开发版本</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Installation/Maintaining-a-Source-Checkout.html">Maintaining a source checkout of ROS 2 Rolling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Maintaining-a-Source-Checkout.html">维护ROS 2Foxy源文件的检出</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Testing.html">用于测试的替代安装源</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/DDS-Implementations.html">安装DDS实现</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Install-Connext-Security-Plugins.html">安装Connext安全插件</a></li>
@@ -269,7 +268,7 @@
           <li><a href="../Concepts.html">概念</a> &raquo;</li>
       <li>关于交叉编译</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ros2/ros2_documentation/blob/rolling/source/Concepts/About-Cross-Compilation.rst" class="fa fa-github"> 在 GitHub 上修改</a>
+              <a href="https://github.com/ros2/ros2_documentation/blob/foxy/source/Concepts/About-Cross-Compilation.rst" class="fa fa-github"> 在 GitHub 上修改</a>
       </li>
   </ul>
   <hr/>
@@ -279,9 +278,9 @@
              
 
 
-  <section id="about-cross-compilation">
+  <div class="section" id="about-cross-compilation">
 <h1>关于交叉编译<a class="headerlink" href="#about-cross-compilation" title="永久链接至标题"></a></h1>
-<section id="overview">
+<div class="section" id="overview">
 <h2>概述<a class="headerlink" href="#overview" title="永久链接至标题"></a></h2>
 <dl class="simple">
 <dt>开放机器人（Open Robotics）为多个平台提供预构建的ROS 2包，但是出于各种原因许多开发人员仍然依赖 <a class="reference external" href="https://en.wikipedia.org/wiki/Cross_compiler">交叉编译</a> ，例如: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9719">[Alyssa&#64;9719]</a></dt><dd><ul class="simple">
@@ -291,18 +290,18 @@
 </ul>
 </dd>
 </dl>
-</section>
-<section id="how-does-it-work">
+</div>
+<div class="section" id="how-does-it-work">
 <h2>它是如何工作的？ <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9723">[待校准&#64;9723]</a><a class="headerlink" href="#how-does-it-work" title="永久链接至标题"></a></h2>
 <p>交叉编译简单软件 (例如，不依赖于外部库) 相对简单，只需要使用交叉编译器工具链而不是本机工具链。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9724">[待校准&#64;9724]</a></p>
 <p>有许多因素使这个过程更加复杂：-正在构建的软件必须支持目标架构。根据目标体系结构，在构建过程中必须适当隔离和启用特定于体系结构的代码。示例包括汇编代码。-在使用它们的目标软件交叉编译之前，所有依赖项 (例如库) 必须已经存在，或者作为作为预构建包，或者也必须交叉编译。-当使用构建工具 (例如 colcon)构建软件堆栈（相对于独立的软件）时，期望构建工具提供一种机制，允许开发人员在堆栈中每个软件使用的底层构建系统上启用交叉编译。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9725">[Alyssa&#64;9725]</a></p>
-</section>
-<section id="cross-compiling-ros-2">
+</div>
+<div class="section" id="cross-compiling-ros-2">
 <h2>交叉编译ROS 2<a class="headerlink" href="#cross-compiling-ros-2" title="永久链接至标题"></a></h2>
 <p>ROS 2交叉编译工具由Open Robotic和ROS工具工作组共同拥有。它是一个Python脚本，使用docker容器中的仿真器编译支持的目标架构的ROS 2源文件。工具的详细设计可以在 <a class="reference external" href="https://design.ros2.org/articles/cc_build_tools.html">ROS 2 设计</a> 上找到。使用该工具的说明在 <a class="reference external" href="https://github.com/ros-tooling/cross_compile">交叉编译软件包</a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9727">[Alyssa&#64;9727]</a></p>
 <p>如果您使用的是旧版本，请遵循 <a class="reference internal" href="../How-To-Guides/Cross-compilation.html"><span class="doc">交叉编译向导</span></a> 进行操作。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9728">[Alyssa&#64;9728]</a></p>
-</section>
-</section>
+</div>
+</div>
 
 
 

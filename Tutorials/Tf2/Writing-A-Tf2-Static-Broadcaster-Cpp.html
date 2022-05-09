@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="zh" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>编写tf2静态广播器 (c ++) [待校准@8697] &mdash; ROS 2 documentation  文档</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -56,7 +55,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../Installation/Windows-Install-Binary.html">在Windows上安装ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Installation/Fedora-Development-Setup.html">在Fedora Linux上构建ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Installation/Latest-Development-Setup.html">安装最新的ROS 2开发版本</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../Installation/Maintaining-a-Source-Checkout.html">Maintaining a source checkout of ROS 2 Rolling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Installation/Maintaining-a-Source-Checkout.html">维护ROS 2Foxy源文件的检出</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Installation/Testing.html">用于测试的替代安装源</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Installation/DDS-Implementations.html">安装DDS实现</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../Installation/DDS-Implementations/Install-Connext-Security-Plugins.html">安装Connext安全插件</a></li>
@@ -271,7 +270,7 @@
           <li><a href="Tf2-Main.html">tf2教程 [待校准&#64;8518]</a> &raquo;</li>
       <li>编写tf2静态广播器 (c ++) [待校准&#64;8697]</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ros2/ros2_documentation/blob/rolling/source/Tutorials/Tf2/Writing-A-Tf2-Static-Broadcaster-Cpp.rst" class="fa fa-github"> 在 GitHub 上修改</a>
+              <a href="https://github.com/ros2/ros2_documentation/blob/foxy/source/Tutorials/Tf2/Writing-A-Tf2-Static-Broadcaster-Cpp.rst" class="fa fa-github"> 在 GitHub 上修改</a>
       </li>
   </ul>
   <hr/>
@@ -281,7 +280,7 @@
              
 
 
-  <section id="writing-a-tf2-static-broadcaster-c">
+  <div class="section" id="writing-a-tf2-static-broadcaster-c">
 <span id="writingatf2staticbroadcastercpp"></span><h1>编写tf2静态广播器 (c ++) <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8697">[待校准&#64;8697]</a><a class="headerlink" href="#writing-a-tf2-static-broadcaster-c" title="永久链接至标题"></a></h1>
 <p><strong>Goal:</strong> Learn how to broadcast static coordinate frames to tf2.</p>
 <p>Tutorial教程级别: Intermediate中级 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6713">[待校准&#64;6713]</a></p>
@@ -302,19 +301,19 @@
 <li><p><a class="reference internal" href="#summary" id="id8">总结</a></p></li>
 </ul>
 </div>
-<section id="background">
+<div class="section" id="background">
 <h2><a class="toc-backref" href="#id1">背景</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
 <p>发布静态变换对于定义机器人基座与其传感器或非移动部件之间的关系很有用。例如，最容易推理激光扫描仪中心帧中的激光扫描测量。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8699">[待校准&#64;8699]</a></p>
 <p>这是一个独立的教程，涵盖了静态转换的基础知识，由两部分组成。在第一部分中，我们将编写代码以将静态转换发布到tf2。第二部分我们将解释如何使用命令行 <code class="docutils literal notranslate"><span class="pre">static_transform_publisher</span></code> 可执行工具 <code class="docutils literal notranslate"><span class="pre">tf2_ros</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8700">[待校准&#64;8700]</a></p>
 <p>在接下来的两个教程中，我们将编写代码来重现 <a class="reference internal" href="Introduction-To-Tf2.html"><span class="doc">Introduction to tf2</span></a> 教程中的例程。之后，以下教程将重点介绍使用更高级的tf2功能扩展例程。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8701">[待校准&#64;8701]</a></p>
-</section>
-<section id="prerequisites">
+</div>
+<div class="section" id="prerequisites">
 <h2><a class="toc-backref" href="#id2">先决条件</a><a class="headerlink" href="#prerequisites" title="永久链接至标题"></a></h2>
 <p>在之前的教程中，你学习了如何 <a class="reference internal" href="../Workspace/Creating-A-Workspace.html"><span class="doc">create a workspace</span></a> and <a class="reference internal" href="../Creating-Your-First-ROS2-Package.html"><span class="doc">create a package</span></a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8702">[待校准&#64;8702]</a></p>
-</section>
-<section id="tasks">
+</div>
+<div class="section" id="tasks">
 <h2><a class="toc-backref" href="#id3">任务</a><a class="headerlink" href="#tasks" title="永久链接至标题"></a></h2>
-<section id="create-a-package">
+<div class="section" id="create-a-package">
 <h3>1创建包 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7137">[待校准&#64;7137]</a><a class="headerlink" href="#create-a-package" title="永久链接至标题"></a></h3>
 <p>首先，我们将创建一个包，用于本教程和以下教程。调用 <code class="docutils literal notranslate"><span class="pre">learning_tf2_cpp</span></code> 的包将取决于 <code class="docutils literal notranslate"><span class="pre">rclcpp</span></code> 、 <code class="docutils literal notranslate"><span class="pre">tf2</span></code> 、 <code class="docutils literal notranslate"><span class="pre">tf2_ros</span></code> 、 <code class="docutils literal notranslate"><span class="pre">geometry_msgs</span></code> 和 <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> 。本教程的代码存储 <a class="reference external" href="https://raw.githubusercontent.com/ros/geometry_tutorials/ros2/turtle_tf2_cpp/src/static_turtle_tf2_broadcaster.cpp">here</a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8703">[待校准&#64;8703]</a></p>
 <p>打开一个新的终端和 <a class="reference internal" href="../Configuring-ROS2-Environment.html"><span class="doc">source your ROS 2 installation</span></a> ，这样 <code class="docutils literal notranslate"><span class="pre">ros2</span></code> 命令就可以工作了。导航到工作区的 <code class="docutils literal notranslate"><span class="pre">src</span></code> 文件夹并创建一个新包: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8704">[待校准&#64;8704]</a></p>
@@ -322,8 +321,8 @@
 </pre></div>
 </div>
 <p>您的终端将返回一条消息，验证您的包 <code class="docutils literal notranslate"><span class="pre">learning_tf2_cpp</span></code> 及其所有必要的文件和文件夹的创建。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8705">[待校准&#64;8705]</a></p>
-</section>
-<section id="write-the-static-broadcaster-node">
+</div>
+<div class="section" id="write-the-static-broadcaster-node">
 <h3>2写入静态广播器节点 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8706">[待校准&#64;8706]</a><a class="headerlink" href="#write-the-static-broadcaster-node" title="永久链接至标题"></a></h3>
 <p>让我们先创建源文件。在 <code class="docutils literal notranslate"><span class="pre">src/learning_tf2_cpp/src</span></code> 目录中，通过输入以下命令下载示例静态广播器代码: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8707">[待校准&#64;8707]</a></p>
 <div class="sphinx-tabs docutils container">
@@ -353,7 +352,7 @@
 
 <span class="k">using</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">placeholders</span><span class="o">::</span><span class="n">_1</span><span class="p">;</span><span class="w"></span>
 
-<span class="k">class</span><span class="w"> </span><span class="nc">StaticFramePublisher</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">Node</span><span class="w"></span>
+<span class="k">class</span> <span class="nc">StaticFramePublisher</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">Node</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
 <span class="k">public</span><span class="o">:</span><span class="w"></span>
 <span class="w">  </span><span class="k">explicit</span><span class="w"> </span><span class="n">StaticFramePublisher</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">transformation</span><span class="p">[])</span><span class="w"></span>
@@ -421,7 +420,7 @@
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-<section id="examine-the-code">
+<div class="section" id="examine-the-code">
 <h4>2.1检查代码 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8007">[待校准&#64;8007]</a><a class="headerlink" href="#examine-the-code" title="永久链接至标题"></a></h4>
 <p>现在，让我们看一下与将静态乌龟姿势发布到tf2相关的代码。第一行包括所需的头文件。首先，我们包括 <code class="docutils literal notranslate"><span class="pre">geometry_msgs/msg/transform_stamped.hpp</span></code> 来访问 <code class="docutils literal notranslate"><span class="pre">TransformStamped</span></code> 信息类型，我们将把它发布到转换树中。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8708">[待校准&#64;8708]</a></p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;geometry_msgs/msg/transform_stamped.hpp&gt;</span><span class="cp"></span>
@@ -475,8 +474,8 @@
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">tf_publisher_</span><span class="o">-&gt;</span><span class="n">sendTransform</span><span class="p">(</span><span class="n">t</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-</section>
-<section id="add-dependencies">
+</div>
+<div class="section" id="add-dependencies">
 <h4>2.2添加依赖项 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8644">[待校准&#64;8644]</a><a class="headerlink" href="#add-dependencies" title="永久链接至标题"></a></h4>
 <p>导航到 <code class="docutils literal notranslate"><span class="pre">src/learning_tf2_cpp</span></code> 目录，在那里已经为您创建了 <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> 和 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8718">[待校准&#64;8718]</a></p>
 <p>用文本编辑器打开 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8719">[待校准&#64;8719]</a></p>
@@ -496,8 +495,8 @@
 </div>
 <p>在构建和执行其代码时，这声明了所需的 <code class="docutils literal notranslate"><span class="pre">geometry_msgs</span></code> 、 <code class="docutils literal notranslate"><span class="pre">rclcpp</span></code> 、 <code class="docutils literal notranslate"><span class="pre">tf2</span></code> 、 <code class="docutils literal notranslate"><span class="pre">tf2_ros</span></code> 和 <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> 依赖关系。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8722">[待校准&#64;8722]</a></p>
 <p>确保保存文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8647">[待校准&#64;8647]</a></p>
-</section>
-<section id="cmakelists-txt">
+</div>
+<div class="section" id="cmakelists-txt">
 <h4>2.3 CMakeLists.txt <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8648">[待校准&#64;8648]</a><a class="headerlink" href="#cmakelists-txt" title="永久链接至标题"></a></h4>
 <p>现在打开CMakeLists.txt文件。在现有的依存性 <code class="docutils literal notranslate"><span class="pre">find_package(ament_cmake</span> <span class="pre">REQUIRED)</span></code> 下面，添加以下几行: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8723">[待校准&#64;8723]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">find_package(geometry_msgs REQUIRED)</span>
@@ -525,13 +524,13 @@
 <span class="go">   DESTINATION lib/${PROJECT_NAME})</span>
 </pre></div>
 </div>
-</section>
-</section>
-<section id="build-and-run">
+</div>
+</div>
+<div class="section" id="build-and-run">
 <h3>3构建和运行 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8033">[待校准&#64;8033]</a><a class="headerlink" href="#build-and-run" title="永久链接至标题"></a></h3>
 <p>在构建之前，最好在工作区的根目录下运行 <code class="docutils literal notranslate"><span class="pre">rosdep</span></code> ，以检查是否缺少依赖项: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8725">[待校准&#64;8725]</a></p>
 <div class="sphinx-tabs docutils container">
-<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-1-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-1-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-1-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-1-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-1-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-1-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">rosdep install -i --from-path src --rosdistro rolling -y</span>
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-1-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-1-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-1-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-1-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-1-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-1-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">rosdep install -i --from-path src --rosdistro foxy -y</span>
 </pre></div>
 </div>
 </div><div aria-labelledby="tab-1-bWFjT1M=" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-1-bWFjT1M=" name="bWFjT1M=" role="tabpanel" tabindex="0"><p>rosdep仅在Linux上运行，因此您需要自己安装 <code class="docutils literal notranslate"><span class="pre">geometry_msgs</span></code> 和 <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> 依赖项 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8726">[待校准&#64;8726]</a></p>
@@ -594,9 +593,9 @@
 <span class="go">      w: 1.0</span>
 </pre></div>
 </div>
-</section>
-</section>
-<section id="the-proper-way-to-publish-static-transforms">
+</div>
+</div>
+<div class="section" id="the-proper-way-to-publish-static-transforms">
 <h2>发布静态转换的正确方法 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8733">[待校准&#64;8733]</a><a class="headerlink" href="#the-proper-way-to-publish-static-transforms" title="永久链接至标题"></a></h2>
 <p>本教程旨在展示如何使用 <code class="docutils literal notranslate"><span class="pre">StaticTransformBroadcaster</span></code> 发布静态变换。在你真正开发版本过程你不该写这个代码应该使用专用 <code class="docutils literal notranslate"><span class="pre">tf2_ros</span></code> 工具。 <code class="docutils literal notranslate"><span class="pre">tf2_ros</span></code> 提供了一个名为 <code class="docutils literal notranslate"><span class="pre">static_transform_publisher</span></code> 的可执行文件，它既可以用作命令行工具，也可以用作可以添加到launch文件中的节点。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8734">[待校准&#64;8734]</a></p>
 <p>使用以米为单位的x/y/z偏移和以弧度为单位的滚动/俯仰/偏航，发布到tf2的静态坐标变换。在我们的案例中，滚动/俯仰/偏航分别指围绕x/y/z轴的旋转。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8735">[待校准&#64;8735]</a></p>
@@ -621,12 +620,12 @@
 <span class="go">   ])</span>
 </pre></div>
 </div>
-</section>
-<section id="summary">
+</div>
+<div class="section" id="summary">
 <h2><a class="toc-backref" href="#id8">总结</a><a class="headerlink" href="#summary" title="永久链接至标题"></a></h2>
 <p>在本教程中，您学习了静态变换如何有助于定义帧之间的静态关系，如 <code class="docutils literal notranslate"><span class="pre">mystaticturtle</span></code> 相对于 <code class="docutils literal notranslate"><span class="pre">world</span></code> 帧。此外，通过将数据与公共坐标帧相关联，您了解了静态变换如何有助于理解传感器数据，例如来自激光扫描仪的数据。最后，您编写了自己的节点以将静态转换发布到tf2，并学习了如何使用 <code class="docutils literal notranslate"><span class="pre">static_transform_publisher</span></code> 可执行文件和launch文件发布所需的静态转换。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8738">[待校准&#64;8738]</a></p>
-</section>
-</section>
+</div>
+</div>
 
 
 

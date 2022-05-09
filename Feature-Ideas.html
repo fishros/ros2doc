@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="zh" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>功能理念 &mdash; ROS 2 documentation  文档</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -55,7 +54,7 @@
 <li class="toctree-l2"><a class="reference internal" href="Installation/Windows-Install-Binary.html">在Windows上安装ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Installation/Fedora-Development-Setup.html">在Fedora Linux上构建ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Installation/Latest-Development-Setup.html">安装最新的ROS 2开发版本</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Installation/Maintaining-a-Source-Checkout.html">Maintaining a source checkout of ROS 2 Rolling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Installation/Maintaining-a-Source-Checkout.html">维护ROS 2Foxy源文件的检出</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Installation/Testing.html">用于测试的替代安装源</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Installation/DDS-Implementations.html">安装DDS实现</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="Installation/DDS-Implementations/Install-Connext-Security-Plugins.html">安装Connext安全插件</a></li>
@@ -268,7 +267,7 @@
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
       <li>功能理念</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ros2/ros2_documentation/blob/rolling/source/Feature-Ideas.rst" class="fa fa-github"> 在 GitHub 上修改</a>
+              <a href="https://github.com/ros2/ros2_documentation/blob/foxy/source/Feature-Ideas.rst" class="fa fa-github"> 在 GitHub 上修改</a>
       </li>
   </ul>
   <hr/>
@@ -278,7 +277,7 @@
              
 
 
-  <section id="feature-ideas">
+  <div class="section" id="feature-ideas">
 <span id="featureideas"></span><h1>功能理念<a class="headerlink" href="#feature-ideas" title="永久链接至标题"></a></h1>
 <div class="contents local topic" id="table-of-contents">
 <p class="topic-title">目录</p>
@@ -290,7 +289,7 @@
 </ul>
 </div>
 <p>以下是无特定顺序的功能想法。该列表包含我们认为重要的功能，并且可以在深入研究新功能之前对ROS 2.  <a class="reference internal" href="Contact.html"><span class="doc">请与我们取得联系</span></a> 做出良好贡献。我们可以提供指导，并将您与其他开发人员联系起来。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5186">[小鱼&#64;5186]</a></p>
-<section id="design-concept">
+<div class="section" id="design-concept">
 <h2><a class="toc-backref" href="#id1">设计/概念</a><a class="headerlink" href="#design-concept" title="永久链接至标题"></a></h2>
 <ul class="simple">
 <li><p>IDL 格式 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5188">[小鱼&#64;5188]</a></p>
@@ -304,8 +303,8 @@
 <li><p>节点名称的唯一性，参见 <a class="reference external" href="https://github.com/ros2/design/issues/187">ros2/design#187</a>  <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5193">[待校准&#64;5193]</a></p></li>
 <li><p>一个节点的具体  &quot;API&quot; 在话题/服务等方面的描述格式，见 <a class="reference external" href="https://github.com/ros2/design/pull/266">ros2/design#266</a>  <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5194">[待校准&#64;5194]</a></p></li>
 </ul>
-</section>
-<section id="infrastructure-and-tools">
+</div>
+<div class="section" id="infrastructure-and-tools">
 <h2><a class="toc-backref" href="#id2">基础设施和工具</a><a class="headerlink" href="#infrastructure-and-tools" title="永久链接至标题"></a></h2>
 <ul class="simple">
 <li><p>构建 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5196">[小鱼&#64;5196]</a></p>
@@ -334,8 +333,8 @@
 </ul>
 </li>
 </ul>
-</section>
-<section id="new-features">
+</div>
+<div class="section" id="new-features">
 <h2><a class="toc-backref" href="#id3">新功能</a><a class="headerlink" href="#new-features" title="永久链接至标题"></a></h2>
 <p>尾随的星星表示粗略的努力: 小1星，中2星，大3星。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5213">[待校准&#64;5213]</a></p>
 <ul class="simple">
@@ -438,8 +437,8 @@
 </ul>
 </li>
 </ul>
-</section>
-<section id="reducing-technical-debt">
+</div>
+<div class="section" id="reducing-technical-debt">
 <h2><a class="toc-backref" href="#id4">减少技术债务</a><a class="headerlink" href="#reducing-technical-debt" title="永久链接至标题"></a></h2>
 <ul class="simple">
 <li><p>修复https:// ci.ros2.org/view/nightly上的碎片测试。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5268">[小鱼&#64;5268]</a></p></li>
@@ -456,8 +455,8 @@
 <li><p>解决代码/文档中的待办事项 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5276">[待校准&#64;5276]</a></p></li>
 <li><p>删除tinyxml作为依赖项 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5277">[待校准&#64;5277]</a></p></li>
 </ul>
-</section>
-</section>
+</div>
+</div>
 
 
 

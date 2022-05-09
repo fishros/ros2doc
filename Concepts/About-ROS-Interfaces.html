@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="zh" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>关于ROS 2接口 [待校准@10102] &mdash; ROS 2 documentation  文档</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -55,7 +54,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Windows-Install-Binary.html">在Windows上安装ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Fedora-Development-Setup.html">在Fedora Linux上构建ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Latest-Development-Setup.html">安装最新的ROS 2开发版本</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Installation/Maintaining-a-Source-Checkout.html">Maintaining a source checkout of ROS 2 Rolling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Maintaining-a-Source-Checkout.html">维护ROS 2Foxy源文件的检出</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Testing.html">用于测试的替代安装源</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/DDS-Implementations.html">安装DDS实现</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Install-Connext-Security-Plugins.html">安装Connext安全插件</a></li>
@@ -269,7 +268,7 @@
           <li><a href="../Concepts.html">概念</a> &raquo;</li>
       <li>关于ROS 2接口 [待校准&#64;10102]</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ros2/ros2_documentation/blob/rolling/source/Concepts/About-ROS-Interfaces.rst" class="fa fa-github"> 在 GitHub 上修改</a>
+              <a href="https://github.com/ros2/ros2_documentation/blob/foxy/source/Concepts/About-ROS-Interfaces.rst" class="fa fa-github"> 在 GitHub 上修改</a>
       </li>
   </ul>
   <hr/>
@@ -279,7 +278,7 @@
              
 
 
-  <section id="about-ros-2-interfaces">
+  <div class="section" id="about-ros-2-interfaces">
 <span id="interfaceconcept"></span><h1>关于ROS 2接口 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10102">[待校准&#64;10102]</a><a class="headerlink" href="#about-ros-2-interfaces" title="永久链接至标题"></a></h1>
 <div class="contents local topic" id="table-of-contents">
 <p class="topic-title">目录</p>
@@ -301,7 +300,7 @@
 <li><p><a class="reference internal" href="#new-features-in-ros-2-interfaces" id="id9">4. ROS 2接口的新功能 [Alyssa&#64;10196]</a></p></li>
 </ul>
 </div>
-<section id="background">
+<div class="section" id="background">
 <h2>1. 背景 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10103">[Alyssa&#64;10103]</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
 <p>ROS应用程序通常通过三种类型之一的接口进行通信: 消息（messages）、服务（services）和动作（actions）。ROS 2使用简化的描述语言，即接口定义语言 (IDL) 来描述这些接口。这种描述使ROS工具可以轻松地以多种目标语言自动的生成接口类型的源文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10104">[Alyssa&#64;10104]</a></p>
 <p>在本文档中，我们将描述ROS2支持的类型。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10105">[Alyssa&#64;10105]</a></p>
@@ -310,11 +309,11 @@
 <li><p>srv（服务）:  <code class="docutils literal notranslate"><span class="pre">.srv</span></code> 文件描述了一项服务。它们由两部分组成: 请求和响应。请求和响应是消息声明。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10107">[Alyssa&#64;10107]</a></p></li>
 <li><p>动作（action）:  <code class="docutils literal notranslate"><span class="pre">.action</span></code> 文件描述动作。它们由三部分组成: 目标、结果和反馈。每个部分本身都是一个消息声明。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10108">[Alyssa&#64;10108]</a></p></li>
 </ul>
-</section>
-<section id="message-description-specification">
+</div>
+<div class="section" id="message-description-specification">
 <h2>2. 消息描述规范 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10109">[Alyssa&#64;10109]</a><a class="headerlink" href="#message-description-specification" title="永久链接至标题"></a></h2>
 <p>消息是在ROS包的 <code class="docutils literal notranslate"><span class="pre">msg/</span></code> 目录下的 <code class="docutils literal notranslate"><span class="pre">.msg</span></code> 文件中描述和定义的。 <code class="docutils literal notranslate"><span class="pre">.msg</span></code> 文件由两部分组成: 字段和常量。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10110">[Alyssa&#64;10110]</a></p>
-<section id="fields">
+<div class="section" id="fields">
 <h3>2.1 字段 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10111">[Alyssa&#64;10111]</a><a class="headerlink" href="#fields" title="永久链接至标题"></a></h3>
 <p>每个字段由一个类型和一个名称组成，用一个空格分隔，即:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>fieldtype1 fieldname1
@@ -327,7 +326,7 @@ fieldtype3 fieldname3
 string my_string
 </pre></div>
 </div>
-<section id="field-types">
+<div class="section" id="field-types">
 <h4>2.1.1 字段类型 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10114">[Alyssa&#64;10114]</a><a class="headerlink" href="#field-types" title="永久链接至标题"></a></h4>
 <p>字段类型可以是:</p>
 <ul class="simple">
@@ -479,12 +478,12 @@ string&lt;<span class="o">=</span><span class="m">10</span><span class="o">[]</s
 string&lt;<span class="o">=</span><span class="m">10</span><span class="o">[</span>&lt;<span class="o">=</span><span class="m">5</span><span class="o">]</span> up_to_five_strings_up_to_ten_characters_each
 </pre></div>
 </div>
-</section>
-<section id="field-names">
+</div>
+<div class="section" id="field-names">
 <h4>2.1.2 字段名称 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10179">[Alyssa&#64;10179]</a><a class="headerlink" href="#field-names" title="永久链接至标题"></a></h4>
 <p>字段名必须是小写字母和数字字符，用下划线分隔单词。它们必须以字母字符开头，不能以下划线结尾，也不能有两个连续的下划线。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10180">[Alyssa&#64;10180]</a></p>
-</section>
-<section id="field-default-value">
+</div>
+<div class="section" id="field-default-value">
 <h4>2.1.3 字段默认值 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10181">[Alyssa&#64;10181]</a><a class="headerlink" href="#field-default-value" title="永久链接至标题"></a></h4>
 <p>可以为消息类型中的任何字段设置默认值。目前，string数组和复杂类型(即上述内置类型表中不存在的类型，适用于所有嵌套消息)不支持设置默认值 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10182">[Alyssa&#64;10182]</a></p>
 <p>定义默认值是通过向字段定义行添加第三个元素来完成的，即: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10183">[待校准&#64;10183]</a></p>
@@ -503,9 +502,9 @@ int32<span class="o">[]</span> samples <span class="o">[</span>-200, -100, <span
 <li><p>string值必须定义在单引号 ”' ”或双引号 “ &quot;“中 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10185">[Alyssa&#64;10185]</a></p></li>
 <li><p>目前string值未转义 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10186">[待校准&#64;10186]</a></p></li>
 </ul>
-</section>
-</section>
-<section id="constants">
+</div>
+</div>
+<div class="section" id="constants">
 <h3>2.2 常数 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10187">[Alyssa&#64;10187]</a><a class="headerlink" href="#constants" title="永久链接至标题"></a></h3>
 <p>每个常量定义都类似于具有默认值的字段描述，不同之处在于该值永远无法通过程序更改。该值通过使用等号 “=” 来赋值，例如 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10188">[Alyssa&#64;10188]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>constanttype <span class="nv">CONSTANTNAME</span><span class="o">=</span>constantvalue
@@ -519,12 +518,12 @@ string <span class="nv">EXAMPLE</span><span class="o">=</span><span class="s1">&
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="admonition-title">备注</p>
+<p class="admonition-title">注解</p>
 <p>常量名称必须为大写 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10189">[待校准&#64;10189]</a></p>
 </div>
-</section>
-</section>
-<section id="service-description-specification">
+</div>
+</div>
+<div class="section" id="service-description-specification">
 <h2>3. 服务描述规范 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10190">[Alyssa&#64;10190]</a><a class="headerlink" href="#service-description-specification" title="永久链接至标题"></a></h2>
 <p>服务消息在ROS包的 <code class="docutils literal notranslate"><span class="pre">srv/</span></code> 目录下的 <code class="docutils literal notranslate"><span class="pre">.srv</span></code>  文件中描述和定义。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10191">[Alyssa&#64;10191]</a></p>
 <p>服务描述文件由一个请求和一个响应msg类型组成，以“---”分隔。任何两个用“---” 连接的 <code class="docutils literal notranslate"><span class="pre">.msg</span></code> 文件都是合法的服务描述。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10192">[Alyssa&#64;10192]</a></p>
@@ -551,8 +550,8 @@ uint32 an_integer
 </pre></div>
 </div>
 <p>您不能在服务中嵌入其他服务。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10195">[待校准&#64;10195]</a></p>
-</section>
-<section id="new-features-in-ros-2-interfaces">
+</div>
+<div class="section" id="new-features-in-ros-2-interfaces">
 <h2>4. ROS 2接口的新功能 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10196">[Alyssa&#64;10196]</a><a class="headerlink" href="#new-features-in-ros-2-interfaces" title="永久链接至标题"></a></h2>
 <p>ROS 2 IDL与 <a class="reference external" href="https://wiki.ros.org/msg">ROS 1 IDL</a> 密切相关。大多数现有的ROS 1 <code class="docutils literal notranslate"><span class="pre">.msg</span></code> 和 <code class="docutils literal notranslate"><span class="pre">.srv</span></code> 文件在ROS 2上应该一样可用。在ROS 1现有的特征集上，ROS 2 IDL引入了一些新的特征，即: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10197">[Alyssa&#64;10197]</a></p>
 <ul class="simple">
@@ -560,8 +559,8 @@ uint32 an_integer
 <li><p>有界字符串: 鉴于ROS 1IDL允许无界字符串 (例如，<code class="docutils literal notranslate"><span class="pre">string</span> <span class="pre">foo</span></code>)，ROS 2 IDL进一步允许有界字符串 (例如，<code class="docutils literal notranslate"><span class="pre">string&lt;=5</span> <span class="pre">bar</span></code>)。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10199">[Alyssa&#64;10199]</a></p></li>
 <li><p>默认值: 鉴于ROS 1IDL允许常量字段 (例如，<code class="docutils literal notranslate"><span class="pre">int32</span> <span class="pre">X=123</span></code>)，ROS 2 IDL进一步允许指定默认值 (例如， <code class="docutils literal notranslate"><span class="pre">int32</span> <span class="pre">X</span> <span class="pre">123</span></code> )。在构造消息/服务对象时使用默认值，随后可以通过给字段赋值来覆盖默认值。您也可以为动作部分指定默认值。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10200">[Alyssa&#64;10200]</a></p></li>
 </ul>
-</section>
-</section>
+</div>
+</div>
 
 
 

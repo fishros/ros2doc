@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="zh" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>构建自定义Debian包 &mdash; ROS 2 documentation  文档</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -55,7 +54,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Windows-Install-Binary.html">在Windows上安装ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Fedora-Development-Setup.html">在Fedora Linux上构建ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Latest-Development-Setup.html">安装最新的ROS 2开发版本</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Installation/Maintaining-a-Source-Checkout.html">Maintaining a source checkout of ROS 2 Rolling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Maintaining-a-Source-Checkout.html">维护ROS 2Foxy源文件的检出</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Testing.html">用于测试的替代安装源</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/DDS-Implementations.html">安装DDS实现</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Install-Connext-Security-Plugins.html">安装Connext安全插件</a></li>
@@ -269,7 +268,7 @@
           <li><a href="../How-To-Guides.html">问题指南</a> &raquo;</li>
       <li>构建自定义Debian包</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ros2/ros2_documentation/blob/rolling/source/How-To-Guides/Building-a-Custom-Debian-Package.rst" class="fa fa-github"> 在 GitHub 上修改</a>
+              <a href="https://github.com/ros2/ros2_documentation/blob/foxy/source/How-To-Guides/Building-a-Custom-Debian-Package.rst" class="fa fa-github"> 在 GitHub 上修改</a>
       </li>
   </ul>
   <hr/>
@@ -279,7 +278,7 @@
              
 
 
-  <section id="building-a-custom-debian-package">
+  <div class="section" id="building-a-custom-debian-package">
 <h1>构建自定义Debian包<a class="headerlink" href="#building-a-custom-debian-package" title="永久链接至标题"></a></h1>
 <p>许多Ubuntu用户通过安装 <a class="reference internal" href="../Installation/Ubuntu-Install-Debians.html"><span class="doc">debian packages</span></a> 在他们的系统上安装ROS 2。本指南给出了一组构建本地自定义Debian包的简短说明。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5923">[待校准&#64;5923]</a></p>
 <div class="contents local topic" id="table-of-contents">
@@ -291,18 +290,18 @@
 <li><p><a class="reference internal" href="#build-the-debian-from-the-package" id="id4">从package中构建debian [小鱼&#64;5931]</a></p></li>
 </ul>
 </div>
-<section id="prerequisites">
+<div class="section" id="prerequisites">
 <h2><a class="toc-backref" href="#id1">先决条件</a><a class="headerlink" href="#prerequisites" title="永久链接至标题"></a></h2>
 <p>要成功构建自定义包，必须在调用y或rosdep时提供要构建的包的所有依赖项。此外，包的所有依赖项应在包的 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 文件中正确声明。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5925">[待校准&#64;5925]</a></p>
-</section>
-<section id="install-dependencies">
+</div>
+<div class="section" id="install-dependencies">
 <h2><a class="toc-backref" href="#id2">安装依赖项</a><a class="headerlink" href="#install-dependencies" title="永久链接至标题"></a></h2>
 <p>运行以下命令以安装构建所需的实用程序: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5927">[待校准&#64;5927]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo apt install python3-bloom python3-rosdep fakeroot
 </pre></div>
 </div>
-</section>
-<section id="initialize-rosdep">
+</div>
+<div class="section" id="initialize-rosdep">
 <h2><a class="toc-backref" href="#id3">初始化rosdep</a><a class="headerlink" href="#initialize-rosdep" title="永久链接至标题"></a></h2>
 <p>通过调用以下命令初始化rosdep数据库: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5929">[待校准&#64;5929]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo rosdep init
@@ -310,8 +309,8 @@ $ rosdep update
 </pre></div>
 </div>
 <p>请注意，如果 <code class="docutils literal notranslate"><span class="pre">rosdep</span> <span class="pre">init</span></code> 命令过去已经初始化，则可能会失败; 可以放心地忽略这一点。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5930">[待校准&#64;5930]</a></p>
-</section>
-<section id="build-the-debian-from-the-package">
+</div>
+<div class="section" id="build-the-debian-from-the-package">
 <h2>从package中构建debian <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5931">[小鱼&#64;5931]</a><a class="headerlink" href="#build-the-debian-from-the-package" title="永久链接至标题"></a></h2>
 <p>运行以下命令来构建debian: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5932">[待校准&#64;5932]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> /path/to/pkg_source  <span class="c1"># this should be the directory that contains the package.xml</span>
@@ -320,8 +319,8 @@ $ fakeroot debian/rules binary
 </pre></div>
 </div>
 <p>假设所有必需的依赖项都可用，并且编译成功，则新包将在此目录的父目录中可用。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5933">[待校准&#64;5933]</a></p>
-</section>
-</section>
+</div>
+</div>
 
 
 

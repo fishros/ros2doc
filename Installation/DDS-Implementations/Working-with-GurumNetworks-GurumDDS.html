@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="zh" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>使用GurumNetworks GurumDDS [Alyssa@5400] &mdash; ROS 2 documentation  文档</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -55,7 +54,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Windows-Install-Binary.html">在Windows上安装ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Fedora-Development-Setup.html">在Fedora Linux上构建ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Latest-Development-Setup.html">安装最新的ROS 2开发版本</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Maintaining-a-Source-Checkout.html">Maintaining a source checkout of ROS 2 Rolling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Maintaining-a-Source-Checkout.html">维护ROS 2Foxy源文件的检出</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Testing.html">用于测试的替代安装源</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../DDS-Implementations.html">安装DDS实现</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="Install-Connext-Security-Plugins.html">安装Connext安全插件</a></li>
@@ -270,7 +269,7 @@
           <li><a href="../DDS-Implementations.html">安装DDS实现</a> &raquo;</li>
       <li>使用GurumNetworks GurumDDS [Alyssa&#64;5400]</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ros2/ros2_documentation/blob/rolling/source/Installation/DDS-Implementations/Working-with-GurumNetworks-GurumDDS.rst" class="fa fa-github"> 在 GitHub 上修改</a>
+              <a href="https://github.com/ros2/ros2_documentation/blob/foxy/source/Installation/DDS-Implementations/Working-with-GurumNetworks-GurumDDS.rst" class="fa fa-github"> 在 GitHub 上修改</a>
       </li>
   </ul>
   <hr/>
@@ -280,10 +279,10 @@
              
 
 
-  <section id="working-with-gurumnetworks-gurumdds">
+  <div class="section" id="working-with-gurumnetworks-gurumdds">
 <h1>使用GurumNetworks GurumDDS <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5400">[Alyssa&#64;5400]</a><a class="headerlink" href="#working-with-gurumnetworks-gurumdds" title="永久链接至标题"></a></h1>
 <p>rmw_gurumdds是使用GurumNetworks GurumDDS实现ROS中间件接口。有关GurumDDS的更多信息，请访问我们的网站: <a class="reference external" href="https://gurum.cc/index_eng">https://gurum.cc/index_eng</a> <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5401">[待校准&#64;5401]</a></p>
-<section id="prerequisites">
+<div class="section" id="prerequisites">
 <h2>先决条件<a class="headerlink" href="#prerequisites" title="永久链接至标题"></a></h2>
 <p>以下描述假设你已经参考 <a class="reference internal" href="../Ubuntu-Install-Debians.html"><span class="doc">通过Debian包安装ROS 2</span></a> 或 :doc:` 在 Ubuntu Linux上构建ROS 2  &lt;../Ubuntu-Development-Setup&gt;` 完成了'Environment setup'流程。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5402">[Alyssa&#64;5402]</a></p>
 <p>rmw_gurumdds需要GurumDDS-2.7.x版本。在linux系统上，ROS 2 apt仓库提供了GurumDDS的Debian包。即将支持GurumDDS的Windows二进制安装程序。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5403">[Alyssa&#64;5403]</a></p>
@@ -307,16 +306,15 @@
 </tr>
 </tbody>
 </table>
-</section>
-<section id="install-packages">
+</div>
+<div class="section" id="install-packages">
 <h2>安装包<a class="headerlink" href="#install-packages" title="永久链接至标题"></a></h2>
-<p>The easiest way is to install from ROS 2 apt repository.
-When ros-rolling-rmw-gurumdds-cpp is installed, gurumdds-2.7 is also installed.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt install ros-rolling-rmw-gurumdds-cpp
+<p>最简单的方法是从ROS 2 apt仓库安装。安装ros-foxy-rmw-gurumdds-cpp后，gurumdds-2.7也已经安装了。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5411">[Alyssa&#64;5411]</a></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt install ros-foxy-rmw-gurumdds-cpp
 </pre></div>
 </div>
-</section>
-<section id="build-from-source-code">
+</div>
+<div class="section" id="build-from-source-code">
 <h2>从源文件构建<a class="headerlink" href="#build-from-source-code" title="永久链接至标题"></a></h2>
 <p>从源文件构建也是另一种安装方式。</p>
 <p>首先，在ROS 2工作空间源文件目录中克隆 rosidl_typesupport_gurumdds 和 rmw_gurumdds。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5412">[Alyssa&#64;5412]</a></p>
@@ -327,23 +325,23 @@ git clone https://github.com/ros2/rosidl_typesupport_gurumdds ros2/rosidl_typesu
 </div>
 <p>然后，为GurumDDS安装必要的包。</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ..
-rosdep install --from src -i --rosdistro rolling
+rosdep install --from src -i --rosdistro foxy
 </pre></div>
 </div>
 <p>最后，运行colcon build。</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>colcon build --symlink-install
 </pre></div>
 </div>
-</section>
-<section id="switch-to-rmw-gurumdds">
+</div>
+<div class="section" id="switch-to-rmw-gurumdds">
 <h2>切换到rmw_gurumdds<a class="headerlink" href="#switch-to-rmw-gurumdds" title="永久链接至标题"></a></h2>
 <p>通过指定环境变量，从其他rmw切换到rmw_gurumdds。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5415">[待校准&#64;5415]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">RMW_IMPLEMENTATION</span><span class="o">=</span>rmw_gurumdds_cpp
 </pre></div>
 </div>
 <p>另请参阅:  <a class="reference internal" href="../../How-To-Guides/Working-with-multiple-RMW-implementations.html"><span class="doc">Working with multiple RMW implementations</span></a></p>
-</section>
-<section id="run-the-talker-and-listener">
+</div>
+<div class="section" id="run-the-talker-and-listener">
 <h2>运行talker和listener <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5398">[Alyssa&#64;5398]</a><a class="headerlink" href="#run-the-talker-and-listener" title="永久链接至标题"></a></h2>
 <p>现在运行 <code class="docutils literal notranslate"><span class="pre">talker</span></code> 和 <code class="docutils literal notranslate"><span class="pre">listener</span></code> 测试古GurumDDS。不要忘记通过安装脚本设置环境。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5416">[Alyssa&#64;5416]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 run demo_nodes_cpp talker
@@ -352,8 +350,8 @@ rosdep install --from src -i --rosdistro rolling
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 run demo_nodes_cpp listener
 </pre></div>
 </div>
-</section>
-</section>
+</div>
+</div>
 
 
 

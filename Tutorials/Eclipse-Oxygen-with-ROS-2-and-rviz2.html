@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="zh" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>带有ROS 2和rviz2的Eclipse Oxygen [社区贡献] [待校准@7387] &mdash; ROS 2 documentation  文档</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -55,7 +54,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Windows-Install-Binary.html">在Windows上安装ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Fedora-Development-Setup.html">在Fedora Linux上构建ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Latest-Development-Setup.html">安装最新的ROS 2开发版本</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Installation/Maintaining-a-Source-Checkout.html">Maintaining a source checkout of ROS 2 Rolling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Maintaining-a-Source-Checkout.html">维护ROS 2Foxy源文件的检出</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Testing.html">用于测试的替代安装源</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/DDS-Implementations.html">安装DDS实现</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Install-Connext-Security-Plugins.html">安装Connext安全插件</a></li>
@@ -269,7 +268,7 @@
           <li><a href="../Tutorials.html">教程</a> &raquo;</li>
       <li>带有ROS 2和rviz2的Eclipse Oxygen [社区贡献] [待校准&#64;7387]</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ros2/ros2_documentation/blob/rolling/source/Tutorials/Eclipse-Oxygen-with-ROS-2-and-rviz2.rst" class="fa fa-github"> 在 GitHub 上修改</a>
+              <a href="https://github.com/ros2/ros2_documentation/blob/foxy/source/Tutorials/Eclipse-Oxygen-with-ROS-2-and-rviz2.rst" class="fa fa-github"> 在 GitHub 上修改</a>
       </li>
   </ul>
   <hr/>
@@ -279,7 +278,7 @@
              
 
 
-  <section id="eclipse-oxygen-with-ros-2-and-rviz2-community-contributed">
+  <div class="section" id="eclipse-oxygen-with-ros-2-and-rviz2-community-contributed">
 <h1>带有ROS 2和rviz2的Eclipse Oxygen [社区贡献] <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7387">[待校准&#64;7387]</a><a class="headerlink" href="#eclipse-oxygen-with-ros-2-and-rviz2-community-contributed" title="永久链接至标题"></a></h1>
 <div class="contents local topic" id="table-of-contents">
 <p class="topic-title">目录</p>
@@ -289,7 +288,7 @@
 <li><p><a class="reference internal" href="#debugging-with-eclipse" id="id3">使用eclipse调试 [待校准&#64;7447]</a></p></li>
 </ul>
 </div>
-<section id="setup">
+<div class="section" id="setup">
 <h2>设置 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7388">[待校准&#64;7388]</a><a class="headerlink" href="#setup" title="永久链接至标题"></a></h2>
 <p>本教程假设Eclipse Oxygen、git和Egit (<a class="reference external" href="http://www.eclipse.org/egit/download/">http://www.eclipse.org/egit/download/</a>) 已经安装 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7389">[待校准&#64;7389]</a></p>
 <p>在整个教程中，我们将eclipse工作区命名为与ros2包相同的名称，但这不是必需的。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7390">[待校准&#64;7390]</a></p>
@@ -345,8 +344,8 @@
 <a class="reference external image-reference" href="https://i.imgur.com/ZyPGJLa.png"><img alt="eclipse-27 `[待校准&#64;7436] &lt;http://dev.ros2.fishros.com/calibpage/#/home?msgid=7436&gt;`_ " src="https://i.imgur.com/ZyPGJLa.png" /></a>
 <p>现在，代码完成、egit注释、eclipse C/C Tools工具等都应该可以工作。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7437">[待校准&#64;7437]</a></p>
 <a class="reference external image-reference" href="https://i.imgur.com/YUEH3lM.png"><img alt="eclipse-28 `[待校准&#64;7438] &lt;http://dev.ros2.fishros.com/calibpage/#/home?msgid=7438&gt;`_ " src="https://i.imgur.com/YUEH3lM.png" /></a>
-</section>
-<section id="eclipse-indexer">
+</div>
+<div class="section" id="eclipse-indexer">
 <h2>Eclipse索引器 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7439">[待校准&#64;7439]</a><a class="headerlink" href="#eclipse-indexer" title="永久链接至标题"></a></h2>
 <p>打开rviz2的main.cpp可能会显示很多  &quot;unresolved inclusion&quot; 警告。要解决此问题，请转到项目-&gt; 属性-&gt; cgeneral常规-&gt; 路径和符号。点击  &quot;References&quot; 标签并选择  &quot;ros2_ws&quot; 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7440">[待校准&#64;7440]</a></p>
 <a class="reference external image-reference" href="https://i.imgur.com/mp9Pgzu.png"><img alt="eclipse-28 `[待校准&#64;7438] &lt;http://dev.ros2.fishros.com/calibpage/#/home?msgid=7438&gt;`_ " src="https://i.imgur.com/mp9Pgzu.png" /></a>
@@ -365,8 +364,8 @@
 <a class="reference external image-reference" href="https://i.imgur.com/xtxZ4bg.png"><img alt="eclipse-28 `[待校准&#64;7438] &lt;http://dev.ros2.fishros.com/calibpage/#/home?msgid=7438&gt;`_ " src="https://i.imgur.com/xtxZ4bg.png" /></a>
 <p>之后，右键单击rviz2项目，然后选择 “索引器-&gt; 重建”，这将开始重建索引 (右下角有一个图标显示进度)。一旦索引完成重建，它应该能够解析所有包含。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7446">[待校准&#64;7446]</a></p>
 <a class="reference external image-reference" href="https://i.imgur.com/uGZaHau.png"><img alt="eclipse-28 `[待校准&#64;7438] &lt;http://dev.ros2.fishros.com/calibpage/#/home?msgid=7438&gt;`_ " src="https://i.imgur.com/uGZaHau.png" /></a>
-</section>
-<section id="debugging-with-eclipse">
+</div>
+<div class="section" id="debugging-with-eclipse">
 <h2>使用eclipse调试 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7447">[待校准&#64;7447]</a><a class="headerlink" href="#debugging-with-eclipse" title="永久链接至标题"></a></h2>
 <p>转到 “C/C ++-Build” 并添加到build命令: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7448">[待校准&#64;7448]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>-DCMAKE_BUILD_TYPE<span class="o">=</span>Debug
@@ -375,8 +374,8 @@
 <a class="reference external image-reference" href="https://i.imgur.com/KXFYDHg.png"><img alt="eclipse-28 `[待校准&#64;7438] &lt;http://dev.ros2.fishros.com/calibpage/#/home?msgid=7438&gt;`_ " src="https://i.imgur.com/KXFYDHg.png" /></a>
 <p>然后在eclipse中转到 “运行-&gt; 调试配置  &quot; and add the following and click on &quot; 调试”。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7449">[待校准&#64;7449]</a></p>
 <a class="reference external image-reference" href="https://i.imgur.com/ywzAxUP.png"><img alt="eclipse-28 `[待校准&#64;7438] &lt;http://dev.ros2.fishros.com/calibpage/#/home?msgid=7438&gt;`_ " src="https://i.imgur.com/ywzAxUP.png" /></a>
-</section>
-</section>
+</div>
+</div>
 
 
 

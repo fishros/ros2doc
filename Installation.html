@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="zh" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>安装 &mdash; ROS 2 documentation  文档</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -55,7 +54,7 @@
 <li class="toctree-l2"><a class="reference internal" href="Installation/Windows-Install-Binary.html">在Windows上安装ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Installation/Fedora-Development-Setup.html">在Fedora Linux上构建ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Installation/Latest-Development-Setup.html">安装最新的ROS 2开发版本</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Installation/Maintaining-a-Source-Checkout.html">Maintaining a source checkout of ROS 2 Rolling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Installation/Maintaining-a-Source-Checkout.html">维护ROS 2Foxy源文件的检出</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Installation/Testing.html">用于测试的替代安装源</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Installation/DDS-Implementations.html">安装DDS实现</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="Installation/DDS-Implementations/Install-Connext-Security-Plugins.html">安装Connext安全插件</a></li>
@@ -268,7 +267,7 @@
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
       <li>安装</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ros2/ros2_documentation/blob/rolling/source/Installation.rst" class="fa fa-github"> 在 GitHub 上修改</a>
+              <a href="https://github.com/ros2/ros2_documentation/blob/foxy/source/Installation.rst" class="fa fa-github"> 在 GitHub 上修改</a>
       </li>
   </ul>
   <hr/>
@@ -278,12 +277,12 @@
              
 
 
-  <section id="installation">
+  <div class="section" id="installation">
 <span id="foxyinstall"></span><span id="installationguide"></span><h1>安装<a class="headerlink" href="#installation" title="永久链接至标题"></a></h1>
-<p>Options for installing ROS 2 Rolling Ridley:</p>
+<p>安装ROS2 Foxy Fitzroy的选项： <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5279">[小鱼&#64;5279]</a></p>
 <div class="toctree-wrapper compound">
 </div>
-<section id="binary-packages">
+<div class="section" id="binary-packages">
 <h2>二进制包<a class="headerlink" href="#binary-packages" title="永久链接至标题"></a></h2>
 <p>二进制文件仅针对 <a class="reference external" href="https://www.ros.org/reps/rep-2000.html#foxy-fitzroy-may-2020-may-2023">REP-2000</a> 层级的一级操作系统创建。如果您没有运行以下任何操作系统，您可能需要从源文件构建或使用 <a class="reference internal" href="How-To-Guides/Run-2-nodes-in-single-or-separate-docker-containers.html"><span class="doc">container solution</span></a> 在您的平台上运行ROS 2。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5281">[Alyssa&#64;5281]</a></p>
 <p>我们为以下平台提供ROS 2二进制包:</p>
@@ -300,8 +299,8 @@
 <li><p><a class="reference internal" href="Installation/macOS-Install-Binary.html"><span class="doc">macOS Mojave (10.14)</span></a></p></li>
 <li><p><a class="reference internal" href="Installation/Windows-Install-Binary.html"><span class="doc">Windows (VS 2019)</span></a></p></li>
 </ul>
-</section>
-<section id="building-from-source">
+</div>
+<div class="section" id="building-from-source">
 <span id="id1"></span><h2>从源文件构建<a class="headerlink" href="#building-from-source" title="永久链接至标题"></a></h2>
 <p>我们支持在以下平台上从源文件构建ROS 2:</p>
 <ul class="simple">
@@ -309,8 +308,8 @@
 <li><p><a class="reference internal" href="Installation/macOS-Development-Setup.html"><span class="doc">macOS</span></a></p></li>
 <li><p><a class="reference internal" href="Installation/Windows-Development-Setup.html"><span class="doc">Windows</span></a></p></li>
 </ul>
-</section>
-<section id="which-install-should-you-choose">
+</div>
+<div class="section" id="which-install-should-you-choose">
 <h2>您应该选择哪种安装？<a class="headerlink" href="#which-install-should-you-choose" title="永久链接至标题"></a></h2>
 <p>从二进制包或源文件安装都可以完成功能齐全且可用的ROS 2安装。选项之间的差异取决于您计划如何使用ROS 2。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5294">[Alyssa&#64;5294]</a></p>
 <p>二进制包是通用的，并提供一个已经建立的ROS 2安装。这对于那些想立即投入并开始使用ROS 2的人来说非常好。</p>
@@ -323,12 +322,12 @@
 <p>但是，您需要根访问权限才能安装Debian包。如果你没有根访问权限，  &quot;fat&quot; archive是下一个最佳选择。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5300">[待校准&#64;5300]</a></p>
 <p>选择从二进制包安装的macOS和Windows用户只有  &quot;fat&quot; archive选项 (Debian包是Ubuntu/Debian独有的)。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5301">[待校准&#64;5301]</a></p>
 <p>从源文件构建是为希望更改或显式省略ROS 2基础部分的开发人员设计的。对于不支持二进制文件的平台，也建议这样做。从源文件构建还使您可以选择安装ROS 2的绝对最新版本。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5302">[待校准&#64;5302]</a></p>
-<section id="contributing-to-ros-2-core">
+<div class="section" id="contributing-to-ros-2-core">
 <h3>对ROS 2核心有贡献吗？<a class="headerlink" href="#contributing-to-ros-2-core" title="永久链接至标题"></a></h3>
 <p>如果您计划直接为ROS 2核心包做出贡献，您可以安装 <a class="reference internal" href="Installation/Latest-Development-Setup.html"><span class="doc">latest development from source</span></a> （最新开发版）提供了 <a class="reference internal" href="Releases.html#rolling-distribution"><span class="std std-ref">Rolling distribution</span></a> 的安装说明。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5304">[Alyssa&#64;5304]</a></p>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
 
 

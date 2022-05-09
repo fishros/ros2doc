@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="zh" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>四元数基金amentals [待校准@8494] &mdash; ROS 2 documentation  文档</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -55,7 +54,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../Installation/Windows-Install-Binary.html">在Windows上安装ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Installation/Fedora-Development-Setup.html">在Fedora Linux上构建ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Installation/Latest-Development-Setup.html">安装最新的ROS 2开发版本</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../Installation/Maintaining-a-Source-Checkout.html">Maintaining a source checkout of ROS 2 Rolling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Installation/Maintaining-a-Source-Checkout.html">维护ROS 2Foxy源文件的检出</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Installation/Testing.html">用于测试的替代安装源</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Installation/DDS-Implementations.html">安装DDS实现</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../Installation/DDS-Implementations/Install-Connext-Security-Plugins.html">安装Connext安全插件</a></li>
@@ -270,7 +269,7 @@
           <li><a href="Tf2-Main.html">tf2教程 [待校准&#64;8518]</a> &raquo;</li>
       <li>四元数基金amentals [待校准&#64;8494]</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ros2/ros2_documentation/blob/rolling/source/Tutorials/Tf2/Quaternion-Fundamentals.rst" class="fa fa-github"> 在 GitHub 上修改</a>
+              <a href="https://github.com/ros2/ros2_documentation/blob/foxy/source/Tutorials/Tf2/Quaternion-Fundamentals.rst" class="fa fa-github"> 在 GitHub 上修改</a>
       </li>
   </ul>
   <hr/>
@@ -280,7 +279,7 @@
              
 
 
-  <section id="quaternion-fundamentals">
+  <div class="section" id="quaternion-fundamentals">
 <span id="quaternionfundamentals"></span><h1>四元数基金amentals <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8494">[待校准&#64;8494]</a><a class="headerlink" href="#quaternion-fundamentals" title="永久链接至标题"></a></h1>
 <p>Goal目标: Learn学习ROS 2中四元数用法的基础知识。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8495">[待校准&#64;8495]</a></p>
 <p>Tutorial教程级别: Intermediate中级 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6713">[待校准&#64;6713]</a></p>
@@ -303,18 +302,18 @@
 <li><p><a class="reference internal" href="#summary" id="id10">总结</a></p></li>
 </ul>
 </div>
-<section id="background">
+<div class="section" id="background">
 <h2><a class="toc-backref" href="#id1">背景</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
 <p>四元数是方向的4元组表示，比旋转矩阵更简洁。四元数对于分析涉及三维旋转的情况非常有效。四元数广泛应用于机器人学、量子力学、计算机视觉和3D动画。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8496">[待校准&#64;8496]</a></p>
 <p>你可以了解基础数学概念 <a class="reference external" href="https://en.wikipedia.org/wiki/Quaternion">Wikipedia</a>. You can also take a look at an explorable video series <a class="reference external" href="https://eater.net/quaternions">Visualizing quaternions</a> 由 <a class="reference external" href="https://www.youtube.com/3blue1brown">3blue1brown</a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8497">[待校准&#64;8497]</a></p>
 <p>在本教程中，您将学习四元数和转换方法如何在ROS 2中工作。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8498">[待校准&#64;8498]</a></p>
-</section>
-<section id="prerequisites">
+</div>
+<div class="section" id="prerequisites">
 <h2><a class="toc-backref" href="#id2">先决条件</a><a class="headerlink" href="#prerequisites" title="永久链接至标题"></a></h2>
 <p>对于本教程，您可能需要安装 <code class="docutils literal notranslate"><span class="pre">tf_transformations</span></code> ROS 2包，以遵循Python代码部分。您可以找到 <code class="docutils literal notranslate"><span class="pre">tf_transformations</span></code> 包 <a class="reference external" href="https://github.com/DLu/tf_transformations">here</a> 的源文件代码。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8499">[待校准&#64;8499]</a></p>
 <p>然而，这不是一个硬性要求，你可以坚持任何其他最适合你的几何转换库。你可以看看像 <a class="reference external" href="https://github.com/matthew-brett/transforms3d">transforms3d</a>, <a class="reference external" href="https://github.com/scipy/scipy/tree/master/scipy/spatial/transform">scipy.spatial.transform</a>, <a class="reference external" href="https://github.com/rock-learning/pytransform3d">pytransform3d</a> 、 <a class="reference external" href="https://github.com/moble/quaternion">numpy-quaternion</a> or <a class="reference external" href="https://docs.blender.org/api/master/mathutils.html">blender.mathutils</a> 这样的图书馆。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8500">[待校准&#64;8500]</a></p>
-</section>
-<section id="components-of-a-quaternion">
+</div>
+<div class="section" id="components-of-a-quaternion">
 <h2>四元数的组成部分 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8501">[待校准&#64;8501]</a><a class="headerlink" href="#components-of-a-quaternion" title="永久链接至标题"></a></h2>
 <p>ROS 2使用四元数来跟踪和应用旋转。四元数有4个分量 “(x，y，z，w)”。在ROS 2中， <code class="docutils literal notranslate"><span class="pre">w</span></code> 是最后一个，但是在一些库中，如了海， <code class="docutils literal notranslate"><span class="pre">w</span></code> 可以放在第一个位置。在x/y/z轴上不产生旋转的常用单位四元数是 ''(0,0，0,1)''，可以通过以下方式创建: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8502">[待校准&#64;8502]</a></p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;tf2/LinearMath/Quaternion.h&gt;</span><span class="cp"></span>
@@ -332,8 +331,8 @@
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">q</span><span class="p">.</span><span class="n">normalize</span><span class="p">();</span><span class="w"></span>
 </pre></div>
 </div>
-</section>
-<section id="quaternion-types-in-ros-2">
+</div>
+<div class="section" id="quaternion-types-in-ros-2">
 <h2>ROS 2中的四元数类型 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8504">[待校准&#64;8504]</a><a class="headerlink" href="#quaternion-types-in-ros-2" title="永久链接至标题"></a></h2>
 <p>ROS 2使用两个四元数数据类型: “tf2:: 四元数 `` and its equivalent `` 几何 _ msgs::msg:: 四元数”。要在c ++ 中转换它们，请使用 <code class="docutils literal notranslate"><span class="pre">tf2_geometry_msgs</span></code> 的方法。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8505">[待校准&#64;8505]</a></p>
 <p>C++ <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7215">[待校准&#64;7215]</a></p>
@@ -363,10 +362,10 @@
 <span class="n">msg_quat</span> <span class="o">=</span> <span class="n">Quaternion</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">quat_tf</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">y</span><span class="o">=</span><span class="n">quat_tf</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">z</span><span class="o">=</span><span class="n">quat_tf</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">w</span><span class="o">=</span><span class="n">quat_tf</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
 </pre></div>
 </div>
-</section>
-<section id="quaternion-operations">
+</div>
+<div class="section" id="quaternion-operations">
 <h2>四元数运算 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8506">[待校准&#64;8506]</a><a class="headerlink" href="#quaternion-operations" title="永久链接至标题"></a></h2>
-<section id="think-in-rpy-then-convert-to-quaternion">
+<div class="section" id="think-in-rpy-then-convert-to-quaternion">
 <h3>1在RPY中思考，然后转换为四元数 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8507">[待校准&#64;8507]</a><a class="headerlink" href="#think-in-rpy-then-convert-to-quaternion" title="永久链接至标题"></a></h3>
 <p>我们很容易想到轴的旋转，但很难想到四元数。一个建议是根据滚动 (关于x轴) 、间距 (关于y轴) 和偏航 (关于z轴) 来计算目标旋转，然后转换为四元数。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8508">[待校准&#64;8508]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">tf_transformations</span>
@@ -376,8 +375,8 @@
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The quaternion representation is x: </span><span class="si">{</span><span class="n">q</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s1"> y: </span><span class="si">{</span><span class="n">q</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s1"> z: </span><span class="si">{</span><span class="n">q</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="si">}</span><span class="s1"> w: </span><span class="si">{</span><span class="n">q</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="si">}</span><span class="s1">.&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-</section>
-<section id="applying-a-quaternion-rotation">
+</div>
+<div class="section" id="applying-a-quaternion-rotation">
 <h3>2应用四元数旋转 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8509">[待校准&#64;8509]</a><a class="headerlink" href="#applying-a-quaternion-rotation" title="永久链接至标题"></a></h3>
 <p>要将一个四元数的旋转应用于一个姿势，只需将该姿势的前一个四元数乘以表示所需旋转的四元数。这个乘法的顺序很重要。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8510">[待校准&#64;8510]</a></p>
 <p>C++ <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7215">[待校准&#64;7215]</a></p>
@@ -403,15 +402,15 @@
 <span class="n">q_new</span> <span class="o">=</span> <span class="n">tf_transformations</span><span class="o">.</span><span class="n">quaternion_multiply</span><span class="p">(</span><span class="n">q_rot</span><span class="p">,</span> <span class="n">q_orig</span><span class="p">)</span>
 </pre></div>
 </div>
-</section>
-<section id="inverting-a-quaternion">
+</div>
+<div class="section" id="inverting-a-quaternion">
 <h3>3反转四元数 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8511">[待校准&#64;8511]</a><a class="headerlink" href="#inverting-a-quaternion" title="永久链接至标题"></a></h3>
 <p>反转四元数的一个简单方法是否定w分量: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8512">[待校准&#64;8512]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">q</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="n">q</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
 </pre></div>
 </div>
-</section>
-<section id="relative-rotations">
+</div>
+<div class="section" id="relative-rotations">
 <h3>4相对旋转 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8513">[待校准&#64;8513]</a><a class="headerlink" href="#relative-rotations" title="永久链接至标题"></a></h3>
 <p>假设你有两个来自同一帧的四元数， <code class="docutils literal notranslate"><span class="pre">q_1</span></code> 和 <code class="docutils literal notranslate"><span class="pre">q_2</span></code> 。你想要找到相对旋转， <code class="docutils literal notranslate"><span class="pre">q_r</span></code> ，它通过以下方式将 <code class="docutils literal notranslate"><span class="pre">q_1</span></code> 转化为 <code class="docutils literal notranslate"><span class="pre">q_2</span></code> : <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8514">[待校准&#64;8514]</a></p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">q_2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">q_r</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">q_1</span><span class="w"></span>
@@ -435,13 +434,13 @@
 <span class="n">qr</span> <span class="o">=</span> <span class="n">tf_transformations</span><span class="o">.</span><span class="n">quaternion_multiply</span><span class="p">(</span><span class="n">q2</span><span class="p">,</span> <span class="n">q1_inv</span><span class="p">)</span>
 </pre></div>
 </div>
-</section>
-</section>
-<section id="summary">
+</div>
+</div>
+<div class="section" id="summary">
 <h2><a class="toc-backref" href="#id10">总结</a><a class="headerlink" href="#summary" title="永久链接至标题"></a></h2>
 <p>在本教程中，您学习了四元数的基金ament的概念及其相关的数学运算，如反转和旋转。您还了解了它在ROS 2中的使用示例以及两个单独的四元数类之间的转换方法。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8517">[待校准&#64;8517]</a></p>
-</section>
-</section>
+</div>
+</div>
 
 
 

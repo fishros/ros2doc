@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="zh" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>向URDF模型添加物理和碰撞属性 [待校准@8927] &mdash; ROS 2 documentation  文档</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -55,7 +54,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../Installation/Windows-Install-Binary.html">在Windows上安装ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Installation/Fedora-Development-Setup.html">在Fedora Linux上构建ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Installation/Latest-Development-Setup.html">安装最新的ROS 2开发版本</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../Installation/Maintaining-a-Source-Checkout.html">Maintaining a source checkout of ROS 2 Rolling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Installation/Maintaining-a-Source-Checkout.html">维护ROS 2Foxy源文件的检出</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Installation/Testing.html">用于测试的替代安装源</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Installation/DDS-Implementations.html">安装DDS实现</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../Installation/DDS-Implementations/Install-Connext-Security-Plugins.html">安装Connext安全插件</a></li>
@@ -270,7 +269,7 @@
           <li><a href="URDF-Main.html">URDF教程 [待校准&#64;9047]</a> &raquo;</li>
       <li>向URDF模型添加物理和碰撞属性 [待校准&#64;8927]</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ros2/ros2_documentation/blob/rolling/source/Tutorials/URDF/Adding-Physical-and-Collision-Properties-to-a-URDF-Model.rst" class="fa fa-github"> 在 GitHub 上修改</a>
+              <a href="https://github.com/ros2/ros2_documentation/blob/foxy/source/Tutorials/URDF/Adding-Physical-and-Collision-Properties-to-a-URDF-Model.rst" class="fa fa-github"> 在 GitHub 上修改</a>
       </li>
   </ul>
   <hr/>
@@ -280,7 +279,7 @@
              
 
 
-  <section id="adding-physical-and-collision-properties-to-a-urdf-model">
+  <div class="section" id="adding-physical-and-collision-properties-to-a-urdf-model">
 <span id="urdfproperties"></span><h1>向URDF模型添加物理和碰撞属性 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8927">[待校准&#64;8927]</a><a class="headerlink" href="#adding-physical-and-collision-properties-to-a-urdf-model" title="永久链接至标题"></a></h1>
 <p>Goal目标: Learn了解如何为链接添加碰撞和惯性特性，以及如何为关节添加关节动力学。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8928">[待校准&#64;8928]</a></p>
 <p>教程级别: 初学者 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7088">[Alyssa&#64;7088]</a></p>
@@ -300,7 +299,7 @@
 <li><p><a class="reference internal" href="#next-steps" id="id7">下一步 [待校准&#64;8972]</a></p></li>
 </ul>
 </div>
-<section id="collision">
+<div class="section" id="collision">
 <h2>碰撞 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8930">[待校准&#64;8930]</a><a class="headerlink" href="#collision" title="永久链接至标题"></a></h2>
 <p>到目前为止，我们只指定了与单个子元素 <code class="docutils literal notranslate"><span class="pre">visual</span></code> 的链接， <code class="docutils literal notranslate"><span class="pre">visual</span></code> 定义了 (毫不奇怪) 机器人的样子。然而，为了让碰撞检测工作或模拟机器人，我们还需要定义一个 <code class="docutils literal notranslate"><span class="pre">collision</span></code> 元素。具有碰撞和物理性质的 <a class="reference external" href="https://raw.githubusercontent.com/ros/urdf_tutorial/master/urdf/07-physics.urdf">Here is the new urdf</a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8931">[待校准&#64;8931]</a></p>
 <p>这是我们新的基本链接的代码。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8932">[待校准&#64;8932]</a></p>
@@ -333,11 +332,11 @@
 <li><p>安全区。你可能想要限制靠近敏感设备的移动。例如，如果我们不想让任何东西与R2D2的头部碰撞，我们可以将碰撞几何定义为围绕他头部的圆柱体，以防止任何东西离他的头部太近。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8938">[待校准&#64;8938]</a></p></li>
 </ul>
 </div></blockquote>
-</section>
-<section id="physical-properties">
+</div>
+<div class="section" id="physical-properties">
 <h2>物理性质 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8939">[待校准&#64;8939]</a><a class="headerlink" href="#physical-properties" title="永久链接至标题"></a></h2>
 <p>为了使模型正确模拟，您需要定义机器人的几个物理属性，即像Gazebo这样的物理引擎所需要的特性。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8940">[待校准&#64;8940]</a></p>
-<section id="inertia">
+<div class="section" id="inertia">
 <h3>惯性 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8941">[待校准&#64;8941]</a><a class="headerlink" href="#inertia" title="永久链接至标题"></a></h3>
 <p>每个被模拟的连杆元件都需要一个惯性标签。这里有一个简单的。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8942">[待校准&#64;8942]</a></p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;link</span> <span class="na">name=</span><span class="s">&quot;base_link&quot;</span><span class="nt">&gt;</span>
@@ -395,8 +394,8 @@
 <li><p>您还可以指定原点标签以指定重心和惯性参考帧 (相对于链接的参考帧)。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8958">[待校准&#64;8958]</a></p></li>
 <li><p>当使用实时控制器时，零 (或几乎为零) 的惯性元素会导致机器人模型在没有警告的情况下折叠，并且所有链接将以它们的起源与世界起源一致出现。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8959">[待校准&#64;8959]</a></p></li>
 </ul>
-</section>
-<section id="contact-coefficients">
+</div>
+<div class="section" id="contact-coefficients">
 <h3>接触系数 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8960">[待校准&#64;8960]</a><a class="headerlink" href="#contact-coefficients" title="永久链接至标题"></a></h3>
 <p>您还可以定义链接相互接触时的行为。这是通过调用contact_coefficients的冲突标签的子元素完成的。有三个属性需要指定: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8961">[待校准&#64;8961]</a></p>
 <blockquote>
@@ -406,8 +405,8 @@
 <li><p>kd -  <a class="reference external" href="https://en.wikipedia.org/wiki/Damping_ratio#Definition">Dampening coefficient</a>  <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8964">[待校准&#64;8964]</a></p></li>
 </ul>
 </div></blockquote>
-</section>
-<section id="joint-dynamics">
+</div>
+<div class="section" id="joint-dynamics">
 <h3>联合动力学 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8965">[待校准&#64;8965]</a><a class="headerlink" href="#joint-dynamics" title="永久链接至标题"></a></h3>
 <p>关节如何移动由关节的动力学标签定义。这里有两个属性: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8966">[待校准&#64;8966]</a></p>
 <blockquote>
@@ -417,17 +416,17 @@
 </ul>
 </div></blockquote>
 <p>如果未指定，则这些系数默认为零。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8969">[待校准&#64;8969]</a></p>
-</section>
-</section>
-<section id="other-tags">
+</div>
+</div>
+<div class="section" id="other-tags">
 <h2>其他标签 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8970">[待校准&#64;8970]</a><a class="headerlink" href="#other-tags" title="永久链接至标题"></a></h2>
 <p>在纯URDF领域 (即除Gazebo标签外)，还有两个标签可以帮助定义接头: 校准和安全控制器。查看 <a class="reference external" href="https://wiki.ros.org/urdf/XML/joint">spec</a> ，因为它们不包括在本教程中。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8971">[待校准&#64;8971]</a></p>
-</section>
-<section id="next-steps">
+</div>
+<div class="section" id="next-steps">
 <h2>下一步 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8972">[待校准&#64;8972]</a><a class="headerlink" href="#next-steps" title="永久链接至标题"></a></h2>
 <p>通过 <a class="reference internal" href="Using-Xacro-to-Clean-Up-a-URDF-File.html"><span class="doc">using xacro</span></a> 减少你必须做的代码和恼人的数学。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8973">[待校准&#64;8973]</a></p>
-</section>
-</section>
+</div>
+</div>
 
 
 

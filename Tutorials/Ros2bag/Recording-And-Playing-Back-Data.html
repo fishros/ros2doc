@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="zh" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>记录和回放数据 [待校准@8079] &mdash; ROS 2 documentation  文档</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -55,7 +54,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../Installation/Windows-Install-Binary.html">在Windows上安装ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Installation/Fedora-Development-Setup.html">在Fedora Linux上构建ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Installation/Latest-Development-Setup.html">安装最新的ROS 2开发版本</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../Installation/Maintaining-a-Source-Checkout.html">Maintaining a source checkout of ROS 2 Rolling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Installation/Maintaining-a-Source-Checkout.html">维护ROS 2Foxy源文件的检出</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Installation/Testing.html">用于测试的替代安装源</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Installation/DDS-Implementations.html">安装DDS实现</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../Installation/DDS-Implementations/Install-Connext-Security-Plugins.html">安装Connext安全插件</a></li>
@@ -269,7 +268,7 @@
           <li><a href="../../Tutorials.html">教程</a> &raquo;</li>
       <li>记录和回放数据 [待校准&#64;8079]</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ros2/ros2_documentation/blob/rolling/source/Tutorials/Ros2bag/Recording-And-Playing-Back-Data.rst" class="fa fa-github"> 在 GitHub 上修改</a>
+              <a href="https://github.com/ros2/ros2_documentation/blob/foxy/source/Tutorials/Ros2bag/Recording-And-Playing-Back-Data.rst" class="fa fa-github"> 在 GitHub 上修改</a>
       </li>
   </ul>
   <hr/>
@@ -279,7 +278,7 @@
              
 
 
-  <section id="recording-and-playing-back-data">
+  <div class="section" id="recording-and-playing-back-data">
 <span id="ros2bag"></span><h1>记录和回放数据 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8079">[待校准&#64;8079]</a><a class="headerlink" href="#recording-and-playing-back-data" title="永久链接至标题"></a></h1>
 <p>Goal目标: Record记录发布在某个话题上的数据，以便您可以随时重播和检查它。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8080">[待校准&#64;8080]</a></p>
 <p>教程级别: 初学者 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7088">[Alyssa&#64;7088]</a></p>
@@ -303,29 +302,29 @@
 <li><p><a class="reference internal" href="#related-content" id="id11">相关内容</a></p></li>
 </ul>
 </div>
-<section id="background">
+<div class="section" id="background">
 <h2><a class="toc-backref" href="#id1">背景</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
 <p>[需手动修复的语法]``ros2 bag`` is是一个命令行工具，用于记录系统中发布的关于话题的数据。它累积传递给任意数量话题的数据，并将其保存在数据库中。然后，您可以重放数据以重现测试和实验的结果。记录话题也是分享你的作品并允许其他人重新创作的好方法。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8081">[待校准&#64;8081]</a></p>
-</section>
-<section id="prerequisites">
+</div>
+<div class="section" id="prerequisites">
 <h2><a class="toc-backref" href="#id2">先决条件</a><a class="headerlink" href="#prerequisites" title="永久链接至标题"></a></h2>
 <div class="admonition note">
-<p class="admonition-title">备注</p>
+<p class="admonition-title">注解</p>
 <p>对于需要更高性能版本的rosbag2的ROS 2Foxy用户，请参阅 <a class="reference external" href="https://github.com/ros2/rosbag2/tree/foxy-future">foxy-future branch of rosbag2</a> 。这是一个官方支持的分支，更接近Galactic版本，增加了性能改进和特性，但与Foxy版本不兼容。用户刚刚进入这个教程Foxy，你可以忽略这继续默认安装。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8082">[待校准&#64;8082]</a></p>
 </div>
 <p>您应该安装 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">bag</span></code> 作为常规ROS 2设置的一部分。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8083">[待校准&#64;8083]</a></p>
 <p>如果您是从Linux上的Debians安装的，并且您的系统无法识别该命令，请像这样安装它: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8084">[待校准&#64;8084]</a></p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sudo apt-get install ros-rolling-ros2bag \</span>
-<span class="go">                     ros-rolling-rosbag2-converter-default-plugins \</span>
-<span class="go">                     ros-rolling-rosbag2-storage-default-plugins</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sudo apt-get install ros-foxy-ros2bag \</span>
+<span class="go">                     ros-foxy-rosbag2-converter-default-plugins \</span>
+<span class="go">                     ros-foxy-rosbag2-storage-default-plugins</span>
 </pre></div>
 </div>
 <p>本教程讨论了前面教程中涵盖的概念，如 <a class="reference internal" href="../Understanding-ROS2-Nodes.html"><span class="doc">nodes</span></a> 和 <a class="reference internal" href="../Topics/Understanding-ROS2-Topics.html"><span class="doc">topics</span></a>. It also uses the <a class="reference internal" href="../Turtlesim/Introducing-Turtlesim.html"><span class="doc">turtlesim package</span></a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8085">[待校准&#64;8085]</a></p>
 <p>和往常一样，不要忘记在 <a class="reference internal" href="../Configuring-ROS2-Environment.html"><span class="doc">every new terminal you open</span></a> 中源文件ROS 2。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7566">[待校准&#64;7566]</a></p>
-</section>
-<section id="tasks">
+</div>
+<div class="section" id="tasks">
 <h2><a class="toc-backref" href="#id3">任务</a><a class="headerlink" href="#tasks" title="永久链接至标题"></a></h2>
-<section id="setup">
+<div class="section" id="setup">
 <h3>1设置 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7567">[待校准&#64;7567]</a><a class="headerlink" href="#setup" title="永久链接至标题"></a></h3>
 <p>您将在 <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> 系统中记录您的键盘输入，以便以后保存和重放，所以从启动 <code class="docutils literal notranslate"><span class="pre">/turtlesim</span></code> 和 <code class="docutils literal notranslate"><span class="pre">/teleop_turtle</span></code> 节点开始。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8086">[待校准&#64;8086]</a></p>
 <p>打开新终端并运行: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7339">[待校准&#64;7339]</a></p>
@@ -341,8 +340,8 @@
 <span class="go">cd bag_files</span>
 </pre></div>
 </div>
-</section>
-<section id="choose-a-topic">
+</div>
+<div class="section" id="choose-a-topic">
 <h3>2选择一个话题 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8088">[待校准&#64;8088]</a><a class="headerlink" href="#choose-a-topic" title="永久链接至标题"></a></h3>
 <p>[需手动修复的语法]``ros2 bag`` can只记录发表的话题的数据。要查看系统话题列表，请打开新终端并运行以下命令: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8089">[待校准&#64;8089]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 topic list</span>
@@ -373,8 +372,8 @@
 <span class="go">  ---</span>
 </pre></div>
 </div>
-</section>
-<section id="ros2-bag-record">
+</div>
+<div class="section" id="ros2-bag-record">
 <h3>3 ros2包记录 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8094">[待校准&#64;8094]</a><a class="headerlink" href="#ros2-bag-record" title="永久链接至标题"></a></h3>
 <p>要记录发布到话题的数据，请使用命令语法: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8095">[待校准&#64;8095]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 bag record &lt;topic_name&gt;</span>
@@ -396,7 +395,7 @@
 <img alt="../../_images/record.png" src="../../_images/record.png" />
 <p>按 “ctrl + c” 停止录制。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8099">[待校准&#64;8099]</a></p>
 <p>数据将被累积在一个袋子文件中，名称为 <code class="docutils literal notranslate"><span class="pre">rosbag2_year_month_day-hour_minute_second</span></code>  <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8100">[待校准&#64;8100]</a></p>
-<section id="record-multiple-topics">
+<div class="section" id="record-multiple-topics">
 <h4>3.1记录多个话题 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8101">[待校准&#64;8101]</a><a class="headerlink" href="#record-multiple-topics" title="永久链接至标题"></a></h4>
 <p>您还可以记录多个话题，以及更改 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">bag</span></code> 保存到的文件的名称。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8102">[待校准&#64;8102]</a></p>
 <p>运行以下命令: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8103">[待校准&#64;8103]</a></p>
@@ -415,12 +414,12 @@
 </div>
 <p>你可以移动乌龟，完成后按 “ctrl + c”。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8107">[待校准&#64;8107]</a></p>
 <div class="admonition note">
-<p class="admonition-title">备注</p>
+<p class="admonition-title">注解</p>
 <p>还有一个选项，你可以添加到命令， <code class="docutils literal notranslate"><span class="pre">-a</span></code> ，它记录你系统上的所有话题。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8108">[待校准&#64;8108]</a></p>
 </div>
-</section>
-</section>
-<section id="ros2-bag-info">
+</div>
+</div>
+<div class="section" id="ros2-bag-info">
 <h3>4 ros2包信息 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8109">[待校准&#64;8109]</a><a class="headerlink" href="#ros2-bag-info" title="永久链接至标题"></a></h3>
 <p>您可以通过运行以下命令查看有关录制的详细信息: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8110">[待校准&#64;8110]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 bag info &lt;bag_file_name&gt;</span>
@@ -442,8 +441,8 @@
 </pre></div>
 </div>
 <p>要查看单个消息，您必须打开数据库 (在本例中为sqlite3) 来检查它，这超出了ROS 2的范围。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8112">[待校准&#64;8112]</a></p>
-</section>
-<section id="ros2-bag-play">
+</div>
+<div class="section" id="ros2-bag-play">
 <h3>5 ros2包游戏 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8113">[待校准&#64;8113]</a><a class="headerlink" href="#ros2-bag-play" title="永久链接至标题"></a></h3>
 <p>在重播bag文件之前，在运行teleop的终端中输入 “ctrl + c”。然后确保你的turtlesim窗口是可见的，这样你就可以在动作中看到包文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8114">[待校准&#64;8114]</a></p>
 <p>输入命令: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8115">[待校准&#64;8115]</a></p>
@@ -463,21 +462,21 @@
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 topic hz /turtle1/pose</span>
 </pre></div>
 </div>
-</section>
-</section>
-<section id="summary">
+</div>
+</div>
+<div class="section" id="summary">
 <h2><a class="toc-backref" href="#id9">总结</a><a class="headerlink" href="#summary" title="永久链接至标题"></a></h2>
 <p>您可以使用 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">bag</span></code> 命令记录ROS 2系统中话题传递的数据。无论你是和别人分享你的作品还是反思你自己的实验，它都是一个很好的了解工具。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8122">[待校准&#64;8122]</a></p>
-</section>
-<section id="next-steps">
+</div>
+<div class="section" id="next-steps">
 <h2><a class="toc-backref" href="#id10">下一步</a><a class="headerlink" href="#next-steps" title="永久链接至标题"></a></h2>
 <p>你已经完成了  &quot;Beginner: CLI Tools&quot; 教程!下一步是处理  &quot;Beginner: Client Libraries&quot; 教程，从 <a class="reference internal" href="../Workspace/Creating-A-Workspace.html"><span class="doc">创建工作空间 [待校准&#64;9276]</span></a> 开始。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8123">[待校准&#64;8123]</a></p>
-</section>
-<section id="related-content">
+</div>
+<div class="section" id="related-content">
 <h2><a class="toc-backref" href="#id11">相关内容</a><a class="headerlink" href="#related-content" title="永久链接至标题"></a></h2>
 <p>关于 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">bag</span></code> 的更详尽的解释可以在自述文件中找到 <a class="reference external" href="https://github.com/ros2/rosbag2">here</a> 。有关QoS兼容性和 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">bag</span></code> 的更多信息，请参阅: doc:'/操作指南/重载QoS记录和播放策略'。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8124">[待校准&#64;8124]</a></p>
-</section>
-</section>
+</div>
+</div>
 
 
 

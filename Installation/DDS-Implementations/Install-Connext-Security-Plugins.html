@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="zh" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>安装Connext安全插件 &mdash; ROS 2 documentation  文档</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -55,7 +54,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Windows-Install-Binary.html">在Windows上安装ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Fedora-Development-Setup.html">在Fedora Linux上构建ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Latest-Development-Setup.html">安装最新的ROS 2开发版本</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Maintaining-a-Source-Checkout.html">Maintaining a source checkout of ROS 2 Rolling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Maintaining-a-Source-Checkout.html">维护ROS 2Foxy源文件的检出</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Testing.html">用于测试的替代安装源</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../DDS-Implementations.html">安装DDS实现</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">安装Connext安全插件</a></li>
@@ -270,7 +269,7 @@
           <li><a href="../DDS-Implementations.html">安装DDS实现</a> &raquo;</li>
       <li>安装Connext安全插件</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ros2/ros2_documentation/blob/rolling/source/Installation/DDS-Implementations/Install-Connext-Security-Plugins.rst" class="fa fa-github"> 在 GitHub 上修改</a>
+              <a href="https://github.com/ros2/ros2_documentation/blob/foxy/source/Installation/DDS-Implementations/Install-Connext-Security-Plugins.rst" class="fa fa-github"> 在 GitHub 上修改</a>
       </li>
   </ul>
   <hr/>
@@ -280,19 +279,17 @@
              
 
 
-  <section id="installing-connext-security-plugins">
+  <div class="section" id="installing-connext-security-plugins">
 <h1>安装Connext安全插件<a class="headerlink" href="#installing-connext-security-plugins" title="永久链接至标题"></a></h1>
 <p>Connext DDS库包含在ROS 2的 <a class="reference external" href="https://www.rti.com/ncl">non-commercial license</a> 下，不包括安全插件库。这些库可在RTI Connext DDS Pro的商业、大学和研究许可版本中获取，该版本与系统调试、监控、记录/重放等工具捆绑在一起。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5357">[Alyssa&#64;5357]</a></p>
 <p>Connext DDS评估版本 (5.3.1) 包括安全插件，可通过选项 <a class="reference internal" href="Install-Connext-University-Eval.html"><span class="doc">university, purchase or evaluation</span></a> 下载。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5358">[Alyssa&#64;5358]</a></p>
 <p>视频形式的安装过程 (工具和安全插件的安装) 可在RTI网站 <a class="reference external" href="https://www.rti.com/gettingstarted/installwindows_secure">here</a> 获取。步骤如下: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5359">[Alyssa&#64;5359]</a></p>
 <p>安装Connext DDS Pro (Host) ，这是主机特定的安装程序 (Windows、Linux MacOS) ，可安装一个包括启动器，工具，和其他软件服务的'Host'软件包。在安装结束时，RTI'Launcher'程序将启动。Launcher用于安装目标库、安全插件和其他分层服务。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5360">[Alyssa&#64;5360]</a></p>
 <p>在Launcher中使用软件包安装程序 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5361">[待校准&#64;5361]</a></p>
-<figure class="align-default" id="id1">
+<div class="figure align-default" id="id1">
 <img alt="Launcher图像" src="https://cdn2.hubspot.net/hub/1754418/file-3649043118-png/blog-files/launchermacos.png" />
-<figcaption>
-<p><span class="caption-text">Launcher图像</span><a class="headerlink" href="#id1" title="永久链接至图片"></a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-text">Launcher图像</span><a class="headerlink" href="#id1" title="永久链接至图片"></a></p>
+</div>
 <p>'RTI Package Installer'用于安装 '.rtipkg' 文件 -- 目标库、安全插件等。打开包安装器，选择所有包含在Connext DDS Secure包中用于安装的 .rtipkg文件: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5363">[Alyssa&#64;5363]</a></p>
 <blockquote>
 <div><ul class="simple">
@@ -304,7 +301,7 @@
 </div></blockquote>
 <p>获取并安装OpenSSL，作为archive (或者.zip) 包可简单提取并复制到主机电脑上方便的位置。作为建议，也可以将其安装到主目录空间中的 'rti_connext_dds-[version]' 目录中 (这是在安装RTI主机工具期间创建的)。注意: 此目录位置可能需要放置在PATH环境变量中。有关更多信息，请参见 <a class="reference external" href="https://community.rti.com/static/documentation/connext-dds/5.3.1/doc/manuals/connext_dds/dds_security/RTI_SecurityPlugins_GettingStarted.pdf">RTI Security Plugins Getting Started Guide</a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5368">[Alyssa&#64;5368]</a></p>
 <p>安装完成。</p>
-</section>
+</div>
 
 
 

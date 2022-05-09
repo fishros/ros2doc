@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="zh" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>在类中使用参数 (Python) [待校准@9249] &mdash; ROS 2 documentation  文档</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -56,7 +55,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Windows-Install-Binary.html">在Windows上安装ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Fedora-Development-Setup.html">在Fedora Linux上构建ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Latest-Development-Setup.html">安装最新的ROS 2开发版本</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Installation/Maintaining-a-Source-Checkout.html">Maintaining a source checkout of ROS 2 Rolling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Maintaining-a-Source-Checkout.html">维护ROS 2Foxy源文件的检出</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Testing.html">用于测试的替代安装源</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/DDS-Implementations.html">安装DDS实现</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Install-Connext-Security-Plugins.html">安装Connext安全插件</a></li>
@@ -270,7 +269,7 @@
           <li><a href="../Tutorials.html">教程</a> &raquo;</li>
       <li>在类中使用参数 (Python) [待校准&#64;9249]</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ros2/ros2_documentation/blob/rolling/source/Tutorials/Using-Parameters-In-A-Class-Python.rst" class="fa fa-github"> 在 GitHub 上修改</a>
+              <a href="https://github.com/ros2/ros2_documentation/blob/foxy/source/Tutorials/Using-Parameters-In-A-Class-Python.rst" class="fa fa-github"> 在 GitHub 上修改</a>
       </li>
   </ul>
   <hr/>
@@ -280,7 +279,7 @@
              
 
 
-  <section id="using-parameters-in-a-class-python">
+  <div class="section" id="using-parameters-in-a-class-python">
 <span id="pythonparamnode"></span><h1>在类中使用参数 (Python) <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9249">[待校准&#64;9249]</a><a class="headerlink" href="#using-parameters-in-a-class-python" title="永久链接至标题"></a></h1>
 <p>Goal目标: using使用Python (rclpy) 创建并运行具有ROS参数的类。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9250">[待校准&#64;9250]</a></p>
 <p>教程级别: 初学者 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7088">[Alyssa&#64;7088]</a></p>
@@ -301,18 +300,18 @@
 <li><p><a class="reference internal" href="#next-steps" id="id8">下一步</a></p></li>
 </ul>
 </div>
-<section id="background">
+<div class="section" id="background">
 <h2><a class="toc-backref" href="#id1">背景</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
 <p>当你制作自己的 <a class="reference internal" href="Understanding-ROS2-Nodes.html"><span class="doc">nodes</span></a> 时，你有时需要添加可以从launch文件中设置的参数。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9211">[待校准&#64;9211]</a></p>
 <p>本教程将向您展示如何在Python类中创建这些参数，以及如何在launch文件中设置它们。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9251">[待校准&#64;9251]</a></p>
-</section>
-<section id="prerequisites">
+</div>
+<div class="section" id="prerequisites">
 <h2><a class="toc-backref" href="#id2">先决条件</a><a class="headerlink" href="#prerequisites" title="永久链接至标题"></a></h2>
 <p>在之前的教程中，您学习了如何在ROS 2系统中使用 <a class="reference internal" href="Workspace/Creating-A-Workspace.html"><span class="doc">create a workspace</span></a> and <a class="reference internal" href="Creating-Your-First-ROS2-Package.html"><span class="doc">create a package</span></a>. You have also learned about <a class="reference internal" href="Parameters/Understanding-ROS2-Parameters.html"><span class="doc">parameters</span></a> 及其功能。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9213">[待校准&#64;9213]</a></p>
-</section>
-<section id="tasks">
+</div>
+<div class="section" id="tasks">
 <h2><a class="toc-backref" href="#id3">任务</a><a class="headerlink" href="#tasks" title="永久链接至标题"></a></h2>
-<section id="create-a-package">
+<div class="section" id="create-a-package">
 <h3>1创建包 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7137">[待校准&#64;7137]</a><a class="headerlink" href="#create-a-package" title="永久链接至标题"></a></h3>
 <p>打开一个新的终端和 <a class="reference internal" href="Configuring-ROS2-Environment.html"><span class="doc">source your ROS 2 installation</span></a> ，这样 <code class="docutils literal notranslate"><span class="pre">ros2</span></code> 命令就可以工作了。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9214">[待校准&#64;9214]</a></p>
 <p>导航到 <code class="docutils literal notranslate"><span class="pre">dev_ws</span></code> 目录创建 <a class="reference internal" href="Workspace/Creating-A-Workspace.html#new-directory"><span class="std std-ref">previous tutorial</span></a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9215">[待校准&#64;9215]</a></p>
@@ -322,7 +321,7 @@
 </div>
 <p>您的终端将返回一条消息，验证您的包 <code class="docutils literal notranslate"><span class="pre">python_parameters</span></code> 及其所有必要的文件和文件夹的创建。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9252">[待校准&#64;9252]</a></p>
 <p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">--dependencies</span></code> 参数将自动调用y向 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 和 <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> 添加必要的依赖线。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9218">[待校准&#64;9218]</a></p>
-<section id="update-package-xml">
+<div class="section" id="update-package-xml">
 <h4>1.1更新 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code>  <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8003">[待校准&#64;8003]</a><a class="headerlink" href="#update-package-xml" title="永久链接至标题"></a></h4>
 <p>因为您在包创建过程中使用了 <code class="docutils literal notranslate"><span class="pre">--dependencies</span></code> 选项，所以您不必手动向 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 或 <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> 添加依赖项。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9219">[待校准&#64;9219]</a></p>
 <p>但是，与往常一样，请确保将描述、维护人员电子邮件和姓名以及许可信息添加到 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9220">[待校准&#64;9220]</a></p>
@@ -331,9 +330,9 @@
 <span class="nt">&lt;license&gt;</span>Apache License 2.0<span class="nt">&lt;/license&gt;</span>
 </pre></div>
 </div>
-</section>
-</section>
-<section id="write-the-python-node">
+</div>
+</div>
+<div class="section" id="write-the-python-node">
 <h3>2编写Python节点 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9253">[待校准&#64;9253]</a><a class="headerlink" href="#write-the-python-node" title="永久链接至标题"></a></h3>
 <p>在 <code class="docutils literal notranslate"><span class="pre">dev_ws/src/python_parameters/python_parameters</span></code> 目录内，创建一个调用 <code class="docutils literal notranslate"><span class="pre">python_parameters_node.py</span></code> 的新文件，并将以下代码粘贴到: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9254">[待校准&#64;9254]</a></p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">rclpy</span>
@@ -369,7 +368,7 @@
     <span class="n">main</span><span class="p">()</span>
 </pre></div>
 </div>
-<section id="examine-the-code">
+<div class="section" id="examine-the-code">
 <h4>2.1检查代码 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8007">[待校准&#64;8007]</a><a class="headerlink" href="#examine-the-code" title="永久链接至标题"></a></h4>
 <p>注意: 在获取或设置参数之前声明参数是强制性的，否则将引发 <code class="docutils literal notranslate"><span class="pre">ParameterNotDeclaredException</span></code> 异常。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9255">[待校准&#64;9255]</a></p>
 <p>下面的 <code class="docutils literal notranslate"><span class="pre">import</span></code> 语句用于导入包依赖关系。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9256">[待校准&#64;9256]</a></p>
@@ -412,7 +411,7 @@
     <span class="n">main</span><span class="p">()</span>
 </pre></div>
 </div>
-<section id="optional-add-parameterdescriptor">
+<div class="section" id="optional-add-parameterdescriptor">
 <h5>2.1.1 (可选) 添加参数描述符 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9260">[待校准&#64;9260]</a><a class="headerlink" href="#optional-add-parameterdescriptor" title="永久链接至标题"></a></h5>
 <p>您可以选择为参数设置描述符。描述符允许您指定参数和参数约束的文本描述，例如使其成为只读、指定范围等。为此， <code class="docutils literal notranslate"><span class="pre">__init__</span></code> 代码必须更改为: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9261">[待校准&#64;9261]</a></p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># ...</span>
@@ -432,9 +431,9 @@
 </pre></div>
 </div>
 <p>其余代码保持不变。运行节点后，您可以运行 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span> <span class="pre">describe</span> <span class="pre">/minimal_param_node</span> <span class="pre">my_parameter</span></code> 来查看类型和描述。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9262">[待校准&#64;9262]</a></p>
-</section>
-</section>
-<section id="add-an-entry-point">
+</div>
+</div>
+<div class="section" id="add-an-entry-point">
 <h4>2.2添加入口点 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9263">[待校准&#64;9263]</a><a class="headerlink" href="#add-an-entry-point" title="永久链接至标题"></a></h4>
 <p>打开 <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> 文件。再一次，将 <code class="docutils literal notranslate"><span class="pre">maintainer</span></code> 、 <code class="docutils literal notranslate"><span class="pre">maintainer_email</span></code> 、 <code class="docutils literal notranslate"><span class="pre">description</span></code> 和 <code class="docutils literal notranslate"><span class="pre">license</span></code> 田地与你的 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 相匹配: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9264">[待校准&#64;9264]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">maintainer</span><span class="o">=</span><span class="s1">&#39;YourName&#39;</span><span class="p">,</span>
@@ -452,13 +451,13 @@
 </pre></div>
 </div>
 <p>不要忘记保存。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9266">[待校准&#64;9266]</a></p>
-</section>
-</section>
-<section id="build-and-run">
+</div>
+</div>
+<div class="section" id="build-and-run">
 <h3>3构建和运行 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8033">[待校准&#64;8033]</a><a class="headerlink" href="#build-and-run" title="永久链接至标题"></a></h3>
 <p>在构建之前，最好在工作区 ( <code class="docutils literal notranslate"><span class="pre">dev_ws</span></code> ) 的根目录下运行 <code class="docutils literal notranslate"><span class="pre">rosdep</span></code> ，以检查是否缺少依赖项: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9228">[待校准&#64;9228]</a></p>
 <div class="sphinx-tabs docutils container">
-<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-0-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-0-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-0-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-0-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-0-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">rosdep install -i --from-path src --rosdistro rolling -y</span>
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-0-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-0-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-0-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-0-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-0-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">rosdep install -i --from-path src --rosdistro foxy -y</span>
 </pre></div>
 </div>
 </div><div aria-labelledby="tab-0-bWFjT1M=" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-bWFjT1M=" name="bWFjT1M=" role="tabpanel" tabindex="0"><p>rosdep仅在Linux上运行，因此您可以跳到下一步。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9229">[待校准&#64;9229]</a></p>
@@ -497,7 +496,7 @@
 </pre></div>
 </div>
 <p>有两种方法可以更改参数: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9268">[待校准&#64;9268]</a></p>
-<section id="change-via-the-console">
+<div class="section" id="change-via-the-console">
 <h4>3.1通过控制台进行更改 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9234">[待校准&#64;9234]</a><a class="headerlink" href="#change-via-the-console" title="永久链接至标题"></a></h4>
 <p>这部分将使用你从 <a class="reference internal" href="Parameters/Understanding-ROS2-Parameters.html"><span class="doc">tutoral about parameters</span></a> 中获得的知识，并将其应用到你刚刚创建的节点上。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9269">[待校准&#64;9269]</a></p>
 <p>确保节点正在运行: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9236">[待校准&#64;9236]</a></p>
@@ -514,8 +513,8 @@
 </div>
 <p>你知道如果你得到输出 <code class="docutils literal notranslate"><span class="pre">Set</span> <span class="pre">parameter</span> <span class="pre">successful</span></code> ，一切都很顺利。如果您查看另一个终端，您应该会看到输出更改为 “[信息] [minimal_param_node]: Hello earth!” <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9270">[待校准&#64;9270]</a></p>
 <p>由于Python talker随后将参数设置回 <code class="docutils literal notranslate"><span class="pre">world</span></code> ，进一步的输出显示 “[信息] [最小 _ 参数 _ 节点]: 你好，世界!” <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9271">[待校准&#64;9271]</a></p>
-</section>
-<section id="change-via-a-launch-file">
+</div>
+<div class="section" id="change-via-a-launch-file">
 <h4>3.2通过launch文件进行更改 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9240">[待校准&#64;9240]</a><a class="headerlink" href="#change-via-a-launch-file" title="永久链接至标题"></a></h4>
 <p>您也可以在launch文件中设置参数，但是首先您需要添加一个launch目录。在 <code class="docutils literal notranslate"><span class="pre">dev_ws/src/python_parameters/</span></code> 目录内，创建一个调用 <code class="docutils literal notranslate"><span class="pre">launch</span></code> 的新目录。在那里，创建一个调用ed <code class="docutils literal notranslate"><span class="pre">python_parameters_launch.py</span></code> 的新文件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9272">[待校准&#64;9272]</a></p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">launch</span> <span class="kn">import</span> <span class="n">LaunchDescription</span>
@@ -587,18 +586,18 @@
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">[parameter_node-1] [INFO] [custom_parameter_node]: Hello earth!</span>
 </pre></div>
 </div>
-</section>
-</section>
-</section>
-<section id="summary">
+</div>
+</div>
+</div>
+<div class="section" id="summary">
 <h2><a class="toc-backref" href="#id7">总结</a><a class="headerlink" href="#summary" title="永久链接至标题"></a></h2>
 <p>您使用自定义参数创建了一个节点，可以从launch文件或命令行中设置该参数。您编写了一个参数谈话者的代码: 一个Python节点，它声明，然后循环获取和设置一个string参数。您添加了入口点，以便构建和运行它，并使用 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span></code> 与参数谈话者进行交互。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9275">[待校准&#64;9275]</a></p>
-</section>
-<section id="next-steps">
+</div>
+<div class="section" id="next-steps">
 <h2><a class="toc-backref" href="#id8">下一步</a><a class="headerlink" href="#next-steps" title="永久链接至标题"></a></h2>
 <p>既然你有了自己的包和ROS 2系统， <a class="reference internal" href="Getting-Started-With-Ros2doctor.html"><span class="doc">next tutorial</span></a> 将向你展示如何检查你的环境和系统中的问题，以防你有问题。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9248">[待校准&#64;9248]</a></p>
-</section>
-</section>
+</div>
+</div>
 
 
 

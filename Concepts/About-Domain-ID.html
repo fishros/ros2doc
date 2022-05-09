@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="zh" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ROS_DOMAIN_ID &mdash; ROS 2 documentation  文档</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -56,7 +55,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Windows-Install-Binary.html">在Windows上安装ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Fedora-Development-Setup.html">在Fedora Linux上构建ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Latest-Development-Setup.html">安装最新的ROS 2开发版本</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Installation/Maintaining-a-Source-Checkout.html">Maintaining a source checkout of ROS 2 Rolling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Maintaining-a-Source-Checkout.html">维护ROS 2Foxy源文件的检出</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Testing.html">用于测试的替代安装源</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/DDS-Implementations.html">安装DDS实现</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Install-Connext-Security-Plugins.html">安装Connext安全插件</a></li>
@@ -270,7 +269,7 @@
           <li><a href="../Concepts.html">概念</a> &raquo;</li>
       <li>ROS_DOMAIN_ID</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ros2/ros2_documentation/blob/rolling/source/Concepts/About-Domain-ID.rst" class="fa fa-github"> 在 GitHub 上修改</a>
+              <a href="https://github.com/ros2/ros2_documentation/blob/foxy/source/Concepts/About-Domain-ID.rst" class="fa fa-github"> 在 GitHub 上修改</a>
       </li>
   </ul>
   <hr/>
@@ -280,20 +279,20 @@
              
 
 
-  <section id="the-ros-domain-id">
+  <div class="section" id="the-ros-domain-id">
 <h1>ROS_DOMAIN_ID<a class="headerlink" href="#the-ros-domain-id" title="永久链接至标题"></a></h1>
-<section id="overview">
+<div class="section" id="overview">
 <h2>概述<a class="headerlink" href="#overview" title="永久链接至标题"></a></h2>
 <p>如其他地方所解释的，ROS 2用于通讯的默认中间件是DDS。在DDS中，不同逻辑网络共享物理网络的主要机制称为域(Domain) ID。同一域上的ROS 2节点可以自由地相互发现并发送消息，而不同域上的ROS 2节点则不能。所有ROS 2节点默认使用域ID为0。为了避免在同一网络上运行ROS 2的不同计算机组之间互相干扰，应为每组设置不同的域ID。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9771">[小鱼&#64;9771]</a></p>
-</section>
-<section id="choosing-a-domain-id-short-version">
+</div>
+<div class="section" id="choosing-a-domain-id-short-version">
 <h2>选择域ID (短版本)<a class="headerlink" href="#choosing-a-domain-id-short-version" title="永久链接至标题"></a></h2>
 <p>下面的文本解释了应该在ROS 2中使用的域ID范围的推导。要跳过该背景知识并且只是选择一个安全的数字，只需选择一个介于0和101之间的安全的域ID (包括0和101)。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9773">[Alyssa&#64;9773]</a></p>
-</section>
-<section id="choosing-a-domain-id-long-version">
+</div>
+<div class="section" id="choosing-a-domain-id-long-version">
 <h2>选择域ID (长版本)<a class="headerlink" href="#choosing-a-domain-id-long-version" title="永久链接至标题"></a></h2>
 <p>DDS使用域ID计算将用于发现和通讯的UDP端口。有关如何计算端口的详细信息，请参见 <a class="reference external" href="https://community.rti.com/content/forum-topic/statically-configure-firewall-let-omg-dds-traffic-through">这篇文章</a> 。我们知道在网络中，UDP端口是 <a class="reference external" href="https://en.wikipedia.org/wiki/User_Datagram_Protocol#Ports">无符号16位整型</a> 。因此可以分配的最大端口号是65535。用上面文章中的公式计算一下，这意味着可以分配的最高域账号是232，而可以分配的最低域账号是0。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9775">[小鱼&#64;9775]</a></p>
-<section id="platform-specific-constraints">
+<div class="section" id="platform-specific-constraints">
 <h3>特定于平台的约束<a class="headerlink" href="#platform-specific-constraints" title="永久链接至标题"></a></h3>
 <p>为了实现最大的兼容性，在选择域账号时应遵循一些特定于平台的附加约束。特别是，最好避免在操作系统的 <a class="reference external" href="https://en.wikipedia.org/wiki/Ephemeral_port">临时端口范围</a> 中分配域ID。这避免了ROS 2节点使用的端口与计算机上的其他网络服务之间可能的冲突。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9777">[小鱼&#64;9777]</a></p>
 <p>以下是一些关于特定平台临时端口的提示。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9778">[小鱼&#64;9778]</a></p>
@@ -302,8 +301,8 @@
 </div><div aria-labelledby="tab-0-bWFjT1M=" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-bWFjT1M=" name="bWFjT1M=" role="tabpanel" tabindex="0"><p>默认情况下，macOS上的临时端口范围为49152-65535。这意味着域ID 0-166可以安全使用，而不会与临时端口发生冲突。通过为 <code class="docutils literal notranslate"><span class="pre">net.inet.ip.portrange.first</span></code> 和 <code class="docutils literal notranslate"><span class="pre">net.inet.ip.portrange.last</span></code> 设置自定义sysctl值，临时端口范围可在macOS中配置。如果使用自定义临时端口范围，则可能需要相应地调整上述数字。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9782">[小鱼&#64;9782]</a></p>
 </div><div aria-labelledby="tab-0-V2luZG93cw==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-V2luZG93cw==" name="V2luZG93cw==" role="tabpanel" tabindex="0"><p>默认情况下，Windows上的临时端口范围为49152-65535。这意味着域ID 0-166可以安全使用，不会与临时端口发生冲突。临时的端口范围可通过 <a class="reference external" href="https://docs.microsoft.com/en-us/troubleshoot/windows-server/networking/default-dynamic-port-range-tcpip-chang">使用netsh</a> 在窗口中配置。如果使用自定义临时端口范围，则可能需要相应地调整上述数字。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9784">[小鱼&#64;9784]</a></p>
 </div></div>
-</section>
-<section id="participant-constraints">
+</div>
+<div class="section" id="participant-constraints">
 <h3>参与者约束<a class="headerlink" href="#participant-constraints" title="永久链接至标题"></a></h3>
 <p>对于计算机上运行的每个ROS 2进程，将创建一个DDS  &quot;participant&quot; 。由于每个DDS参与者占用计算机上的两个端口，因此在一台计算机上运行120个以上的ROS 2进程可能会溢出到其他域ID或临时端口。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9786">[小鱼&#64;9786]</a></p>
 <p>为了解释原因，我们考虑域ID编号1和2。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9787">[小鱼&#64;9787]</a></p>
@@ -325,8 +324,8 @@
 </ul>
 <p>因此，在Linux上使用域ID为101时应创建的最大进程数为54。同样，在Linux上使用域ID为232时应创建的最大进程数为63，因为最大端口号为65535。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9800">[小鱼&#64;9800]</a></p>
 <p>macOS和Windows的情况相似，尽管数字不同。在macOS和Windows上，当选择166 (范围顶部) 的域账号时，运行到临时端口范围之前，可以在计算机上创建的ROS 2进程的最大数量为120。</p>
-</section>
-<section id="domain-id-to-udp-port-calculator">
+</div>
+<div class="section" id="domain-id-to-udp-port-calculator">
 <h3>域ID到UDP端口号计算器<a class="headerlink" href="#domain-id-to-udp-port-calculator" title="永久链接至标题"></a></h3>
 <table>
   <tr>
@@ -387,9 +386,9 @@
     discoveryUnicastPort.value = PB + (DG * domainID.value) + d1 + (PG * participantID.value);
     userUnicastPort.value = PB + (DG * domainID.value) + d3 + (PG * participantID.value);
   }
-</script></section>
-</section>
-</section>
+</script></div>
+</div>
+</div>
 
 
 

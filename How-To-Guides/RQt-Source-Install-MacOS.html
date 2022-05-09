@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="zh" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>在macOS上从源文件构建RQt [待校准@6459] &mdash; ROS 2 documentation  文档</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -55,7 +54,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Windows-Install-Binary.html">在Windows上安装ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Fedora-Development-Setup.html">在Fedora Linux上构建ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Latest-Development-Setup.html">安装最新的ROS 2开发版本</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Installation/Maintaining-a-Source-Checkout.html">Maintaining a source checkout of ROS 2 Rolling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Maintaining-a-Source-Checkout.html">维护ROS 2Foxy源文件的检出</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Testing.html">用于测试的替代安装源</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/DDS-Implementations.html">安装DDS实现</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Install-Connext-Security-Plugins.html">安装Connext安全插件</a></li>
@@ -270,7 +269,7 @@
           <li><a href="RQt-Source-Install.html">从源码构建RQt</a> &raquo;</li>
       <li>在macOS上从源文件构建RQt [待校准&#64;6459]</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ros2/ros2_documentation/blob/rolling/source/How-To-Guides/RQt-Source-Install-MacOS.rst" class="fa fa-github"> 在 GitHub 上修改</a>
+              <a href="https://github.com/ros2/ros2_documentation/blob/foxy/source/How-To-Guides/RQt-Source-Install-MacOS.rst" class="fa fa-github"> 在 GitHub 上修改</a>
       </li>
   </ul>
   <hr/>
@@ -280,17 +279,17 @@
              
 
 
-  <section id="building-rqt-from-source-on-macos">
+  <div class="section" id="building-rqt-from-source-on-macos">
 <h1>在macOS上从源文件构建RQt <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6459">[待校准&#64;6459]</a><a class="headerlink" href="#building-rqt-from-source-on-macos" title="永久链接至标题"></a></h1>
 <p>本页提供了在macOS上从源文件构建RQt的具体信息。在继续进行 <a class="reference internal" href="RQt-Source-Install.html"><span class="doc">RQt Source Install</span></a> 页面之前，请遵循这些说明。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6460">[待校准&#64;6460]</a></p>
-<section id="system-requirements">
+<div class="section" id="system-requirements">
 <h2>系统要求<a class="headerlink" href="#system-requirements" title="永久链接至标题"></a></h2>
 <p>RQt在macOS 10.12上受支持，但10.13似乎也可以工作。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6461">[待校准&#64;6461]</a></p>
-</section>
-<section id="dependencies">
+</div>
+<div class="section" id="dependencies">
 <h2>依赖关系 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6462">[待校准&#64;6462]</a><a class="headerlink" href="#dependencies" title="永久链接至标题"></a></h2>
 <p>RQt包的主要依赖项是sip和pyqt5。将来可能会支持PySide2。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6463">[待校准&#64;6463]</a></p>
-<section id="install-dependencies">
+<div class="section" id="install-dependencies">
 <h3>安装依赖项<a class="headerlink" href="#install-dependencies" title="永久链接至标题"></a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ brew install sip pyqt5
 $ brew install graphviz
@@ -305,13 +304,13 @@ $ <span class="nb">export</span> <span class="nv">CMAKE_PREFIX_PATH</span><span 
 </pre></div>
 </div>
 </div></blockquote>
-</section>
-</section>
-<section id="install-rqt-by-source">
+</div>
+</div>
+<div class="section" id="install-rqt-by-source">
 <h2>通过源文件安装RQt <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6465">[待校准&#64;6465]</a><a class="headerlink" href="#install-rqt-by-source" title="永久链接至标题"></a></h2>
 <p>继续 <a class="reference internal" href="RQt-Source-Install.html"><span class="doc">RQt source install page</span></a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6466">[待校准&#64;6466]</a></p>
-</section>
-</section>
+</div>
+</div>
 
 
 

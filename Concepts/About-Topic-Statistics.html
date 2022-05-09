@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="zh" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>关于话题统计 &mdash; ROS 2 documentation  文档</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -55,7 +54,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Windows-Install-Binary.html">在Windows上安装ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Fedora-Development-Setup.html">在Fedora Linux上构建ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Latest-Development-Setup.html">安装最新的ROS 2开发版本</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Installation/Maintaining-a-Source-Checkout.html">Maintaining a source checkout of ROS 2 Rolling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Maintaining-a-Source-Checkout.html">维护ROS 2Foxy源文件的检出</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Testing.html">用于测试的替代安装源</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/DDS-Implementations.html">安装DDS实现</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Install-Connext-Security-Plugins.html">安装Connext安全插件</a></li>
@@ -269,7 +268,7 @@
           <li><a href="../Concepts.html">概念</a> &raquo;</li>
       <li>关于话题统计</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ros2/ros2_documentation/blob/rolling/source/Concepts/About-Topic-Statistics.rst" class="fa fa-github"> 在 GitHub 上修改</a>
+              <a href="https://github.com/ros2/ros2_documentation/blob/foxy/source/Concepts/About-Topic-Statistics.rst" class="fa fa-github"> 在 GitHub 上修改</a>
       </li>
   </ul>
   <hr/>
@@ -279,7 +278,7 @@
              
 
 
-  <section id="about-topic-statistics">
+  <div class="section" id="about-topic-statistics">
 <span id="abouttopicstats"></span><h1>关于话题统计<a class="headerlink" href="#about-topic-statistics" title="永久链接至标题"></a></h1>
 <div class="contents local topic" id="table-of-contents">
 <p class="topic-title">目录</p>
@@ -292,16 +291,16 @@
 <li><p><a class="reference internal" href="#support" id="id6">支持</a></p></li>
 </ul>
 </div>
-<section id="overview">
+<div class="section" id="overview">
 <h2><a class="toc-backref" href="#id1">概述</a><a class="headerlink" href="#overview" title="永久链接至标题"></a></h2>
 <p>ROS 2为任何订阅者收到的消息提供了统计信息的集成度量。允许用户收集订阅者统计信息使他们能够表征其系统的性能或帮助诊断任何当前问题。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10248">[Alyssa&#64;10248]</a></p>
 <p>所提供的测量是接收到的消息年龄和接收到的消息周期。对于每次测量，所提供的统计数据包括平均值、最大值、最小值、标准差和样本数量。这些统计数据是在移动窗口中计算的。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10249">[Alyssa&#64;10249]</a></p>
-</section>
-<section id="how-statistics-are-calculated">
+</div>
+<div class="section" id="how-statistics-are-calculated">
 <h2><a class="toc-backref" href="#id2">如何计算统计数据</a><a class="headerlink" href="#how-statistics-are-calculated" title="永久链接至标题"></a></h2>
 <p>通过使用 <a class="reference external" href="https://github.com/ros-tooling/libstatistics_collector">libstatistics_collector</a> 包中实现的实用程序，在恒定时间和恒定内存中计算每个统计集。当订阅者收到新消息时，这是用于在当前测量窗口中计算的新样本。计算的平均值仅仅是 <a class="reference external" href="https://en.wikipedia.org/wiki/Moving_average">移动平均值（moving average）</a> 。最大、最小和样本数量在收到每个新样本后更新，而标准偏差使用 <a class="reference external" href="https://en.wikipedia.org/wiki/Algorithms_for_calculating_variance#Welford's_online_algorithm">Welford's online algorithm</a> 计算。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10251">[Alyssa&#64;10251]</a></p>
-</section>
-<section id="types-of-statistics-calculated">
+</div>
+<div class="section" id="types-of-statistics-calculated">
 <h2><a class="toc-backref" href="#id3">计算的统计信息类型</a><a class="headerlink" href="#types-of-statistics-calculated" title="永久链接至标题"></a></h2>
 <ul class="simple">
 <li><p>接收的消息周期 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10253">[Alyssa&#64;10253]</a></p>
@@ -317,23 +316,23 @@
 </ul>
 </li>
 </ul>
-</section>
-<section id="behavior">
+</div>
+<div class="section" id="behavior">
 <h2><a class="toc-backref" href="#id4">行为</a><a class="headerlink" href="#behavior" title="永久链接至标题"></a></h2>
 <p>默认情况下，话题统计测量不启用。通过订阅者配置选项为特定节点启用此功能后，将为该特定订阅者启用接收消息年龄和接收消息周期测量功能。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10259">[Alyssa&#64;10259]</a></p>
 <p>数据以 <a class="reference external" href="https://github.com/ros2/rcl_interfaces/blob/master/statistics_msgs/msg/MetricsMessage.msg">statistics_msg/msg/MetricsMessage</a> 作为消息类型，以一个可配置的周期 (默认1秒) 发布到一个可配置话题 (默认 <code class="docutils literal notranslate"><span class="pre">/statistics</span></code> )。请注意，发布周期也用作样本收集窗口周期。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10260">[Alyssa&#64;10260]</a></p>
 <p>由于接收到的消息周期需要头字段中的消息时间戳，因此将发布空数据。也就是说，如果未找到时间戳，则所有统计值均为NaN。发布NaN值而不是根本不发布避免了信号问题的缺失，并且旨在明确表明无法进行测量。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10261">[Alyssa&#64;10261]</a></p>
 <p>接收到的消息周期统计的每个窗口的第一个样本不会产生测量。这是因为计算这一统计数据需要知道前一条消息到达的时间，因此窗口中的后续样本会产生测量值。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10262">[Alyssa&#64;10262]</a></p>
-</section>
-<section id="comparison-to-ros-1">
+</div>
+<div class="section" id="comparison-to-ros-1">
 <h2><a class="toc-backref" href="#id5">与ROS 1的比较</a><a class="headerlink" href="#comparison-to-ros-1" title="永久链接至标题"></a></h2>
 <p>与ROS 1 <a class="reference external" href="https://wiki.ros.org/Topics#Topic_statistics">话题统计（Topic Statistics）</a> 相似，消息年龄和消息周期都是从订阅端计算的。目前不提供其他ROS 1指标，例如丢弃消息的数量或流量。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10263">[Alyssa&#64;10263]</a></p>
-</section>
-<section id="support">
+</div>
+<div class="section" id="support">
 <h2><a class="toc-backref" href="#id6">支持</a><a class="headerlink" href="#support" title="永久链接至标题"></a></h2>
 <p>目前，在ROS 2Foxy 中仅C++ 客户端 (rclcpp) 支持此功能。未来的工作和改进，如Python支持，可以在 <a class="reference external" href="https://github.com/ros2/ros2/issues/917">这里</a> 找到。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=10265">[Alyssa&#64;10265]</a></p>
-</section>
-</section>
+</div>
+</div>
 
 
 

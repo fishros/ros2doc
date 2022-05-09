@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="zh" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>在Docker中运行ROS 2节点 [社区-贡献] [待校准@6510] &mdash; ROS 2 documentation  文档</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -55,7 +54,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Windows-Install-Binary.html">在Windows上安装ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Fedora-Development-Setup.html">在Fedora Linux上构建ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Latest-Development-Setup.html">安装最新的ROS 2开发版本</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Installation/Maintaining-a-Source-Checkout.html">Maintaining a source checkout of ROS 2 Rolling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Maintaining-a-Source-Checkout.html">维护ROS 2Foxy源文件的检出</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Testing.html">用于测试的替代安装源</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/DDS-Implementations.html">安装DDS实现</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Install-Connext-Security-Plugins.html">安装Connext安全插件</a></li>
@@ -269,7 +268,7 @@
           <li><a href="../How-To-Guides.html">问题指南</a> &raquo;</li>
       <li>在Docker中运行ROS 2节点 [社区-贡献] [待校准&#64;6510]</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ros2/ros2_documentation/blob/rolling/source/How-To-Guides/Run-2-nodes-in-single-or-separate-docker-containers.rst" class="fa fa-github"> 在 GitHub 上修改</a>
+              <a href="https://github.com/ros2/ros2_documentation/blob/foxy/source/How-To-Guides/Run-2-nodes-in-single-or-separate-docker-containers.rst" class="fa fa-github"> 在 GitHub 上修改</a>
       </li>
   </ul>
   <hr/>
@@ -279,16 +278,16 @@
              
 
 
-  <section id="running-ros-2-nodes-in-docker-community-contributed">
+  <div class="section" id="running-ros-2-nodes-in-docker-community-contributed">
 <h1>在Docker中运行ROS 2节点 [社区-贡献] <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6510">[待校准&#64;6510]</a><a class="headerlink" href="#running-ros-2-nodes-in-docker-community-contributed" title="永久链接至标题"></a></h1>
-<section id="run-two-nodes-in-a-single-docker-container">
+<div class="section" id="run-two-nodes-in-a-single-docker-container">
 <h2>在单个docker容器中运行两个节点 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6511">[待校准&#64;6511]</a><a class="headerlink" href="#run-two-nodes-in-a-single-docker-container" title="永久链接至标题"></a></h2>
-<p>Pull the ROS docker image with tag &quot;rolling-desktop&quot;.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker pull osrf/ros:rolling-desktop
+<p>拉出带有标签 “foxy-桌面” 的ROS docker映像。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6512">[待校准&#64;6512]</a></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker pull osrf/ros:foxy-desktop
 </pre></div>
 </div>
 <p>在交互式模式下在容器中运行映像。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6513">[待校准&#64;6513]</a></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ docker run -it osrf/ros:rolling-desktop
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ docker run -it osrf/ros:foxy-desktop
 root@&lt;container-id&gt;:/#
 </pre></div>
 </div>
@@ -311,34 +310,34 @@ root@&lt;container-id&gt;:/#
 ros2 run demo_nodes_cpp talker
 </pre></div>
 </div>
-</section>
-<section id="run-two-nodes-in-two-separate-docker-containers">
+</div>
+<div class="section" id="run-two-nodes-in-two-separate-docker-containers">
 <h2>在两个单独的docker容器中运行两个节点 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6518">[待校准&#64;6518]</a><a class="headerlink" href="#run-two-nodes-in-two-separate-docker-containers" title="永久链接至标题"></a></h2>
 <p>打开终端。运行图像容器交互模式launcha话题出版商 (可执行 <code class="docutils literal notranslate"><span class="pre">talker</span></code> 从包 <code class="docutils literal notranslate"><span class="pre">demo_nodes_cpp</span></code> )  <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">run</span></code> : <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6519">[待校准&#64;6519]</a></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run -it --rm osrf/ros:rolling-desktop ros2 run demo_nodes_cpp talker
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run -it --rm osrf/ros:foxy-desktop ros2 run demo_nodes_cpp talker
 </pre></div>
 </div>
 <p>打开第二个终端。运行图像容器交互模式launcha话题用户 (可执行 <code class="docutils literal notranslate"><span class="pre">listener</span></code> 从包 <code class="docutils literal notranslate"><span class="pre">demo_nodes_cpp</span></code> )  <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">run</span></code> : <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6520">[待校准&#64;6520]</a></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run -it --rm osrf/ros:rolling-desktop ros2 run demo_nodes_cpp listener
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run -it --rm osrf/ros:foxy-desktop ros2 run demo_nodes_cpp listener
 </pre></div>
 </div>
 <p>作为命令行调用的替代方法，您可以创建一个包含以下 (最小) 内容的 <code class="docutils literal notranslate"><span class="pre">docker-compose.yml</span></code> 文件 (此处为版本2): <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6521">[待校准&#64;6521]</a></p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;2&#39;</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">version</span><span class="p">:</span> <span class="s">&#39;2&#39;</span>
 
-<span class="nt">services</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">talker</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">osrf/ros:rolling-desktop</span><span class="w"></span>
-<span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ros2 run demo_nodes_cpp talker</span><span class="w"></span>
-<span class="w">  </span><span class="nt">listener</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">osrf/ros:rolling-desktop</span><span class="w"></span>
-<span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ros2 run demo_nodes_cpp listener</span><span class="w"></span>
-<span class="w">    </span><span class="nt">depends_on</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">talker</span><span class="w"></span>
+<span class="nt">services</span><span class="p">:</span>
+  <span class="nt">talker</span><span class="p">:</span>
+    <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">osrf/ros:foxy-desktop</span>
+    <span class="nt">command</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ros2 run demo_nodes_cpp talker</span>
+  <span class="nt">listener</span><span class="p">:</span>
+    <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">osrf/ros:foxy-desktop</span>
+    <span class="nt">command</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ros2 run demo_nodes_cpp listener</span>
+    <span class="nt">depends_on</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">talker</span>
 </pre></div>
 </div>
 <p>在同一目录下运行容器调用 <code class="docutils literal notranslate"><span class="pre">docker-compose</span> <span class="pre">up</span></code> 。您可以使用 “ctrl + c” 关闭容器。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6522">[待校准&#64;6522]</a></p>
-</section>
-</section>
+</div>
+</div>
 
 
 

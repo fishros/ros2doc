@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="zh" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>通过Debian包安装ROS 2 &mdash; ROS 2 documentation  文档</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -55,7 +54,7 @@
 <li class="toctree-l2"><a class="reference internal" href="Windows-Install-Binary.html">在Windows上安装ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Fedora-Development-Setup.html">在Fedora Linux上构建ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Latest-Development-Setup.html">安装最新的ROS 2开发版本</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Maintaining-a-Source-Checkout.html">Maintaining a source checkout of ROS 2 Rolling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Maintaining-a-Source-Checkout.html">维护ROS 2Foxy源文件的检出</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Testing.html">用于测试的替代安装源</a></li>
 <li class="toctree-l2"><a class="reference internal" href="DDS-Implementations.html">安装DDS实现</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="DDS-Implementations/Install-Connext-Security-Plugins.html">安装Connext安全插件</a></li>
@@ -269,7 +268,7 @@
           <li><a href="../Installation.html">安装</a> &raquo;</li>
       <li>通过Debian包安装ROS 2</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ros2/ros2_documentation/blob/rolling/source/Installation/Ubuntu-Install-Debians.rst" class="fa fa-github"> 在 GitHub 上修改</a>
+              <a href="https://github.com/ros2/ros2_documentation/blob/foxy/source/Installation/Ubuntu-Install-Debians.rst" class="fa fa-github"> 在 GitHub 上修改</a>
       </li>
   </ul>
   <hr/>
@@ -279,7 +278,7 @@
              
 
 
-  <section id="installing-ros-2-via-debian-packages">
+  <div class="section" id="installing-ros-2-via-debian-packages">
 <h1>通过Debian包安装ROS 2<a class="headerlink" href="#installing-ros-2-via-debian-packages" title="永久链接至标题"></a></h1>
 <div class="contents local topic" id="table-of-contents">
 <p class="topic-title">目录</p>
@@ -301,20 +300,20 @@
 <li><p><a class="reference internal" href="#uninstall" id="id12">卸载</a></p></li>
 </ul>
 </div>
-<p>Debian packages for ROS 2 Rolling Ridley are currently available for Ubuntu Focal.</p>
-<section id="resources">
+<p>ROS 2FoxyFitzroy的Debian包目前支持Ubuntu Focal系统。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5548">[Alyssa&#64;5548]</a></p>
+<div class="section" id="resources">
 <h2>资源获取 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5549">[Alyssa&#64;5549]</a><a class="headerlink" href="#resources" title="永久链接至标题"></a></h2>
 <ul class="simple">
 <li><p>状态页面: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5550">[待校准&#64;5550]</a></p>
 <ul>
-<li><p>ROS 2 Rolling (Ubuntu Focal): <a class="reference external" href="http://repo.ros2.org/status_page/ros_rolling_default.html">amd64</a>, <a class="reference external" href="http://repo.ros2.org/status_page/ros_rolling_ufv8.html">arm64</a></p></li>
+<li><p>ROS 2Foxy (Ubuntu Focal):  <a class="reference external" href="http://repo.ros2.org/status_page/ros_foxy_default.html">amd64</a>, <a class="reference external" href="http://repo.ros2.org/status_page/ros_foxy_ufv8.html">arm64</a> <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5551">[Alyssa&#64;5551]</a></p></li>
 </ul>
 </li>
 <li><p><a class="reference external" href="http://build.ros2.org/">Jenkins Instance</a></p></li>
 <li><p><a class="reference external" href="http://repo.ros2.org">Repositories</a></p></li>
 </ul>
-</section>
-<section id="set-locale">
+</div>
+<div class="section" id="set-locale">
 <h2>设置语言区域 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5485">[Alyssa&#64;5485]</a><a class="headerlink" href="#set-locale" title="永久链接至标题"></a></h2>
 <p>确保你有一个支持 <code class="docutils literal notranslate"><span class="pre">UTF-8</span></code> 的语言区域。如果您处于最小环境中 (例如docker容器)，则区域设置可能是最小的，例如 <code class="docutils literal notranslate"><span class="pre">POSIX</span></code> 。我们使用以下设置进行测试。但是，如果您使用不同的UTF-8支持的语言区域也是没有问题的。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5486">[Alyssa&#64;5486]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>locale  <span class="c1"># check for UTF-8</span>
@@ -327,8 +326,8 @@ sudo update-locale <span class="nv">LC_ALL</span><span class="o">=</span>en_US.U
 locale  <span class="c1"># verify settings</span>
 </pre></div>
 </div>
-</section>
-<section id="setup-sources">
+</div>
+<div class="section" id="setup-sources">
 <span id="linux-install-debians-setup-sources"></span><h2>设置源 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5554">[待校准&#64;5554]</a><a class="headerlink" href="#setup-sources" title="永久链接至标题"></a></h2>
 <p>您需要将ROS 2 apt仓库添加到您的系统中。为此，首先使用如下apt指令授权我们的GPG密钥: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5488">[Alyssa&#64;5488]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt update <span class="o">&amp;&amp;</span> sudo apt install curl gnupg2 lsb-release
@@ -339,71 +338,71 @@ sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key  -
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="s2">&quot;deb [arch=</span><span class="k">$(</span>dpkg --print-architecture<span class="k">)</span><span class="s2"> signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu </span><span class="k">$(</span><span class="nb">source</span> /etc/os-release <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="nv">$UBUNTU_CODENAME</span><span class="k">)</span><span class="s2"> main&quot;</span> <span class="p">|</span> sudo tee /etc/apt/sources.list.d/ros2.list &gt; /dev/null
 </pre></div>
 </div>
-</section>
-<section id="install-ros-2-packages">
+</div>
+<div class="section" id="install-ros-2-packages">
 <span id="linux-install-debians-install-ros-2-packages"></span><h2>安装ROS 2包 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5555">[待校准&#64;5555]</a><a class="headerlink" href="#install-ros-2-packages" title="永久链接至标题"></a></h2>
 <p>设置好仓库后，更新您的apt仓库缓存。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5556">[待校准&#64;5556]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt update
 </pre></div>
 </div>
 <p>桌面安装 (推荐): ROS、RViz、例程、教程。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5557">[待校准&#64;5557]</a></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt install ros-rolling-desktop
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt install ros-foxy-desktop
 </pre></div>
 </div>
 <p>基础ROS的安装 (基本模块): 通信库、消息包、命令行工具。没有GUI工具。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5558">[Alyssa&#64;5558]</a></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt install ros-rolling-ros-base
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt install ros-foxy-ros-base
 </pre></div>
 </div>
-</section>
-<section id="environment-setup">
+</div>
+<div class="section" id="environment-setup">
 <h2><a class="toc-backref" href="#id5">环境设置</a><a class="headerlink" href="#environment-setup" title="永久链接至标题"></a></h2>
-<section id="sourcing-the-setup-script">
+<div class="section" id="sourcing-the-setup-script">
 <h3>设置环境变量 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5543">[Alyssa&#64;5543]</a><a class="headerlink" href="#sourcing-the-setup-script" title="永久链接至标题"></a></h3>
 <p>通过source以下文件来设置您的环境。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5503">[Alyssa&#64;5503]</a></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> /opt/ros/rolling/setup.bash
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> /opt/ros/foxy/setup.bash
 </pre></div>
 </div>
-</section>
-</section>
-<section id="try-some-examples">
+</div>
+</div>
+<div class="section" id="try-some-examples">
 <h2>尝试运行一些例子 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5504">[Alyssa&#64;5504]</a><a class="headerlink" href="#try-some-examples" title="永久链接至标题"></a></h2>
-<p>If you installed <code class="docutils literal notranslate"><span class="pre">ros-rolling-desktop</span></code> above you can try some examples.</p>
+<p>如果你安装了上面的 <code class="docutils literal notranslate"><span class="pre">ros-foxy-desktop</span></code> ，你可以尝试运行一些例子。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5559">[Alyssa&#64;5559]</a></p>
 <p>在一个终端中，source安装文件，然后运行一个c++ <code class="docutils literal notranslate"><span class="pre">talker</span></code>  : <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5505">[Alyssa&#64;5505]</a></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> /opt/ros/rolling/setup.bash
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> /opt/ros/foxy/setup.bash
 ros2 run demo_nodes_cpp talker
 </pre></div>
 </div>
 <p>在另一个终端中，source安装文件，然后运行一个Python <code class="docutils literal notranslate"><span class="pre">listener</span></code>  : <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5506">[Alyssa&#64;5506]</a></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> /opt/ros/rolling/setup.bash
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> /opt/ros/foxy/setup.bash
 ros2 run demo_nodes_py listener
 </pre></div>
 </div>
 <p>你应该看到了 <code class="docutils literal notranslate"><span class="pre">talker</span></code> 说这是 <code class="docutils literal notranslate"><span class="pre">Publishing</span></code> 消息 ，<code class="docutils literal notranslate"><span class="pre">listener</span></code> 说 <code class="docutils literal notranslate"><span class="pre">I</span> <span class="pre">heard</span></code> 这些消息。这证明了C++和Python的APIs都是正常工作的。万岁! <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5507">[Alyssa&#64;5507]</a></p>
-</section>
-<section id="next-steps-after-installing">
+</div>
+<div class="section" id="next-steps-after-installing">
 <h2><a class="toc-backref" href="#id8">安装后的下一步</a><a class="headerlink" href="#next-steps-after-installing" title="永久链接至标题"></a></h2>
 <p>继续使用 <a class="reference internal" href="../Tutorials.html"><span class="doc">教程和Demo</span></a> 来配置您的环境，创建您自己的工作区和包，并学习ROS 2核心概念。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5509">[小鱼&#64;5509]</a></p>
-</section>
-<section id="using-the-ros-1-bridge">
+</div>
+<div class="section" id="using-the-ros-1-bridge">
 <h2><a class="toc-backref" href="#id9">使用ROS 1 bridge</a><a class="headerlink" href="#using-the-ros-1-bridge" title="永久链接至标题"></a></h2>
 <p>ROS 1bridge可以连接从ROS 1到ROS 2的话题，反之亦然。看看这个专门的文献 <a class="reference external" href="https://github.com/ros2/ros1_bridge/blob/master/README.md">documentation</a> 如何编译和使用ROS 1bridge。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5511">[Alyssa&#64;5511]</a></p>
-</section>
-<section id="additional-rmw-implementations-optional">
+</div>
+<div class="section" id="additional-rmw-implementations-optional">
 <h2><a class="toc-backref" href="#id10">附加RMW实现 (可选)</a><a class="headerlink" href="#additional-rmw-implementations-optional" title="永久链接至标题"></a></h2>
 <p>ROS 2使用的默认中间件是 <code class="docutils literal notranslate"><span class="pre">Fast-RTPS</span></code> ，但中间件 (RMW) 可以在运行时进行替换。查看 <a class="reference internal" href="../How-To-Guides/Working-with-multiple-RMW-implementations.html"><span class="doc">guide</span></a> 了解如何使用多个RMWs。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5513">[Alyssa&#64;5513]</a></p>
-</section>
-<section id="troubleshooting">
+</div>
+<div class="section" id="troubleshooting">
 <h2><a class="toc-backref" href="#id11">故障排除</a><a class="headerlink" href="#troubleshooting" title="永久链接至标题"></a></h2>
 <p>故障排除技术可以查看 <a class="reference internal" href="../How-To-Guides/Installation-Troubleshooting.html"><span class="doc">here</span></a> 这个文档。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5546">[Alyssa&#64;5546]</a></p>
-</section>
-<section id="uninstall">
+</div>
+<div class="section" id="uninstall">
 <h2><a class="toc-backref" href="#id12">卸载</a><a class="headerlink" href="#uninstall" title="永久链接至标题"></a></h2>
 <p>如果您需要卸载ROS 2，或在安装了二进制包之后切换到基础源文件的安装，请运行以下命令: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5560">[Alyssa&#64;5560]</a></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt remove ~nros-rolling-* <span class="o">&amp;&amp;</span> sudo apt autoremove
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt remove ~nros-foxy-* <span class="o">&amp;&amp;</span> sudo apt autoremove
 </pre></div>
 </div>
-</section>
-</section>
+</div>
+</div>
 
 
 

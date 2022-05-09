@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="zh" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>配置ROS 2环境 &mdash; ROS 2 documentation  文档</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -56,7 +55,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Windows-Install-Binary.html">在Windows上安装ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Fedora-Development-Setup.html">在Fedora Linux上构建ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Latest-Development-Setup.html">安装最新的ROS 2开发版本</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Installation/Maintaining-a-Source-Checkout.html">Maintaining a source checkout of ROS 2 Rolling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Maintaining-a-Source-Checkout.html">维护ROS 2Foxy源文件的检出</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Testing.html">用于测试的替代安装源</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/DDS-Implementations.html">安装DDS实现</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Install-Connext-Security-Plugins.html">安装Connext安全插件</a></li>
@@ -270,7 +269,7 @@
           <li><a href="../Tutorials.html">教程</a> &raquo;</li>
       <li>配置ROS 2环境</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ros2/ros2_documentation/blob/rolling/source/Tutorials/Configuring-ROS2-Environment.rst" class="fa fa-github"> 在 GitHub 上修改</a>
+              <a href="https://github.com/ros2/ros2_documentation/blob/foxy/source/Tutorials/Configuring-ROS2-Environment.rst" class="fa fa-github"> 在 GitHub 上修改</a>
       </li>
   </ul>
   <hr/>
@@ -280,7 +279,7 @@
              
 
 
-  <section id="configuring-your-ros-2-environment">
+  <div class="section" id="configuring-your-ros-2-environment">
 <span id="configros2"></span><h1>配置ROS 2环境<a class="headerlink" href="#configuring-your-ros-2-environment" title="永久链接至标题"></a></h1>
 <p>目标: 本教程将向您展示如何准备ROS 2环境。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7087">[Alyssa&#64;7087]</a></p>
 <p>教程级别: 初学者 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7088">[Alyssa&#64;7088]</a></p>
@@ -302,25 +301,25 @@
 <li><p><a class="reference internal" href="#related-content" id="id9">相关内容</a></p></li>
 </ul>
 </div>
-<section id="background">
+<div class="section" id="background">
 <h2><a class="toc-backref" href="#id1">背景</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
 <p>ROS 2依赖于使用shell环境组合工作空间的概念。  &quot;Workspace&quot; 是一个ROS术语，表示您在系统中使用ROS 2进行开发的位置。核心ROS 2工作空间被称为underlay。后续本地工作空间被称为overlays。使用ROS 2进行开发时，您通常将同时激活多个工作空间。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7089">[Alyssa&#64;7089]</a></p>
 <p>组合工作空间使针对不同版本的ROS 2或针对不同包的开发变得更加容易。它还允许在同一台计算机上安装多个ROS 2发行版 (或 “distros”，例如Dashing和Eloquent) 并在它们之间切换。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7090">[Alyssa&#64;7090]</a></p>
 <p>这是通过每次打开新shell终端时source安装程序文件或将source命令添加到shell启动脚本一次来完成的。如果不source安装文件，您将无法访问ROS 2命令，也无法查找或使用ROS 2包。换句话说，您将无法使用ROS 2。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7091">[Alyssa&#64;7091]</a></p>
-</section>
-<section id="prerequisites">
+</div>
+<div class="section" id="prerequisites">
 <h2><a class="toc-backref" href="#id2">先决条件</a><a class="headerlink" href="#prerequisites" title="永久链接至标题"></a></h2>
 <p>在开始这些教程之前，请按照ROS 2 <a class="reference internal" href="../Installation.html"><span class="doc">安装</span></a> 页面上的说明安装ROS 2。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7092">[待校准&#64;7092]</a></p>
 <p>本教程中使用的命令是假设你跟着二进制包安装指南为操作系统完成ros2的安装 (Linux系统下安装Debian包)。如果你由源文件编译安装你也可以跟着操作，但设置文件的路径可能会不同。您也无法使用 <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">ros-&lt;distro&gt;-&lt;package&gt;</span></code> 命令 (常用初学者级别教程) ，如果你是从源文件安装。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7093">[Alyssa&#64;7093]</a></p>
 <p>如果您使用的是Linux或macOS，但还不熟悉shell终端， <a class="reference external" href="http://www.ee.surrey.ac.uk/Teaching/Unix/">这份教程</a> 将会有所帮助。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7094">[Alyssa&#64;7094]</a></p>
-</section>
-<section id="tasks">
+</div>
+<div class="section" id="tasks">
 <h2><a class="toc-backref" href="#id3">任务</a><a class="headerlink" href="#tasks" title="永久链接至标题"></a></h2>
-<section id="source-the-setup-files">
+<div class="section" id="source-the-setup-files">
 <h3>1 source安装文件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7095">[Alyssa&#64;7095]</a><a class="headerlink" href="#source-the-setup-files" title="永久链接至标题"></a></h3>
 <p>您需要在打开的每个新shell终端上运行此命令才能访问ROS 2命令，如下所示: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7096">[Alyssa&#64;7096]</a></p>
 <div class="sphinx-tabs docutils container">
-<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-0-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-0-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-0-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-0-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-0-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">source /opt/ros/rolling/setup.bash</span>
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-0-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-0-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-0-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-0-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-0-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">source /opt/ros/foxy/setup.bash</span>
 </pre></div>
 </div>
 </div><div aria-labelledby="tab-0-bWFjT1M=" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-bWFjT1M=" name="bWFjT1M=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">. ~/ros2_install/ros2-osx/setup.bash</span>
@@ -331,16 +330,16 @@
 </div>
 </div></div>
 <div class="admonition note">
-<p class="admonition-title">备注</p>
+<p class="admonition-title">注解</p>
 <p>确切的命令取决于您安装ROS 2的位置。如果遇到问题，请确保文件路径是您的安装路径。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7097">[Alyssa&#64;7097]</a></p>
 </div>
-</section>
-<section id="add-sourcing-to-your-shell-startup-script">
+</div>
+<div class="section" id="add-sourcing-to-your-shell-startup-script">
 <h3>2 将source命令添加到您的shell启动脚本 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7098">[Alyssa&#64;7098]</a><a class="headerlink" href="#add-sourcing-to-your-shell-startup-script" title="永久链接至标题"></a></h3>
 <p>如果您不想每次打开新shell终端时都必source安装文件 (即跳过任务1)，则可以将命令添加到shell启动脚本中: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7099">[Alyssa&#64;7099]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-1-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-1-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-1-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-1-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-1-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-1-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><blockquote>
-<div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">echo &quot;source /opt/ros/rolling/setup.bash&quot; &gt;&gt; ~/.bashrc</span>
+<div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">echo &quot;source /opt/ros/foxy/setup.bash&quot; &gt;&gt; ~/.bashrc</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -349,17 +348,17 @@
 </pre></div>
 </div>
 </div><div aria-labelledby="tab-1-V2luZG93cw==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-1-V2luZG93cw==" name="V2luZG93cw==" role="tabpanel" tabindex="0"><p>仅适用于PowerShell用户，在'My Documents'调用ed'WindowsPowerShell'中创建一个文件夹。在'WindowsPowerShell'内，创建文件 “microsoft.PowerShell_profile.ps1”。在文件内部，粘贴: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7101">[待校准&#64;7101]</a></p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">C:\dev\ros2_rolling\local_setup.ps1</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">C:\dev\ros2_foxy\local_setup.ps1</span>
 </pre></div>
 </div>
 <p>每次打开新shell时，PowerShell都会请求运行此脚本的权限。为避免该问题，您可以运行: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7102">[待校准&#64;7102]</a></p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Unblock-File C:\dev\ros2_rolling\local_setup.ps1</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Unblock-File C:\dev\ros2_foxy\local_setup.ps1</span>
 </pre></div>
 </div>
 </div></div>
 <p>要在Linux和macOS中撤消此操作 (更改为另一个发行版)，请找到系统的shell启动脚本并删除添加的source命令。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7103">[Alyssa&#64;7103]</a></p>
-</section>
-<section id="check-environment-variables">
+</div>
+<div class="section" id="check-environment-variables">
 <h3>3 检查环境变量 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7104">[Alyssa&#64;7104]</a><a class="headerlink" href="#check-environment-variables" title="永久链接至标题"></a></h3>
 <p>source ROS 2的安装文件将设置一些运行ROS 2所需的环境变量。如果您在查找或使用ROS 2包时遇到问题，请确保使用以下命令正确设置了环境: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7105">[Alyssa&#64;7105]</a></p>
 <div class="sphinx-tabs docutils container">
@@ -376,11 +375,11 @@
 <p>检查是否设置了像 <code class="docutils literal notranslate"><span class="pre">ROS_DISTRO</span></code> 和 <code class="docutils literal notranslate"><span class="pre">ROS_VERSION</span></code> 这样的变量。例如，如果你正在使用Foxy，你会看到: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7106">[待校准&#64;7106]</a></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ROS_VERSION</span><span class="o">=</span><span class="mi">2</span>
 <span class="n">ROS_PYTHON_VERSION</span><span class="o">=</span><span class="mi">3</span>
-<span class="n">ROS_DISTRO</span><span class="o">=</span><span class="n">rolling</span>
+<span class="n">ROS_DISTRO</span><span class="o">=</span><span class="n">foxy</span>
 </pre></div>
 </div>
 <p>如果环境变量设置不正确，请返回您遵循的安装指南的ROS 2包安装部分。如果你需要更具体的帮助 (因为环境设置文件可以来自不同的地方)，你可以从社区 <a class="reference external" href="https://answers.ros.org">找到答案</a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7107">[Alyssa&#64;7107]</a></p>
-<section id="the-ros-domain-id-variable">
+<div class="section" id="the-ros-domain-id-variable">
 <h4>3.1 <code class="docutils literal notranslate"><span class="pre">ROS_DOMAIN_ID</span></code> 变量<a class="headerlink" href="#the-ros-domain-id-variable" title="永久链接至标题"></a></h4>
 <p>有关ROS域ID的详细信息，请参阅 <a class="reference internal" href="../Concepts/About-Domain-ID.html"><span class="doc">domain ID</span></a>  文章。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7109">[Alyssa&#64;7109]</a></p>
 <p>确定ROS 2代理组的唯一整数后，可以使用以下命令设置环境变量: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7110">[待校准&#64;7110]</a></p>
@@ -407,23 +406,23 @@
 </pre></div>
 </div>
 </div></div>
-</section>
-</section>
-</section>
-<section id="summary">
+</div>
+</div>
+</div>
+<div class="section" id="summary">
 <h2><a class="toc-backref" href="#id7">总结</a><a class="headerlink" href="#summary" title="永久链接至标题"></a></h2>
 <p>ROS 2开发版本环境需要在使用前进行正确配置。有两种方式: 在每个新打开的shell终端source安装文件，或在启动脚本中添加source命令。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7113">[Alyssa&#64;7113]</a></p>
 <p>如果您在使用ROS 2定位或使用包时遇到任何问题，您应该做的第一件事是检查您的环境变量，并确保它们设置为您想要的版本和发行版。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7114">[待校准&#64;7114]</a></p>
-</section>
-<section id="next-steps">
+</div>
+<div class="section" id="next-steps">
 <h2><a class="toc-backref" href="#id8">下一步</a><a class="headerlink" href="#next-steps" title="永久链接至标题"></a></h2>
 <p>既然你已经有了一个有效的ROS 2安装，并且你知道如何source它的安装文件，你就可以开始参考 <a class="reference internal" href="Turtlesim/Introducing-Turtlesim.html"><span class="doc">turtlesim tool</span></a> 学习ROS 2的来龙去脉了。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7115">[Alyssa&#64;7115]</a></p>
-</section>
-<section id="related-content">
+</div>
+<div class="section" id="related-content">
 <h2><a class="toc-backref" href="#id9">相关内容</a><a class="headerlink" href="#related-content" title="永久链接至标题"></a></h2>
 <p>请参阅在树莓派上安装ROS 2的视频例程: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7116">[Alyssa&#64;7116]</a></p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/AmuLiA840fA" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></section>
-</section>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AmuLiA840fA" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+</div>
 
 
 

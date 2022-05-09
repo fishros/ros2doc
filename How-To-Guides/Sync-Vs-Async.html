@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="zh" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>同步与异步服务的客户端对比 [Alyssa@6523] &mdash; ROS 2 documentation  文档</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -55,7 +54,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Windows-Install-Binary.html">在Windows上安装ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Fedora-Development-Setup.html">在Fedora Linux上构建ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Latest-Development-Setup.html">安装最新的ROS 2开发版本</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Installation/Maintaining-a-Source-Checkout.html">Maintaining a source checkout of ROS 2 Rolling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Maintaining-a-Source-Checkout.html">维护ROS 2Foxy源文件的检出</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Testing.html">用于测试的替代安装源</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/DDS-Implementations.html">安装DDS实现</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Install-Connext-Security-Plugins.html">安装Connext安全插件</a></li>
@@ -269,7 +268,7 @@
           <li><a href="../How-To-Guides.html">问题指南</a> &raquo;</li>
       <li>同步与异步服务的客户端对比 [Alyssa&#64;6523]</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ros2/ros2_documentation/blob/rolling/source/How-To-Guides/Sync-Vs-Async.rst" class="fa fa-github"> 在 GitHub 上修改</a>
+              <a href="https://github.com/ros2/ros2_documentation/blob/foxy/source/How-To-Guides/Sync-Vs-Async.rst" class="fa fa-github"> 在 GitHub 上修改</a>
       </li>
   </ul>
   <hr/>
@@ -279,7 +278,7 @@
              
 
 
-  <section id="synchronous-vs-asynchronous-service-clients">
+  <div class="section" id="synchronous-vs-asynchronous-service-clients">
 <span id="syncasync"></span><h1>同步与异步服务的客户端对比 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6523">[Alyssa&#64;6523]</a><a class="headerlink" href="#synchronous-vs-asynchronous-service-clients" title="永久链接至标题"></a></h1>
 <p><strong>级别:</strong> 中级 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6524">[Alyssa&#64;6524]</a></p>
 <p><strong>时间:</strong> 10分钟 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6525">[Alyssa&#64;6525]</a></p>
@@ -293,14 +292,14 @@
 <li><p><a class="reference internal" href="#summary" id="id5">总结</a></p></li>
 </ul>
 </div>
-<section id="introduction">
+<div class="section" id="introduction">
 <h2><a class="toc-backref" href="#id1">简介</a><a class="headerlink" href="#introduction" title="永久链接至标题"></a></h2>
 <p>本指南旨在警告用户与Python同步的服务（service）客户端 <code class="docutils literal notranslate"><span class="pre">call()</span></code> API相关的风险。同步调用服务时很容易错误的导致死锁，因此我们不建议使用 <code class="docutils literal notranslate"><span class="pre">call()</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6526">[Alyssa&#64;6526]</a></p>
 <p>对于希望使用同步调用并意识到陷阱的有经验的用户，我们提供了一个如何正确使用 <code class="docutils literal notranslate"><span class="pre">call()</span></code> 的例子。我们还强调了随之而来的死锁的可能情况。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6527">[Alyssa&#64;6527]</a></p>
 <p>因为我们建议避免同步调用，本指南还将介绍推荐的替代方法 -- 异步调用 ( <code class="docutils literal notranslate"><span class="pre">call_async()</span></code> ) 的特点和用法。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6528">[待校准&#64;6528]</a></p>
 <p>C++ 服务调用API仅在异步中可用，因此本指南中的比较和示例与Python服务和客户端有关。这里给出的异步的定义通常适用于C++，但也有一些例外。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6529">[Alyssa&#64;6529]</a></p>
-</section>
-<section id="synchronous-calls">
+</div>
+<div class="section" id="synchronous-calls">
 <h2>1 同步调用 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6530">[Alyssa&#64;6530]</a><a class="headerlink" href="#synchronous-calls" title="永久链接至标题"></a></h2>
 <p>当向服务发送请求时，同步客户端将阻瑟调用线程，直到收到响应为止; 在调用期间，该线程上不会做任何其他事情。调用可能需要任意时间才能完成。完成后，响应将直接返回给客户端。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6531">[Alyssa&#64;6531]</a></p>
 <p>以下是如何从客户端节点正确执行同步服务调用的示例，类似于 <a class="reference internal" href="../Tutorials/Writing-A-Simple-Py-Service-And-Client.html"><span class="doc">简单的服务端和客户端</span></a> 教程中的异步节点。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6532">[Alyssa&#64;6532]</a></p>
@@ -349,8 +348,8 @@
 </pre></div>
 </div>
 <p>请注意，在 <code class="docutils literal notranslate"><span class="pre">main()</span></code> 内部，客户端在单独的线程中调用 <code class="docutils literal notranslate"><span class="pre">rclpy.spin</span></code> 。 <code class="docutils literal notranslate"><span class="pre">send_request</span></code> 和 <code class="docutils literal notranslate"><span class="pre">rclpy.spin</span></code> 都是阻塞的，所以它们需要在不同的线程上。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6533">[Alyssa&#64;6533]</a></p>
-</section>
-<section id="sync-deadlock">
+</div>
+<div class="section" id="sync-deadlock">
 <h2>1.1 同步死锁 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6534">[Alyssa&#64;6534]</a><a class="headerlink" href="#sync-deadlock" title="永久链接至标题"></a></h2>
 <p>同步 <code class="docutils literal notranslate"><span class="pre">call()</span></code> API有几种导致死锁的方式。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6535">[Alyssa&#64;6535]</a></p>
 <p>评论中提到的例子，未能创建单独的线程自旋 <code class="docutils literal notranslate"><span class="pre">rclpy</span></code> 是导致死锁的一个原因。当客户端阻塞线程等待响应，但响应只能返回同一线程，客户端不会停止等待，不能做任何别的事情。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6536">[Alyssa&#64;6536]</a></p>
@@ -370,8 +369,8 @@
 <p class="admonition-title">警告</p>
 <p>发生死锁时，您将不会收到任何服务被阻塞的指示。不会引发警告或异常，堆栈跟踪中没有指示，调用也不会失败。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6539">[Alyssa&#64;6539]</a></p>
 </div>
-</section>
-<section id="asynchronous-calls">
+</div>
+<div class="section" id="asynchronous-calls">
 <h2>2 异步调用 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6540">[Alyssa&#64;6540]</a><a class="headerlink" href="#asynchronous-calls" title="永久链接至标题"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">rclpy</span></code> 中的异步调用是完全安全的，也是调用服务的推荐方法。与同步调用不同，它们可以在任何地方创建，而不用冒着阻塞其他ROS和非ROS进程的风险。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6541">[Alyssa&#64;6541]</a></p>
 <p>异步客户端将在向服务发送请求后立即返回 <code class="docutils literal notranslate"><span class="pre">future</span></code> ，该值指示调用和响应是否完成 (而不是响应本身的值)。可以随时查询返回的 <code class="docutils literal notranslate"><span class="pre">future</span></code> 的响应。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6542">[Alyssa&#64;6542]</a></p>
@@ -384,12 +383,12 @@
 </div>
 <p>Python的 <a class="reference internal" href="../Tutorials/Writing-A-Simple-Py-Service-And-Client.html"><span class="doc">简单的服务端和客户端</span></a> 教程说明了如何执行异步服务调用，并使用循环检索 <code class="docutils literal notranslate"><span class="pre">future</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6544">[Alyssa&#64;6544]</a></p>
 <p><code class="docutils literal notranslate"><span class="pre">future</span></code> 也可以使用计时器或回调函数来检索，就像在 <a class="reference external" href="https://github.com/ros2/examples/blob/foxy/rclpy/services/minimal_client/examples_rclpy_minimal_client/client_async_callback.py">这个例子</a> 中，以一个专用线程或其他方法来检索。作为调用方，由您决定如何存储 <code class="docutils literal notranslate"><span class="pre">future</span></code> ，检查其状态，并检索您的响应。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6545">[Alyssa&#64;6545]</a></p>
-</section>
-<section id="summary">
+</div>
+<div class="section" id="summary">
 <h2><a class="toc-backref" href="#id5">总结</a><a class="headerlink" href="#summary" title="永久链接至标题"></a></h2>
 <p>不建议实施同步服务客户端。它们容易发生死锁，但不会在死锁发生时提供任何问题指示。如果必须使用同步调用， <a class="reference internal" href="#sync-deadlock">1 同步调用</a> 部分的例子是这样做的一种安全的方式. 你也应该要了解 <a class="reference internal" href="#synchronous-calls">1.1 同步死锁</a> 部分的概述的导致死锁的状况。相反我们建议改用异步服务客户端。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6547">[Alyssa&#64;6547]</a></p>
-</section>
-</section>
+</div>
+</div>
 
 
 

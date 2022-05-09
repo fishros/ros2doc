@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="zh" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>尝试dummy robot例程 [待校准@9496] &mdash; ROS 2 documentation  文档</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -55,7 +54,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Windows-Install-Binary.html">在Windows上安装ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Fedora-Development-Setup.html">在Fedora Linux上构建ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Latest-Development-Setup.html">安装最新的ROS 2开发版本</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Installation/Maintaining-a-Source-Checkout.html">Maintaining a source checkout of ROS 2 Rolling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Maintaining-a-Source-Checkout.html">维护ROS 2Foxy源文件的检出</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Testing.html">用于测试的替代安装源</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/DDS-Implementations.html">安装DDS实现</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Install-Connext-Security-Plugins.html">安装Connext安全插件</a></li>
@@ -269,7 +268,7 @@
           <li><a href="../Tutorials.html">教程</a> &raquo;</li>
       <li>尝试dummy robot例程 [待校准&#64;9496]</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ros2/ros2_documentation/blob/rolling/source/Tutorials/dummy-robot-demo.rst" class="fa fa-github"> 在 GitHub 上修改</a>
+              <a href="https://github.com/ros2/ros2_documentation/blob/foxy/source/Tutorials/dummy-robot-demo.rst" class="fa fa-github"> 在 GitHub 上修改</a>
       </li>
   </ul>
   <hr/>
@@ -279,10 +278,10 @@
              
 
 
-  <section id="trying-the-dummy-robot-demo">
+  <div class="section" id="trying-the-dummy-robot-demo">
 <h1>尝试dummy robot例程 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9496">[待校准&#64;9496]</a><a class="headerlink" href="#trying-the-dummy-robot-demo" title="永久链接至标题"></a></h1>
 <p>在这个例程中，我们展示了一个简单的机器人例程，它包含从发布联合状态到发布假激光数据到在RViz地图上可视化机器人模型的所有组件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9497">[待校准&#64;9497]</a></p>
-<section id="launching-the-demo">
+<div class="section" id="launching-the-demo">
 <h2>Launch的例程 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9498">[待校准&#64;9498]</a><a class="headerlink" href="#launching-the-demo" title="永久链接至标题"></a></h2>
 <p>我们假设您的ROS 2安装目录为 “~/ros2_ws”。请根据您的平台更改目录。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9499">[待校准&#64;9499]</a></p>
 <p>为了启动例程，我们执行bringuplaunch文件的例程，我们将在下一节中详细解释。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9500">[待校准&#64;9500]</a></p>
@@ -325,7 +324,7 @@ $ rviz2
 </div>
 <p>这开启了RViz2。假设您的dummy_robot_bringup仍然是launch，您现在可以添加TF显示插件并将全局帧配置为 <code class="docutils literal notranslate"><span class="pre">world</span></code> 。完成此操作后，您应该会看到类似的图片: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9503">[待校准&#64;9503]</a></p>
 <a class="reference external image-reference" href="https://i.imgur.com/pCFDTCv.png"><img alt="" src="https://i.imgur.com/pCFDTCv.png" /></a>
-<section id="what-s-happening">
+<div class="section" id="what-s-happening">
 <h3>发生什么事了？ <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9504">[待校准&#64;9504]</a><a class="headerlink" href="#what-s-happening" title="永久链接至标题"></a></h3>
 <p>如果你仔细看看launch文件，我们会同时启动几个节点。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9505">[待校准&#64;9505]</a></p>
 <ul class="simple">
@@ -338,9 +337,9 @@ $ rviz2
 <p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">dummy_joint_states</span></code> 节点正在发布虚假的联合状态数据。当我们发布只有两个关节的简单RRbot时，此节点会发布这两个关节的关节状态值。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9511">[待校准&#64;9511]</a></p>
 <p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">robot_state_publisher</span></code> 正在做真正有趣的工作。它解析给定的URDF文件，提取机器人模型并侦听传入的联合状态。有了这些信息，它发布了我们机器人的TF值，我们在RViz可视化。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9512">[待校准&#64;9512]</a></p>
 <p>万岁! <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9513">[待校准&#64;9513]</a></p>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
 
 

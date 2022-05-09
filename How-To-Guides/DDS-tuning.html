@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="zh" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DDS调优指南 &mdash; ROS 2 documentation  文档</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -55,7 +54,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Windows-Install-Binary.html">在Windows上安装ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Fedora-Development-Setup.html">在Fedora Linux上构建ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Latest-Development-Setup.html">安装最新的ROS 2开发版本</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Installation/Maintaining-a-Source-Checkout.html">Maintaining a source checkout of ROS 2 Rolling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Maintaining-a-Source-Checkout.html">维护ROS 2Foxy源文件的检出</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Testing.html">用于测试的替代安装源</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/DDS-Implementations.html">安装DDS实现</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Install-Connext-Security-Plugins.html">安装Connext安全插件</a></li>
@@ -269,7 +268,7 @@
           <li><a href="../How-To-Guides.html">问题指南</a> &raquo;</li>
       <li>DDS调优指南</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ros2/ros2_documentation/blob/rolling/source/How-To-Guides/DDS-tuning.rst" class="fa fa-github"> 在 GitHub 上修改</a>
+              <a href="https://github.com/ros2/ros2_documentation/blob/foxy/source/How-To-Guides/DDS-tuning.rst" class="fa fa-github"> 在 GitHub 上修改</a>
       </li>
   </ul>
   <hr/>
@@ -279,12 +278,12 @@
              
 
 
-  <section id="dds-tuning-information">
+  <div class="section" id="dds-tuning-information">
 <h1>DDS调优指南<a class="headerlink" href="#dds-tuning-information" title="永久链接至标题"></a></h1>
 <p>本页提供了一些关于参数调整的指导，这些参数调整被发现可以解决在实际情况下在Linux上使用各种DDS实现时所面临的问题。我们在Linux上或使用一个供应商时发现的问题可能会发生在其他平台和此处未记录的供应商身上。</p>
 <p>以下建议是调整的起点; 它们适用于特定的系统和环境，但调整可能因多种因素而异。在调试时，您可能需要增加或减少与消息大小、网络拓扑等因素相关的值。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6023">[待校准&#64;6023]</a></p>
 <p>重要的是要认识到，优化参数可能会给重新源文件带来代价，并且可能会影响系统的某些部分，超出预期的改进范围。提高可靠性的好处应该与每个个案的任何不利因素相权衡。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6024">[待校准&#64;6024]</a></p>
-<section id="cross-vendor-tuning">
+<div class="section" id="cross-vendor-tuning">
 <span id="id1"></span><h2>跨供应商调整<a class="headerlink" href="#cross-vendor-tuning" title="永久链接至标题"></a></h2>
 <p>Issue问题: when当一些IP片段被丢弃时，通过有损 (通常是WiFi) 连接发送数据会变得有问题，这可能导致接收端的内核缓冲区变满。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6026">[待校准&#64;6026]</a></p>
 <p>当UDP数据包缺少至少一个IP片段时，其余接收到的片段会填满内核缓冲区。默认情况下，linux内核将在尝试重组数据包片段30秒后超时。因为内核缓冲区已满此时 (默认大小是256KB)，无新片段可以进来，所以连接看似  &quot;hang&quot; 长时间。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6027">[待校准&#64;6027]</a></p>
@@ -321,13 +320,13 @@
 <span class="go">uint32[] foo_2_array</span>
 </pre></div>
 </div>
-</section>
-<section id="fast-rtps-tuning">
+</div>
+<div class="section" id="fast-rtps-tuning">
 <h2>快速RTPS调整 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6044">[待校准&#64;6044]</a><a class="headerlink" href="#fast-rtps-tuning" title="永久链接至标题"></a></h2>
 <p>Issue问题: Fast通过WiFi运行时，快速RTPS会向网络注入大量数据或快速发布的数据。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6045">[待校准&#64;6045]</a></p>
 <p>见 <a class="reference internal" href="#cross-vendor-tuning"><span class="std std-ref">Cross-vendor tuning</span></a> 下的解决方案。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6046">[待校准&#64;6046]</a></p>
-</section>
-<section id="cyclone-dds-tuning">
+</div>
+<div class="section" id="cyclone-dds-tuning">
 <h2>CycloneDDS调谐 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6047">[待校准&#64;6047]</a><a class="headerlink" href="#cyclone-dds-tuning" title="永久链接至标题"></a></h2>
 <p>Issue问题: 尽管使用了可靠的设置并通过有线网络传输，但CycloneDDS无法可靠地传递大消息。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6048">[待校准&#64;6048]</a></p>
 <p>这个问题应该是 <a class="reference external" href="https://github.com/eclipse-cyclonedds/cyclonedds/issues/484">addressed soon</a> 。在此之前，我们提出了以下解决方案 (使用 <a class="reference external" href="https://github.com/jacobperron/pc_pipe">this test program</a> 调试): <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6049">[待校准&#64;6049]</a></p>
@@ -361,8 +360,8 @@
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">CYCLONEDDS_URI=file:///absolute/path/to/config_file.xml</span>
 </pre></div>
 </div>
-</section>
-<section id="rti-connext-tuning">
+</div>
+<div class="section" id="rti-connext-tuning">
 <h2>RTI Connext调谐 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6056">[待校准&#64;6056]</a><a class="headerlink" href="#rti-connext-tuning" title="永久链接至标题"></a></h2>
 <p>Issue问题: con尽管使用了可靠的设置并通过有线网络传输，但Connext无法可靠地传递大消息。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6057">[待校准&#64;6057]</a></p>
 <p>解决方案: 此 <a class="reference external" href="https://github.com/jacobperron/pc_pipe/blob/master/etc/ROS2TEST_QOS_PROFILES.xml">Connext QoS 配置文件</a> ，同时增加 <code class="docutils literal notranslate"><span class="pre">rmem_max</span></code> 参数。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6058">[小鱼&#64;6058]</a></p>
@@ -378,8 +377,8 @@
 <p><strong>Solution:</strong> Use the <a class="reference external" href="https://github.com/jacobperron/pc_pipe/blob/master/etc/ROS2TEST_QOS_PROFILES.xml">Connext QoS profile</a> <em>without</em> adjusting <code class="docutils literal notranslate"><span class="pre">rmem_max</span></code>.</p>
 <p>Ros2test_qos_profile.Xml文件是使用RTI关于 <a class="reference external" href="https://community.rti.com/forum-topic/transfering-large-data-over-dds">configuring flow controllers</a> 的文档配置的。它有慢、中、快流量控制器 (见Connext QoS配置文件链接)。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6063">[待校准&#64;6063]</a></p>
 <p>介质流量控制器为我们的案例产生了最好的结果。然而，控制器仍然需要根据他们正在操作的特定机器/网络/环境进行调整。Connext流量控制器可用于调整带宽及其发送数据的侵略性，尽管一旦通过特定设置的带宽，性能将开始下降。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6064">[待校准&#64;6064]</a></p>
-</section>
-</section>
+</div>
+</div>
 
 
 

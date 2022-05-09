@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="zh" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>将Python包与ROS 2结合使用 [待校准@6562] &mdash; ROS 2 documentation  文档</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -55,7 +54,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Windows-Install-Binary.html">在Windows上安装ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Fedora-Development-Setup.html">在Fedora Linux上构建ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Latest-Development-Setup.html">安装最新的ROS 2开发版本</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Installation/Maintaining-a-Source-Checkout.html">Maintaining a source checkout of ROS 2 Rolling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Maintaining-a-Source-Checkout.html">维护ROS 2Foxy源文件的检出</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Testing.html">用于测试的替代安装源</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/DDS-Implementations.html">安装DDS实现</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Install-Connext-Security-Plugins.html">安装Connext安全插件</a></li>
@@ -269,7 +268,7 @@
           <li><a href="../How-To-Guides.html">问题指南</a> &raquo;</li>
       <li>将Python包与ROS 2结合使用 [待校准&#64;6562]</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ros2/ros2_documentation/blob/rolling/source/How-To-Guides/Using-Python-Packages.rst" class="fa fa-github"> 在 GitHub 上修改</a>
+              <a href="https://github.com/ros2/ros2_documentation/blob/foxy/source/How-To-Guides/Using-Python-Packages.rst" class="fa fa-github"> 在 GitHub 上修改</a>
       </li>
   </ul>
   <hr/>
@@ -279,7 +278,7 @@
              
 
 
-  <section id="using-python-packages-with-ros-2">
+  <div class="section" id="using-python-packages-with-ros-2">
 <span id="pythonpackages"></span><h1>将Python包与ROS 2结合使用 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6562">[待校准&#64;6562]</a><a class="headerlink" href="#using-python-packages-with-ros-2" title="永久链接至标题"></a></h1>
 <p>Goal目标: Explain说明如何与ROS2生态系统中的其他Python包进行互操作。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6563">[待校准&#64;6563]</a></p>
 <div class="contents local topic" id="contents">
@@ -291,10 +290,10 @@
 </ul>
 </div>
 <div class="admonition note">
-<p class="admonition-title">备注</p>
+<p class="admonition-title">注解</p>
 <p>需要注意的是，如果您打算使用预打包的二进制文件 ( <code class="docutils literal notranslate"><span class="pre">deb</span></code> 文件或 “fat” 二进制发行版)，python解释器必须与用于构建原始二进制文件的内容匹配。如果您打算使用 <code class="docutils literal notranslate"><span class="pre">virtualenv</span></code> 或 <code class="docutils literal notranslate"><span class="pre">pipenv</span></code>  ，请确保使用系统解释器。如果您使用类似 <code class="docutils literal notranslate"><span class="pre">conda</span></code> 的东西，解释器很可能与系统解释器不匹配，并且与ROS2二进制文件不兼容。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6564">[待校准&#64;6564]</a></p>
 </div>
-<section id="installing-via-rosdep">
+<div class="section" id="installing-via-rosdep">
 <h2>通过 <code class="docutils literal notranslate"><span class="pre">rosdep</span></code> 安装 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6565">[待校准&#64;6565]</a><a class="headerlink" href="#installing-via-rosdep" title="永久链接至标题"></a></h2>
 <p>包含第三方python包的最快方法是使用其相应的rosdep键 (如果有)。 <code class="docutils literal notranslate"><span class="pre">rosdep</span></code> 钥匙可以通过以下方式检查: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6566">[待校准&#64;6566]</a></p>
 <ul class="simple">
@@ -307,8 +306,8 @@
 </div>
 <p>如果您感兴趣的包目前没有 <code class="docutils literal notranslate"><span class="pre">rosdep</span></code> 键，可以按照 <a class="reference external" href="http://docs.ros.org/en/independent/api/rosdep/html/contributing_rules.html">rosdep key contribution guide</a> 键添加。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6570">[待校准&#64;6570]</a></p>
 <p>要了解更多关于 <code class="docutils literal notranslate"><span class="pre">rosdep</span></code> 工具及其工作原理的信息，请咨询 <a class="reference external" href="http://docs.ros.org/en/independent/api/rosdep/html/">rosdep documentation</a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6571">[待校准&#64;6571]</a></p>
-</section>
-<section id="installing-via-a-package-manager">
+</div>
+<div class="section" id="installing-via-a-package-manager">
 <h2>通过包管理器安装 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6572">[待校准&#64;6572]</a><a class="headerlink" href="#installing-via-a-package-manager" title="永久链接至标题"></a></h2>
 <p>如果您不想创建rosdep密钥，但该包在您的系统包管理器 (例如 <code class="docutils literal notranslate"><span class="pre">apt</span></code> ) 中可用，您可以通过以下方式安装和使用该包: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6573">[待校准&#64;6573]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sudo apt install python3-serial</span>
@@ -322,8 +321,8 @@
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">python3 -m pip install -U --user pyserial</span>
 </pre></div>
 </div>
-</section>
-<section id="installing-via-a-virtual-environment">
+</div>
+<div class="section" id="installing-via-a-virtual-environment">
 <h2>通过虚拟环境安装 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6576">[待校准&#64;6576]</a><a class="headerlink" href="#installing-via-a-virtual-environment" title="永久链接至标题"></a></h2>
 <p>首先，创建Colcon工作区: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6577">[待校准&#64;6577]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">mkdir -p ~/colcon_venv/src</span>
@@ -349,11 +348,11 @@
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="admonition-title">备注</p>
+<p class="admonition-title">注解</p>
 <p>如果你想在Bloom上发布你的包，你应该把你需要的包添加到 <code class="docutils literal notranslate"><span class="pre">rosdep</span></code> 中，见 <a class="reference external" href="http://docs.ros.org/en/independent/api/rosdep/html/contributing_rules.html">rosdep key contribution guide</a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6581">[待校准&#64;6581]</a></p>
 </div>
-</section>
-</section>
+</div>
+</div>
 
 
 

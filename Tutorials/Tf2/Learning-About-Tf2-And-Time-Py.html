@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="zh" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>学习tf2和时间 (Python) [待校准@8480] &mdash; ROS 2 documentation  文档</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -55,7 +54,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../Installation/Windows-Install-Binary.html">在Windows上安装ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Installation/Fedora-Development-Setup.html">在Fedora Linux上构建ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Installation/Latest-Development-Setup.html">安装最新的ROS 2开发版本</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../Installation/Maintaining-a-Source-Checkout.html">Maintaining a source checkout of ROS 2 Rolling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Installation/Maintaining-a-Source-Checkout.html">维护ROS 2Foxy源文件的检出</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Installation/Testing.html">用于测试的替代安装源</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Installation/DDS-Implementations.html">安装DDS实现</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../Installation/DDS-Implementations/Install-Connext-Security-Plugins.html">安装Connext安全插件</a></li>
@@ -270,7 +269,7 @@
           <li><a href="Tf2-Main.html">tf2教程 [待校准&#64;8518]</a> &raquo;</li>
       <li>学习tf2和时间 (Python) [待校准&#64;8480]</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ros2/ros2_documentation/blob/rolling/source/Tutorials/Tf2/Learning-About-Tf2-And-Time-Py.rst" class="fa fa-github"> 在 GitHub 上修改</a>
+              <a href="https://github.com/ros2/ros2_documentation/blob/foxy/source/Tutorials/Tf2/Learning-About-Tf2-And-Time-Py.rst" class="fa fa-github"> 在 GitHub 上修改</a>
       </li>
   </ul>
   <hr/>
@@ -280,7 +279,7 @@
              
 
 
-  <section id="learning-about-tf2-and-time-python">
+  <div class="section" id="learning-about-tf2-and-time-python">
 <span id="learningabouttf2andtimepy"></span><h1>学习tf2和时间 (Python) <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8480">[待校准&#64;8480]</a><a class="headerlink" href="#learning-about-tf2-and-time-python" title="永久链接至标题"></a></h1>
 <p><strong>Goal:</strong> Learn to use the <code class="docutils literal notranslate"><span class="pre">timeout</span></code> in <code class="docutils literal notranslate"><span class="pre">lookup_transform</span></code> function to wait for a transform to be available on the tf2 tree.</p>
 <p>Tutorial教程级别: Intermediate中级 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6713">[待校准&#64;6713]</a></p>
@@ -298,13 +297,13 @@
 <li><p><a class="reference internal" href="#summary" id="id5">总结</a></p></li>
 </ul>
 </div>
-<section id="background">
+<div class="section" id="background">
 <h2><a class="toc-backref" href="#id1">背景</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
 <p>在之前的教程中，我们通过编写 <a class="reference internal" href="Writing-A-Tf2-Broadcaster-Py.html"><span class="doc">tf2 broadcaster</span></a> and a <a class="reference internal" href="Writing-A-Tf2-Listener-Py.html"><span class="doc">tf2 listener</span></a>. We also learned how to <a class="reference internal" href="Adding-A-Frame-Py.html"><span class="doc">add a new frame to the transformation tree</span></a> 重新创建了海龟例程。现在我们将了解更多关于 <code class="docutils literal notranslate"><span class="pre">timeout</span></code> 的参数，它使 <code class="docutils literal notranslate"><span class="pre">lookup_transform</span></code> 在引发异常之前等待指定的转换直到指定的持续时间。该工具对于侦听以不同速率发布的转换或网络不可靠且延迟不可忽略的传入源文件非常有用。本教程将教您如何使用 <code class="docutils literal notranslate"><span class="pre">lookup_transform</span></code> 函数中的超时来等待转换在tf2树上可用。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8482">[待校准&#64;8482]</a></p>
-</section>
-<section id="tasks">
+</div>
+<div class="section" id="tasks">
 <h2><a class="toc-backref" href="#id2">任务</a><a class="headerlink" href="#tasks" title="永久链接至标题"></a></h2>
-<section id="update-the-listener-node">
+<div class="section" id="update-the-listener-node">
 <h3>1更新监听节点 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8483">[待校准&#64;8483]</a><a class="headerlink" href="#update-the-listener-node" title="永久链接至标题"></a></h3>
 <p>编辑 <code class="docutils literal notranslate"><span class="pre">turtle_tf2_listener.py</span></code> ，并删除传递给第76行的 <code class="docutils literal notranslate"><span class="pre">lookup_transform()</span></code> 调用的 <code class="docutils literal notranslate"><span class="pre">timeout=Duration(seconds=1.0)</span></code> 参数。它应该如下所示: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8484">[待校准&#64;8484]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">trans</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_tf_buffer</span><span class="o">.</span><span class="n">lookup_transform</span><span class="p">(</span>
@@ -328,8 +327,8 @@
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 launch learning_tf2_py turtle_tf2_demo.launch.py</span>
 </pre></div>
 </div>
-</section>
-<section id="fix-the-listener-node">
+</div>
+<div class="section" id="fix-the-listener-node">
 <h3>2修复监听节点 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8488">[待校准&#64;8488]</a><a class="headerlink" href="#fix-the-listener-node" title="永久链接至标题"></a></h3>
 <p>你现在应该注意到 <code class="docutils literal notranslate"><span class="pre">lookup_transform()</span></code> 正在失效。它告诉你帧不存在或者数据在将来。要解决此问题，请在第76行编辑代码，如下所示 (返回 <code class="docutils literal notranslate"><span class="pre">timeout</span></code> 参数): <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8489">[待校准&#64;8489]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">trans</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_tf_buffer</span><span class="o">.</span><span class="n">lookup_transform</span><span class="p">(</span>
@@ -341,7 +340,7 @@
 </div>
 <p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">lookup_transform</span></code> 可以接受四个参数，其中最后一个是可选的超时。它将阻塞长达该持续时间，等待其超时。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8490">[待校准&#64;8490]</a></p>
 <div class="admonition note">
-<p class="admonition-title">备注</p>
+<p class="admonition-title">注解</p>
 <p>一旦更改，删除 <code class="docutils literal notranslate"><span class="pre">raise</span></code> 线从 <code class="docutils literal notranslate"><span class="pre">except()</span></code> 块添加的或代码将继续失败。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8491">[待校准&#64;8491]</a></p>
 </div>
 <p>您现在可以运行launch文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8477">[待校准&#64;8477]</a></p>
@@ -349,13 +348,13 @@
 </pre></div>
 </div>
 <p>你应该注意到 <code class="docutils literal notranslate"><span class="pre">lookup_transform()</span></code> 实际上会阻塞，直到两只海龟之间的转变变得可用 (这通常需要几毫秒)。一旦达到超时时间 (在这种情况下为一秒钟)，仅当转换仍然不可用时才会引发异常。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8492">[待校准&#64;8492]</a></p>
-</section>
-</section>
-<section id="summary">
+</div>
+</div>
+<div class="section" id="summary">
 <h2><a class="toc-backref" href="#id5">总结</a><a class="headerlink" href="#summary" title="永久链接至标题"></a></h2>
 <p>在本教程中，您将了解更多关于 <code class="docutils literal notranslate"><span class="pre">lookup_transform</span></code> 函数及其超时功能的信息。您还学习了如何捕获和处理tf2可能引发的其他异常。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8493">[待校准&#64;8493]</a></p>
-</section>
-</section>
+</div>
+</div>
 
 
 

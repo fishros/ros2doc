@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="zh" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>开发ROS 2包 [待校准@6065] &mdash; ROS 2 documentation  文档</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -56,7 +55,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Windows-Install-Binary.html">在Windows上安装ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Fedora-Development-Setup.html">在Fedora Linux上构建ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Latest-Development-Setup.html">安装最新的ROS 2开发版本</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Installation/Maintaining-a-Source-Checkout.html">Maintaining a source checkout of ROS 2 Rolling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Maintaining-a-Source-Checkout.html">维护ROS 2Foxy源文件的检出</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Testing.html">用于测试的替代安装源</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/DDS-Implementations.html">安装DDS实现</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Install-Connext-Security-Plugins.html">安装Connext安全插件</a></li>
@@ -270,7 +269,7 @@
           <li><a href="../How-To-Guides.html">问题指南</a> &raquo;</li>
       <li>开发ROS 2包 [待校准&#64;6065]</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ros2/ros2_documentation/blob/rolling/source/How-To-Guides/Developing-a-ROS-2-Package.rst" class="fa fa-github"> 在 GitHub 上修改</a>
+              <a href="https://github.com/ros2/ros2_documentation/blob/foxy/source/How-To-Guides/Developing-a-ROS-2-Package.rst" class="fa fa-github"> 在 GitHub 上修改</a>
       </li>
   </ul>
   <hr/>
@@ -280,7 +279,7 @@
              
 
 
-  <section id="developing-a-ros-2-package">
+  <div class="section" id="developing-a-ros-2-package">
 <h1>开发ROS 2包 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6065">[待校准&#64;6065]</a><a class="headerlink" href="#developing-a-ros-2-package" title="永久链接至标题"></a></h1>
 <div class="contents local topic" id="table-of-contents">
 <p class="topic-title">目录</p>
@@ -295,15 +294,15 @@
 </ul>
 </div>
 <p>本教程将教您如何创建第一个ROS 2应用程序。它适用于希望学习如何在ROS 2中创建自定义包的开发人员，而不是希望将ROS 2与其现有包一起使用的人员。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6066">[待校准&#64;6066]</a></p>
-<section id="prerequisites">
+<div class="section" id="prerequisites">
 <h2><a class="toc-backref" href="#id1">先决条件</a><a class="headerlink" href="#prerequisites" title="永久链接至标题"></a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="../Installation.html"><span class="doc">Install ROS</span></a></p></li>
 <li><p><a class="reference external" href="https://colcon.readthedocs.io/en/released/user/installation.html">Install colcon</a></p></li>
 <li><p>通过采购ROS 2安装来设置工作区。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6069">[待校准&#64;6069]</a></p></li>
 </ul>
-</section>
-<section id="creating-a-package">
+</div>
+<div class="section" id="creating-a-package">
 <h2>创建包 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6070">[待校准&#64;6070]</a><a class="headerlink" href="#creating-a-package" title="永久链接至标题"></a></h2>
 <p>所有ROS 2包从运行命令开始 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6071">[待校准&#64;6071]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 pkg create &lt;pkg-name&gt; --dependencies <span class="o">[</span>deps<span class="o">]</span>
@@ -320,10 +319,10 @@
 </div>
 </div></div>
 <p>然后，您可以使用包信息 (如依赖项、描述和作者身份) 更新 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6076">[待校准&#64;6076]</a></p>
-<section id="c-packages">
+<div class="section" id="c-packages">
 <h3>Cpackages包 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6077">[待校准&#64;6077]</a><a class="headerlink" href="#c-packages" title="永久链接至标题"></a></h3>
 <p>您将主要使用 <code class="docutils literal notranslate"><span class="pre">add_executable()</span></code> CMake宏以及 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6078">[待校准&#64;6078]</a></p>
-<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">ament_target_dependencies</span><span class="p">(</span><span class="s">&lt;executable-name&gt;</span><span class="w"> </span><span class="s">[dependencies]</span><span class="p">)</span>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">ament_target_dependencies</span><span class="p">(</span><span class="s">&lt;executable-name&gt;</span> <span class="s">[dependencies]</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>创建可执行节点和链接依赖项。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6079">[待校准&#64;6079]</a></p>
@@ -331,19 +330,19 @@
 <p>[需手动修复的语法]launch文件和节点示例: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6081">[待校准&#64;6081]</a></p>
 <div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="c"># Install launch files</span>
 <span class="nb">install</span><span class="p">(</span>
-<span class="w">  </span><span class="s">DIRECTORY</span><span class="w"> </span><span class="s">launch</span>
-<span class="w">  </span><span class="s">DESTINATION</span><span class="w"> </span><span class="s">share/</span><span class="o">${</span><span class="nv">PROJECT_NAME</span><span class="o">}</span>
+  <span class="s">DIRECTORY</span> <span class="s">launch</span>
+  <span class="s">DESTINATION</span> <span class="s">share/</span><span class="o">${</span><span class="nv">PROJECT_NAME</span><span class="o">}</span>
 <span class="p">)</span>
 
 <span class="c"># Install nodes</span>
 <span class="nb">install</span><span class="p">(</span>
-<span class="w">  </span><span class="s">TARGETS</span><span class="w"> </span><span class="s">[node-names]</span>
-<span class="w">  </span><span class="s">DESTINATION</span><span class="w"> </span><span class="s">lib/</span><span class="o">${</span><span class="nv">PROJECT_NAME</span><span class="o">}</span>
+  <span class="s">TARGETS</span> <span class="s">[node-names]</span>
+  <span class="s">DESTINATION</span> <span class="s">lib/</span><span class="o">${</span><span class="nv">PROJECT_NAME</span><span class="o">}</span>
 <span class="p">)</span>
 </pre></div>
 </div>
-</section>
-<section id="python-packages">
+</div>
+<div class="section" id="python-packages">
 <h3>Python包 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6082">[待校准&#64;6082]</a><a class="headerlink" href="#python-packages" title="永久链接至标题"></a></h3>
 <p>ROS 2遵循Python使用 <code class="docutils literal notranslate"><span class="pre">setuptools</span></code> 的标准模块分发流程。对于Python包， <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> 文件补充了C++ 包的 <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> 。更多关于分布的细节可以在 <a class="reference external" href="https://docs.python.org/3/distributing/index.html#distributing-index">official documentation</a> 中找到。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6083">[待校准&#64;6083]</a></p>
 <p>在你的ROS 2包中，你应该有一个 <code class="docutils literal notranslate"><span class="pre">setup.cfg</span></code> 文件，它看起来像: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6084">[待校准&#64;6084]</a></p>
@@ -400,9 +399,9 @@ install-scripts<span class="o">=</span><span class="nv">$base</span>/lib/&lt;pac
 <span class="p">)</span>
 </pre></div>
 </div>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
 
 

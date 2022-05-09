@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="zh" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>用于测试的替代安装源 &mdash; ROS 2 documentation  文档</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -26,7 +25,7 @@
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
     <link rel="next" title="安装DDS实现" href="DDS-Implementations.html" />
-    <link rel="prev" title="Maintaining a source checkout of ROS 2 Rolling" href="Maintaining-a-Source-Checkout.html" /> 
+    <link rel="prev" title="维护ROS 2Foxy源文件的检出" href="Maintaining-a-Source-Checkout.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -55,7 +54,7 @@
 <li class="toctree-l2"><a class="reference internal" href="Windows-Install-Binary.html">在Windows上安装ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Fedora-Development-Setup.html">在Fedora Linux上构建ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Latest-Development-Setup.html">安装最新的ROS 2开发版本</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Maintaining-a-Source-Checkout.html">Maintaining a source checkout of ROS 2 Rolling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Maintaining-a-Source-Checkout.html">维护ROS 2Foxy源文件的检出</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">用于测试的替代安装源</a></li>
 <li class="toctree-l2"><a class="reference internal" href="DDS-Implementations.html">安装DDS实现</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="DDS-Implementations/Install-Connext-Security-Plugins.html">安装Connext安全插件</a></li>
@@ -269,7 +268,7 @@
           <li><a href="../Installation.html">安装</a> &raquo;</li>
       <li>用于测试的替代安装源</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ros2/ros2_documentation/blob/rolling/source/Installation/Testing.rst" class="fa fa-github"> 在 GitHub 上修改</a>
+              <a href="https://github.com/ros2/ros2_documentation/blob/foxy/source/Installation/Testing.rst" class="fa fa-github"> 在 GitHub 上修改</a>
       </li>
   </ul>
   <hr/>
@@ -279,10 +278,10 @@
              
 
 
-  <section id="alternative-installation-sources-for-testing">
+  <div class="section" id="alternative-installation-sources-for-testing">
 <h1>用于测试的替代安装源<a class="headerlink" href="#alternative-installation-sources-for-testing" title="永久链接至标题"></a></h1>
 <p>许多ROS包是作为预编译的二进制文件提供。通常，当按照 <a class="reference internal" href="../Installation.html"><span class="doc">安装</span></a> 步骤操作时，你会得到二进制文件的发布版本。还有一些二进制文件的预发布版本，是用于正式发布之前的测试。如果您想试用ROS二进制文件的预发布版本，本文将介绍几个选项。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5462">[Alyssa&#64;5462]</a></p>
-<section id="debian-testing-repository">
+<div class="section" id="debian-testing-repository">
 <h2>Debian测试仓库 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5463">[待校准&#64;5463]</a><a class="headerlink" href="#debian-testing-repository" title="永久链接至标题"></a></h2>
 <p>当包被发布到ROS发行集 (使用bloom) 时，buildfarm会将它们编译到debian包中，这些包会暂时存储在building apt仓库中。在依赖包被重新编译时，自动进程周期性的将building中的包同步到被称为ros-testing的辅助仓库。ros-testing旨在作为一个浸制区，开发人员和前沿用户可以为包提供额外的测试，在将它们手动同步到用户通常安装包的公共ros仓库之前。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5464">[Alyssa&#64;5464]</a></p>
 <p>大约每两周，rosdistro的发布管理器将ros-testing的内容手动同步到main ROS仓库中。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=5465">[Alyssa&#64;5465]</a></p>
@@ -301,7 +300,7 @@ deb http://packages.ros.org/ros2-testing/ubuntu focal main
 </div>
 </li>
 <li><p>您现在可以从测试仓库安装单个包，例如:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>sudo apt install ros-rolling-my-just-released-package
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>sudo apt install ros-foxy-my-just-released-package
 </pre></div>
 </div>
 </li>
@@ -322,15 +321,15 @@ sudo apt dist-upgrade
 </div>
 </li>
 </ol>
-<span class="target" id="prerelease-binaries"></span></section>
-</section>
+<span class="target" id="prerelease-binaries"></span></div>
+</div>
 
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="Maintaining-a-Source-Checkout.html" class="btn btn-neutral float-left" title="Maintaining a source checkout of ROS 2 Rolling" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="Maintaining-a-Source-Checkout.html" class="btn btn-neutral float-left" title="维护ROS 2Foxy源文件的检出" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
         <a href="DDS-Implementations.html" class="btn btn-neutral float-right" title="安装DDS实现" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="zh" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>使用rqt_控制台 [待校准@8152] &mdash; ROS 2 documentation  文档</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -55,7 +54,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../Installation/Windows-Install-Binary.html">在Windows上安装ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Installation/Fedora-Development-Setup.html">在Fedora Linux上构建ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Installation/Latest-Development-Setup.html">安装最新的ROS 2开发版本</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../Installation/Maintaining-a-Source-Checkout.html">Maintaining a source checkout of ROS 2 Rolling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Installation/Maintaining-a-Source-Checkout.html">维护ROS 2Foxy源文件的检出</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Installation/Testing.html">用于测试的替代安装源</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Installation/DDS-Implementations.html">安装DDS实现</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../Installation/DDS-Implementations/Install-Connext-Security-Plugins.html">安装Connext安全插件</a></li>
@@ -269,7 +268,7 @@
           <li><a href="../../Tutorials.html">教程</a> &raquo;</li>
       <li>使用rqt_控制台 [待校准&#64;8152]</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ros2/ros2_documentation/blob/rolling/source/Tutorials/Rqt-Console/Using-Rqt-Console.rst" class="fa fa-github"> 在 GitHub 上修改</a>
+              <a href="https://github.com/ros2/ros2_documentation/blob/foxy/source/Tutorials/Rqt-Console/Using-Rqt-Console.rst" class="fa fa-github"> 在 GitHub 上修改</a>
       </li>
   </ul>
   <hr/>
@@ -279,7 +278,7 @@
              
 
 
-  <section id="using-rqt-console">
+  <div class="section" id="using-rqt-console">
 <span id="rqt-console"></span><h1>使用rqt_控制台 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8152">[待校准&#64;8152]</a><a class="headerlink" href="#using-rqt-console" title="永久链接至标题"></a></h1>
 <p>Goal目标: know了解 <code class="docutils literal notranslate"><span class="pre">rqt_console</span></code> ，一种用于自省日志消息的工具。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8153">[待校准&#64;8153]</a></p>
 <p>教程级别: 初学者 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7088">[Alyssa&#64;7088]</a></p>
@@ -300,19 +299,19 @@
 <li><p><a class="reference internal" href="#next-steps" id="id8">下一步</a></p></li>
 </ul>
 </div>
-<section id="background">
+<div class="section" id="background">
 <h2><a class="toc-backref" href="#id1">背景</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
 <p>[需手动修复的语法]``rqt_console`` is a GUI tool used to introspect log messages in ROS 2. Typically, log messages show up in your terminal. With <code class="docutils literal notranslate"><span class="pre">rqt_console</span></code>,你可以随着时间的推移收集这些信息，以一种更有条理的方式仔细查看它们，过滤它们，保存它们，甚至在不同的时间重新加载保存的文件进行反思。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8154">[待校准&#64;8154]</a></p>
 <p>节点使用日志以多种方式输出有关事件和状态的消息。为了用户，他们的内容通常是信息性的。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8155">[待校准&#64;8155]</a></p>
-</section>
-<section id="prerequisites">
+</div>
+<div class="section" id="prerequisites">
 <h2><a class="toc-backref" href="#id2">先决条件</a><a class="headerlink" href="#prerequisites" title="永久链接至标题"></a></h2>
 <p>你需要安装 <a class="reference internal" href="../Turtlesim/Introducing-Turtlesim.html"><span class="doc">rqt_console and turtlesim</span></a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8156">[待校准&#64;8156]</a></p>
 <p>和往常一样，不要忘记在 <a class="reference internal" href="../Configuring-ROS2-Environment.html"><span class="doc">every new terminal you open</span></a> 中源文件ROS 2。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7566">[待校准&#64;7566]</a></p>
-</section>
-<section id="tasks">
+</div>
+<div class="section" id="tasks">
 <h2><a class="toc-backref" href="#id3">任务</a><a class="headerlink" href="#tasks" title="永久链接至标题"></a></h2>
-<section id="setup">
+<div class="section" id="setup">
 <h3>1设置 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7567">[待校准&#64;7567]</a><a class="headerlink" href="#setup" title="永久链接至标题"></a></h3>
 <p>使用以下命令在新终端中启动 <code class="docutils literal notranslate"><span class="pre">rqt_console</span></code> : <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8157">[待校准&#64;8157]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run rqt_console rqt_console</span>
@@ -327,8 +326,8 @@
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run turtlesim turtlesim_node</span>
 </pre></div>
 </div>
-</section>
-<section id="messages-on-rqt-console">
+</div>
+<div class="section" id="messages-on-rqt-console">
 <h3>Rqt_控制台上的2条消息 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8163">[待校准&#64;8163]</a><a class="headerlink" href="#messages-on-rqt-console" title="永久链接至标题"></a></h3>
 <p>要生成日志消息以供 <code class="docutils literal notranslate"><span class="pre">rqt_console</span></code> 显示，让乌龟撞到墙上。在新的终端中，在下面输入 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">topic</span> <span class="pre">pub</span></code> 命令 (在 <a class="reference internal" href="../Topics/Understanding-ROS2-Topics.html"><span class="doc">topics tutorial</span></a> 中详细讨论): <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8164">[待校准&#64;8164]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 topic pub -r 1 /turtle1/cmd_vel geometry_msgs/msg/Twist &quot;{linear: {x: 2.0, y: 0.0, z: 0.0}, angular: {x: 0.0,y: 0.0,z: 0.0}}&quot;</span>
@@ -337,8 +336,8 @@
 <p>由于上述命令正在以稳定的速度发布话题，因此乌龟不断地撞到墙上。在 <code class="docutils literal notranslate"><span class="pre">rqt_console</span></code> 中，您将看到同样的信息， <code class="docutils literal notranslate"><span class="pre">Warn</span></code> 严重程度一遍又一遍地显示，如下所示: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8165">[待校准&#64;8165]</a></p>
 <img alt="../../_images/warn.png" src="../../_images/warn.png" />
 <p>按 “ctrl + C `` in the terminal where you ran the `` ros2话题发布” 命令，阻止你的乌龟撞到墙上。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8166">[待校准&#64;8166]</a></p>
-</section>
-<section id="logger-levels">
+</div>
+<div class="section" id="logger-levels">
 <h3>3个日志记录器级别 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8167">[待校准&#64;8167]</a><a class="headerlink" href="#logger-levels" title="永久链接至标题"></a></h3>
 <p>ROS 2的日志记录器级别按严重性排序: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8168">[待校准&#64;8168]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Fatal</span>
@@ -358,25 +357,25 @@
 </ul>
 <p>默认等级为 <code class="docutils literal notranslate"><span class="pre">Info</span></code> 。您将只看到默认严重性级别和更严重级别的消息。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8175">[待校准&#64;8175]</a></p>
 <p>通常，只有 <code class="docutils literal notranslate"><span class="pre">Debug</span></code> 信息是隐藏的，因为它们是唯一没有 <code class="docutils literal notranslate"><span class="pre">Info</span></code> 严重的水平。例如，如果您将默认级别设置为 <code class="docutils literal notranslate"><span class="pre">Warn</span></code> ，您将只看到严重程度为 <code class="docutils literal notranslate"><span class="pre">Warn</span></code> 、 <code class="docutils literal notranslate"><span class="pre">Error</span></code> 和 <code class="docutils literal notranslate"><span class="pre">Fatal</span></code> 的消息。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8176">[待校准&#64;8176]</a></p>
-<section id="set-the-default-logger-level">
+<div class="section" id="set-the-default-logger-level">
 <h4>3.1设置默认日志记录器级别 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8177">[待校准&#64;8177]</a><a class="headerlink" href="#set-the-default-logger-level" title="永久链接至标题"></a></h4>
 <p>首次使用重新映射运行 <code class="docutils literal notranslate"><span class="pre">/turtlesim</span></code> 节点时，可以设置默认的日志记录器级别。在终端中输入以下命令: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8178">[待校准&#64;8178]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run turtlesim turtlesim_node --ros-args --log-level WARN</span>
 </pre></div>
 </div>
 <p>现在，您不会看到上次启动 <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> 时控制台中出现的初始 <code class="docutils literal notranslate"><span class="pre">Info</span></code> 水平警告。这是因为 <code class="docutils literal notranslate"><span class="pre">Info</span></code> 信息的优先级低于新的默认严重性 <code class="docutils literal notranslate"><span class="pre">Warn</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8179">[待校准&#64;8179]</a></p>
-</section>
-</section>
-</section>
-<section id="summary">
+</div>
+</div>
+</div>
+<div class="section" id="summary">
 <h2><a class="toc-backref" href="#id7">总结</a><a class="headerlink" href="#summary" title="永久链接至标题"></a></h2>
 <p>如果您需要仔细检查系统中的日志消息，<code class="docutils literal notranslate"><span class="pre">rqt_console</span></code> can将非常有帮助。您可能希望出于多种原因检查日志消息，通常是为了找出哪里出了问题以及导致问题的一系列事件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8180">[待校准&#64;8180]</a></p>
-</section>
-<section id="next-steps">
+</div>
+<div class="section" id="next-steps">
 <h2><a class="toc-backref" href="#id8">下一步</a><a class="headerlink" href="#next-steps" title="永久链接至标题"></a></h2>
 <p>下一个教程将教你如何使用 <a class="reference internal" href="../Launch/CLI-Intro.html"><span class="doc">ROS 2 Launch</span></a> 同时启动多个节点。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8181">[待校准&#64;8181]</a></p>
-</section>
-</section>
+</div>
+</div>
 
 
 

@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="zh" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>创建您的第一个ROS 2包 [待校准@7117] &mdash; ROS 2 documentation  文档</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -56,7 +55,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Windows-Install-Binary.html">在Windows上安装ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Fedora-Development-Setup.html">在Fedora Linux上构建ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Latest-Development-Setup.html">安装最新的ROS 2开发版本</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Installation/Maintaining-a-Source-Checkout.html">Maintaining a source checkout of ROS 2 Rolling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Maintaining-a-Source-Checkout.html">维护ROS 2Foxy源文件的检出</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Testing.html">用于测试的替代安装源</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/DDS-Implementations.html">安装DDS实现</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Install-Connext-Security-Plugins.html">安装Connext安全插件</a></li>
@@ -270,7 +269,7 @@
           <li><a href="../Tutorials.html">教程</a> &raquo;</li>
       <li>创建您的第一个ROS 2包 [待校准&#64;7117]</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ros2/ros2_documentation/blob/rolling/source/Tutorials/Creating-Your-First-ROS2-Package.rst" class="fa fa-github"> 在 GitHub 上修改</a>
+              <a href="https://github.com/ros2/ros2_documentation/blob/foxy/source/Tutorials/Creating-Your-First-ROS2-Package.rst" class="fa fa-github"> 在 GitHub 上修改</a>
       </li>
   </ul>
   <hr/>
@@ -280,7 +279,7 @@
              
 
 
-  <section id="creating-your-first-ros-2-package">
+  <div class="section" id="creating-your-first-ros-2-package">
 <span id="createpkg"></span><h1>创建您的第一个ROS 2包 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7117">[待校准&#64;7117]</a><a class="headerlink" href="#creating-your-first-ros-2-package" title="永久链接至标题"></a></h1>
 <p>Goal目标: using使用CMake或Python创建一个新包，并运行其可执行文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7118">[待校准&#64;7118]</a></p>
 <p>教程级别: 初学者 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7088">[Alyssa&#64;7088]</a></p>
@@ -310,14 +309,14 @@
 <li><p><a class="reference internal" href="#next-steps" id="id14">下一步</a></p></li>
 </ul>
 </div>
-<section id="background">
+<div class="section" id="background">
 <h2><a class="toc-backref" href="#id1">背景</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
-<section id="what-is-a-ros-2-package">
+<div class="section" id="what-is-a-ros-2-package">
 <h3>1什么是ROS 2包？ <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7119">[待校准&#64;7119]</a><a class="headerlink" href="#what-is-a-ros-2-package" title="永久链接至标题"></a></h3>
 <p>包可以被视为ROS 2代码的容器。如果你想安装你的代码或者与其他人共享，那么你需要把它组织成一个包。有了包，你可以释放你的ROS 2工作，并允许其他人轻松构建和使用它。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7120">[待校准&#64;7120]</a></p>
 <p>ROS 2中的包创建使用ament作为其构建系统，colcon作为其构建工具。您可以使用官方支持的CMake或Python创建包，尽管确实存在其他构建类型。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7121">[待校准&#64;7121]</a></p>
-</section>
-<section id="what-makes-up-a-ros-2-package">
+</div>
+<div class="section" id="what-makes-up-a-ros-2-package">
 <h3>2什么构成了ROS 2包？ <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7122">[待校准&#64;7122]</a><a class="headerlink" href="#what-makes-up-a-ros-2-package" title="永久链接至标题"></a></h3>
 <p>ROS 2 Python和CMake包各有各自的最低要求内容: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7123">[待校准&#64;7123]</a></p>
 <div class="sphinx-tabs docutils container">
@@ -346,8 +345,8 @@
 </pre></div>
 </div>
 </div></div>
-</section>
-<section id="packages-in-a-workspace">
+</div>
+<div class="section" id="packages-in-a-workspace">
 <h3>工作区中的3个包 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7132">[待校准&#64;7132]</a><a class="headerlink" href="#packages-in-a-workspace" title="永久链接至标题"></a></h3>
 <p>单个工作区可以包含任意数量的包，每个包都在自己的文件夹中。您还可以在一个工作区 (CMake、Python等) 中拥有不同构建类型的包。您不能有嵌套包。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7133">[待校准&#64;7133]</a></p>
 <p>最佳实践是在你的工作空间里有一个 <code class="docutils literal notranslate"><span class="pre">src</span></code> 文件夹，并在那里创建你的包。这使工作区的顶层保持 “干净”。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7134">[待校准&#64;7134]</a></p>
@@ -368,15 +367,15 @@
 <span class="go">          package.xml</span>
 </pre></div>
 </div>
-</section>
-</section>
-<section id="prerequisites">
+</div>
+</div>
+<div class="section" id="prerequisites">
 <h2><a class="toc-backref" href="#id5">先决条件</a><a class="headerlink" href="#prerequisites" title="永久链接至标题"></a></h2>
 <p>按照 <a class="reference internal" href="Workspace/Creating-A-Workspace.html"><span class="doc">previous tutorial</span></a> 中的说明操作后，您应该有一个ROS 2工作区。您将在此工作区中创建包。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7136">[待校准&#64;7136]</a></p>
-</section>
-<section id="tasks">
+</div>
+<div class="section" id="tasks">
 <h2><a class="toc-backref" href="#id6">任务</a><a class="headerlink" href="#tasks" title="永久链接至标题"></a></h2>
-<section id="create-a-package">
+<div class="section" id="create-a-package">
 <h3>1创建包 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7137">[待校准&#64;7137]</a><a class="headerlink" href="#create-a-package" title="永久链接至标题"></a></h3>
 <p>首先， <a class="reference internal" href="Configuring-ROS2-Environment.html"><span class="doc">source your ROS 2 installation</span></a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7138">[待校准&#64;7138]</a></p>
 <p>让我们为您的新包使用您在 <a class="reference internal" href="Workspace/Creating-A-Workspace.html#new-directory"><span class="std std-ref">previous tutorial</span></a>, `` dev_ws ”中创建的工作区。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7139">[待校准&#64;7139]</a></p>
@@ -463,8 +462,8 @@
 </div>
 </div></div>
 <p>您可以看到为新包自动调用y生成的文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7146">[待校准&#64;7146]</a></p>
-</section>
-<section id="build-a-package">
+</div>
+<div class="section" id="build-a-package">
 <h3>2构建一个包 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7147">[待校准&#64;7147]</a><a class="headerlink" href="#build-a-package" title="永久链接至标题"></a></h3>
 <p>将包放入工作区特别有价值，因为您可以通过在工作区根目录下运行 <code class="docutils literal notranslate"><span class="pre">colcon</span> <span class="pre">build</span></code> 来同时构建多个包。否则，您将必须单独构建每个包。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7148">[待校准&#64;7148]</a></p>
 <p>返回工作区的根目录: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7149">[待校准&#64;7149]</a></p>
@@ -497,8 +496,8 @@
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">colcon build --packages-select my_package</span>
 </pre></div>
 </div>
-</section>
-<section id="source-the-setup-file">
+</div>
+<div class="section" id="source-the-setup-file">
 <h3>3电源安装文件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7153">[待校准&#64;7153]</a><a class="headerlink" href="#source-the-setup-file" title="永久链接至标题"></a></h3>
 <p>要使用新的包和可执行文件，请首先打开一个新的终端，并为主ROS 2安装源文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7154">[待校准&#64;7154]</a></p>
 <p>然后，在 <code class="docutils literal notranslate"><span class="pre">dev_ws</span></code> 目录中，运行以下命令来为您的工作区提供源文件: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7155">[待校准&#64;7155]</a></p>
@@ -514,8 +513,8 @@
 </div>
 </div></div>
 <p>既然您的工作区已添加到路径中，您将能够使用新包的可执行文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7156">[待校准&#64;7156]</a></p>
-</section>
-<section id="use-the-package">
+</div>
+<div class="section" id="use-the-package">
 <h3>4使用包装 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7157">[待校准&#64;7157]</a><a class="headerlink" href="#use-the-package" title="永久链接至标题"></a></h3>
 <p>要运行您在包创建期间使用 <code class="docutils literal notranslate"><span class="pre">--node-name</span></code> 参数创建的可执行文件，请输入以下命令: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7158">[待校准&#64;7158]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run my_package my_node</span>
@@ -530,8 +529,8 @@
 </pre></div>
 </div>
 </div></div>
-</section>
-<section id="examine-package-contents">
+</div>
+<div class="section" id="examine-package-contents">
 <h3>5检查包装内容 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7160">[待校准&#64;7160]</a><a class="headerlink" href="#examine-package-contents" title="永久链接至标题"></a></h3>
 <p>在 <code class="docutils literal notranslate"><span class="pre">dev_ws/src/my_package</span></code> 内部，您将看到 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">pkg</span> <span class="pre">create</span></code> 自动调用y生成的文件和文件夹: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7161">[待校准&#64;7161]</a></p>
 <div class="sphinx-tabs docutils container">
@@ -544,8 +543,8 @@
 </div>
 <p>[需手动修复的语法]``my_node.py`` is inside the <code class="docutils literal notranslate"><span class="pre">my_package</span></code> directory。这就是将来所有自定义Python节点的去向。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7163">[待校准&#64;7163]</a></p>
 </div></div>
-</section>
-<section id="customize-package-xml">
+</div>
+<div class="section" id="customize-package-xml">
 <h3>6自定义包.xml <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7164">[待校准&#64;7164]</a><a class="headerlink" href="#customize-package-xml" title="永久链接至标题"></a></h3>
 <p>创建包裹后，您可能已经在回复信息中注意到 <code class="docutils literal notranslate"><span class="pre">description</span></code> 和 <code class="docutils literal notranslate"><span class="pre">license</span></code> 字段包含 <code class="docutils literal notranslate"><span class="pre">TODO</span></code> 注释。这是因为包描述和许可证声明不是自动调用y集，但如果您想释放包，则是必需的。 <code class="docutils literal notranslate"><span class="pre">maintainer</span></code> 田地也可能需要填写。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7165">[待校准&#64;7165]</a></p>
 <p>从 <code class="docutils literal notranslate"><span class="pre">dev_ws/src/my_package</span></code> ，使用您喜欢的文本编辑器打开 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> : <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7166">[待校准&#64;7166]</a></p>
@@ -640,18 +639,18 @@
 <p>编辑 <code class="docutils literal notranslate"><span class="pre">maintainer</span></code> 、 <code class="docutils literal notranslate"><span class="pre">maintainer_email</span></code> 和 <code class="docutils literal notranslate"><span class="pre">description</span></code> 线以匹配 <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7174">[待校准&#64;7174]</a></p>
 <p>不要忘记保存文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7175">[待校准&#64;7175]</a></p>
 </div></div>
-</section>
-</section>
-<section id="summary">
+</div>
+</div>
+<div class="section" id="summary">
 <h2><a class="toc-backref" href="#id13">总结</a><a class="headerlink" href="#summary" title="永久链接至标题"></a></h2>
 <p>您已经创建了一个包来组织您的代码，并使其易于他人使用。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7176">[待校准&#64;7176]</a></p>
 <p>您的包被自动调用y填充了必要的文件，然后您使用colcon构建它，以便您可以在本地环境中使用其可执行文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7177">[待校准&#64;7177]</a></p>
-</section>
-<section id="next-steps">
+</div>
+<div class="section" id="next-steps">
 <h2><a class="toc-backref" href="#id14">下一步</a><a class="headerlink" href="#next-steps" title="永久链接至标题"></a></h2>
 <p>接下来，让我们向包中添加一些有意义的内容。你将从一个简单的出版商/订阅者系统开始，你可以选择用 <a class="reference internal" href="Writing-A-Simple-Cpp-Publisher-And-Subscriber.html"><span class="doc">C++</span></a> or <a class="reference internal" href="Writing-A-Simple-Py-Publisher-And-Subscriber.html"><span class="doc">Python</span></a> 写。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7178">[待校准&#64;7178]</a></p>
-</section>
-</section>
+</div>
+</div>
 
 
 
