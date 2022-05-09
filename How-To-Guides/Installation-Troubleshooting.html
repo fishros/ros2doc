@@ -71,7 +71,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../Tutorials.html">教程</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Tutorials/Configuring-ROS2-Environment.html">配置ROS 2环境</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tutorials/Turtlesim/Introducing-Turtlesim.html">介绍turtlesim和rqt</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Understanding-ROS2-Nodes.html">了解ROS 2节点 [待校准&#64;9173]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Understanding-ROS2-Nodes.html">了解ROS 2节点</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tutorials/Topics/Understanding-ROS2-Topics.html">理解ROS 2话题 [待校准&#64;8808]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tutorials/Services/Understanding-ROS2-Services.html">了解ROS 2服务 [待校准&#64;8182]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tutorials/Parameters/Understanding-ROS2-Parameters.html">理解ROS 2参数</a></li>
@@ -283,33 +283,33 @@
 <h1>安装故障诊断工具 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6086">[待校准&#64;6086]</a><a class="headerlink" href="#installation-troubleshooting" title="永久链接至标题"></a></h1>
 <p>安装故障排除技术按其适用的平台排序。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6087">[待校准&#64;6087]</a></p>
 <div class="contents local topic" id="platforms">
-<p class="topic-title">平台 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6088">[待校准&#64;6088]</a></p>
+<p class="topic-title">平台</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#general" id="id1">综述 [待校准&#64;6089]</a></p></li>
+<li><p><a class="reference internal" href="#general" id="id1">综述</a></p></li>
 <li><p><a class="reference internal" href="#linux" id="id2">Linux [待校准&#64;6101]</a></p></li>
 <li><p><a class="reference internal" href="#macos" id="id3">macOS [待校准&#64;6110]</a></p></li>
 <li><p><a class="reference internal" href="#windows" id="id4">Windows [待校准&#64;6139]</a></p></li>
 </ul>
 </div>
 <section id="general">
-<h2>综述 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6089">[待校准&#64;6089]</a><a class="headerlink" href="#general" title="永久链接至标题"></a></h2>
+<h2><a class="toc-backref" href="#id1">综述</a><a class="headerlink" href="#general" title="永久链接至标题"></a></h2>
 <p>通用故障诊断工具技术适用于所有平台。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6090">[待校准&#64;6090]</a></p>
 <section id="enable-multicast">
-<h3>启用多播 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6091">[待校准&#64;6091]</a><a class="headerlink" href="#enable-multicast" title="永久链接至标题"></a></h3>
+<h3>启用多播<a class="headerlink" href="#enable-multicast" title="永久链接至标题"></a></h3>
 <p>为了通过DDS成功通信，使用的网络接口必须启用多播。我们在过去的经验中已经看到，使用回送适配器时，默认情况下 (在Ubuntu或OSX上) 不一定启用此功能。见 <a class="reference external" href="https://github.com/ros2/ros2/issues/552">original issue</a> or a <a class="reference external" href="https://answers.ros.org/question/300370/ros2-talker-cannot-communicate-with-listener/">conversation on ros-answers</a> 。您可以使用ROS 2工具验证当前设置是否允许多播: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6092">[待校准&#64;6092]</a></p>
-<p>在1号航站楼: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6093">[待校准&#64;6093]</a></p>
+<p>在1号终端: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6093">[小鱼&#64;6093]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 multicast receive
 </pre></div>
 </div>
-<p>在2号航站楼: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6094">[待校准&#64;6094]</a></p>
+<p>在2号终端： <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6094">[小鱼&#64;6094]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 multicast send
 </pre></div>
 </div>
-<p>如果第一个命令未返回类似于以下内容的响应: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6095">[待校准&#64;6095]</a></p>
+<p>如果第一个命令未返回类似于以下内容的响应:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Received from xx.xxx.xxx.xx:43751: <span class="s1">&#39;Hello World!&#39;</span>
 </pre></div>
 </div>
-<p>然后，您需要更新防火墙配置，以允许使用 <a class="reference external" href="https://help.ubuntu.com/community/UFW">ufw</a> 进行多播。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6096">[待校准&#64;6096]</a></p>
+<p>然后，您需要更新防火墙配置，以允许使用 <a class="reference external" href="https://help.ubuntu.com/community/UFW">ufw</a> 进行多播。</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo ufw allow <span class="k">in</span> proto udp to <span class="m">224</span>.0.0.0/4
 sudo ufw allow <span class="k">in</span> proto udp from <span class="m">224</span>.0.0.0/4
 </pre></div>
@@ -321,9 +321,9 @@ sudo ufw allow <span class="k">in</span> proto udp from <span class="m">224</spa
 </div>
 </section>
 <section id="import-failing-without-library-present-on-the-system">
-<h3>导入失败，系统上没有库 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6098">[待校准&#64;6098]</a><a class="headerlink" href="#import-failing-without-library-present-on-the-system" title="永久链接至标题"></a></h3>
+<h3>导入失败，系统上没有库<a class="headerlink" href="#import-failing-without-library-present-on-the-system" title="永久链接至标题"></a></h3>
 <p>有时无法导入 <code class="docutils literal notranslate"><span class="pre">rclpy</span></code> ，因为找不到预期的C扩展库。如果是这样，请将目录中存在的库与错误消息中提到的库进行比较。假设存在一个名称相似的文件 (前缀与 <code class="docutils literal notranslate"><span class="pre">_rclpy.</span></code> 相同，后缀与 <code class="docutils literal notranslate"><span class="pre">.so</span></code> 相同，但Python版本/体系结构不同) 您使用的Python解释器与用于构建C扩展的Python解释器不同。确保使用与构建二进制文件相同的Python解释器。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6099">[待校准&#64;6099]</a></p>
-<p>例如，这种不匹配可能会在操作系统更新后出现。然后，重建工作区可以解决此问题。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6100">[待校准&#64;6100]</a></p>
+<p>例如，这种不匹配可能会在操作系统更新后出现。然后，重建工作区可以解决此问题。</p>
 </section>
 </section>
 <section id="linux">
