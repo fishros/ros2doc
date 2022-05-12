@@ -291,9 +291,9 @@
 <li><p><a class="reference internal" href="#tasks" id="id3">任务</a></p>
 <ul>
 <li><p><a class="reference internal" href="#setup" id="id4">1设置 [待校准&#64;7567]</a></p></li>
-<li><p><a class="reference internal" href="#ros2-param-list" id="id5">2 ros2参数列表 [待校准&#64;7817]</a></p></li>
-<li><p><a class="reference internal" href="#ros2-param-get" id="id6">3 ros2参数获取 [待校准&#64;7823]</a></p></li>
-<li><p><a class="reference internal" href="#ros2-param-set" id="id7">4 ros2参数设置 [小鱼&#64;7829]</a></p></li>
+<li><p><a class="reference internal" href="#ros2-param-list" id="id5">2 ros2参数列表</a></p></li>
+<li><p><a class="reference internal" href="#ros2-param-get" id="id6">3 ros2参数获取</a></p></li>
+<li><p><a class="reference internal" href="#ros2-param-set" id="id7">4 ros2参数设置</a></p></li>
 <li><p><a class="reference internal" href="#ros2-param-dump" id="id8">5 ros2参数转储 [待校准&#64;7835]</a></p></li>
 <li><p><a class="reference internal" href="#ros2-param-load" id="id9">6 ros2参数加载 [待校准&#64;7841]</a></p></li>
 <li><p><a class="reference internal" href="#load-parameter-file-on-node-startup" id="id10">7节点启动时加载参数文件 [待校准&#64;7844]</a></p></li>
@@ -327,7 +327,7 @@
 </div>
 </div>
 <div class="section" id="ros2-param-list">
-<h3>2 ros2参数列表 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7817">[待校准&#64;7817]</a><a class="headerlink" href="#ros2-param-list" title="永久链接至标题"></a></h3>
+<h3><a class="toc-backref" href="#id5">2 ros2参数列表</a><a class="headerlink" href="#ros2-param-list" title="永久链接至标题"></a></h3>
 <p>要查看属于节点的参数，请打开新终端并输入以下命令: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7818">[待校准&#64;7818]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 param list</span>
 </pre></div>
@@ -346,10 +346,10 @@
 </div>
 <p>每个节点都有参数 <code class="docutils literal notranslate"><span class="pre">use_sim_time</span></code> ; 它不是turtlesim独有的。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7820">[待校准&#64;7820]</a></p>
 <p>根据它们的名称，看起来 <code class="docutils literal notranslate"><span class="pre">/turtlesim</span></code> 的参数使用RGB颜色值确定turtlesim窗口的背景颜色。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7821">[待校准&#64;7821]</a></p>
-<p>要确定参数的类型，可以使用 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span> <span class="pre">get</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7822">[待校准&#64;7822]</a></p>
+<p>要确定参数的类型，可以使用 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span> <span class="pre">get</span></code> 。</p>
 </div>
 <div class="section" id="ros2-param-get">
-<h3>3 ros2参数获取 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7823">[待校准&#64;7823]</a><a class="headerlink" href="#ros2-param-get" title="永久链接至标题"></a></h3>
+<h3><a class="toc-backref" href="#id6">3 ros2参数获取</a><a class="headerlink" href="#ros2-param-get" title="永久链接至标题"></a></h3>
 <p>要显示参数的类型和当前值，请使用以下命令: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7824">[待校准&#64;7824]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 param get &lt;node_name&gt; &lt;parameter_name&gt;</span>
 </pre></div>
@@ -358,7 +358,7 @@
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 param get /turtlesim background_g</span>
 </pre></div>
 </div>
-<p>它将返回值: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7826">[待校准&#64;7826]</a></p>
+<p>它将返回参数值: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7826">[小鱼&#64;7826]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Integer value is: 86</span>
 </pre></div>
 </div>
@@ -366,7 +366,7 @@
 <p>如果你在 <code class="docutils literal notranslate"><span class="pre">background_r</span></code> 和 <code class="docutils literal notranslate"><span class="pre">background_b</span></code> 上运行相同的命令，你将分别得到 <code class="docutils literal notranslate"><span class="pre">69</span></code> 和 <code class="docutils literal notranslate"><span class="pre">255</span></code> 的值。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7828">[待校准&#64;7828]</a></p>
 </div>
 <div class="section" id="ros2-param-set">
-<h3>4 ros2参数设置 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7829">[小鱼&#64;7829]</a><a class="headerlink" href="#ros2-param-set" title="永久链接至标题"></a></h3>
+<h3><a class="toc-backref" href="#id7">4 ros2参数设置</a><a class="headerlink" href="#ros2-param-set" title="永久链接至标题"></a></h3>
 <p>要在运行时更改参数的值，请使用以下命令: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7830">[待校准&#64;7830]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 param set &lt;node_name&gt; &lt;parameter_name&gt; &lt;value&gt;</span>
 </pre></div>
