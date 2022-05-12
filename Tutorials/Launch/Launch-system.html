@@ -291,8 +291,8 @@
 <h2>编写ROS 2launch文件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7619">[待校准&#64;7619]</a><a class="headerlink" href="#writing-a-ros-2-launch-file" title="永久链接至标题"></a></h2>
 <p>如果你还没有，一定要完成关于如何 <a class="reference internal" href="../Creating-Your-First-ROS2-Package.html"><span class="doc">create a ROS 2 package</span></a> 的教程。在ROS 2中创建launch文件的一种方法是使用Python文件，该文件由ROS 2 CLI工具 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">launch</span></code> 执行。我们首先在工作区中使用 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">pkg</span> <span class="pre">create</span> <span class="pre">&lt;pkg-name&gt;</span> <span class="pre">--dependencies</span> <span class="pre">[deps]</span></code> 创建一个ROS 2包，并创建一个新的 <code class="docutils literal notranslate"><span class="pre">launch</span></code> 目录。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7620">[待校准&#64;7620]</a></p>
 <div class="section" id="python-packages">
-<h3>Python包 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7621">[待校准&#64;7621]</a><a class="headerlink" href="#python-packages" title="永久链接至标题"></a></h3>
-<p>对于Python包，您的目录应如下所示: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7622">[待校准&#64;7622]</a></p>
+<h3>Python功能包 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7621">[小鱼&#64;7621]</a><a class="headerlink" href="#python-packages" title="永久链接至标题"></a></h3>
+<p>对于Python包，您的目录应如下所示:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>src/
     my_package/
         launch/
@@ -366,7 +366,7 @@
 </div>
 </div>
 <div class="section" id="example-of-ros-2-launch-concepts">
-<h2>ROS 2launch概念示例 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7635">[待校准&#64;7635]</a><a class="headerlink" href="#example-of-ros-2-launch-concepts" title="永久链接至标题"></a></h2>
+<h2>ROS 2launch概念示例<a class="headerlink" href="#example-of-ros-2-launch-concepts" title="永久链接至标题"></a></h2>
 <p>的launch文件 <a class="reference external" href="https://github.com/ros2/launch_ros/blob/foxy/launch_ros/examples/lifecycle_pub_sub_launch.py">this example</a> launches两个节点，节点 <a class="reference internal" href="../Managed-Nodes.html"><span class="doc">managed lifecycle</span></a>  (a  &quot;lifecycle node&quot; )。生命周期节点launch通过 <code class="docutils literal notranslate"><span class="pre">launch_ros</span></code> 自动调用y在状态之间转换时发出 * 事件 <a href="#id1"><span class="problematic" id="id2">*</span></a>。然后，这些事件可以通过launch帧的工作来执行。例如，通过发出其他事件 (例如请求另一个状态转换，生命周期节点launch通过 <code class="docutils literal notranslate"><span class="pre">launch_ros</span></code> 自动调用y具有事件处理程序) 或触发其他 * 动作 * (例如g.启动另一个节点)。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7636">[待校准&#64;7636]</a></p>
 <p>在上述示例中，向 <code class="docutils literal notranslate"><span class="pre">talker</span></code> 生命周期节点请求各种转换请求，并且其转换事件响应于，例如，launch成为 <code class="docutils literal notranslate"><span class="pre">listener</span></code> 节点生命周期健谈达到适当状态。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7637">[待校准&#64;7637]</a></p>
 </div>
