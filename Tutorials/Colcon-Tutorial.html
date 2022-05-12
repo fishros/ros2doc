@@ -298,7 +298,7 @@
 <li><p><a class="reference internal" href="#source-an-underlay" id="id8">通过source添加依赖 [小鱼&#64;6997]</a></p></li>
 <li><p><a class="reference internal" href="#build-the-workspace" id="id9">构建工作空间 [待校准&#64;7000]</a></p></li>
 <li><p><a class="reference internal" href="#run-tests" id="id10">运行测试</a></p></li>
-<li><p><a class="reference internal" href="#source-the-environment" id="id11">来源环境 [待校准&#64;7009]</a></p></li>
+<li><p><a class="reference internal" href="#source-the-environment" id="id11">Source环境 [小鱼&#64;7009]</a></p></li>
 <li><p><a class="reference internal" href="#try-a-demo" id="id12">尝试一个例程 [待校准&#64;7012]</a></p></li>
 </ul>
 </li>
@@ -447,12 +447,12 @@
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">colcon test --merge-install</span>
 </pre></div>
 </div>
-<p>你还需要在这里指定 <code class="docutils literal notranslate"><span class="pre">--merge-install</span></code> ，因为我们在上面使用它。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7008">[待校准&#64;7008]</a></p>
+<p>你还需要在这里指定 <code class="docutils literal notranslate"><span class="pre">--merge-install</span></code> ，因为我们在上面使用它。</p>
 </div></div>
 </div>
 <div class="section" id="source-the-environment">
-<h3>来源环境 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7009">[待校准&#64;7009]</a><a class="headerlink" href="#source-the-environment" title="永久链接至标题"></a></h3>
-<p>当colcon成功完成构建后，输出将在 <code class="docutils literal notranslate"><span class="pre">install</span></code> 目录中。在使用任何已安装的可执行文件或库之前，需要将它们添加到路径和库路径中。colcon将在 <code class="docutils literal notranslate"><span class="pre">install</span></code> 目录中生成bash/bat文件，以帮助设置环境。这些文件将向您的路径和库路径添加所有必需的元素，并提供包导出的任何bash或shell命令。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7010">[待校准&#64;7010]</a></p>
+<h3>Source环境 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7009">[小鱼&#64;7009]</a><a class="headerlink" href="#source-the-environment" title="永久链接至标题"></a></h3>
+<p>当colcon成功完成构建后，输出将在 <code class="docutils literal notranslate"><span class="pre">install</span></code> 目录中。在使用任何已安装的可执行文件或库之前，需要将它们添加到路径和库路径中。colcon将在 <code class="docutils literal notranslate"><span class="pre">install</span></code> 目录中生成bash/bat文件，以帮助设置环境。这些文件将向您的路径和库路径添加所有必需的元素，并提供包导出的任何bash或shell命令。</p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-4-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-4-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-4-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-4-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-4-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-4-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-4-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-4-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>. install/setup.bash
 </pre></div>

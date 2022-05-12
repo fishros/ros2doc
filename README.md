@@ -4,6 +4,3 @@
 
 ## 最近一次更新记录
 - [小鱼](https://github.com) mark:no_calib
-- [小鱼](https://github.com) mark:no_calib
-- [小鱼](https://github.com) mark:no_calib
-- [小鱼](https://github.com) mark:no_calib
