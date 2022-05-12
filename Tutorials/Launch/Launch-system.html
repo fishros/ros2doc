@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>[需手动修复的语法]Launch/监控多节点[需手动修复的语法]Launch [待校准@7614] &mdash; ROS 2 documentation  文档</title>
+  <title>使用Launch运行/监控多节点 [小鱼@7614] &mdash; ROS 2 documentation  文档</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
@@ -97,7 +97,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Colcon-Tutorial.html">使用colcon构建包</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="Launch-Main.html">Launch教程 [待校准&#64;7600]</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="Creating-Launch-Files.html">创建launch文件 [待校准&#64;7562]</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">[需手动修复的语法]Launch/监控多节点[需手动修复的语法]Launch [待校准&#64;7614]</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">使用Launch运行/监控多节点 [小鱼&#64;7614]</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Using-Substitutions.html">在launch文件中使用替换 [待校准&#64;7737]</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Using-Event-Handlers.html">在launch文件中使用事件处理程序 [待校准&#64;7641]</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Using-ROS2-Launch-For-Large-Projects.html">在大型项目中使用ROS 2launch [待校准&#64;7674]</a></li>
@@ -267,7 +267,7 @@
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="../../Tutorials.html">教程</a> &raquo;</li>
           <li><a href="Launch-Main.html">Launch教程 [待校准&#64;7600]</a> &raquo;</li>
-      <li>[需手动修复的语法]Launch/监控多节点[需手动修复的语法]Launch [待校准&#64;7614]</li>
+      <li>使用Launch运行/监控多节点 [小鱼&#64;7614]</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/ros2/ros2_documentation/blob/foxy/source/Tutorials/Launch/Launch-system.rst" class="fa fa-github"> 在 GitHub 上修改</a>
       </li>
@@ -280,9 +280,9 @@
 
 
   <div class="section" id="launching-monitoring-multiple-nodes-with-launch">
-<h1>[需手动修复的语法]Launch/监控多节点[需手动修复的语法]Launch <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7614">[待校准&#64;7614]</a><a class="headerlink" href="#launching-monitoring-multiple-nodes-with-launch" title="永久链接至标题"></a></h1>
+<h1>使用Launch运行/监控多节点 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7614">[小鱼&#64;7614]</a><a class="headerlink" href="#launching-monitoring-multiple-nodes-with-launch" title="永久链接至标题"></a></h1>
 <div class="section" id="ros-2-launch-system">
-<h2>ROS 2launch系统 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7615">[待校准&#64;7615]</a><a class="headerlink" href="#ros-2-launch-system" title="永久链接至标题"></a></h2>
+<h2>ROS 2launch系统<a class="headerlink" href="#ros-2-launch-system" title="永久链接至标题"></a></h2>
 <p>ROS 2中的launch系统负责帮助用户描述其系统的配置，然后按照所述执行。系统的配置包括运行哪些程序、在哪里运行它们、传递它们的参数，和ROS特定的约定，通过为组件提供不同的配置，可以轻松地在整个系统中重用组件。它还负责监控过程launched的状态，并报告和/或对这些过程的状态变化作出反应。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7616">[待校准&#64;7616]</a></p>
 <p>用Python编写的Launch文件可以启动和停止不同的节点，也可以触发和作用于各种事件。提供此帧工作的包是 <code class="docutils literal notranslate"><span class="pre">launch_ros</span></code> ，它在下面使用非ROS特定的 <code class="docutils literal notranslate"><span class="pre">launch</span></code> 帧工作。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7617">[待校准&#64;7617]</a></p>
 <p>[需手动修复的语法] <a class="reference external" href="https://design.ros2.org/articles/roslaunch.html">design document</a> 详述了ROS 2的launch系统设计的目标 (目前并非所有功能都可用)。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7618">[待校准&#64;7618]</a></p>
