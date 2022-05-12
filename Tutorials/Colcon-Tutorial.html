@@ -293,8 +293,8 @@
 </li>
 <li><p><a class="reference internal" href="#basics" id="id5">基础知识</a></p>
 <ul>
-<li><p><a class="reference internal" href="#create-a-workspace" id="id6">创建工作空间 [待校准&#64;6991]</a></p></li>
-<li><p><a class="reference internal" href="#add-some-sources" id="id7">添加一些源文件 [待校准&#64;6994]</a></p></li>
+<li><p><a class="reference internal" href="#create-a-workspace" id="id6">创建工作空间</a></p></li>
+<li><p><a class="reference internal" href="#add-some-sources" id="id7">添加一些代码文件 [小鱼&#64;6994]</a></p></li>
 <li><p><a class="reference internal" href="#source-an-underlay" id="id8">采购衬底 [待校准&#64;6997]</a></p></li>
 <li><p><a class="reference internal" href="#build-the-workspace" id="id9">构建工作空间 [待校准&#64;7000]</a></p></li>
 <li><p><a class="reference internal" href="#run-tests" id="id10">运行测试 [待校准&#64;7005]</a></p></li>
@@ -345,17 +345,17 @@
 <p>ROS工作区是具有特定结构的目录。通常有一个 <code class="docutils literal notranslate"><span class="pre">src</span></code> 子目录。在该子目录中是ROS包的源文件的位置。通常一开始目录是空的。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6985">[小鱼&#64;6985]</a></p>
 <p>colcon不使用源文件。默认情况下，它将创建以下目录作为 <code class="docutils literal notranslate"><span class="pre">src</span></code> 目录的对等方: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6986">[待校准&#64;6986]</a></p>
 <ul class="simple">
-<li><p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">build</span></code> 目录将是中间文件的存储位置。对于每个包，将创建一个子文件夹，在其中调用例如CMake。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6987">[待校准&#64;6987]</a></p></li>
-<li><p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">install</span></code> 目录是每个软件包将安装到的位置。默认情况下，每个包都将安装到单独的子目录中。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6988">[待校准&#64;6988]</a></p></li>
-<li><p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">log</span></code> 目录包含有关每个colcon调用的各种日志信息。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6989">[待校准&#64;6989]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">build</span></code> 目录将是中间文件的存储位置。对于每个包，将创建一个子文件夹，在其中调用例如CMake。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6987">[小鱼&#64;6987]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">install</span></code> 目录是每个软件包将安装到的位置。默认情况下，每个包都将安装到单独的子目录中。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6988">[小鱼&#64;6988]</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">log</span></code> 目录包含有关每个colcon调用的各种日志信息。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6989">[小鱼&#64;6989]</a></p></li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">注解</p>
-<p>与catkin相比，没有 <code class="docutils literal notranslate"><span class="pre">devel</span></code> 目录。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6990">[待校准&#64;6990]</a></p>
+<p>与catkin相比，没有 <code class="docutils literal notranslate"><span class="pre">devel</span></code> 目录。</p>
 </div>
 <div class="section" id="create-a-workspace">
-<h3>创建工作空间 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6991">[待校准&#64;6991]</a><a class="headerlink" href="#create-a-workspace" title="永久链接至标题"></a></h3>
-<p>首先，创建一个目录 ( <code class="docutils literal notranslate"><span class="pre">ros2_example_ws</span></code> ) 来包含我们的工作区: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6992">[待校准&#64;6992]</a></p>
+<h3><a class="toc-backref" href="#id6">创建工作空间</a><a class="headerlink" href="#create-a-workspace" title="永久链接至标题"></a></h3>
+<p>首先，创建一个目录 ( <code class="docutils literal notranslate"><span class="pre">ros2_example_ws</span></code> ) 来包含我们的工作区:</p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-1-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-1-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-1-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-1-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-1-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-1-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir -p ~/ros2_example_ws/src
 <span class="nb">cd</span> ~/ros2_example_ws
@@ -370,7 +370,7 @@
 </pre></div>
 </div>
 </div></div>
-<p>此时，工作区包含一个空目录 <code class="docutils literal notranslate"><span class="pre">src</span></code> : <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6993">[待校准&#64;6993]</a></p>
+<p>此时，工作区包含一个空目录 <code class="docutils literal notranslate"><span class="pre">src</span></code> :</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>.
 └── src
 
@@ -379,8 +379,8 @@
 </div>
 </div>
 <div class="section" id="add-some-sources">
-<h3>添加一些源文件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6994">[待校准&#64;6994]</a><a class="headerlink" href="#add-some-sources" title="永久链接至标题"></a></h3>
-<p>让我们将 <a class="reference external" href="https://github.com/ros2/examples">examples</a> 仓库克隆到工作区的 <code class="docutils literal notranslate"><span class="pre">src</span></code> 目录中: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6995">[待校准&#64;6995]</a></p>
+<h3>添加一些代码文件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6994">[小鱼&#64;6994]</a><a class="headerlink" href="#add-some-sources" title="永久链接至标题"></a></h3>
+<p>让我们将 <a class="reference external" href="https://github.com/ros2/examples">examples</a> 仓库克隆到工作区的 <code class="docutils literal notranslate"><span class="pre">src</span></code> 目录中:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/ros2/examples src/examples -b foxy
 </pre></div>
 </div>
