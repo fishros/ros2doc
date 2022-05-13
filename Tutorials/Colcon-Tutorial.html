@@ -298,8 +298,8 @@
 <li><p><a class="reference internal" href="#source-an-underlay" id="id8">通过source添加依赖 [小鱼&#64;6997]</a></p></li>
 <li><p><a class="reference internal" href="#build-the-workspace" id="id9">构建工作空间</a></p></li>
 <li><p><a class="reference internal" href="#run-tests" id="id10">运行测试</a></p></li>
-<li><p><a class="reference internal" href="#source-the-environment" id="id11">Source环境 [小鱼&#64;7009]</a></p></li>
-<li><p><a class="reference internal" href="#try-a-demo" id="id12">尝试一个例程 [待校准&#64;7012]</a></p></li>
+<li><p><a class="reference internal" href="#source-the-environment" id="id11">Source环境</a></p></li>
+<li><p><a class="reference internal" href="#try-a-demo" id="id12">尝试一个例程</a></p></li>
 </ul>
 </li>
 <li><p><a class="reference internal" href="#create-your-own-package" id="id13">创建您自己的包</a></p></li>
@@ -451,7 +451,7 @@
 </div></div>
 </div>
 <div class="section" id="source-the-environment">
-<h3>Source环境 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7009">[小鱼&#64;7009]</a><a class="headerlink" href="#source-the-environment" title="永久链接至标题"></a></h3>
+<h3><a class="toc-backref" href="#id11">Source环境</a><a class="headerlink" href="#source-the-environment" title="永久链接至标题"></a></h3>
 <p>当colcon成功完成构建后，输出将在 <code class="docutils literal notranslate"><span class="pre">install</span></code> 目录中。在使用任何已安装的可执行文件或库之前，需要将它们添加到路径和库路径中。colcon将在 <code class="docutils literal notranslate"><span class="pre">install</span></code> 目录中生成bash/bat文件，以帮助设置环境。这些文件将向您的路径和库路径添加所有必需的元素，并提供包导出的任何bash或shell命令。</p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-4-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-4-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-4-bWFjT1M=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-4-bWFjT1M=" name="bWFjT1M=" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-4-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-4-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-4-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-4-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>. install/setup.bash
@@ -463,14 +463,14 @@
 </div><div aria-labelledby="tab-4-V2luZG93cw==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-4-V2luZG93cw==" name="V2luZG93cw==" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>call install<span class="se">\s</span>etup.bat
 </pre></div>
 </div>
-<p>或者使用Powershell: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7011">[待校准&#64;7011]</a></p>
+<p>或者使用Powershell:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>install<span class="se">\s</span>etup.ps1
 </pre></div>
 </div>
 </div></div>
 </div>
 <div class="section" id="try-a-demo">
-<h3>尝试一个例程 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7012">[待校准&#64;7012]</a><a class="headerlink" href="#try-a-demo" title="永久链接至标题"></a></h3>
+<h3><a class="toc-backref" href="#id12">尝试一个例程</a><a class="headerlink" href="#try-a-demo" title="永久链接至标题"></a></h3>
 <p>使用环境上下文的资源，我们可以运行colcon构建的可执行文件。让我们从示例中运行一个订阅服务器节点: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7013">[小鱼&#64;7013]</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 run examples_rclcpp_minimal_subscriber subscriber_member_function
 </pre></div>
