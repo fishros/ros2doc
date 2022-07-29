@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="zh" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>对ROS 2Launch文件使用Python、XML和YAML [待校准@6162] &mdash; ROS 2 documentation  文档</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -55,11 +56,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Windows-Install-Binary.html">在Windows上安装ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Fedora-Development-Setup.html">在Fedora Linux上构建ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Latest-Development-Setup.html">安装最新的ROS 2开发版本</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Installation/Maintaining-a-Source-Checkout.html">维护ROS 2Foxy源文件的检出</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Maintaining-a-Source-Checkout.html">Maintaining a source checkout of ROS 2 Rolling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Testing.html">用于测试的替代安装源</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/DDS-Implementations.html">安装DDS实现</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Install-Connext-Security-Plugins.html">安装Connext安全插件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Install-Connext-University-Eval.html">安装RTI Connext DDS的大学或评估版本</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Install-Connext-University-Eval.html">安装RTI Connext DDS的大学或评估版本 [Alyssa&#64;5370]</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Working-with-Eclipse-CycloneDDS.html">使用Eclipse Cyclone DDS [Alyssa&#64;5384]</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Working-with-GurumNetworks-GurumDDS.html">使用GurumNetworks GurumDDS [Alyssa&#64;5400]</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Working-with-eProsima-Fast-DDS.html">使用eProsima Fast DDS [Alyssa&#64;5417]</a></li>
@@ -72,10 +73,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../Tutorials/Configuring-ROS2-Environment.html">配置ROS 2环境</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tutorials/Turtlesim/Introducing-Turtlesim.html">介绍turtlesim和rqt</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tutorials/Understanding-ROS2-Nodes.html">了解ROS 2节点</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Topics/Understanding-ROS2-Topics.html">理解ROS 2话题</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Services/Understanding-ROS2-Services.html">了解ROS 2服务</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Topics/Understanding-ROS2-Topics.html">理解ROS 2话题 [待校准&#64;8808]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Services/Understanding-ROS2-Services.html">了解ROS 2服务 [待校准&#64;8182]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tutorials/Parameters/Understanding-ROS2-Parameters.html">理解ROS 2参数</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Understanding-ROS2-Actions.html">理解ROS 2动作</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Understanding-ROS2-Actions.html">理解ROS 2动作 [待校准&#64;9124]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tutorials/Rqt-Console/Using-Rqt-Console.html">使用rqt_控制台 [待校准&#64;8152]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tutorials/Launch/CLI-Intro.html">介绍ROS 2launch [待校准&#64;7541]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tutorials/Ros2bag/Recording-And-Playing-Back-Data.html">记录和回放数据 [待校准&#64;8079]</a></li>
@@ -94,11 +95,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../Tutorials/Actions/Creating-an-Action.html">创建动作 [待校准&#64;6711]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tutorials/Actions/Writing-a-Cpp-Action-Server-Client.html">编写动作服务器和客户端 (c ++) [待校准&#64;6753]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tutorials/Actions/Writing-a-Py-Action-Server-Client.html">编写动作服务器和客户端 (Python) [待校准&#64;6825]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Composition.html">在单个进程中组合多个节点</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Colcon-Tutorial.html">使用colcon构建包</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Composition.html">在单个进程中组成多个节点 [待校准&#64;7034]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Colcon-Tutorial.html">使用colcon构建包 [待校准&#64;6975]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tutorials/Launch/Launch-Main.html">Launch教程 [待校准&#64;7600]</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Tutorials/Launch/Creating-Launch-Files.html">创建launch文件 [待校准&#64;7562]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Launch/Launch-system.html">使用Launch运行/监控多节点 [小鱼&#64;7614]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Launch/Launch-system.html">[需手动修复的语法]Launch/监控多节点[需手动修复的语法]Launch [待校准&#64;7614]</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Tutorials/Launch/Using-Substitutions.html">在launch文件中使用替换 [待校准&#64;7737]</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Tutorials/Launch/Using-Event-Handlers.html">在launch文件中使用事件处理程序 [待校准&#64;7641]</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Tutorials/Launch/Using-ROS2-Launch-For-Large-Projects.html">在大型项目中使用ROS 2launch [待校准&#64;7674]</a></li>
@@ -131,9 +132,9 @@
 <li class="toctree-l3"><a class="reference internal" href="../Tutorials/URDF/Using-URDF-with-Robot-State-Publisher.html">将URDF与robot_state_发布者结合使用 [待校准&#64;9049]</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Topics/Topic-Statistics-Tutorial.html">ROS 2话题统计教程 (c ++)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Topics/Topic-Statistics-Tutorial.html">ROS 2话题统计教程 (c ++) [待校准&#64;8751]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tutorials/Discovery-Server/Discovery-Server.html">使用Fast DDS Discovery Server作为发现协议 [社区贡献] [待校准&#64;7319]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Allocator-Template-Tutorial.html">实现自定义内存分配器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Allocator-Template-Tutorial.html">实现自定义内存分配器 [待校准&#64;6885]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tutorials/Simulators/Webots/Setting-up-a-Robot-Simulation-Webots.html">设置机器人仿真 (Webots) [待校准&#64;8222]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tutorials/Deploying-ROS-2-on-IBM-Cloud.html">IBM Cloud Kubernetes上的ROS2 [社区-贡献] [待校准&#64;7232]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tutorials/Eclipse-Oxygen-with-ROS-2-and-rviz2.html">带有ROS 2和rviz2的Eclipse Oxygen [社区贡献] [待校准&#64;7387]</a></li>
@@ -142,7 +143,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Tutorials/Building-ROS2-Package-with-eclipse-2021-06.html">使用eclipse 2021-06构建ROS 2包 [待校准&#64;6926]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tutorials/Quality-of-Service.html">使用服务质量设置处理有损网络 [待校准&#64;7902]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tutorials/Managed-Nodes.html">具有托管生命周期的节点管理 [待校准&#64;7809]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Intra-Process-Communication.html">高效的进程内通讯</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Intra-Process-Communication.html">高效的流程内通讯 [待校准&#64;7491]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tutorials/Rosbag-with-ROS1-Bridge.html">使用ROS 1bridge用rosbag记录和回放话题数据 [待校准&#64;8125]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tutorials/Real-Time-Programming.html">ROS 2中的实时编程 [待校准&#64;7931]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tutorials/dummy-robot-demo.html">尝试dummy robot例程 [待校准&#64;9496]</a></li>
@@ -150,7 +151,7 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="../How-To-Guides.html">问题指南</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="Installation-Troubleshooting.html">安装故障诊断 [Alyssa&#64;6086]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Installation-Troubleshooting.html">安装故障诊断工具 [待校准&#64;6086]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Developing-a-ROS-2-Package.html">开发ROS 2包 [待校准&#64;6065]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Ament-CMake-Documentation.html">ament_cmake用户文档</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Ament-CMake-Python-Documentation.html">ament_cmake_python用户文档 [小鱼&#64;5911]</a></li>
@@ -269,7 +270,7 @@
           <li><a href="../How-To-Guides.html">问题指南</a> &raquo;</li>
       <li>对ROS 2Launch文件使用Python、XML和YAML [待校准&#64;6162]</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ros2/ros2_documentation/blob/foxy/source/How-To-Guides/Launch-file-different-formats.rst" class="fa fa-github"> 在 GitHub 上修改</a>
+              <a href="https://github.com/ros2/ros2_documentation/blob/rolling/source/How-To-Guides/Launch-file-different-formats.rst" class="fa fa-github"> 在 GitHub 上修改</a>
       </li>
   </ul>
   <hr/>
@@ -279,7 +280,7 @@
              
 
 
-  <div class="section" id="using-python-xml-and-yaml-for-ros-2-launch-files">
+  <section id="using-python-xml-and-yaml-for-ros-2-launch-files">
 <h1>对ROS 2Launch文件使用Python、XML和YAML <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6162">[待校准&#64;6162]</a><a class="headerlink" href="#using-python-xml-and-yaml-for-ros-2-launch-files" title="永久链接至标题"></a></h1>
 <div class="contents local topic" id="table-of-contents">
 <p class="topic-title">目录</p>
@@ -290,7 +291,7 @@
 </ul>
 </div>
 <p>ROS 2launch文件可以用Python、XML和YAML编写。本指南展示了如何使用这些不同的格式来完成相同的任务，并讨论了何时使用每种格式。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6163">[待校准&#64;6163]</a></p>
-<div class="section" id="launch-file-examples">
+<section id="launch-file-examples">
 <h2>Launch文件示例 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6164">[待校准&#64;6164]</a><a class="headerlink" href="#launch-file-examples" title="永久链接至标题"></a></h2>
 <p>下面是用Python、XML和YAML实现的launch文件。每个launch文件执行以下动作: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6165">[待校准&#64;6165]</a></p>
 <ul class="simple">
@@ -402,35 +403,35 @@
     <span class="p">])</span>
 </pre></div>
 </div>
-</div><div aria-labelledby="tab-0-WE1M" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-WE1M" name="WE1M" role="tabpanel" tabindex="0"><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!-- example.launch.xml --&gt;</span>
+</div><div aria-labelledby="tab-0-WE1M" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-WE1M" name="WE1M" role="tabpanel" tabindex="0"><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- example.launch.xml --&gt;</span>
 
 <span class="nt">&lt;launch&gt;</span>
 
-  <span class="c">&lt;!-- args that can be set from the command line or a default will be used --&gt;</span>
+  <span class="cm">&lt;!-- args that can be set from the command line or a default will be used --&gt;</span>
   <span class="nt">&lt;arg</span> <span class="na">name=</span><span class="s">&quot;background_r&quot;</span> <span class="na">default=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
   <span class="nt">&lt;arg</span> <span class="na">name=</span><span class="s">&quot;background_g&quot;</span> <span class="na">default=</span><span class="s">&quot;255&quot;</span><span class="nt">/&gt;</span>
   <span class="nt">&lt;arg</span> <span class="na">name=</span><span class="s">&quot;background_b&quot;</span> <span class="na">default=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
   <span class="nt">&lt;arg</span> <span class="na">name=</span><span class="s">&quot;chatter_ns&quot;</span> <span class="na">default=</span><span class="s">&quot;my/chatter/ns&quot;</span><span class="nt">/&gt;</span>
 
-  <span class="c">&lt;!-- include another launch file --&gt;</span>
+  <span class="cm">&lt;!-- include another launch file --&gt;</span>
   <span class="nt">&lt;include</span> <span class="na">file=</span><span class="s">&quot;$(find-pkg-share demo_nodes_cpp)/launch/topics/talker_listener.launch.py&quot;</span><span class="nt">/&gt;</span>
-  <span class="c">&lt;!-- include another launch file in the chatter_ns namespace--&gt;</span>
+  <span class="cm">&lt;!-- include another launch file in the chatter_ns namespace--&gt;</span>
   <span class="nt">&lt;group&gt;</span>
-    <span class="c">&lt;!-- push-ros-namespace to set namespace of included nodes --&gt;</span>
+    <span class="cm">&lt;!-- push-ros-namespace to set namespace of included nodes --&gt;</span>
     <span class="nt">&lt;push-ros-namespace</span> <span class="na">namespace=</span><span class="s">&quot;$(var chatter_ns)&quot;</span><span class="nt">/&gt;</span>
     <span class="nt">&lt;include</span> <span class="na">file=</span><span class="s">&quot;$(find-pkg-share demo_nodes_cpp)/launch/topics/talker_listener.launch.py&quot;</span><span class="nt">/&gt;</span>
   <span class="nt">&lt;/group&gt;</span>
 
-  <span class="c">&lt;!-- start a turtlesim_node in the turtlesim1 namespace --&gt;</span>
+  <span class="cm">&lt;!-- start a turtlesim_node in the turtlesim1 namespace --&gt;</span>
   <span class="nt">&lt;node</span> <span class="na">pkg=</span><span class="s">&quot;turtlesim&quot;</span> <span class="na">exec=</span><span class="s">&quot;turtlesim_node&quot;</span> <span class="na">name=</span><span class="s">&quot;sim&quot;</span> <span class="na">namespace=</span><span class="s">&quot;turtlesim1&quot;</span><span class="nt">/&gt;</span>
-  <span class="c">&lt;!-- start another turtlesim_node in the turtlesim2 namespace</span>
-<span class="c">      and use args to set parameters --&gt;</span>
+  <span class="cm">&lt;!-- start another turtlesim_node in the turtlesim2 namespace</span>
+<span class="cm">      and use args to set parameters --&gt;</span>
   <span class="nt">&lt;node</span> <span class="na">pkg=</span><span class="s">&quot;turtlesim&quot;</span> <span class="na">exec=</span><span class="s">&quot;turtlesim_node&quot;</span> <span class="na">name=</span><span class="s">&quot;sim&quot;</span> <span class="na">namespace=</span><span class="s">&quot;turtlesim2&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">&quot;background_r&quot;</span> <span class="na">value=</span><span class="s">&quot;$(var background_r)&quot;</span><span class="nt">/&gt;</span>
     <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">&quot;background_g&quot;</span> <span class="na">value=</span><span class="s">&quot;$(var background_g)&quot;</span><span class="nt">/&gt;</span>
     <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">&quot;background_b&quot;</span> <span class="na">value=</span><span class="s">&quot;$(var background_b)&quot;</span><span class="nt">/&gt;</span>
   <span class="nt">&lt;/node&gt;</span>
-  <span class="c">&lt;!-- perform remap so both turtles listen to the same command topic --&gt;</span>
+  <span class="cm">&lt;!-- perform remap so both turtles listen to the same command topic --&gt;</span>
   <span class="nt">&lt;node</span> <span class="na">pkg=</span><span class="s">&quot;turtlesim&quot;</span> <span class="na">exec=</span><span class="s">&quot;mimic&quot;</span> <span class="na">name=</span><span class="s">&quot;mimic&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;remap</span> <span class="na">from=</span><span class="s">&quot;/input/pose&quot;</span> <span class="na">to=</span><span class="s">&quot;/turtlesim1/turtle1/pose&quot;</span><span class="nt">/&gt;</span>
     <span class="nt">&lt;remap</span> <span class="na">from=</span><span class="s">&quot;/output/cmd_vel&quot;</span> <span class="na">to=</span><span class="s">&quot;/turtlesim2/turtle1/cmd_vel&quot;</span><span class="nt">/&gt;</span>
@@ -438,79 +439,79 @@
 <span class="nt">&lt;/launch&gt;</span>
 </pre></div>
 </div>
-</div><div aria-labelledby="tab-0-WUFNTA==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-WUFNTA==" name="WUFNTA==" role="tabpanel" tabindex="0"><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># example.launch.yaml</span>
+</div><div aria-labelledby="tab-0-WUFNTA==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-WUFNTA==" name="WUFNTA==" role="tabpanel" tabindex="0"><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># example.launch.yaml</span><span class="w"></span>
 
-<span class="nt">launch</span><span class="p">:</span>
+<span class="nt">launch</span><span class="p">:</span><span class="w"></span>
 
-<span class="c1"># args that can be set from the command line or a default will be used</span>
-<span class="p p-Indicator">-</span> <span class="nt">arg</span><span class="p">:</span>
-    <span class="nt">name</span><span class="p">:</span> <span class="s">&quot;background_r&quot;</span>
-    <span class="nt">default</span><span class="p">:</span> <span class="s">&quot;0&quot;</span>
-<span class="p p-Indicator">-</span> <span class="nt">arg</span><span class="p">:</span>
-    <span class="nt">name</span><span class="p">:</span> <span class="s">&quot;background_g&quot;</span>
-    <span class="nt">default</span><span class="p">:</span> <span class="s">&quot;255&quot;</span>
-<span class="p p-Indicator">-</span> <span class="nt">arg</span><span class="p">:</span>
-    <span class="nt">name</span><span class="p">:</span> <span class="s">&quot;background_b&quot;</span>
-    <span class="nt">default</span><span class="p">:</span> <span class="s">&quot;0&quot;</span>
-<span class="p p-Indicator">-</span> <span class="nt">arg</span><span class="p">:</span>
-    <span class="nt">name</span><span class="p">:</span> <span class="s">&quot;chatter_ns&quot;</span>
-    <span class="nt">default</span><span class="p">:</span> <span class="s">&quot;my/chatter/ns&quot;</span>
+<span class="c1"># args that can be set from the command line or a default will be used</span><span class="w"></span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">arg</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;background_r&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;0&quot;</span><span class="w"></span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">arg</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;background_g&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;255&quot;</span><span class="w"></span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">arg</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;background_b&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;0&quot;</span><span class="w"></span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">arg</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;chatter_ns&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;my/chatter/ns&quot;</span><span class="w"></span>
 
 
-<span class="c1"># include another launch file</span>
-<span class="p p-Indicator">-</span> <span class="nt">include</span><span class="p">:</span>
-    <span class="nt">file</span><span class="p">:</span> <span class="s">&quot;$(find-pkg-share</span><span class="nv"> </span><span class="s">demo_nodes_cpp)/launch/topics/talker_listener.launch.py&quot;</span>
+<span class="c1"># include another launch file</span><span class="w"></span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">include</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;$(find-pkg-share</span><span class="nv"> </span><span class="s">demo_nodes_cpp)/launch/topics/talker_listener.launch.py&quot;</span><span class="w"></span>
 
-<span class="c1"># include another launch file in the chatter_ns namespace</span>
-<span class="p p-Indicator">-</span> <span class="nt">group</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="nt">push-ros-namespace</span><span class="p">:</span>
-        <span class="nt">namespace</span><span class="p">:</span> <span class="s">&quot;$(var</span><span class="nv"> </span><span class="s">chatter_ns)&quot;</span>
-    <span class="p p-Indicator">-</span> <span class="nt">include</span><span class="p">:</span>
-        <span class="nt">file</span><span class="p">:</span> <span class="s">&quot;$(find-pkg-share</span><span class="nv"> </span><span class="s">demo_nodes_cpp)/launch/topics/talker_listener.launch.py&quot;</span>
+<span class="c1"># include another launch file in the chatter_ns namespace</span><span class="w"></span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">group</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">push-ros-namespace</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;$(var</span><span class="nv"> </span><span class="s">chatter_ns)&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">include</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;$(find-pkg-share</span><span class="nv"> </span><span class="s">demo_nodes_cpp)/launch/topics/talker_listener.launch.py&quot;</span><span class="w"></span>
 
-<span class="c1"># start a turtlesim_node in the turtlesim1 namespace</span>
-<span class="p p-Indicator">-</span> <span class="nt">node</span><span class="p">:</span>
-    <span class="nt">pkg</span><span class="p">:</span> <span class="s">&quot;turtlesim&quot;</span>
-    <span class="nt">exec</span><span class="p">:</span> <span class="s">&quot;turtlesim_node&quot;</span>
-    <span class="nt">name</span><span class="p">:</span> <span class="s">&quot;sim&quot;</span>
-    <span class="nt">namespace</span><span class="p">:</span> <span class="s">&quot;turtlesim1&quot;</span>
+<span class="c1"># start a turtlesim_node in the turtlesim1 namespace</span><span class="w"></span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">node</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">pkg</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;turtlesim&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;turtlesim_node&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;sim&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;turtlesim1&quot;</span><span class="w"></span>
 
-<span class="c1"># start another turtlesim_node in the turtlesim2 namespace and use args to set parameters</span>
-<span class="p p-Indicator">-</span> <span class="nt">node</span><span class="p">:</span>
-    <span class="nt">pkg</span><span class="p">:</span> <span class="s">&quot;turtlesim&quot;</span>
-    <span class="nt">exec</span><span class="p">:</span> <span class="s">&quot;turtlesim_node&quot;</span>
-    <span class="nt">name</span><span class="p">:</span> <span class="s">&quot;sim&quot;</span>
-    <span class="nt">namespace</span><span class="p">:</span> <span class="s">&quot;turtlesim2&quot;</span>
-    <span class="nt">param</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span>
-      <span class="nt">name</span><span class="p">:</span> <span class="s">&quot;background_r&quot;</span>
-      <span class="nt">value</span><span class="p">:</span> <span class="s">&quot;$(var</span><span class="nv"> </span><span class="s">background_r)&quot;</span>
-    <span class="p p-Indicator">-</span>
-      <span class="nt">name</span><span class="p">:</span> <span class="s">&quot;background_g&quot;</span>
-      <span class="nt">value</span><span class="p">:</span> <span class="s">&quot;$(var</span><span class="nv"> </span><span class="s">background_g)&quot;</span>
-    <span class="p p-Indicator">-</span>
-      <span class="nt">name</span><span class="p">:</span> <span class="s">&quot;background_b&quot;</span>
-      <span class="nt">value</span><span class="p">:</span> <span class="s">&quot;$(var</span><span class="nv"> </span><span class="s">background_b)&quot;</span>
+<span class="c1"># start another turtlesim_node in the turtlesim2 namespace and use args to set parameters</span><span class="w"></span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">node</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">pkg</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;turtlesim&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;turtlesim_node&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;sim&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;turtlesim2&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">param</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"></span>
+<span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;background_r&quot;</span><span class="w"></span>
+<span class="w">      </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;$(var</span><span class="nv"> </span><span class="s">background_r)&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"></span>
+<span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;background_g&quot;</span><span class="w"></span>
+<span class="w">      </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;$(var</span><span class="nv"> </span><span class="s">background_g)&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"></span>
+<span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;background_b&quot;</span><span class="w"></span>
+<span class="w">      </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;$(var</span><span class="nv"> </span><span class="s">background_b)&quot;</span><span class="w"></span>
 
-<span class="c1"># perform remap so both turtles listen to the same command topic</span>
-<span class="p p-Indicator">-</span> <span class="nt">node</span><span class="p">:</span>
-    <span class="nt">pkg</span><span class="p">:</span> <span class="s">&quot;turtlesim&quot;</span>
-    <span class="nt">exec</span><span class="p">:</span> <span class="s">&quot;mimic&quot;</span>
-    <span class="nt">name</span><span class="p">:</span> <span class="s">&quot;mimic&quot;</span>
-    <span class="nt">remap</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span>
-        <span class="nt">from</span><span class="p">:</span> <span class="s">&quot;/input/pose&quot;</span>
-        <span class="nt">to</span><span class="p">:</span> <span class="s">&quot;/turtlesim1/turtle1/pose&quot;</span>
-    <span class="p p-Indicator">-</span>
-        <span class="nt">from</span><span class="p">:</span> <span class="s">&quot;/output/cmd_vel&quot;</span>
-        <span class="nt">to</span><span class="p">:</span> <span class="s">&quot;/turtlesim2/turtle1/cmd_vel&quot;</span>
+<span class="c1"># perform remap so both turtles listen to the same command topic</span><span class="w"></span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">node</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">pkg</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;turtlesim&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">exec</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;mimic&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;mimic&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">remap</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"></span>
+<span class="w">        </span><span class="nt">from</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/input/pose&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="nt">to</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/turtlesim1/turtle1/pose&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"></span>
+<span class="w">        </span><span class="nt">from</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/output/cmd_vel&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="nt">to</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/turtlesim2/turtle1/cmd_vel&quot;</span><span class="w"></span>
 </pre></div>
 </div>
 </div></div>
-</div>
-<div class="section" id="using-the-launch-files-from-the-command-line">
+</section>
+<section id="using-the-launch-files-from-the-command-line">
 <h2>使用命令行中的Launch文件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6174">[待校准&#64;6174]</a><a class="headerlink" href="#using-the-launch-files-from-the-command-line" title="永久链接至标题"></a></h2>
-<div class="section" id="launching">
+<section id="launching">
 <h3>Launch <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6175">[待校准&#64;6175]</a><a class="headerlink" href="#launching" title="永久链接至标题"></a></h3>
 <p>上述任何launch文件都可以与 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">launch</span></code> 一起运行。要尝试调用y，您可以创建一个新包并使用 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6176">[待校准&#64;6176]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 launch &lt;package_name&gt; &lt;launch_file_name&gt;</span>
@@ -520,8 +521,8 @@
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 launch &lt;path_to_launch_file&gt;</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="setting-arguments">
+</section>
+<section id="setting-arguments">
 <h3>设置参数 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6178">[待校准&#64;6178]</a><a class="headerlink" href="#setting-arguments" title="永久链接至标题"></a></h3>
 <p>要设置传递给launch文件的参数，应使用 “key:= value” 语法。例如，您可以通过以下方式设置 <code class="docutils literal notranslate"><span class="pre">background_r</span></code> 的值: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6179">[待校准&#64;6179]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 launch &lt;package_name&gt; &lt;launch_file_name&gt; background_r:=255</span>
@@ -531,19 +532,19 @@
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 launch &lt;path_to_launch_file&gt; background_r:=255</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="controlling-the-turtles">
+</section>
+<section id="controlling-the-turtles">
 <h3>控制海龟 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6181">[待校准&#64;6181]</a><a class="headerlink" href="#controlling-the-turtles" title="永久链接至标题"></a></h3>
 <p>要测试重新映射是否有效，您可以通过在另一个终端中运行以下命令来控制海龟: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6182">[待校准&#64;6182]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run turtlesim turtle_teleop_key --ros-args --remap __ns:=/turtlesim1</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="python-xml-or-yaml-which-should-i-use">
+</section>
+</section>
+<section id="python-xml-or-yaml-which-should-i-use">
 <h2>Python、XML或YAML: 我应该使用哪个？ <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6183">[待校准&#64;6183]</a><a class="headerlink" href="#python-xml-or-yaml-which-should-i-use" title="永久链接至标题"></a></h2>
 <div class="admonition note">
-<p class="admonition-title">注解</p>
+<p class="admonition-title">备注</p>
 <p>[需手动修复的语法]Launch文件ROS 1写XML，XML最熟悉的可能来自ROS 1。要了解发生了什么变化，您可以访问 <a class="reference internal" href="Launch-files-migration-guide.html"><span class="doc">迁移launch文件ROS 1ROS 2 [待校准&#64;6189]</span></a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6184">[待校准&#64;6184]</a></p>
 </div>
 <p>对于大多数应用，选择哪种ROS 2launch格式取决于开发人员的偏好。但是，如果您的launch文件需要XML或YAML无法实现的灵活性，则可以使用Python编写launch文件。对ROS 2launch使用Python更加灵活，原因有以下两个: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6185">[待校准&#64;6185]</a></p>
@@ -552,8 +553,8 @@
 <li><p>[需手动修复的语法] <a class="reference external" href="https://github.com/ros2/launch">ros2/launch</a> (general launch features) and <a class="reference external" href="https://github.com/ros2/launch_ros">ros2/launch_ros</a>  (ROS 2特定的launch特征) 是用Python编写的，因此您可以更低级地访问可能不会被XML和YAML公开的launch特征。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6187">[待校准&#64;6187]</a></p></li>
 </ul>
 <p>也就是说，用Python编写的launch文件可能比用XML或YAML编写的文件更复杂、更冗长。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6188">[待校准&#64;6188]</a></p>
-</div>
-</div>
+</section>
+</section>
 
 
 

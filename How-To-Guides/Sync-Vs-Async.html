@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="zh" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>同步与异步服务的客户端对比 [Alyssa@6523] &mdash; ROS 2 documentation  文档</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -54,11 +55,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Windows-Install-Binary.html">在Windows上安装ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Fedora-Development-Setup.html">在Fedora Linux上构建ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Latest-Development-Setup.html">安装最新的ROS 2开发版本</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Installation/Maintaining-a-Source-Checkout.html">维护ROS 2Foxy源文件的检出</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Installation/Maintaining-a-Source-Checkout.html">Maintaining a source checkout of ROS 2 Rolling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/Testing.html">用于测试的替代安装源</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Installation/DDS-Implementations.html">安装DDS实现</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Install-Connext-Security-Plugins.html">安装Connext安全插件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Install-Connext-University-Eval.html">安装RTI Connext DDS的大学或评估版本</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Install-Connext-University-Eval.html">安装RTI Connext DDS的大学或评估版本 [Alyssa&#64;5370]</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Working-with-Eclipse-CycloneDDS.html">使用Eclipse Cyclone DDS [Alyssa&#64;5384]</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Working-with-GurumNetworks-GurumDDS.html">使用GurumNetworks GurumDDS [Alyssa&#64;5400]</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Installation/DDS-Implementations/Working-with-eProsima-Fast-DDS.html">使用eProsima Fast DDS [Alyssa&#64;5417]</a></li>
@@ -71,10 +72,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../Tutorials/Configuring-ROS2-Environment.html">配置ROS 2环境</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tutorials/Turtlesim/Introducing-Turtlesim.html">介绍turtlesim和rqt</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tutorials/Understanding-ROS2-Nodes.html">了解ROS 2节点</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Topics/Understanding-ROS2-Topics.html">理解ROS 2话题</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Services/Understanding-ROS2-Services.html">了解ROS 2服务</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Topics/Understanding-ROS2-Topics.html">理解ROS 2话题 [待校准&#64;8808]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Services/Understanding-ROS2-Services.html">了解ROS 2服务 [待校准&#64;8182]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tutorials/Parameters/Understanding-ROS2-Parameters.html">理解ROS 2参数</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Understanding-ROS2-Actions.html">理解ROS 2动作</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Understanding-ROS2-Actions.html">理解ROS 2动作 [待校准&#64;9124]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tutorials/Rqt-Console/Using-Rqt-Console.html">使用rqt_控制台 [待校准&#64;8152]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tutorials/Launch/CLI-Intro.html">介绍ROS 2launch [待校准&#64;7541]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tutorials/Ros2bag/Recording-And-Playing-Back-Data.html">记录和回放数据 [待校准&#64;8079]</a></li>
@@ -93,11 +94,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../Tutorials/Actions/Creating-an-Action.html">创建动作 [待校准&#64;6711]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tutorials/Actions/Writing-a-Cpp-Action-Server-Client.html">编写动作服务器和客户端 (c ++) [待校准&#64;6753]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tutorials/Actions/Writing-a-Py-Action-Server-Client.html">编写动作服务器和客户端 (Python) [待校准&#64;6825]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Composition.html">在单个进程中组合多个节点</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Colcon-Tutorial.html">使用colcon构建包</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Composition.html">在单个进程中组成多个节点 [待校准&#64;7034]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Colcon-Tutorial.html">使用colcon构建包 [待校准&#64;6975]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tutorials/Launch/Launch-Main.html">Launch教程 [待校准&#64;7600]</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Tutorials/Launch/Creating-Launch-Files.html">创建launch文件 [待校准&#64;7562]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Launch/Launch-system.html">使用Launch运行/监控多节点 [小鱼&#64;7614]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Launch/Launch-system.html">[需手动修复的语法]Launch/监控多节点[需手动修复的语法]Launch [待校准&#64;7614]</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Tutorials/Launch/Using-Substitutions.html">在launch文件中使用替换 [待校准&#64;7737]</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Tutorials/Launch/Using-Event-Handlers.html">在launch文件中使用事件处理程序 [待校准&#64;7641]</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Tutorials/Launch/Using-ROS2-Launch-For-Large-Projects.html">在大型项目中使用ROS 2launch [待校准&#64;7674]</a></li>
@@ -130,9 +131,9 @@
 <li class="toctree-l3"><a class="reference internal" href="../Tutorials/URDF/Using-URDF-with-Robot-State-Publisher.html">将URDF与robot_state_发布者结合使用 [待校准&#64;9049]</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Topics/Topic-Statistics-Tutorial.html">ROS 2话题统计教程 (c ++)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Topics/Topic-Statistics-Tutorial.html">ROS 2话题统计教程 (c ++) [待校准&#64;8751]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tutorials/Discovery-Server/Discovery-Server.html">使用Fast DDS Discovery Server作为发现协议 [社区贡献] [待校准&#64;7319]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Allocator-Template-Tutorial.html">实现自定义内存分配器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Allocator-Template-Tutorial.html">实现自定义内存分配器 [待校准&#64;6885]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tutorials/Simulators/Webots/Setting-up-a-Robot-Simulation-Webots.html">设置机器人仿真 (Webots) [待校准&#64;8222]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tutorials/Deploying-ROS-2-on-IBM-Cloud.html">IBM Cloud Kubernetes上的ROS2 [社区-贡献] [待校准&#64;7232]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tutorials/Eclipse-Oxygen-with-ROS-2-and-rviz2.html">带有ROS 2和rviz2的Eclipse Oxygen [社区贡献] [待校准&#64;7387]</a></li>
@@ -141,7 +142,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Tutorials/Building-ROS2-Package-with-eclipse-2021-06.html">使用eclipse 2021-06构建ROS 2包 [待校准&#64;6926]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tutorials/Quality-of-Service.html">使用服务质量设置处理有损网络 [待校准&#64;7902]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tutorials/Managed-Nodes.html">具有托管生命周期的节点管理 [待校准&#64;7809]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Intra-Process-Communication.html">高效的进程内通讯</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tutorials/Intra-Process-Communication.html">高效的流程内通讯 [待校准&#64;7491]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tutorials/Rosbag-with-ROS1-Bridge.html">使用ROS 1bridge用rosbag记录和回放话题数据 [待校准&#64;8125]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tutorials/Real-Time-Programming.html">ROS 2中的实时编程 [待校准&#64;7931]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tutorials/dummy-robot-demo.html">尝试dummy robot例程 [待校准&#64;9496]</a></li>
@@ -149,7 +150,7 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="../How-To-Guides.html">问题指南</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="Installation-Troubleshooting.html">安装故障诊断 [Alyssa&#64;6086]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Installation-Troubleshooting.html">安装故障诊断工具 [待校准&#64;6086]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Developing-a-ROS-2-Package.html">开发ROS 2包 [待校准&#64;6065]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Ament-CMake-Documentation.html">ament_cmake用户文档</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Ament-CMake-Python-Documentation.html">ament_cmake_python用户文档 [小鱼&#64;5911]</a></li>
@@ -268,7 +269,7 @@
           <li><a href="../How-To-Guides.html">问题指南</a> &raquo;</li>
       <li>同步与异步服务的客户端对比 [Alyssa&#64;6523]</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ros2/ros2_documentation/blob/foxy/source/How-To-Guides/Sync-Vs-Async.rst" class="fa fa-github"> 在 GitHub 上修改</a>
+              <a href="https://github.com/ros2/ros2_documentation/blob/rolling/source/How-To-Guides/Sync-Vs-Async.rst" class="fa fa-github"> 在 GitHub 上修改</a>
       </li>
   </ul>
   <hr/>
@@ -278,7 +279,7 @@
              
 
 
-  <div class="section" id="synchronous-vs-asynchronous-service-clients">
+  <section id="synchronous-vs-asynchronous-service-clients">
 <span id="syncasync"></span><h1>同步与异步服务的客户端对比 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6523">[Alyssa&#64;6523]</a><a class="headerlink" href="#synchronous-vs-asynchronous-service-clients" title="永久链接至标题"></a></h1>
 <p><strong>级别:</strong> 中级 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6524">[Alyssa&#64;6524]</a></p>
 <p><strong>时间:</strong> 10分钟 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6525">[Alyssa&#64;6525]</a></p>
@@ -292,14 +293,14 @@
 <li><p><a class="reference internal" href="#summary" id="id5">总结</a></p></li>
 </ul>
 </div>
-<div class="section" id="introduction">
+<section id="introduction">
 <h2><a class="toc-backref" href="#id1">简介</a><a class="headerlink" href="#introduction" title="永久链接至标题"></a></h2>
 <p>本指南旨在警告用户与Python同步的服务（service）客户端 <code class="docutils literal notranslate"><span class="pre">call()</span></code> API相关的风险。同步调用服务时很容易错误的导致死锁，因此我们不建议使用 <code class="docutils literal notranslate"><span class="pre">call()</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6526">[Alyssa&#64;6526]</a></p>
 <p>对于希望使用同步调用并意识到陷阱的有经验的用户，我们提供了一个如何正确使用 <code class="docutils literal notranslate"><span class="pre">call()</span></code> 的例子。我们还强调了随之而来的死锁的可能情况。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6527">[Alyssa&#64;6527]</a></p>
 <p>因为我们建议避免同步调用，本指南还将介绍推荐的替代方法 -- 异步调用 ( <code class="docutils literal notranslate"><span class="pre">call_async()</span></code> ) 的特点和用法。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6528">[待校准&#64;6528]</a></p>
 <p>C++ 服务调用API仅在异步中可用，因此本指南中的比较和示例与Python服务和客户端有关。这里给出的异步的定义通常适用于C++，但也有一些例外。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6529">[Alyssa&#64;6529]</a></p>
-</div>
-<div class="section" id="synchronous-calls">
+</section>
+<section id="synchronous-calls">
 <h2>1 同步调用 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6530">[Alyssa&#64;6530]</a><a class="headerlink" href="#synchronous-calls" title="永久链接至标题"></a></h2>
 <p>当向服务发送请求时，同步客户端将阻瑟调用线程，直到收到响应为止; 在调用期间，该线程上不会做任何其他事情。调用可能需要任意时间才能完成。完成后，响应将直接返回给客户端。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6531">[Alyssa&#64;6531]</a></p>
 <p>以下是如何从客户端节点正确执行同步服务调用的示例，类似于 <a class="reference internal" href="../Tutorials/Writing-A-Simple-Py-Service-And-Client.html"><span class="doc">简单的服务端和客户端</span></a> 教程中的异步节点。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6532">[Alyssa&#64;6532]</a></p>
@@ -348,8 +349,8 @@
 </pre></div>
 </div>
 <p>请注意，在 <code class="docutils literal notranslate"><span class="pre">main()</span></code> 内部，客户端在单独的线程中调用 <code class="docutils literal notranslate"><span class="pre">rclpy.spin</span></code> 。 <code class="docutils literal notranslate"><span class="pre">send_request</span></code> 和 <code class="docutils literal notranslate"><span class="pre">rclpy.spin</span></code> 都是阻塞的，所以它们需要在不同的线程上。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6533">[Alyssa&#64;6533]</a></p>
-</div>
-<div class="section" id="sync-deadlock">
+</section>
+<section id="sync-deadlock">
 <h2>1.1 同步死锁 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6534">[Alyssa&#64;6534]</a><a class="headerlink" href="#sync-deadlock" title="永久链接至标题"></a></h2>
 <p>同步 <code class="docutils literal notranslate"><span class="pre">call()</span></code> API有几种导致死锁的方式。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6535">[Alyssa&#64;6535]</a></p>
 <p>评论中提到的例子，未能创建单独的线程自旋 <code class="docutils literal notranslate"><span class="pre">rclpy</span></code> 是导致死锁的一个原因。当客户端阻塞线程等待响应，但响应只能返回同一线程，客户端不会停止等待，不能做任何别的事情。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6536">[Alyssa&#64;6536]</a></p>
@@ -369,8 +370,8 @@
 <p class="admonition-title">警告</p>
 <p>发生死锁时，您将不会收到任何服务被阻塞的指示。不会引发警告或异常，堆栈跟踪中没有指示，调用也不会失败。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6539">[Alyssa&#64;6539]</a></p>
 </div>
-</div>
-<div class="section" id="asynchronous-calls">
+</section>
+<section id="asynchronous-calls">
 <h2>2 异步调用 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6540">[Alyssa&#64;6540]</a><a class="headerlink" href="#asynchronous-calls" title="永久链接至标题"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">rclpy</span></code> 中的异步调用是完全安全的，也是调用服务的推荐方法。与同步调用不同，它们可以在任何地方创建，而不用冒着阻塞其他ROS和非ROS进程的风险。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6541">[Alyssa&#64;6541]</a></p>
 <p>异步客户端将在向服务发送请求后立即返回 <code class="docutils literal notranslate"><span class="pre">future</span></code> ，该值指示调用和响应是否完成 (而不是响应本身的值)。可以随时查询返回的 <code class="docutils literal notranslate"><span class="pre">future</span></code> 的响应。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6542">[Alyssa&#64;6542]</a></p>
@@ -383,12 +384,12 @@
 </div>
 <p>Python的 <a class="reference internal" href="../Tutorials/Writing-A-Simple-Py-Service-And-Client.html"><span class="doc">简单的服务端和客户端</span></a> 教程说明了如何执行异步服务调用，并使用循环检索 <code class="docutils literal notranslate"><span class="pre">future</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6544">[Alyssa&#64;6544]</a></p>
 <p><code class="docutils literal notranslate"><span class="pre">future</span></code> 也可以使用计时器或回调函数来检索，就像在 <a class="reference external" href="https://github.com/ros2/examples/blob/foxy/rclpy/services/minimal_client/examples_rclpy_minimal_client/client_async_callback.py">这个例子</a> 中，以一个专用线程或其他方法来检索。作为调用方，由您决定如何存储 <code class="docutils literal notranslate"><span class="pre">future</span></code> ，检查其状态，并检索您的响应。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6545">[Alyssa&#64;6545]</a></p>
-</div>
-<div class="section" id="summary">
+</section>
+<section id="summary">
 <h2><a class="toc-backref" href="#id5">总结</a><a class="headerlink" href="#summary" title="永久链接至标题"></a></h2>
-<p>不建议实施同步服务客户端。它们容易发生死锁，但不会在死锁发生时提供任何问题指示。如果必须使用同步调用，<a class="reference internal" href="#synchronous-calls">1 Synchronous calls</a>   部分的例子是这样做的一种安全的方式. 你也应该要了解 <a class="reference internal" href="#sync-deadlock">1.1 Sync deadlock</a> 部分的概述的导致死锁的状况。相反我们建议改用异步服务客户端。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6547">[机器人&#64;6547]</a></p>
-</div>
-</div>
+<p>不建议实施同步服务客户端。它们容易发生死锁，但不会在死锁发生时提供任何问题指示。如果必须使用同步调用， <a class="reference internal" href="#sync-deadlock">1 同步调用</a> 部分的例子是这样做的一种安全的方式. 你也应该要了解 <a class="reference internal" href="#synchronous-calls">1.1 同步死锁</a> 部分的概述的导致死锁的状况。相反我们建议改用异步服务客户端。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6547">[Alyssa&#64;6547]</a></p>
+</section>
+</section>
 
 
 

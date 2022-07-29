@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="zh" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>设置机器人仿真 (Webots) [待校准@8222] &mdash; ROS 2 documentation  文档</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
@@ -26,7 +27,7 @@
     <link rel="index" title="索引" href="../../../genindex.html" />
     <link rel="search" title="搜索" href="../../../search.html" />
     <link rel="next" title="IBM Cloud Kubernetes上的ROS2 [社区-贡献] [待校准@7232]" href="../../Deploying-ROS-2-on-IBM-Cloud.html" />
-    <link rel="prev" title="实现自定义内存分配器" href="../../Allocator-Template-Tutorial.html" /> 
+    <link rel="prev" title="实现自定义内存分配器 [待校准@6885]" href="../../Allocator-Template-Tutorial.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -55,11 +56,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../Installation/Windows-Install-Binary.html">在Windows上安装ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../Installation/Fedora-Development-Setup.html">在Fedora Linux上构建ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../Installation/Latest-Development-Setup.html">安装最新的ROS 2开发版本</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../Installation/Maintaining-a-Source-Checkout.html">维护ROS 2Foxy源文件的检出</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../Installation/Maintaining-a-Source-Checkout.html">Maintaining a source checkout of ROS 2 Rolling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../Installation/Testing.html">用于测试的替代安装源</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../Installation/DDS-Implementations.html">安装DDS实现</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../Installation/DDS-Implementations/Install-Connext-Security-Plugins.html">安装Connext安全插件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../Installation/DDS-Implementations/Install-Connext-University-Eval.html">安装RTI Connext DDS的大学或评估版本</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Installation/DDS-Implementations/Install-Connext-University-Eval.html">安装RTI Connext DDS的大学或评估版本 [Alyssa&#64;5370]</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../Installation/DDS-Implementations/Working-with-Eclipse-CycloneDDS.html">使用Eclipse Cyclone DDS [Alyssa&#64;5384]</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../Installation/DDS-Implementations/Working-with-GurumNetworks-GurumDDS.html">使用GurumNetworks GurumDDS [Alyssa&#64;5400]</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../Installation/DDS-Implementations/Working-with-eProsima-Fast-DDS.html">使用eProsima Fast DDS [Alyssa&#64;5417]</a></li>
@@ -72,10 +73,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../../Configuring-ROS2-Environment.html">配置ROS 2环境</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Turtlesim/Introducing-Turtlesim.html">介绍turtlesim和rqt</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Understanding-ROS2-Nodes.html">了解ROS 2节点</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../Topics/Understanding-ROS2-Topics.html">理解ROS 2话题</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../Services/Understanding-ROS2-Services.html">了解ROS 2服务</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Topics/Understanding-ROS2-Topics.html">理解ROS 2话题 [待校准&#64;8808]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Services/Understanding-ROS2-Services.html">了解ROS 2服务 [待校准&#64;8182]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Parameters/Understanding-ROS2-Parameters.html">理解ROS 2参数</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../Understanding-ROS2-Actions.html">理解ROS 2动作</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Understanding-ROS2-Actions.html">理解ROS 2动作 [待校准&#64;9124]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Rqt-Console/Using-Rqt-Console.html">使用rqt_控制台 [待校准&#64;8152]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Launch/CLI-Intro.html">介绍ROS 2launch [待校准&#64;7541]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Ros2bag/Recording-And-Playing-Back-Data.html">记录和回放数据 [待校准&#64;8079]</a></li>
@@ -94,11 +95,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../../Actions/Creating-an-Action.html">创建动作 [待校准&#64;6711]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Actions/Writing-a-Cpp-Action-Server-Client.html">编写动作服务器和客户端 (c ++) [待校准&#64;6753]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Actions/Writing-a-Py-Action-Server-Client.html">编写动作服务器和客户端 (Python) [待校准&#64;6825]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../Composition.html">在单个进程中组合多个节点</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../Colcon-Tutorial.html">使用colcon构建包</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Composition.html">在单个进程中组成多个节点 [待校准&#64;7034]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Colcon-Tutorial.html">使用colcon构建包 [待校准&#64;6975]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Launch/Launch-Main.html">Launch教程 [待校准&#64;7600]</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../Launch/Creating-Launch-Files.html">创建launch文件 [待校准&#64;7562]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../Launch/Launch-system.html">使用Launch运行/监控多节点 [小鱼&#64;7614]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Launch/Launch-system.html">[需手动修复的语法]Launch/监控多节点[需手动修复的语法]Launch [待校准&#64;7614]</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Launch/Using-Substitutions.html">在launch文件中使用替换 [待校准&#64;7737]</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Launch/Using-Event-Handlers.html">在launch文件中使用事件处理程序 [待校准&#64;7641]</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Launch/Using-ROS2-Launch-For-Large-Projects.html">在大型项目中使用ROS 2launch [待校准&#64;7674]</a></li>
@@ -131,9 +132,9 @@
 <li class="toctree-l3"><a class="reference internal" href="../../URDF/Using-URDF-with-Robot-State-Publisher.html">将URDF与robot_state_发布者结合使用 [待校准&#64;9049]</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../Topics/Topic-Statistics-Tutorial.html">ROS 2话题统计教程 (c ++)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Topics/Topic-Statistics-Tutorial.html">ROS 2话题统计教程 (c ++) [待校准&#64;8751]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Discovery-Server/Discovery-Server.html">使用Fast DDS Discovery Server作为发现协议 [社区贡献] [待校准&#64;7319]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../Allocator-Template-Tutorial.html">实现自定义内存分配器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Allocator-Template-Tutorial.html">实现自定义内存分配器 [待校准&#64;6885]</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">设置机器人仿真 (Webots) [待校准&#64;8222]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Deploying-ROS-2-on-IBM-Cloud.html">IBM Cloud Kubernetes上的ROS2 [社区-贡献] [待校准&#64;7232]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Eclipse-Oxygen-with-ROS-2-and-rviz2.html">带有ROS 2和rviz2的Eclipse Oxygen [社区贡献] [待校准&#64;7387]</a></li>
@@ -142,7 +143,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../Building-ROS2-Package-with-eclipse-2021-06.html">使用eclipse 2021-06构建ROS 2包 [待校准&#64;6926]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Quality-of-Service.html">使用服务质量设置处理有损网络 [待校准&#64;7902]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Managed-Nodes.html">具有托管生命周期的节点管理 [待校准&#64;7809]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../Intra-Process-Communication.html">高效的进程内通讯</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Intra-Process-Communication.html">高效的流程内通讯 [待校准&#64;7491]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Rosbag-with-ROS1-Bridge.html">使用ROS 1bridge用rosbag记录和回放话题数据 [待校准&#64;8125]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Real-Time-Programming.html">ROS 2中的实时编程 [待校准&#64;7931]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../dummy-robot-demo.html">尝试dummy robot例程 [待校准&#64;9496]</a></li>
@@ -150,7 +151,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../How-To-Guides.html">问题指南</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../How-To-Guides/Installation-Troubleshooting.html">安装故障诊断 [Alyssa&#64;6086]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../How-To-Guides/Installation-Troubleshooting.html">安装故障诊断工具 [待校准&#64;6086]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../How-To-Guides/Developing-a-ROS-2-Package.html">开发ROS 2包 [待校准&#64;6065]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../How-To-Guides/Ament-CMake-Documentation.html">ament_cmake用户文档</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../How-To-Guides/Ament-CMake-Python-Documentation.html">ament_cmake_python用户文档 [小鱼&#64;5911]</a></li>
@@ -269,7 +270,7 @@
           <li><a href="../../../Tutorials.html">教程</a> &raquo;</li>
       <li>设置机器人仿真 (Webots) [待校准&#64;8222]</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ros2/ros2_documentation/blob/foxy/source/Tutorials/Simulators/Webots/Setting-up-a-Robot-Simulation-Webots.rst" class="fa fa-github"> 在 GitHub 上修改</a>
+              <a href="https://github.com/ros2/ros2_documentation/blob/rolling/source/Tutorials/Simulators/Webots/Setting-up-a-Robot-Simulation-Webots.rst" class="fa fa-github"> 在 GitHub 上修改</a>
       </li>
   </ul>
   <hr/>
@@ -279,7 +280,7 @@
              
 
 
-  <div class="section" id="setting-up-a-robot-simulation-webots">
+  <section id="setting-up-a-robot-simulation-webots">
 <span id="simulators"></span><h1>设置机器人仿真 (Webots) <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8222">[待校准&#64;8222]</a><a class="headerlink" href="#setting-up-a-robot-simulation-webots" title="永久链接至标题"></a></h1>
 <p>Goal目标: Setup设置机器人仿真并从ROS 2进行控制。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8223">[待校准&#64;8223]</a></p>
 <p>Tutorial教程级别: Advanced高级 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7643">[待校准&#64;7643]</a></p>
@@ -308,23 +309,23 @@
 <li><p><a class="reference internal" href="#next-steps" id="id16">下一步</a></p></li>
 </ul>
 </div>
-<div class="section" id="background">
+<section id="background">
 <h2><a class="toc-backref" href="#id1">背景</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
 <p>几个机器人模拟器可以与ROS 2一起使用，如Gazebo、点火、Webots等。与turtlesim不同，它们提供了相当现实的结果，依赖于机器人、传感器、致动器和物体的基于物理的模型。因此，您在仿真中观察到的与将ROS 2控制器转移到真正的机器人时将得到的非常接近。在本教程中，您将使用Webots机器人模拟器来设置和运行一个非常简单的ROS 2仿真场景。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8224">[待校准&#64;8224]</a></p>
 <p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">webots_ros2</span></code> 包提供ROS 2和Webots之间的接口。它包括几个子包，但是在本教程中，您将只使用 <code class="docutils literal notranslate"><span class="pre">webots_ros2_driver</span></code> 子包来实现一个控制模拟机器人的Python插件。其他一些子包包含不同机器人的例程，如turtlebot3。它们记录在演示部分的 <a class="reference internal" href="../../../Tutorials.html"><span class="doc">教程</span></a> 页面上。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8225">[待校准&#64;8225]</a></p>
-</div>
-<div class="section" id="prerequisites">
+</section>
+<section id="prerequisites">
 <h2><a class="toc-backref" href="#id2">先决条件</a><a class="headerlink" href="#prerequisites" title="永久链接至标题"></a></h2>
-<p>建议理解初级 <a class="reference internal" href="../../../Tutorials.html"><span class="doc">教程</span></a> 所涵盖的基本ROS原理。特别是， <a class="reference internal" href="../../Turtlesim/Introducing-Turtlesim.html"><span class="doc">介绍turtlesim和rqt</span></a> 、 <a class="reference internal" href="../../Topics/Understanding-ROS2-Topics.html"><span class="doc">理解ROS 2话题</span></a> 、 <a class="reference internal" href="../../Workspace/Creating-A-Workspace.html"><span class="doc">创建工作空间 [待校准&#64;9276]</span></a> 、 <a class="reference internal" href="../../Creating-Your-First-ROS2-Package.html"><span class="doc">创建您的第一个ROS 2包 [待校准&#64;7117]</span></a> 和 <a class="reference internal" href="../../Launch/Creating-Launch-Files.html"><span class="doc">创建launch文件 [待校准&#64;7562]</span></a> 是有用的先决条件。最后，您需要使用以下命令从终端安装 <code class="docutils literal notranslate"><span class="pre">webots_ros2_driver</span></code> : <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8226">[待校准&#64;8226]</a></p>
+<p>建议理解初级 <a class="reference internal" href="../../../Tutorials.html"><span class="doc">教程</span></a> 所涵盖的基本ROS原理。特别是， <a class="reference internal" href="../../Turtlesim/Introducing-Turtlesim.html"><span class="doc">介绍turtlesim和rqt</span></a> 、 <a class="reference internal" href="../../Topics/Understanding-ROS2-Topics.html"><span class="doc">理解ROS 2话题 [待校准&#64;8808]</span></a> 、 <a class="reference internal" href="../../Workspace/Creating-A-Workspace.html"><span class="doc">创建工作空间 [待校准&#64;9276]</span></a> 、 <a class="reference internal" href="../../Creating-Your-First-ROS2-Package.html"><span class="doc">创建您的第一个ROS 2包 [待校准&#64;7117]</span></a> 和 <a class="reference internal" href="../../Launch/Creating-Launch-Files.html"><span class="doc">创建launch文件 [待校准&#64;7562]</span></a> 是有用的先决条件。最后，您需要使用以下命令从终端安装 <code class="docutils literal notranslate"><span class="pre">webots_ros2_driver</span></code> : <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8226">[待校准&#64;8226]</a></p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-0-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-0-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-0-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-0-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sudo apt update</span>
-<span class="go">sudo apt install ros-foxy-webots-ros2-driver</span>
+<span class="go">sudo apt install ros-rolling-webots-ros2-driver</span>
 </pre></div>
 </div>
 </div><div aria-labelledby="tab-0-V2luZG93cw==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-V2luZG93cw==" name="V2luZG93cw==" role="tabpanel" tabindex="0"><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>Install webots_ros2_driver and dependencies
 <span class="go">cd \dev_ws</span>
 <span class="go">pip install rosinstall_generator</span>
-<span class="go">rosinstall_generator webots_ros2_driver --deps --exclude-path=C:\dev\ros2_foxy &gt; deps.repos</span>
+<span class="go">rosinstall_generator webots_ros2_driver --deps --exclude-path=C:\dev\ros2_rolling &gt; deps.repos</span>
 <span class="go">vcs import src &lt; deps.repos</span>
 
 <span class="gp"># </span>Build the packages
@@ -336,13 +337,13 @@
 </div>
 </div></div>
 <div class="admonition note">
-<p class="admonition-title">注解</p>
+<p class="admonition-title">备注</p>
 <p>如果你想安装整个 <code class="docutils literal notranslate"><span class="pre">webots_ros2</span></code> 包，请遵循以下 <a class="reference external" href="https://github.com/cyberbotics/webots_ros2/wiki/Getting-Started">instructions</a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8227">[待校准&#64;8227]</a></p>
 </div>
-</div>
-<div class="section" id="tasks">
+</section>
+<section id="tasks">
 <h2><a class="toc-backref" href="#id3">任务</a><a class="headerlink" href="#tasks" title="永久链接至标题"></a></h2>
-<div class="section" id="create-the-package-structure">
+<section id="create-the-package-structure">
 <h3>1创建包结构 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8228">[待校准&#64;8228]</a><a class="headerlink" href="#create-the-package-structure" title="永久链接至标题"></a></h3>
 <p>让我们在自定义ROS 2包中组织代码。从ROS 2工作区的 <code class="docutils literal notranslate"><span class="pre">src</span></code> 文件夹中创建一个名为 <code class="docutils literal notranslate"><span class="pre">my_package</span></code> 的新包。将终端的当前目录更改为 <code class="docutils literal notranslate"><span class="pre">dev_ws/src</span></code> ，然后运行: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8229">[待校准&#64;8229]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 pkg create --build-type ament_python --node-name my_robot_driver my_package --dependencies rclpy geometry_msgs webots_ros2_driver</span>
@@ -373,21 +374,21 @@
 <span class="go">    └── setup.py</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="setup-the-simulation-world">
+</section>
+<section id="setup-the-simulation-world">
 <h3>2设置仿真世界 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8232">[待校准&#64;8232]</a><a class="headerlink" href="#setup-the-simulation-world" title="永久链接至标题"></a></h3>
 <p>你将需要世界包含机器人launch你仿真: 下载:  <code class="xref any docutils literal notranslate"><span class="pre">Download</span> <span class="pre">this</span> <span class="pre">world</span> <span class="pre">file</span></code>  移动内 <code class="docutils literal notranslate"><span class="pre">my_package/worlds/</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8233">[待校准&#64;8233]</a></p>
 <p>这实际上是一个相当简单的文本文件，您可以在文本编辑器中可视化。一个简单的机器人已经包含在这个 <code class="docutils literal notranslate"><span class="pre">my_world.wbt</span></code> 世界文件中。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8234">[待校准&#64;8234]</a></p>
 <div class="admonition note">
-<p class="admonition-title">注解</p>
+<p class="admonition-title">备注</p>
 <p>如果你想学习如何在Webots中创建自己的机器人模型，你可以查看这个 <a class="reference external" href="https://github.com/cyberbotics/webots_ros2/wiki/Tutorial-Create-Webots-Robot">tutorial</a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8235">[待校准&#64;8235]</a></p>
 </div>
-</div>
-<div class="section" id="change-the-my-robot-driver-py-file">
+</section>
+<section id="change-the-my-robot-driver-py-file">
 <h3>3更改my_robot_driver.py文件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8236">[待校准&#64;8236]</a><a class="headerlink" href="#change-the-my-robot-driver-py-file" title="永久链接至标题"></a></h3>
 <p>[需手动修复的语法] <code class="docutils literal notranslate"><span class="pre">webots_ros2_driver</span></code> 子包自动调用y为大多数传感器创建ROS 2接口。在此任务中，您将通过更改 <code class="docutils literal notranslate"><span class="pre">my_robot_driver.py</span></code> 文件来扩展此接口。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8237">[待校准&#64;8237]</a></p>
 <div class="admonition note">
-<p class="admonition-title">注解</p>
+<p class="admonition-title">备注</p>
 <p>本教程的目的是展示具有最少依赖项数量的基本示例。然而，你可以避免使用Python插件使用另一个 <code class="docutils literal notranslate"><span class="pre">webots_ros2</span></code> 子包 <code class="docutils literal notranslate"><span class="pre">webots_ros2_control</span></code> ，引入新的依赖。另一个子包装创建了一个与 <code class="docutils literal notranslate"><span class="pre">ros2_control</span></code> 包装的接口，便于控制不同的轮式机器人。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8238">[待校准&#64;8238]</a></p>
 </div>
 <p>在您最喜欢的编辑器中打开 <code class="docutils literal notranslate"><span class="pre">my_package/my_package/my_robot_driver.py</span></code> ，并将其内容替换为以下内容: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8239">[待校准&#64;8239]</a></p>
@@ -472,8 +473,8 @@
     <span class="bp">self</span><span class="o">.</span><span class="n">__right_motor</span><span class="o">.</span><span class="n">setVelocity</span><span class="p">(</span><span class="n">command_motor_right</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="create-the-my-robot-urdf-file">
+</section>
+<section id="create-the-my-robot-urdf-file">
 <h3>4创建my_robot.urdf文件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8244">[待校准&#64;8244]</a><a class="headerlink" href="#create-the-my-robot-urdf-file" title="永久链接至标题"></a></h3>
 <p>现在，您必须创建一个URDF文件来声明 <code class="docutils literal notranslate"><span class="pre">my_robot_driver.py</span></code> Python插件。这将允许 <code class="docutils literal notranslate"><span class="pre">webots_ros2_driver</span></code> ROS节点launch插件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8245">[待校准&#64;8245]</a></p>
 <p>在 <code class="docutils literal notranslate"><span class="pre">my_package/resource</span></code> 文件夹中创建一个名为 <code class="docutils literal notranslate"><span class="pre">my_robot.urdf</span></code> 的文本文件，内容如下: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8246">[待校准&#64;8246]</a></p>
@@ -486,11 +487,11 @@
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="admonition-title">注解</p>
+<p class="admonition-title">备注</p>
 <p>这个简单的URDF文件不包含任何关于机器人的链接或联合信息，因为在本教程中不需要它。然而，URDF文件通常包含更多信息，如 <a class="reference internal" href="../../URDF/URDF-Main.html"><span class="doc">URDF教程 [待校准&#64;9047]</span></a> 中所解释的。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8247">[待校准&#64;8247]</a></p>
 </div>
-</div>
-<div class="section" id="create-the-launch-file">
+</section>
+<section id="create-the-launch-file">
 <h3>5创建launch文件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8248">[待校准&#64;8248]</a><a class="headerlink" href="#create-the-launch-file" title="永久链接至标题"></a></h3>
 <p>让创建现在launch文件简易launch的仿真ROS控制器单命令。在 <code class="docutils literal notranslate"><span class="pre">my_package/launch</span></code> 文件夹中创建一个名为 <code class="docutils literal notranslate"><span class="pre">robot_launch.py</span></code> 的新文本文件，代码如下: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8249">[待校准&#64;8249]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
@@ -563,8 +564,8 @@
 <span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="modify-the-setup-py-file">
+</section>
+<section id="modify-the-setup-py-file">
 <h3>6修改setup.py文件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8254">[待校准&#64;8254]</a><a class="headerlink" href="#modify-the-setup-py-file" title="永久链接至标题"></a></h3>
 <p>最后，在启动launch文件之前，您必须修改 <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> 文件以包括您添加的额外文件。打开 <code class="docutils literal notranslate"><span class="pre">my_package/setup.py</span></code> ，将其内容替换为: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8255">[待校准&#64;8255]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">setuptools</span> <span class="kn">import</span> <span class="n">setup</span>
@@ -598,8 +599,8 @@
 </pre></div>
 </div>
 <p>这建立了这个包，并在 <code class="docutils literal notranslate"><span class="pre">data_files</span></code> 变量中添加了新添加的文件:  <code class="docutils literal notranslate"><span class="pre">my_world.wbt</span></code> 、 <code class="docutils literal notranslate"><span class="pre">my_robot.urdf</span></code> 和 <code class="docutils literal notranslate"><span class="pre">robot_launch.py</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8256">[待校准&#64;8256]</a></p>
-</div>
-<div class="section" id="test-the-code">
+</section>
+<section id="test-the-code">
 <h3>7测试代码 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8257">[待校准&#64;8257]</a><a class="headerlink" href="#test-the-code" title="永久链接至标题"></a></h3>
 <p>从ROS2工作区中的终端运行: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8258">[待校准&#64;8258]</a></p>
 <div class="sphinx-tabs docutils container">
@@ -616,7 +617,7 @@
 </div></div>
 <p>这将使仿真launch。Webots将在第一次运行时自动调用y，以防尚未安装。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8259">[待校准&#64;8259]</a></p>
 <div class="admonition note">
-<p class="admonition-title">注解</p>
+<p class="admonition-title">备注</p>
 <p>如果你想手动安装Webots，你可以下载 <a class="reference external" href="https://github.com/cyberbotics/webots/releases/latest">here</a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8260">[待校准&#64;8260]</a></p>
 </div>
 <p>然后，打开第二个终端并发送以下命令: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8261">[待校准&#64;8261]</a></p>
@@ -628,8 +629,8 @@
 <p>此时，机器人能够盲目地跟随你的马达命令。但是当你命令它前进时，它最终会撞到墙上。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8263">[待校准&#64;8263]</a></p>
 <img alt="../../../_images/Robot_colliding_wall.png" src="../../../_images/Robot_colliding_wall.png" />
 <p>为了防止这种情况，让我们使用机器人的传感器来检测障碍物并避开它们。关闭Webots窗口，这也应该关闭从launcher开始的ROS节点。在第二个终端用 “ctrl + c” 关闭话题命令。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8264">[待校准&#64;8264]</a></p>
-</div>
-<div class="section" id="updating-my-robot-urdf">
+</section>
+<section id="updating-my-robot-urdf">
 <h3>8更新my_robot.urdf <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8265">[待校准&#64;8265]</a><a class="headerlink" href="#updating-my-robot-urdf" title="永久链接至标题"></a></h3>
 <p>您必须修改URDF文件以启用传感器。在 <code class="docutils literal notranslate"><span class="pre">my_robot.urdf</span></code> 中，将全部内容替换为: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8266">[待校准&#64;8266]</a></p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; ?&gt;</span>
@@ -653,8 +654,8 @@
 </pre></div>
 </div>
 <p>ROS 2接口将解析参考距离传感器节点的 <code class="docutils literal notranslate"><span class="pre">&lt;device&gt;</span></code> 标签，并使用 <code class="docutils literal notranslate"><span class="pre">&lt;ros&gt;</span></code> 标签中的标准参数来启用传感器并命名它们的话题。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8267">[待校准&#64;8267]</a></p>
-</div>
-<div class="section" id="creating-a-ros-node-to-avoid-obstacles">
+</section>
+<section id="creating-a-ros-node-to-avoid-obstacles">
 <h3>9创建ROS节点以避免障碍 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8268">[待校准&#64;8268]</a><a class="headerlink" href="#creating-a-ros-node-to-avoid-obstacles" title="永久链接至标题"></a></h3>
 <p>机器人将使用一个标准的ROS节点来检测墙壁，并发送电机命令来避免它。在 <code class="docutils literal notranslate"><span class="pre">my_package/my_package/</span></code> 文件夹中创建一个名为 <code class="docutils literal notranslate"><span class="pre">obstacle_avoider.py</span></code> 的文件，代码如下: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8269">[待校准&#64;8269]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">rclpy</span>
@@ -732,8 +733,8 @@
     <span class="bp">self</span><span class="o">.</span><span class="n">__publisher</span><span class="o">.</span><span class="n">publish</span><span class="p">(</span><span class="n">command_message</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="updating-setup-py-and-robot-launch-py">
+</section>
+<section id="updating-setup-py-and-robot-launch-py">
 <h3>10更新设置。py和机器人 _ launch。py <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8273">[待校准&#64;8273]</a><a class="headerlink" href="#updating-setup-py-and-robot-launch-py" title="永久链接至标题"></a></h3>
 <p>您必须将这两个其他文件修改为您的新节点launch。编辑 <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> ，并将 “'console_scripts'” 替换为: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8274">[待校准&#64;8274]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;console_scripts&#39;</span><span class="p">:</span> <span class="p">[</span>
@@ -780,8 +781,8 @@
 </pre></div>
 </div>
 <p>这将创建一个 <code class="docutils literal notranslate"><span class="pre">obstacle_avoider</span></code> 节点，该节点将包含在 <code class="docutils literal notranslate"><span class="pre">LaunchDescription</span></code> 中。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8277">[待校准&#64;8277]</a></p>
-</div>
-<div class="section" id="test-the-obstacle-avoidance-code">
+</section>
+<section id="test-the-obstacle-avoidance-code">
 <h3>11测试避障代码 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8278">[待校准&#64;8278]</a><a class="headerlink" href="#test-the-obstacle-avoidance-code" title="永久链接至标题"></a></h3>
 <p>作为任务 <code class="docutils literal notranslate"><span class="pre">7</span></code> ，launch的仿真终端的ROS 2工作区: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8279">[待校准&#64;8279]</a></p>
 <div class="sphinx-tabs docutils container">
@@ -798,27 +799,27 @@
 </div></div>
 <p>你的机器人应该前进，在撞到墙上之前，它应该顺时针旋转。您可以在Webots中按 “ctrl + F10” 或转到 <code class="docutils literal notranslate"><span class="pre">View</span></code> 菜单， <code class="docutils literal notranslate"><span class="pre">Optional</span> <span class="pre">Rendering</span></code> 和 <code class="docutils literal notranslate"><span class="pre">Show</span> <span class="pre">DistanceSensor</span> <span class="pre">Rays</span></code> 显示机器人距离传感器的范围。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8280">[待校准&#64;8280]</a></p>
 <img alt="../../../_images/Robot_turning_clockwise.png" src="../../../_images/Robot_turning_clockwise.png" />
-</div>
-</div>
-<div class="section" id="summary">
+</section>
+</section>
+<section id="summary">
 <h2><a class="toc-backref" href="#id15">总结</a><a class="headerlink" href="#summary" title="永久链接至标题"></a></h2>
 <p>在本教程中，您将使用Webots设置逼真的机器人仿真，实现Python插件以控制机器人的电机，并使用传感器实现ROS节点以避免障碍物。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8281">[待校准&#64;8281]</a></p>
-</div>
-<div class="section" id="next-steps">
+</section>
+<section id="next-steps">
 <h2><a class="toc-backref" href="#id16">下一步</a><a class="headerlink" href="#next-steps" title="永久链接至标题"></a></h2>
 <p>您可能想要改进插件或创建新节点来改变机器人的行为。从这些以前的教程中获得灵感可能是一个起点: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=8282">[待校准&#64;8282]</a></p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../../Tf2/Tf2-Main.html"><span class="doc">tf2教程 [待校准&#64;8518]</span></a>.</p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../../Allocator-Template-Tutorial.html" class="btn btn-neutral float-left" title="实现自定义内存分配器" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="../../Allocator-Template-Tutorial.html" class="btn btn-neutral float-left" title="实现自定义内存分配器 [待校准@6885]" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
         <a href="../../Deploying-ROS-2-on-IBM-Cloud.html" class="btn btn-neutral float-right" title="IBM Cloud Kubernetes上的ROS2 [社区-贡献] [待校准@7232]" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

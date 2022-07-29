@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="zh" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>将URDF与robot_state_发布者结合使用 [待校准@9049] &mdash; ROS 2 documentation  文档</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -24,7 +25,7 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
-    <link rel="next" title="ROS 2话题统计教程 (c ++)" href="../Topics/Topic-Statistics-Tutorial.html" />
+    <link rel="next" title="ROS 2话题统计教程 (c ++) [待校准@8751]" href="../Topics/Topic-Statistics-Tutorial.html" />
     <link rel="prev" title="使用Xacro清理URDF文件 [待校准@9075]" href="Using-Xacro-to-Clean-Up-a-URDF-File.html" /> 
 </head>
 
@@ -54,11 +55,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../../Installation/Windows-Install-Binary.html">在Windows上安装ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Installation/Fedora-Development-Setup.html">在Fedora Linux上构建ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Installation/Latest-Development-Setup.html">安装最新的ROS 2开发版本</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../Installation/Maintaining-a-Source-Checkout.html">维护ROS 2Foxy源文件的检出</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Installation/Maintaining-a-Source-Checkout.html">Maintaining a source checkout of ROS 2 Rolling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Installation/Testing.html">用于测试的替代安装源</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Installation/DDS-Implementations.html">安装DDS实现</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../Installation/DDS-Implementations/Install-Connext-Security-Plugins.html">安装Connext安全插件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../Installation/DDS-Implementations/Install-Connext-University-Eval.html">安装RTI Connext DDS的大学或评估版本</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Installation/DDS-Implementations/Install-Connext-University-Eval.html">安装RTI Connext DDS的大学或评估版本 [Alyssa&#64;5370]</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Installation/DDS-Implementations/Working-with-Eclipse-CycloneDDS.html">使用Eclipse Cyclone DDS [Alyssa&#64;5384]</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Installation/DDS-Implementations/Working-with-GurumNetworks-GurumDDS.html">使用GurumNetworks GurumDDS [Alyssa&#64;5400]</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Installation/DDS-Implementations/Working-with-eProsima-Fast-DDS.html">使用eProsima Fast DDS [Alyssa&#64;5417]</a></li>
@@ -71,10 +72,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../Configuring-ROS2-Environment.html">配置ROS 2环境</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Turtlesim/Introducing-Turtlesim.html">介绍turtlesim和rqt</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Understanding-ROS2-Nodes.html">了解ROS 2节点</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Topics/Understanding-ROS2-Topics.html">理解ROS 2话题</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Services/Understanding-ROS2-Services.html">了解ROS 2服务</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Topics/Understanding-ROS2-Topics.html">理解ROS 2话题 [待校准&#64;8808]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Services/Understanding-ROS2-Services.html">了解ROS 2服务 [待校准&#64;8182]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Parameters/Understanding-ROS2-Parameters.html">理解ROS 2参数</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Understanding-ROS2-Actions.html">理解ROS 2动作</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Understanding-ROS2-Actions.html">理解ROS 2动作 [待校准&#64;9124]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Rqt-Console/Using-Rqt-Console.html">使用rqt_控制台 [待校准&#64;8152]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Launch/CLI-Intro.html">介绍ROS 2launch [待校准&#64;7541]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Ros2bag/Recording-And-Playing-Back-Data.html">记录和回放数据 [待校准&#64;8079]</a></li>
@@ -93,11 +94,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../Actions/Creating-an-Action.html">创建动作 [待校准&#64;6711]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Actions/Writing-a-Cpp-Action-Server-Client.html">编写动作服务器和客户端 (c ++) [待校准&#64;6753]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Actions/Writing-a-Py-Action-Server-Client.html">编写动作服务器和客户端 (Python) [待校准&#64;6825]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Composition.html">在单个进程中组合多个节点</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Colcon-Tutorial.html">使用colcon构建包</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Composition.html">在单个进程中组成多个节点 [待校准&#64;7034]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Colcon-Tutorial.html">使用colcon构建包 [待校准&#64;6975]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Launch/Launch-Main.html">Launch教程 [待校准&#64;7600]</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Launch/Creating-Launch-Files.html">创建launch文件 [待校准&#64;7562]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Launch/Launch-system.html">使用Launch运行/监控多节点 [小鱼&#64;7614]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Launch/Launch-system.html">[需手动修复的语法]Launch/监控多节点[需手动修复的语法]Launch [待校准&#64;7614]</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Launch/Using-Substitutions.html">在launch文件中使用替换 [待校准&#64;7737]</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Launch/Using-Event-Handlers.html">在launch文件中使用事件处理程序 [待校准&#64;7641]</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Launch/Using-ROS2-Launch-For-Large-Projects.html">在大型项目中使用ROS 2launch [待校准&#64;7674]</a></li>
@@ -130,9 +131,9 @@
 <li class="toctree-l3 current"><a class="current reference internal" href="#">将URDF与robot_state_发布者结合使用 [待校准&#64;9049]</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../Topics/Topic-Statistics-Tutorial.html">ROS 2话题统计教程 (c ++)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Topics/Topic-Statistics-Tutorial.html">ROS 2话题统计教程 (c ++) [待校准&#64;8751]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Discovery-Server/Discovery-Server.html">使用Fast DDS Discovery Server作为发现协议 [社区贡献] [待校准&#64;7319]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Allocator-Template-Tutorial.html">实现自定义内存分配器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Allocator-Template-Tutorial.html">实现自定义内存分配器 [待校准&#64;6885]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Simulators/Webots/Setting-up-a-Robot-Simulation-Webots.html">设置机器人仿真 (Webots) [待校准&#64;8222]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Deploying-ROS-2-on-IBM-Cloud.html">IBM Cloud Kubernetes上的ROS2 [社区-贡献] [待校准&#64;7232]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Eclipse-Oxygen-with-ROS-2-and-rviz2.html">带有ROS 2和rviz2的Eclipse Oxygen [社区贡献] [待校准&#64;7387]</a></li>
@@ -141,7 +142,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Building-ROS2-Package-with-eclipse-2021-06.html">使用eclipse 2021-06构建ROS 2包 [待校准&#64;6926]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Quality-of-Service.html">使用服务质量设置处理有损网络 [待校准&#64;7902]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Managed-Nodes.html">具有托管生命周期的节点管理 [待校准&#64;7809]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Intra-Process-Communication.html">高效的进程内通讯</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Intra-Process-Communication.html">高效的流程内通讯 [待校准&#64;7491]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Rosbag-with-ROS1-Bridge.html">使用ROS 1bridge用rosbag记录和回放话题数据 [待校准&#64;8125]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Real-Time-Programming.html">ROS 2中的实时编程 [待校准&#64;7931]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../dummy-robot-demo.html">尝试dummy robot例程 [待校准&#64;9496]</a></li>
@@ -149,7 +150,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../How-To-Guides.html">问题指南</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Installation-Troubleshooting.html">安装故障诊断 [Alyssa&#64;6086]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Installation-Troubleshooting.html">安装故障诊断工具 [待校准&#64;6086]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Developing-a-ROS-2-Package.html">开发ROS 2包 [待校准&#64;6065]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Ament-CMake-Documentation.html">ament_cmake用户文档</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Ament-CMake-Python-Documentation.html">ament_cmake_python用户文档 [小鱼&#64;5911]</a></li>
@@ -269,7 +270,7 @@
           <li><a href="URDF-Main.html">URDF教程 [待校准&#64;9047]</a> &raquo;</li>
       <li>将URDF与robot_state_发布者结合使用 [待校准&#64;9049]</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ros2/ros2_documentation/blob/foxy/source/Tutorials/URDF/Using-URDF-with-Robot-State-Publisher.rst" class="fa fa-github"> 在 GitHub 上修改</a>
+              <a href="https://github.com/ros2/ros2_documentation/blob/rolling/source/Tutorials/URDF/Using-URDF-with-Robot-State-Publisher.rst" class="fa fa-github"> 在 GitHub 上修改</a>
       </li>
   </ul>
   <hr/>
@@ -279,7 +280,7 @@
              
 
 
-  <div class="section" id="using-urdf-with-robot-state-publisher">
+  <section id="using-urdf-with-robot-state-publisher">
 <span id="urdfplusrsp"></span><h1>将URDF与robot_state_发布者结合使用 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9049">[待校准&#64;9049]</a><a class="headerlink" href="#using-urdf-with-robot-state-publisher" title="永久链接至标题"></a></h1>
 <p>Goal目标: Simulate模拟一个在URDF中建模的步行机器人，并在Rviz中查看它。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9050">[待校准&#64;9050]</a></p>
 <p>Tutorial教程级别: Intermediate中级 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6713">[待校准&#64;6713]</a></p>
@@ -291,7 +292,7 @@
 <li><p><a class="reference internal" href="#prerequisites" id="id2">先决条件</a></p></li>
 <li><p><a class="reference internal" href="#tasks" id="id3">任务</a></p>
 <ul>
-<li><p><a class="reference internal" href="#create-a-package" id="id4">1创建包</a></p></li>
+<li><p><a class="reference internal" href="#create-a-package" id="id4">1创建包 [待校准&#64;7137]</a></p></li>
 <li><p><a class="reference internal" href="#create-the-urdf-file" id="id5">2创建URDF文件 [待校准&#64;9054]</a></p></li>
 <li><p><a class="reference internal" href="#publish-the-state" id="id6">3发布状态 [待校准&#64;9057]</a></p></li>
 <li><p><a class="reference internal" href="#create-a-launch-file" id="id7">4创建一个launch文件 [待校准&#64;9060]</a></p></li>
@@ -303,22 +304,22 @@
 <li><p><a class="reference internal" href="#summary" id="id11">总结</a></p></li>
 </ul>
 </div>
-<div class="section" id="background">
+<section id="background">
 <h2><a class="toc-backref" href="#id1">背景</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
 <p>本教程将向您展示如何为步行机器人建模，将状态发布为 <a class="reference external" href="https://wiki.ros.org/tf2">tf2</a> 信息，并在Rviz中查看仿真。首先，我们创建描述机器人装配的URDF模型。接下来，我们编写一个模拟运动并发布连接状态和转换的节点。然后，我们使用 <code class="docutils literal notranslate"><span class="pre">robot_state_publisher</span></code> 将整个机器人状态发布给 <code class="docutils literal notranslate"><span class="pre">/tf2</span></code> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9051">[待校准&#64;9051]</a></p>
 <img alt="../../_images/r2d2_rviz_demo.gif" src="../../_images/r2d2_rviz_demo.gif" />
-</div>
-<div class="section" id="prerequisites">
+</section>
+<section id="prerequisites">
 <h2><a class="toc-backref" href="#id2">先决条件</a><a class="headerlink" href="#prerequisites" title="永久链接至标题"></a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://index.ros.org/r/rviz/">rviz2</a></p></li>
 </ul>
 <p>和往常一样，不要忘记在 <a class="reference internal" href="../Configuring-ROS2-Environment.html"><span class="doc">every new terminal you open</span></a> 中源文件ROS 2。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7566">[待校准&#64;7566]</a></p>
-</div>
-<div class="section" id="tasks">
+</section>
+<section id="tasks">
 <h2><a class="toc-backref" href="#id3">任务</a><a class="headerlink" href="#tasks" title="永久链接至标题"></a></h2>
-<div class="section" id="create-a-package">
-<h3><a class="toc-backref" href="#id4">1创建包</a><a class="headerlink" href="#create-a-package" title="永久链接至标题"></a></h3>
+<section id="create-a-package">
+<h3>1创建包 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=7137">[待校准&#64;7137]</a><a class="headerlink" href="#create-a-package" title="永久链接至标题"></a></h3>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">mkdir -p ~/dev_ws/src  # change as needed</span>
 <span class="go">cd ~/dev_ws/src</span>
 <span class="go">ros2 pkg create urdf_tutorial_r2d2 --build-type ament_python --dependencies rclpy</span>
@@ -326,16 +327,16 @@
 </pre></div>
 </div>
 <p>你现在应该看到一个 <code class="docutils literal notranslate"><span class="pre">urdf_tutorial_r2d2</span></code> 文件夹。接下来，您将对其进行一些更改。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9053">[待校准&#64;9053]</a></p>
-</div>
-<div class="section" id="create-the-urdf-file">
+</section>
+<section id="create-the-urdf-file">
 <h3>2创建URDF文件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9054">[待校准&#64;9054]</a><a class="headerlink" href="#create-the-urdf-file" title="永久链接至标题"></a></h3>
 <p>创建我们将在其中存储一些资产的目录: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9055">[待校准&#64;9055]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">mkdir -p urdf</span>
 </pre></div>
 </div>
 <p>下载:  <code class="xref any docutils literal notranslate"><span class="pre">URDF</span> <span class="pre">file</span></code> and save it as <code class="docutils literal notranslate"><span class="pre">~/dev_ws/src/urdf_tutorial_r2d2/urdf/r2d2.urdf.xml</span></code>. Download the <a class="reference download internal" download="" href="../../_downloads/da6b43a9c9a62bac7183458dc5a8a1ef/r2d2.rviz"><code class="xref download docutils literal notranslate"><span class="pre">Rviz</span> <span class="pre">configuration</span> <span class="pre">file</span></code></a>  ，并将其另存为 “~/dev_ws/src/urdf_tutorial_r2d2/urdf/r2d2.Rviz”。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9056">[待校准&#64;9056]</a></p>
-</div>
-<div class="section" id="publish-the-state">
+</section>
+<section id="publish-the-state">
 <h3>3发布状态 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9057">[待校准&#64;9057]</a><a class="headerlink" href="#publish-the-state" title="永久链接至标题"></a></h3>
 <p>现在我们需要一种方法来指定机器人处于什么状态。为此，我们必须指定所有三个关节和整体里程计。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9058">[待校准&#64;9058]</a></p>
 <p>启动您最喜欢的编辑器，并将以下代码粘贴到 <code class="docutils literal notranslate"><span class="pre">urdf_tutorial_r2d2/state_publisher.py</span></code> 中 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9059">[待校准&#64;9059]</a></p>
@@ -429,8 +430,8 @@
     <span class="n">main</span><span class="p">()</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="create-a-launch-file">
+</section>
+<section id="create-a-launch-file">
 <h3>4创建一个launch文件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9060">[待校准&#64;9060]</a><a class="headerlink" href="#create-a-launch-file" title="永久链接至标题"></a></h3>
 <p>创建一个新的 <code class="docutils literal notranslate"><span class="pre">launch</span></code> 文件夹。打开编辑器并粘贴以下代码，将其保存为 <code class="docutils literal notranslate"><span class="pre">launch/demo.launch.py</span></code>  <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9061">[待校准&#64;9061]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
@@ -471,8 +472,8 @@
     <span class="p">])</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="edit-the-setup-py-file">
+</section>
+<section id="edit-the-setup-py-file">
 <h3>5编辑setup.py文件 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9062">[待校准&#64;9062]</a><a class="headerlink" href="#edit-the-setup-py-file" title="永久链接至标题"></a></h3>
 <p>您必须告诉colcon构建工具如何安装Python包。按如下方式编辑 <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> 文件: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9063">[待校准&#64;9063]</a></p>
 <ul class="simple">
@@ -503,16 +504,16 @@
 </pre></div>
 </div>
 <p>用您的更改保存 <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> 文件。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9067">[待校准&#64;9067]</a></p>
-</div>
-<div class="section" id="install-the-package">
+</section>
+<section id="install-the-package">
 <h3>6安装软件包 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9068">[待校准&#64;9068]</a><a class="headerlink" href="#install-the-package" title="永久链接至标题"></a></h3>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd ~/dev_ws</span>
 <span class="go">colcon build --symlink-install --packages-select urdf_tutorial_r2d2</span>
 <span class="go">source install/setup.bash</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="view-the-results">
+</section>
+<section id="view-the-results">
 <h3>7查看结果 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9069">[待校准&#64;9069]</a><a class="headerlink" href="#view-the-results" title="永久链接至标题"></a></h3>
 <p>Launch包装 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9070">[待校准&#64;9070]</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 launch urdf_tutorial_r2d2 demo.launch.py</span>
@@ -523,14 +524,14 @@
 </pre></div>
 </div>
 <p>有关如何使用Rviz的详细信息，请参阅 <a class="reference external" href="http://wiki.ros.org/rviz/UserGuide">User Guide</a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9072">[待校准&#64;9072]</a></p>
-</div>
-</div>
-<div class="section" id="summary">
+</section>
+</section>
+<section id="summary">
 <h2><a class="toc-backref" href="#id11">总结</a><a class="headerlink" href="#summary" title="永久链接至标题"></a></h2>
 <p>您创建了一个JointState发布者节点，并将其与 <code class="docutils literal notranslate"><span class="pre">robot_state_publisher</span></code> 耦合以模拟步行机器人。在这些例子中使用的代码可以找到 <a class="reference external" href="https://github.com/benbongalon/ros2-migration/tree/master/urdf_tutorial">here</a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9073">[待校准&#64;9073]</a></p>
 <p>这份 <a class="reference external" href="http://wiki.ros.org/urdf/Tutorials/Using%20urdf%20with%20robot_state_publisher">ROS 1 tutorial</a> 的作者受到了赞扬，其中一些内容被重复使用。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=9074">[待校准&#64;9074]</a></p>
-</div>
-</div>
+</section>
+</section>
 
 
 
@@ -538,7 +539,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="Using-Xacro-to-Clean-Up-a-URDF-File.html" class="btn btn-neutral float-left" title="使用Xacro清理URDF文件 [待校准@9075]" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
-        <a href="../Topics/Topic-Statistics-Tutorial.html" class="btn btn-neutral float-right" title="ROS 2话题统计教程 (c ++)" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../Topics/Topic-Statistics-Tutorial.html" class="btn btn-neutral float-right" title="ROS 2话题统计教程 (c ++) [待校准@8751]" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

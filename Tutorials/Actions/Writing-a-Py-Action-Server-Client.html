@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="zh" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>编写动作服务器和客户端 (Python) [待校准@6825] &mdash; ROS 2 documentation  文档</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -25,7 +26,7 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
-    <link rel="next" title="在单个进程中组合多个节点" href="../Composition.html" />
+    <link rel="next" title="在单个进程中组成多个节点 [待校准@7034]" href="../Composition.html" />
     <link rel="prev" title="编写动作服务器和客户端 (c ++) [待校准@6753]" href="Writing-a-Cpp-Action-Server-Client.html" /> 
 </head>
 
@@ -55,11 +56,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../../Installation/Windows-Install-Binary.html">在Windows上安装ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Installation/Fedora-Development-Setup.html">在Fedora Linux上构建ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Installation/Latest-Development-Setup.html">安装最新的ROS 2开发版本</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../Installation/Maintaining-a-Source-Checkout.html">维护ROS 2Foxy源文件的检出</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Installation/Maintaining-a-Source-Checkout.html">Maintaining a source checkout of ROS 2 Rolling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Installation/Testing.html">用于测试的替代安装源</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Installation/DDS-Implementations.html">安装DDS实现</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../Installation/DDS-Implementations/Install-Connext-Security-Plugins.html">安装Connext安全插件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../Installation/DDS-Implementations/Install-Connext-University-Eval.html">安装RTI Connext DDS的大学或评估版本</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Installation/DDS-Implementations/Install-Connext-University-Eval.html">安装RTI Connext DDS的大学或评估版本 [Alyssa&#64;5370]</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Installation/DDS-Implementations/Working-with-Eclipse-CycloneDDS.html">使用Eclipse Cyclone DDS [Alyssa&#64;5384]</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Installation/DDS-Implementations/Working-with-GurumNetworks-GurumDDS.html">使用GurumNetworks GurumDDS [Alyssa&#64;5400]</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Installation/DDS-Implementations/Working-with-eProsima-Fast-DDS.html">使用eProsima Fast DDS [Alyssa&#64;5417]</a></li>
@@ -72,10 +73,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../Configuring-ROS2-Environment.html">配置ROS 2环境</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Turtlesim/Introducing-Turtlesim.html">介绍turtlesim和rqt</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Understanding-ROS2-Nodes.html">了解ROS 2节点</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Topics/Understanding-ROS2-Topics.html">理解ROS 2话题</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Services/Understanding-ROS2-Services.html">了解ROS 2服务</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Topics/Understanding-ROS2-Topics.html">理解ROS 2话题 [待校准&#64;8808]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Services/Understanding-ROS2-Services.html">了解ROS 2服务 [待校准&#64;8182]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Parameters/Understanding-ROS2-Parameters.html">理解ROS 2参数</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Understanding-ROS2-Actions.html">理解ROS 2动作</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Understanding-ROS2-Actions.html">理解ROS 2动作 [待校准&#64;9124]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Rqt-Console/Using-Rqt-Console.html">使用rqt_控制台 [待校准&#64;8152]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Launch/CLI-Intro.html">介绍ROS 2launch [待校准&#64;7541]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Ros2bag/Recording-And-Playing-Back-Data.html">记录和回放数据 [待校准&#64;8079]</a></li>
@@ -94,11 +95,11 @@
 <li class="toctree-l2"><a class="reference internal" href="Creating-an-Action.html">创建动作 [待校准&#64;6711]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Writing-a-Cpp-Action-Server-Client.html">编写动作服务器和客户端 (c ++) [待校准&#64;6753]</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">编写动作服务器和客户端 (Python) [待校准&#64;6825]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Composition.html">在单个进程中组合多个节点</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Colcon-Tutorial.html">使用colcon构建包</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Composition.html">在单个进程中组成多个节点 [待校准&#64;7034]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Colcon-Tutorial.html">使用colcon构建包 [待校准&#64;6975]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Launch/Launch-Main.html">Launch教程 [待校准&#64;7600]</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Launch/Creating-Launch-Files.html">创建launch文件 [待校准&#64;7562]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Launch/Launch-system.html">使用Launch运行/监控多节点 [小鱼&#64;7614]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Launch/Launch-system.html">[需手动修复的语法]Launch/监控多节点[需手动修复的语法]Launch [待校准&#64;7614]</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Launch/Using-Substitutions.html">在launch文件中使用替换 [待校准&#64;7737]</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Launch/Using-Event-Handlers.html">在launch文件中使用事件处理程序 [待校准&#64;7641]</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Launch/Using-ROS2-Launch-For-Large-Projects.html">在大型项目中使用ROS 2launch [待校准&#64;7674]</a></li>
@@ -131,9 +132,9 @@
 <li class="toctree-l3"><a class="reference internal" href="../URDF/Using-URDF-with-Robot-State-Publisher.html">将URDF与robot_state_发布者结合使用 [待校准&#64;9049]</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../Topics/Topic-Statistics-Tutorial.html">ROS 2话题统计教程 (c ++)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Topics/Topic-Statistics-Tutorial.html">ROS 2话题统计教程 (c ++) [待校准&#64;8751]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Discovery-Server/Discovery-Server.html">使用Fast DDS Discovery Server作为发现协议 [社区贡献] [待校准&#64;7319]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Allocator-Template-Tutorial.html">实现自定义内存分配器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Allocator-Template-Tutorial.html">实现自定义内存分配器 [待校准&#64;6885]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Simulators/Webots/Setting-up-a-Robot-Simulation-Webots.html">设置机器人仿真 (Webots) [待校准&#64;8222]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Deploying-ROS-2-on-IBM-Cloud.html">IBM Cloud Kubernetes上的ROS2 [社区-贡献] [待校准&#64;7232]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Eclipse-Oxygen-with-ROS-2-and-rviz2.html">带有ROS 2和rviz2的Eclipse Oxygen [社区贡献] [待校准&#64;7387]</a></li>
@@ -142,7 +143,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Building-ROS2-Package-with-eclipse-2021-06.html">使用eclipse 2021-06构建ROS 2包 [待校准&#64;6926]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Quality-of-Service.html">使用服务质量设置处理有损网络 [待校准&#64;7902]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Managed-Nodes.html">具有托管生命周期的节点管理 [待校准&#64;7809]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Intra-Process-Communication.html">高效的进程内通讯</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Intra-Process-Communication.html">高效的流程内通讯 [待校准&#64;7491]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Rosbag-with-ROS1-Bridge.html">使用ROS 1bridge用rosbag记录和回放话题数据 [待校准&#64;8125]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Real-Time-Programming.html">ROS 2中的实时编程 [待校准&#64;7931]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../dummy-robot-demo.html">尝试dummy robot例程 [待校准&#64;9496]</a></li>
@@ -150,7 +151,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../How-To-Guides.html">问题指南</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Installation-Troubleshooting.html">安装故障诊断 [Alyssa&#64;6086]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Installation-Troubleshooting.html">安装故障诊断工具 [待校准&#64;6086]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Developing-a-ROS-2-Package.html">开发ROS 2包 [待校准&#64;6065]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Ament-CMake-Documentation.html">ament_cmake用户文档</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Ament-CMake-Python-Documentation.html">ament_cmake_python用户文档 [小鱼&#64;5911]</a></li>
@@ -269,7 +270,7 @@
           <li><a href="../../Tutorials.html">教程</a> &raquo;</li>
       <li>编写动作服务器和客户端 (Python) [待校准&#64;6825]</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ros2/ros2_documentation/blob/foxy/source/Tutorials/Actions/Writing-a-Py-Action-Server-Client.rst" class="fa fa-github"> 在 GitHub 上修改</a>
+              <a href="https://github.com/ros2/ros2_documentation/blob/rolling/source/Tutorials/Actions/Writing-a-Py-Action-Server-Client.rst" class="fa fa-github"> 在 GitHub 上修改</a>
       </li>
   </ul>
   <hr/>
@@ -279,7 +280,7 @@
              
 
 
-  <div class="section" id="writing-an-action-server-and-client-python">
+  <section id="writing-an-action-server-and-client-python">
 <span id="actionspy"></span><h1>编写动作服务器和客户端 (Python) <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6825">[待校准&#64;6825]</a><a class="headerlink" href="#writing-an-action-server-and-client-python" title="永久链接至标题"></a></h1>
 <p>Goal目标: Python在Python中实现动作服务器和客户端。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6826">[待校准&#64;6826]</a></p>
 <p>Tutorial教程级别: Intermediate中级 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6713">[待校准&#64;6713]</a></p>
@@ -299,17 +300,17 @@
 <li><p><a class="reference internal" href="#related-content" id="id7">相关内容</a></p></li>
 </ul>
 </div>
-<div class="section" id="background">
+<section id="background">
 <h2><a class="toc-backref" href="#id1">背景</a><a class="headerlink" href="#background" title="永久链接至标题"></a></h2>
 <p>[需手动修复的语法]Action是ROS 2中异步通讯的一种形式。* [需手动修复的语法]Action客户端 * 向 * 动作服务器 * 发送目标请求。* [需手动修复的语法]Action服务器 * 向 * 动作客户端 * 发送目标反馈和结果。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6827">[待校准&#64;6827]</a></p>
-</div>
-<div class="section" id="prerequisites">
+</section>
+<section id="prerequisites">
 <h2><a class="toc-backref" href="#id2">先决条件</a><a class="headerlink" href="#prerequisites" title="永久链接至标题"></a></h2>
 <p>您将需要上一教程 “ <a class="reference internal" href="Creating-an-Action.html"><span class="doc">创建动作 [待校准&#64;6711]</span></a> ” 中定义的 <code class="docutils literal notranslate"><span class="pre">action_tutorials_interfaces</span></code> 包和 <code class="docutils literal notranslate"><span class="pre">Fibonacci.action</span></code> 接口。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6757">[待校准&#64;6757]</a></p>
-</div>
-<div class="section" id="tasks">
+</section>
+<section id="tasks">
 <h2><a class="toc-backref" href="#id3">任务</a><a class="headerlink" href="#tasks" title="永久链接至标题"></a></h2>
-<div class="section" id="writing-an-action-server">
+<section id="writing-an-action-server">
 <h3>1编写动作服务器 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6828">[待校准&#64;6828]</a><a class="headerlink" href="#writing-an-action-server" title="永久链接至标题"></a></h3>
 <p>让我们集中精力编写一个动作服务器，使用我们在 <a class="reference internal" href="Creating-an-Action.html"><span class="doc">创建动作 [待校准&#64;6711]</span></a> 教程中创建的动作来计算斐波那契序列。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6766">[待校准&#64;6766]</a></p>
 <p>到目前为止，您已经创建了包，并使用 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">run</span></code> 运行您的节点。但是，为了在本教程中保持简单，我们将把动作服务器的范围限定为一个文件。如果你想看看动作教程的完整包是什么样子的，请查看 <a class="reference external" href="https://github.com/ros2/demos/tree/foxy/action_tutorials">action_tutorials</a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6829">[待校准&#64;6829]</a></p>
@@ -420,7 +421,7 @@
 </div>
 <p>计算序列后，我们将其分配给result message字段，然后再返回。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6845">[待校准&#64;6845]</a></p>
 <p>再次，重新启动动作服务器并发送另一个目标。你应该看到目标以正确的结果序列结束。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6846">[待校准&#64;6846]</a></p>
-<div class="section" id="publishing-feedback">
+<section id="publishing-feedback">
 <h4>1.2发布反馈 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6847">[待校准&#64;6847]</a><a class="headerlink" href="#publishing-feedback" title="永久链接至标题"></a></h4>
 <p>动作的好处之一是能够在目标执行期间向动作客户提供反馈。我们可以通过调用目标手柄的 <a class="reference external" href="http://docs.ros2.org/foxy/api/rclpy/api/actions.html#rclpy.action.server.ServerGoalHandle.publish_feedback">publish_feedback()</a> 方法，让我们的动作服务器为动作客户端发布反馈。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6848">[待校准&#64;6848]</a></p>
 <p>我们将替换 <code class="docutils literal notranslate"><span class="pre">sequence</span></code> 变量，并使用反馈消息来存储序列。每次更新for循环中的反馈消息后，我们都会发布反馈消息并休眠以获得戏剧性效果: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6849">[待校准&#64;6849]</a></p>
@@ -479,9 +480,9 @@
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 action send_goal --feedback fibonacci action_tutorials_interfaces/action/Fibonacci <span class="s2">&quot;{order: 5}&quot;</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="writing-an-action-client">
+</section>
+</section>
+<section id="writing-an-action-client">
 <h3>2编写动作客户端 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6851">[待校准&#64;6851]</a><a class="headerlink" href="#writing-an-action-client" title="永久链接至标题"></a></h3>
 <p>我们还将把动作客户端的范围限定为一个文件。打开一个新文件，让我们调用它 <code class="docutils literal notranslate"><span class="pre">fibonacci_action_client.py</span></code> ，并添加以下样板代码: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6852">[待校准&#64;6852]</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">rclpy</span>
@@ -582,7 +583,7 @@
 </pre></div>
 </div>
 <p>动作客户端应该启动，然后快速完成。此时，我们有一个功能正常的动作客户端，但是我们没有看到任何结果或得到任何反馈。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6867">[待校准&#64;6867]</a></p>
-<div class="section" id="getting-a-result">
+<section id="getting-a-result">
 <h4>2.1得到结果 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6868">[待校准&#64;6868]</a><a class="headerlink" href="#getting-a-result" title="永久链接至标题"></a></h4>
 <p>所以我们可以发送一个目标，但是我们怎么知道它什么时候完成呢？我们可以通过几个步骤获得结果信息。首先，我们需要为我们发送的目标获得一个目标句柄。然后，我们可以使用目标句柄来请求结果。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6869">[待校准&#64;6869]</a></p>
 <p>以下是此示例的完整代码: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6870">[待校准&#64;6870]</a></p>
@@ -679,8 +680,8 @@
 </div>
 </div></div>
 <p>您应该会看到被接受目标和最终结果的记录消息。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6876">[待校准&#64;6876]</a></p>
-</div>
-<div class="section" id="getting-feedback">
+</section>
+<section id="getting-feedback">
 <h4>2.2获得反馈 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6877">[待校准&#64;6877]</a><a class="headerlink" href="#getting-feedback" title="永久链接至标题"></a></h4>
 <p>我们的动作客户端可以发送目标。不错!但是如果我们能从动作服务器得到一些关于我们发送的目标的反馈，那就太好了。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6878">[待校准&#64;6878]</a></p>
 <p>以下是此示例的完整代码: <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6870">[待校准&#64;6870]</a></p>
@@ -754,21 +755,21 @@
 </pre></div>
 </div>
 <p>我们都准备好了。如果我们运行我们的动作客户端，你应该会看到反馈被打印到屏幕上。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6882">[待校准&#64;6882]</a></p>
-</div>
-</div>
-</div>
-<div class="section" id="summary">
+</section>
+</section>
+</section>
+<section id="summary">
 <h2><a class="toc-backref" href="#id6">总结</a><a class="headerlink" href="#summary" title="永久链接至标题"></a></h2>
 <p>在本教程中，您将Python动作服务器和动作客户端逐行组合在一起，并将它们配置为交换目标、反馈和结果。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6883">[待校准&#64;6883]</a></p>
-</div>
-<div class="section" id="related-content">
+</section>
+<section id="related-content">
 <h2><a class="toc-backref" href="#id7">相关内容</a><a class="headerlink" href="#related-content" title="永久链接至标题"></a></h2>
 <ul class="simple">
 <li><p>有几种方法可以写一个动作服务器和客户端Python; 查看 <code class="docutils literal notranslate"><span class="pre">minimal_action_server</span></code> 和 <code class="docutils literal notranslate"><span class="pre">minimal_action_client</span></code> 包在 <a class="reference external" href="https://github.com/ros2/examples/tree/foxy/rclpy/actions">ros2/examples</a> 回购。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6884">[待校准&#64;6884]</a></p></li>
 <li><p>有关ROS动作的更多详细信息，请参考 <a class="reference external" href="http://design.ros2.org/articles/actions.html">design article</a> 。 <a class="reference external" href="http://dev.ros2.fishros.com/calibpage/#/home?msgid=6752">[待校准&#64;6752]</a></p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
 
 
@@ -776,7 +777,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="Writing-a-Cpp-Action-Server-Client.html" class="btn btn-neutral float-left" title="编写动作服务器和客户端 (c ++) [待校准@6753]" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
-        <a href="../Composition.html" class="btn btn-neutral float-right" title="在单个进程中组合多个节点" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../Composition.html" class="btn btn-neutral float-right" title="在单个进程中组成多个节点 [待校准@7034]" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
